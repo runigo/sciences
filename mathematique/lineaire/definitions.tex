@@ -1,0 +1,43 @@
+
+%%%%%%%%%%%%%%%%%%%%%
+\section{Définitions}
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Matrices}
+Une matrice est un tableau de nombres. Ces nombres sont des éléments d'un ensemble, parfois $\mathbb{Z}$, souvent $\mathbb{R}$, plus généralement $\mathbb{C}$.
+
+L'ensemble des matrices à  $N$ lignes et $M$ colonnes ($N \times M$) à coeficients réèl est
+$\mathbb{R}^N \times \mathbb{R}^M$.
+
+Une matrice carée contient autant de lignes que de colonnes.
+L'ensemble des matrices carré ($N \times N$) à coeficients réèl est
+$\mathbb{R}^N \times \mathbb{R}^N$.
+
+\subsection{Inverse d'une matrice}
+%Une matrice colonne (matrice a n ligne et 1 colonne) à coefficients réèls (resp. complexe) est apte à représenter un vecteur.  
+%Un vecteur est une matrice colonne. L'ensemble des vecteurs sur un corps forment un espace vectoriel ($\mathbb{R}^n$ et $\mathbb{C}^n$ sont des espaces vectoriels).
+
+Une matrice $\mc{A}∈\mc{M}_n(\mathbb{C})$ est inversible s'il existe une matrice
+$\mc{A}^{-1}$ tel que :
+\[
+\mc{A}.\mc{A}^{-1} = \mc{I}_n
+\]
+
+Dès lors, les matrices colonnes constituant $\mc{A}$ représentent $n$ vecteurs libres. Ces vecteurs forment une base de l'espace vectoriel $\mathbb{C}^n$.
+
+\subsection{Matrice diagonale}
+
+Une matrice $\mc{B}$ de $\mc{M}_n(\mathbb{C})$ est diagonale si
+\[
+b_{ij}=0 \ \ \text{ si } \ \ i\neq j
+\]
+Les $b_{ii}$ sont les valeurs propre de $\mc{B}$
+
+\so
+Une matrice $\mc{C}$ de $\mc{M}_n(\mathbb{C})$ est diagonalisable s'il existe une matrice $\mc{A}$ tel que
+\[
+\mc{A}.\mc{C}.\mc{A}^{-1} \text{ est diagonale}
+\]
+
+\subsection{Matrice stochastique}
+Une matrice $\mathcal{A}∈\mathcal{M}_n(\mathbb{R})$ est une matrice stochastique si la somme des coefficients sur chaque colonne de $\mathcal{A}$ est égale à 1.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

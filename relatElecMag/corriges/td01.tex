@@ -1,40 +1,127 @@
-% Sébastien Leurent , Marc Lilley & Sylvain Nascimbène 14 février 2012
 
 \section{Relativité restreinte}
 \subsection{Électromagnétisme et relativité galiléenne}
+Force de Lorentz : {\bf F} $=$ q({\bf E} + {\bf u} $\land$ {\bf B})
+\begin{center} \begin{tikzpicture}
+\draw [->] (0,0) --++ (1.5,0) node [below] {$x$};
+\draw [->] (0,0) --++ (0,1) node [left] {$y$};
+\node at (0,0) [left]{O};
+\node at (0.5,0.5) [right]{$\mathcal{R}$};
 
-On considère une charge ponctuelle q dans un référentiel galiléen $\mathcal{R}$ où règnent un champ
-électrique {\bf E} et un champ magnétique {\bf B} . On appelle {\bf u} sa vitesse dans ce référentiel.
-On considère un second référentiel galiléen $\mathcal{R}$' en translation uniforme à la vitesse {\bf v} par rapport
-au référentiel $\mathcal{R}$ . On note {\bf u'} la vitesse de la charge ponctuelle q dans le référentiel $\mathcal{R}$'. On appelle
-{\bf E'} et {\bf B'} les champs électrique et magnétique dans ce référentiel.
+\draw [->, very thick] (5,1.3) --++ (1.5,0) node [below] {${\bf v}$};
+\draw [->] (4,0.3) --++ (1.5,0) node [above] {$x'$};
+\draw [->] (4,0.3) --++ (0,1) node [left] {$y'$};
+\node at (4,0.3) [left]{O'};
+\node at (4.5,0.8) [right]{$\mathcal{R'}$};
+\end{tikzpicture} \end{center}
 \begin{enumerate}
-  \item En tenant compte de l'invariance de la charge et du principe de relativité, exprimer les
-forces de Lorentz {\bf F} et {\bf F'} agissant sur la charge q dans chacun des référentiels.
-  \item Expliquer pourquoi la force exercée sur un système d'étude est invariante dans une transformation galiléenne. Déduire l'expression des champs {\bf E'} et {\bf B'} en fonction des champs {\bf E}
-et {\bf B}.
-\setcounter{numero}{\theenumi}\end{enumerate}
-On considère l'expérience d'électrostatique présentée sur la figure 1. Une charge q est au repos
-dans le référentiel du laboratoire. Cette charge est soumise à l'influence d'un fil infini portant
-une densité de charge linéique $\lambda$.
+  \item Dans $\mathcal{R'}$, la vitesse de la charge est ${\bf u'} = {\bf u} - {\bf v}$. On a alors :
 
+\hspace{1.5cm}
+\begin{minipage}[c]{.45\linewidth}
+\begin{center}
+Dans $\mathcal{R}$
+\end{center}
+\[
+\begin{array}{rcr}
+{\bf F} & = & \text{q}({\bf E} + {\bf u} \land {\bf B}) \\
+ & = & 
+\end{array}
+\]
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+\begin{center}
+Dans $\mathcal{R}$'
+\end{center}
+\[
+\begin{array}{rcl}
+{\bf F'} & = & \text{q}({\bf E'} + {\bf u'} \land {\bf B'}) \\
+ & = & \text{q}({\bf E'} + ({\bf u} - {\bf v})\land {\bf B'}) \\
+ & = & \text{q}({\bf E'} + {\bf u}\land {\bf B'} - {\bf v}\land {\bf B'}
+\end{array}
+\]
+\end{minipage}
+
+  \item D'après le principe de relativité (les lois physiques sont les mêmes dans tout les référentiels galiléen), la relation fondamentale de la dynamique donne :
+
+\hspace{1.5cm}
+\begin{minipage}[c]{.45\linewidth}
+\begin{center}
+Dans $\mathcal{R}$
+\end{center}
+\[
+\begin{array}{rcr}
+{\bf F} & = & \text{m}{\bf a} \\
+ & = & \text{m d}_t{\bf u}
+\end{array}
+\]
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+\begin{center}
+Dans $\mathcal{R}$'
+\end{center}
+\[
+\begin{array}{rcr}
+{\bf F'} & = & \text{m}{\bf a'} \\
+ & = & \text{d}_t{\bf u'} \\
+ & = & \text{d}_t(${\bf u} - {\bf v}$) \\
+ & = & \text{m d}_t{\bf u}
+\end{array}
+\]
+Car {\bf v} est constant.
+\end{minipage}
+On a donc : {\bf F'} $=$ {\bf F}.
+
+En égalant l'expression des forces de Lorentz obtenuent dans chacun des référentiels, on obtient :
+\[
+{\bf E'} + {\bf u'} \land {\bf B'} = {\bf E} + {\bf u} \land {\bf B}
+\]
+Dans le référentiel ou la charge est au repos, {\bf u'} est nul, on a donc :
+\[
+{\bf E'} = {\bf E} + {\bf u} \land {\bf B}
+\]
+${\bf u} \land {\bf B}$ est le champ électromoteur.
+ \item {\bf Dans le référentiel du laboratoire :} Pour des raisons de symétrie, le champ électrique créé par le fil est dirigé suivant ${\bf \hat{r}}$ et ne dépend que de r :
+\[
+{\bf E} = E(r).{\bf \hat{r}}
+\]
+\begin{minipage}[c]{.45\linewidth}
 \begin{center}
 \vspace{0.3cm}
 \begin{tikzpicture}
-\draw[thick] (-4,0)--(4,0);
-\draw[dashed] (-1,0)--(-1,2);
-\draw (-1,2) node {$\bullet$} node [right] {$q$};
-\draw (-1,1) node [left] {$r$};
+\filldraw [fill=gray!25,draw=black] (-0.6,0) ellipse (0.125cm and 1cm);
+\filldraw [gray!25] (-0.6,-1) to [bend left=8] (-0.6,1) -- (0,1) to [bend right=8] (0,-1) -- cycle;
+\filldraw [fill=gray!50,draw=black] (0,0) ellipse (0.125cm and 1cm);
+\draw (-0.6,1) --++ (0.6,0);
+\draw (-0.6,-1) --++ (0.6,0);
+\draw [ <-, very thick] (-0.3,2) -- (-0.3,1) node [midway,above left] {\bf E};
+\draw[thick] (-2,0)--(2,0);
+\draw [ <-] (-1.1,1) -- (-1.1,0) node [midway,above left] {$r$};
 \draw (2,0) node [above] {$\lambda$};
 \end{tikzpicture}
 
-\vspace{0.3cm}
-Fig. 1: Charge q en interaction avec un fil chargé
+\vspace{0.2cm}
+Fig. 1: Surface de Gauss
 \end{center}
-\begin{enumerate}
-\setcounter{enumi}{\thenumero} 
-  \item Calculer les champs électrique et magnétique créés par le fil (à partir des équations de
-Maxwell) dans le référentiel du laboratoire puis dans un référentiel en translation uniforme
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+ On applique le théorème de Gauss sur la surface grisée de la figure 1 : 
+\[
+\begin{array}{ c c c c }
+ & \oint_{S}{\bf E}.{\bf dS} & = & Q / \epsilon_0 \\
+\text{qui donne}  & E(r).2\pi r & = & \lambda / \epsilon_0 \\
+\text{Soit}  & E(r)  &  = &  \frac{\lambda}{2\pi\epsilon_0 r} 
+\end{array}
+\]
+\end{minipage}
+
+\hspace{1.5cm}
+{\bf Dans le référentiel en translation uniforme :}
+Calculer les champs électrique et magnétique créés par le fil (à partir des équations de
+Maxwell) d puis dans un 
 à la vitesse v dans une direction parallèle au fil.
   \item Calculer l'expression de la force de Lorentz dans ces deux réferentiels et conclure.
 \end{enumerate}
@@ -47,9 +134,9 @@ lumière se propage à la vitesse c . Le résultat négatif de cette expérience
 fondamentales qui ont mené à la relativité restreinte.
 Le principe de l'expérience est de réaliser un interféromètre dit de Michelson (voir Fig. 2), qui
 permet de comparer les temps d'aller-retour dans deux bras perpendiculaires de même longueur
-L, lorsque ceux-ci sont en mouvement par rapport à l'éther. La longueur déployée des bras est de
-L $=$ 22 m . La source de lumière utilisée était une lampe à vapeur de Sodium de longueur d'onde
-$\lambda =$ 589 nm . La Terre se déplace à v $=$ 30 km.s$^{−1}$ autour du Soleil.
+L , lorsque ceux-ci sont en mouvement par rapport à l'éther. La longueur déployée des bras est de
+L = 22 m . La source de lumière utilisée était une lampe à vapeur de Sodium de longueur d'onde
+$\lambda$ = 589 nm . La Terre se déplace à v = 30 km.s −1 autour du Soleil.
 
 \begin{center}
 \includegraphics[scale=0.5]{./presentation/cropped-Michelson-morley-header}
