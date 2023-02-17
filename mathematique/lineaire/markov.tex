@@ -1,6 +1,60 @@
+\newpage
 %%%%%%%%%%%%%%%%%%%%%
 \section{Markov}
 %%%%%%%%%%%%%%%%%%%%%
 %
+\subsection{Exemple à deux états}
+\subsubsection{Système et vecteur d'état}
+On considère un système pouvant se trouver dans deux états. P.e. une pièce de monnaie posée sur une table. Elle présente soit son coté face soit son coté pile.
 
+On représente ces deux états par deux vecteurs : 
+
+\begin{minipage}[c]{.45\linewidth}
+\[
+\text{ pile :} \ \ 
+\left( \begin{array}{ c }
+ 1 \\ 0
+\end{array} \right)
+\]
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+\[
+\text{ face :} \ \ 
+\left( \begin{array}{ c }
+ 0 \\ 1
+\end{array} \right)
+\]
+\end{minipage}
+
+\subsubsection{Opérateur}
+
+L'opération consistant à retourner la pièce fait passer le système d'un état à l'autre. Dans l'espace des états, cela consiste à appliquer un opérateur sur le vecteur d'état. Cette opérateur est représenté par une matrice.
+
+\so Exercice 1 : écrire cette matrice. Quelle est son inverse ?
+
+\so Exercice 2 : La pièce se trouvant dans l'état $\bf u_0$, on la retourne à chaque seconde, quelle est son état après $n$ secondes ?
+
+\subsubsection{Processus aléatoire}
+On peut lancer la pièce plutôt que de la retourner. On considère alors le procédé suivant :
+\begin{itemize}[leftmargin=1cm, label=\ding{32}, itemsep=1pt]
+\item si la pièce est sur pile, on la retourne,
+\item si la pièce est sur face, on la lance.
+\end{itemize}
+
+\so Exercice 3 : écrire la matrice représentant l'opérateur correspondant à ce processus.
+
+\so Exercice 4 : La pièce se trouvant dans l'état $\bf u_0$, on la soumet à ce processus à chaque seconde, que peut-on dire de son état après $n$ secondes ?
+
+\subsection{Exemple à trois états}
+On défini un système à trois états : pile, face, dans la main. On considère le procédé
+\begin{itemize}[leftmargin=1cm, label=\ding{32}, itemsep=1pt]
+\item si la pièce est sur pile, on la prend dans la main,
+\item si la pièce est dans la main, on la retourne,
+\item si la pièce est sur face, on la lance.
+\end{itemize}
+
+\so Exercice 5 : schématiser le processus, écrire les vecteurs d'états et l'opérateur correspondant au processus.
+
+\so Exercice 6 : La pièce se trouvant dans l'état $\bf u_0$, on la soumet à ce processus à chaque seconde, que peut-on dire de son état après $n$ secondes ?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
