@@ -84,6 +84,16 @@ pdfstartview={FitH}}	% ajuste la page à la largeur de l'écran
 %pdfcreator = {MikTeX},% Logiciel qui a crée le document
 %pdfproducer = {} % Société avec produit le logiciel
 
+%======================== DEFINITION COMMANDES ========================
+%\newcommand{\si}[1]{\textsf{\textit {#1}}}
+%\newcommand{\fsb}[1]{\textsf{\textbf {\footnotesize #1}}}
+\newcommand{\ve}[1]{\overrightarrow{#1}}
+\newcommand{\vt}[1]{\overrightarrow{\text{#1}}}
+\newcommand{\tx}[1]{\text{#1}}
+\newcommand{\bi}[1]{\textbf{\textit {#1}}}
+\newcommand{\mc}[1]{$\mathcal{#1}$}
+\newcommand{\wti}[1]{\widetilde{#1}}
+\newcommand{\wtt}[1]{\widetilde{\text #1}}
 %======================== DEBUT DU DOCUMENT ========================
 %
 \begin{document}
@@ -112,8 +122,7 @@ pdfstartview={FitH}}	% ajuste la page à la largeur de l'écran
 %
 \newcounter{numero}
 \input{./exercices/exercices.tex}
-%
-\input{./corriges/corriges.tex}
+%\input{./corriges/corriges.tex}
 %
 %====================== INCLUSION DE LA BIBLIOGRAPHIE ======================
 %

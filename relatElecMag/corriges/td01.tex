@@ -157,17 +157,28 @@ centième de frange. Si l'éther existait, quelle serait sa vitesse maximale par
 Terre ? Commenter.
 \end{enumerate}
 \subsection{Désintégration de muons cosmiques}
-Les muons sont des particules hargées ayant des propriétés très semblables aux éle trons excepté qu'ils sont plus massifs et instables. On les trouve en abondance dans les rayons cosmiques.
-Leur durée de vie moyenne au repos a été mesurée et vaut : $\tau$ 0 = 2, 197 × 10 −6 s .
-Un détecteur de muons est placé tout d'abord au sommet du Mont Washington (1910 m), puis
-au pied de ette montagne, sensiblement au niveau de la mer. Dans sa première position, le
-détecteur enregistre 563 +
-− 10 muons par heure, dans sa seconde position, 408 +
-− 9 .
 \begin{enumerate}
-  \item En faisant l'hypothèse que la vitesse des muons est proche de c , calculez leur durée de vie
-moyenne $\tau$ telle qu'elle est mesurée par un expérimentateur terrestre.
-En réalité, au cours de cette expérience, on a pu sélectionner des muons de vitesse v = 0, 992c .
+  \item Dans le référentiel terrestre, les muons parcourent $L$ en $\Delta t = L/c$
+  
+\begin{minipage}[c]{.45\linewidth}
+\begin{center}
+\begin{tikzpicture}[scale=1]
+\draw [->,-latex] (0,0) --++ (1.5,0) node [below] {$\overrightarrow{e_x}$};
+\draw [->,-latex] (0,0) --++ (0,2.5) node [left] {$\overrightarrow{e_z}$};
+\node at (0,0) [left]{O};
+\draw [ <->] (1,0) -- (1,2) node [midway,above left] {$L$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+\[
+n_f = n_i . e^{-\Delta t / \tau}
+\]
+\[
+\tau = \frac{L}{c}ln\frac{n_i}{n_f}
+\]
+\end{minipage}
   \item Montrez que l'expérimentateur peut retrouver cette valeur de $\tau$ à partir de la connaissance
 de $\tau$ 0 .
 \end{enumerate}

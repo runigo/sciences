@@ -1,78 +1,77 @@
 
-\section{Constructions géométriques}% TD n°3
+\chapter{Constructions géométriques}% TD n°3
 En relativité, l’espace et le temps n’étant pas absolus, il faut raisonner directement dans
 l’espace-temps à 4 dimensions. Ce TD propose plus modestement d’interpréter géométriquement
 la transformation de Lorentz dans le cadre d’un espace-temps à 2 dimensions (une dimension
 temporelle et une dimension spatiale).
 On identifie le plan de la feuille à notre espace-temps. Chaque point du plan représente donc
-un événement. Pour repérer l’ensemble des événements un observateur O appartenant à un
-référentiel inertiel R a besoin de trois événements :
+un événement. Pour repérer l’ensemble des événements un observateur \mc{O} appartenant à un
+référentiel inertiel \mc{R} a besoin de trois événements :
 – O, un événement origine quelconque ;
-– un événement B simultané à O (dans R), et séparé par une distance qui sera considérée
-comme l’échelle de longueur de R. On note e 1 le vecteur OB. Cet évènement B est l’émission
+– un événement B simultané à O (dans \mc{R}), et séparé par une distance qui sera considérée
+comme l’échelle de longueur de \mc{R}. On note \bi{e}$_1$ le vecteur {\bf OB}. Cet évènement B est l’émission
 d’un flash de lumière.
 – l’événement A qui correspond à l’arrivée du flash précédent au point O. Les évènements O
 et A, colocalisés, sont séparé par un intervalle de temps qui sera considéré comme l’étalon
-temporel de R (on rappelle que le temps est mesuré en mètres) ; on note e 0 le vecteur OA.
+temporel de \mc{R} (on rappelle que le temps est mesuré en mètres) ; on note e 0 le vecteur OA.
 Grâce à ce repère (O, e 0 , e 1 ), l’observateur peut définir les coordonnées contravariantes dans R
 de chaque événement E par :
-OE ≡ x μ e μ ≡ x 0 e 0 + x 1 e 1
+\[
+{\bf OE} \equiv x^\mu {\bi e}_\mu \equiv x^0 {\bi e}_0 + x^1 {\bi e}_1
+\]
 Dans l’espace-temps on définit le pseudo-produit scalaire de deux vecteurs a et b par
-ha, bi ≡ η μν
-a μ b ν
-=
-a 0 b 0
-−
-a 1 b 1
-avec
-η μν ≡ he μ , e ν i =
-1 0
-0 −1
-!
-où η μν est appelé métrique de Minkowski. On définit également la pseudo-norme associée (en
-relativité on parle d’intervalle) par |a| 2 = ha, ai. On a donc he 0 , e 1 i = 0 et |e 0 | 2 = −|e 1 | 2 = 1.
+\[
+\langle {\bi a}, {\bi b} \rangle \equiv 
+\eta_{\mu \nu}{\bi a}^ \mu {\bi b}^ \nu = a^0b^0-a^1b^1
+\text{ \ \ \ \ avec \ \ \ \ }
+\eta_{\mu \nu} \equiv \langle {\bi e}_\mu, {\bi e}_\nu \rangle =
+\left( \begin{array}{ c c }
+ 1 & 0 \\ 0 & -1
+\end{array} \right)
+\]
+où $\eta_{\mu \nu}$ est appelé métrique de Minkowski. On définit également la pseudo-norme associée (en
+relativité on parle d’intervalle) par |{\bi a}|$^2$ = $\langle {\bi a}, {\bi a} \rangle$. On a donc $\langle {\bi e}_0, {\bi e}_1 \rangle = 0$ et $|{\bi e}_0|^2=-|{\bi e}_1|^2=1$.
 Dans la suite il faudra prendre garde à ne pas confondre ce produit scalaire avec le produit
-scalaire utilisé en géométrie euclidienne que l’on notera a · b = a 0 b 0 + a 1 b 1 (norme associée :
-kak 2 = a · a). La façon dont on a choisi les évènements A et B implique que kak 2 = kbk 2 . Cette
+scalaire utilisé en géométrie euclidienne que l’on notera ${\bi a}.{\bi b} = a^0 b^0 + a^1 b^1$ (norme associée :
+$||{\bi a}||^2 = {\bi a}.{\bi a}$). La façon dont on a choisi les évènements A et B implique que $||{\bi a}||^2 = ||{\bi b}||^2$. Cette
 définition du produit scalaire implique que ces vecteurs sont orthonormés au sens euclidien.
-\subsection{Généralités sur les diagrammes d’espace-temps}%1 
-
-1. Représenter la ligne d’univers de l’observateur. Représenter les lignes d’univers des extrémités d’une règle. Comment représente-t-on le cône de lumière d’un événement E ?
+\section{Généralités sur les diagrammes d’espace-temps}%1 
+\begin{enumerate}
+  \item Représenter la ligne d’univers de l’observateur. Représenter les lignes d’univers des extrémités d’une règle. Comment représente-t-on le cône de lumière d’un événement E ?
 Quelle propriété vérifie la pente de la ligne d’univers d’une particule ?
-2. On considère désormais un deuxième observateur O 0 appartenant à un référentiel inertiel
-R 0 en mouvement à la vitesse v par rapport à R. L’événement O est choisi comme origine
-commune des deux repères. On note e 0 0 et e 0 1 les vecteurs de base du repère de R 0 . On
-1Licence de physique
-L7
-Année 2011-2012
-rappelle que les coordonnées dans R 0 et dans R sont reliées par les transformations de
+  \item On considère désormais un deuxième observateur \mc{O'} appartenant à un référentiel inertiel
+\mc{R'} en mouvement à la vitesse v par rapport à \mc{R}. L’événement O est choisi comme origine
+commune des deux repères. On note $\bi{e}_0'$ et $\bi{e}_1'$ les vecteurs de base du repère de \mc{R'}. On
+rappelle que les coordonnées dans \mc{R'} et dans \mc{R} sont reliées par les transformations de
 Lorentz :
-!
-γ
-−γβ
-0μ
-μ
-ν
-μ
-x =Λ ν x
-avec Λ ν =
-−γβ
-γ
-Montrer que le passage de e μ à e 0 μ se fait alors par la matrice Λ −1 . En déduire ke 0 0 k 2 ,
-ke 0 1 k 2 , e 0 0 · e 0 1 , |e 0 0 | 2 , |e 0 1 | 2 et he 0 0 , e 0 1 i . Dessiner la ligne d’univers de O 0 et les nouveaux
+
+\[
+x'^\mu = \Lambda^\mu_\nu x^\nu
+\text{ \ \ \ \ avec \ \ \ \ }
+\Lambda^\mu_\nu =
+\left( \begin{array}{ c c }
+ \gamma & -\gamma \beta \\ -\gamma \beta & \gamma
+\end{array} \right)
+\]
+Montrer que le passage de
+$\bi{e}_\mu$ à $\bi{e}_\mu'$
+se fait alors par la matrice $\Lambda^{−1}$ . En déduire
+$||\bi{e}_0'||^2$ , $||\bi{e}_1'||^2$,
+$\bi{e}_0'.\bi{e}_1'$ , $|\bi{e}_0'|^2$ , $|\bi{e}_1'|^2$ et $\langle \bi{e}_0', \bi{e}_1' \rangle$ Dessiner la ligne d’univers de \mc{O'} et les nouveaux
 vecteurs de base.
-3. Montrer simplement que la notion de simultanéité dépend du référentiel.
-4. Trois événements, E 1 , E 2 et E 3 se déroulent dans le référentiel R dans l’ordre E 1 E 2 E 3 . Supposons que ces mêmes événements se déroulent dans l’ordre E 3 E 2 E 1 dans un autre référentiel R 0 . Existe-t-il un troisième référentiel R 00 pour lequel ces événements se déroulent dans
-l’ordre E 1 E 3 E 2 ? Justifier graphiquement votre réponse.
-5. Montrer qu’une règle de longueur L dans un des deux référentiels a une longueur L/γ dans
+  \item Montrer simplement que la notion de simultanéité dépend du référentiel.
+  \item Trois événements, E$_1$, E$_2$ et E$_3$ se déroulent dans le référentiel \mc{R} dans l’ordre
+  E$_1$E$_2$E$_3$ . Supposons que ces mêmes événements se déroulent dans l’ordre E$_3$E$_2$E$_1$ dans un autre référentiel {\mc R'} . Existe-t-il un troisième référentiel {\mc R''} pour lequel ces événements se déroulent dans
+l’ordre E$_1$E$_3$E$_2$ ? Justifier graphiquement votre réponse.
+  \item Montrer qu’une règle de longueur L dans un des deux référentiels a une longueur L/$\gamma$ dans
 l’autre.
-\subsection{Retour sur le paradoxe des jumeaux}%2 
-1. En reprenant les notations de l’exercice 1 du TD2, représenter sur un schéma les lignes
+\end{enumerate}
+\section{Retour sur le paradoxe des jumeaux}%2 
+\begin{enumerate}
+  \item En reprenant les notations de l’exercice 1 du TD2, représenter sur un schéma les lignes
 d’univers des différents protagonistes. Répondre graphiquement aux questions 2. et 3.
-2. Faites un schéma du voyage complet en faisant intervenir les pilotes de l’exercice 2 du
+  \item Faites un schéma du voyage complet en faisant intervenir les pilotes de l’exercice 2 du
 TD2. Montrer alors qu’il n’y a plus de paradoxe : bien que V observe que S vieillit moins
 vite que lui pendant chacune des phases aller et retour, il s’attend bien a trouver S plus
 vieux que lui à l’arrivée.
-TD n o 2
-2
-S. Leurent, M. Lilley, & S. Nascimbène
+\end{enumerate}
