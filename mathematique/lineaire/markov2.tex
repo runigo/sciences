@@ -1,0 +1,64 @@
+\newpage
+%%%%%%%%%%%%%%%%%%%%%
+\section{Markov 2}
+%%%%%%%%%%%%%%%%%%%%%\[\]
+%
+\Large
+\subsection{Exemple à deux états}
+On considère les matrices suivantes :
+
+\begin{minipage}[c]{.2\linewidth}
+\[ M = \left( \begin{array}{ c c } 0 & 1/2 \\ 1 & 1/2 \end{array} \right) \]
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.2\linewidth}
+\[ A = \left( \begin{array}{ c c } 1 & 1 \\ 2 & -1 \end{array} \right) \]
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.2\linewidth}
+\[ B = \left( \begin{array}{ c c } -1 & -1 \\ -2 & 1 \end{array} \right) \]
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.2\linewidth}
+\[ I = \left( \begin{array}{ c c } 1 & 0 \\ 0 & 1 \end{array} \right) \]
+\end{minipage}
+
+\newcounter{numero}
+\begin{enumerate}
+  \item Calculer le produit $AB$. Écrire la matrice inverse de A.
+  \item Calculer le produit $AMB$. Que remarque-t-on ?
+\setcounter{numero}{\theenumi}\end{enumerate}
+
+On considère les vecteurs suivants : \hspace{0.5cm}
+$ {\bf u_1} = \left( \begin{array}{ c } 1  \\ 2 \end{array} \right) $
+\hspace{0.5cm}et\hspace{0.5cm}
+$ {\bf u_{-1/2}} = \left( \begin{array}{ c } 1 \\ -1 \end{array} \right) $
+
+\begin{enumerate}
+  \setcounter{enumi}{\thenumero}
+  \item Comparer le produit $M{\bf u_1}$ avec ${\bf u_1}$ puis le produit $M{\bf u_{-1/2}}$ avec ${\bf u_{-1/2}}$. Justifier le choix des indices de ces deux vecteurs. Relier ceux-ci à la matrice $AMA^{-1}$.
+  \item Quel est le lien entre la matrice $A$ et les vecteurs ${\bf u_1}$ et ${\bf u_{-1/2}}$ ? Comment appelle-t-on la matrice $A$
+\setcounter{numero}{\theenumi}\end{enumerate}
+
+La matrice $M$ correspond à un processus de markov.
+
+\begin{enumerate}
+  \setcounter{enumi}{\thenumero}
+  \item Décrire un système obéissant à ce processus. Schématiser celui-ci à l'aide d'un graphe.
+  \item Que peut-on dire de l'état du système après un grand nombre d'évolution ?
+\setcounter{numero}{\theenumi}\end{enumerate}
+
+\subsection{Exemple à trois états}
+On considère la matrice :
+
+%\begin{minipage}[c]{.2\linewidth}
+\[ M = \left( \begin{array}{ c c c } 1/2 & 0 & 1 \\ 1/2 & 0 & 0 \\ 0 & 1 & 0 \end{array} \right) \]
+%\end{minipage}
+
+\begin{enumerate}
+  \item Déterminer le vecteur ${\bf u_1}$ tel que $M{\bf u_1}={\bf u_1}$.
+  \item Décrire un système obéissant au processus de markov associé à la matrice $M$. Schématiser celui-ci à l'aide d'un graphe.
+  \item Que peut-on dire de l'état du système après un grand nombre d'itération ?
+\setcounter{numero}{\theenumi}\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
