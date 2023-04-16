@@ -119,28 +119,28 @@ ne suffit pas à déterminer le chemin continu x(t) :
 
 \begin{center} \begin{tikzpicture}
 % axes
-\draw [->] (0,0) --++ (8,0) node [below] {t};
-\draw [->] (0,0) --++ (0,4) node [left] {x};
+\draw [->] (0,0.5) --++ (8,0) node [below] {t};
+\draw [->] (0,0.5) --++ (0,4) node [left] {x};
 \node at (0,0) [left]{O};
 % coordonnées et points
 \draw [densely dashed] (0,3) node [left] {x'} --++ (1,0);
-\draw [densely dashed] (1,0) node [below] {t'} --++ (0,3);
+\draw [densely dashed] (1,0.5) node [below] {t'} --++ (0,2.5);
 \node at (1.2,3) [above left]{M'};
 \draw [densely dashed] (0,2.5) node [left] {x''} --++ (7,0);
-\draw [densely dashed] (7,0) node [below] {t''} --++ (0,2.5);
+\draw [densely dashed] (7,0.5) node [below] {t''} --++ (0,2);
 \node at (7,2.8) [right]{M''};
 % intermédiaires
-\draw (1.5,-0.05) node [below] {t$_1$} --++ (0,0.1);
+\draw (1.5,0.45) node [below] {t$_1$} --++ (0,0.1);
 \draw [line width=1.5pt] (1.5,3.3) --++ (0,0.2) node [above]{M$_1$};
-\draw (2,-0.05) node [below] {t$_2$} --++ (0,0.1);
+\draw (2,0.45) node [below] {t$_2$} --++ (0,0.1);
 \draw [line width=1.5pt] (2,3.5) --++ (0,0.2) node [above]{M$_2$};
 % intermédiaires fin
-\draw (6.5,-0.05) node [below] {t$_{\mt{n}-1}$} --++ (0,0.1);
+\draw (6.5,0.45) node [below] {t$_{\mt{n}-1}$} --++ (0,0.1);
 \draw [line width=1.5pt] (6.5,2) --++ (0,0.2) node [left]{M$_{\mt{n}-1}$};
 % intermédiaires milieu
-\draw (3.5,-0.05) node [below] {t$_\mt{i}$} --++ (0,0.1);
+\draw (3.5,0.45) node [below] {t$_\mt{i}$} --++ (0,0.1);
 \draw [line width=1.5pt] (3.5,3.05) --++ (0,0.2) node [right]{M$_\mt{i}$};
-\draw (4,-0.05) node [below] {t$_{\mt{i}+1}$} --++ (0,0.1);
+\draw (4,0.45) node [below] {t$_{\mt{i}+1}$} --++ (0,0.1);
 \draw [line width=1.5pt] (4,2.6) --++ (0,0.2) node [right]{M$_{\mt{i}+1}$};
 % Chemin
 \draw [line width=1.5pt] (1,3) .. controls (2,4) and (3,3.7) .. (4,2.7);
@@ -578,68 +578,96 @@ $\int_\mt{t}^{\mt{t}+\epsilon}[\frac{1}{2}\mt{mv}^2 - \mt{V(x)}]\mt{d}\tau$, v e
 étant les vitesses et positions à l'instant $\tau$ de la particule classique
 partie de x$_\mt{k}$ à l'instant t et arrivant en x$_\mt{k+1}$ à l'instant t$+\epsilon$. Si 
 x$_\mt{k+1}-$x$_\mt{k}$
-est au maximum de l'ordre de 2, nous voyons en développant v(x) au voisi
-nage de V(x, ..), que V(x) est égal à V(x,,.) à un infiniment petit en 
-
-près. La vitesse moyenne de la particule classique est V $=$  Elle
-
-peut donc tendre vers l'infini en  lorsque  tend vers zéro. Cependant
-
-l'équation fondamentale de la dynamique qui s'écrit m  $=$
-
-tre que l'écart à la vitesse moyenne,  , est toujours infiniment
-
-nous mon
-
-petit de l'ordre de . La variation de l'énergie cinétique, , est donc,
-
-comme la variation de l'énergie potentielle un infiniment petit en.
-Après intégration sur le temps, (c'est-à-dire multiplication par on voit
-
-done, que ne diffère de  que par un terme
-en et constitue donc bien une approximation valable au premier ordre
-
-inclus en  de 
+est au maximum de l'ordre de $\epsilon^{1/2}$, nous voyons en développant X(x)
+au voisinage de V(x$_\mt{k+1}$), que V(x) est égal à V(x$_\mt{k+1}$) à un infiniment petit en 
+$\epsilon^{1/2}$
+près. La vitesse moyenne de la particule classique est
+$\overline{\mt{v}}= \frac{\mt{x}_\mt{k+1}-\mt{x}_\mt{k}}{\epsilon}$.  Elle
+peut donc tendre vers l'infini en $\epsilon^{-1/2}$ lorsque $\epsilon$ tend vers zéro. Cependant
+l'équation fondamentale de la dynamique qui s'écrit
+m $\frac{\mt{dv}}{\mt{dt}}=-\frac{\partial\mt{V}}{\partial\mt{x}}$
+nous montre que l'écart à la vitesse moyenne, $\delta$v $=$ v $-\overline{\mt{v}}$, est toujours infiniment
+petit de l'ordre de $\epsilon$. La variation de l'énergie cinétique,
+mv$\delta$v, est donc,
+comme la variation de l'énergie potentielle un infiniment petit en $\epsilon^{1/2}$.
+Après intégration sur le temps, (c'est-à-dire multiplication par $\epsilon^{1/2}$) on voit
+donc que 
+$\epsilon[\frac{\mt{m}\overline{\mt{v}}^2}{2}-\mt{V(x}_\mt{k+1})]$
+ne diffère de S (x$_\mt{k}$, x$_\mt{k+1}$) que par un terme
+en $\epsilon^{3/2}$ et constitue donc bien une approximation valable au premier ordre
+inclus en $\epsilon$ de S (x$_\mt{k}$, x$_\mt{k+1}$)
 %
 
-Etablissement de l'équation de Schrôdinrer
+\subsection{Etablissement de l'équation de Schrödinger}
 
 Posons maintenant
-
+x$_\mt{k+1} =$ x; x$_\mt{k+1} -$ x$_\mt{k}=\zeta$.
 L'équation (11), compte tenu des approximations précédentes, s'écrit
+\[
+\tag{12}\psi(\mt{x, t}+\epsilon) = \int 
+\mt{exp}\frac{\mt{im}\zeta^2}{2\epsilon\hbar}
+\mt{exp}-\frac{\mt{i}\epsilon\mt{V(x)}}{\hbar}
+\ \psi(\mt{x}-\zeta,t)\ \frac{\mt{d}\zeta}{\mt{A}}
+\]
+Or exp$\frac{\mt{im}\zeta^2}{2\epsilon\hbar}$ devient une fonction très rapidement oscillante dès que
+$\zeta > (\frac{\epsilon\hbar}{\mt{m}})^{1/2}$
+alors que $\psi(\mt{x}-\zeta,t)$ varie très lentement. Donc les seules
+valeurs de $\zeta$ qui contribuent de façon importante à l'intégrale (12) sont
+comprises entre $\pm(\frac{\epsilon\hbar}{\mt{m}})^{1/2}$, ce qui justifie a posteriori la remarque que
+nous avions faite pour établir une expression approchée de S (x$_\mt{k}$, x$_\mt{k+1}$) et
+nous permet de calculer (12) en développant $\psi(\mt{x}-\zeta,t)$ :
+\begin{center}
+$\psi(\mt{x}-\zeta,t) = \psi(\mt{x},t)-\zeta\frac{\partial\psi(\mt{x},t)}{\partial\mt{x}}
++\frac{\zeta^2}{2}\frac{\partial^2\psi(\mt{x},t)}{\partial\mt{x}^2} + ...$
 
-Or exp  devient une fonction très rapidement oscillante dès que
-
- alors que  varie très lentement. Donc les seules
-valeurs de  qui contribuent de façon importante à l'intégrale (12) sont
-comprises entre , ce qui justifie a posteriori la remarque que
-
-nous avions faite pour établir une expression approchée de  et
-
-nous permet de calculer (12) en développant 
+$\psi(\mt{x},t+\epsilon) = \psi(\mt{x},t)-\epsilon\frac{\partial\psi(\mt{x},t)}{\partial\mt{t}} + ...$
+\end{center}
 
 Le développement de (12) fait alors intervenir trois intérrales
 dont le calcul ne présente aucune difficulté et dont nous donnons ici
-
 l'expression
-%
-En développant au premier ordre , l'équation
+\begin{center}$
+\int\mt{exp}(\mt{im}\zeta^2/2\hbar\epsilon)\mt{d}\zeta = (2\pi\hbar\epsilon\mt{i/m})^{1/2}$
+\end{center}
+\begin{center}
+$\int\mt{exp}(\mt{im}\zeta^2/2\hbar\epsilon)\zeta\mt{d}\zeta = 0$
+\end{center}
+\begin{center}
+$\int\mt{exp}(\mt{im}\zeta^2/2\hbar\epsilon)\zeta^2\mt{d}\zeta =
+(\hbar\epsilon\mt{i/m})(2\pi\hbar\epsilon\mt{i/m})^{1/2}
+$\end{center}
+% 24
+En développant au premier ordre exp
+$-\frac{\mt{i}\epsilon\mt{V(x)}}{\hbar}=1-\frac{\mt{i}\epsilon}{\hbar}\mt{V(x)}$, l'équation
 (12) devient : 
+\[
+\psi(\mt{x,t})+\frac{\epsilon\partial\psi(\mt{x,t})}{\partial\mt{t}} =
+\left[1-\frac{\mt{i}\epsilon}{\hbar}\mt{V(x)}\right]
+\frac{(2\pi\hbar\epsilon\mt{i/m})^{1/2}}{\mt{A}}
+\left[\psi(\mt{x,t})+\frac{\hbar\epsilon\mt{i}}{2\mt{m}}
+\frac{\partial^2\psi(\mt{x},t)}{\partial\mt{x}^2}+...\right]
+\]
+En identifiant les termes d'ordre 0 et 1 en $\epsilon$ on obtient
 
-En identifiant les termes d'ordre et  on obtient
-
+{\it Ordre 0}
+\begin{center}
+A $= ( \frac{2\pi\hbar\epsilon\mt{i}}{m} )^{1/2}£$
+\end{center}
 ce qui n'est autre que l'expression (6) que nous avons déjà obtenue par
 un autre moyen.
 
+{\it Ordre 1}
+\[
+\tag{13} \mt{}i\hbar\frac{\partial\psi}{\partial\mt{t}} =
+\frac{1}{2\mt{m}}\left(\frac{\hbar}{\mt{i}}\frac{\partial}{\partial\mt{x}}\right)^2\psi
++\mt{V(x)}\psi
+\]
 ce qui n'est autre que l'équation de Schrödinger d'une particule dans un
-
 votentiel V(x).
 
 La formulation de Feynman est donc bien équivalente aux autres
-
 formulations de la mécanique quantique.
 
-Nous voyons que nour obtenir une expression valable jusqu'au rremier ordre
-
-en , il a fallu déveloprer jusqu'au deuxière ordre en 
+Nous voyons que nour obtenir une expression valable jusqu'au premier ordre
+en $\epsilon$, il a fallu déveloprer $\psi$(x$-\zeta$, t) jusqu'au deuxière ordre en $\zeta$
 %
