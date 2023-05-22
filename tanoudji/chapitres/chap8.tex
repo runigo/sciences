@@ -1,0 +1,2297 @@
+% 226
+%III = DUREE DE VIE D'UN ETAT INSTABLE
+\chapter{Durée de vie d'un état instable}
+
+\section{Introduction}
+\subsection{Position du problème}%1°)  :
+
+La théorie que nous allons développer dans ce chapitre va nous permettre de préciser et d'étudier la notion de durée de vie d'un état quantique
+préparé à un instant donné et évoluant irréversiblement, sous l'effet d’une
+interaction donnée, vers les états d'un "continuum" d'énergie avec lequel il
+est couplée.
+
+C'est par exemple le cas de la désintégration d'une particule élémentaire :
+\begin{center}
+méson $\pi$ $\to$ méson $\mu$ + neutrino
+
+$\pi^+$ $\to$  $\mu^+$ + $\nu$
+\end{center}
+ou encore celui de l'évolution irréversible d'un état atomique excité sous
+l'effet du couplage avec le champ électromagnétique : l'émission spontanée.
+
+On peut, en général, poser le problème de la durée de vie de la façon
+suivante : un système physique (qui peut, par exemple, être composé de deux
+parties) possède un hamiltonien H$_0$ + V (H$_0$ décrivant éventuellement l'énergie des
+deux parties en présence et V 1‘interaction qui existe entre elles).
+
+Le hamiltonien H$_0$, possède un spectre continu, c'est-à-dire un spectre
+dans lequel l'énergie varie continuement à partir d'une valeur $E_0$, les états
+propres correspondants a', b', n'étant pas normés (Leur norme n'est pas finie. Ils sont cependant "nornés" au sens de la distribution de Dirac). Superposé à ce spectre continu,
+% 227
+le hamiltonien H$_0$ possède un spectre discret, c'est-à-dire qu'il existe
+
+\begin{center} \begin{tikzpicture}
+\draw [->] (0,0) -- (7,0);
+\draw (0,-0.07) -- (0,0.07) node [above]{$E_0$};
+\draw (2.5,-0.07) -- (2.5,0.07) node [above]{E$_\mt{a}$};
+\draw (4.7,-0.07) -- (4.7,0.07) node [above]{E$_\mt{b}$};
+\draw [dashed] (-3,0) -- (0,0);
+\end{tikzpicture} \end{center}
+
+des états propres de H$_0$, | a >, | b > etc.., de norme finie dont l'énergie,
+prenant des valeurs discrètes coïncide avec certaines valeurs du spectre
+continu.
+
+On suppose qu'à l'instant t $=$ 0, on peut, par un procédé quelconque,
+préparer le système dans l'un de ces états, | b > par exemple,
+
+| b >, état propre de H$_0$, n'est pas un état propre de H. Sous
+l'effet de l'interaction V, le système va évoluer, l'état | b > se vidant au
+profit des états du continuum d'énergie avec lesquels il se trouve couplé.
+
+Les deux questions qui se posent alors sont :
+
+Comment l'état instable | b > se vide-t-i1 ?
+
+Comment les autres états se remplissent-ils ?
+
+C'est la réponse à ces deux questions qui va constituer l'étude de la
+durée de vie de l'état instable | b >.
+
+Nous pouvons déjà leur fournir une réponse qualitative par un raisonnement
+élémentaire.
+
+L'état instable | b > est couplé par V à un continuum d'énergie. Il
+existe donc, à l'instant initial, une probabilité de transition par unité de
+temps vers le continuum que l'on peut calculer à l'aide de la règle d'or de
+Fermi : il suffit de sommer sur les états finaux le carré de l'élément de matrice d'interaction V en ayant pris soin de multiplier par une distribution de
+Dirac assurant la conservation de l'énergie. L'existence de cette probabilité
+de transition par unité de temps implique une décroissence de la probabilité
+% 228
+de présence dans l'état initial qui acquiert ainsi une durée de vie finie
+$\tau$ $=$ $\hbar/\Gamma$.
+
+Cette durée de vie finie de l'état instable initial conduit à une
+indétermination dans l'énergie de cet état, donc à une dispersion, de l'ordre
+de $\Gamma$, en énergie des états finaux résultant de la disparition de l’état initial.
+
+Toutes ces conclusions, établies par un calcul au premier ordre,
+seront confirmées par le raisonnement rigoureux que nous allons faire dans
+ce chapitre. Nous allons nous servir une fois de plus des techniques de la
+résolvante afin de calculer les amplitudes de probabilité < b | U(t) | b >
+pour que le système créé dans l'état b à l'instant 0 y soit encore à l'instant
+t, et < a' | U(t) | b > pour que le système soit à l'instant t dans un état
+a' du spectre continu de H$_0$ Nous devrons pour cela calculer les éléments de
+matrice de la résolvante G$_\mt{bb}$ et G$_\mt{a'b}$ dont l'étude nous permettra ainsi de répondre aux deux questions que nous nous sommes posées. L'intérêt de la résolvante est qu'elle permet de mener jusqu'au bout des calculs rigoureux et d'en
+tirer des conclusions rigoureuses sur le phénomène physique étudié, les approximations indispensables au calcul pratique n'étant faites qu'en tout dernier
+lieu.
+
+Nous devons enfin dire que la façon dont nous abordons ici le problème des états instables peut ne pas toujours être justifiée : nous avons en
+effet admis implicitement que l'on pouvait préparer instantanément, à l'instant
+t $=$ 0, un état | b > du système non perturbé H$_0$. Physiquement, cela veut dire que
+le temps de préparation est très court devant la durée de vie de l'état instable.
+
+Dans le cas de l'émission spontanée, par exemple, la préparation du
+système peut se faire par excitation à partir de l'état fondamental de l'atome
+à l'aide d'un train d'onde lumineux. Il faut donc que ce train d'onde ait une
+dispersion en énergie $\Delta$ très grande devant la largeur $\Gamma$ de l'état excité étudié.
+
+% 229
+Une façon beaucoup plus générale d'aborder le problème, et qui
+lève cette restriction est d'étudier non plus le spectre et les états propres
+de H$_0$ qui n'ont pas une évolution simple, mais plutôt le spectre et les
+états propres de H = H$_0$ + V.
+
+Nous allons en effet montrer que le spectre de H est continu et
+ne présente plus d'états discrets (sauf éventuellement l'état fondamental),
+le spectre d'énergie partant d'une valeur $E$
+
+\vspace{0.3cm}
+\begin{center}
+\begin{tikzpicture}
+\draw [->] (0,0) -- (7,0);
+\draw (0,0.07) -- (0,-0.07) node [below]{$E$};
+\draw [dashed] (-3,0) -- (0,0);
+\end{tikzpicture}
+\end{center}
+
+Les états propres de H sont donc des états stationnaires de collision et le problème se ramène à un problème de diffusion. Dans le cas de l'émission spontanée, il s'agit de la diffusion de photons par un atome.
+
+Si le spectre de H ne possède plus d'état discret, au voisinage de
+l'emplacement des états discrets du spectre de H$_0$, il reste en quelque sorte
+“un souvenir" du spectre de H$_0$ et les éléments de matrice de collision et de
+réaction S et R subissent des variations très importantes pour les énergies
+correspondantes. Il en résulte une variation résonnante pour ces valeurs de la
+section efficace de diffusion.
+
+Le problème des états instables se trouve donc également lié de façon
+étroite à celui de la diffusion résonnante et constitue ainsi en quelque sorte
+un intermédiaire entre le problème des états liés et celui des états stationnaires de collision du spectre continu.
+
+\subsection{Propriétés analytiques de la résolvante} %2°) :
+
+Avant d'aborder le problème qui nous intéresse ici, nous allons étudier les propriétés analytiques de la résolvante.
+% 230
+
+Nous nous plaçons dans le cas, tout à fait général, d'un hamiltonien H possédant un spectre réel continu partant d'une valeur $E$ et un spectre
+discret, d'énergie E$_\mt{i}$, dont une partie peut éventuellement être superposée au
+spectre continue
+
+\begin{center} \begin{tikzpicture}
+\draw [->] (0,0) -- (7,0);
+\draw [dashed] (-3,0) -- (0,0);
+\draw (0,-0.07) -- (0,0.07) node [above]{$E$};
+\draw (-1.7,0.07) -- (-1.7,-0.07) node [below]{E$_\mt{i}$};
+\draw (2.5,0.07) -- (2.5,-0.07) node [below]{E$_\mt{j}$};
+\draw (4.7,0.07) -- (4.7,-0.07) node [below]{E$_\mt{k}$};
+\end{tikzpicture} \end{center}
+
+En appelant $\gamma$ un ensemble de nombres quantiques, discrets ou continus, servant à distinguer les états de même énergie, on peut écrire la relation
+de fermeture sous la forme très générale d'une somme sur tous les états discrets
+et d'une intégrale sur le spectre continu :
+\[
+\tag{1} \sum_\mt{i} | \mt{E}_\mt{i} > < \mt{E}_\mt{i} | +
+\int\int \mt{d}\gamma \mt{dE'} | \gamma\mt{E'} > < \mt{E'}\gamma | = 1
+\]
+Soit | u > un état normé. On se propose d'étudier les propriétés analytiques de
+l'élément de matrice de la résolvante :
+\begin{center}
+G$_\mt{u}$(z) = < u | G(z) | u > $=$ < u | $\frac{1}{\mt{z}-\mt{H}}$ | u >
+\end{center}
+qui peut s'écrire, à l'aide de la relation de fermeture
+\[
+\mt{G}_\mt{u}(\mt{z}) = \sum_\mt{i}
+\frac{| < \mt{u} | \mt{E}_\mt{i} > |^2}{\mt{z}-\mt{E}_\mt{i}} +
+\int \mt{dE'}\frac{\int\mt{d}\gamma |< \mt{u} | \gamma\mt{E'} >|^2 }{\mt{z}-\mt{E'}}
+\]
+Plusieurs cas peuvent se présenter, suivant les valeurs de z :
+
+1) z est strictement différent de l'une des valeurs propres de H
+
+Il est alors clair que | z - E$_\mt{i}$ | et | z - E' | sont minorés par un
+nombre $\Delta$ positif représentent la distance de z à la valeur propre la plus
+% 231
+voisine :
+\begin{center}
+ | z - E$_\mt{i}$ |, | z - E' | $\geq$ $\Delta$
+\end{center}
+
+Tous les numérateurs intervenant dans G$_\mt{u}$(z) étant positifs, on
+peut majorer | G$_\mt{u}$(z) | :
+\[
+|\mt{G}_\mt{u}(\mt{z})| \leq \frac{1}{\Delta} \left[ \sum_\mt{i}
+< \mt{u} | \mt{E}_\mt{i} > < \mt{E}_\mt{i} | \mt{u} > +
+\int \int < \mt{u} | \gamma\mt{E'} > < \gamma\mt{E'} | \mt{u} > \mt{d}\gamma \, \mt{dE'} \right]
+\]
+
+et d'après la relation de fermeture (1) :
+\begin{center}
+| G$_\mt{u}$(z) | < $\frac{\mt{<u|u>}}{\Delta}$ $=$
+$\frac{1}{\Delta}$ \ \ \ \ \ \ (| u > est norné)
+\end{center}
+
+I1 en résulte que G$_\mt{u}$(z) est borné, tant que | z $-$ E$_\mt{i}$ | | z $-$ E' | $\geq \Delta$.
+
+On montre également très facilement que la dérivée G'$_\mt{u}$(z) reste bornée dans
+les mêmes conditions. Il en résulte que G$_\mt{u}$(z) est analytique dans toute région
+du plan complexe ne contenant pas le spectre de H.
+
+2) z tend vers une des valeurs nronres du srsctre discret E$_\mt{i}$ de H
+
+Le terme prépondérant dans la somme (2) est alors $\frac{|< \mt{u} | \mt{E}_\mt{i} >|^2}{\mt{z}-\mt{E}_\mt{i}}$ qui
+tend vers l'infini :
+
+Les valeurs propres du spectre discret de H sont donc en général
+(sauf si < u|E$_\mt{i}$ > $=$ 0) des pôles de G$_\mt{u}$(z) admettant | < u|E$_\mt{i}$ > |$^2$ pour résidus.
+Tous ces résultats ont déjà été obtenus au chapitre précédent.
+
+3) z tend vers une valeur du spectre continu en un point E qui n'est
+pas confondu avec un état du smectre discret, soit dans le demi-plan supérieur,
+soit dans le demi-plan inférieur.
+
+\begin{center} \begin{tikzpicture}
+\draw [->] (0,0) -- (7,0);
+\draw [dashed] (-3,0) -- (0,0);
+\draw (0,-0.07) -- (0,0.07) node [above]{$E$};
+\draw (-1.7,0.07) -- (-1.7,-0.07) node [below]{E$_\mt{i}$};
+\draw (2.1,0.07) -- (2.1,-0.07) node [below]{E$_\mt{j}$};
+\draw (5.7,0.07) -- (5.7,-0.07) node [below]{E$_\mt{k}$};
+\draw [->] (3.9,0.9) -- (3.9,0.1) node [above right]{E};
+\draw [->] (3.9,-0.9) -- (3.9,-0.1);
+\end{tikzpicture} \end{center}
+
+%232 =
+
+Nous devons calculer $\lim_{\,\epsilon \to \,0^+} \mt{G}_\mt{u} (\mt{E} \pm \mt{i}\epsilon)$
+
+avec
+\[
+\tag{3-a} \mt{G}_\mt{u} (\mt{E} \pm \mt{i}\epsilon) =
+\sum_i\frac{|<\mt{u}|\mt{E}_i>|^2}{\mt{E} \pm \mt{i}\epsilon-\mt{E}_i} +
+\int\mt{dE'}\frac{\mt{f}_\mt{u}(\mt{E'})}{\mt{E}-\mt{E'}\pm\mt{i}\epsilon}
+\]
+
+en posant
+\[
+\tag{3-b} \mt{f}_\mt{u}(\mt{E'})=\int\mt{d}\gamma<\mt{u}|\gamma \mt{E'}><\gamma \mt{E'}|\mt{u}>
+\]
+
+Le premier terme du second membre de (3-a) tend simplement,
+lorsque $\epsilon \to 0$, vers $\sum_i\frac{|<\mt{u}|\mt{E}_i>|^2}{\mt{E} \pm \mt{i}\epsilon-\mt{E}_i}$, ce qui est une grandeur réelle.
+Quant au deuxième terme du second membre, il tend comme nous l'avons déjà
+vu à plusieurs reprises, lorsque $\epsilon \to 0$, vers
+
+\[
+\tag{4} <\mc{P}\frac{1}{\mt{E}-\mt{E'}},\mt{f}_\mt{u}(\mt{E'})> \mp
+\mt{i}\pi<\delta(\mt{E}-\mt{E'}),\mt{f}_\mt{u}(\mt{E'})>
+\]
+\[
+=<\mc{P}\frac{1}{\mt{E}-\mt{E'}},\mt{f}_\mt{u}(\mt{E'})> \mp
+\mt{i}\pi\mt{f}_\mt{u}(\mt{E})
+\]
+Les limites de $\mt{G}_\mt{u} (\mt{E} \pm \mt{i}\epsilon)$ lorsque $\epsilon \to 0_+$, existent donc mais ne
+sont pas les mêmes, suivant que l'on tend vers l'axe réel dans le demi-plan
+supérieur ou dans le demi-plan inférieur (à condition que f (E) $\ne$ 0) : on
+dit que la fonction analytique $\mt{G}_\mt{u} (\mt{z})$ présente une coupure le long du spectre
+continu de H. Le point où commence la coupure, $\epsilon$, s'appelle le point de branchement.
+
+La notion de coupure intervient pour toutes les fonctions analytiques à déterminations multiples : par exemple la fonction Log z augmente de
+2i$\pi$ à chaque tour autour de l'origine. Le demi-axe ($0\to\infty$) peut donc être
+considéré comme une coupure, les valeurs prises de part et d'autre par la
+fonction différent de 2i$\pi$.
+
+% 233
+
+Dans le cas présent, les valeurs prises par la fonction G$_\mt{u}$(z)
+de part et d'autre de la coupure sont complexes conjuguées l'une de l'eutre.
+I1 est facile de s'en assurer sur les expressions (3-a) et (4).
+
+Lorsqu'une fonction analytique est définie dans une partie du
+plan complexe, on peut, sous certaines conditions, la prolonger par continuité en une fonction analytique dans une partie plus grande du plan complexe :
+c'est le principe du prolongement analytique.
+
+Le fonction G$_\mt{u}$(z) est analytique dans le demi-plan supérieur.
+On peut la prolonger au delà de la coupure en une fonction analytique dans
+le demi-plan inférieur. La valeur prise par la fonction prolongée par continuité est différente de le valeur prise au même point par la détermination
+initiale de la fonction, puisque la coupure introduit justement une discontinuité dans cette détermination : on dit qu'on a prolongé G$_\mt{u}$(z) dans le
+deuxième feuillet de Riemann, le plan complexe initial, constituant le premier
+feuillet de Riemann.
+
+On aurait pu également prolonger la détermination du demi-plan
+inférieur au delà de la coupure dans le demi-plan supérieur.
+
+Pour nous résumer, la fonction G$_\mt{u}$(z) est analytique dans le plan
+complexe privé des valeurs du spectre discret de H qui constituent des pôles,
+et du spectre continu de H qui constitue une coupure. Il est possible de prolonger analytiquement G$_\mt{u}$(z) au delà de la coupure dans le deuxième feuillet de
+Riemann, ce qui constitue une deuxième détermination de G$_\mt{u}$(z). Cette deuxième
+détermination peut posséder des pôles et nous allons voir que l'étude de ces
+pôles va se révéler extrëmement utile dans le problème de la durée de vie des
+états instables.
+
+
+
+\subsection{Exemple choisi. Notations}% 3°)
+
+Nous allons illustrer notre théorie de la durée de vie sur l'exemple
+très important de l'émission spontanée, Ce problème présente des difficultés
+% 234
+inhérentes au fait que nous traitons l'interaction d'un système matériel avec
+un champ : certaines des grandeurs que nous allons être amenés à définir
+seront infinies car elles correspondront à des intégrales divergentes. Ces
+divergences ne pourront être écartées que dans le cadre d'une théorie de la renormalisation. Cependant, comme ces difficultés ne sont pas liées à la théorie
+de la durée de vie elle-même, elles n'infirmeront en rien les résultats généraux obtenus et nous les laisserons de côté pour l'instant.
+
+(On peut montrer que si l'on prend pour masse et charge de l'électron les masse et
+charge expérimentales, c'est-à-dire les masses et charges "habillées" par les fluctuations électromagnétiques du vide, on élimine les divergences. C'est ce que nous
+ferons dans la suite de ce chapitre.)
+
+Le système envisagé est donc celui d'un atome couplé au champ
+électromagnétique.
+
+Les états d'énergie de l'atome sont des états discrets $|$ a $>$,
+$|$ b $>$ ..., d'énergie E$_\mt{a}$, E$_\mt{b}$ < 0 et des états du spectre continu pour E > 0
+
+Les états d'énergie du champ s'obtiennent par action des opérateurs de création sur l'état du vide $|$ 0 $>$. Nous prendrons le vide normé :
+\[
+\tag{5}<0|0>=1
+\]
+et nous appellerons a$_\lambda^+(\vec{\mt{k}})$ et a$_\lambda^-(\vec{\mt{k}})$ respectivement les opérateurs de création
+et d‘annihilation d'un photon de vecteur d'onde $\vec{\mt{k}}$ et de polarisation $\vec{\mc{E}}_\lambda$, perpendiculaire à $\vec{\mt{k}}$.
+
+Nous prendrons des modes continus, avec pour relations de commutation :
+\[
+\tag{6}[\mt{a}_\lambda^-(\vec{\mt{k}}),\mt{a}_\mu^+(\vec{\mt{k'}})]=
+\delta\lambda\mu\ \delta(\vec{\mt{k}}-\vec{\mt{k'}})
+\]
+
+Nous obtenons donc pour états propres d'énergie du système combiné
+“atome-photons" en l'absence de l'interaction électromagnétique entre les atomes
+et le champ, les états à zéro photon
+\begin{center}
+$|$ a, 0 $>$, $|$ b, 0 $>$, etc...
+\end{center}
+les états à un photon
+\begin{center}
+$|$ a, $\vec{\mt{k}}_\lambda$ $>$, $|$ b, $\vec{\mt{k}}_\lambda$ $>$, etc...
+\end{center}
+les états à deux photons
+\begin{center}
+$|$ a, $\vec{\mt{k}}_\lambda$,  $\vec{\mt{k'}}_{\lambda'}>$, ... et ainsi de suite.
+\end{center}
+% 235
+$|$ a $>$ étant l'état fondamental de l'atome, le spectre de H$_0$ est un spectre
+continu qui part de l'état fondamental $|$ a, 0 $>$ sur lequel se surimposent
+des états discrets $|$ a, 0 $>$, $|$ b, 0 $>$, $|$ c, 0 $>$ etc...
+
+Le vide de photons étant normé (relation 5), les états $|$ a, 0 $>$
+etc... sont en effet des états normés alors que les états à un, deux, etc...
+n photons ne le sont pas : on a, en effet, par exemple
+\begin{center}
+$<$ b $\vec{\mt{k}}, \lambda$ $|$ a $\vec{\mt{k'}}, \lambda' >\ =$
+$<$ b 0 $|$ a$^-_\lambda(\vec{\mt{k}})$ a$^+_{\lambda'}(\vec{\mt{k'}})$ $|$ a 0 $>\ =$
+
+$<$ b 0 $|$ a$^-_\lambda(\vec{\mt{k}})$ a$^+_{\lambda'}(\vec{\mt{k'}})$ - 
+a$^+_{\lambda'}(\vec{\mt{k'}})$ a$^-_\lambda(\vec{\mt{k}}) \ |$ a 0 $>$
+\end{center}
+(car le 2e opérateur n'a pas d'élément de matrice entre deux états à zéro
+photon).
+et finalement
+\begin{center}
+$<$ b $\vec{\mt{k}}, \lambda$ $|$ a $\vec{\mt{k'}}, \lambda' >\ =$
+$<$ b 0 $|$ $\lbrack$ a$^-_\lambda(\vec{\mt{k}})$, a$^+_{\lambda'}(\vec{\mt{k'}})\rbrack$ $|$ a 0 $>$
+
+$ =\ \delta_\mt{ab}\delta_{\lambda\lambda'}\delta(\vec{\mt{k}}-\vec{\mt{k'}})$
+\end{center}
+d'après (6)
+
+Il en résulte que l'état $|$ a, $\vec{\mt{k}}\ \lambda$ $>$, contrairement à l'état
+$|$ b 0 $>$, n'est pas normé. (Voir note de la page 226.)
+
+Nous sommes donc ramenés à étudier, comme nous l'avions annoncé
+dans l'introduction, l'évolution d'un état $|$ b 0 $>$, normé, superposé avec un
+continuum d'états non normés, $|$ a $\vec{\mt{k}}\ \lambda$ $>$ etc..., avec lesquels il est couplé
+par une interaction.
+% 236
+
+Appelons G$^0$(z) la résolvante de l’hamiltonien H$_0$,
+
+Nous avons G (z) = $<$bo $|$ TH [bo$>$= se
+
+et  présente un pôle au point E correspondant à l'état instable
+$|$ b O $>$ étudié,
+
+Introduisons maintenant l'interaction entre l'atome et le champ :
+le hamiltonien du système devient H = He 2e
+
+Nous allons voir que le pôle au point 2 = E, qui existait dans
+le résolvante ce (z) disparaît dans G, (z)e
+
+Cependant G, (z) va subir une variation rapide au voisinage de
+z = E,, ce qui constitue en quelque sorte un souvenir du pôle qui existait
+en ce point sur œ (2), C'est l'étude de cette variation qui va nous perinet=
+tre de définir la notion de durée de vie de l'état instable $|$ b O $>$.
+
+D'une façon plus précise, nous allons étudier dans une première
+partie ( B) un modèle simple dans lequel on supposera que l'interaction k,
+ne connecte que l'état instable $|$ b O $>$ et l'état fondamental en présence
+d'un seul photon k, , $|$ 2 K À $>$
+
+Ce modèle,que nous pourrons traiter rigoureusement jusqu'au bout,
+npus permettra de dégager les principaux résultats de la théorie : notion de
+durée de vie et de déplacements radiatifs de l’état instable. Nous étudierons
+ensuite, toujours dans ce modèle simple, les produits de désintégration de
+l'état instable, ce qui nous permettra notamment de prévoir les formes de raie
+d'émission.
+
+Nous rattacherons ensuite le problème à l'étude de la diffusion
+résonnante des photons par un atome et nous montrerons que chaque état instable
+correspond à une résonance duns la section efficace de diffusion. Nous envisage
+rons enfin la préparation de l'état instable, ce qui nous permettra de préciser
+dans quelles conditions-il est possible de donner un sens à la notion de durée
+de vies
+% 237
+
+Nous passerons ensuite dans une seconde partie ( C) à l'étude
+du cas général où l'interaction de, a d'autres éléments de matrice que
+$<$a, k à $|$ de; $|$ b O $>$, Nous verrons comment l'introduction de tous les autres éléments de matrice conduit à "habiller" les états “ et l'interaction
+électromagnétique et nous corrigerons ainsi les résultats du  B (déplacement
+de l'état fondamental, influence de la désintégration de b vers des étets
+autres que l'état fondementel).
+
+Enfin, dans une dernière partie ( D), nous appliquerons les
+techniques développées dans les parties précédentes à l'étude de la diffusion
+résonnante au voisinage d'un croisement de niveaux d'énergie (effet Hanle
+effet Franken).
+
+\subsection{}Etude d'un modèle simple.%B.
+
+\subsection{}Hypothèse simplificatrice :%1°)
+
+Faisons l'hypothèse que les seuls éléments non nuls de de. sont
+les éléments <  |  | b O > qui joignent l'état excité dans le vide
+| b O0 > à l'état fondamental en présence d'un seul photon | a K À >
+
+L'étude de l'évolution de l'état | b O > est done un problème circonscrit à l'espace é, sous tendu par les vecteurs | b O > et | a k À >, vec
+teurs propres de He avec les énergies respectives E, et E, + Hcke
+
+\subsection{}Etude de G (z) = < b O | G(z) | b O »:%2°)
+
+
+
+L'état | b O > étant un état normé, tous les résultats sur la résolvante et sur ses Éléments de matrice que nous avons établis dans le chapitre pré
+cédent et au  À 2°) de ce chapitre sont valables.
+
+a) Calcul de G (z) |
+On peut, en reprenant la formule 16 pe197, écrire
+% 238 —
+
+en posant, d'après la formule 29 p.202 :
+
+Q étant le projecteur 1- | b 0 > <b 0 |.
+Mais, d'après les hypothèses simplificatrices du 1°)
+
+Si bien que finalement, (8) peut s'écrire :
+
+où la sommation est étendue aux états de polarisation et aux vecteurs d'onde
+des photons a < À
+Afin de préciser les propriétés analytiques de G(2)s nous allons
+d'abord étudier T (a). ‘
+b) Etude de 7 (2)
+- En conjuguant la relation (9), nous obtenons la relation
+importante
+
+- D'autre part, nous voyons immédiatement que l'expression
+(9) de T (z) est analogue à l'expression (2) que nous avons donnée de G, (z) au
+ A 2) Il en résulte de la même façon que T, (z) est analytique dans 1e plan
+
+complexe coupé de la demi droite Es + ls
+
+% 239
+
+Remarque : D'après la relation (7), il est évident que G,(z) présente également
+une coupure admettant le même point de branchement E, que T (2) : appelons
+en effet E', le point de branchement de la coupure de (2); par définition
+au-delà de Ets il y a une discontinuité entre , (E +ie) et G (E = ie) et
+au-delà du point de branchement Es il y  une discontinuité entre
+TD (E + ie) et T, (E = ie). D'après (7), la .discontinuité de T, (2) est une
+condition nécessaire et suffisante de celle de G(z)e On a donc
+Et,
+
+- Afin de préciser les propriétés de la coupure de T2),
+nous allons étudier la limite lorsque z tend vers l'axe réel de T, (2) et plus
+
+précisément calculer
+
+Pour cela, nous allons réécrire (9) sous une forme plus condensée
+
+en séparant les intégrations sur l'angle solide et sur le module de * en po
+sant
+
+* D'après les résultats généraux de  À 2°), la coupure de G,(z) s'étend sur le
+spectre continu de H et le point de branchement correspond à l'énergie fondnmentale du système: il correspond ici avec l'énergie fondamentaë du système non
+perturbé E,. Si nous voulons tenir compte du déplacement d'énergie de l'état fon.
+damental, 11 faut traiter un modèle plus complet dans lequel l'état | à O > se
+trouve 1ié à d'autres états par la perturbation. C'est ce que nous faisons au
+
+% 240
+Il vient alors
+
+et on obtient alors sans difficulté
+
+en posant
+Nous voyons, d'après (1-b), que T (E) est nul pour E < E, cer
+alors l'argument de la distribution 6 est négatif. f (k) étant strictement
+positif d'après (11) dès que k > 0, I (E) est strictement positif dès que
+E > E Nous retrouvons ainsi le fait que la fonction Lun (z) présente une
+coupure s'étendant de Es à l'infini, les valeurs prises.par la fonction de
+part et d'autre de la coupure étant complexes conjuguées l'une de l'autre,
+ce qui est d'ailleurs évident d'après la relation (10).
+
+Nous sommes maintenant en mesure de préciser complètement les
+propriétés analytiques de G, (z)o
+
+c) Propriétés analytiques de G, (z)
+Nous savons déjà que G, (z) présente une coupure cofncidant
+avec la demi-droite 
+
+Nous savons également d'après que les pôles éventuels de
+G, (z) ne peuvent être que les énergies propres discrètes de l'Hamiltonien H ,
+ou plus précisément de  étant le projecteur sur l'espace ë
+dans lequel notre problème est circonscrit. Ces pôles éventuels sont donc réels
+(à cause de l'hermiticité de H et nécessairement situés sur la coupure (car
+
+le point de branchement E, correspond à l'état fondamental de H .
+
+% 241 =
+
+Mais s'il y avait un pôle au point E > E,, on aurait d'après (7)
+
+ce qui est.impossible cer, pour E>E,; T (E) est strictement positif.
+G, (z) n'ayant pas de pôle sur la coupure n'en a nulle part et le spectre
+dé P, H -P, est entièrement continus
+
+En conclusion, (2); contrairement à G, z), n'admet aucun pôle
+
+dans le plan complexe et est donc analytique dans le plan privé de la coupure
+JE, +7],
+Cependant, au voisinage du point E = E,, pôle de G (2), G, (2)
+subit une variation importante,
+I1 résulte en effet de l'expression (12) que T, (2) est une ex
+pression du second orûre en 7e, donc petite. Elle variera donc peu avec z
+lorsque z variera aufour de E, dans le demi-plan supérieur et compte tenu de
+
+(7), on peut écrire au voisinage de E, dans le demi-plan supérieur :
+
+voo/coe
+
+
+
+* Une façon directe de voir que (z) n'a aucun pôle dans le plan complexe et de
+reprendre l'expression (12) de TL, (z) en explicitant les parties réelles et ima
+(x + iy) 
+
+ginaires de z : 
+
+
+On en déduit immédiatement :
+
+ qui est de signe opposé à y = Im 
+
+Il en résulte que l'équation  ne peut avoir
+de solution pour y  0. Nous avons vu qu'elle n'a pas de solution pour y + 0.
+
+G, (2) n'a donc pas de pôles dans le plan complexe.
+%242
+
+On a de même dans le voisinage de E,, dans le demi-plan inférieur
+
+Comme nous l'avons déjà vu, ces expressions ne possèdent pas de
+pôle et il est facile de s'en rendre compte directement,
+
+Prolongeons maintenant analytiquement, dans le demi-plan inférieur G en partant du deni-plan supérieur. Le prolongement analytique se
+faisant par continuité, TG) restera pratiquement égal à  et nous
+obtiendrons dans le deuxième feuillet de Riemann une détermination G
+
+dont nous pouvons écrire la valeur approchée :
+
+Le signe de Im (z) ayant changé à la traversée de la coupure, on
+
+prévoit ainsi l'existence dans le deuxième feuillet de Riemann d'un pôle de
+Gt), 2 dont la valeur est sensiblement
+
+% 243
+L'effet du couplage a donc été de déplacer le pôle de 
+qui était en E , dons Je deuxième feuillet de Riemenn. La présence de ce pôle
+
+va affecter G  qui va varier rapidement au voisinage du point 
+
+Remarque : On aurait pu tout aussi bien prolonger G  en partant du demi-plan
+
+inférieur. On aurait alcrs obtenu un pôle à la position complexe conjuguée
+de  
+ 
+Le raisonnement que nous venons de faire est resté qualitatif.
+L'essentiel est qu'il prévoit la présence du pôle 
+
+Nous allons voir dans le peragraphe suivant que la partie imaginai
+re de ce pôle est liée à le durée de vie de l'état instable | db O > alérs que
+sa partie réelle nous fournit le déplacement en énergie de ce même niveau
+
+\subsection{}Evolution de L'état instable%3°)
+
+\subsubsection{} Calcul de < b O [U (t) | Bb O0 >%a)
+Connaissant G,(z), on calcule , amplitude de probabilité pour que l'atome créé dans l'état b à l'instant t = 0, y
+soit encore à l'instant t par l'intégration
+
+ et à
+
+Nous calculerons l'intégrale (17) par les résidus en fermant convenablement le contour d'intégration C qui représente l'uxe orienté 
+Pour les instants t > 0, il faut fermer le contour d'intégration dans
+ tence vers
+
+le demi-plan inférieur de façon à ce que la contribution de
+zéro, Mais il est indispensable que G soit continue le long du contour d'in
+tégration. Il faut donc, au point pusser dans le deuxième feuillet de
+‘Riemann et adopter la deuxième détermination Gde G(z). Enfin, de façon à
+raccorder par continuité les deux arcs de cercle qui partent deet
+
+ , il est nécessaire de contourner à l'aide d'un lacet le point de branchement On réalise ainsi un contour G représenté sur la figure ci-dessous
+
+qui comprend :
+
+%244
+1°) La droite C
+
+2°) Un quert de cercle dans le demi-plan inférieur du premier
+feuillet de Riemann (en trait plein)
+
+3°) Un quart de cercle dans le demi-plan inférieur du deuxième
+feuillet de Riemann (en trait pointillé)
+
+k°) Un lacet C' qui permet de raccorder.les deux quarts de
+cercles et de passer du premier au second feuillet de Riemann en tournant
+
+autour du point de branchement
+
+Le long de ce contour Ê, G, (2) est continu et on peut appliquer
+
+le théorème des résidus. Or les seuls pôles. de G, (2) ne peuvent, d'après
+
+ B 2°),se trouver que dans le deuxième feuillet de Riemann. Nous’avons montré
+l'existence d'un pôle 2 situé sensiblement à la distance de l'axe réel.
+Nous supposerons dans la suite que ce pôle est bien le seul. On peut alors compléter le contour  à l'aide d'un petit cercle orienté autour de z,
+
+écrire, à la limite où le rayon des quarts de cercle tend vers l'infini et
+
+en explicitant l'intégrale du lacet :
+% 245
+Intégrale le long du lacet
+Résidu en z
+le contour d'intégration correspondant étant représenté par la figure ci-dessous
+\subsection{} Calcul approché :%b)
+
+Nous justifierons plus bas que la contribution à L'expression (19) du lacet C' est en général négligeable. Nous n'en tiendrons pas
+compte pour commencer et nous calculerons La contribution prépondérante du
+résidu :
+
+Soit T (2) la détermination de T, (2) dens le deuxième feuillet
+de Riemann, Nous avons
+
+% 246 —
+
+et
+
+Résidu en z,
+
+L'expression (20) est rigoureuse, (2) est peu différent de .
+
+C'est une quantité du deuxième ordre ent dont les variations sont très
+
+faibles et 0) est absolument négligeable devant 1, si bien que
+
+l'on peut écrire, si on néglige la contribution du lacet
+
+Nous prévoyons ainsi, rigoureusement, et non plus par un calcul
+au premier ordre du type "règle d'or de Fermi", que dens l'hypothèse de notre
+modèle simple, l'état | b  > disparaît avec une constante de temps égale à
+
+ et voit son énergie déplacée de la quantité.
+Nous pouvons maintenant, à une excellente approximation, remplacer
+z, Par son expression (17) et écrire
+Etant
+
+% 247
+
+() et () Étant donnés par les expressions (1-a) et (1-b) :
+
+Remarques : . la formule (23-b) n'est autre que celle que nous aurions
+obtenue pour la durée de vie de l'état | b O > en appliquent la règle d'or
+de Fermi, Le traitement que nous donnons ici nous permet cependant de pré
+voir le décroissance exponentielle rigoureuse à tous les ordres et l'existence d'un déplacement radiatif du niveau instable,
+
+- l'intégrale (23-a) permettent de calcuier A (E,) est divergente (terme croissant en k à l'infini), Cette divergence est due au fait
+que nous traitons un système en interaction avec un champ (voir remarque de
+la page 234 ) et disparaît si nous prenons pour le masse et la charge de
+l'électron les masse et charge expérimentales,
+
+\subsubsection{} Ordre de grandeur de l'erreur faite en négligeant le%c)
+Revenons maintenant à l'intégrale le long du lacet inter
+
+venant dans (19). Elle s'écrit :
+
+% 248 —
+
+les quantités T, (2) et T (2) sont des quantités petites du second orâre en
+
+Horsae l'ordre de Th (nous posons Tr (E ) = Th)< D'autre part,
+
+décroît très vite lorsque | Im (z) | augmente le long du lacet et on peut
+izt
+
+majorer de façon très sévère e M par 1. On a alors une majoration de À :
+
+Deux cas peuvent alors se présenter :
+a) Le temps t n'est pas trop long devant HIT, : la contribution du résidu à
+l'amplitude < b O[U(t)]b O > est de l'ordre de 1. L'erreur commise en néglib
+
+que la largeur naturelle du niveau b, Th est petite devant l'énergie de la
+
+geant Le lacet est alors négligeable dès que << 1, c'est-à-dire dès
+
+transition optique, ce qui est le cas la plupart du temps. rit
+
+B) Le temps t est très grand : 18 contribution du résidu, en , devient
+
+que la correction apportée par le lacet à ia loi de la décroissance exponen
+très petite et la condition << 1 n'est plus suffisante pour assurer
+
+tielle est négligeable.
+
+De façon plus précise, lorsque t est très grand, seules les portions du contour d'intégration pour lesquelles Im (z) est voisin de zéro interviennent de façon notable, c'est-à-dire d'après la figure de la page 245 ,
+la partie du lacet voisine du point E
+
+Alors que pour le pôle  | Im (z) | est égal à li» on peut
+trouver sur le lacet des points tels que | Im (z) | soit aussi petit que l'on
+veut. Pour t très grand, le facteur e” es atténue la contribution du pôle
+beaucoup plus que celle du lacet. Il est donc intéressant dans ce cas d'étudier
+
+le comportement de la contribution du lacet.
+
+%249
+La partie le plus imporlante de cette contribution correspondra
+à y = Im (z) très petit. Les äcux déterninations de TG) diffèrent alors pra
+
+tiquement uniquement par leur partie imsginaire et on peut écrire
+
+Or, d'après (12) :
+
+et
+
+Or d'après (11), t (k) varie coxme ,
+
+S se comporte comme
+
+
+
+Soit, en faisant le changement de variable u = k/y,
+du
+
+comme y
+
+On en conclut donc que Im
+
+D'autre part, comme pour t très grand, la contribution la plus
+
+ j varie comme y.
+
+importante à À dans (2h) provient de z voisin de Es on peut dans les dénomine.
+
+teurs remplacer z par E On a alors
+
+quentité qui varie done comme
+
+% 250 =
+
+En faisant enfin le changement de varieble v = ty, on a
+ dt  .
+ dv et on montre ainsi que, pour t très grand,
+
+la contribution du lacet varie en 1/t”.
+
+Elle diminue donc beaucoup moins vite que la contribution du
+
+résidu qui varie en e D
+
+On peut résumer les résultats précédents, en fonction du temps,
+sur lea figure ci-dessous. On a porté en ordonnée le module de la contribution
+à <b O[U (t[b O > du résidu exponentielle en trait plein) et du lacet
+
+(en trait pointillé).
+
+
+* On trouverait une contribution du lacet en 1/t3/2 au lieu de 1/43 si on étudiait
+la durée de vie d'un système sous l'effet de désintégration produisent des parti
+cules ayant une masse différente de zéro, et non des photons de masse nulle, comme
+c'est le cas dans l'émission spontances
+
+% 251
+On voit que cette dernière vart, pour t  0, d'une quantité
+
+de l'ordre de 
+
+5 mm et décroit pour t très grand en 1/43, Four un certain
+
+temps t. très rrand, elle devient plus importante que celle de 1
+ de
+
+xponentielle.
+
+Mais alors U, (t) cst pratiquement nul ct la désintécration est pour ainsi dire
+
+terminée.
+
+En d'autres termes, la loi de décroissance exponentielle de
+l'état instable n'est pas thécrinnement vérifiée pour des tenps très longs.
+pas
+Elle l'est cependant tant que l'on est pratiquement capuble d'observer le vro
+cessus de la désintégration.
+
+Conclusion : La contribution à l'évolution de l'était instable du pôle eu point
+
+Ze est de loin la plus importante. Elle nous à permis de prévoir une duréc de
+
+ice en générel
+
+vie et un déplacement rediatif de l'énergie de cet état. On n
+
+la contribution du lecut introduit par la méthode des résidus, ce qui revient
+
+à remplacer G, (2) par
+
+
+fonction analytique qui n'a plus de coupure mais qui présente un pôle au voisi: (T
+
+nage de CP au point E
+
+5
+
+en posant 
+
+\subsection{}%4°) Produits de dé
+
+Nous alions maintenant étudier les produits de la désintégration de
+
+tégration de l'état instable :
+
+
+
+l'état | b O >. Pour cela, il nous faut calculer l'omplitude de probabilité
+
+<a  [U (t) | b O > pour que le système dans l'état | b 0 > à l'instant t =
+se trouve dans l'état | e k À > représentant l'atome dans l'état fondemental a
+en présence d'un photon KA, à l'instent t. Nous allons d'abord calculer la quan
+tité <a| G (x) | bo >.
+
+% 252
+
+: +
+\subsubsection{}%a) Etude de
+
+Nous partons de la relation
+
+Etant donnée l'hypothèse simplificatrice, seuls les Éléments de matrice
+<a | | b O > sont non nuls et on a, en adoptant l'expression (25)
+
+pour G, (2)
+
+
+
+\subsubsection{}%b) Etude de <a K À | U(t) | b 0 >
+: On calcule l'expression
+
+par la méthode des résidus.
+Le quantité  possède deux pôles, l'un au point
+
+, l'autre au point  l'intégration par les résidus
+donne :
+
+Pour des temps t grands devant H/Tis la première exponentielle
+de (27), de module 1, est prépondérante et la probabilité de trouver un photon
+ émis est alors
+
+% 253
+
+La formule (28) nous donne les propriétés de la raie d'émission spontanée à partir du niveau b 3
+
+- L'élément de matrice <  k À | A | b O > qui donne l'intensité de la raie, décrit la "force" de la transition et contient toute l‘information sur le diagramme d'émission (direction et polarisation des photons
+émis).
+
+- Le dénominateur d'énergie indique que la raie est lorentzienne,
+centrée pour une énergie du photon égale à la différence de l'énergie de l'état
+excité corrigée par le déplecement radietif À, et de l'état fondéemental, de
+largeur Ts inverse de la durée de vie de l'état excité. Tous ces résultats sont
+en accord avec le principe de conservation de l'énergie et le relation â‘incertitude.
+
+\subsection{}% Etude de la diffusion résonnante :5°)
+
+
+
+Nous allons maintenant rattacher l'étude de l'évolution de l'état
+
+s
+
+instable à celle de la diffusion résonnante des photons par un atome.
+\subsubsection{}%a) Position du problème :
+
+Nous allons calculer la section efficace différentielle de diffusion d'un photon par un atome, l'interaction électromagnétique entre l'atome
+et les photons ne possédant, suivant l'hypothèse simplificatrice que nous avons
+faite, que les éléments de matrice du type < a | b O > non nuls. Dans
+ces conditions, la diffusion EA, État ne peut s'effectuer que par le passage de
+l'atome de l'état a à l'état b par absorption du photon  et la retombée de
+
+l'état b à l'état a avec émission d'un photon k°A°', suivant ie schéma ci-dessous :
+
+% 254
+
+Il est donc naturel de s'attendre à des phénomènes résonnants
+lorsque l'énergie du photon incident sera de l'ordre de la différence d'énergie E  - E +
+
+Nous allons tout d'abord calculer l'élément de matrice de la
+résolvante <a K' À! | G(z) [aka >= Gérar ane NOUS pourrons alors évaluer l'amplitude de probabilité < a k'  | U(t) | a > pour que l'atome
+
+dans l'état fondamental a en présence d'un photon  à l'instant t ait diffu
+
+sé à l'instant t/2 un photon rate
+Nous avons vu (étude de la matrice S, page 149 et suivantes)
+
+que, pour t + , cette amplitude de probabilité n'admet pas de limite au
+
+sens usuel, mais que si on passe en "représentation d'interaction"
+
+<ak'a U() | a > admet comme limite au sens des distributions sur
+
+les fonctions de K, l'élément de matrice 
+
+Ayant calculé ainsi ras, fa» nous en déduirons l'élément de
+
+la matrice de réaction VERS à  la section efficace de diffusion,
+» .
+
+\subsection{} Calcul de %b)
+
+Partons des deux relations équivalentes
+
+qui, combinées, donnent
+
+On obtient alors
+
+% 255
+Soit, en remplaçant G, (2) per son expression approchée (25) :
+
+\subsection{} Calcul de <  > et de la matrice S%c)
+
+Comme nous l'avons vu aux pages 149 et suivantes, il i'aut,
+afin de calculer la matrice 5, évaluer la limite au sens des distributions
+pour  de  (t/2, -t/2), le signe  dénotant la représentacion d'intere
+action.
+
+Or, nous avens, d'après lu relation (82), page 1kh :
+
+Nous devons done commencer par calculer les éléments de matrice de
+Nous savons d'autre part que 
+
+Nous sommes donc ramenés au calcul de l'élément de matrice
+ que nous évaluerons par les résidus à partir de la
+
+relation
+
+La contribution du premier terme du second. membre de (30) donne immédiatement
+
+Comme nous allons Être amenés à prendre le limite pour 
+
+de l'expression obtenue, nous pouvons dans la contribution du second terme de
+r
+dont le module décreft en
+
+
+
+(30) négliger le résidu du pôle 2, = E, + Ai
+
+% 256
+ On ne tiendre compte finalement que des résidus des pôles
+
+On obtient alors
+
+La relation (32-a) s'écrit, en remarquant que l'on peut, dans le premier
+
+terme, en raison de la distribution , remplacer
+
+% 257
+
+Passons maintenant en représentatica d'interaction, (31) s'écrit :
+
+Le passage en représentation d'interaction revient donc à supprimer Le terme
+
+de phase exp. qui est en facteur dans l'expression (32«b)
+et on obtient finalement :
+
+
+% 258
+
+Séparons dans le crochet du second membre de (33) les parties
+réelleset imaginaires des exponentielles. Le terme associé aux parties réelles,
+
+À, s'écrit :
+
+
+C'est une fonction de k et k' qui reste bornée quel que soit te
+Lorsque t augmente indéfiniment, sa pé éricde, hn/ct, tend vers zéro et la fonction oscille de plus en plus vite. L'intégrale de son produit par une autre
+fonction .sommable tend donc vers zéro lorsque t + et À tend xers zéro cu
+sens des distributions sur les fonctions de k etk' :
+ lim
+Le terme associé aux parties imaginaires, B, s'écrit :
+
+Or, nous savons a'après p. 152 et 153) que la limite au sens des distributions
+
+sin ce (k-k') 
+lorsque t + « de tr) est égale à 
+
+Le présence de la distribution 6 permettant de poser k = k' dans
+
+(3k-b), on a finalement
+
+% 259
+
+On a donc, d'après (33), (3h-a) et (3k-ce) :
+
+
+
+(35) 
+
+(35) nous donne pour l'élément de la matrice  une relation strictement
+équivalente à la relation (28), page 107 :
+On en déduit immédiatement l'élément de matrice de réaction :
+
+
+Remarque : la relation (36) pouvait s'établir beaucoup plus rapidement en par
+tent de la relation qui définit la matrice de réaction ‘:
+
+et en prenant pour > la forme explicite :
+
+On obtient alors
+
+Or  est autre que G. Nous avons donc
+(38)
+Si on prend pour * la forme approchée (2%, (38) redonne (36).
+
+(39)
+% 260 —
+
+\subsubsection{} Calcul de la section efficace de diffusion%d)
+
+ permet de calculer la probabilité de transition
+
+par mité de temps de l'état KA à l'état K'A' (cf formules (68) pe 136 ou
+
+La probabilité de transition par unité de temps et d'angle
+
+solide W () s'obtient en sommant sur le module du vecteur d'onde k
+
+(cf formule (69) p. 137)
+
+Le flux du photon incident est et la section efficace
+
+de diffusion s'écrit, compte tenu de (36) et (40)
+
+Nous voyons ainsi que les éléments de matrice S (formule 35),
+BR (formule 36) et 1a section efficace différentielle de diffusion (formule 41)
+
+subissent une résonence lorsque l'énergie du photon incident est égale à la
+différence des énergies de l'état excité corripée par le déplacement rediatif
+A, et de l'état fondamental. La courbe. de résonance de la section efficace est
+
+lorentzienne, de larseur l, érale à la larseur naturelle de l'état excité.
+% 261
+
+Nous avons vu également que l'énergie du photon diffusé est
+égale à celle du photon incident (à cause de la fonction 6) ce qui correspond au principe de conservation de l'énergiee
+
+Le diagramme d'impulsion et de polarisation du rayonnement
+
+diffusé est fourni par le produit des éléments de matrice d'interaction
+
+\subsection{} Préparation de l'état instable :%6°)
+Nous avons, grêüce au calcul de G  commencé
+par étudier l'émission spontanée à partir d'un niveau instable b, responsabie
+
+de la durée de vie de cet état. Puis, grâce au calcul de G Nous avons
+
+étudié le diffusion des photons par un atome à deux niveaux  et Do Afin que
+notre étude soit complète, il nous faut maintenant étudier l'absorption d'un
+photon par l'atome passant de l'état fondemental à J'état excité b. Cette
+étude fait intervenir le dernier élément de matrice non calculé de ‘la résolvante, G, a° Elle est importante car elle nous décrit la préparation de
+l'état excité et nous montre dans quelles conditions il est possible de 5éparer la préparation de l'état instable de sa désintégration et done de donner
+un sens à le notion de durée de vie de l'état excité
+
+Nous envoyons sur l'atome un ‘paquet d'onde de photons" de
+polarisation À et d'impulsion centrée autour d'une valeur k avec une disper
+sion 4k que l'on peut noter
+
+f(k) est une fonction centrée en k, de largeur Ak qui représente le profil de
+le raie excitatrice. Nous envisageons ici uniquement une dispersion en module
+du vecteur d'onde, et non en direction.
+
+A l'instant t = O, l'atome est dans l'état fondamental a en
+
+présence du paquet d'onde
+% 262 —
+
+L'amplitude de probabilité pour qu'il soit à l'instant t dans
+
+l'état | b O > est
+
+Or nous avons
+
+et  calcule comme  (cf p.252 , formule 26)
+
+- Faisons l'hypothèse que l'élément de matrice 
+
+varie peu le long du profil de la raie excitatrice et calculons
+
+ Compte tenu de (L2), (43) et (kh) à l'aide de la méthode
+des résidus. Il vient finalement
+
+Afin de rendre l'expression (k5) plus maniable, nous allons dé
+finir la transformée de Fourier de la fonction f (k) par la relation
+
+car nous pouvons toujours supposer que f(k) est identiquement nulle pour k < 0.
+
+(47)
+
+(48)
+
+(49)
+
+(50)
+
+% 263
+On a de même :
+
+ étant la fonction échelon : 
+
+comme il est facile de s'en rendre compte en intégrant per lu méthode des
+résidus. On peut alors considérer les deux intégrales intervenant dans (45)
+comme des transformées de Fourier prises aux instants O et t d'un produit de
+fonction de k et en se servant du fait que la transformée de Fourier d'un
+produit est égale au produit de convolution des transformées de Fourier, on
+
+montre aisément la relation :
+
+qui pour t = O s'écrit :
+
+A l'aide de (48) et (49), (h5) s'écrit ;
+
+ou encore
+
+(r) étant donné par la relation (L6),
+
+% 264
+
+Lorsque t = 0, les deux bornes de l'intégrale de (50) sont
+égeles à zéro : on retrouve le fait évident que l'amplitude de probabilité
+d'excitation est nulle à l'instant t = O.
+
+Afin d'étudier comment cette amplitude de probabilité varie
+avec le temps, nous allons distinguer deux cas fondamentalement différents :
+\subsection{} Excitation "Narrow-line" :%a)
+La largeur de la raie excitatrice Ak est très
+petite devant TL,  on excite à l'aide d'une raie très fine, On peut alors
+considérer que f(k) est la distribution 6 (k-k)s On a alors
+
+ce qui reporté dans (50) nous donne pour amplitude de probabilité :
+
+(51)
+
+Après un régime transitoire durant un temps de l'ordre de AT,
+
+la deuxième exponentielle du crochet de (51) devient négligeable devant la
+première dont le module est égal à 1 et on peut alors écrire la probabilité
+
+P, de trouver l'atome dans l'état excité b :
+
+Le varietion de Pen fonction du temps est représentée par la figure ci-dessous :
+
+% 265
+Après un régime transitoire durant un temps de l'ordre de
+HT,» la probabilité de trouver l'atome dans l'état excité prend une valeur
+constante d'autant plus grande que la fréquence du photon est plus proche de
+
+ On ne peut pas parler de durée de vie
+
+
+
+la fréquence atomique
+de l'état excité.
+Ceci se comprend très aisément : la raie d'excitation étant
+très fine, le temps de passage du photon devant l'atome (donné par 1a largeur
+de la transformée de Fourier  (tr) ) est très grand : en termes classiques,
+l'atome voit passer une onde plane qui, après un régime transitoire durant le
+temps UT, met le dipôle électrique atomique en vibration forcée. La probabilité de trouver l'atome dans l'état excité est alors une constante qui devient
+très importante lorsque l'excitation du dipôle est résonnante, c'est-ü-dire
+lorsque 1a fréquence d'excitation est égale à la fréquence propre atomique.
+\subsection{} Excitation "Broad-line" :%b)
+Supposons maintenant, au contraire, que la largeur de la raie
+excitatrice Ak est très grande devant la largeur naturelle :
+
+Corrélativement, la transformée de Fourier âu profil de la raie
+d'excitation, (rt), aura une largeur très faible, T, de l'ordre de  << E..
+
+T représente physiquement le temps de passage du train d'onde sur l'atome.
+On peut toujours écrire  (tr) en introduisant la fréquence
+moyenne k de la raie d'excitation
+
+où g a le largeur T de.
+
+(50) s'écrit alors
+
+(53)
+
+% 266
+Dès que t devient égal à un certain instant T tel que
+ est sensiblement nul et l'intégrale de l'expression (53)
+
+
+
+Th 1
+peut être remplacée par l'intégrale définie
+
+, laquelle, puisque T, << Te
+
+est sensiblement égale à
+dr. Cette intégrale est indépendante
+du temps et le seul facteur dépendant du temps dans reste
+
+alors le facteur e dont le module décroît en
+D'autre part l'intégrant de l'intégrale définie I est le
+
+produit de g (tr), de largeur T par un facteur de phase de fréquence
+ « 11 sera donc une fonction de k maximum pour 
+et qui s'annulera lorsque le nombre d'oscillations du facteur oscillant sur la
+largeur T de g (tr) sera très grand, c'est-à-dire dès que
+
+ de largeur
+
+Afin de résumer les résultats précédents, les variations de
+
+sera donc une fonction de k centrée en
+
+sont schématisées sur la figure ci-dessous :
+
+% 267
+On voit que pendant un temps de l'ordre de T à partir de t =
+(temps de passage du train d'onde sur l'atome) la probnbilité augmente, ce
+qui correspond à l'excitation de l'atome par le train d'onde, Puis, la probabilité passe par un maximum et décroît exponentiellement avec une constante de
+temps H/T,s ce qui correspond à la phase de désintégration de l'état excité
+sous l'effet de l'émission spontanée.
+
+Le maximum de la probabilité d'excitation est lui-même une fonction de la fréquence moyenne k du train d'onde excitateur, maximale lorsque la
+
+largeur sensible
+
+fréquence k est égale à la fréquence atomique
+ment égale à Ak, largeur de la raie excitatrices
+
+Tous ces résultats sont en accord avec le principe de conserva
+tion de l'énergie et la relation d'incertitude.
+En résumé, l'excitation “broad-line" est une excitation ‘en
+
+pulse" qui permet de séparer les pheses de préparation et de désintégration de
+l'état excité. Ce n'est qu'avec une telle préparation qu'il est possible de onner un sens à la notion de durée de vie de l'état excité.
+
+Remarque : Il est possible de calculer entièrement le modèle d'excitation "broad-line"
+en prenant pour profil de la raie excitatrice une raie de Lorentz centrée en k
+de largeur 4k. On a alors
+
+et on peut calculer rigoureusement l'expression (53) :
+
+On trouve, en négligeant Th devant Ak dans le dénomineteur résonnant :
+
+% 268
+
+Le dénominateur d'énergie nous montre que le maximum de probabilité d'exciteti ARS nt un profil de Lorentz centré en k = 
+largeur ,
+
+Le premier terme du crochet est un terme de "préparation" qui
+disparaît après un temps de l'ordre de T =  Le second est le terme de
+désintégration de l'état excité.
+
+Tous ces résultats illustrent les considérations générales faites à propos de l'excitation "broad-line".
+
+\section{} Etude du cas général.%C.
+\subsection{} Introduction :%1°)
+
+Dans le traitement que nous avons présenté au  B, l'hypothèse
+que seuls les éléments de matrice < a | | bO > sont différents de zéro
+nous a permis de nous limiter au sous-espace É, sous-tendu par | b O > et
+| a > et le calcul des éléments de matrice de G(z) revenait à inverser dans
+
+ce sous=espace la matrice z = H :
+
+% 269
+En fait , possède d'autres éléments de matrice que
+.
+D'une part, | bO > peut être 1ié à des états |  >, (ce étant,
+un état atomique autre que a); les processus correspondants seront importants
+si l'énergie de l'état c se trouve comprise entre celles des états b et a, et
+il y aura possibilité d'émission spontanée de b vers Ce
+
+D'autre part, l'état | ak > pourra être lié à des états à deux
+photons du type |  >, ce couplage étant le cause d'un déplacement
+d'énergie de l'état fondamental par émission et réabsorption virtuelles de
+photons
+
+Pour tenir compte de tous ces couplages, nous alïons utiliser
+une méthode analogue à. celle qui nous a permis de généreliser la formule de
+Rabi dans le chapitre sur les états discrets (cf pe 210 Je
+
+Nous allons considérer la restriction G de G au sous-espace é,
+sous-tendu par | bO > et | ak > et montrer que ê est l'inverse d'un opérateur
+de ce sous-espace,  L'opérateur  contient les effects du couplage
+des vecteurs d'état de é, avec tous les autres vecteurs. Ce couplage a pour
+effet d' "habiller" les états | bO > et | aka >, et donc modifie leurs énergies.
+Il modifie également le couplage entre les états de ER en "habiliant" 
+ments de matrice d'interaction.
+
+Nous commençons par définir, de façon analogue au chapitre sur
+les états discrets (p. 210 ), des opérateurs F et R relatifs au sous-espace 
+ce qui nous permet de donner une forme condensée de cz) (c-),
+
+Puis nous étudions à l'aide d'une représentation diagrammatique
+la restriction à de R à l'espace , (c-3),
+
+Enfin, nous reprenons point par point, en indiquent les modifications apportées, l'étude que nous avons faite au  B de l'évolution de l'État instable ( C-k), de la raie d'émission spontanée vers l'état fondamental ( C-5)
+
+et de la diffusion résonnante ( C-6).
+
+% 270
+
+\subsection{} Définition des opérateurs F et R. Calcul de G(z) :%2°)
+\subsubsection{} Définitions Rappelons d'abord la définition des projecteurs%a)
+
+Nous procédons ensuite exactement comme à la page 210 :
+
+Nous posons
+,
+Nous définissons ensuite F(z) par la relation
+
+commutant avec P, on peut écrire
+(55-b)
+De (55-b), on déduit
+
+(56)
+
+Nous définissons alors R(z) P, per la relation
+
+et nous appelons R(z) la projection de R(z) dans le sous-espace 6. :
+
+\subsubsection{} Calcul de F(z) et R(z)%b)
+Nous calculons F(z) P, comme à la page 212 et nous en
+
+déduisons d'après la relation (kh) de cette page :
+
+(60)
+
+(61)
+
+(62)
+
+(63)
+
+% 271
+
+(53) se développe en série de puissance de .
+
+On a de même (relation 45, p. 212) :
+
+où l'on peut déduire le développement de Yigner-Brillouin de R(z) :
+
+\subsection{} Caleul de G(z)%c)
+On montre comme à la page 211, relation :
+
+(63) signifie que dans le sous-espace  opérateur G(z) est l'inverse de
+
+Dans le modèle simple du  B, G(z) était l'inverse de
+Nous sommes donc ramenés à un problème analogue à celui du  B, circonscrit
+au sous-espace à condition de remplacer 8. par R(z)
+\subsection{} Étude de H(z) :%3)
+\subsubsection{} Représentation diagremmatique des éléments de matrice
+de R(z)%a)
+Le développement de R(z) en série des puissances de ,
+est représenté par la formule (62) Nous voyons que pour calculer à un ordre n
+
+déterminé l'élément de matrice de R(z) entre deux états de be il faut passer
+par n-1 états intermédiaires situés en dehors de É, et diviser par les dénominateurs d'énergie correspondants.
+
+Nous pouvons représenter chaque terme du développement d'un élément
+de matrice de K(z) par des diagrammes qui permettront de "visualiser" le processus
+
+physique correspondant à ce terme.
+
+%272
+Donnons-en quelques exemples :
+
+nu
+Soit à représenter l'élément de matrice < a(z)bO >
+
+Le terme du ler ordre est, d'après (62)
+
+KA
+: ésentons nn
+< aka [dB [bo > que nous représentons par le diagramme
+
+Le terme du 3e ordre comprend par exemple l'expression :
+
+-(Ce n'est pas là la seule contribution au terme du 3e ordre.
+On doit, par exemple, également envisager les expressions dans lesquelles
+interviennent des états intermédiaires à deux photons.)
+Cependant, nous représentons l'expression (6k-a) par le diagramme
+
+Ces deux exemples nous montrent clairement comment les diagrammes sont construits et nous permettent de préciser les règles suivantes :
+- Chaque diagramme correspond à une expression intervenant dens le terme à un
+ordre déterminé du développement d'un élément de matrice de É(z) suivant
+
+l'expression (62).
+
+Le diagramme se lit dans le même sens que l'élément de matrice correspondant,
+
+Les états atomiques sont représentés par des traits horizontaux et les photons
+par des "tortillons".
+Les extrémités du diagramme sont les mêmes que celles de l'élément de matrice.
+
+Chaque élément de matrice de e. correspondant à une interaction est repré
+senté par un ronde
+
+- Les états intermédiaires sont les mêmes que ceux de l'expression représentée,
+
+Pour obtenir l'expression correspondante à chaque diagremme, il faut diviser
+
+c'est-à-dire qu'ils doivent être tous extérieurs à
+
+le produit des éléments de matrice par autant de dénominateurs d'énergie qu'il
+y a d'états intermédiaires dans le diagramme (chaque dénominateur d'énergie
+s'écrivant z = E, E étant l'énergie de l'état intermédieire envisagé) et
+gommer sur tous les étuts intermédiaires possibles (c'est-ä-dire sur tous les
+états intermédiaires extérieurs à 8 et représentés sur le diagramme),
+
+Pour obtenir les éléments de matrice de R(z ), i1 faut sommer
+tous les diagrammes possibles à un ordre déterminé et à tous les ordres:
+
+Cette représentation diagranmatique permet d'écrire ce façon
+condensée les éléments de matrice de Az) et surtout d'expliciter les proces=
+sus physiques correspondant à un élément de matrice et à un ordre déterminés.
+Ainsi, pour le diagramme (6h-b), l'atome dans 1'état b émet un photon
+et passe dans l'état ca; puis il réabsorbe ce photon et passe dans l'état
+db; enfin il émet un photon kÀA en passant dans l'état a.
+
+L'hypothèse simplificatrice du  B revenait à remplacer X(z )
+par son expression au prenier ordre, P 4 Poe
+
+Nous allons ici nous attacher à étudier la correction au 2e
+ordre aux résultats simples obtenus. Ceci nous permettra de dégager des résultats physiques simples et intéressants. Le calcul aux orûres supérieurs, quoique
+plus long, ne présente pas de difficultés et s'effectuerait de la même manière o
+
+Nous allons commencer par expliciter le développement de R(z) au
+
+2e ordre inclus en ..
+%274
+
+\subsubsection{} Développement de R(2) au 2e ordre inclus en ,%b)
+Hz) présente Fe types différents d'éléments de
+
+matrice : 
+
+Au deuxième ordre inclus : Ka
+(z) est représenté per
+b est représenté par (1)
+
+quelconques
+
+I1 est facile de voir qu'au second ordre inclus, seuls les six
+
+diagrammes précédents sont possibles. Nous pouvons faire plusieurs remarques :
+% 275 =
+
+Nu
+a) Seuls les diagrammes représentant RE D et Bi etx sont au premier ordre :
+
+c'étaient ‘eux qui intervenaient dans le traitement du  B.:
+
+8) Le diagramme (k) n'est possible que si les photons extrêmes sont identiques,
+Le photon. KA joue alors le rôle de "spectateur" et n'intervient pes dons les
+processus d'interaction. Les diagremmes (5) et (6) sunt possibles ausle que
+soient les photons KA et k'A'.
+
+y) Les photons de même K et À, en taut que bosons, sont des particules indis…
+cernables. Or il n'a pas été tenu compte de l'indiscernabilité pour éteblir
+
+les diagrammes précédents. IL est évident notamment que les diagrammes
+
+correspondant au même processus physique sont équivalents et ne doivent être
+comptés qu'une fois. Nous verrons au c) comment résoudre cette difficulté.
+\subsection{} Séparation de R(z) en deux parties%c)
+
+- Définition de R'(z) et R'"(z)
+
+Posons par définition
+
+Nous avons ainsi séparé R(z) = R(z) + R(z) en deux parties,
+
+dont l'une, R(z), est diagonale.
+
+(66)
+
+(67)
+% 276
+
+Etude de R(z)
+
+Nous allons montrer que les éléments de matrice
+
+sont reliés très simplement à des quantités intervenant dans le calcul de la
+self énergie de l'état fondamental.
+
+Etudions pour cela la modification apportée par ie couplage
+électromagnétique à l'état fondamental | a0 > et à son énergie.
+
+Nous sommes amenés, comme nous l'avons fait dans le chapitre sur
+les états discrets, à définir les projecteurs P, = | 20 > < a0 | et Q=l1-P,
+sur l'état normé | a0 > et dans l'espace complémentaire, puis à définir
+
+1 "Opérateur Shift" À, dont le développement de Wigner Brillouin est
+
+. Pitoce
+ce qui, à l'ordre le plus bas, donne
+
+On montre iverente comme nous l'avons fait au  B que
+
+et que  est une fonction analytique dans tout le plan complexe privé
+
+d'une coupure partant de. étant l'énergie atomique la plus basse
+au-dessus de l'état fondamental, E, étant inférieur à est analy
+
+
+
+tique au point E a t par (68), on voit tout de suite que .
+
+Il est même réget tif, car on voit sur l'expression (67) que tous Les dénominateurs d'énergies  sont négatifs.
+
+% 277
+(69)
+
+(70)
+
+(71)
+
+On peut alors calculer l'élément de matrice de la résolvante
+
+Les pôles de G (2) vérifient l'équation implicite
+
+Il existe notamment une valeur propre ë, voisine de E, qui vérifie l'équation
+
+dans laquelle on peut, à une bonne approximation, remplacer
+
+par
+On obtient alors
+
+ce qui montre que sous l'effet de l'interaction électromagnétique, l'état
+fondamental se trouve "habillé" par des photons virtuels et que son énergie
+
+est abaissée d'une quantité réelle, | 5 | : c'est le 'Lamb-shift" de l'état
+
+fondamental.
+
+Revenons meintenant au calcul au second ordre de R'(z) et calculons plus précisément 
+
+(73)
+
+% 278
+D'après les conventions que nous avons faites sur les diagrammes
+
+Deux cas différents peuvent alors se présenter :
+a) K'A'  KA : les deux photons et  sont discernables et on a alors
+
+L'intégrant de l'expression (66) est alors égal à celui de
+
+l'expression (61), à cela près qu'au dénominateur,z est remplacé par .
+8)  les deux photons K et  sont indiscernables :
+
+On sait alors que
+
+Les opérateurs de création et d’annihilation de bosons qui sont
+
+contenus dans l'opérateur a font intervenir des coefficients  2. On a
+
+donc
+
+l'indiscernabilité des photons introduit donc le facteur 2 dans le diagramme
+
+Mais il faut également ne tenir compte qu'une fois des deux
+
+diagrammes indiscemmebles
+
+% 279
+qui ont la même contribution. Il revient manifestement au même. de ne pas
+tenir compte du facteur TS et de faire intervenir séparément les deux diagranmes équivalents ci-dessus.
+On peut généraliser ce résultat à un ordre quelconque et ajouter
+
+à nos conventions sur les diagrammes la règle suivante :
+- On tient compte séparément de tous les diagrammes équivalents dont la géométrie est différente.
+- On ne tient pas compte de la statistique des bosons, c'est-à-dire que pour
+le calcul des diagrammes, on admet que
+
+n fois n+1 fois
+
+Cet artifice de calcul revient à ne pas symétriser les fonctions
+d'ondes de bosons indiscernables et à remplacer le principe de symétrisation
+par un principe d'addition des amplitudes de probabilités associées à des
+chemins "classiques" indiscernabies quantiquement. Nous evons vu un résultat
+équivalent pour des fermions, lorsque nous avons étudié à l'eide de la matrice
+
+8, les sections efficaces de diffusion d'électrons : il fallait alors retren
+
+cher les amplitudes de probabilités associées aux chemins "classiques" indiscernablese
+
+Avec cette convention supplémentaire, les intégrants des expressions
+(6T) et (73) deviennent les mêmes (à cela près qu'au dénominateur, z est remplacé par , que  et  soient identiques ou non. On a donc
+
+% 280
+Mais il ne faut pas oublier qu'il faut alors, dans R"(z), faire
+intervenir le diagramme
+
+Ainsi, si R'(z) est uniquement diagonal, R"(z) possède égalees
+
+ment une partie diagonale : pour nous résumer, R'(z) fait intervenir les
+diagrammes diagonaux (1) et (k) de la page 27, R"(z) les diagrammes (2),
+(3), (5) et (6)
+
+Ceci étant, nous pouvons poser
+
+Nous avons alors la relation bien connue
+
+Nous pouvons maintenant reprendre les différentes études que
+nous avons faites sur le modèle simple du  B :
+
+\subsection{}% Evolution de l'état instable :4°)
+
+\subsubsection{} Calcul de Gb 2)%a)
+
+En itérant (77), on obtient :
+
+ce qui nous donne :
+
+% 281
+(78)
+
+(79)
+
+(80)
+
+(81)
+
+
+
+Pour calculer explicitement Gp(2) en ne faisant intervenir
+que les corrections à l'ordre deux, il suffit de ne tenir compte que des
+
+deux premiers termes du second membre de (78). Le dernier terme, en effet,
+
+dt
+fait intervenir  et pour faire apparaître à nouveau G il
+faut développer au premier ordre, ce qui fait intervenir des
+
+termes d'ordre supérieur à deux dans l'équation fournissant G DZ e
+
+Finalement, en explicitent au 2e ordre inclus :
+
+On obtient :
+ avec
+
+R',p(2) étant donné par la formule (79).
+
+solo
+
+(82)
+
+(83-a)
+
+(83-b)
+
+% 282
+On montre aisément, comme au paragraphe B, que (2) est une
+fonction analytique qui présente une coupure sur l'axe réel” et qui possède
+un pôle z) situé dans le deuxième feuillet de Riemann. La partie réelle de
+ce pôle donne le déplacement radiatif de l'état instable | bO > et se partie imaginaire, la durée de vie finie de cet état, |
+
+Tout comme au  B, on peut, pour étudier l'évolution de l'état
+instable, remplacer dans (80) la quantité petite  par sa
+
+valeur au point  On obtient alors
+
+Evaluons séparément les quantités  et .
+
+On peut, dans l'expression (81), négliger la quantité du
+deuxième ordre en  et écrire
+
+L'expression (83-a) est alors identique à l'expression
+
+que nous avons été amenés à calculer au  B, si bien que l'on a
+
+représente donc la contribution à la durée de vie et au déplacement du niveau b du couplare avec l’état fondamental a.
+
+* Le point de branchement de la coupure correspond au point de branchement de
+la coupure de  lequel est Alors que dans le modèle simple
+du  B, le point de branchement de G (z) correspondait à l'énergie non perturbée
+E, de l'état fondemental, il correspond ici à l'énergie vraie, corrigée par le
+Lamb-shift de l'état fondamentale
+
+% 283
+
+On a, d'après (79)
+
+Chacun des termes de la somme sur cfa de l'expression (8h) est analogue,
+
+au remplacement de a par c près, à l'expression (83-a).
+
+représente donc la contribution à la durée de vie et au dénla
+
+cement du niveau b, du couplage «vec tous les états  autres que l'état fondamental.
+De façon plus précise, nous avons
+
+(85)
+(86-a)
+(86-b)
+
+et enfin
+
+(87)
+
+En réunissent
+
+(88)
+
+(82), (8k-b) et (87), nous obtenons :
+
+(89)
+
+(90-a)
+
+(90-b)
+
+% 284
+
+\subsubsection{} Calcul de U,,(t)%b)
+
+On obtient immédiatement Up(t) par intégration par
+
+les résidus à partir de l'expression (88) de Gp(2) 3
+
+Nous voyons ainsi que sous l'effet de l'interaction électromagnétique, le niveau b acquiert une largeur naturelle V qui est la somme de
+deux termes :
+i'un To est aû à l'émission spontanée vers l'état fondemental a et est four
+ni par le modèle simple étudié au  B;
+l'autre T est aû à l'émission spontanée vers les niveaux c autres que e
+Seuls y contribuent d'ailleurs les niveaux c tels que l'be est différent de
+zéro, c'est-à-dire d'après (86-b) les niveaux pour lesquels l'argument de la
+distribution   peut s'annuler et qui sont les niveaux
+
+ l'émission spontanée n'est possible que vers les niveaux c d'énergie
+ce
+
+inférieure à celle de be
+
+Le niveau b subit de plus un déplacement radiatif qui est aû au
+couplage avec tous les états (a dû au couplage avec l'état fondamental a et
+a! aû au couplage avec tous Les états
+
+\subsection{} Etude de La désintégration de b vers l'état fondamental :%5°)
+
+ro Tout comme au  B, nous devons pertir du calcul de la quantité
+% 285
+(91)
+
+(92)
+
+(93)
+
+Cas
+
+a) Calcui de Ca (z)
+La relation (77) nous permet d'écrire immédiatement
+
+Le second terme du crochet de (91) est un terme d'ordre supé
+à 
+rieur. En effet  est un terme du seconû orûre et si on développe
+
+on obtiendra un terme du troisième ordre que nous négligeons dans cette étude.
+
+L(2) suivant (91) de façon à rendre l'expression de  explicite,
+
+En explicitant R" (z) et en remplaçant CE 2) par l'expression (88), on
+
+obtient alors :
+
+Cette quantité présente un pôle au voisinage du point
+La quantité, du second ordre, est négligeable loin du pôle et peut
+être remplacée près de celui-ci par sa valeur au point. On peut
+donc partout remplacer à une bonne approximation  par
+ “Lamb=shift" de l'état fondamental et remplacer (92) par
+
+
+(94)
+
+% 286
+
+\subsection{} Etude de la probabilité de transition vers l'état%b)
+
+L'expression (93) est analogue à l'expression (26)
+de la page 252. On en déduit que la probabilité de trouver un photon KA
+émis, l'atome étant dans l'état fondamental a, à un instant t grand devant
+ est, par simple analogie avec la formule (28) :
+
+La raie d'émission spontanée vers l'état fondamental est lorentzienne avec
+un maximum correspondant à une énergie du photon égale à la différence des
+énergies de l'état excité et de l'état fondamental, chacune d'entre elles
+étant corrigée par la self énergie globale des niveaux (rappelons que dans
+le modèle simple du  B, seul intervenait le déplacement radiatif a, du
+niveau b sous l'effet du couplage avec l'état fondamental).
+
+La largeur de la raie est égale à la largeur naturelle totale
+du niveau b, Le (et non pas seulement à la largeur T due au processus d'émission vers l'état fondamental). Sur une transition particulière b + a, on voit
+donc la largeur due à toutes Les transitions possibles b + c, ce qui est en .
+accord avec la quatrième relation d'incertitude : l'état b évolue sous l'effet
+de tous Les processus d'émission spontanée possibles vers les niveaux
+d'énergie inférieure à b. Son énergie n'est pas déterminée à mieux que Y,.
+près et il est normal que la mesure de cette énergie sur une transition
+déterminée (par exemple b + a) donne une dispersion d'énergie 
+
+Quant à l'intensité et au diagrenme d'émission de la raie, ils
+sont déterminés par le carré de l'élément de matrice  et
+
+sont les mêmes que pour le modèle simple du
+% 287
+
+(95)
+
+(96)
+
+\subsection{} Etude de la diffusion résonnante :%6°)
+
+Nous allons maintenant reprendre le problème de la diffusion
+résonnante déjà étudié avec le modèle simple du .
+
+Nous calculons d'abord Gene axe) puis
+
+et nous étudions la limite t. Nous verrons alors
+
+dans quelle mesure il est possible de définir une matrice S qui nous per
+
+mette de calculer la section efficace de collision et de mettre en évidence
+les différences avec Le modèle élémentaire du  B,
+\subsubsection{}%
+Nous partons de la relation analogue à la relation (29):
+
+qui nous donne : 
+
++ termes d'ordre supérieur
+
+On  tout de suite, dans (96), remplacé Gp (2) per son expression (88).
+Les termes d'ordre supérieur que nous avons négligés sont ceux qui feraient
+apperaître dans le développement explicite de Ge, ,, + (z) des termes
+
+d'ordre supérieur à 2 en 76.
+% 288
+
+ont un pôle près
+
+de  On peut, sans commettre une erreur importante, remplacer,dans
+les arguments des fonctions , et , z par , ce qui fait notamment
+apparaître  Lamb-shift de l'état fondamental. On peut alors
+
+réécrire (96) :
+
+Eta
+ment près de E, par  de à par 6 et de LE par  les 1er et 3e termes
+
+(z) se présente ainsi comme la somme de trois termes. Au remplace
+
+sont identiques à ceux de l'expression (30) du  B. Le deuxième terme,
+
+nouveau,
+
+\subsection{} Calcul de  et de la matrice S%b)
+Comme nous l'avons fait au  B, nous pouvons calculer
+
+à partir de l'expression (97) de
+
+qui déeroît exponentiellement avec le temps, une expression analogue à l'expression (32-b)
+
+On trouve alors, en négligeant le résidu au pôle z = ,
+
+% 289
+
+(98)
+
+L'accolade comprend trois facteurs. Les deux premiers sont, aux changements
+déjà signalés près, rigoureusement analogues à ceux de l'expression (32=b);
+le troisième est nouveaue .
+
+Afin de calculer la matrice 5, il feudrait maintenant passer en
+représentation d'interaction par rapport à He et calculer
+
+.
+Nous avons vu, (p. 257 ) que le passage en représentation d'in
+teraction revient à multiplier l'élément de matrice (98) par l'exponentielle
+
+Nous avons donc
+
+
+
+(99)
+l'expression entre accolades étant la même que celle de la relation (98). Il est
+facile de voir, comme nous l'avons fait p. 259 , que l'expression entre accola
+des tend, au sens des distributions, lorsque t +  , vers
+
+% 290
+
+Mais, en raison du facteur oscillant exp — T ét de l'expression (99), nous voyons que  n'admet pas de limit,
+au sens des distributions lorsque t >  Ceci semble en contradiction vec
+les résultats de la théorie formelle des collisions. En fait, la contre Lo
+tion n'est qu'appurente, En effet, nous avons pris comme hypothèse de  part
+dens l'étude de la théorie des collisions le fait que 1l'in’eraction ent 'e
+les deux systèmes décroît suffisamment vite à l'infini, ce qui correspc à à
+l'hypothèse physique qu'à un instant suffisamment éloigné dans le passé ou
+dans le futur, les deux systèmes n'interagissent pas et ar? les états ?
+les énergies non perturbés sont bien adaptés à l'étude du problème physique
+et sont, par suite de ‘bons états" et de "bonnes énergies" «
+
+Dans le cas où l'un des deux systèmes est un champ, cette ayrothèse n'est manifestement pas vérifiée. Nous savons que mme si le pho’on
+diffusé est loin de l’atome, l'atome interagit toujours avec les"fluctretions
+du vide" et que son énergie se trouve ééplacée d'une quan* ité 6, qui c:nstitue
+le "Lamb=shift" de 1'état fondamental «
+
+Les "bons états" et les “bonnes énergies" du problème physique
+de diffusion envisagé ne sont donc pas les états propres rt les énergies pro
+pres de 1‘Hamiitonien non perturbé Jo mais ces états propres et ces éner=
+gies propres corri.nés par l'effet des Mrluctuations du vide". À 1'ordre le
+plus bas, la correction intervient sur les énergies, mais ne modifie p2s les
+états propres, si bien que 1lfou peut prendre pour état représentent le 5ÿ5=
+tème physique, longtemps event ou après la collision, les états | aka > ,
+d'énergie , et | aka > d'énergie 
+
+La "représentation" d'interaction qu'il faut choisir .ne doit
+donc pas être prise par rapport à 1°Hamiltonien non perturbé Ho mais par
+
+rapport à l'Hamiltonien non perturbé H, corrigé par le Lemb=shift de état
+
+% 291 
+
+fondamental. Nous la @istinguerons de la précédente par la notation Ts
+
+On e alors :
+
+ admet donc pour limite lorsque t +
+ donné par la formule (100).
+
+des photons par l'atome, Il permet d'effectuer le calcul de la matrice de
+
+représente l'élément de la matrice S pour le problème de diffusion
+
+réaction et de la section efficace des diffusions.
+Nous allons maintenant en faire une étude plus détaillée.
+
+\subsection{} Etude de la matrice S%c)
+Les deux premiers termes de l'expression (100) qui
+
+s'écrivent
+< etat |
+
+sont en exacte analogie avec l'expression (35) de la page 259 relstive au
+modèle simple. Le deuxième terme résonne au voisinage de Mck = E,-E
+Nous verrons plus loin que le troisième terme, nouveau par rap=
+port à la formule (35), est très petit au voisinage de cette fréquence, Les
+principales propriétés de le diffusion résonnante au voisinage de
+
+découlent done des propriétés de s pri:
+
+(102)
+% 292
+
+Nous voyons donc que la section efficace de diffusion subit
+une résonance lorsque l'énergie du photon incident est égale à la différence des énergies de l'état excité corrigé rar le déplacement radiatif total
+ôp et de l'état fondamental corrigé par le Lamb=shift (rappelons que dans
+le modèle simple du  B, seul intervenait le déplacement radiatif A du
+niveau b sous l'effet du couplage avec l'état fondamental).
+
+La résonance est lorentzienne et sa largeur est égale à la largeur naturelle totale du niveau Y (et non pas seulement à la largeur à due
+au processus d'émission vers l'état fondamental).
+
+ Le diagramme d'impulsion et de polarisation du rayonnement diffusé, fourni par le produit des éléments de matrice d'interaction
+<  > est le même que dans le cas du modèle simple
+du  B.
+Etudions maintenant la correction apportée par le troisième ter
+me de l'expression (100) :
+
+De
+
+D'après la définition que nous avons donnée de R", nous avons
+% 293
+
+Le premier terme de l'expression (102) (cela est très clair
+sur le représentation diagremmetique) correspond à la diffusion de L'état
+| ex > à l'état | a > per j'intermédiaire d'un état  différent de be
+C'est au voisinage de Ack = E, E, petit terme correctif qui représente
+les ailes desrésonances de la section efficace de diffusion associées aux
+états instables c différents de be
+
+Le deuxième terme de l'expregsion (102) (voir sa représentation
+diagrammetiqug) correspond au processus physique dans lequel l'atome émet
+le second photon f'a! avant d'avoir absorbé Le premiere L'énergie n'est maniféBtement pas conservée gansl'étet intermédiaire et un tel terme sera né
+cessairement très petite C'est ce que montre son expression explicite dans
+laquelle on voit que le dénomineteur E, - Ea YHck' ne peut jamais être nul.
+Ce terme que l'on pourrait considérer comme représentant l'aile d'une rÉéso=
+nance correspondant à une fréquence négative du photon incident est ce qu'on
+eppelle le terme “antirésonnant" de la formule de dispersione
+
+En résumé, l'étude de 1'interaction électromagnétique que nous
+venons de faire au second ordre nous  permis de corriger et de préciser les
+résultats du modèle simple au premier ordre étudié au  B..
+
+Nous avons vu qu'en ce qui concerne les intensités et Les diagrammes de rayonnement, l'étude au second ordre confirme Les résultats du premier
+ordre.
+
+
+Il est évident que l'espace Bo dans lequel nous avons circonscrit notre problème est adapté à l'étude des résonances  + b et que dans un traitement de
+perturbation les autres résonances a + cb ne peuvent intervenir que comme des
+corrections. Si on voulait étudier la résonance a + cb, il faudrait adapter
+le problème au sous-espace  sous-tendu par les vecteurs
+
+% 294
+En ce qui concerne les déplacements radiatifs, nous avons pu
+introduire le Lamb=-shift de l'état fondamental et nous avons montré que le
+déplacement des états excités est dû non seulement au couplage avec l'état
+fondamental, mais au couplage avec tous les autres états.
+
+En ce qui concerne la durée de vie, nous avons vu que la largeur naturelle d'un état instable est due non seulement à l'émission spontenée vers l'état fondamental, mais à l'émission spontanée vers tous les états
+d'énergie plus basse. |
+
+Nous avons enfin montré comment on peut, sur une résonance de
+diffusion, tenir compte des corrections apportées par les ailes des autres
+
+résonances et.les termes antirésonnantse
+
+\section{} Application : Diffusion résonnante au voisinage d'un ‘croisement de%D.
+
+niveaux : Effet Hanle; effet Frankeno
+
+Une application intéressante de la théorie précédente est l'étude
+de la diffusion résonnante au voisinage d'un croisement’ de deux niveaux d'énergie etomiques.
+
+\subsection{} Description de L'expérience :%1°)
+
+Considérons un atome dont les niveaux d'énergie sont fonction.
+linéaire d'un paramètre, par exemple du champ magnétique Be Appelons e l'état
+fondamental que nous supposons diamagnétique et b et b deux niveaux qui se
+
+croisent pour une valeur B, de B (voir figure).
+
+Energie
+
+(103)
+% 295
+
+Soient , et  deux polarisations orthogonales qui permettent d'exciter sélectivement les reies b,-8 et b,-e : en d'autres termes,
+
+l'interaction électromagnétique Gr n'e päs à'élément de matrice entre
+
+ et entre
+
+Par exemple si  et  sont des états propres de la composante le long de
+
+et ,
+
+B du moment cinétique de valeurs propres respectives +1 et +1,  0
+
+1
+ne sont autres que les polarisations 0, et 0. le long de 
+Si maintenant le polarisetion du photon n'est ni  ni  
+
+mais une superposition linéaire  de A et de  :
+
+on dit que L'on a ne polarisation cohérente : les éléments ès metrice dé
+ entre  et d'une part, entre  et 
+d'autre part, sont tous les deux différents de zéro : il est possible à
+l'aide de la polarisation Ê d'exciter simultanément les deux niveaux b;
+
+et b, qui se croisent.
+
+Supposons maintenant que ion irradie cet atome avec un fais
+ceau lumneux de polarisation cohérente E, de répartition spectrale u(k)
+(1a lergeur de u(k), 4k, est supposée grande devant les largeurs naturelles
+des niveaux b. et Ds ). Etudions pour un ‘champ B voisin de B, le lumière diffu
+1
+sée dans une Lertaine direction, avec une polarisation cohérente E”
+
+% 296
+On constate que l'intensité de cette diffusion passe, lorsqu!
+on balaie le champ B, par une résonance centrée en B 5 dont la largeur dépend
+de le somme des lergeurs naturelles des niveaux b, et bd, qui se croisente
+
+L'intensité(ainsi que le forme) de la résonance dépend naturellement de La position de la fréquence moyenne de la raie excitatrice u(k) par
+rapport à la fréquence de la transition atomique  — bis Dos mais elle dépend
+aussi des direction et polarisation de la lumière incidente (directions et
+polarisation d'excitation) et des directions et polarisation de la lumière
+diffusée (directions et polarisation de détection).
+
+On peut observer le phénomène précédent soit dans le cas où les
+deux niveaux b; et b sont deux sous-niveaux Zeeman d'un même niveau atomique
+excité qui se coupent en champ B, nul (on l'appelle alors l'effet Hanle),
+soit dans le cas où les deux niveaux b et b, sont deux sous-niveaux appartenent à des niveaux atomiques différents qui peuvent se couper dens un champ
+différent de zéro (effet Franken).
+
+Les résonances que nous venons de décriré ont des applications
+très importantes. La mesure de leur position permet de déterminer les valeurs
+des champs correspondant à des croisements de niveaux d'énergie et d'en déduire par suite les valeurs de structures fines, hyperfines... La mesure de leur
+largeur fournit très simplement la largeur naturelle d'un niveau excité.
+
+Afin d'en donner une interprétation théorique, nous allons tout
+d'abord calculer la section efficace pour un photon monochromatique de polarisation cohérente ( 2), puis nous caleulerons le signal détecté physiquement
+
+en pondérant la section efficace par le profil de la raie excitatrice u(k)
+% 297
+
+\subsection{} Calcul de le section efficace de diffusion (dans le ces d'une excitation monochromatique) :%2°)
+
+
+
+Nous allons commencer par calculer l'emplituée de diffusion
+pour des. photons monochromatiques
+
+Nous devons envisager ici deux états atomiques excités, La sie
+tuation est cependant identique à celle. que nous avons étudiée aux 
+à condition de remplacer le sous-espace . par le sous-espace 
+tendu par les vecteurs et (m pouvant prendre les valeurs
+, Nous nous placerons dans l'hypothèse simplificatrice où Les seuls
+Éléments de matrice de de: non nuls sont les éléments 
+Toutes les relations démontrées au  B se transposent alors à condition de
+remplacer partout le projecteur  par Le projecteur
+.
+
+Nous nous plaçons dans l'hypothèse âu modèle simple du  B
+parce qu'il est plus facile à traiter et contient tous les résultats essen—
+tiels. La seule modification notable qu'apporte le traitement complet est qu'il
+faut remplacer partout E, par  les déplacements radiatifs bn par les
+déplacements complets bn et les largeurs naturelles Th par les largeurs naturelles totales Ybm° 11 suffira d'effectuer. formellement ce remplacement dans
+tous les calculs.
+
+En généralisant le formule (35), page 259, on obtient :
+% 298 
+
+D'où L'élément de matrice de réaction :
+
+(105-a)
+
+
+(105-b) A, =
+
+(106)
+
+avec
+La section efficace est  d'après (k1), égale à
+
+Elle est donc proportionnelle à De façon précise :
+
+La formule (106) peut s'interpréter physiquement de façon très simple :
+deux chemins, représentés par les diagrammes ci-dessous sont possibles pour
+le processus de diffusion (et ces deux chemins seulement dans l'hypothèse
+
+du modèle simple choisie),
+
+"chemin" 1 "chemin" 2
+
+Le "chemin" 1 représente une absorption du photon À  avec pas
+sage de l'atome dans l'état excité b,» puis une émission du photon ' e”
+Le"chemin" 2 représente un Processus analogue, mais avec passage de l'atome
+dans l'état excité be
+% 299
+
+A chaque “chemin” est associée une amplitude de probabilité
+
+(A, pour le "chemin" 1, A, pour le “chemin" 2), -L'emplitude de probabilité
+
+associée au processus global est la somme Aj+hse La probabilité du proces2
+sus global est le carré du module de cette somme. En plus des termes "carrés",
+
+il apparaît un terme "rectangle", 2 ; qui décrit l'interférence
+entre les deux chemins possibles. C'est ce terme interférence qui va Être
+- responsable de la variation de ls section efficace au voisinage du point de
+croisement. ‘
+Remarque importante : A. et À, ne sont tous les deux différents de zéro simultaRemarque Importante 15/2 SIM
+nément que parce que  et ’ sont tous les deux des superpositions 1inéais
+
+res de , et ; (voir relation 105-b)
+ . Le
+Si Cet  n'étaient pas tous les deux des polarisations con
+hérentes, un seul des chenins 1 et 2 resterait “ouvert et le phénomène d'inAgren es .
+terférence disparaîtrait.
+\subsection{} Calcul du signal détecté :%3°)
+Nous avons calculé la section efficace de diffusion pour un pho. +
+ton monochromatique de vecteur d'onde k.
+En fait, la soures n'est pas monochromatique : elle émet des photons dont la répartition en fréquence est donnée par la fonction u(k) de lar
+geur , grande devant  autour d'une valeur k
+
+< Ne pas confondre ce modèle dans lequel la source émet des photons incohérents
+
+entre eux avec une répartition en intensité u(k) et le modèle choisi pour traiter
+1a préparation de l'état instable au  B-6°) dens lequel l'atome interagissait au
+cours d'un processus élémentaire avec un photon constitué par une superposition
+
+cohérente, pondérée par la fonction f(K), de photons moncchromatiques. Alors qu'il
+fallait pondérer par f(x) les emnlitudes de probabilité (cf formule L2), nous de
+vons ici pondérer la section efficece, donc 1a probubilité de diffusion par u(k)e
+
+
+(110-a)
+
+(110-b)
+
+(111-a)
+
+(111-b)
+
+(112)
+
+(113)
+
+% 301
+
+
+et de même
+
+Comme  est grand devant  les expressions (110a) et
+(110-b) varient peu avec k, et k, lorsqu'on varie k, ou k, autour du point
+de croisement des niveaux b, et b d'une quantité de l'ordre de quelques
+Helpe
+
+Nous nous placerons dans la suite dans ces conditions et nous
+poserons, en appelant k, la valeur ccemmune de k, et de k,, au croisement de
+
+e
+
+niveaux :
+
+Nous voyons que les deux termes carrés sont sensiblement constants au voisinage du croisement de niveaux. Il ne nous reste plus qu'à étudier le terme rectangle :
+
+On peut écrire
+
+et compte tenu de (112) :
+% 302
+
+TL Étent petit devant largeur de u(k), la fonction
+se comporte comme
+vis à vis de l'intégration dans la formule (113). On a donc :
+
+On a de même
+
+. Les deux parties principales qui interviennent dans les expressions (11h-a) et (1llheb) sont pratiquement égales si , hypothèse
+
+que nous avons admise en supposant que k, et k, ne varient que de quelques
+
+ko, autour du point de croisement Les deux parties principales s'annulent |
+
+donc dans l'expression (113) et on obtient en posant 
+
+et finalement, compte tenu de (107), (1llea), (111-b) et (115), on a :
+% 303
+
+Nous voyons sur la formule (116), que l'intensité diffusée
+dëns une direction donnée est résonnente au point de croisement k=k,
+la résonance apparaissant uniquement sur le terme d'interférence entre les
+
+deux chemins de diffusion possible. Le signal de résonance disparaît lorsque
+ somme des largeurs naturelles des deux niveaux qui se
+croisent. (ce qui. justifie. l'approximation. que nous. avons faite pour étudier
+le phénomène. en posant k, =k, = %k dans u(k) ).
+
+L'intensité de la résonance dépend de la fréquence d'excitation
+moyenne k et.elle est d'autant plus grande que k, est plus proche de k, valeur
+pour laquelle u(x) est maximum. Elle dépend également des polarisations et des
+directions d'excitation et de détection par l'intermédiaire de B,B.*, Enfin, .
+
+la forme de la raie de résonance, donnée par l'étude de
+
+, est un mélange de courbes d'absorper + ike (k,-k,)
+
+tion et de dispersion, la proportion des deux formes dépendant encore de
+
+B,B, donc des polarisations et des directions d'excitation et de détection,
+
