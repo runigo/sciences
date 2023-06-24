@@ -528,11 +528,11 @@ et on obtient alors sans difficulté
 en posant
 \[
 \tag{14-a}\Delta(\mt{E})=<\mc{P}\frac{1}
-{\mt{E}-\mt{E}_\mt{a}-\hbar\mt{ck}},\mt{ f(k)}>
+{\mt{E}-\mt{E}_\mt{a}-\hbar\mt{ck}}\ ,\mt{ f(k)}>
 \]
 \[
 \tag{14-b}\Gamma(\mt{E})=2\pi<\delta
-(\mt{E}-\mt{E}_\mt{a}-\hbar\mt{ck}),\mt{ f(k)}>
+(\mt{E}-\mt{E}_\mt{a}-\hbar\mt{ck})\ ,\mt{ f(k)}>
 \]
 Nous voyons, d'après (14-b), que $\Gamma$(E) est nul pour E $<$ E$_\mt{a}$ car
 alors l'argument de la distribution $\delta$ est négatif. f (k) étant strictement
@@ -688,6 +688,9 @@ autour du point de branchement
 \draw (2.8,-0.6) --(3,-0.8);
 \draw (4,0.25) -- (-4,0.25) arc (180:270:3.75) -- (-0.25,0)  arc (180:0:0.25);
 \draw [dashed] (0.25,0) -- (0.25,-3.5) arc (270:360:3.75);
+\draw [thick] (-1.9,0.45) -- (-2.15,0.25) -- (-1.9,0.05);
+\draw [thick] (-0.45,-2.25) -- (-0.25,-2) -- (-0.05,-2.25);
+\draw [thick] (0.45,-1.75) -- (0.25,-2) -- (0.05,-1.75);
 \end{tikzpicture} \end{center}
 
 Le long de ce contour $\mc{C}$, G$_\mt{b}$(z) est continu et on peut appliquer
@@ -718,7 +721,9 @@ le contour d'intégration correspondant étant représenté par la figure ci-des
 \draw (2.8,-0.6) --(3,-0.8);
 \draw (-0.25,-3.5) -- (-0.25,0)  arc (180:0:0.25);
 \draw [dashed] (0.25,0) -- (0.25,-3.5);
-%\draw (-3,0) -- (0,0);
+\draw [thick] (3.2,-0.5) -- (3.1,-0.25) -- (3.35,-0.20);
+\draw [thick] (-0.45,-1.75) -- (-0.25,-2) -- (-0.05,-1.75);
+\draw [thick] (0.45,-2.25) -- (0.25,-2) -- (0.05,-2.25);
 \end{tikzpicture} \end{center}
 \subsubsection{Calcul approché} %b) :
 
@@ -726,121 +731,149 @@ Nous justifierons plus bas que la contribution à L'expression (19) du lacet C' 
 compte pour commencer et nous calculerons La contribution prépondérante du
 résidu :
 
-Soit $\overline{\mt{T}_\mt{b}}$(z) la détermination de T, (2) dans le deuxième feuillet
+Soit $\overline{\mt{T}_\mt{b}}$(z) la détermination de $\mt{T}_\mt{b}$(z) dans le deuxième feuillet
 de Riemann, Nous avons
-
 % 246 —
-
+\[
+\overline{\mt{G}_\mt{b}}\mt{(z)}=\frac{1}{\mt{z}-\mt{E}_\mt{b}\overline{\mt{T}_\mt{b}}\mt{(z)}}
+\]
 et
-
-Résidu en z,
-
-L'expression (20) est rigoureuse, (2) est peu différent de .
-
-C'est une quantité du deuxième ordre ent dont les variations sont très
-
-faibles et 0) est absolument négligeable devant 1, si bien que
-
+\[
+\tag{20}\mt{Résidu en z}_0 \left \{ \overline{\mt{G}_\mt{b}}\mt{(z)}\mt{e}^{-\frac{\mt{izt}}{\hbar}} \right \} =
+\frac{1}{1-\left .\frac{\mt{d}\overline{\mt{T}_\mt{b}}\mt{(z)}}{\mt{dz}}\right |_{\mt{z}_0}}
+\mt{e}^{-\frac{\mt{iz}_0\mt{t}}{\hbar}}
+\]
+L'expression (20) est rigoureuse. $\mt{T}_\mt{b}$(z) est peu différent de $\mt{T}_\mt{b}^\dagger$(E$_\mt{b}$).
+C'est une quantité du deuxième ordre en $\mc{H}_\mt{I}$ dont les variations sont très
+faibles et $\left .\frac{\mt{d}\overline{\mt{T}_\mt{b}}\mt{(z)}}{\mt{dz}}\right |_{\mt{z}_0}$ est absolument négligeable devant 1, si bien que
 l'on peut écrire, si on néglige la contribution du lacet
+\[
+\tag{21}<\mt{b 0 }|\mt{ U(t) }|\mt{ b 0}> =
+\frac{1}{2\mt{i}\pi}\int_\mt{C}\mt{G}_\mt{b}\mt{(z) e}^{-\frac{\mt{izt}}{\hbar}}
+= \mt{e}^{-\frac{\mt{itz}_0}{\hbar}}
+= \mt{e}^{-\mt{i}\frac{\mc{R}e(\mt{z}_0)\mt{t}}{\hbar}} \mt{e}^{-\mt{i}\frac{\mc{I}m(\mt{z}_0)\mt{t}}{\hbar}}
+\]
 
 Nous prévoyons ainsi, rigoureusement, et non plus par un calcul
-au premier ordre du type "règle d'or de Fermi", que dens l'hypothèse de notre
-modèle simple, l'état | b  > disparaît avec une constante de temps égale à
-
- et voit son énergie déplacée de la quantité.
+au premier ordre du type "règle d'or de Fermi", que dans l'hypothèse de notre
+modèle simple, l'état | b 0 > disparaît avec une constante de temps égale à
+$\frac{\hbar}{2\mc{I}m(\mt{z}_0)}$
+ et voit son énergie déplacée de la quantité $\mc{R}e(\mt{z}_0)-\mt{E}_\mt{b}$.
+ 
 Nous pouvons maintenant, à une excellente approximation, remplacer
-z, Par son expression (17) et écrire
-Etant
-
+z$_0$ Par son expression (17) et écrire
+\[
+\tag{22}<\mt{b 0 }|\mt{ U(t) }|\mt{ b 0}> =
+\mt{e}^{-\mt{it}\frac{\mt{E}_\mt{b}+\Delta(\mt{E}_\mt{b})}{\hbar}}
+\mt{e}^{-\frac{\Gamma(\mt{E}_\mt{b})\mt{t}}{2\hbar}}
+\]
 % 247
 
-() et () Étant donnés par les expressions (1-a) et (1-b) :
+$\Delta(\mt{E}_\mt{b})$ et $\Gamma(\mt{E}_\mt{b})$ étant donnés par les expressions (14-a) et (14-b) :
+\[
+\tag{23-a}\Delta(\mt{E}_\mt{b})=<\mc{P}\frac{1}
+{\mt{E}_\mt{b}-\mt{E}_\mt{a}-\hbar\mt{ck}}\ ,
+\mt{ k}^2\sum_\lambda\int\mt{d}\Omega\ |<\mt{ b 0 }|\ \mc{H}_\mt{I}\ |\mt{ a }\vec{\mt{k}}\ \lambda >|^2>
+\]
+\[
+\tag{23-b}\Gamma(\mt{E}_\mt{b})=2\pi<\delta
+(\mt{E}_\mt{b}-\mt{E}_\mt{a}-\hbar\mt{ck})\ ,
+\mt{ k}^2\sum_\lambda\int\mt{d}\Omega\ |<\mt{ b 0 }|\ \mc{H}_\mt{I}\ |\mt{ a }\vec{\mt{k}}\ \lambda >|^2>
+\]
 
-Remarques : . la formule (23-b) n'est autre que celle que nous aurions
-obtenue pour la durée de vie de l'état | b O > en appliquent la règle d'or
-de Fermi, Le traitement que nous donnons ici nous permet cependant de pré
-voir le décroissance exponentielle rigoureuse à tous les ordres et l'existence d'un déplacement radiatif du niveau instable,
+Remarques : — la formule (23-b) n'est autre que celle que nous aurions
+obtenue pour la durée de vie de l'état | b 0 > en appliquent la règle d'or
+de Fermi. Le traitement que nous donnons ici nous permet cependant de prévoir le décroissance exponentielle rigoureuse à tous les ordres et l'existence d'un déplacement radiatif du niveau instable.
 
-- l'intégrale (23-a) permettent de calcuier A (E,) est divergente (terme croissant en k à l'infini), Cette divergence est due au fait
+— l'intégrale (23-a) permettant de calculer $\Delta(\mt{E}_\mt{b})$ est divergente (terme croissant en k à l'infini). Cette divergence est due au fait
 que nous traitons un système en interaction avec un champ (voir remarque de
-la page 234 ) et disparaît si nous prenons pour le masse et la charge de
-l'électron les masse et charge expérimentales,
+la page 234 ) et disparaît si nous prenons pour la masse et la charge de
+l'électron les masse et charge expérimentales.
 
-\subsubsection{} Ordre de grandeur de l'erreur faite en négligeant le%c)
-Revenons maintenant à l'intégrale le long du lacet inter
-
-venant dans (19). Elle s'écrit :
-
+\subsubsection{Ordre de grandeur de l'erreur faite en négligeant le lacet} %c)
+Revenons maintenant à l'intégrale le long du lacet intervenant dans (19). Elle s'écrit :
+\[
+\tag{24}\mt{A}=\frac{1}{2\mt{i}\pi}
+\int_{\mt{E}_\mt{a}}^{\mt{E}_\mt{a}-\mt{i}\infty}
+\mt{e}^{-\frac{\mt{izt}}{\hbar}}\mt{dz}
+\left [
+\frac{1}{\mt{z}-\mt{E}_\mt{b}-\mt{T}_\mt{b}(\mt{z})}-
+\frac{1}{\mt{z}-\mt{E}_\mt{b}-\overline{\mt{T}_\mt{b}}(\mt{z})}
+\right ]
+\]
+\[
+\ \ =\frac{1}{2\mt{i}\pi}\int_{\mt{E}_\mt{a}}^{\mt{E}_\mt{a}-\mt{i}\infty}
+\mt{e}^{-\frac{\mt{izt}}{\hbar}}\ \frac{\overline{\mt{T}_\mt{b}}(\mt{z})-\mt{T}_\mt{b}(\mt{z})}
+{(\mt{z}-\mt{E}_\mt{b}-\mt{T}_\mt{b}(\mt{z}))(\mt{z}-\mt{E}_\mt{b}-\overline{\mt{T}_\mt{b}}(\mt{z}))}\ \mt{dz}
+\]
 % 248 —
-
-les quantités T, (2) et T (2) sont des quantités petites du second orâre en
-
-Horsae l'ordre de Th (nous posons Tr (E ) = Th)< D'autre part,
-
-décroît très vite lorsque | Im (z) | augmente le long du lacet et on peut
-izt
-
-majorer de façon très sévère e M par 1. On a alors une majoration de À :
+les quantités T$_\mt{b}$(z) et $\overline{\mt{T}_\mt{b}}$(z) sont des quantités petites du second ordre en
+$\mc{H}_\mt{I}$, de l'ordre de $\Gamma_\mt{b}$ (nous posons  $\Gamma(\mt{E}_\mt{b})=\Gamma_\mt{b}$). D'autre part,
+e$^{-\frac{\mt{izt}}{\hbar}}$
+décroît très vite lorsque $|$ $\mc{I}m$ (z) $|$ augmente le long du lacet et on peut
+majorer de façon très sévère $\mt{e}^{-\frac{\mt{izt}}{\hbar}}$ par 1. On a alors une majoration de A :
+\[
+\mt{A}<<\frac{1}{2\mt{i}\pi}\int_{\mt{E}_\mt{a}}^{\mt{E}_\mt{a}-\mt{i}\infty}
+\frac{\Gamma_\mt{b}}{(\mt{z}-\mt{E}_\mt{b})^2}\ \mt{dz}=
+\frac{1}{2\mt{i}\pi}\ \frac{\Gamma_\mt{b}}{\mt{E}_\mt{a}-\mt{E}_\mt{b}}
+\]
 
 Deux cas peuvent alors se présenter :
-a) Le temps t n'est pas trop long devant HIT, : la contribution du résidu à
-l'amplitude < b O[U(t)]b O > est de l'ordre de 1. L'erreur commise en néglib
 
-que la largeur naturelle du niveau b, Th est petite devant l'énergie de la
+$\alpha$) Le temps t n'est pas trop long devant $\hbar/\Gamma_{b}$ : la contribution du résidu à
+l'amplitude < b 0 $|$ U(t) $|$ b 0 > est de l'ordre de 1. L'erreur commise en négligeant
+le lacet est alors négligeable dès que $\frac{\Gamma_\mt{b}}{\mt{E}_\mt{a}-\mt{E}_\mt{b}}$ << 1, c'est-à-dire dès
+que la largeur naturelle du niveau b, $\Gamma_{b}$, est petite devant l'énergie de la
+transition optique, ce qui est le cas la plupart du temps.
 
-geant Le lacet est alors négligeable dès que << 1, c'est-à-dire dès
+$\beta$) Le temps t est très grand : la contribution du résidu, en e$^\frac{\Gamma_{b}\mt{t}}{2}$, devient
+très petite et la condition $\frac{\Gamma_\mt{b}}{\mt{E}_\mt{a}-\mt{E}_\mt{b}}$ << 1 n'est plus suffisante pour assurer que la correction apportée par le lacet à la loi de la décroissance exponentielle est négligeable.
 
-transition optique, ce qui est le cas la plupart du temps. rit
+De façon plus précise, lorsque t est très grand, seules les portions du contour d'intégration pour lesquelles $\mc{I}m$(z) est voisin de zéro interviennent de façon notable, c'est-à-dire d'après la figure de la page 245,
+la partie du lacet voisine du point E$_\mt{a}$.
 
-B) Le temps t est très grand : 18 contribution du résidu, en , devient
-
-que la correction apportée par le lacet à ia loi de la décroissance exponen
-très petite et la condition << 1 n'est plus suffisante pour assurer
-
-tielle est négligeable.
-
-De façon plus précise, lorsque t est très grand, seules les portions du contour d'intégration pour lesquelles Im (z) est voisin de zéro interviennent de façon notable, c'est-à-dire d'après la figure de la page 245 ,
-la partie du lacet voisine du point E
-
-Alors que pour le pôle  | Im (z) | est égal à li» on peut
-trouver sur le lacet des points tels que | Im (z) | soit aussi petit que l'on
-veut. Pour t très grand, le facteur e” es atténue la contribution du pôle
+Alors que pour le pôle z$_0$, $|$ $\mc{I}m$ (z) $|$ est égal à $\Gamma_mt{b}$, on peut
+trouver sur le lacet des points tels que $|$ $\mc{I}m$ (z) $|$ soit aussi petit que l'on
+veut. Pour t très grand, le facteur e$^{-\frac{\mt{izt}}{\hbar}}$ atténue la contribution du pôle
 beaucoup plus que celle du lacet. Il est donc intéressant dans ce cas d'étudier
-
 le comportement de la contribution du lacet.
 
 %249
-La partie le plus imporlante de cette contribution correspondra
-à y = Im (z) très petit. Les äcux déterninations de TG) diffèrent alors pra
-
-tiquement uniquement par leur partie imsginaire et on peut écrire
+La partie la plus importante de cette contribution correspondra
+à y = $\mc{I}m$ (z) très petit. Les deux déterninations de T$_\mt{b}$(z) diffèrent alors pratiquement uniquement par leur partie imsginaire et on peut écrire
+\begin{center}
+T$_\mt{b}$(z) $-\ \overline{\mt{T}_\mt{b}}$(z) $\sim$ 2 $\mc{I}m$ ( E$_\mt{a}$ $+$ iy )
+\end{center}
 
 Or, d'après (12) :
+\begin{center}
+T$_\mt{b}$( E$_\mt{a}$ $+$ iy ) = $\int_0^\infty\frac{\mt{f(k)dk}}{\mt{iy} - \hbar\mt{ck}}$
+\hspace{1cm} et \hspace{1cm}
+2$\mc{I}m$ T$_\mt{b}$( E$_\mt{a}$ $+$ iy ) = -2y $\int_0^\infty\frac{\mt{f(k)dk}}{\mt{y}^2 + \hbar^2\mt{c}^2\mt{k}^2}$
+\end{center}
 
-et
-
-Or d'après (11), t (k) varie coxme ,
-
-S se comporte comme
+Or d'après (11), f(k) varie comme k$^2$,
+\begin{center}
+$\int_0^\infty\frac{\mt{f(k)dk}}{\mt{y}^2 + \hbar^2\mt{c}^2\mt{k}^2}$
+\hspace{1cm} se comporte comme \hspace{1cm}
+$\int_0^\infty\frac{\mt{k}^2\mt{dk}}{\mt{y}^2 + \hbar^2\mt{c}^2\mt{k}^2}$
+\end{center}
 
 
 
 Soit, en faisant le changement de variable u = k/y,
-du
+comme y$\int_0^\infty\frac{\mt{du}}{1+ \hbar^2\mt{c}^2\mt{u}^2}$
 
-comme y
-
-On en conclut donc que Im
+On en conclut donc que $\mc{I}m$ T$_\mt{b}$( E$_\mt{a}$ $+$ iy ) varie comme -y$^2$.
 
 D'autre part, comme pour t très grand, la contribution la plus
+importante à A dans (24) provient de z voisin de E$_\mt{a}$ on peut dans les dénomineteurs remplacer z par E$_\mt{a}$. On a alors
+\[
+\mt{A}\simeq\frac{1}{2\mt{i}\pi}\frac{1}{(\mt{E}_\mt{a}-\mt{E}_\mt{b})^2}\int_0^\infty\mt{e}^{-\frac{\mt{yt}}{\hbar}}
+\ 2\mc{I}m\ (\ \mt{T}_\mt{b}(\mt{E}_\mt{a}+\mt{iy})\ )\ \mt{dy}
+\]
 
- j varie comme y.
-
-importante à À dans (2h) provient de z voisin de Es on peut dans les dénomine.
-
-teurs remplacer z par E On a alors
-
-quentité qui varie done comme
+quantité qui varie donc comme
 
 % 250 =
 
