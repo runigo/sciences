@@ -6,7 +6,7 @@
 \vspace{.5cm}
 Dans ce chapitre II, on énonce de façon précise les postulats de Feynman
 (\S A). On les applique ensuite, d'abord au cas simple d'une particule libre
-(\S B); puis, après avoir défini la fonction d'onde (\S ch au cas d'une particule dens un potentiel V(x), ce qui permet d'obtenir l'équation de Schrödinger .
+(\S B); puis, après avoir défini la fonction d'onde (\S C), au cas d'une particule dans un potentiel V(x), ce qui permet d'obtenir l'équation de Schrödinger
 (\S D) et de prouver ainsi l'équivalence entre la nouvelle formulation de la
 mécanique quantique et les précédentes.
 
@@ -33,18 +33,21 @@ indépendante du temps X | x > $=$ x | x >.
 
 Dans la représentation X, le vecteur | $\psi$(t) > est représenté
 par sa fonction d'onde
-
+\begin{center}
 < x | $\psi$(t) > $=$ $\psi$(x,t).
+\end{center}
 
 L'évolution du vecteur d'état | $\psi$(t) > peut être décrite à l'aide
 de l'opérateur d'évolution U(t'',t') qui est unitaire (conséquence du fait
-que La translation dans le temps est une opération de symétrie) :
-
+que la translation dans le temps est une opération de symétrie) :
+\begin{center}
 | $\psi$(t'') > $=$ U(t'',t') | $\psi$(t') >
+\end{center}
 
 Dans ce formalisme, l'amplitude de probabilité s'écrit :
-
+\begin{center}
 < x''t'' | x't' > $=$ < x'' | U(t'', t') | x' >
+\end{center}
 
 % 11
 Remarque : < x'' | U(t'',t') | x' > représente la fonction de Green
@@ -76,9 +79,9 @@ que la particule, en x' à l'instant t', se trouve en x'' à l'instant t'' ?
 Le vecteur d'état | $\psi$ >, indépendant du temps, doit être vecteur propre
 de X(t') correspondant à la valeur propre x'. | $\psi$ > est donc confondu
 avec | x',t' >. L'amplitude de probabilité cherchée est égale à la projection
-de | $\psi$ > sur l'état propre de l'opérateur X(t''), de valeur rropre
+de | $\psi$ > sur l'état propre de l'opérateur X(t''), de valeur propre
 x'', que nous avons désigné par | x'',t'' >. Elle est donc égale à
-| x'',t'' | $\psi$ > $=$ < x'',t'' | x',t' >.
+< x'',t'' | $\psi$ > $=$ < x'',t'' | x',t' >.
 
 Nous voyons donc que la notation que nous avons adoptée a
 priori pour cette amplitude est celle du point de vue de Heisenberg.
@@ -361,7 +364,7 @@ Faisons à nouveau apparaître un carré parfait :
 exp$\frac{\mt{i}}{\hbar}[\mt{k}\xi-\frac{\mt{k}^2\theta}{2\mt{m}}]$ $=$
 exp$\frac{-\mt{i}}{\hbar}[\mt{k}\sqrt{\frac{1}{2\mt{m}}}-\sqrt{\frac{\mt{k}^2\theta}{2\mt{m}}}]^2$
 \end{center}
-L'intégration sur k est analogue ä l'intérration sur u du 3°) et on
+L'intégration sur k est analogue à l'intégration sur u du 3°) et on
 trouve enfin :
 \[
 \tag{5}\mt{<x''t''|x't'>} =\left[ \frac{1}{\mt{A}}
@@ -370,7 +373,7 @@ e^{-\mt{i}\pi/4}\sqrt{\frac{\mt{m}}{2\pi\hbar\theta}}
 \ \mt{exp}\ \frac{\mt{i}\mt{m}\xi^2}{2\hbar\theta}
 \]
 {\bf Détermination de A} : Pour que le résultat à la limite où  $\epsilon$
-$\to$ O (ou n $\to$ $\infty$)
+$\to$ 0 (ou n $\to$ $\infty$)
 soit indépendant de $\epsilon$ (ou de n), il faut prendre
 \[
 \tag{6} A = \sqrt{\frac{2\pi\hbar\epsilon\mt{i}}{\mt{m}}}
@@ -396,16 +399,14 @@ Donnons enfin l'expression définitive du propagateur :
 \[
 \tag{7} \mt{<x''t''|x't'>} =  e^{-\mt{i}\pi/4}
 \left[\frac{\mt{m}}{2\pi\hbar(\mt{t''}-\mt{t'})}\right]^{1/2}
-\mt{exp}\frac{\mt{im}}{2\hbar}\frac{(\mt{x''}-\mt{x'})^2}{\mt{t''}-\mt{t'}}
+\mt{exp}\ \frac{\mt{i m}}{2\hbar}\ \frac{(\mt{x''}-\mt{x'})^2}{\mt{t''}-\mt{t'}}
 \]
 \subsection{Calcul de < x''t'' | x't' > dans la formulation habituelle} % 5°)
-
- 
 
 Nous avons < x''t''|x't' > $=$ < x''|U(t'',t')|x'' > $=$
 < x''| exp[-i$\frac{\mc H}{\hbar}$(t''-\,t')$]$|x'' >
 où $\mc H$ $=$ P$^2$/2m représente le hamiltonien de la particule
-libre  $=$ P2/2m (P opérateur impulsion d'états propres | p >)
+libre  $=$ P$^2$/2m (P opérateur impulsion d'états propres | p >)
 
 \[
 \mt{< x''| }\mt{e}^{-\mt{i}\frac{\mc H}{\hbar}\mt{(t''-\,t')}}\mt{ |x'' >} = \iint
@@ -497,7 +498,7 @@ La formule (10) est intéressante par son {\it interprétation physique} :
 \end{tikzpicture}
 \end{center}
 $\psi$(x',t') est une onde définie sur la surface t $=$ t'. Chaque point de cette
-surface se comporte comme une source d'amlitude $\psi$(x',t') et rayonne vers
+surface se comporte comme une source d'amplitude $\psi$(x',t') et rayonne vers
 le futur t > t'.
 
 L'onde au point x'' de la surface t $=$ t'' s'obtient en sommant les
@@ -505,7 +506,7 @@ contributions, exp$\frac{\mt{iS}}{\hbar}$, de {\it tous} les chemins possibles,
 issus de {\it toutes} les sources possibles $\psi$(x', t').
 
 Nous retrouvons ainsi l'analogie déjà signalée dans l'Introduction
-avec le principe d'Huyphens de l'optique,
+avec le principe d'Huyghens de l'optique.
 
 Nous pouvons dire que la fonction d'onde $\psi$(x'', t'') résume toutes les
 propriétés du système résultant de son histoire passée $[$ état initial (x',t')
@@ -534,7 +535,7 @@ Supposons que dans (11), l'expression de S(x$_\mt{k}$, x$_\mt{k+1}$) ne soit
 pas l'action pour la particule classique entre x$_\mt{k}$ et x$_\mt{k+1}$ mais n'en diffère
 que par un terme ordre $\alpha$ > 1 , en $\epsilon^\alpha$. Au bout de n $=$ T/$\epsilon$ applications
 de la formule (11), nous aurons un terme qui diffère du terme exact prévu
-par le postulat de Feynman en  $\epsilon^\alpha \frac{\mt{T}}{\epsilon}$  $=$  T$\epsilon^{\alpha-1}$ qui tend vers zére avec $\epsilon$. Il
+par le postulat de Feynman en  $\epsilon^\alpha \frac{\mt{T}}{\epsilon}$  $=$  T$\epsilon^{\alpha-1}$ qui tend vers zéro avec $\epsilon$. Il
 suffit donc, pour obtenir l'équation d'évolution exacte de la fonction
 d'onde, de prendre dans la relation (11) une expression approchée au premier
 ordre en $\epsilon$ de S (x$_\mt{k}$, x$_\mt{k+1}$) que nous allons maintenant calculer.
@@ -623,7 +624,7 @@ $\psi(\mt{x}-\zeta,t) = \psi(\mt{x},t)-\zeta\frac{\partial\psi(\mt{x},t)}{\parti
 $\psi(\mt{x},t+\epsilon) = \psi(\mt{x},t)-\epsilon\frac{\partial\psi(\mt{x},t)}{\partial\mt{t}} + ...$
 \end{center}
 
-Le développement de (12) fait alors intervenir trois intérrales
+Le développement de (12) fait alors intervenir trois intégrales
 dont le calcul ne présente aucune difficulté et dont nous donnons ici
 l'expression
 \begin{center}$
@@ -651,7 +652,7 @@ En identifiant les termes d'ordre 0 et 1 en $\epsilon$ on obtient
 
 {\it Ordre 0}
 \begin{center}
-A $= ( \frac{2\pi\hbar\epsilon\mt{i}}{m} )^{1/2}£$
+A $= ( \frac{2\pi\hbar\epsilon\mt{i}}{m} )^{1/2}$
 \end{center}
 ce qui n'est autre que l'expression (6) que nous avons déjà obtenue par
 un autre moyen.
