@@ -1,0 +1,942 @@
+\chapter{}%VFONCTION DF GREEN, PROPAGATEURS
+% 56
+\section{}% A
+Introduction
+
+— Pour décrire l'évolution d'un système quantique au cours
+du temps, on peut adopter deux points de vue : celui de l'équation de
+Schrödinger :
+\[
+\tag{1}\mt{i}\hbar\frac{\partial}{\partial\mt{t}}|\psi>=\mc{H}|\psi>
+\]
+ou celui de l'équation intégrale
+\[
+\tag{2}\psi(\mt{x}_2,\mt{t}_2)=\int\mt{dx}_1<\mt{x}_2\mt{t}_2|\mt{x}_1\mt{t}_1>\psi(\mt{x}_1,\mt{t}_1)
+\ \ \ \ \ \ \ \ \mt{t}_2\geqslant\mt{t}_1
+\]
+
+Toute la première partie de cette étude nous a montré l'équivalence entre ces deux points de vue.
+
+— Rappelons que le second point de vue est beaucoup plus physique
+et qu'il traduit en quelque sorte un principe d'Huyghens dans l'espace-temps.
+Il montre bien l'analogie existant entre les mécaniques classique et quantique . Enfin il est particulièrement bien adapté au cas des champs relativistes et au problème des perturbations.
+
+— Mathématiquement, cependant, le calcul direct de $<$ x$_2$t$_2\ |$ x$_1$t$_1>$
+à partir du postulat de Feynman est assez compliqué. Sur l'exemple de la
+particule libre, nous avons constaté que le calcul de cette amplitude de
+probabilité est plus simple à partir de l'équation de Schrödinger (1).
+
+Nous sommes donc amenés à adopter le compromis suivant :
+
+a) Nous décrirons l'évolution du système dans le temps par l'équation intégrale (2).
+
+b) Nous calculerons $<$ x$_2$t$_2\ |$ x$_1$t$_1>$ à partir de l'équation aux dérivées partielles (1).
+
+% 57
+ 
+— Le problème b) n'est autre que celui du calcul des fonctions
+de Green de l'équation de Schrödinger. Ce problère est extrêmement général
+en physique et on le retrouve dès qu'on traite une équation aux dérivées
+partielles avec des conditions aux limites : c'est le cas de l'équation
+de Poisson, des équations de Maxwell, de l'équation de la diffusion, des
+équations de Schrödinger, Klein-Gordon et Dirac, etc.
+
+Etant donnée son importance, il est intéressant d'étudier ce
+problème de façon systématique et de dégager ainsi les diverses méthodes
+possibles de calcul de l'amplitude de probabilité $<$ x$_2$t$_2\ |$ x$_1$t$_1>$.
+\section{Définition des fonctions de Green}% B
+
+Nous allons nous placer dans un espace-temps à quatre dimensions
+et adopter la notation $<\vec{\mt{r}}_2$t$_2\ |\ \vec{\mt{r}}_1$t$_1>$ au lieu de $<$ x$_2$t$_2\ |$ x$_1$t$_1>$.
+D'autre part, on posera souvent
+\begin{center}
+$<\vec{\mt{r}}_2$t$_2\ |\ \vec{\mt{r}}_1$t$_1>$ = K($\vec{\mt{r}}_2$t$_2,\ \vec{\mt{r}}_1$t$_1$) = K(2,1)
+\end{center}
+
+\subsection{Calcul de K(2,1) à partir des états propres de $\mc{H}$ (supposé
+indépendant du temps)}% 1°)
+
+Soit $\mc{H}$ le hamiltonien indépendant du temps, de valeurs propres
+E$_n$ et de vecteurs propres $|$ u$_n>$ : on a les relations
+\begin{center}
+$\mc{H}|$ u$_n>\ =\ $E$_n\ |$ u$_n>$
+
+$<$ u$_n\ |$ u$_{n'}>\ =\ \delta_{nn'}$ 
+
+$\underset{n}{\sum}\ |$ u$_n><$ u$_n|=$ 1
+\end{center}
+Plaçons-nous dans la représentation $\vec{\mt{r}}$ et posons  $<\vec{\mt{r}}\ |$ u$_n>\ =\ $u$_n(\vec{\mt{r}})$
+
+La relation de fermeture conduit à :
+\begin{center}
+$\underset{n}{\sum}\ <\vec{\mt{r}}\ |$ u$_n><$ u$_n\ |\ \vec{\mt{r'}}>\ =
+\underset{n}{\sum}\ $ u$_n(\vec{\mt{r}})$ u$^*_n(\vec{\mt{r'}})=
+\delta(\vec{\mt{r}}-\vec{\mt{r'}})$ 
+\end{center}
+
+% 58
+Décomposons la fonction d'onde $|\ \psi$(t) $>$ sur les états  $|$ u$_n>$ :
+\[
+\tag{3}|\ \psi(\mt{t})>\ = \underset{n}{\sum}\ | \mt{u}_n>< \mt{u}_n\ |\ \psi\mt{(t)}>
+\]
+\[
+=\underset{n}{\sum}\ | \mt{u}_n>\mt{c}_n\mt{(t)}
+\]
+avec
+\[
+\tag{4}\mt{c}_n\mt{(t)}=< \mt{u}_n\ |\ \psi\mt{(t)}>
+\]
+c$_n$(t) vérifie l'équation
+\begin{center}
+i$\hbar\dot{\mt{c}}_n = $E$_n$c$_n$
+\end{center}
+soit
+\[
+\tag{5}\mt{c}_n(\mt{t})=\mt{c}_n\mt{ e}^{-\mt{i}\frac{\mt{E}_n\mt{t}}{\hbar}}
+\]
+On déduit de (3) et de (5) :
+\begin{center}
+$\psi(\vec{\mt{r}}_1,\mt{t}_1)=<\vec{\mt{r}}_1|\psi(\mt{t}_1)>=
+\underset{n}{\sum}\ \mt{u}_n(\vec{\mt{r}}_1)\ \mt{c}_n\mt{ e}^{-\mt{i}\frac{\mt{E}_n\mt{t}_1}{\hbar}}$
+\end{center}
+et de (4) et (5) :
+\[
+\tag{6}\mt{c}_n=\int\mt{u}_n^*(\vec{\mt{r}}_1)\ \mt{ e}^{\mt{i}\frac{\mt{E}_n\mt{t}_1}{\hbar}}
+\psi(\vec{\mt{r}}_1,\mt{t}_1)\mt{d}^3\vec{\mt{r}}_1
+\]
+D'autre part
+\begin{center}
+$\psi(\vec{\mt{r}}_2,\mt{t}_2)=
+\underset{n}{\sum}\ \mt{c}_n\ \mt{u}_n(\vec{\mt{r}}_2)\ \mt{ e}^{-\mt{i}\frac{\mt{E}_n\mt{t}_2}{\hbar}}$
+\end{center}
+et compte tenu de (6) : 
+\[
+\psi(\vec{\mt{r}}_2,\mt{t}_2)=\int
+\underset{n}{\sum}\ \mt{u}_n(\vec{\mt{r}}_2)\ \mt{u}_n^*(\vec{\mt{r}}_1)\ \mt{ e}^{-\mt{i}
+\frac{\mt{E}_n}{\hbar}(\mt{t}_2-\mt{t}_1)}\ \psi(\vec{\mt{r}}_1,\mt{t}_1)\ \mt{d}^3\vec{\mt{r}}_1
+\]
+On a donc
+\[
+\tag{7}\mt{K(2,1)}=\underset{n}{\sum}\ \mt{u}_n(\vec{\mt{r}}_2)\ \mt{u}_n^*(\vec{\mt{r}}_1)\ \mt{ e}^{-\mt{i}
+\frac{\mt{E}_n}{\hbar}(\mt{t}_2-\mt{t}_1)}
+\]
+Nous avons ainsi défini K(2,1) en fonction des vecteurs propres et
+des valeurs propres du hamiltonien $\mc{H}$. K(2,1) est donc une quantité
+extrêmement riche en information, puisque sa connaissance exige la diagonalisation complète du hamiltonien $\mc{H}$.
+% 59
+
+Si on fait dans (7) t$_2=$ t$_1=$ t, on trouve
+\begin{center}
+\end{center}
+Nous avons déjà établi ce résultat au chapitre II sur la quantité
+< >, On voit ainsi que K(2,1) est une distribution et non
+une fonction.
+
+Notons que l'expression (7) de K(2,1) ne fait pas d'hypothèse
+sur l'ordre des temps t et t. Cependant, comme l'état du système à l'instant t ne peut dépendre que de son état à des instants antérieurs, on complètera la définition de K(2,1) per la condition K(2,1) = 0.
+Finalement
+\[
+\tag{8}=
+\]
+étant la fonction échelon unité définie par
+\subsection{}2°) Equation satisfaite par K(2,1):
+
+Par définition, nous avons
+
+D'autre part
+
+% 60
+
+Il en résulte
+
+En conclusion, K(2,1) est définie par les relations :
+\[
+\tag{9-a}=
+\]
+\[
+\tag{9-b}=
+\]
+
+Les équations (9-a) et (9-b) définissent la fonction de Green retardée
+K(2,1) de l'équation de Schrödinger (avec un hamiltonien indépendant
+du temps).
+
+Remarques :
+— L'équation (9-b) est indispensable à la définition complète de K. En
+effet (9-a) définit K à l'addition près de n'importe quelle solution de
+l'équation homogène
+
+(9-b) constitue une condition aux limites qui achève de définir K.
+
+
+— I1 résulte clairement des équations (9) que K(2,1) est une distribution.
+
+3°) Cas général (où JG dépend du temps)
+
+Définition : On appelle fonction de Green retardée de l'équation de
+Schrödinger , la distribution K(2,1) définie par les
+conditions :
+\[
+\tag{10-a}=
+\]
+\[
+\tag{10-b}=
+\]
+
+% 61
+Les équations (10-a) et (10-b) sont une simple généralisation
+au cas d'un hamiltonien dérendant du temps des équations (9-a) et (9-b).
+
+Montrons que la solution K(2,1) de ce système satisfait à la
+propriété fondamentale (2) :
+
+Multiplions pour cela membre à membre (10-a) par  et intégrons
+sur
+Il vient :
+\[
+\tag{11}=
+\]
+
+
+ satisfait bien à l'équation de Schrödinger.
+Intégrons maintenant (11) sur la variable t entre et :
+On a
+\[
+\tag{12}=
+\]
+Lorsque , la deuxième intégrale du premier membre, qui est l'intégrale
+d'une auantité bornée, tend vers zéro.
+
+La première intégrale est égale à
+
+D'après (10-b) K est nul pour
+
+% 62
+Finalement la première intégrale se réduit
+
+Quant au second membre, il est égal à .
+Lorsque  on a donc
+
+En conclusion : La fonction de Green retardée K(2,1) est telle que
+ représente la solution de l'équation de
+Schrödinger épale à  à l'instant t.
+Nous avons ainsi rattaché de façon rigoureuse le problème de
+l'évolution du systère aux instants t t, à la recherche de la fonction
+de Green retardée de l'équation de Schrödinger.
+
+Nous allons voir que la fonction de Green est également très
+utile pour la résolution d'un prand nombre de problèmes en physique.
+
+\section{}% C. Utilité des Fonctions de Green.
+
+Les fonctions de Green interviennent essentiellement dans la
+recherche des solutions d'une équetion aux dérivées partielles satisfaisant
+à certaines conditions aux limites. Nous pouvons envisarer plusieurs types
+de problèmes :
+
+\subsection{}% 1°) Soit D (x x.) un opérateur différentiel linéaire
+(que nous noterons symboliquement D).
+
+Soit à chercher les solutions  de
+l'équation D, satisfaisant à des conditions aux limites
+
+linéaires (ex. : annulation de  sur certaines surfaces).
+
+(x) est une fonction donnée, appelée fonction source.
+
+% 63
+De telles équations sont extrêmement fréquentes :
+
+Exemples : Fquation de Poisson
+
+Propagation du potentiel vecteur
+
+On appelle alors fonction de Green du problème la distribution
+K() qui vérifie
+a) l'équation.
+
+b) les conditions aux limites imposées.
+Ecrivons alors .
+
+D'après la linéarité de l'équation et des conditions aux
+limites, la solution () cherchée est alors
+
+Exemple : Equation de Poisson
+avec la condition V = 0 à l'infini
+
+On sait que la solution de K =  (r - r') est K = 
+
+On a donc le résultat classique :
+
+\subsection{}% 2°) Autres types de problèmes :
+
+— Problème des fonctions propres et valeurs propres d'une
+équation aux dérivées partielles satisfaisant à des conditions aux limites
+données :
+% 64
+
+Exemple : — Problème de la diffusion : recherche des états stationnaires de
+collision de l'équation de Schrödinger ayant un certain comportement
+asymptotique. La méthode des fonctions de Green conduit alors à l'équation
+intégrale de la diffusion, ou équation de Lippmann-Schwinger.
+
+— Problème de deux équations aux dérivées partielles voisines :
+On montre alors que les fonctions de Green des deux équations sont reliées
+par une équation intégrale. La résolution de cette équation par itération
+et la représentation diaprammatique de la solution sont très commodes
+(problèmes de perturbation, de collision, etc...).
+
+Nous étudierons ces différents problèmes par la suite.
+
+\section{}% D. Calcul pratique des fonctions de Green.
+
+Lorsque l'équation aux dérivées partielles est une équation à
+coefficients constants, la méthode de choix consiste à passer par 1a
+transformée de Fourier.
+
+Nous allons l'illustrer sur deux exemples :
+
+\subsection{}% 1°) Equation de Schrödinger d'une particule libre :
+
+Nous avons déjà obtenu la quantité <  > = K(2,1)
+dans le cas d'une particule libre de deux façons différentes : directement
+à partir du postulat de Feynman d'une part, à partir de l'opérateur d'évolution
+U (t, t) de l'équation de Schrödinger d'autre part (cf chapitre II,
+\S B, page 15-19). Nous allons déterminer ici K(2,1) en tant que fonction
+de Green de la particule libre, ce qui nous donnera un troisième procédé
+de calcul.
+
+K(2,1) satisfait aux équations (10-a) et (10-b) qui, transcrites au hamiltonien de 1e particule libre, s'écrivent :
+\[
+\tag{13-a}=
+\]
+\[
+\tag{13-b}=
+\]
+
+% 65
+I1 est évident, en raison de l'invarience du problème par
+translation, que K n'est une fonction que de  et  que
+nous notons K (). Faisons l'hypothèse que K ()
+a une transformée de Fourier G () définie par :
+\[
+\tag{14}=
+\]
+La transformée de Fourier de (13-a) nous conduit à :
+\[
+\tag{15}=
+\]
+
+On peut affirmer que si K(2,1) a une transformée de Fourier,
+cette transformée de Fourier G () satisfait à l'équation (15).
+
+On a ainsi remplacé l'équation aux dérivées partielles (13-a)
+par une équation algébrique pour laquelle l'inconnue est la distribution
+G().
+
+Une solution particulière de l'équation (15) est
+\[
+\tag{16}=
+\]
+Rappelons que P à est la distribution définie par la relation :
+
+ s'appelle aussi "partie principale au sens de Cauchy".
+Il est alors très facile de vérifier que (16) est bien une solution de
+l'équation (15). A cette solution particulière, il faut ajouter la solution
+générale de l'équation homogène
+qui est  où C est une constante arbitraire.
+
+% 66
+Finalement la solution générale de (15) est :
+
+Il est facile de vérifier que cette distribution G () admet une
+transformée de Fourier (c'est en effet une distribution "tempérée").
+Cette transformée de Fourier, K () vérifie alors l'équation
+(13-a) et admet elle-même une transformée de Fourier (qui est évidemment
+G () . Nous justifions donc ainsi a posteriori l'hypothèse. de départ
+qui était l'existence d'une transformée de Fourier pour une solution de
+l'équation (13-a).
+
+Mais n'oublions pas que cette solution ne sera la fonction de
+Green cherchée que si elle vérifie également la condition aux limites sup
+plémentaire (13-b) que nous n'avons pas encore satisfaite.
+
+Montrons que cette condition aux limites sur K se traduit par
+un choix particulier de la constante C qui intervient dans G ()
+(fornule 17).
+
+Envisageons a priori les deux valeurs de .
+Nous définissons alors,à partir de (17), deux distributions que nous notons
+\[
+\tag{18}=
+\]
+ce qui nous conduit à envisager les deux distributions de x
+
+Or nous avons l'égalité
+\[
+\tag{1}=
+\]
+(l'égalité (19) se démontre aisément en faisant agir les distributions des
+deux membres sur une même fonction  (x) ).
+
+% 67
+(19) nous permet donc d'écrire (18) sous la forme
+\[
+\tag{20}=
+\]
+Les deux distributions G sont deux solutions particulières de l'équation
+(17). Nous allons voir que leurs transformées de Fourier K
+qui vérifient (13-a) satisfont respectivement aux conditions
+\[
+\tag{21-a}=
+\]
+et
+\[
+\tag{21-b}=
+\]
+
+K(+) constituera ainsi la fonction de Green retardée de ia
+particule libre, ce qui résout le problème que nous nous étions posé.
+Quant à K nous l'appellerons la fonction de Green avancée de la
+particule libre.
+
+Pour démontrer les relations (21-a) et (21-5), i]1 suffit
+d'exprimer K à partir de (14)
+\[
+\tag{22}=
+\]
+L'introduction de  dans le dénominateur de l'expression (20) de G
+revient à déplacer les pôles de  dans le plan complexe hors
+de l'axe réel de façon à donner un sens à l'intégration sur  dans le
+deuxième membre de (22).
+
+Par exemple pour G, le pôle est renoussé dans le demi-plan
+inférieur (fig. a) et l'intégration sur l'axe réel devient possible.
+
+% 68
+On peut encore dire que sans déplacer le pôle, on l'a contourmné per
+un demi-cercle de ravon infiniment petit  dans le demi-rlan supérieur
+(fig. b) (c'est en effet ainsi que l'on interprète l'intégration si on
+remplace dans (14) non pas la forme (20) mais le forme (18) de G)
+
+De même pour G, on a les deux intégrations équivalentes schématisées par les fig. a' et b' :
+
+Pour calculer l'intégrale en  de (22), nous allons utiliser la méthode
+des résidus qui consiste à fermer le contour d'intégration de l'axe réel
+par un demi-cercle de rayon tendant vers l'infini et sur lequel l'intégrale
+à calculer tend vers zéro. Deux cas se présentent alors :
+
+a) t: Pour que  tende vers zéro, sur le grand
+cercle, la partie imaginaire de w doit être positive et le demi-grand
+cercle doit se trouver dans le demi-plan supérieur. Alors G n'a pas de
+pôles à l'intérieur du contour d'intégration et la méthode des résidus
+nous donne K = .
+
+b) t -t > 0: il faut au contraire fermer le contour par un demi-cercle
+dans le demi-plan inférieur et on a alors K = 0.
+
+% 69
+Nous avons ainsi établi les relations annoncées (21-a) et (21-b) et
+K est bien la fonction de Green retardée de la particule libre. Nous
+allons maintenant achever de la calculer.
+
+Calcul de K(2,1) :
+
+Pour t > t nous avons vu qu'il faut fermer le contour
+d'intégration par un demi-grand cercle dans le demi-plan inférieur.
+Il est facile de s'assurer que l'intégrale sur ce demi-grand cercle
+tend vers zéro et on a :
+
+La relation (22) devient alors :
+\[
+\tag{23}=
+\]
+(intégrales analogues)
+
+Faisons le changement de variable p = , L'intégration sur k devient
+
+intégrale que nous avons déjà calculée au chapitre II, \S B (p. 17) et qui
+
+représente précisément le propagateur <  > à une dimension
+(formule (7) du chapitre II).
+
+% 70
+On trouve finalement, en tenant compte de la condition
+
+\[
+\tag{24}=
+\]
+Le formule (24) n'est autre que l'extension au problème à trois dimensions
+de la formule (7) du chapitre II.
+
+\subsection{}% 2°) Equation des potentiels
+
+L'équation satisfaite en électromagnétisme par le potentiel
+scalaire V est
+
+Cherchons la fonction de Green retardée de cette équation, c'est-à-dire
+la distribution K, (2, 1) vérifiant les relations :
+\[
+\tag{25-a}=
+\]
+\[
+\tag{25-b}=
+\]
+Il est évident, en raison de l'invariance du problème par translation, que
+K(2,1) n'est une fonction que de  et . Faisons, comme pour
+la fonction de Creen de la particule libre, l'hypothèse que K(2,1) a une
+transformée de Fourier G () définie par la relation
+\[
+\tag{26}=
+\]
+La transformée de Fourier de (25-a) nous conduit à : 
+\[
+\tag{27}=
+\]
+ 
+% 71
+Nous avons ainsi, comme pour la particule libre, remplacé
+l'équation aux dérivées partielles (25-a) par une équation algébrique
+dont l'inconnue est la distribution G (). Le problème est cependant
+plus compliqué, car la quantité possède deux zéros
+
+Il est très facile de vérifier qu'une solution particulière
+de (27-a) est
+
+A cette solution particulière, il faut ajouter la solution générale de
+l'équation homogène , qui est
+ nombres complexes quelconques
+
+Finalement, la solution générale de (27) est
+
+Elle dépend des deux constantes complexes  et . Comme pour la particule
+libre, envisageons a priori les quatre solutions correspondant à
+
+Elles peuvent s'écrire
+
+Nous avons ainsi obtenu quatre distributions G pour lesquelles les
+pôles  sont déplacés d'une quantité infiniment petite dans le
+plan complexe au-dessus bu au-dessous de l'axe réel, On peut encore dire
+que dans les intégrations où intervient , il existe quatre facons
+de contourner par un demi-cercle de rayon infiniment petit  les pôles
+
+% 72
+De façon précise,
+à , il correspond
+
+la configuration ou le contour d'intégration
+
+à
+
+Chacune de ces quatre distributions G correspond à une fonction
+K(2,1) vérifiant des conditions aux limites particulières.
+
+Pour calculer l'intégrale en  de (26) par la méthode des résidus, dans
+le cas où  0, il faut fermer le contour d'intégration par un
+demi-cercle dans le demi-plan supérieur et c'est donc la première configuration  =  = 1 qui convient pour donner un résultat nul.
+
+La transformée de la fonction de Green cherchée est donc
+\[
+\tag{28}=
+\]
+
+% 73
+L'intégration (26) nous conduit alors à la fonction de Green
+
+retardée K(2,1). On intègre sur  par la méthode des résidus :
+
+(26) donne alors :
+
+En passant en coordonnées sphériques, l'axe Oz étant dirigé suivant 
+ devient
+ 
+Posons  et effectuons l'intégration sur  : il
+vient :
+
+Soit 
+
+% 74
+ est positif. Le terme () permet donc de supprimer la
+distribution (r + c) et finalement :
+\[
+\tag{29}=
+\]
+On en déduit immédiatement le potentiel au point  en présence d'une
+distribution de charges  :
+\[
+\tag{30}=
+\]
+(30) n'est autre que l'équation bien connue des "potentiels retardés" que
+l'on retrouve ainsi à partir de la fonction de Green du d'Alembertien.
+
+Remarque :
+
+La condition aux limites imposée à la fonction de Green K(2,1)
+fait jouer au temps un rôle privilégié. Dans la transformée de Fourier
+G (), c'est  qui est particularisé (cf relation (28) ). On voit ainsi
+que cette condition ne satisfait pas à l'invariance relativiste. Nous verrons qu'en relativité, il faut imposer à la fonction de Green d'autres conditions, satisfaisant à l'invariance relativiste et qui correspondent à des
+contours d'intégration pour lesquels les pôles ck sont repoussés de part
+et d'autre de l'axe réel.
+% 75
+
+En conclusion : Nous avons montré que la technique de la transformation
+de Fourier nous permet de calculer les fonctions de Green des équations
+aux dérivées partielles à coefficionts constants. Les conditions aux
+limites se traduisent simploment par un déplacement âens le plan complexe,
+dons un sens bien déterminé, des pôles de cette transformée de Fourier,
+Cette propriété nous permet de tenir compte de façon analytiquement simple
+du principe physique de causalité (K = O si t < t).
+
+Nous allons maintenent appliquer les techniques des fonctions
+de Green à la théorie des perturbations :
+
+\section{}% E. Développement en série de perturbations
+
+Soit un système quantique dont l'évolution est décrite par un
+hamiltonien H. Supposons connue sa fonction de Green retardée K(2,1).
+Elle vérifie les relations :
+\[
+\tag{31-a}=
+\]
+\[
+\tag{31-b}=
+\]
+Appliquons maintenant une perturbation V (dépendante au indépendante du
+temps). Le hamiltonien devient H = H + V. Cherchons à déterminer, à partir
+de K et de V, la fonction de Green retardée du hamiltonien H, c'est-à-dire
+la distribution K(2,1) vérifiant :
+\[
+\tag{32-a}=
+\]
+\[
+\tag{32-b}=
+\]
+Pour cela, écrivons l'équation (32-a) sous la forme inhomogène :
+
+et considérons formellement le second membre comme une source  (2).
+
+% 76
+
+Nous avons vu alors (\S C) que si K(2,1) vérifie
+\[
+\tag{33}=
+\]
+alors
+\[
+\tag{34}=
+\]
+Or, d'après (3l-a), on voit que K' (2, 1) =
+
+(34) s'écrit alors
+
+Soit :
+\[
+\tag{35}=
+\]
+
+Il est facile de montrer que K(2,1), défini par l'équation (35),
+satisfait bien à l'équation (32-a). Nous montrons dans ls suite qu'elle
+satisfait à la relation (32-b). les deux fonctions de Green retardées
+du hamiltonien non perturbé et du hamiltonien perturbé sont donc reliées
+entre elles par l'équation intégrale (35).
+
+Nous pouvons, dans le second membre de (35), remplacer K, (3, 1)
+par son expression intégrale et on obtient ainsi par itération le développement
+en série de Neumann-Liouville de la perturbation :
+\[
+\tag{36}=
+\]
+
+Dans chaque terme de la série (36), la présence des fonctions de
+Green retardées K fait que les temps sont automatiquement rangés par
+ordre croissant entre t et t : par exenple, le troisième terme est nul
+% 77
+à moins que l'on ait simultanément . Il est donc
+nul si t < t. Il en est de même de tous les termes de ce dévelcprement.
+La solution de l'équation (35) est donc bien telle que K, (2, 1) = 0 si
+t . C'est donc bien ia fonction de Green retardée du système perturbé.
+
+Remarques:
+
+Dans le développement (36), les intégrations sur les variables 3, 4, etc.
+(c'est-ü-dire sur etc.) sont libres et s'étendent à l'espace-temps tout entier.
+Les conditions aux limites sur les fonctions de Green
+sont implicitement contenues dans les intégrales et annulent toutes les contributions
+autres que . Le développement (36) correspond
+à une simplification notable de l'écriture par rapport au développerent
+classique de le page 41 (formule (27) ). Cette simplification est effective
+car nous avons vu qu'on peut tenir compte des conditions aux limites de façon
+mathématiquement simple.
+\section{}% F. Représentation diagrammatique du développement de Neumann-Liouville
+
+Nous allons définir une convention qui va nous permettre d'associer un diagramme à chaque terme du développement (36).
+
+Conventions :
+
+a) Les temps sont représentés en ordonnée, croissant de bas en
+haut, et en abscisse, on portera une "variable d'espace".
+
+b) A chaque terme K (i, j) sera associée une ligne pointillée
+joignant i et j
+
+c) A chaque terme K, (i, j) sera associée une line pleine joignant i et j.
+
+d) A cheque terme V (i) un cercle autour du point i.
+
+% 78
+On associe ainsi à chaque intégrale du déveloprement (36) un
+diagramme, Chaque diagramme est affecté d'un facteur de poids , où n
+représente le nombre de cercles du diagramme, et pour obtenir le terme du
+développement (36) associé, il faut intégrer librement sur les variables
+entourées d'un cercle. On obtient alors le développement diagrammatique :
+\[
+\tag{37}=
+\]
+
+Il est évident qu'avec nos conventions, il y a correspondance
+biunivoque entre chaque terme du dévelopnement diagrammatique et chaque
+terme de la série (36).
+
+Les diagrammes conduisent à une représentation physique simple de
+la perturbation : l'amplitude de probabilité pour que la particule en
+à l'instant t se trouve en à l'instant t, en présence du potentiel
+perturbateur V, est la somme de plusieurs contributions :
+
+— une correspondant aux chemins où elle ne subit aucune interaction avec V
+
+— une correspondant aux chemins où elle subit me interaction avec V
+
+— une correspondent aux chemins où elle subit deux interactions avec V
+
+etc...
+
+% 79
+Prenons pour exemple le diagramme de diffusion double
+
+Ce diacramne représente une particule qui va librement (sous l'effet de
+H seul) de 1 à 4, qui est diffusée en 4 par V, qui va ensuite librement
+à 3 où elle est de nouveau diffusée par V pour aller ensuite librement
+jusqu'en 2. A ce chemin correspond une certaine amplitude de probabilité.
+Pour avoir la contribution des processus de diffusion double, il faut
+sommer sur toutes les positions des points intermédiaires 4 et 3. Four
+avoir la contribution de tous les processus de diffusion, il faut ensuite
+sommer tous les diarramres correspondant aux différents ordres de diffusion.
+En résumé : Pour joindre 1 à 2, plusieurs chemins sont possibles. À chaque
+chemin est associée une amplitude de probabilité. Il faut sommer sur toutes
+ces amplitudes pour avoir l'amplitude de probabilité globale K(2,1).
+On retrouve ainsi l'idée de base de l'approche de Feynman de la mécanique
+quantique.
+
+% 80
+Remarques :
+
+a) Les conditions aux limites sur K font que les diagrammes du type
+
+que nous n'avons pas exclu a priori ont une contribution nulle.
+
+En mécanique quantique non relativiste, de tels diaprammes n'ont
+pas de signification physique. Ils correspondent en effet à un retour du
+chemin dans le passé où encore à la présence de trois particules entre les
+instants t et t.
+
+En mécanique quantique relativiste, ils ont au contraire une
+signification, car il existe alors une possibilité de création et d'annihilation
+de particules (le nombre de particules n'est plus une constante
+du mouvement).
+
+Par exemple, dans le cas où la particule est un électron, nous
+verrons que le diagramme représente un électron partant de 1 à l'instant t,
+voyant apparaître une paire électron-positron sous l'effet du potentiel V
+à l'instant t, annihilé par le positron de la paire à l'instant t4 tandis
+que l'électron de la paire arrive en 2 à l'instant t. Le positron s'interprète
+alors naturellement comme un électron d'énergie négative se propageant
+dans le sens inverse du temps (théorie de Feynman du positron).
+% 81
+
+b) Avec les conventions adoptées, l'équation intégrale (35) peut se
+représenter par le diagramme :
+\[
+\tag{38}=
+\]
+
+Ce diapramme (38) peut s'interpréter aussi comme le résultat obtenu en
+sommant toutes les parties de diagramme comprises entre 1 et 3 dans le
+développement diagrammatique (37) (1a particule ve de 1 à 3 en régime
+"forcé" sous l'effet de H + V, puis librement (sous l'effet de H) de
+3 en 2). Nous définissons ainsi sur les diagrammes une opération très
+importante, la ressommation.
+
+\section{}% G. Opérateur fonction de Green. Proparateur
+
+\subsection{}% 1°) Cas rénéral :
+
+Nous nous sommes jusqu'à présent placés dans la représentation r
+dans laquelle la fonction de Green retardée s'écrit :
+
+K(2, 1) est donc un élément de matrice de l'opérateur .
+
+% 82
+
+Ceci nous conduit à nous affranchir de la représentation r en définissent
+l'opérateur fonction de Green retardé par la relation
+\[
+\tag{39}=
+\]
+L'opérateur d'évolution U (t, t) satisfait à l'équation de Schrödinger :
+
+On en déduit aisément que l'opérateur  est défini par les
+deux relations :
+\[
+\tag{40-a}=
+\]
+\[
+\tag{40-b}=
+\]
+
+Les relations (40-a) et (40-b) sont en effet équivalentes à (39). Elles
+sont l'équivalent nour les orérateurs fonction de Green des relations
+(10-a) et (10-b) de définition des fonctions de Green. De même que pour
+les fonctions de Green, la condition (40-b) est indispensable à la définition
+complète de K. Notons cependant qu'à la différence de (10-a) et
+(10-b), la distribution  de (40-a) est à une dimension : seul le temps
+reste une variable.
+
+Définition : On appelle propagateur  l'opérateur transformée de
+Fourier de K par rapport à la variable t : (w) est défini par la
+relation :
+
+1l est facile de montrer que tous les résultats établis au \S E sur le
+développement en série de perturbation s'adapte sans changement aux opérateurs
+fonction de Green. Notamment les équations (35) et (36) deviennent :
+\[
+\tag{42}=
+\]
+\[
+\tag{43}=
+\]
+%83
+Le développement (43), compte tenu de (39) redonne immédieterent la formule
+classique (27) de la page 41.
+
+ 
+
+\subsection{}% 2°) Cas où le hamiltonien H ne dépend pas du temps :
+
+Un cas particulier très important et très fréquent est celui où
+H est indépendant du temps.
+On connaît alors U (t t ) :
+
+L'opérateur fonction de Green ne dépend plus alors que de la différence
+t - t (il y a invariance par translation dans le temps) et (39) devient :
+\[
+\tag{44}=
+\]
+
+en posant T = t t.
+
+Posons  = E/; le propagateur (w) devient (E) et il est défini
+par :
+\[
+\tag{45}=
+\]
+
+% 84
+
+ou encore
+\[
+=
+\]
+
+soit :
+\[
+\tag{46}=
+\]
+
+La relation (46) définit (E) comme une intégrale d'opérateur. Dans
+une représentation déterminée (E) définit une distribution (par
+exemple la fonction de Green en représentation r) qui est du type
+
+Une telle quantité n'a pas de sens en tant que fonction. En tant que distribution, on peut la considérer comme
+
+ce qui revient à introduire dans l'intégrale un facteur de convergence aussi
+faible qu'on veut, qui donne un sens à l'intégrale, mais qui ne modifie pas
+l'action de la distribution sur une fonction à support borné (ou suffisamment
+décroissante à l'infini).
+
+Or
+
+L'équation (46) conduit donc à la relation
+\[
+\tag{47}=
+\]
+
+L'opérateur H ayant ses valeurs propres réelles, E - H n'a pas d'inverse
+lorsque E est égal à l'une de ces valeurs propres. La formule (47) nous
+montre donc que de façon analogue à la méthode employée plus haut, le
+% 85
+proparateur s'obtient en déplaçant d'une façon infiniment petite les valeurs
+propres du hamiltonien H dans le plan complexe. z étant la variable complexe,
+nous appelons résolvante l'opérateur
+
+(47) s'écrit alors (E) = 
+
+(45) devient :
+\[
+\tag{48}=
+\]
+
+C représentant la droite parallèle à l'axe réel déplacée d'une quantité
+infiniment petite dans le demi-plan supérieur :
+
+On peut définir de même l'opérateur fonction de Green retardé  par
+l'équation (4O-a) et la relation :
+
+On montre alors aisément
+\[
+\tag{49}=
+\]
+
+% 86
+Le propagateur retardé est alors
+\[
+=
+\]
+
+et :
+\[
+\tag{50}=
+\]
+
+C représentant la droite parallèle à l'axe réel déplacée d'une quantité
+infiniment petite dans le demi-plan inférieur :
+
+De (39) et (49) on déduit
+
+et de (48) et (50) :
+\[
+\tag{51}=
+\]
+
+avec C = C  C :
+
+% 87
+Reprenons enfin la formule (42) qui s'écrit, dans le cas d'un
+hamiltonien H et une perturbation V indépendants du temps :
+\[
+\tag{52}=
+\]
+
+L'intégrale de (52) est un produit de convolution qui devient un produit
+ordinaire par transformation de Fourier :
+\[
+\tag{53}=
+\]
+
+(53), compte tenu de (47), s'écrit encore :
+\[
+\tag{54}=
+\]
+
+La relation (54) apparaît ainsi comme une conséauence de (52). On peut
+également la démontrer beaucoup plus simplement à partir de la relation
+générale entre opérateurs :
