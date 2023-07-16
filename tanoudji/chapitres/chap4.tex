@@ -506,37 +506,59 @@ $\delta$x'' $=\delta$x' $=\delta$t'' $= 0$; $\delta$t' $\neq 0$.
 
 On obtient la relation
 \[
-\tag{30}=
+\tag{30}<\mt{x'' t'' }| \mt{x', t'}+\delta\mt{t'}> - <\mt{ x''t'' }|\mt{ x't' }>=
+\frac{\mt{i}\delta\mt{t'}}{\hbar}<\mt{ x''t'' }|\ \mc{H}\mt{(t') }|\mt{ x't' }>
 \]
 La relation (30) étant vraie, quel que soit < x''t'' | , entraîne
-
+\begin{center}
+$|$ x', t' $+\delta$t'$>=|$ x't' $>+
+\frac{\mt{i}\delta\mt{t'}}{\hbar}\ \mc{H}$(t'$|$ x't' $>$
+\end{center}
 %55
 Soit
 \[
-\tag{31}=
+\tag{31}|\mt{ x', t'}+\delta\mt{t'}>=\left[1+
+\frac{\mt{i}\delta\mt{t'}}{\hbar}\ \mc{H}\mt{(t') }\right]|\mt{ x't' }>
 \]
-L'opérateur  étant hermitique,  est l'opérateur
+L'opérateur  étant hermitique, 1+
+$\frac{\mt{i}\delta\mt{t'}}{\hbar}$ $\mc{H}$(t') est l'opérateur
 infinitésimal unitaire qui translate | x' t' > dans le temps en
-| x, t' + t' >.
-Le hamiltonien (t) est le générateur du groupe des translations dans le
+| x, t' + $\delta$t' >.
+
+Le hamiltonien $\mc{H}$(t) est le générateur du groupe des translations dans le
 temps.
 
 A partir de l'équation (31), nous pouvons retrouver l'équation
-de Schrôdinger.
+de Schrödinger.
 
 La relation conjuguée de (31) s'écrit :
+\begin{center}
+$<$ x, t' $+\delta$t $|=<$ x, t $|-
+\frac{\mt{i}\delta\mt{t}}{\hbar}\ <$ x, t $|\mc{H}$(t)
+\end{center}
 
-En multipliant membre à membre par un état |  > , on obtient
-
-où, à la limite où t  0 :
+En multipliant membre à membre par un état $| \psi >$ , on obtient
+\begin{center}
+$\psi$ (x, t$+\delta$t) $-\ \psi$ (x, t) $=
+-\frac{\mt{i}\delta\mt{t}}{\hbar}\ <$ x, t $|\mc{H}$(t)$| \psi >$
+\end{center}
+où, à la limite où $\delta$t $\to$ 0 :
 \[
-\tag{32}=
+\tag{32}\mt{i}\hbar\frac{\partial}{\partial\mt{t}}\psi( \mt{x, t} )=
+\ <\mt{ x, t }|\ \mc{H}\mt{(t) }|\psi>
 \]
-(32) n'est rien d'autre que l'équation de Schrôdinger en représentation x.
+(32) n'est rien d'autre que l'équation de Schrödinger en représentation x.
 En effet
+\[
+\mc{H}=\frac{\mt{P}^2}{2\mt{m}}+\mt{V(x)}=
+-\frac{\hbar^2}{2\mt{m}}\frac{\partial^2}{\partial\mt{x}^2}+\mt{V(x)}
+\]
+
+
 et (32) s'écrit :
 \[
-\tag{33}=
+\tag{33}\mt{i}\hbar\frac{\partial}{\partial\mt{t}}\psi\mt{(x,t)}=
+-\frac{\hbar^2}{2\mt{m}}\frac{\partial^2\psi\mt{(x)}}{\partial\mt{x}^2}+\mt{V(x)}\psi\mt{(x)}
 \]
 Nous retrouvons ainsi, de façon beaucoup plus élégante, l'équation de
 Schrôdinger que nous avons déjà déduite directement des postulats de

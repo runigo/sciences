@@ -127,60 +127,91 @@ extrêmement riche en information, puisque sa connaissance exige la diagonalisat
 
 Si on fait dans (7) t$_2=$ t$_1=$ t, on trouve
 \begin{center}
+K($\vec{\mt{r}}_2$, t; $\vec{\mt{r}}_1$, t)=$\underset{n}{\sum}$ u$_n(\vec{\mt{r}}_2)$ u$_n^*(\vec{\mt{r}}_1)=
+\delta(\vec{\mt{r}}_2-\vec{\mt{r}}_1)$
 \end{center}
 Nous avons déjà établi ce résultat au chapitre II sur la quantité
-< >, On voit ainsi que K(2,1) est une distribution et non
+$<$ x$_2$ t$_2\ |$ x$_1$ t$_1$ $>$, On voit ainsi que K(2,1) est une distribution et non
 une fonction.
 
 Notons que l'expression (7) de K(2,1) ne fait pas d'hypothèse
-sur l'ordre des temps t et t. Cependant, comme l'état du système à l'instant t ne peut dépendre que de son état à des instants antérieurs, on complètera la définition de K(2,1) per la condition K(2,1) = 0.
+sur l'ordre des temps t$_1$ et t$_2$. Cependant, comme l'état du système à l'instant t$_2$ ne peut dépendre que de son état à des instants antérieurs, on complètera la définition de K(2,1) par la condition K(2,1) = 0 si t$_2<$t$_1$.
 Finalement
 \[
-\tag{8}=
+\tag{8}\mt{K}(\vec{\mt{r}}_2\mt{ t}_2, \vec{\mt{r}}_1\mt{ t}_1)=\underset{n}{\sum} \mt{u}_n(\vec{\mt{r}}_2)\mt{u}_n^*(\vec{\mt{r}}_1)\mt{ e}^{-\mt{iE}_n\frac{(\mt{t}_2-\mt{t}_1)}{\hbar}}\theta(\mt{t}_2-\mt{t}_1)
 \]
-étant la fonction échelon unité définie par
-\subsection{}2°) Equation satisfaite par K(2,1):
+$\theta$(t$_2-$t$_1$)étant la fonction échelon unité définie par
+\[\left \{
+ \begin{array}{r c l}
+  \theta(\mt{t}_2-\mt{t}_1) & = & 1 \mt{ si t}_2 \geqslant\mt{ t}_1\\
+  \theta(\mt{t}_2-\mt{t}_1) & = & 0 \mt{ si t}_1 <\mt{ t}2
+ \end{array}
+\right . \]
+\subsection{Equation satisfaite par K(2,1)}% 
 
 Par définition, nous avons
-
+\begin{center}
+$[$ i$\hbar\frac{\partial}{\partial\mt{t}_2}-$
+H$(\vec{\mt{r}}_2)\ ]$ u$_n(\vec{\mt{r}}_2)$
+e$^{-\mt{i}\frac{\mt{E}_n\mt{t}_2}{\hbar}}=0$
+\end{center}
 D'autre part
-
+\begin{center}
+$\frac{\mt{d}}{\mt{dt}_2}\ \theta$(t$_2-$t$_1)=\delta($t$_2-$t$_1)$
+\end{center}
 % 60
 
 Il en résulte
+\begin{center}
+$[$ i$\hbar\frac{\partial}{\partial\mt{t}_2}-$ H$(\vec{\mt{r}}_2)\ ]$K$(\vec{\mt{r}}_2\mt{t}_2,\vec{\mt{r}}_1\mt{t}_1)=$
+i$\hbar\underset{n}{\sum}$u$_n(\vec{\mt{r}}_2)$u$^*_n(\vec{\mt{r}}_1)$e$^{-i\mt{E}_n(\frac{\mt{t}_2-\mt{t}_1}{\hbar})}
+\delta(\mt{t}_2-\mt{t}_1)$
+
+$=$ i$\hbar\underset{n}{\sum}$u$_n(\vec{\mt{r}}_2)$u$^*_n(\vec{\mt{r}}_1)\delta(\mt{t}_2-\mt{t}_1)$
+
+$=$ i$\hbar\delta(\vec{\mt{r}}_2-\vec{\mt{r}}_1)\delta(\mt{t}_2-\mt{t}_1)=$ i$\hbar\delta(2,1)$
+
+\end{center}
 
 En conclusion, K(2,1) est définie par les relations :
 \[
-\tag{9-a}=
+\tag{9-a}[\ i\hbar\frac{\partial}{\partial\mt{t}_2}-\ \mt{H}(\vec{\mt{r}}_2)\ ]
+\ \mt{K}(2,1)=\ \mt{i}\hbar\ \delta(2,1)
 \]
 \[
-\tag{9-b}=
+\tag{9-b}\mt{K}=0\ \ \ \ si\ \ \ \mt{t}_2<\mt{t}_1
 \]
 
-Les équations (9-a) et (9-b) définissent la fonction de Green retardée
-K(2,1) de l'équation de Schrödinger (avec un hamiltonien indépendant
+Les équations (9-a) et (9-b) définissent la \ul{fonction de Green retardée
+K(2,1)} de l'équation de Schrödinger (avec un hamiltonien indépendant
 du temps).
 
-Remarques :
+\ul{Remarques} :
 — L'équation (9-b) est indispensable à la définition complète de K. En
 effet (9-a) définit K à l'addition près de n'importe quelle solution de
 l'équation homogène
+\begin{center}
+$[$ i$\hbar\frac{\partial}{\partial\mt{t}_2}-$H($\vec{\mt{r}}_2)\ ]$ K(2,1) $=$ 0
+\end{center}
 
-(9-b) constitue une condition aux limites qui achève de définir K.
+(9-b) constitue une \ul{condition aux limites} qui achève de définir K.
 
+— I1 résulte clairement des équations (9) que K(2,1) est \ul{une distribution}.
 
-— I1 résulte clairement des équations (9) que K(2,1) est une distribution.
-
-3°) Cas général (où JG dépend du temps)
-
-Définition : On appelle fonction de Green retardée de l'équation de
-Schrödinger , la distribution K(2,1) définie par les
+\subsubsection{Cas général (où $\mc{H}$ dépend du temps)}%3°) 
+\ul{Définition} : On appelle fonction de Green retardée de l'équation de
+Schrödinger
+\begin{center}
+$[$ i$\hbar\frac{\partial}{\partial\mt{t}_2}-$H($\vec{\mt{r}}_2)\ ]\ \psi\ =$ 0,
+\end{center}
+la distribution K(2,1) définie par les
 conditions :
 \[
-\tag{10-a}=
+\tag{10-a}[\mt{ i}\hbar\frac{\partial}{\partial\mt{t}_2}-H(\vec{\mt{r}}_2,\mt{ t}_2)\ ]\mt{ K(2,1) }=
+\mt{i}\hbar\delta(2,1)
 \]
 \[
-\tag{10-b}=
+\tag{10-b}\mt{K}=0\ \ \ \ \ \mt{si t}_2<\mt{t}_1
 \]
 
 % 61
@@ -189,93 +220,125 @@ au cas d'un hamiltonien dérendant du temps des équations (9-a) et (9-b).
 
 Montrons que la solution K(2,1) de ce système satisfait à la
 propriété fondamentale (2) :
+\[
+\tag{2}\psi(\vec{\mt{r}}_2,\mt{t}_2)=\int\mt{d}^3\vec{\mt{r}}_1\mt{ K(2,1) }\psi(\vec{\mt{r}}_1,\mt{t}_1)
+\ \ \ \ \ \ \ \ \mt{t}_2\geqslant\mt{t}_1
+\]
 
-Multiplions pour cela membre à membre (10-a) par  et intégrons
-sur
+Multiplions pour cela membre à membre (10-a) par $\psi(\vec{\mt{r}}_1,\mt{t}_1)$ et intégrons
+sur $\vec{\mt{r}}_1$.
+
 Il vient :
 \[
-\tag{11}=
+\tag{11}\mt{i}\hbar\frac{\partial}{\partial\mt{t}_2}\int\mt{K(2,1)}\psi(\vec{\mt{r}}_1,\mt{t}_1)\mt{d}^3\vec{\mt{r}}_1-
+\mt{H}(\vec{\mt{r}}_2,\mt{t}_2)\int\mt{K(2,1)}\psi(\vec{\mt{r}}_1,\mt{t}_1)\mt{d}^3\vec{\mt{r}}_1
 \]
-
-
- satisfait bien à l'équation de Schrödinger.
-Intégrons maintenant (11) sur la variable t entre et :
+\[
+=\mt{i}\hbar\ \delta(\mt{t}_2-\mt{t}_1)\ \psi(\vec{\mt{r}}_2,\mt{t}_1)
+\]
+Si t$_2>$ t$_1$, i$\hbar\ \delta(\mt{t}_2-\mt{t}_1)\ \psi(\vec{\mt{r}}_2,\mt{t}_1)=0$ et $\int\mt{K(2,1)}\psi(\vec{\mt{r}}_1,\mt{t}_1)\mt{d}^3\vec{\mt{r}}_1$ satisfait bien à l'équation de Schrödinger.
+Intégrons maintenant (11) sur la variable t$_2$ entre t$_1-\epsilon$ et t$_1+\epsilon$ :
 On a
 \[
-\tag{12}=
+\tag{12}\mt{i}\hbar\int_{\mt{t}_1-\epsilon}^{\mt{t}_1+\epsilon}\mt{dt}_2
+\frac{\partial}{\partial\mt{t}_2}\int\mt{K(2,1)}\psi(\vec{\mt{r}}_1,\mt{t}_1)\mt{d}^3\vec{\mt{r}}_1-
+\int_{\mt{t}_1-\epsilon}^{\mt{t}_1+\epsilon}\mt{dt}_2\mc{H}(\vec{\mt{r}}_2,\mt{t}_2)\int\mt{K(2,1)}\psi(\vec{\mt{r}}_1,\mt{t}_1)\mt{d}^3\vec{\mt{r}}_1
 \]
-Lorsque , la deuxième intégrale du premier membre, qui est l'intégrale
-d'une auantité bornée, tend vers zéro.
+\[
+=\mt{i}\hbar\ \int_{\mt{t}_1-\epsilon}^{\mt{t}_1+\epsilon}\mt{dt}_2\ \delta(\mt{t}_2-\mt{t}_1)\ \psi(\vec{\mt{r}}_2,\mt{t}_1)
+\]
+Lorsque $\epsilon \to 0$, la deuxième intégrale du premier membre, qui est l'intégrale
+d'une quantité bornée, tend vers zéro.
 
 La première intégrale est égale à
+\[
+\mt{i}\hbar\left[\int\mt{K}(\vec{\mt{r}}_2\mt{t}_2,\vec{\mt{r}}_1\mt{t}_1)
+\ \psi(\vec{\mt{r}}_1\mt{t}_1)\ \mt{d}^3\vec{\mt{r}}_1\right]_{\mt{t}_1-\epsilon}^{\mt{t}_1+\epsilon}
+\]
 
-D'après (10-b) K est nul pour
+D'après (10-b) K est nul pour t$_1-\epsilon$.
 
 % 62
-Finalement la première intégrale se réduit
-
-Quant au second membre, il est égal à .
-Lorsque  on a donc
+Finalement la première intégrale se réduit à
+\[
+\mt{i}\hbar\lim_{\epsilon\to\,0}\int\mt{K}(\vec{\mt{r}}_2\ \mt{t}_1+\epsilon,\vec{\mt{r}}_1\ \mt{t}_1)
+\ \psi(\vec{\mt{r}}_1\mt{t}_1)\ \mt{d}^3\vec{\mt{r}}_1
+\]
+Quant au second membre, il est égal à $\mt{i}\hbar\ \psi(\vec{\mt{r}}_2,$ t$_1)$.
+Lorsque t$_2\to$t$_1$, on a donc
+\[
+\int\mt{K}(\vec{\mt{r}}_2\ \mt{t}_2,\vec{\mt{r}}_1\ \mt{t}_1)
+\ \psi(\vec{\mt{r}}_1\ \mt{t}_1)\ \mt{d}^3\vec{\mt{r}}_1\ \to\ \psi(\vec{\mt{r}}_2,\ \mt{t}_1)
+\]
 
 En conclusion : La fonction de Green retardée K(2,1) est telle que
  représente la solution de l'équation de
-Schrödinger épale à  à l'instant t.
+Schrödinger égale à  à l'instant t.
+
 Nous avons ainsi rattaché de façon rigoureuse le problème de
-l'évolution du systère aux instants t t, à la recherche de la fonction
+l'évolution du systère aux instants t$_2\geqslant$ t$_1$, à la recherche de la fonction
 de Green retardée de l'équation de Schrödinger.
 
 Nous allons voir que la fonction de Green est également très
 utile pour la résolution d'un prand nombre de problèmes en physique.
 
-\section{}% C. Utilité des Fonctions de Green.
+\section{Utilité des Fonctions de Green}% C. .
 
 Les fonctions de Green interviennent essentiellement dans la
-recherche des solutions d'une équetion aux dérivées partielles satisfaisant
-à certaines conditions aux limites. Nous pouvons envisarer plusieurs types
+recherche des solutions d'une équation aux dérivées partielles satisfaisant
+à certaines conditions aux limites. Nous pouvons envisager plusieurs types
 de problèmes :
 
-\subsection{}% 1°) Soit D (x x.) un opérateur différentiel linéaire
-(que nous noterons symboliquement D).
+\subsection{Soit D (x$_1$, x$_2$, ... x$_n$) un opérateur différentiel linéaire}% 1°)
+\begin{flushright}
+(que nous noterons symboliquement D$_{\vec{\mt{x}}}$).
+\end{flushright}
 
-Soit à chercher les solutions  de
-l'équation D, satisfaisant à des conditions aux limites
-
-linéaires (ex. : annulation de  sur certaines surfaces).
-
-(x) est une fonction donnée, appelée fonction source.
+Soit à chercher les solutions  de $\phi(\vec{\mt{x}})=\phi(\mt{x}_1,\mt{ x}_2,\ ...\mt{ x}_n)$
+l'équation D$_{\vec{\mt{x}}}\ \phi(\vec{\mt{x}})=\rho(\mt{x})$, satisfaisant à des conditions aux limites
+linéaires (ex. : annulation de $\phi$ sur certaines surfaces).
+$\rho(\vec{\mt{x}})$ est une fonction donnée, appelée fonction \ul{source}.
 
 % 63
 De telles équations sont extrêmement fréquentes :
 
-Exemples : Fquation de Poisson
+\ul{Exemples} : Équation de Poisson \hspace{2cm} $\Delta$V $=-\frac{\rho}{\epsilon_0}$
 
-Propagation du potentiel vecteur
+Propagation du potentiel vecteur \hspace{2cm}
+$(\Delta-\frac{1}{\mt{c}^2}\frac{\partial^2}{\partial\mt{t}^2})\vec{\mt{A}}=-\mu_0\vec{\mt{j}}$
 
 On appelle alors fonction de Green du problème la distribution
-K() qui vérifie
-a) l'équation.
+K(x$_1$, y$_1$, x$_2$, y$_2$, ... x$_n$, y$_n$) qui vérifie
+
+a) l'équation \hspace{2cm} D$_{\vec{\mt{x}}}$ K$(\vec{\mt{x}},\vec{\mt{y}})=\delta(\vec{\mt{x}}-\vec{\mt{y}})$.
 
 b) les conditions aux limites imposées.
-Ecrivons alors .
 
+Ecrivons alors $\rho(\vec{\mt{x}})=\int\rho(\vec{\mt{y}})\ \delta(\vec{\mt{x}}-\vec{\mt{y}})$ d$\vec{\mt{y}}$.
 D'après la linéarité de l'équation et des conditions aux
-limites, la solution () cherchée est alors
+limites, la solution $\phi(\vec{\mt{x}})$ cherchée est alors
+\begin{center}
+$\phi(\vec{\mt{x}})=\int\rho(\vec{\mt{y}})$ K$(\vec{\mt{x}}-\vec{\mt{y}})$ d$\vec{\mt{y}}$
+\end{center}
 
-Exemple : Equation de Poisson
-avec la condition V = 0 à l'infini
+\ul{Exemple} : Equation de Poisson $\Delta$V $=-\frac{1}{\epsilon_0}\rho$(x, y, z)
+avec la condition V $=$ 0 à l'infini
 
-On sait que la solution de K =  (r - r') est K = 
-
+On sait que la solution de $\Delta$K $=\delta$ (r - r') est K $=-\frac{1}{4\pi|\vec{\mt{r}}-\vec{\mt{r}}\,'|}$.
 On a donc le résultat classique :
+\[
+\mt{V}(\vec{\mt{r}})=\frac{1}{4\pi\epsilon_0}
+\int\frac{\rho(\vec{\mt{r}}\,')}{|\vec{\mt{r}}-\vec{\mt{r}}\,'|}\mt{d}^3\vec{\mt{r}}\,'
+\]
 
-\subsection{}% 2°) Autres types de problèmes :
+\subsection{Autres types de problèmes}% 2°)  :
 
 — Problème des fonctions propres et valeurs propres d'une
 équation aux dérivées partielles satisfaisant à des conditions aux limites
 données :
 % 64
 
-Exemple : — Problème de la diffusion : recherche des états stationnaires de
+\ul{Exemple} : — Problème de la diffusion : recherche des états stationnaires de
 collision de l'équation de Schrödinger ayant un certain comportement
 asymptotique. La méthode des fonctions de Green conduit alors à l'équation
 intégrale de la diffusion, ou équation de Lippmann-Schwinger.
@@ -283,12 +346,12 @@ intégrale de la diffusion, ou équation de Lippmann-Schwinger.
 — Problème de deux équations aux dérivées partielles voisines :
 On montre alors que les fonctions de Green des deux équations sont reliées
 par une équation intégrale. La résolution de cette équation par itération
-et la représentation diaprammatique de la solution sont très commodes
+et la représentation diagrammatique de la solution sont très commodes
 (problèmes de perturbation, de collision, etc...).
 
 Nous étudierons ces différents problèmes par la suite.
 
-\section{}% D. Calcul pratique des fonctions de Green.
+\section{Calcul pratique des fonctions de Green}% D. .
 
 Lorsque l'équation aux dérivées partielles est une équation à
 coefficients constants, la méthode de choix consiste à passer par 1a
@@ -296,254 +359,475 @@ transformée de Fourier.
 
 Nous allons l'illustrer sur deux exemples :
 
-\subsection{}% 1°) Equation de Schrödinger d'une particule libre :
+\subsection{Equation de Schrödinger d'une particule libre}% 1°)  :
 
-Nous avons déjà obtenu la quantité <  > = K(2,1)
+Nous avons déjà obtenu la quantité $<$ x$_2$t$_2|$x$_1$t$_1> =$ K(2,1)
 dans le cas d'une particule libre de deux façons différentes : directement
 à partir du postulat de Feynman d'une part, à partir de l'opérateur d'évolution
-U (t, t) de l'équation de Schrödinger d'autre part (cf chapitre II,
-\S B, page 15-19). Nous allons déterminer ici K(2,1) en tant que fonction
+U (t, t$_0$) de l'équation de Schrödinger d'autre part (cf chapitre II,
+\S 2). Nous allons déterminer ici K(2,1) en tant que fonction
 de Green de la particule libre, ce qui nous donnera un troisième procédé
 de calcul.
 
-K(2,1) satisfait aux équations (10-a) et (10-b) qui, transcrites au hamiltonien de 1e particule libre, s'écrivent :
+K(2,1) satisfait aux équations (10-a) et (10-b) qui, transcrites au hamiltonien de la particule libre, s'écrivent :
 \[
-\tag{13-a}=
+\tag{13-a}\mt{i}\hbar\frac{\partial}{\partial\mt{t}_2}\mt{K}(\vec{\mt{r}}_2\mt{t}_2,\vec{\mt{r}}_1\mt{t}_1)
++\frac{\hbar^2}{2\mt{m}}\Delta_2\mt{K}(\vec{\mt{r}}_2\mt{t}_2,\vec{\mt{r}}_1\mt{t}_1)
+=\mt{i}\hbar\ \delta(\vec{\mt{r}}_2-\vec{\mt{r}}_1)\ \delta(\mt{t}_2-\mt{t}_1))
 \]
 \[
-\tag{13-b}=
+\tag{13-b}\mt{K}(\vec{\mt{r}}_2\mt{t}_2,\vec{\mt{r}}_1\mt{t}_1)=0\ \ \ \ \mt{si }\mt{t}_2<\mt{t}_1
 \]
 
 % 65
-I1 est évident, en raison de l'invarience du problème par
-translation, que K n'est une fonction que de  et  que
-nous notons K (). Faisons l'hypothèse que K ()
-a une transformée de Fourier G () définie par :
+Il est évident, en raison de l'invarience du problème par
+translation, que K n'est une fonction que de $\vec{\mt{r}}_2-\vec{\mt{r}}_1$ et t$_2-$t$_1$ que
+nous notons K($\vec{\mt{r}}_2-\vec{\mt{r}}_1$, t$_2-$t$_1$). Faisons l'hypothèse que K($\vec{\mt{r}}_2-\vec{\mt{r}}_1$, t$_2-$t$_1$)
+a une transformée de Fourier G$(\vec{\mt{k}},\omega)$ définie par :
 \[
-\tag{14}=
+\tag{14}\mt{K}(\vec{\mt{r}}_2-\vec{\mt{r}}_1,\mt{t}_2-\mt{t}_1)=(\frac{1}{2\pi})^4
+\int..\int\mt{G}(\vec{\mt{k}},\omega)\mt{e}^{\mt{i}[\vec{\mt{k}}(\vec{\mt{r}}_2-\vec{\mt{r}}_1)-\omega(\mt{t}_2-\mt{t}_1)]}\mt{d}^3\mt{k d}\omega
 \]
 La transformée de Fourier de (13-a) nous conduit à :
 \[
-\tag{15}=
+\tag{15}\left[\hbar\omega-\frac{\hbar^2\mt{k}^2}{2\mt{m}}\right]\mt{G}(\vec{\mt{k}},\omega)=\mt{i}\hbar
 \]
 
 On peut affirmer que si K(2,1) a une transformée de Fourier,
-cette transformée de Fourier G () satisfait à l'équation (15).
+cette transformée de Fourier G$(\vec{\mt{k}},\omega)$ satisfait à l'équation (15).
 
 On a ainsi remplacé l'équation aux dérivées partielles (13-a)
-par une équation algébrique pour laquelle l'inconnue est la distribution
-G().
+par une équation algébrique pour laquelle l'inconnue est la \ul{distribution}
+G$(\vec{\mt{k}},\omega)$.
 
 Une solution particulière de l'équation (15) est
 \[
-\tag{16}=
+\tag{16}\mt{G}(\vec{\mt{k}},\omega)=\mt{i}\hbar\ \mc{P}\left[\frac{1}{\hbar\omega-\frac{\hbar^2\mt{k}^2}{2\mt{m}}}\right]
 \]
-Rappelons que P à est la distribution définie par la relation :
-
- s'appelle aussi "partie principale au sens de Cauchy".
+Rappelons que $\mc{P}(\frac{1}{\mt{x}})$ à est la distribution définie par la relation :
+\[
+<\mc{P}(\frac{1}{\mt{x}}),\phi(\mt{x})>=
+\lim_{\epsilon\to\,0}\left[\int^{-\epsilon}_{-\infty}\frac{\phi(\mt{x})}{\mt{x}}\mt{dx}+
+\int^{+\infty}_{+\epsilon}\frac{\phi(\mt{x})}{\mt{x}}\mt{dx}\right]
+\]
+$\mc{P}$ s'appelle aussi "partie principale au sens de Cauchy".
 Il est alors très facile de vérifier que (16) est bien une solution de
 l'équation (15). A cette solution particulière, il faut ajouter la solution
-générale de l'équation homogène
-qui est  où C est une constante arbitraire.
+générale de l'équation homogène $[\hbar\omega-\frac{\hbar^2\mt{k}^2}{2\mt{m}}]\mt{G}(\vec{\mt{k}},\omega)=0$
+qui est $\mt{i}\hbar\mt{C}\ \delta(\hbar\omega-\frac{\hbar^2\mt{k}^2}{2\mt{m}})$ où C est une constante arbitraire.
 
 % 66
 Finalement la solution générale de (15) est :
+\[
+\tag{17}\mt{G}(\vec{\mt{k}},\omega)=\mt{i}\hbar\ \left[\mc{P}\frac{1}{\hbar\omega-\frac{\hbar^2\mt{k}^2}{2\mt{m}}}+\mt{C}\ \delta(\hbar\omega-\frac{\hbar^2\mt{k}^2}{2\mt{m}})\right]
+\]
 
-Il est facile de vérifier que cette distribution G () admet une
+Il est facile de vérifier que cette distribution G$(\vec{\mt{k}},\omega)$ admet une
 transformée de Fourier (c'est en effet une distribution "tempérée").
-Cette transformée de Fourier, K () vérifie alors l'équation
+Cette transformée de Fourier, K$(\vec{\mt{r}}_2-\vec{\mt{r}}_1,\mt{t}_2-\mt{t}_1)$ vérifie alors l'équation
 (13-a) et admet elle-même une transformée de Fourier (qui est évidemment
-G () . Nous justifions donc ainsi a posteriori l'hypothèse. de départ
+G$(\vec{\mt{k}},\omega)$ . Nous justifions donc ainsi a posteriori l'hypothèse. de départ
 qui était l'existence d'une transformée de Fourier pour une solution de
 l'équation (13-a).
 
 Mais n'oublions pas que cette solution ne sera la fonction de
-Green cherchée que si elle vérifie également la condition aux limites sup
-plémentaire (13-b) que nous n'avons pas encore satisfaite.
+Green cherchée que si elle vérifie également la condition aux limites supplémentaire (13-b) que nous n'avons pas encore satisfaite.
 
 Montrons que cette condition aux limites sur K se traduit par
-un choix particulier de la constante C qui intervient dans G ()
-(fornule 17).
+un choix particulier de la constante C qui intervient dans G$(\vec{\mt{k}},\omega)$
+(formule 17).
 
-Envisageons a priori les deux valeurs de .
-Nous définissons alors,à partir de (17), deux distributions que nous notons
+Envisageons a priori les deux valeurs de C, C$=\pm$i$\pi$.
+Nous définissons alors, à partir de (17), deux distributions que nous notons
 \[
-\tag{18}=
+\tag{18}\mt{G}_\pm(\vec{\mt{k}},\omega)=\mt{i}\hbar\ \left[\mc{P}\frac{1}{\hbar\omega-\frac{\hbar^2\mt{k}^2}{2\mt{m}}}
+\mp\mt{i}\pi\ \delta(\hbar\omega-\frac{\hbar^2\mt{k}^2}{2\mt{m}})\right]
 \]
 ce qui nous conduit à envisager les deux distributions de x
-
+\[
+\mc{P}(\frac{1}{\mt{x}})\mp\mt{i}\pi\ \delta(\mt{x})
+\]
 Or nous avons l'égalité
 \[
-\tag{1}=
+\tag{19}\lim_{\epsilon\to\,0_+}\frac{1}{\mt{x}\pm\mt{i}\epsilon}
+=\lim_{\epsilon\to\,0_+}\left[\frac{\mt{x}\mp\mt{i}\epsilon}{\mt{x}^2+\epsilon^2}\right]
+=\lim_{\epsilon\to\,0_+}\left[\frac{\mt{x}}{\mt{x}^2+\epsilon^2}\mp\mt{i}\pi\frac{1}{\pi}\frac{\epsilon}{\mt{x}^2+\epsilon^2}\right]
+\]
+\[
+=\mc{P}(\frac{1}{\mt{x}})\mp\mt{i}\pi\ \delta(\mt{x})
 \]
 (l'égalité (19) se démontre aisément en faisant agir les distributions des
-deux membres sur une même fonction  (x) ).
+deux membres sur une même fonction $\phi$(x) ).
 
 % 67
 (19) nous permet donc d'écrire (18) sous la forme
 \[
-\tag{20}=
+\tag{20}\mt{G}_\pm(\vec{\mt{k}},\omega)=\mt{i}\hbar\lim_{\epsilon\to\,0_+}
+\frac{1}{\hbar\omega-\frac{\hbar^2\mt{k}^2}{2\mt{m}}\pm\mt{i}\epsilon}
 \]
-Les deux distributions G sont deux solutions particulières de l'équation
-(17). Nous allons voir que leurs transformées de Fourier K
+Les deux distributions G$_\pm$ sont deux solutions particulières de l'équation
+(17). Nous allons voir que leurs transformées de Fourier K$_{(\pm)}(\vec{\mt{r}}_2-\vec{\mt{r}}_1,\mt{t}_2-\mt{t}_1)$,
 qui vérifient (13-a) satisfont respectivement aux conditions
 \[
-\tag{21-a}=
+\tag{21-a}\mt{K}_{(+)}=0\ \ \ \ \ \mt{si t}_2<\mt{t}_1\ \ \ \ \ \mt{et}
 \]
-et
 \[
-\tag{21-b}=
+\tag{21-b}\mt{K}_{(-)}=0\ \ \ \ \ \mt{si t}_2>\mt{t}_1\ \ \ \ \ \ \ \,
 \]
 
-K(+) constituera ainsi la fonction de Green retardée de ia
+K$_{(+)}$ constituera ainsi la \ul{fonction de Green retardée} de la
 particule libre, ce qui résout le problème que nous nous étions posé.
-Quant à K nous l'appellerons la fonction de Green avancée de la
+Quant à K$_{(-)}$ nous l'appellerons la \ul{fonction de Green avancée} de la
 particule libre.
 
-Pour démontrer les relations (21-a) et (21-5), i]1 suffit
-d'exprimer K à partir de (14)
+Pour démontrer les relations (21-a) et (21-b), il suffit
+d'exprimer K$_{(\pm)}$ à partir de (14)
 \[
-\tag{22}=
+\tag{22}\mt{K}_{(\pm)}(\vec{\mt{r}}_2-\vec{\mt{r}}_1,\mt{t}_2-\mt{t}_1)=(\frac{1}{2\pi})^4
+\lim_{\epsilon\to\,0_+}\iiint\overrightarrow{\mt{d}^3\mt{k}}\mt{ e}^{\mt{i}\vec{\mt{k}}(\vec{\mt{r}}_2-\vec{\mt{r}}_1)}
+\int\mt{d}\omega\frac{\mt{i}\hbar\mt{ e}^{-\mt{i}\omega(\mt{t}_2-\mt{t}_1)}}{\hbar\omega-\frac{\hbar^2\mt{k}^2}{2\mt{m}}\pm\mt{i}\epsilon}
 \]
-L'introduction de  dans le dénominateur de l'expression (20) de G
-revient à déplacer les pôles de  dans le plan complexe hors
+L'introduction de $\pm\mt{i}\epsilon$ dans le dénominateur de l'expression (20) de G$_\pm$
+revient à déplacer les pôles de $\frac{1}{\hbar\omega-\frac{\hbar^2\mt{k}^2}{2\mt{m}}}$ dans le plan complexe hors
 de l'axe réel de façon à donner un sens à l'intégration sur  dans le
 deuxième membre de (22).
 
-Par exemple pour G, le pôle est renoussé dans le demi-plan
+\ul{Par exemple pour} G$_+$, le pôle est repoussé dans le demi-plan
 inférieur (fig. a) et l'intégration sur l'axe réel devient possible.
 
+\vspace{0.3cm}
+\begin{minipage}[c]{.45\linewidth}
+\begin{center} \begin{tikzpicture}
+\draw [->] (-2.25,0) -- (2.25,0) node [below]{$\omega$};
+\draw (0,0.07) -- (0,-0.07) node [above right]{$\hbar\frac{\mt{k}^2}{2\mt{m}}$};
+\draw [dotted] (0,0) --(0,-0.7);
+\draw (0,-0.6) node [above right]{$\epsilon$};
+%\draw (2.95,-0.7) ;
+\draw (-0.1,-0.8) -- (0.1,-0.6);
+\draw (-0.1,-0.6) -- (0.1,-0.8);
+\end{tikzpicture}
+
+fig. a
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+\begin{center} \begin{tikzpicture}
+\draw (-2.25,0) -- (-0.35,0);
+\draw [->] (0.35,0) -- (2.25,0) node [below]{$\omega$};
+\draw (0,0) node [below]{$\hbar\frac{\mt{k}^2}{2\mt{m}}$};
+\draw [dotted] (-0.25,0) --(0.25,0);
+\draw (-0.1,-0.1) -- (0.1,0.1);
+\draw (-0.1,0.1) -- (0.1,-0.1);
+\draw (-0.35,0)  arc (180:0:0.35);
+\end{tikzpicture}
+
+fig. b
+\end{center}
+\end{minipage}
+\vspace{0.3cm}
+
 % 68
-On peut encore dire que sans déplacer le pôle, on l'a contourmné per
-un demi-cercle de ravon infiniment petit  dans le demi-rlan supérieur
+On peut encore dire que sans déplacer le pôle, on l'a contourmné par
+un demi-cercle de rayon infiniment petit $\epsilon$ dans le demi-plan supérieur
 (fig. b) (c'est en effet ainsi que l'on interprète l'intégration si on
-remplace dans (14) non pas la forme (20) mais le forme (18) de G)
+remplace dans (14) non pas la forme (20) mais la forme (18) de G$_{(+)}$)
 
-De même pour G, on a les deux intégrations équivalentes schématisées par les fig. a' et b' :
+De même pour G$_-$, on a les deux intégrations équivalentes schématisées par les fig. a' et b' :
 
-Pour calculer l'intégrale en  de (22), nous allons utiliser la méthode
+\vspace{0.3cm}
+\begin{minipage}[c]{.45\linewidth}
+\begin{center} \begin{tikzpicture}
+\draw [->] (-2.25,0) -- (2.25,0) node [below]{$\omega$};
+\draw (0,0.07) -- (0,-0.07) node [below]{$\hbar\frac{\mt{k}^2}{2\mt{m}}$};
+\draw [dotted] (0,0) --(0,0.7);
+\draw (0,0.6) node [below right]{$\epsilon$};
+%\draw (2.95,-0.7) ;
+\draw (-0.1,0.8) -- (0.1,0.6);
+\draw (-0.1,0.6) -- (0.1,0.8);
+\end{tikzpicture}
+
+fig. a'
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+\begin{center} \begin{tikzpicture}
+\draw (-2.25,0) -- (-0.35,0);
+\draw [->] (0.35,0) -- (2.25,0) node [below]{$\omega$};
+\draw (0,0) node [above right]{$\hbar\frac{\mt{k}^2}{2\mt{m}}$};
+\draw [dotted] (-0.25,0) --(0.25,0);
+\draw (-0.1,-0.1) -- (0.1,0.1);
+\draw (-0.1,0.1) -- (0.1,-0.1);
+\draw (-0.35,0)  arc (-180:0:0.35);
+\end{tikzpicture}
+
+fig. b'
+\end{center}
+\end{minipage}
+\vspace{0.3cm}
+
+Pour calculer l'intégrale en $\omega$ de (22), nous allons utiliser la méthode
 des résidus qui consiste à fermer le contour d'intégration de l'axe réel
 par un demi-cercle de rayon tendant vers l'infini et sur lequel l'intégrale
 à calculer tend vers zéro. Deux cas se présentent alors :
 
-a) t: Pour que  tende vers zéro, sur le grand
-cercle, la partie imaginaire de w doit être positive et le demi-grand
-cercle doit se trouver dans le demi-plan supérieur. Alors G n'a pas de
+$\alpha$) t$_2-$t$_1<0$: Pour que $|\mt{e}^{-\mt{i}\omega(\mt{t}_2-\mt{t}_1)}|$ tende vers zéro, sur le grand
+cercle, la partie imaginaire de $\omega$ doit être positive et le demi-grand
+cercle doit se trouver dans le demi-plan supérieur. Alors G$_+$ n'a pas de
 pôles à l'intérieur du contour d'intégration et la méthode des résidus
-nous donne K = .
+nous donne K$_{(+)}=0$.
 
-b) t -t > 0: il faut au contraire fermer le contour par un demi-cercle
-dans le demi-plan inférieur et on a alors K = 0.
+$\beta$) t$_2-$t$_1>0$: il faut au contraire fermer le contour par un demi-cercle
+dans le demi-plan inférieur et on a alors K$_{(-)}=0$.
 
 % 69
 Nous avons ainsi établi les relations annoncées (21-a) et (21-b) et
-K est bien la fonction de Green retardée de la particule libre. Nous
+K$_+$ est bien la fonction de Green retardée de la particule libre. Nous
 allons maintenant achever de la calculer.
 
-Calcul de K(2,1) :
+\ul{Calcul de K$_+$(2,1)} :
 
-Pour t > t nous avons vu qu'il faut fermer le contour
+Pour t$_2$ > t$_1$ nous avons vu qu'il faut fermer le contour
 d'intégration par un demi-grand cercle dans le demi-plan inférieur.
 Il est facile de s'assurer que l'intégrale sur ce demi-grand cercle
 tend vers zéro et on a :
+\[
+\lim_{\epsilon\to\,0_\pm}\int\frac{\mt{d}\omega\mt{ e}^{-\mt{i}\omega(\mt{t}_2-\mt{t}_1)}}{\hbar\omega-\frac{\hbar^2\mt{k}^2}{2\mt{m}}+\mt{i}\epsilon}=
+-2\mt{i}\pi\lim_{\epsilon\to\,0_+}\mt{Résidu}\left[\frac{\mt{ e}^{-\mt{i}\omega(\mt{t}_2-\mt{t}_1)}}{\hbar\omega-\frac{\hbar^2\mt{k}^2}{2\mt{m}}+\mt{i}\epsilon}\right]=
+-\frac{2\mt{i}\pi}{\hbar}\mt{ e}^{-\mt{i}\frac{\hbar\mt{k}^2}{2\mt{m}}(\mt{t}_2-\mt{t}_1)}
+\]
 
 La relation (22) devient alors :
 \[
-\tag{23}=
+\tag{23}\mt{K}_+(2,1)=\frac{1}{(2\pi)^3}
+\iiint\mt{d}^3\mt{k}\mt{ e}^{\mt{i}\vec{\mt{k}}(\vec{\mt{r}}_2-\vec{\mt{r}}_1)}
+\mt{ e}^{-\mt{i}\frac{\hbar\mt{k}^2}{2\mt{m}}(\mt{t}_2-\mt{t}_1)}
 \]
-(intégrales analogues)
+\[
+=\left[\frac{1}{2\pi}
+\int\mt{d}\mt{k}_\mt{x}\mt{ e}^{\mt{i}\mt{k}_x(\mt{x}_2-\mt{x}_1)}
+\mt{ e}^{-\mt{i}\frac{\hbar\mt{k}_\mt{x}^2}{2\mt{m}}(\mt{t}_2-\mt{t}_1)}\right]\times
+\mt{(intégrales analogues en y et z)}
+\]
 
-Faisons le changement de variable p = , L'intégration sur k devient
 
-intégrale que nous avons déjà calculée au chapitre II, \S B (p. 17) et qui
+Faisons le changement de variable p $=\hbar$k$_\mt{x}$ , L'intégration sur k devient
+\[
+\frac{1}{2\pi\hbar}
+\int\mt{d}\mt{p}\mt{ e}^{\frac{\mt{i}}{\hbar}\left[\mt{p}(\mt{x}_2-\mt{x}_1)
+-\frac{\mt{p}^2}{2\mt{m}}(\mt{t}_2-\mt{t}_1)\right]}
+\]
 
-représente précisément le propagateur <  > à une dimension
+intégrale que nous avons déjà calculée au chapitre II, \S 2  et qui
+représente précisément le propagateur $<$ x$_2$t$_2\,|\,$x$_1$t$_1>$ à une dimension
 (formule (7) du chapitre II).
 
 % 70
-On trouve finalement, en tenant compte de la condition
+On trouve finalement, en tenant compte de la condition K$_{(+)}=0$ si t$_2<$ t$_1$
 
 \[
-\tag{24}=
+\tag{24}\mt{K}_{(+)}(\vec{\mt{r}}_2-\vec{\mt{r}}_1,\mt{t}_2-\mt{t}_1)=
+\theta(\mt{t}_2-\mt{t}_1)\mt{e}^{-\frac{3\mt{i}\pi}{4}}
+\left[\frac{\mt{m}}{2\pi\hbar(\mt{t}_2-\mt{t}_1)}\right]^\frac{3}{2}
+\mt{ exp }\frac{\mt{im}}{2\hbar}\frac{(\vec{\mt{r}}_2-\vec{\mt{r}}_1)}{\mt{t}_2-\mt{t}_1}
 \]
 Le formule (24) n'est autre que l'extension au problème à trois dimensions
 de la formule (7) du chapitre II.
 
-\subsection{}% 2°) Equation des potentiels
+\subsection{Equation des potentiels}% 2°) 
 
 L'équation satisfaite en électromagnétisme par le potentiel
 scalaire V est
-
+\[
+(\Delta-\frac{1}{\mt{c}^2}\frac{\partial^2}{\partial\mt{t}^2})\mt{K}_+(2,1)=-\frac{\rho}{\epsilon_0}
+\]
 Cherchons la fonction de Green retardée de cette équation, c'est-à-dire
 la distribution K, (2, 1) vérifiant les relations :
 \[
-\tag{25-a}=
+\tag{25-a}\left[\Delta_2-\frac{1}{\mt{c}^2}\frac{\partial^2}{\partial\mt{t}_2^2}\right]\mt{K}_+(2,1)=
+\delta(\vec{\mt{r}}_2-\vec{\mt{r}}_1)\ \delta(\mt{t}_2-\mt{t}_1)
 \]
 \[
-\tag{25-b}=
+\tag{25-b}\mt{K}_+(2,1)=0\ \ \ \ \ \mt{si}\ \ \ \ \ \mt{t}_2<\mt{t}_1
 \]
 Il est évident, en raison de l'invariance du problème par translation, que
-K(2,1) n'est une fonction que de  et . Faisons, comme pour
-la fonction de Creen de la particule libre, l'hypothèse que K(2,1) a une
-transformée de Fourier G () définie par la relation
+K$_+$(2,1) n'est une fonction que de $\vec{\mt{r}}_2-\vec{\mt{r}}_1$ et $\mt{t}_2-\mt{t}_1$. Faisons, comme pour
+la fonction de Creen de la particule libre, l'hypothèse que K$_+$(2,1) a une
+transformée de Fourier G$_+(\vec{\mt{k}},\omega)$ définie par la relation
 \[
-\tag{26}=
+\tag{26}\mt{K}_+(2,1)=\frac{1}{(2\pi)^4}\int\!\!...\!\!\int \mt{G}_+(\vec{\mt{k}},\omega)
+\ \mt{e}^{\mt{i}\left[\vec{\mt{k}}(\vec{\mt{r}}_2-\vec{\mt{r}}_1)-\omega(\mt{t}_2-\mt{t}_1)\right]}
+\mt{d}^3\vec{\mt{k}}\ \mt{d}\omega
 \]
 La transformée de Fourier de (25-a) nous conduit à : 
 \[
-\tag{27}=
+\tag{27}\left[-\mt{k}^2+\frac{1}{c^2}\omega^2\right]\mt{G}_+(\vec{\mt{k}},\omega)=1
 \]
  
 % 71
 Nous avons ainsi, comme pour la particule libre, remplacé
 l'équation aux dérivées partielles (25-a) par une équation algébrique
-dont l'inconnue est la distribution G (). Le problème est cependant
-plus compliqué, car la quantité possède deux zéros
+dont l'inconnue est la distribution G$_+(\vec{\mt{k}},\omega)$. Le problème est cependant
+plus compliqué, car la quantité $\frac{\omega^2}{\mt{c}^2}-\mt{k}^2$ possède deux zéros $\omega=\pm$ck
 
 Il est très facile de vérifier qu'une solution particulière
 de (27-a) est
+\[
+\mt{G}_+(\vec{\mt{k}},\omega)=
+\frac{\mt{c}}{2\mt{k}}\left\{\mc{P}\left[\frac{1}{\omega-\mt{ck}}\right]-\mc{P}\left[\frac{1}{\omega+\mt{ck}}\right]\right\}
+\]
 
 A cette solution particulière, il faut ajouter la solution générale de
-l'équation homogène , qui est
- nombres complexes quelconques
+l'équation homogène $[\frac{\omega^2}{\mt{c}^2}-\mt{k}^2]$G$\vec{\mt{k},\omega}=0$, qui est $-\frac{\mt{c}}{2\mt{k}}[\lambda\delta(\omega-\mt{ck})-\lambda'\delta(\omega+\mt{ck})]$ ($\lambda$ et $\lambda'$
+ nombres complexes quelconques)
 
 Finalement, la solution générale de (27) est
+\[
+\mt{G}_+(\vec{\mt{k}},\omega)=
+\frac{\mt{c}}{2\mt{k}}\left\{\mc{P}\left[\frac{1}{\omega-\mt{ck}}\right]-\lambda\delta(\omega-\mt{ck})-\mc{P}\left[\frac{1}{\omega+\mt{ck}}\right]+\lambda'\delta(\omega+\mt{ck})\right\}
+\]
 
-Elle dépend des deux constantes complexes  et . Comme pour la particule
+Elle dépend des deux constantes complexes $\lambda$ et $\lambda'$. Comme pour la particule
 libre, envisageons a priori les quatre solutions correspondant à
-
+\begin{center}
+$\begin{array}{r c l}
+\lambda & = & \alpha\mt{i}\pi \ \ \ \ \ (\mt{ avec }\alpha\mt{ et }\alpha'=\pm1)\\
+\lambda' & = & \alpha'\mt{i}\pi
+\end{array}$
+\end{center}
 Elles peuvent s'écrire
+\[
+\mt{G}_+(\vec{\mt{k}},\omega)=\lim_{\epsilon\to\,0_+}
+\frac{\mt{c}}{2\mt{k}}\left[\frac{1}{\omega-\mt{ck}+\alpha\mt{i}\epsilon}-\frac{1}{\omega+\mt{ck}+\alpha'\mt{i}\epsilon}\right]
+\]
 
-Nous avons ainsi obtenu quatre distributions G pour lesquelles les
-pôles  sont déplacés d'une quantité infiniment petite dans le
-plan complexe au-dessus bu au-dessous de l'axe réel, On peut encore dire
-que dans les intégrations où intervient , il existe quatre facons
-de contourner par un demi-cercle de rayon infiniment petit  les pôles
+Nous avons ainsi obtenu quatre distributions G$(\vec{\mt{k}},\omega)$ pour lesquelles les
+pôles $\omega=\pm\mt{ck}$ sont déplacés d'une quantité infiniment petite dans le
+plan complexe au-dessus ou au-dessous de l'axe réel, On peut encore dire
+que dans les intégrations où intervient G$(\vec{\mt{k}},\omega)$, il existe quatre facons
+de contourner par un demi-cercle de rayon infiniment petit $\epsilon$ les pôles $\omega=\pm\mt{ck}$
 
 % 72
 De façon précise,
-à , il correspond
+\ul{à $\alpha=\alpha'=+1$}, il correspond %%%%%%%%%%%%%%%%%%%%%%%  1
 
-la configuration ou le contour d'intégration
+\vspace{0.3cm}
+\begin{minipage}[c]{.45\linewidth} \begin{center}
+la configuration
 
-à
+\begin{tikzpicture}
+\draw [->] (-2.25,0) -- (2.25,0) node [below]{$\omega$};
+\draw (-0.95,-0.07) -- (-0.95,0.07) node [above]{-ck};
+\draw [dotted] (-0.95,0) -- (-0.95,-0.7); \draw (-1.05,-0.8) -- (-0.85,-0.6); \draw (-1.05,-0.6) -- (-0.85,-0.8);
+\draw (0.95,-0.07) -- (0.95,0.07) node [above]{+ck};
+\draw [dotted] (0.95,0) -- (0.95,-0.7); \draw (0.85,-0.8) -- (1.05,-0.6); \draw (0.85,-0.6) -- (1.05,-0.8);
+\end{tikzpicture} \end{center} \end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth} \begin{center}
+ou le contour d'intégration \vspace{0.3cm}
 
-Chacune de ces quatre distributions G correspond à une fonction
+\begin{tikzpicture}
+\draw (-2.25,0) -- (-1.45,0); \draw (-0.75,0) -- (0.75,0); \draw [->] (1.45,0) -- (2.25,0) node [below]{$\omega$};
+\draw (-1,-0.05) node [below]{-ck}; \draw (1.2,-0.05) node [below]{ck};
+\draw (-1.2,-0.1) -- (-1,0.1); \draw (-1.2,0.1) -- (-1,-0.1); \draw (-1.45,0)  arc (180:0:0.35);
+\draw (1,-0.1) -- (1.2,0.1); \draw (1,0.1) -- (1.2,-0.1); \draw (0.75,0)  arc (180:0:0.35);
+\end{tikzpicture} \end{center} \end{minipage}
+\vspace{0.3cm}
+
+\ul{à $\alpha=\alpha'=-1$} %%%%%%%%%%%%%%%%%%%%%%%%  2
+
+\vspace{0.3cm}
+\begin{minipage}[c]{.45\linewidth} \begin{center}
+\begin{tikzpicture}
+\draw [->] (-2.25,0) -- (2.25,0) node [below]{$\omega$};
+\draw (-0.95,-0.07) -- (-0.95,0.07) node [below]{-ck};
+\draw [dotted] (-0.95,0) -- (-0.95,0.7); \draw (-1.05,0.8) -- (-0.85,0.6); \draw (-1.05,0.6) -- (-0.85,0.8);
+\draw (0.95,-0.07) -- (0.95,0.07) node [below]{+ck};
+\draw [dotted] (0.95,0) -- (0.95,0.7); \draw (0.85,0.8) -- (1.05,0.6); \draw (0.85,0.6) -- (1.05,0.8);
+\end{tikzpicture} \end{center} \end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth} \begin{center}
+\vspace{0.3cm}
+ou \hspace {0.3cm}
+\begin{tikzpicture}
+\draw (-2.25,0) -- (-1.45,0); \draw (-0.75,0) -- (0.75,0); \draw [->] (1.45,0) -- (2.25,0) node [above]{$\omega$};
+\draw (-1,0.05) node [above]{-ck}; \draw (1.2,0.05) node [above]{ck};
+\draw (-1.2,-0.1) -- (-1,0.1); \draw (-1.2,0.1) -- (-1,-0.1); \draw (-1.45,0)  arc (-180:0:0.35);
+\draw (1,-0.1) -- (1.2,0.1); \draw (1,0.1) -- (1.2,-0.1); \draw (0.75,0)  arc (-180:0:0.35);
+\end{tikzpicture} \end{center} \end{minipage}
+\vspace{0.3cm}
+
+\ul{à $\alpha=1;\ \alpha'=-1$} %%%%%%%%%%%%%%%%%%%%%%%%  3
+
+\vspace{0.3cm}
+\begin{minipage}[c]{.45\linewidth} \begin{center}
+\begin{tikzpicture}
+\draw [->] (-2.25,0) -- (2.25,0) node [below]{$\omega$};
+\draw (-0.95,-0.07) -- (-0.95,0.07) node [below]{-ck};
+\draw [dotted] (-0.95,0) -- (-0.95,0.7); \draw (-1.05,0.8) -- (-0.85,0.6); \draw (-1.05,0.6) -- (-0.85,0.8);
+\draw (0.95,-0.07) -- (0.95,0.07) node [above]{+ck};
+\draw [dotted] (0.95,0) -- (0.95,-0.7); \draw (0.85,-0.8) -- (1.05,-0.6); \draw (0.85,-0.6) -- (1.05,-0.8);
+\end{tikzpicture} \end{center} \end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth} \begin{center}
+\vspace{0.3cm}
+ou \hspace {0.3cm}
+\begin{tikzpicture}
+\draw (-2.25,0) -- (-1.45,0); \draw (-0.75,0) -- (0.75,0); \draw [->] (1.45,0) -- (2.25,0) node [above]{$\omega$};
+\draw (-1,0.05) node [above]{-ck}; \draw (1.2,-0.05) node [below]{ck};
+\draw (-1.2,-0.1) -- (-1,0.1); \draw (-1.2,0.1) -- (-1,-0.1); \draw (-1.45,0)  arc (-180:0:0.35);
+\draw (1,-0.1) -- (1.2,0.1); \draw (1,0.1) -- (1.2,-0.1); \draw (0.75,0)  arc (180:0:0.35);
+\end{tikzpicture} \end{center} \end{minipage}
+\vspace{0.3cm}
+
+\ul{à $\alpha=-1;\ \alpha'=1$} %%%%%%%%%%%%%%%%%%%%%%%%  4
+
+\vspace{0.3cm}
+\begin{minipage}[c]{.45\linewidth} \begin{center}
+\begin{tikzpicture}
+\draw [->] (-2.25,0) -- (2.25,0) node [below]{$\omega$};
+\draw (-0.95,-0.07) -- (-0.95,0.07) node [above]{-ck};
+\draw [dotted] (-0.95,0) -- (-0.95,-0.7); \draw (-1.05,-0.8) -- (-0.85,-0.6); \draw (-1.05,-0.6) -- (-0.85,-0.8);
+\draw (0.95,-0.07) -- (0.95,0.07) node [below]{+ck};
+\draw [dotted] (0.95,0) -- (0.95,0.7); \draw (0.85,0.8) -- (1.05,0.6); \draw (0.85,0.6) -- (1.05,0.8);
+\end{tikzpicture} \end{center} \end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth} \begin{center}
+\vspace{0.3cm}
+ou \hspace {0.3cm}
+\begin{tikzpicture}
+\draw (-2.25,0) -- (-1.45,0); \draw (-0.75,0) -- (0.75,0); \draw [->] (1.45,0) -- (2.25,0) node [above]{$\omega$};
+\draw (-1,-0.05) node [below]{-ck}; \draw (1.2,0.05) node [above]{ck};
+\draw (-1.2,-0.1) -- (-1,0.1); \draw (-1.2,0.1) -- (-1,-0.1); \draw (-1.45,0)  arc (180:0:0.35);
+\draw (1,-0.1) -- (1.2,0.1); \draw (1,0.1) -- (1.2,-0.1); \draw (0.75,0)  arc (-180:0:0.35);
+\end{tikzpicture} \end{center} \end{minipage}
+\vspace{0.3cm}
+
+Chacune de ces quatre distributions G$(\vec{\mt{k}},\omega)$ correspond à une fonction
 K(2,1) vérifiant des conditions aux limites particulières.
 
-Pour calculer l'intégrale en  de (26) par la méthode des résidus, dans
-le cas où  0, il faut fermer le contour d'intégration par un
-demi-cercle dans le demi-plan supérieur et c'est donc la première configuration  =  = 1 qui convient pour donner un résultat nul.
+Pour calculer l'intégrale en $\omega$ de (26) par la méthode des résidus, dans
+le cas où t$_2-$t$_1<$ 0, il faut fermer le contour d'intégration par un
+demi-cercle dans le demi-plan supérieur et c'est donc la première configuration $\alpha=\alpha'=+1$ qui convient pour donner un résultat nul.
 
 La transformée de la fonction de Green cherchée est donc
 \[
-\tag{28}=
+\mt{G}_+(\vec{\mt{k}},\omega)=\lim_{\epsilon\to\,0_+}
+\frac{\mt{c}}{2\mt{k}}\left\{\frac{1}{\omega+\mt{i}\epsilon-\mt{ck}}-\frac{1}{\omega+\mt{i}\epsilon+\mt{ck}}\right\}
+\]
+\[
+\tag{28}\mt{G}_+(\vec{\mt{k}},\omega)=\lim_{\epsilon\to\,0_+}\frac{1}{\frac{(\omega+\mt{i}\epsilon)^2}{\mt{c}^2}-\mt{k}^2}
 \]
 
 % 73
 L'intégration (26) nous conduit alors à la fonction de Green
 
 retardée K(2,1). On intègre sur  par la méthode des résidus :
+\[
+\lim_{\epsilon\to\,0_+}\int_{-\infty}^{\infty}\frac{\mt{e}^{\mt{i}\omega(\mt{t}_2-\mt{t}_1)}}{\frac{(\omega+\mt{i}\epsilon)^2}{\mt{c}^2}-\mt{k}^2}=
+-2\mt{i}\pi\ \theta((\mt{t}_2-\mt{t}_1))\lim_{\epsilon\to\,0_+}\sum\mt{Résidu}\left[\frac{\mt{e}^{\mt{i}\omega(\mt{t}_2-\mt{t}_1)}}{\frac{(\omega+\mt{i}\epsilon)^2}{\mt{c}^2}-\mt{k}^2}\right]=
+\]
 
 (26) donne alors :
 
