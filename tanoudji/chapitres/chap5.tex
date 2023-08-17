@@ -822,14 +822,18 @@ La transformée de la fonction de Green cherchée est donc
 
 % 73
 L'intégration (26) nous conduit alors à la fonction de Green
-
-retardée K(2,1). On intègre sur  par la méthode des résidus :
+retardée K(2,1). On intègre sur $\omega$ par la méthode des résidus :
 \[
-\lim_{\epsilon\to\,0_+}\int_{-\infty}^{\infty}\frac{\mt{e}^{\mt{i}\omega(\mt{t}_2-\mt{t}_1)}}{\frac{(\omega+\mt{i}\epsilon)^2}{\mt{c}^2}-\mt{k}^2}=
--2\mt{i}\pi\ \theta((\mt{t}_2-\mt{t}_1))\lim_{\epsilon\to\,0_+}\sum\mt{Résidu}\left[\frac{\mt{e}^{\mt{i}\omega(\mt{t}_2-\mt{t}_1)}}{\frac{(\omega+\mt{i}\epsilon)^2}{\mt{c}^2}-\mt{k}^2}\right]=
+\lim_{\epsilon\to\,0_+}\int_{-\infty}^{\infty}\frac{\mt{e}^{-\mt{i}\omega(\mt{t}_2-\mt{t}_1)}}{\frac{(\omega+\mt{i}\epsilon)^2}{\mt{c}^2}-\mt{k}^2}\mt{d}\omega=
+-2\mt{i}\pi\ \theta(\mt{t}_2-\mt{t}_1)\lim_{\epsilon\to\,0_+}\sum\mt{Résidu}\left[\frac{\mt{e}^{-\mt{i}\omega(\mt{t}_2-\mt{t}_1)}}{\frac{(\omega+\mt{i}\epsilon)^2}{\mt{c}^2}-\mt{k}^2}\right]
 \]
-
+\[
+=2\mt{i}\pi\ \theta(\mt{t}_2-\mt{t}_1)\left[\frac{\mt{e}^{\mt{ikc}(\mt{t}_2-\mt{t}_1)}-\mt{e}^{\mt{ikc}(\mt{t}_2-\mt{t}_1)}}{2\mt{k}}\right]
+\]
 (26) donne alors :
+\[
+=\mt{K}_+(2,1)=\frac{\mt{ic}}{(2\pi)^3}
+\]
 
 En passant en coordonnées sphériques, l'axe Oz étant dirigé suivant 
  devient
