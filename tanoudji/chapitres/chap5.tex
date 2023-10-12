@@ -1,8 +1,6 @@
-\chapter{}%VFONCTION DF GREEN, PROPAGATEURS
+\chapter{FONCTION DF GREEN. PROPAGATEURS}%V-
 % 56
-\section{}% A
-Introduction
-
+\section{Introduction}% A
 — Pour décrire l'évolution d'un système quantique au cours
 du temps, on peut adopter deux points de vue : celui de l'équation de
 Schrödinger :
@@ -35,7 +33,7 @@ b) Nous calculerons $<$ x$_2$t$_2\ |$ x$_1$t$_1>$ à partir de l'équation aux d
 % 57
  
 — Le problème b) n'est autre que celui du calcul des fonctions
-de Green de l'équation de Schrödinger. Ce problère est extrêmement général
+de Green de l'équation de Schrödinger. Ce problème est extrêmement général
 en physique et on le retrouve dès qu'on traite une équation aux dérivées
 partielles avec des conditions aux limites : c'est le cas de l'équation
 de Poisson, des équations de Maxwell, de l'équation de la diffusion, des
@@ -131,7 +129,7 @@ K($\vec{\mt{r}}_2$, t; $\vec{\mt{r}}_1$, t)=$\underset{n}{\sum}$ u$_n(\vec{\mt{r
 \delta(\vec{\mt{r}}_2-\vec{\mt{r}}_1)$
 \end{center}
 Nous avons déjà établi ce résultat au chapitre II sur la quantité
-$<$ x$_2$ t$_2\ |$ x$_1$ t$_1$ $>$, On voit ainsi que K(2,1) est une distribution et non
+$<$ x$_2$ t$_2\ |$ x$_1$ t$_1$ $>$, On voit ainsi que K(2,1) est une \ul{distribution} et non
 une fonction.
 
 Notons que l'expression (7) de K(2,1) ne fait pas d'hypothèse
@@ -196,7 +194,7 @@ $[$ i$\hbar\frac{\partial}{\partial\mt{t}_2}-$H($\vec{\mt{r}}_2)\ ]$ K(2,1) $=$ 
 
 (9-b) constitue une \ul{condition aux limites} qui achève de définir K.
 
-— I1 résulte clairement des équations (9) que K(2,1) est \ul{une distribution}.
+— Il résulte clairement des équations (9) que K(2,1) est \ul{une distribution}.
 
 \subsubsection{Cas général (où $\mc{H}$ dépend du temps)}%3°) 
 \ul{Définition} : On appelle fonction de Green retardée de l'équation de
@@ -221,7 +219,7 @@ au cas d'un hamiltonien dérendant du temps des équations (9-a) et (9-b).
 Montrons que la solution K(2,1) de ce système satisfait à la
 propriété fondamentale (2) :
 \[
-\tag{2}\psi(\vec{\mt{r}}_2,\mt{t}_2)=\int\mt{d}^3\vec{\mt{r}}_1\mt{ K(2,1) }\psi(\vec{\mt{r}}_1,\mt{t}_1)
+\psi(\vec{\mt{r}}_2,\mt{t}_2)=\int\mt{d}^3\vec{\mt{r}}_1\mt{ K(2,1) }\psi(\vec{\mt{r}}_1,\mt{t}_1)
 \ \ \ \ \ \ \ \ \mt{t}_2\geqslant\mt{t}_1
 \]
 
@@ -364,7 +362,7 @@ Nous allons l'illustrer sur deux exemples :
 Nous avons déjà obtenu la quantité $<$ x$_2$t$_2|$x$_1$t$_1> =$ K(2,1)
 dans le cas d'une particule libre de deux façons différentes : directement
 à partir du postulat de Feynman d'une part, à partir de l'opérateur d'évolution
-U (t, t$_0$) de l'équation de Schrödinger d'autre part (cf chapitre II,
+U(t, t$_0$) de l'équation de Schrödinger d'autre part (cf chapitre II,
 \S 2). Nous allons déterminer ici K(2,1) en tant que fonction
 de Green de la particule libre, ce qui nous donnera un troisième procédé
 de calcul.
@@ -426,7 +424,7 @@ Il est facile de vérifier que cette distribution G$(\vec{\mt{k}},\omega)$ admet
 transformée de Fourier (c'est en effet une distribution "tempérée").
 Cette transformée de Fourier, K$(\vec{\mt{r}}_2-\vec{\mt{r}}_1,\mt{t}_2-\mt{t}_1)$ vérifie alors l'équation
 (13-a) et admet elle-même une transformée de Fourier (qui est évidemment
-G$(\vec{\mt{k}},\omega)$ . Nous justifions donc ainsi a posteriori l'hypothèse. de départ
+G$(\vec{\mt{k}},\omega)$ . Nous justifions donc ainsi a posteriori l'hypothèse de départ
 qui était l'existence d'une transformée de Fourier pour une solution de
 l'équation (13-a).
 
@@ -828,301 +826,420 @@ retardée K(2,1). On intègre sur $\omega$ par la méthode des résidus :
 -2\mt{i}\pi\ \theta(\mt{t}_2-\mt{t}_1)\lim_{\epsilon\to\,0_+}\sum\mt{Résidu}\left[\frac{\mt{e}^{-\mt{i}\omega(\mt{t}_2-\mt{t}_1)}}{\frac{(\omega+\mt{i}\epsilon)^2}{\mt{c}^2}-\mt{k}^2}\right]
 \]
 \[
-=2\mt{i}\pi\ \theta(\mt{t}_2-\mt{t}_1)\left[\frac{\mt{e}^{\mt{ikc}(\mt{t}_2-\mt{t}_1)}-\mt{e}^{\mt{ikc}(\mt{t}_2-\mt{t}_1)}}{2\mt{k}}\right]
+=2\mt{i}\pi\mt{ c }\theta(\mt{t}_2-\mt{t}_1)\left[\frac{\mt{e}^{\mt{ikc}(\mt{t}_2-\mt{t}_1)}-\mt{e}^{-\mt{ikc}(\mt{t}_2-\mt{t}_1)}}{2\mt{k}}\right]
 \]
 (26) donne alors :
 \[
-=\mt{K}_+(2,1)=\frac{\mt{ic}}{(2\pi)^3}
+\mt{K}_+(2,1)=\frac{\mt{ic}}{(2\pi)^3}\iiint \mt{e}^{\mt{i}\vec{\mt{k}}(\vec{\mt{r}}_2-\vec{\mt{r}}_1)}\frac{\mt{e}^{\mt{ikc}(\mt{t}_2-\mt{t}_1)}-\mt{e}^{-\mt{ikc}(\mt{t}_2-\mt{t}_1)}}{2\mt{k}}\theta(\mt{t}_2-\mt{t}_1)\vec{\mt{d}^3\mt{k}}
 \]
 
-En passant en coordonnées sphériques, l'axe Oz étant dirigé suivant 
- devient
- 
-Posons  et effectuons l'intégration sur  : il
+En passant en coordonnées sphériques, l'axe Oz étant dirigé suivant $\vec{\mt{r}}_2-\vec{\mt{r}}_1$, $\int\vec{\mt{d}^3\mt{k}}$
+ devient $\int2\pi\mt{k}^2\mt{ dk}\mt{ sin }\psi\mt{ d}\psi$ et
+\[
+\mt{K}_+(2,1)=\frac{\mt{ic }\theta(\mt{t}_2-\mt{t}_1)}{(2\pi)^2}\int_0^\pi\int_0^\infty \mt{e}^{\mt{ik}|\vec{\mt{r}}_2-\vec{\mt{r}}_1|\mt{cos}\psi}\left(\frac{\mt{e}^{\mt{ikc}(\mt{t}_2-\mt{t}_1)}-\mt{e}^{-\mt{ikc}(\mt{t}_2-\mt{t}_1)}}{2}\right)\mt{k sin}\psi\mt{ dk d}\psi
+\]
+Posons t$_2-$t$_1=\tau$, $|\vec{\mt{r}}_2-\vec{\mt{r}}_1|=\,$r et effectuons l'intégration sur $\psi$ : il
 vient :
-
-Soit 
+\[
+\mt{K}_+(2,1)=\frac{1}{(2\pi)^2}\ \frac{\mt{c}}{2\mt{r}}\ \theta(\tau) \int_0^\infty (\mt{e}^{\mt{ikr}}-\mt{e}^{-\mt{ikr}}) (\mt{e}^{\mt{ikc}\tau}-\mt{e}^{-\mt{ikc}\tau})\mt{ dk}
+\]
+Soit
+\[
+\mt{K}_+(2,1)=\frac{1}{(2\pi)^2}\ \frac{\mt{c}}{2\mt{r}}\ \theta(\tau) \int_0^\infty \left[\mt{e}^{\mt{ik(r+c}\tau)}+\mt{e}^{-\mt{ik(r+c}\tau)}-\mt{e}^{\mt{ik(r-c}\tau)}-\mt{e}^{-\mt{ik(r-c}\tau)}\right]\mt{ dk}
+\]
+\[
+=\frac{1}{(2\pi)^2}\ \frac{\mt{c}}{2\mt{r}}\ \theta(\tau) \int_{-\infty}^\infty \left[\mt{e}^{\mt{ik(r+c}\tau)}-\mt{e}^{\mt{ik(r-c}\tau)}\right]\mt{ dk}
+\]
+\[
+=\frac{\mt{c}}{4\pi\mt{r}}\ \theta(\tau) \big[\delta(\mt{r+c}\tau)-\delta(\mt{r-c}\tau)\big]
+\]
 
 % 74
- est positif. Le terme () permet donc de supprimer la
-distribution (r + c) et finalement :
+r $=|\vec{\mt{r}}_2-\vec{\mt{r}}_1|$ est positif. Le terme $\theta(\tau)$ permet donc de supprimer la
+distribution $\delta$(r + c$\tau$) et finalement :
 \[
-\tag{29}=
+\tag{29}\mt{K}_+(2,1)=-\frac{\mt{1}}{4\pi\mt{r}}\ \delta(\mt{r-c}\tau)\ \theta(\tau)=-\frac{\mt{c}}{4\pi\mt{r}}\ \delta(\tau-\frac{\mt{r}}{\mt{c}})\ \theta(\tau)
 \]
-On en déduit immédiatement le potentiel au point  en présence d'une
-distribution de charges  :
+
 \[
-\tag{30}=
+=-\frac{1}{4\pi|\vec{\mt{r}}_2-\vec{\mt{r}}_1|}\ \delta\left[\mt{t}_2-\mt{t}_1-\frac{|\vec{\mt{r}}_2-\vec{\mt{r}}_1|}{\mt{c}}\right]\ \theta(\mt{t}_2-\mt{t}_1)
+\]
+On en déduit immédiatement le potentiel au point $\vec{\mt{r}}_2$, t$_2$  en présence d'une
+distribution de charges $\rho(\vec{\mt{r}}_1$, t$_1)$ :
+\[
+\tag{30}\mt{V}(\vec{\mt{r}}_2, t_2)=\frac{1}{4\pi\epsilon_0}\ \int \rho(\vec{\mt{r}}_1, \mt{t}_1)\ \frac{1}{|\vec{\mt{r}}_2-\vec{\mt{r}}_1|}\ 
+\delta\left[\mt{t}_2-\mt{t}_1-\frac{|\vec{\mt{r}}_2-\vec{\mt{r}}_1|}{\mt{c}}\right]\mt{d}^3\vec{\mt{r}_1}\mt{ dt}_1
+\]
+\[
+=\frac{1}{4\pi\epsilon_0}\ \int \frac{\rho(\vec{\mt{r}}_1, \mt{t}_2-\frac{|\vec{\mt{r}}_2-\vec{\mt{r}}_1|}{\mt{c}})}{|\vec{\mt{r}}_2-\vec{\mt{r}}_1|}
+\mt{d}^3\vec{\mt{r}_1}
 \]
 (30) n'est autre que l'équation bien connue des "potentiels retardés" que
 l'on retrouve ainsi à partir de la fonction de Green du d'Alembertien.
 
-Remarque :
-
-La condition aux limites imposée à la fonction de Green K(2,1)
+\ul{Remarque} : La condition aux limites imposée à la fonction de Green K$_+$(2,1)
 fait jouer au temps un rôle privilégié. Dans la transformée de Fourier
-G (), c'est  qui est particularisé (cf relation (28) ). On voit ainsi
+G$_+(\vec{\mt{k}}, \omega)$, c'est $\omega$ qui est particularisé (cf relation (28) ). On voit ainsi
 que cette condition ne satisfait pas à l'invariance relativiste. Nous verrons qu'en relativité, il faut imposer à la fonction de Green d'autres conditions, satisfaisant à l'invariance relativiste et qui correspondent à des
-contours d'intégration pour lesquels les pôles ck sont repoussés de part
+contours d'intégration pour lesquels les pôles $\pm$ck sont repoussés de part
 et d'autre de l'axe réel.
 % 75
 
-En conclusion : Nous avons montré que la technique de la transformation
+\ul{En conclusion} : Nous avons montré que la technique de la transformation
 de Fourier nous permet de calculer les fonctions de Green des équations
-aux dérivées partielles à coefficionts constants. Les conditions aux
-limites se traduisent simploment par un déplacement âens le plan complexe,
-dons un sens bien déterminé, des pôles de cette transformée de Fourier,
-Cette propriété nous permet de tenir compte de façon analytiquement simple
-du principe physique de causalité (K = O si t < t).
+aux dérivées partielles à coefficients constants. Les conditions aux
+limites se traduisent simploment par un déplacement dans le plan complexe,
+dans un sens bien déterminé, des pôles de cette transformée de Fourier,
+Cette propriété nous permet de tenir compte de \ul{façon analytiquement} simple
+du \ul{principe physique de causalité} (K = O si t < t).
 
 Nous allons maintenent appliquer les techniques des fonctions
 de Green à la théorie des perturbations :
 
-\section{}% E. Développement en série de perturbations
+\section{Développement en série de perturbations}% E.
 
 Soit un système quantique dont l'évolution est décrite par un
-hamiltonien H. Supposons connue sa fonction de Green retardée K(2,1).
+hamiltonien H$_0$. Supposons connue sa fonction de Green retardée K$_0$(2,1).
 Elle vérifie les relations :
 \[
-\tag{31-a}=
+\tag{31-a}\left[\mt{i}\hbar\frac{\partial}{\partial \mt{t}_2}-\mt{H}_0(2)\right]\mt{K}_0(2,1)=\mt{i}\hbar\delta_4(2,1)
 \]
 \[
-\tag{31-b}=
+\tag{31-b}\mt{K}_{0+}(2,1)=0\ \ \ \ \ \mt{si} \ \ \ \ \ \mt{t}_2<\mt{t}_1
 \]
 Appliquons maintenant une perturbation V (dépendante au indépendante du
-temps). Le hamiltonien devient H = H + V. Cherchons à déterminer, à partir
-de K et de V, la fonction de Green retardée du hamiltonien H, c'est-à-dire
-la distribution K(2,1) vérifiant :
+temps). Le hamiltonien devient H = H$_0$ + V. Cherchons à déterminer, à partir
+de K$_{0+}$ et de V, la fonction de Green retardée du hamiltonien H, c'est-à-dire
+la distribution K$_+$(2,1) vérifiant :
 \[
-\tag{32-a}=
+\tag{32-a}\left[\mt{i}\hbar\frac{\partial}{\partial \mt{t}_2}-\mt{H}(2)\right]\mt{K}(2,1)=\mt{i}\hbar\delta_4(2,1)
 \]
 \[
-\tag{32-b}=
+\tag{32-b}\mt{K}_+(2,1)=0\ \ \ \ \ \mt{si} \ \ \ \ \ \mt{t}_2<\mt{t}_1
 \]
 Pour cela, écrivons l'équation (32-a) sous la forme inhomogène :
-
-et considérons formellement le second membre comme une source  (2).
+\[
+\left[\mt{i}\hbar\frac{\partial}{\partial \mt{t}_2}-\mt{H}_0(2)\right]\mt{K}_+(2,1)=\mt{i}\hbar\delta_4(2,1)+\mt{V}(2)\mt{K}(2,1)
+\]
+et considérons formellement le second membre comme une source $\rho$(2).
 
 % 76
 
-Nous avons vu alors (\S C) que si K(2,1) vérifie
+Nous avons vu alors (\S 3) que si K'(2,1) vérifie
 \[
-\tag{33}=
+\tag{33}\left[\mt{i}\hbar\frac{\partial}{\partial \mt{t}_2}-\mt{H}_0(2)\right]\mt{K'}(2,1)=\delta_4(2,1)
 \]
 alors
 \[
-\tag{34}=
+\tag{34}\mt{K}_+(2,1)=\int\rho(3)\mt{ K'}(2,3)\mt{ d}3
 \]
-Or, d'après (3l-a), on voit que K' (2, 1) =
-
+Or, d'après (31-a), on voit que K'(2, 1) = $\frac{\mt{K}_{0+}(2,1)}{\mt{i}\hbar}$.
 (34) s'écrit alors
-
+\[
+\mt{K}_+(2,1)=\frac{1}{\mt{i}\hbar}\int\mt{K}_{0+}(2,3)\big[\mt{i}\hbar\ \delta_4(3,1)+\mt{V}(3)\mt{ K}_+(3,1)\big]\mt{ d}3
+\]
 Soit :
 \[
-\tag{35}=
+\tag{35}\mt{K}_+(2,1)=\mt{K}_{0+}(2,1)+\frac{1}{\mt{i}\hbar}\int\mt{K}_{0+}(2,3)\mt{ V}(3)\mt{ K}_+(3,1)\mt{ d}3
 \]
 
-Il est facile de montrer que K(2,1), défini par l'équation (35),
-satisfait bien à l'équation (32-a). Nous montrons dans ls suite qu'elle
+Il est facile de montrer que K$_+$(2,1), défini par l'équation (35),
+satisfait bien à l'équation (32-a). Nous montrons dans la suite qu'elle
 satisfait à la relation (32-b). les deux fonctions de Green retardées
 du hamiltonien non perturbé et du hamiltonien perturbé sont donc reliées
-entre elles par l'équation intégrale (35).
+entre elles par \ul{l'équation intégrale (35)}.
 
-Nous pouvons, dans le second membre de (35), remplacer K, (3, 1)
-par son expression intégrale et on obtient ainsi par itération le développement
-en série de Neumann-Liouville de la perturbation :
+Nous pouvons, dans le second membre de (35), remplacer K$_+$(3, 1)
+par son expression intégrale et on obtient ainsi par itération le \ul{développement
+en série de Neumann-Liouville} de la perturbation :
 \[
-\tag{36}=
+\tag{36}\mt{K}_+(2,1)=\mt{K}_{0+}(2,1)+\frac{1}{\mt{i}\hbar}\int\mt{K}_{0+}(2,3)\mt{ V}(3)\mt{ K}_{0+}(3,1)\mt{ d}3
+\]
+\[
++(\frac{1}{\mt{i}\hbar})^2\int\mt{K}_{0+}(2,3)\mt{ V}(3)\mt{ K}_{0+}(3,4)\mt{ V}(4)\mt{ K}_{0+}(4,1)\mt{ d}3\mt{ d}4 + ...
 \]
 
 Dans chaque terme de la série (36), la présence des fonctions de
-Green retardées K fait que les temps sont automatiquement rangés par
-ordre croissant entre t et t : par exenple, le troisième terme est nul
+Green retardées K$-{0+}$ fait que les temps sont automatiquement rangés par
+ordre croissant entre t$_1$ et t$_2$ : par exenple, le troisième terme est nul
 % 77
-à moins que l'on ait simultanément . Il est donc
-nul si t < t. Il en est de même de tous les termes de ce dévelcprement.
-La solution de l'équation (35) est donc bien telle que K, (2, 1) = 0 si
-t . C'est donc bien ia fonction de Green retardée du système perturbé.
+à moins que l'on ait simultanément  t$_2\geqslant$ t$_3$; t$_3\geqslant$ t$_4$; t$_4\geqslant$ t$_1$. Il est donc
+nul si t$_2<$ t$_1$. Il en est de même de tous les termes de ce développement.
+La solution de l'équation (35) est donc bien telle que K$_+$(2, 1) = 0 si
+t$_2<$ t$_1$. C'est donc bien la \ul{fonction de Green retardée} du système perturbé.
 
-Remarques:
-
+\ul{Remarques} :
 Dans le développement (36), les intégrations sur les variables 3, 4, etc.
-(c'est-ü-dire sur etc.) sont libres et s'étendent à l'espace-temps tout entier.
+(c'est-à-dire sur $\vec{\mt{r}}_3$,$\mt{t}_3$; $\vec{\mt{r}}_4$,$\mt{t}_4$, etc.) sont libres et s'étendent à l'espace-temps tout entier.
 Les conditions aux limites sur les fonctions de Green
-sont implicitement contenues dans les intégrales et annulent toutes les contributions
-autres que . Le développement (36) correspond
+sont \ul{implicitement} contenues dans les intégrales et annulent toutes les contributions
+autres que t$_2\geqslant$ ... $\geqslant$ t$_3\geqslant$ t$_1$. Le développement (36) correspond
 à une simplification notable de l'écriture par rapport au développerent
-classique de le page 41 (formule (27) ). Cette simplification est effective
+classique de le page 41 (formule (27) ). Cette simplification est \ul{effective}
 car nous avons vu qu'on peut tenir compte des conditions aux limites de façon
 mathématiquement simple.
-\section{}% F. Représentation diagrammatique du développement de Neumann-Liouville
+\section{Représentation diagrammatique du développement de Neumann-Liouville}% F.
 
 Nous allons définir une convention qui va nous permettre d'associer un diagramme à chaque terme du développement (36).
 
-Conventions :
+\ul{Conventions} :
 
 a) Les temps sont représentés en ordonnée, croissant de bas en
 haut, et en abscisse, on portera une "variable d'espace".
 
-b) A chaque terme K (i, j) sera associée une ligne pointillée
+b) A chaque terme K$_{0+}$(i, j) sera associée une ligne \ul{pointillée}
 joignant i et j
 
-c) A chaque terme K, (i, j) sera associée une line pleine joignant i et j.
+\vspace{0.3cm}
+\begin{minipage}[c]{.45\linewidth} \begin{center}
+\begin{tikzpicture}
+\draw [dashed] (0,-1) node [left]{j} -- (0,1) node [left]{i};
+\draw (-0.1,-1.1) -- (0.1,-0.9); \draw (-0.1,-0.9) -- (0.1,-1.1);
+\draw (-0.1,1.1) -- (0.1,0.9); \draw (-0.1,0.9) -- (0.1,1.1);
+\draw (-0.2,-0.1) -- (0,0.1); \draw (0,0.1) -- (0.2,-0.1) node [right]{\ \ \ K$_{0+}$(i, j)};
+\end{tikzpicture} \end{center} \end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth} \begin{center}
+\begin{tikzpicture}
+\draw (0,-1) node [left]{j} -- (0,1) node [left]{i};
+\draw (-0.1,-1.1) -- (0.1,-0.9); \draw (-0.1,-0.9) -- (0.1,-1.1);
+\draw (-0.1,1.1) -- (0.1,0.9); \draw (-0.1,0.9) -- (0.1,1.1);
+\draw (-0.2,-0.1) -- (0,0.1); \draw (0,0.1) -- (0.2,-0.1) node [right]{\ \ \ K$_+$(i, j)};
+\end{tikzpicture} \end{center} \end{minipage}
+\vspace{0.3cm}
 
-d) A cheque terme V (i) un cercle autour du point i.
+c) A chaque terme K$_+$(i, j) sera associée une ligne \ul{pleine} joignant i et j.
+
+d) A chaque terme V (i) un cercle autour du point i.
 
 % 78
 On associe ainsi à chaque intégrale du déveloprement (36) un
-diagramme, Chaque diagramme est affecté d'un facteur de poids , où n
+diagramme, Chaque diagramme est affecté d'un facteur de poids $(\frac{1}{\mt{i}\hbar})^n$, où n
 représente le nombre de cercles du diagramme, et pour obtenir le terme du
 développement (36) associé, il faut intégrer librement sur les variables
 entourées d'un cercle. On obtient alors le développement diagrammatique :
-\[
-\tag{37}=
-\]
+\begin{flushright}
+\begin{tikzpicture}
+\def\espace{2.3}
+\draw (-0.25,-1.5) node {$\bullet$} node [left]{1} -- (0.25,1.5) node {$\bullet$} node [left]{2};
+\draw (\espace/2,0) node{\bf{=}};
+
+\draw [dashed] (\espace-0.25,-1.5) node {$\bullet$} node [left]{1} -- (\espace+0.25,1.5) node {$\bullet$} node [left]{2};
+\draw (3*\espace/2,0) node{\bf{+}};
+
+\draw [dashed] (2*\espace-0.25,-1.5) node {$\bullet$} node [left]{1} -- (2*\espace+0.9,0) node {$\bullet$} ;
+\draw (2*\espace+0.9,0) circle (0.25);
+\draw (2*\espace+1.2,0.4) node {3};
+\draw [dashed] (2*\espace+0.9,0) -- (2*\espace+0.25,1.5) node {$\bullet$} node [left]{2};
+
+\draw (6.5*\espace/2,0) node{\bf{+}};
+
+\draw [dashed] (4*\espace-0.5,-1.5) node {$\bullet$} node [left]{1} -- (4*\espace,-0.5) node {$\bullet$};
+\draw (4*\espace,-0.5) circle (0.25);
+\draw (4*\espace+0.4,-0.7) node {4};
+\draw [dashed] (4*\espace,-0.5) -- (4*\espace+1,0.5) node {$\bullet$};
+\draw (4*\espace+1,0.5) circle (0.25);
+\draw (4*\espace+1.5,0.5) node {3};
+\draw [dashed] (4*\espace+1,0.5) -- (4*\espace,1.5) node {$\bullet$} node [left]{2};
+\draw (11*\espace/2,0) node{\bf{+ ....}};
+\draw (13*\espace/2,0) node{(37)};
+
+\end{tikzpicture} \end{flushright}
 
 Il est évident qu'avec nos conventions, il y a correspondance
-biunivoque entre chaque terme du dévelopnement diagrammatique et chaque
+biunivoque entre chaque terme du développement diagrammatique et chaque
 terme de la série (36).
 
 Les diagrammes conduisent à une représentation physique simple de
-la perturbation : l'amplitude de probabilité pour que la particule en
-à l'instant t se trouve en à l'instant t, en présence du potentiel
+la perturbation : \ul{l'amplitude de probabilité} pour que la particule en $\vec{\mt{r}}_1$
+à l'instant t$_1$ se trouve en $\vec{\mt{r}}_2$ à l'instant t$_2$, en présence du potentiel
 perturbateur V, est la somme de plusieurs contributions :
 
 — une correspondant aux chemins où elle ne subit aucune interaction avec V
 
-— une correspondant aux chemins où elle subit me interaction avec V
+— une correspondant aux chemins où elle subit une interaction avec V
 
 — une correspondent aux chemins où elle subit deux interactions avec V
 
 etc...
 
 % 79
-Prenons pour exemple le diagramme de diffusion double
-
-Ce diacramne représente une particule qui va librement (sous l'effet de
-H seul) de 1 à 4, qui est diffusée en 4 par V, qui va ensuite librement
+Prenons pour exemple le \ul{diagramme de diffusion double} :
+\begin{center}
+\begin{tikzpicture}
+\draw [dashed] (0.5,-1.5) node {$\bullet$} node [left]{1} -- (0,-0.5) node {$\bullet$};
+\draw (0,-0.5) circle (0.25);
+\draw (0.4,-0.7) node {4};
+\draw [dashed] (0,-0.5) -- (1,0.5) node {$\bullet$};
+\draw (1,0.5) circle (0.25);
+\draw (1.5,0.5) node {3};
+\draw [dashed] (1,0.5) -- (-1,2.5) node {$\bullet$} node [left]{2};
+\end{tikzpicture} \end{center}
+Ce diagramne représente une particule qui va librement (sous l'effet de
+H$_0$ seul) de 1 à 4, qui est diffusée en 4 par V, qui va ensuite librement
 à 3 où elle est de nouveau diffusée par V pour aller ensuite librement
-jusqu'en 2. A ce chemin correspond une certaine amplitude de probabilité.
+jusqu'en 2. A ce chemin correspond une certaine \ul{amplitude} de probabilité.
 Pour avoir la contribution des processus de diffusion double, il faut
-sommer sur toutes les positions des points intermédiaires 4 et 3. Four
-avoir la contribution de tous les processus de diffusion, il faut ensuite
+sommer sur \ul{toutes} les positions des points intermédiaires 4 et 3. Pour
+avoir la contribution de \ul{tous} les processus de diffusion, il faut ensuite
 sommer tous les diarramres correspondant aux différents ordres de diffusion.
-En résumé : Pour joindre 1 à 2, plusieurs chemins sont possibles. À chaque
+\ul{En résumé} : Pour joindre 1 à 2, plusieurs chemins sont possibles. À chaque
 chemin est associée une amplitude de probabilité. Il faut sommer sur toutes
 ces amplitudes pour avoir l'amplitude de probabilité globale K(2,1).
-On retrouve ainsi l'idée de base de l'approche de Feynman de la mécanique
+On retrouve ainsi l'idée de base de l'approche de \ul{Feynman} de la mécanique
 quantique.
 
 % 80
-Remarques :
+Remarques : $\alpha$) Les conditions aux limites sur K font que les diagrammes du type
+\begin{center}
+\begin{tikzpicture}
+\draw [dashed] (2,-1.5) node {$\bullet$} node [right]{1} -- (1,0.5) node {$\bullet$};
+\draw (1,0.5) circle (0.25);
+\draw [very thick] (1.4,-0.8) -- (1.5,-0.5);\draw [very thick] (1.5,-0.5) -- (1.75,-0.65);
 
-a) Les conditions aux limites sur K font que les diagrammes du type
+\draw (1.4,0.5) node {4};
+\draw [dashed] (1,0.5) -- (0,-0.5) node {$\bullet$};
+\draw (0,-0.5) circle (0.25);
+\draw [very thick] (0.5,0.25) -- (0.5,0);\draw [very thick] (0.5,0) -- (0.75,0.05);
 
-que nous n'avons pas exclu a priori ont une contribution nulle.
+\draw (0.4,-0.5) node {3};
+\draw [dashed] (0,-0.5) -- (-1.2,1.5) node {$\bullet$} node [left]{2};
+\draw [very thick] (-0.6,0.2) -- (-0.6,0.5);\draw [very thick] (-0.6,0.5) -- (-0.3,0.4);
 
-En mécanique quantique non relativiste, de tels diaprammes n'ont
+\end{tikzpicture} \end{center}
+que nous n'avons pas exclu \ul{a priori} ont une contribution nulle.
+
+En \ul{mécanique quantique non relativiste}, de tels diagrammes n'ont
 pas de signification physique. Ils correspondent en effet à un retour du
 chemin dans le passé où encore à la présence de trois particules entre les
-instants t et t.
+instants t$_3$ et t$_4$.
 
-En mécanique quantique relativiste, ils ont au contraire une
+En \ul{mécanique quantique relativiste}, ils ont au contraire une
 signification, car il existe alors une possibilité de création et d'annihilation
 de particules (le nombre de particules n'est plus une constante
 du mouvement).
 
 Par exemple, dans le cas où la particule est un électron, nous
-verrons que le diagramme représente un électron partant de 1 à l'instant t,
+verrons que le diagramme représente un électron partant de 1 à l'instant t$_1$,
 voyant apparaître une paire électron-positron sous l'effet du potentiel V
-à l'instant t, annihilé par le positron de la paire à l'instant t4 tandis
-que l'électron de la paire arrive en 2 à l'instant t. Le positron s'interprète
+à l'instant t$_3$, annihilé par le positron de la paire à l'instant t$_4$ tandis
+que l'électron de la paire arrive en 2 à l'instant t$_2$. Le positron s'interprète
 alors naturellement comme un électron d'énergie négative se propageant
 dans le sens inverse du temps (théorie de Feynman du positron).
 % 81
 
-b) Avec les conventions adoptées, l'équation intégrale (35) peut se
+$\beta$) Avec les conventions adoptées, l'équation intégrale (35) peut se
 représenter par le diagramme :
-\[
-\tag{38}=
-\]
+\begin{flushright}
+\begin{tikzpicture}
+\def\espace{2.3}
+\draw (-0.25,-1.5) node {$\bullet$} node [left]{1} -- (0.25,1.5) node {$\bullet$} node [left]{2};
+\draw (\espace/2,0) node{\bf{=}};
 
+\draw [dashed] (\espace-0.25,-1.5) node {$\bullet$} node [left]{1} -- (\espace+0.25,1.5) node {$\bullet$} node [left]{2};
+\draw (3*\espace/2,0) node{\bf{+}};
+
+\draw (2*\espace-0.25,-1.5) node {$\bullet$} node [left]{1} -- (2*\espace+0.9,0) node {$\bullet$} ;
+\draw (2*\espace+0.9,0) circle (0.25);
+\draw (2*\espace+1.35,0.1) node {3};
+\draw [dashed] (2*\espace+0.9,0) -- (2*\espace+0.25,1.5) node {$\bullet$} node [left]{2};
+
+\draw (10*\espace/2,0) node{(38)};
+
+\end{tikzpicture} \end{flushright}
 Ce diapramme (38) peut s'interpréter aussi comme le résultat obtenu en
 sommant toutes les parties de diagramme comprises entre 1 et 3 dans le
-développement diagrammatique (37) (1a particule ve de 1 à 3 en régime
-"forcé" sous l'effet de H + V, puis librement (sous l'effet de H) de
+développement diagrammatique (37) (1a particule va de 1 à 3 en régime
+"forcé" sous l'effet de H$_0$ + V, puis librement (sous l'effet de H$_0$) de
 3 en 2). Nous définissons ainsi sur les diagrammes une opération très
-importante, la ressommation.
+importante, \ul{la ressommation}.
 
-\section{}% G. Opérateur fonction de Green. Proparateur
+\section{Opérateur fonction de Green. Propagateur}% G.
 
-\subsection{}% 1°) Cas rénéral :
+\subsection{Cas général}% 1°) :
 
-Nous nous sommes jusqu'à présent placés dans la représentation r
+Nous nous sommes jusqu'à présent placés dans la représentation $\vec{\mt{r}}$
 dans laquelle la fonction de Green retardée s'écrit :
+\[
+\mt{K}_+(2,1)=\theta(\mt{t}_2-\mt{t}_1)<\vec{\mt{r}}_2\mt{ t}_2\ |\ \vec{\mt{r}}_1\ \mt{t}_1>
+=\theta(\mt{t}_2-\mt{t}_1)<\vec{\mt{r}}_2\ |\mt{ U(t}_2\mt{,t}_1)\ |\ \vec{\mt{r}}_1>
+\]
 
-K(2, 1) est donc un élément de matrice de l'opérateur .
+K$_+$(2, 1) est donc un élément de matrice de l'opérateur $\theta(\mt{t}_2-\mt{t}_1)\mt{ U(t}_2\mt{,t}_1)$.
 
 % 82
 
-Ceci nous conduit à nous affranchir de la représentation r en définissent
+Ceci nous conduit à nous affranchir de la représentation $\vec{\mt{r}}$ en définissant
 l'opérateur fonction de Green retardé par la relation
 \[
-\tag{39}=
+\tag{39}\boxed{\mc{K}_+(\mt{t}_2,\mt{t}_1)=\mt{ U(t}_2\mt{,t}_1)\ \theta(\mt{t}_2-\mt{t}_1)}
 \]
-L'opérateur d'évolution U (t, t) satisfait à l'équation de Schrödinger :
-
-On en déduit aisément que l'opérateur  est défini par les
-deux relations :
+L'opérateur d'évolution U(t$_2$,t$_1$) satisfait à l'équation de Schrödinger :
 \[
-\tag{40-a}=
+\mt{i}\hbar\ \frac{\mt{d}}{\mt{dt}_2}\ \mt{ U(t}_2\mt{,t}_1)-\mt{H}(\mt{t}_2)\mt{ U(t}_2\mt{,t}_1)=0
+\]
+On en déduit aisément que l'opérateur $\mc{K}_+(\mt{t}_2,\mt{t}_1)$ est \ul{défini} par les
+\ul{deux relations} :
+\[
+\tag{40-a}\left[\mt{i}\hbar\ \frac{\mt{d}}{\mt{dt}_2}-\mt{H}(\mt{t}_2)\right]\mc{K}_+(\mt{t}_2,\mt{t}_1)=\mt{i}\hbar\ \delta(\mt{t}_2-\mt{t}_1)
 \]
 \[
-\tag{40-b}=
+\tag{40-b}\mc{K}_+(\mt{t}_2,\mt{t}_1)=0 \ \ \ \ \ \ \mt{si}\ \ \ \ \ \mt{t}_2<\mt{t}_1
 \]
 
 Les relations (40-a) et (40-b) sont en effet équivalentes à (39). Elles
-sont l'équivalent nour les orérateurs fonction de Green des relations
+sont l'équivalent pour les orérateurs fonction de Green des relations
 (10-a) et (10-b) de définition des fonctions de Green. De même que pour
 les fonctions de Green, la condition (40-b) est indispensable à la définition
 complète de K. Notons cependant qu'à la différence de (10-a) et
 (10-b), la distribution  de (40-a) est à une dimension : seul le temps
 reste une variable.
 
-Définition : On appelle propagateur  l'opérateur transformée de
-Fourier de K par rapport à la variable t : (w) est défini par la
+\ul{Définition} : On appelle \ul{propagateur} $\mc{G}_+(\omega)$ l'opérateur transformée de
+Fourier de $\mc{K}_+$ par rapport à la variable t$_2$ : $\mc{G}_+(\omega)$ est défini par la
 relation :
+\[
+\mc{K}_+(\mt{t}_2,\mt{t}_1)=\frac{1}{2\pi} \int\mt{e}^{\mt{i}\omega\mt{t}_2}\ \mc{G}_+(\omega,\mt{t}_1)\ \mt{d}\omega
+\]
 
-1l est facile de montrer que tous les résultats établis au \S E sur le
+1l est facile de montrer que tous les résultats établis au \S 5 sur le
 développement en série de perturbation s'adapte sans changement aux opérateurs
 fonction de Green. Notamment les équations (35) et (36) deviennent :
 \[
-\tag{42}=
+\tag{42}\mc{K}_+(\mt{t}_2,\mt{t}_1)=\mc{K}_{0+}(\mt{t}_2,\mt{t}_1) + \frac{1}{\mt{i}\hbar}\int
+\mc{K}_{0+}(\mt{t}_2,\mt{t}_3)\ \mt{V}(\mt{t}_3)\ \mc{K}_+(\mt{t}_3,\mt{t}_2)\ \mt{dt}_3
 \]
 \[
-\tag{43}=
+\tag{43}\mc{K}_+(\mt{t}_2,\mt{t}_1)=\mc{K}_{0+}(\mt{t}_2,\mt{t}_1) + \frac{1}{\mt{i}\hbar}\int
+\mc{K}_{0+}(\mt{t}_2,\mt{t}_3)\ \mt{V}(\mt{t}_3)\ \mc{K}_{0+}(\mt{t}_3,\mt{t}_1)\ \mt{dt}_3
+\]
+\[
++\ (\frac{1}{\mt{i}\hbar})^2\int\mc{K}_{0+}(\mt{t}_2,\mt{t}_3)\ \mt{V}(\mt{t}_3)\ \mc{K}_{0+}(\mt{t}_3,\mt{t}_4)\ \mt{V}(\mt{t}_4)\ \mc{K}_{0+}(\mt{t}_4,\mt{t}_1)\ \mt{dt}_3\ \mt{dt}_4\ +\ ...
 \]
 %83
 Le développement (43), compte tenu de (39) redonne immédieterent la formule
-classique (27) de la page 41.
+classique (27) du chapitre 3.
 
- 
-
-\subsection{}% 2°) Cas où le hamiltonien H ne dépend pas du temps :
+\subsection{Cas où le hamiltonien H ne dépend pas du temps}% 2°) :
 
 Un cas particulier très important et très fréquent est celui où
 H est indépendant du temps.
-On connaît alors U (t t ) :
+
+On connaît alors U(t$_2$-t$_1$) :
+
+\[
+U(\mt{t}_2-\mt{t}_1)=\mt{e}^{-\frac{\mt{iH}(\mt{t}_2-\mt{t}_1)}{\hbar}}
+\]
 
 L'opérateur fonction de Green ne dépend plus alors que de la différence
 t - t (il y a invariance par translation dans le temps) et (39) devient :
 \[
-\tag{44}=
+\tag{44}\mc{K}_+(\mt{t}_2,\mt{t}_1)=\mc{K}_+(\mt{t}_2-\mt{t}_1)=\mt{e}^{-\frac{\mt{iH}(\mt{t}_2-\mt{t}_1)}{\hbar}}\ \theta(\mt{t}_2-\mt{t}_1)
+=\mt{e}^{-\frac{\mt{iH}(\mt{t}_2-\mt{t}_1)}{\hbar}}\ \theta(\tau)
 \]
+en posant $\tau=$ t$_2-$t$_1$.
 
-en posant T = t t.
-
-Posons  = E/; le propagateur (w) devient (E) et il est défini
+Posons $\omega=$ E/$\hbar$; \ul{le propagateur} $\mc{G}_+(\omega)$ devient (E) et il est défini
 par :
 \[
 \tag{45}=
@@ -1144,7 +1261,7 @@ La relation (46) définit (E) comme une intégrale d'opérateur. Dans
 une représentation déterminée (E) définit une distribution (par
 exemple la fonction de Green en représentation r) qui est du type
 
-Une telle quantité n'a pas de sens en tant que fonction. En tant que distribution, on peut la considérer comme
+Une telle quantité n'a pas de sens en tant que \ul{fonction}. En tant que distribution, on peut la considérer comme
 
 ce qui revient à introduire dans l'intégrale un facteur de convergence aussi
 faible qu'on veut, qui donne un sens à l'intégrale, mais qui ne modifie pas
@@ -1162,9 +1279,9 @@ L'opérateur H ayant ses valeurs propres réelles, E - H n'a pas d'inverse
 lorsque E est égal à l'une de ces valeurs propres. La formule (47) nous
 montre donc que de façon analogue à la méthode employée plus haut, le
 % 85
-proparateur s'obtient en déplaçant d'une façon infiniment petite les valeurs
+\ul{propagateur} s'obtient en déplaçant d'une façon infiniment petite les valeurs
 propres du hamiltonien H dans le plan complexe. z étant la variable complexe,
-nous appelons résolvante l'opérateur
+nous appelons \ul{résolvante} l'opérateur
 
 (47) s'écrit alors (E) = 
 
@@ -1209,7 +1326,7 @@ avec C = C  C :
 
 % 87
 Reprenons enfin la formule (42) qui s'écrit, dans le cas d'un
-hamiltonien H et une perturbation V indépendants du temps :
+hamiltonien H et une perturbation V \ul{indépendants du temps} :
 \[
 \tag{52}=
 \]
@@ -1225,6 +1342,6 @@ ordinaire par transformation de Fourier :
 \tag{54}=
 \]
 
-La relation (54) apparaît ainsi comme une conséauence de (52). On peut
+La relation (54) apparaît ainsi comme \ul{une conséquence de (52)}. On peut
 également la démontrer beaucoup plus simplement à partir de la relation
 générale entre opérateurs :
