@@ -1224,7 +1224,6 @@ classique (27) du chapitre 3.
 
 Un cas particulier très important et très fréquent est celui où
 H est indépendant du temps.
-
 On connaît alors U(t$_2$-t$_1$) :
 
 \[
@@ -1232,116 +1231,149 @@ U(\mt{t}_2-\mt{t}_1)=\mt{e}^{-\frac{\mt{iH}(\mt{t}_2-\mt{t}_1)}{\hbar}}
 \]
 
 L'opérateur fonction de Green ne dépend plus alors que de la différence
-t - t (il y a invariance par translation dans le temps) et (39) devient :
+t$_2$ - t$_1$ (il y a invariance par translation dans le temps) et (39) devient :
 \[
 \tag{44}\mc{K}_+(\mt{t}_2,\mt{t}_1)=\mc{K}_+(\mt{t}_2-\mt{t}_1)=\mt{e}^{-\frac{\mt{iH}(\mt{t}_2-\mt{t}_1)}{\hbar}}\ \theta(\mt{t}_2-\mt{t}_1)
-=\mt{e}^{-\frac{\mt{iH}(\mt{t}_2-\mt{t}_1)}{\hbar}}\ \theta(\tau)
+=\mt{e}^{-\frac{\mt{iH}\tau}{\hbar}}\ \theta(\tau)
 \]
 en posant $\tau=$ t$_2-$t$_1$.
 
-Posons $\omega=$ E/$\hbar$; \ul{le propagateur} $\mc{G}_+(\omega)$ devient (E) et il est défini
+Posons $\omega=$ E/$\hbar$; \ul{le propagateur} $\mc{G}_+(\omega)$ devient $\mc{G}_+(\mt{E})$ et il est défini
 par :
 \[
-\tag{45}=
+\tag{45}\mc{K}_+(\tau)= \frac{1}{2\pi\hbar}\ \int_{-\infty}^{+\infty} \mt{e}^{-\frac{\mt{iE}\tau}{\hbar}}\ \mc{G}_+(\mt{E})\ \mt{dE}
 \]
 
 % 84
 
 ou encore
 \[
-=
+\mc{G}_+(\mt{E})=\int_{-\infty}^{+\infty} \mt{e}^{\frac{\mt{iE}\tau}{\hbar}}\ \mc{K}_+(\tau)\ \mt{d}\tau
 \]
 
 soit :
 \[
-\tag{46}=
+\tag{46}\mc{G}_+(\mt{E})=\int_0^{+\infty} \mt{e}^{\frac{\mt{i(E-H)}\tau}{\hbar}}\ \mt{d}\tau
 \]
 
-La relation (46) définit (E) comme une intégrale d'opérateur. Dans
-une représentation déterminée (E) définit une distribution (par
-exemple la fonction de Green en représentation r) qui est du type
-
+La relation (46) définit $\mc{G}_+(\mt{E})$ comme une intégrale d'opérateur. Dans
+une représentation déterminée $\mc{G}_+(\mt{E})$ définit une distribution (par
+exemple la fonction de Green en représentation $\vec{\mt{r}}$ qui est du type $\int_0^\infty \mt{e}^{\mt{ikx}}\ \mt{dk}$.
 Une telle quantité n'a pas de sens en tant que \ul{fonction}. En tant que distribution, on peut la considérer comme
-
+\[
+\lim_{\epsilon\to 0_+}\int_0^\infty \mt{e}^{\mt{ikx}}\ \mt{e}^{-\epsilon\mt{k}}\ \mt{dk} = \lim_{\epsilon\to 0_+}\int_0^\infty \mt{e}^{\mt{ik(x+i}\epsilon)}\ \mt{dk}
+\]
 ce qui revient à introduire dans l'intégrale un facteur de convergence aussi
 faible qu'on veut, qui donne un sens à l'intégrale, mais qui ne modifie pas
 l'action de la distribution sur une fonction à support borné (ou suffisamment
 décroissante à l'infini).
-
 Or
-
+\[
+\lim_{\epsilon\to 0_+}\int_0^\infty \mt{e}^{\mt{ik(x+i}\epsilon)}\ \mt{dk} = \lim_{\epsilon\to 0_+}\ \frac{1}{\mt{x+i}\epsilon}
+\]
 L'équation (46) conduit donc à la relation
 \[
-\tag{47}=
+\tag{47}\mc{G}_+(\mt{E})=\lim_{\epsilon\to 0_+}\ \frac{\mt{i}\hbar}{\mt{E-H+i}\epsilon}
 \]
-
 L'opérateur H ayant ses valeurs propres réelles, E - H n'a pas d'inverse
 lorsque E est égal à l'une de ces valeurs propres. La formule (47) nous
 montre donc que de façon analogue à la méthode employée plus haut, le
 % 85
 \ul{propagateur} s'obtient en déplaçant d'une façon infiniment petite les valeurs
 propres du hamiltonien H dans le plan complexe. z étant la variable complexe,
-nous appelons \ul{résolvante} l'opérateur
-
-(47) s'écrit alors (E) = 
-
+nous appelons \ul{résolvante} l'opérateur $\mt{G(z)}=\frac{1}{\mt{z-H}}$.
+(47) s'écrit alors $\mc{G}_+(\mt{E})=\mt{i}\hbar\lim_{\epsilon\to 0_+}\mt{G(E+i}\epsilon)$ et
 (45) devient :
 \[
-\tag{48}=
+\tag{48}\mc{K}_+(\tau)=\frac{\mt{i}}{2\pi}\ \lim_{\epsilon\to 0_+}\int\mt{e}^{-\frac{\mt{iE}\tau}{\hbar}}\ \mt{G(E+i}\epsilon)\ \mt{dE}
 \]
-
-C représentant la droite parallèle à l'axe réel déplacée d'une quantité
-infiniment petite dans le demi-plan supérieur :
-
-On peut définir de même l'opérateur fonction de Green retardé  par
-l'équation (4O-a) et la relation :
-
-On montre alors aisément
 \[
-\tag{49}=
+\ \ \ =\frac{\mt{i}}{2\pi}\ \int_{\mt{C}_+}\mt{e}^{-\frac{\mt{iz}\tau}{\hbar}}\ \frac{1}{\mt{z - H}}\ \mt{dz}
+\]
+C$+$ représentant la droite parallèle à l'axe réel déplacée d'une quantité
+infiniment petite dans le demi-plan supérieur :\begin{center}
+\begin{tikzpicture}
+\draw [->] (-3.5,0.3) -- (4,0.3) node [above]{$C_+$};
+\draw [dashed] (-3.5,0) -- (0.1,0); \draw [->] (0.1,0) -- (4,0);
+\foreach \s in {1,2,...,6}
+{
+\draw (-\s*\s/12-0.1,0.1) -- (-\s*\s/12+0.1,-0.1);
+\draw (-\s*\s/12+0.1,0.1) -- (-\s*\s/12-0.1,-0.1);
+}
+\end{tikzpicture} \end{center}
+
+On peut définir de même l'opérateur fonction de Green retardé $\mc{K}_-(\tau)$ par
+l'équation (4O-a) et la relation : $\mc{K}_-(\tau)=0$ \ \ si \ \ $(\tau)>0$ . On montre alors aisément
+\[
+\tag{49}\mc{K}_-(\tau)=-\mt{U}(\tau)\ \theta(-\tau)
 \]
 
 % 86
 Le propagateur retardé est alors
 \[
-=
+\mc{G}_-(\mt{E})=-\int_{-\infty}^0 \mt{e}^{\frac{\mt{i(E-H)}\tau}{\hbar}}\ \mt{d}\tau
+\]
+\[
+=\lim_{\epsilon\to 0_+}\ \frac{\mt{i}\hbar}{\mt{E-H-i}\epsilon}
 \]
 
 et :
 \[
-\tag{50}=
+\tag{50}\mc{K}_-(\tau)=\frac{\mt{i}}{2\pi}\ \int_{\mt{C}_-}\mt{e}^{-\frac{\mt{iz}\tau}{\hbar}}\ \frac{1}{\mt{z - H}}\ \mt{dz}
 \]
+C$_-$ représentant la droite parallèle à l'axe réel déplacée d'une quantité
+infiniment petite dans le demi-plan inférieur :\begin{center}
+\begin{tikzpicture}
+\draw [->] (-3.5,-0.3) -- (4,-0.3) node [below]{$C_-$};
+\draw [dashed] (-3.5,0) -- (0.1,0); \draw [->] (0.1,0) -- (4,0);
+\foreach \s in {1,2,...,6}
+{
+\draw (-\s*\s/12-0.1,0.1) -- (-\s*\s/12+0.1,-0.1);
+\draw (-\s*\s/12+0.1,0.1) -- (-\s*\s/12-0.1,-0.1);
+}
+\end{tikzpicture} \end{center}
 
-C représentant la droite parallèle à l'axe réel déplacée d'une quantité
-infiniment petite dans le demi-plan inférieur :
-
-De (39) et (49) on déduit
-
+De (39) et (49) on déduit U$(\tau)=\mt{K}_+(\tau)-\mt{K}_-(\tau)$
 et de (48) et (50) :
 \[
-\tag{51}=
+\tag{51}\mt{U}(\tau)=\frac{\mt{i}}{2\pi}\ \int_\mt{C}\mt{e}^{-\frac{\mt{iz}\tau}{\hbar}}\ \frac{1}{\mt{z - H}}\ \mt{dz}
 \]
-
-avec C = C  C :
+avec C = C$_+-$C$_-$ :\begin{center}
+\begin{tikzpicture}
+\draw (-3.5,0.3) -- (4,0.3);
+\draw [thick] (1,0.45) -- (1.2,0.3);\draw [thick] (1,0.15) -- (1.2,0.3);
+\draw (-3.5,-0.3) -- (4,-0.3);
+\draw [thick] (1.2,-0.45) -- (1,-0.3);\draw [thick] (1.2,-0.15) -- (1,-0.3);
+\draw [dashed] (-3.5,0) -- (0.1,0); \draw [->] (0.1,0) -- (4,0);
+\foreach \s in {1,2,...,6}
+{
+\draw (-\s*\s/12-0.1,0.1) -- (-\s*\s/12+0.1,-0.1);
+\draw (-\s*\s/12+0.1,0.1) -- (-\s*\s/12-0.1,-0.1);
+}
+\end{tikzpicture} \end{center}
 
 % 87
 Reprenons enfin la formule (42) qui s'écrit, dans le cas d'un
 hamiltonien H et une perturbation V \ul{indépendants du temps} :
 \[
-\tag{52}=
+\tag{52}\mc{K}_+(\mt{t}_2-\mt{t}_1)=\mc{K}_{0+}(\mt{t}_2-\mt{t}_1) + \frac{1}{\mt{i}\hbar}\int
+\mc{K}_{0+}(\mt{t}_2-\mt{t}_3)\ \mt{V}\ \mc{K}_+(\mt{t}_3-\mt{t}_1)\ \mt{dt}_3
 \]
 
 L'intégrale de (52) est un produit de convolution qui devient un produit
 ordinaire par transformation de Fourier :
 \[
-\tag{53}=
+\tag{53}\mc{G}_+(\mt{E})=\mc{G}_{0+}(\mt{E})+\mc{G}_{0+}(\mt{E})\ \mt{V}\ \mc{G}_+(\mt{E})
 \]
 
 (53), compte tenu de (47), s'écrit encore :
 \[
-\tag{54}=
+\tag{54}\frac{1}{\mt{E-H+i}\epsilon}=\frac{1}{\mt{E-H}_0\mt{+i}\epsilon}+\frac{1}{\mt{E-H}_0\mt{+i}\epsilon}\ \mt{V}\ \frac{1}{\mt{E-H+i}\epsilon}
 \]
 
 La relation (54) apparaît ainsi comme \ul{une conséquence de (52)}. On peut
 également la démontrer beaucoup plus simplement à partir de la relation
 générale entre opérateurs :
+\[
+\frac{1}{\mt{A}}-\frac{1}{\mt{B}}=\frac{1}{\mt{B}}\ (\mt{B}-\mt{A})\ \frac{1}{\mt{A}}
+\]
