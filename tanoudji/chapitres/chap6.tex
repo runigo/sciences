@@ -1,0 +1,3189 @@
+\chapter{}%
+%
+\section{Introduction}%
+% 88 
+APPLICATION DES FONCTIONS DE GREEN A L'ETUDE DU SPECTRE DU HAMILTONTEN
+
+Nous avons, dans les chapitre précédents, développé le formalisme de Feynman.
+Ceci nous a amené tout naturellement à l'étude de
+la fonction de Green de l'équation de Schrödinger et à celle de sa transformée
+de Fourier, le propagateur,
+
+Nous avons ainsi fait connaissance avec certains objets mathématiques, d'une
+utilisation très courante en physique théorique moderne et qui se révèlent très
+importants pour l'étude d'un grand nombre
+de problèmes,
+
+Nous allons, dans cette partie du cours, passer en revue un
+certain nombre de ces problèmes afin de nous familiariser un peu plus
+avec ces objets mathématiques; ces problèmes permettent par ailleurs
+d'introduire des notions très importantes qui nous serviront constamment
+par la suite.
+
+Le thème général de notre étude sera la recherche des valeurs
+propres et des états propres d'un hamiltonien  constitué d'une partie
+, dont le spectre est supposé connu, et d'une perturbation V. Cela pourra être
+le cas d'un système libre placé dans un potentiel extérieur ou de 
+deux systèmes couplés par une interaction. Nous nous attacherons, en outre,
+à donner une image physique des états propres de Fb en étudiant comment
+ils peuvent s'obtenir, dans une approche temporelle, à partir de ceux de
+.
+
+Le spectre de ae présentera en général deux parties : un spectre continu et un
+spectre discret. Cette division sera respectée dans le
+plan de cette étude qui sera le suivant :
+
+% 89 
+1°) Etude des états stationnaires de collisions (états propres
+du spectre continu) :
+
+Nous étudierons tout d'abord, de façon mathématique , les états
+propres du spectre continu (non normés) satisfaisant à certaines conditions
+aux limites. Ceci nous conduira à l'équation intégrale de la diffusion, ou
+équation de Lippmann-Schwinger
+ Nous donnerons ensuite une image physique et temporelle de ces
+états, ce qui nous conduira à la matrice S et à la théorie des collisions.
+Nous terminerons par quelques méthodes d'approximation,
+
+2°) Etude des états liés (états propres du spectre discret) :
+
+Nous verrons l'utilité de la résolvante pour l'étude des états
+liés du hamiltonien  , Ce qui nous donnera une nouvelle théorie des perturbations stationnaires,
+
+3°) Etude des états instables :
+Nous aborderons enfin le problème des états instables qui, dans
+une certaine mesure, est intermédiaire entre celui des états liés et celui
+des états de collision. Nous donnerons, à partir de la résolvante une théorie de la durée de vie.
+
+% 90
+
+1 - ETATS STATIONNAIRES DE COLLISION
+
+1°) Description du système
+
+- Le système que nous étudierons sera celui d'une particule
+
+dans un potentiel V (fr). Son hamiltonien s'écrira donc
+H=T+v(r)
+
+T représente le hamiltonien d'énergie cinétique égal à ;
+
+ un potentiel décroissant avec la distance plus vite que ,
+
+- Nous pouvons ramener au problème précédent, celui de deux
+
+non nécessairement central,
+
+particules A et B en interaction. Le hamiltonien s'écrit alors
+
+Le système présente l'inveriance de translation et l'impulsion totale du
+mouvement est donc constante.
+Nous pouvons séparer le mouvement du centre de masse, rectiligne et uniforme,
+du mouvement relatif dont le hamiltonien s'écrit
+
+m =  (masse réduite)
+
+en posant :
+
+%
+Les particules À et B peuvent de plus être douées de degrés
+de liberté interne (spin).
+
+- On pourrait envisager le cas plus complexe où A et B sont
+eux-mêmes des états liés de plusieurs particules, par exemple ées atomes.
+
+Le hamiltonien reiatif s'écrirait alors
+
+où  représente l'énergie cinétique relative, h, et b les énergies internes des
+atomes A et B, Vas l‘interaction.
+
+Un tei cas pourrait conduire à des collisions inélastiques
+(où les atomes A et B voient leur énergie interne modifiée) ou à des collisions
+de réarrangement où la composition de A et B peut être elle-même
+modifiée).
+
+Nous n'étudierons pas ces cas plus complexes pour ne pas
+alourdir trop l'exposé. En fait, les méthodes que nous ailons étudier
+s'appliquent parfaitement à ces problèmes.
+
+Nous ne soulèverons pas non plus au début les difficultés
+liées à l‘indiscernabilité des particules et nous considérerons les collisions
+entre deux particules différentes.
+
+2°) Le spectre de T et de H
+
+a) Spectre de T :
+C'est un spectre continu de O à l'infini que l'on peut écrire
+
+Nous omettrons parfois dans la suite le facteur de normalisation
+
+ 
+% 92 
+Le système , lorsqu'on a spécifié éventuellement les
+états de spin des deux particules  et  constitue un système complet
+de fonctions propres. (De façon rigoureuse, il faudrait écrire
+
+. Pour simplifier, nous écrirons les états propres 
+
+
+ou même tant qu'il n'y aura pas d'ambiguité.
+
+Nous ne soulèverons pas ici les difficultés liées au spectre
+continu (les fonctions d'onde représentant  ne sont pas de carré
+sommable et seuls les paquets d'onde ont un sens physique).
+
+b) Spectre de H :
+Nous  qu'à chaque état propre de T, de va
+leur propre , On peut associer au moins deux états propres
+
+ du hamiltonien H, de même valeur propre 
+
+Le spectre de H comprend donc au moins une partie continue qui
+va de zéro à l'infini.
+
+On sait d'autre part que si V est attractif, il y a en plus un
+spectre discret de valeurs négatives, les états correspondants étant les
+
+états liés : le spectre de H présente donc en général l'aspect suivant :
+
+Notons que les , qui constituent ce qu'on appellera
+les "états stationnaires de collision", ne forment donc certainement pas
+en général un système complet, car ils ne représentent pas la partie
+
+discrète du spectre.
+
+% 93 
+3°) Plan suivi
+
+- Nous allons tout d'abord, de façon purement mathématique, rechercher les états
+propres de H ayant un comportement asymptotique donné,
+que nous appellerons et  (états stationnaires de collision).
+Pour cela, nous utiliserons les fonctions de Green. Nous serons conduits
+à l'équation intégrale de la diffusion (\S B).
+
+- Nous verrons ensuite à quoi correspondent physiquement les
+états mathématiques ainsi introduits. Nous verrons notamment que si on
+établit adiabatiquement la perturbation V et si on appelle U l'opérateur
+
+d'évolution correspondant à cet établissement adiabatique, alors
+
+ce qui justifiera les définitions d'onde entrante et d'onde sortante données à  et à 
+
+- Nous serons alors amenés à étudier la quantité 
+
+(matrice S). 
+- Nous verrons enfin l'utilité des états stationnaires de collision
+pour le calcul des sections efficaces de collision.
+
+B. Approche mathématique.
+
+1°) Problème mathématique
+
+Les états propres du spectre continu de pie sont donnés par
+l'équation de Schrödinger indépendante du temps :
+
+% 94
+
+Posons E =
+
+(1) devient alors
+
+\[
+\tag{2}=
+\]
+
+Nous cherchons les solutions de ( qui lorsque | r | tend vers
+
+l'infini ont pour forme asymptotique 
+
+ce qui signifie que l'on a, lorsque | r | tend vers l'infini :
+
+\[
+\tag{3}=
+\]
+Nous appellerons ces solutions ondes stationnaires de collisions entrantes
+et sortantes,
+Le fait qu'il existe des solutions asymptotiques de cette forme pour un
+potentiel U (x) quelconque n'est pes évident. Nous pouvons ici
+établir une condition nécessaire de son existence : il faut que U (r) décroisse plus vite que 
+
+En effet, aussi bien e que sont solutions de
+
+l'équation "non perturbée",
+
+% 95
+
+Il en résulte que
+
+Or  décroit en 1/r lorsque r + , quel que soit
+ (d'après la forme du laplacien en coordonnées sphériques).
+On en déduit donc (à moins que U (r) décroisse plus vite que 1/r) que
+la partie principale de  est
+
+Or, d'après ja définition (3), le partie principale de
+
+ est en avec . La partie principale de
+
+ doit donc également être en 1/r
+
+(à cause du terme en , les termes en A et U () conduisent à des
+ordres supérieurs).
+
+Il est donc nécessaire que U (r) décroisse en 1/r avec
+
+a > 1 . Nous imposerons cette condition à U (F) dans la suite de cette
+étude.
+
+existe, est solution de (2) avec k = k, et représente donc un état propre H d'énergie ()/2m.
+
+Nous montrons par le même raisonnement que , s'il
+
+
+
+2°) Fonction de Green de
+
+Pour déterminer, si elles existent, les fonctions ,
+solutions de (2), admettant A, (F) pour forme asymptotique, 1a méthode
+
+de choix est celle des fonctions de Green.
+
+ Nous excluons donc le cas du potentiel coulombien en 1/r. On sait
+dans ce cas traiter le problème rigoureusement (cf. Messiah, Mécanique Quantique, t. I, page 357).
+
+%
+\[
+\tag{5}=
+\]
+\[
+\tag{6}=
+\]
+\[
+\tag{7}=
+\]
+
+Il suffit en effet d'écrire l'équation (2) formellement
+
+sous la forme inhomogène :
+
+et de considérer  comme une "source",
+Nous sommes donc amenés à chercher la fonction de Green
+
+ de l'opérateur  vérifiant les "bonnes conditions"
+
+aux limites pour ,
+
+L'équation vérifiée par  est
+
+Nous ne préciserons pas à ce niveau la forme des conditions aux limites sur G.
+Nous nous contenterons de choisir a priori parmi
+les solutions deux fonctions G, et G et nous vérifierons qu'elles conduisent
+bien, par résolution de (k), aux fonctions 54 (r).
+
+Pour résoudre (5), nous allons, selon une méthode qui nous
+est maintenant habituelle, utiliser la transformée de Fourier :
+
+Posons
+
+La transformée de Fourier de (3) conduit à :
+
+L'équation (7) est analogue à l'équation (27) de la page
+. Sa solution générale s'écrit (cf page 71)
+
+Envisageons a priori les solutions
+
+% 97
+
+Elles donnent
+
+Soit, en faisant le changement de variable $\epsilon$ =  :
+
+Ce sont les deux fonctions  que nous allons choisir a priori pour
+notre problème : elles correspondent aux contours d'intégration des figures a) et b),
+
+Nous constatons que  ne sont fonctions que de  et
+
+nous allons les écrire G (x).
+
+Pour obtenir , il suffit d'utiliser la formule (6) : en passant en coordonnées
+cylindriques avec r = r' pour axe polaire et en posant | r - r'. | = p, (6) devient
+
+% 98
+
+et après intégration sur 6 :
+
+\[
+\tag{27}=
+\]
+
+Pour calculer cette intégrale par la méthode des résidus, il faut fermer
+le contour d'intégration par un demi-grand cercle dans le plan des x tel
+
+que  tende vers zéro. Il faut donc fermer le contour
+
+dans le demi-plan supérieur
+
+ Résidu
+
+Soit finalement
+
+\[
+\tag{9}=
+\]
+G sont donc les solutions à onde sortante (ou entrante),
+
+% 99
+
+3°) Equation intésrale de 1e diffusion
+
+Reprenons maintenant l'équation (k) et traitons le second
+
+membre  comme une source .
+
+Nous savons que  permet de construire les solutions
+
+L'équation (10) est une équation intégrale qui remplace
+l'équation ()  satisfaisant (10), satisfait nécessairement (4).
+Mais on peut ajouter à  une solution de l'équation "sans second
+membre" , par exemple ,
+
+L'équation intégrale (10) devient alors
+
+Il est facile de s'assurer que toute solution de l'équation
+intégrale (11) satisfait épalement à l'équation (h)e
+
+Nous admettrons sans discussion que si le potentiel ,
+qui décroît plus vite que 1/r est suffisamment régulier, l'équation intégrale (11)
+admet une solution pour  et une solution pour
+. Nous montrons par la suite que ces solutions admettent
+
+A  pour forme asmptotique. Nous avons donc ramené le problème que
+
+nous nous étions posé à la solution de l'équation intégrale :
+
+\[
+\tag{12}=
+\]
+qui porte le nom d'équation intégrale de la diffusion.
+
+% 100
+\[
+\tag{4}=
+\]
+
+
+Montrons en effet que les solutions  (dont nous
+admettons l'existence) ont le bon comportement asymptotique.
+
+L'intégrale de (12) convergeant, il existe nécessairement
+une valeur de  telle que la contribution à l'intégrale des valeurs
+de telles que  soit négligeable : en d'autres termes,
+on peut toujours prendre  suffisamment grand pour que  soit
+
+très petit devant .
+
+ ou encore,
+
+On peut alors développer 
+
+en appelant  le vecteur unitaire dans la direction 6, à 
+
+On développe alors :
+
+et (12) conduit à :
+
+L'intégrale au second membre n'est plus qu'une fonction de  et de a,
+c'est-à-dire de 6 et  et on peut l'écrire :
+
+et (13), compte tenu de (1h), nous donne bien le comportement asymptotique
+cherché.
+
+Les solutions de l'équation intégrale (12) sont donc bien
+les ondes stationnaires de diffusion cherchées et les fonctions de Green
+choisies a priori étaient bien celles qui correspondaient au problème
+étudié. De plus, la formule (1) nous donne le calcul explicite, connaissant
+
+% 101
+
+l'état stationnaire de collision, de la fonction , qui comme
+nous le verrons joue un rôle essentiel dans le calcul des sections efficaces
+
+Il nous reste maintenant, comme nous l'avons fait dans les
+chapitres précédents, à nous effranchir de la représentation r et à donner une forme
+intrinsèque à l'équation intégrale (12).
+
+4°) Lien entre les fonctions de Green  et le
+propagateur de T
+
+Rappelons que le propagateur avancé ou retardé de T s'écrit
+
+Le relation (6) peut s'écrire
+
+\[
+\tag{15}=
+\]
+Appelons  les états propres de T de valeur propre
+
+ représentant une onde plane de vecteur d'onde .
+
+nous pouvons montrer que l'intégrale (13) est toujours convergente à
+l'infini si  décroît plus vite que . En effet nous pouvons majorer
+ par un nombre  et  par .
+En intégrant d'abord sur es angles polaires de  par rapport
+à , il vient
+
+La définition que nous donnons ici du propagateur diffère d'un terme
+en ik de celle du chapitre V de la première partie.
+
+% 102
+\[
+\tag{16}=
+\]
+
+
+Nous avons les relations
+
+Compte tenu de ces relations et äu fait que l'ensemble des  est
+complet, (15) peut s'écrire :
+
+Soit
+
+Remarque :
+
+Ce résultat peut être obtenu très simplement par ailleurs : l'équation
+(5) vérifiée par (r - Z') est la transformée de Fourier par rapport
+au temps de l'équation vérifiée par la fonction de Green de la particule
+libre (équa. 13-a, p. 6) (à un coefficient en  près). D'autre part les
+conditions aux limites adoptées sur les transformées de Fourier totales
+
+(par rapport au temps et à l'espace) sont les mêmes pour  et
+
+pour les fonctions de Green retardées et avancées de la particule libre
+(comparer les formules (20) p. 67 et (8) de ce chapitre qui sont identiques à des
+changements de variable évidents près : la "variable d'énergie"
+ est remplacée par  la "variable d'impulsion"  par. On en déduit que  est la transformée
+ de Fourier par rapport au temps
+de la fonction de Green retardée ou avancée de la particule libre (à un
+coefficient en H près). Or nous savons (cf pare 81) que la fonction de
+
+%
+Green de la particule libre est l'élément de matrice entre 
+de l'opérateur fonction de Green  est donc l'élément de matrice entre  et de la
+transfornée de Fourier (par rapport au
+temps évidemment) de 1‘opérateur fonction de Green, c'est-à-dire du propagateur
+avancé ou retardé (au coefficient  près). C'est ce qu'exprime
+la formule (16) ci-dessus.
+
+5°) Equation de Lippmann-Schwinger
+
+Compte tenu de (16), l'équation intégrale de la diffusion (12)
+
+peut s'écrire en considérant  comme La fonction d'onde du vecteur
+
+ dans la représentation  et en notant que
+
+ce qui représente la projection sur  de l'équation entre vecteurs
+d'états :
+\[
+\tag{17}=
+\]
+
+(17) représente l'équation de Lippmann-Schwinger de la diffusion.
+On peut lui associer l'équation conjuguée entre bras :
+
+\[
+\tag{18}=
+\]
+dans laquelle il faut remarquer le changement de signe devant ie
+Nous pouvons donner à l'équation (17) une autre forme, non
+
+intégrale. Partons de la relation générale entre opérateurs :
+
+% 104
+\[
+\tag{19}=
+\]
+\[
+\tag{20}=
+\]
+
+
+Nous avons alors  et
+
+d'où
+
+Or le terme entre crochets dans le membre de droite n'est autre que
+(d'après (17)).
+(17) et (19) entraînent donc
+
+Remarque :
+
+Nous avons donc remplacé l'équation intégrale (17) par l'équation (20),
+qui n'est plus intégrale. Cependant la difficulté est reportée sur le calcul des
+éléments de matrice  du propagateur
+ du Hamiltonien H.
+
+% 105
+
+Nous savons d'ailleurs (grâce à la remarque du h) qui se transpose sans difficulté)
+que cet élément de matrice représente une des fonctions
+de Green solution de l'équation :
+
+Nous pouvons obtenir, à partir de l'équation (17), un développement en série de
+l'état stationnaire de collision :
+
+Ce développement constitue le développement de Born de l'état stationnaire
+
+de collision, Il nous permetira d'obtenir le déveloprement à différents
+ordres de la section efficace différentielle de diffusion.
+
+6°) Propriétés mathématiques des états stationnaires. de collision
+
+- Etats propres de H
+
+Nous savons déjà que les états stationnaires de coxlision
+et  sont états propres de H avec la valeur propre 
+ Orthonormalisation
+
+Calculons le produit scalaire 
+
+En prenant pour  1a forme  et pour  la forme
+, il vient :
+
+%
+\[
+\tag{22}=
+\]
+\[
+\tag{23}=
+\]
+\[
+\tag{24}=
+\]
+\[
+\tag{25}=
+\]
+\[
+\tag{26}=
+\]
+% 106 
+On montre une formule identique pour  . On a donc :
+
+L'ensemble des et l'ensemble des  , pris séparément
+
+forment donc deux ensembles orthonormés .
+
+Nous admettrons que si on ajoute à chacun de ces ensembles
+les vecteurs propres  du spectre discret de H, on obtient un système orthonormé
+complet (il est évident que les  et les  , correspondant à des valeurs propres
+différentes de H sont orthogonaux).
+
+On a donc les relations
+
+Calculons enfin le produit scalaire 
+
+Nous avons :
+
+Posons < et considérons  comme 1'élément de matrice entre  et  d'une matrice R,
+dite matrice de
+réaction
+
+% 107
+
+Finalement :
+
+\[
+\tag{27}=
+\]
+Remarque :
+
+ sont vecteurs propres de H correspondant
+
+si  et 
+à des valeurs propres différentes. Il est donc normal que la relation
+(27) donne alors
+.
+
+Par définition, nous appellerons élément de matrice entre
+ de la matrice S de collision , et nous
+
+avons donc la relation :
+
+\[
+\tag{28}=
+\]
+% 108
+
+C - Approche physique
+
+Nous avons, dans le \S B, trouvé des états propres de H
+ayant à l'infini un comportement asymptotique en onde plane  onde sortante ou
+entrante. Nous avons obtenu pour ces états une équation intégrale et un développement
+en série ainsi que certaines propriétés d'orthogonalité et de fermeture.
+Il nous reste maintenant à dégager la signification physique des états  et 
+
+Nôus allons montrer que  est l'état que L'on obtient
+à l'instant t = O en étant parti de l'état libre  à l'instant
+t = -  le couplage V transforme l'état libre initial  en 
+
+De même nous allons montrer que  est l'état à l'instant t = 0, qui
+sous l'effet de V deviendra l'état  à l'instant t =  (d'ailleurs
+ et  se déduisent l'un de l'autre par renversement du temps,
+si l'on fait abstraction des spins),
+
+Ces propriétés justifieront le nom d'état stationnaire
+sortant ou entrant donné à  et à .
+
+Remarque importante :
+
+ sont des états propres du hamiltonien H. lis sont donc stationnaires et
+ n'évoluent pas au cours du temps. En toute rigueur, les propriétés
+que nous venons d'énoncer sur les liens entre et   sont donc
+inexactes : l'état  qui n'est pas un état propre de H ne pourra pas
+évoluer à l'instant t = O vers l'état  et de même l'état propre
+ ne pourra pas évoluer à l'instant t =  vers l'état .
+Cependant, nous allons voir que les propriétés que nous avons énoncées
+sont des propriétés limites, valables sous certaines conditions qu'il va
+falloir préciser. Nous allons en considérer trois :
+
+1°) Evolution du système sous l'effet d'un branchement, ou
+d'une coupure, adiabatique du couplage V.
+
+2°) Evolution d'un état initial introduit progressivement
+ 
+% 109
+
+3°) Evolution d'un paquet d'onde formé avec les états stationnaires de collision.
+
+1°) Branchement (ou coupure) adiabatique de la perturbation
+
+Supposons que la perturbation V stationnaire est remplacée
+
+par une perturbation dépendant du temps
+(avec e très petit).
+
+cela revient à considérer que la perturbation V a été branchée sur. un intervalle
+de temps de l'ordre de  dans le passé et qu'elle est coupée
+dans le futur avec la même constante de temps (cf figure). Lorsque $\epsilon$ ,
+le branchement ou la coupure deviennent de plus en plus longs et la perturbation
+est pratiquement égale à V sur un très grand intervalle de temps autour de t = O :
+nous avons un branchement (ou une coupure) adiabatique de
+la perturbation,
+
+Envisageons maintenant un instant t très lointain dans le
+passé et antérieur à l'établissement de la perturbation (c'est-à-dire tel
+). Considérons qu'à cet instant, l'état initial est constitué par
+
+une onde libre de vecteur d'onde
+
+Cherchons à déterminer l'état du système  à l'instant . Le
+hamiltonien total du système est  et
+
+nous pouvons développer sa fonction de Green avancée, X  en fonction de
+
+% 110
+
+la fonction de Green avancée de ,
+On obtient alors le développement diagrammatique :
+
+qui permet d'écrire :
+
+\[
+\tag{29}=
+\]
+avec :
+
+Evaluons les termes successifs du développement (29) :
+1er terme :  étant un état propre de T, on a évidemment
+ (avec les conventions de phase choisies).
+
+solos
+
+ 
+% 111
+
+2e terme : Le 2e terme peut s‘écrire en tenant compte de (30) et de la
+relation 
+
+Comme  , nous pouvons remplacer la borne inférieure par
+et nous obtenons 
+
+3e terme : Il s'écrit
+
+Soit, en faisant le changement de variable 
+
+Comme , nous pouvons encore remplacer la borne inférieure par ,
+et nous obtenons
+
+La loi de formation des termes successifs devient évidente : avec les
+changements de variable
+
+%
+()
+\[
+\tag{31}=
+\]
+\[
+\tag{32}=
+\]
+
+% 112 
+On obtient les termes
+
+Lorsque $\epsilon$ > 0, , chaque terme de la série ainsi obtenue tend vers le terme
+correspondant du développement de Born de.
+
+Si l'on suppose que les deux développements sont uniformément convergents,
+on en déduit
+
+On montrerait de même que
+
+
+L'état  est l'état à l'instant t = O qui a évolué à
+$\epsilon$ 1
+
+partir d'un état initial d'onde libre établi à un instant antérieur au
+
+branchement adiabatique de la perturbation,
+. La relation (31) signifie donc qu'à la limite où le branchement
+devient de plus en plus lent (e + 0) et où l'instant initial, tout en étant
+antérieur à l'établissement de la perturbation, tend vers = +, l'onde libre
+évolue vers l'état stationnaire de collision d'onde sortante. De même la
+relation (32) signifie qu'à la limite où la coupure devient de) plus en plus
+lente (e + O) et où l'instant final, tout en étant postérieur à la disparition
+de la perturbation, tend vers +, l'état stationnaire de collision
+. d'onde entrante évolue vers l'onde libre, Nous avons ainsi. donné une première
+interprétation physique des états . De 
+
+% 113
+
+2°) Introduction progressive de l'état initial
+
+Revenons au couplage stationnaire V.
+Introduisons à un instant t < O un état d'onde libre 
+. À l'instant t = 0, cet état est devenu
+
+\[
+\tag{33}=
+\]
+ exprime pas simplement car  est pas un état propre
+. de H et la relation (33), développée sur les  , fait intervenir un
+paquet complexe d'ondes de collision : on dit qu'on 8 un régime transitoire
+dû au fait que l'état introduit n'est pas un état propre du hamiltonien.
+Essayons d'échapper à cet inconvénient en envisageent un état introduit
+de façon progressive entre les instants - t et O : de façon plus précise,
+supposons qu'à l'instant t < O, on introduise un état  , à l'instant
+ un état à, (, etc. et étudions ce que devient cette superposition linéaire d'états,
+ sous l'effet du hamiltonien H à l'instant t = 0.
+
+Nous obtenons un état
+
+(le facteur 1/r est un facteur de normalisation. Supposons en effet qu'il
+n'y ait pas de couplage et que H = T. Alors
+
+Envisageons maintenant que l'instant  et introduisons alors un facteur de convergence
+$\epsilon$ et/H qui représente un effet d'amortissement des ondes
+introduites ns un passé lointain, on obtient un état
+
+%
+\[
+\tag{35}=
+\]
+$\epsilon$ 
+
+(le facteur e/H est encore introduit pour des raisons de normalisation :
+
+supposons en effet que H = T. Alors, on montre que .
+(35) s'intègre alors immédiatement
+
+et finalement, puisque :
+
+Ce qui n'est autre que la définition (20) de, D'où :
+
+\[
+\tag{36}=
+\]
+limite
+Nous avons ainsi fourni une deuxième image physique de  :
+ est l'état obtenu à l'instant t = O à la limite où l'on a introduit
+de façon progressive des états d'onde libre  depuis l'instant t = - 
+avec un amortissement tendant vers zéro.
+
+% 115
+
+3°) Evolution d'un paquet d'ondes
+
+Lemme préliminaire.
+Soit f(x) une fonction suffisamment régulière de x (continue,
+intégrale, différentiable) et soient  les deux fonctions de t définies
+
+Cherchons la limite de  lorsque t ,
+
+Remarque :
+
+I1 est évident que de la façon dmt nous avons posé le problème, la limite
+e , doit être prise avant la limite
+Posons f(x) = f(0) + f(x) - f(0)
+
+Nous avons
+
+Le première intégrale tend vers zéro lorsque
+
+ n'a pas de singularité (pour x = 0, elle tend vers
+
+En effet
+f(x) lorsque $\epsilon$ + 0). L'intégrale sur x du produit de cette fonction régulière
+par l'exponentielle oscillante  dont la période en x, F tend vers
+zéro lorsque , tend elle-même vers zéro lorsque , si  est
+
+ordre, et on peut dire de façon plus précise que la contribution de la première
+
+une courbe en "cloche" de largeur Ax, la largeur de est du même
+
+ intégrale de (38) devient négligeable dès que la période devient petite
+
+devant, c'est-à-dire dès que 
+
+Quant à la seconde intégrale
+
+nous la calculons, selon une méthode habituelle, par les résidus en fermant
+le contour vers le bas si t > O et vers le haut si t < O.
+
+% 116
+
+Finalement, on trouve
+
+et
+Ces résultats sont indépendants de | t | et on a donc :
+
+\[
+\tag{39-a}=
+\]
+\[
+\tag{39-b}=
+\]
+\[
+\tag{39-c}=
+\]
+\[
+\tag{39-d}=
+\]
+
+Rappelons que la limite $\epsilon$ , est prise avant la limite  , cette
+dernière signifiant simplement que , x étant la largeur de
+
+a) Définition et propriétés du paquet d'ondes libres :
+
+Considérons, dans une situation où V est nul, un paquet d'ondes
+libres formé par une superposition linéaire d'ondes planes 
+(qui seront ici normées à l'unité) :
+
+\[
+\tag{40}=
+\]
+La sommation résume une sommation sur le module  et sur la
+
+direction  du vecteur d'onde de :
+
+ est une fonction régulière de  et de  que nous supposerons
+de plus très concentrée autour des valeurs moyennes  et .
+
+% 117
+
+Nous avons ainsi défini un paquet d'ondes libres ,
+dont l'évolution au cours du temps, en l'absence de V, est parfaitement
+connue (équation ),
+Ce paquet d'onde possède une direction moyenne Qi, une vitesse moyenne :  et une
+énergie moyenne , Ces résultats sont classiques. Pour trouver la région de l'espace
+où se trouve concentré le paquet d'ondes à l'instant t, il faut passer en
+représentation r et appliquer
+la méthode de La phase stationnaire (cf Messiah, page 3).
+Nous supposons que la phase de est telle qu'à
+l'instant t = 0, le paquet se trouve autour de F = 0, dans la
+région où sera appliqué v (r).
+. Nous allons rappeler quelques résultats classiques relatifs
+aux dimensions et à l'étalement de ce paquet d'ondes 
+ les dimensions longitucinales et transversales du paquet d'ondes sont
+d'autant plus grandes que la larreur de la fonction  autour de
+ et  est plus petite. Nous ferons l'hypothèse que les dispersions en
+direction et en énergie  et  seront suffisamment petites pour que les
+dimensions du paquet d'ondes soient très grandes devant la portée r du
+potentiel :
+% 118
+
+- Etalement du paquet d'ondes : la longueur du paquet d'ondes, , est
+de l'ordre de . Le temps de passage du paquet d'ondes en un point
+
+ ( étant la dispersion en énergie T )
+ce qui n'est autre que l'expression de la quatrième relation d'incertitude
+temps-énergie.
+
+Pendant le temps 1, le paquet d'ondes subit un étalement (dû à
+la dispersion des vitesses Av = dk), Cet étalement est égal à
+
+. Cet étalement peut être considéré comme négligeable tant
+qu'il est très petit devant la longueur Ax du paquet d'ondes, c'est-à-dire
+
+tant que 
+
+Nous ferons l'hypothèse que pendant le temps mis par le paquet d'ondes
+
+pour passer en un point  il subit un étalement négligeable,
+c'est-à-dire que l'on a :
+
+ soit 
+
+En résumé, nous envisageons donc un paquet d'ondes libres  , qui
+passe sur la région où règnera l‘interaction, suffisamment bien défini en
+énergie et en direction pour que Ses dimensions soient grandes devant la
+portée effective de i'interaction V et pour que son étalement soit négligeable
+durant son passage dans la région de cette portée effective.
+
+b) Paquet d'onde formé avec les
+
+Considérons maintenant une situation où l'interaction V ()
+existe et envisageons le paquet d'ondes formé avec les états de collision
+ (ou les états ,avec les mêmes coefficients  que
+ceux que nous avons définis pour le paquet d'ondes libres. A chaque paquet
+d'ondeslibres  vérifiant les conditions du \S a), nous associons
+
+ainsi deux "paquets de collision"  définis par
+
+% 119
+
+dont l'évolution aucours du temps est parfaitement connue (et donnée par
+(u1)) puisque les | vs > sont des états propres du hamiltonien global
+H = T + V avec la valeur propre 
+
+Nous avons ainsi créé deux paquets d'ondes  parti
+culièrement bien adaptés au problème de la collision. I1 nous reste à voir
+le lien qui existe erire ces paquets d'ondes et le paquet d'ondes libres
+ auquel ils correspondent. Raisonnons tout d'abord sur .
+c) Lien entre .
+
+Remplaçons dans (41) par l'expression (17) de l'équation de Lippmann-Schwinger. On obtient : Et
+
+Soit, en utilisant la relation de fermeture,
+
+en posant
+ (selon la définition 26) .
+En détaillant les intégrations, (k2) s'écrit :
+
+Nous avons posé.
+
+%
+(012)
+
+\[
+\tag{45}=
+\]
+
+% 120
+
+Pour simplifier cette relation, nous devons faire appel aux hypothèses
+de a) et b)  le coefficient  n'est important qu'au voisinage
+immédiat de  (sur une étendue ). Or R  varie peu en
+ approximation de Born,  est égal
+à , transformée de Fourier au potentiel V (x) à la valeur
+
+ étant fixé,  varie donc notablement dans
+l'espace des K; sur des intervalles de l'ordre de 1/r. r étant la portée
+effective du potentiel V Or au \S a), nous avons justement choisi 
+suffisamment petit pour que l'intervalle de variation correspondant pour
+ soit très petit devant . IL en résulte donc que 
+varie peu en  sur l'intervalle , largeur de la fonction  On
+peut donc écrire la dernière intégration de (h3) :
+
+Posons alors
+
+La relation (3) nous conduit done à calculer
+
+c'est-à-dire, en effectuant le changement de variables 
+
+En supposant que  est une fonction suffisamment régulière
+de  on peut calculer  à l'aide du lemme résumé dans les
+relations (39-a) et (39-b) et on a donc
+
+% 121
+
+Remarquons également que la limite  signifie simplement que À
+est beaucoup plus grand que l'inverse de la largeur en ,
+qui d'après la relation de définition (4) n'est autre que la dispersion en
+énergie  du coéfficient . On peut donc remplacer la limite
+
+, c'est-à-dire  grand devant
+
+le temps de passage du paquet d'ondes libres correspondant en un point (ou
+ par la condition
+
+ce qui revient au même dans la région de portée du potentiel.
+
+En résumé, (3) compte tenu des relations (46) nous conduit aux
+relations
+
+\[
+\tag{472}=
+\]
+avec les définitions :
+
+Pour le paquet d'ondes  une démonstration analogue peut être faite.
+
+Elle conduit notamment au résultat
+
+\[
+\tag{48}=
+\]
+% 122
+
+d) Conclusion et inteprétation physique.
+
+Nous venons donc de montrer que le paquet d'ondes  ,
+formé à l'aide des états stationnaires de coliision, se trouve dans le
+paquet d'ondes libres  construit à l'aide des mêmes coefficients.
+
+passé lointain (en fait si t ) pratiquement confondu avec le
+
+De même le paquet d'ondes  , dans le futur lointain
+(en fait si t  ) sera pratiquement confondu avec le paquet d'ondes
+
+libres  correspondant,
+
+De tels résultats sont extrêmement importants en ce qui concerne
+la théorie des collisions : dans une expérience de collision, on prépare
+en effet les particules incidentes, dans un passé lointain, loin de la
+cible, dans une région où le potentiel V n'existe pas.
+
+L'état initiai correspond donc à un paquet d'ondes libres
+ constitué à l'aide des  Mais les  n'étant pas des
+états propres de H, l'évolution d'un tel paquet d'ondes pendant et après
+la collision n'est pas facile à calculer. L'intérêt des états stationnaires de
+collision apparaît ici : nous venons en effet de montrer que dans
+le passé lointain (c'est-à-dire longtemps avant la collision), il revient
+au même de développer le paquet d'ondes suivant les états libres  ou
+les états stationnaires de collision  . On peut donc prendre pour
+état initial de la collision un état  , au  Les
+ étent, eux, des états propres de H, l'évolution de  est
+connue et conduit pour le futur lointain (c'est-à-dire longtemps après la
+collision) à la formule (7-b). Cette formule, qui décrit donc l'état,
+après collision d'un paquet d'ondes libres incident, est très importante
+car c'est elle qui va nous permettre de calculer les sections efficaces
+de collision.
+
+Nous pouvons déjà, à ce stade, remarquer qu'elle représente le
+paquet d'ondes libres incident auquel s'ajoute un paquet d'ondes libres,
+diffusé dans toutes les directions de l'espace, mais dont le module du
+vecteur d'onde est centré autour de la valeur k; du paquet incident
+
+% 123
+
+(en raison du terme ) de la relation (7-c) ce qui n'est autre
+que l'expression de la conservation de l'énergie au cours de la collision élastique.
+
+Enfin, si on veut avoir une représentation spatio-temporelle
+de la collision, il faut passer en représentation r et appliquer la méthode de la
+phase stationnaire pour déterminer la répartition à chaque
+instant du paquet d'ondes. On obtient alors l'image représentée par les
+
+figures suivantes (cf Messiah, p. 316 et suivantes).
+
+% 12
+
+Nous avons ainsi établi un nouveau lien physique entre les
+états stationnaires de collision  et les états libres  , par
+l'intermédiaire des paquets d'ondes. C'est cette dernière propriété des
+ qui e le plus de signification physique car nous venons de montrer
+qu'elle est liée de façon évidente à la description même de l'expérience
+physique. Elle va nous permettre également d'éclairer sous un jour nouveau
+"l'approche adiabatique" ou celle de l'introduction progressive de l'état
+"initial" faites aux \S 1°) et 2°) :
+
+e) Lien avec les 2 autres approches physiques (\S 3-1 et 3-2)
+
+Plus la fonction de répartition  est étroite autour
+des valeurs moyennes  plus le paquet d'ondes  est proche
+de l'état stationnaire  et plus le paquet d'ondes  est proche
+de l'état stationnaire de diffusion  et  sont les
+paquets d'ondes à l'instant t = O à La limite où on a remplacé 
+par une fonction de Dirac au point  Mais tant que  possède
+une certaine dispersion AE en énergie, on a vu qu'il existe un temps
+, tel que le "paquet de collision" qui est très proche de l'état
+stationnaire de collision à l'instant t = 0, se réduise à ce temps au "paquet libre",
+qui est lui très proche de l'état libre 
+
+Dans les deux autres approches physiques que nous avons données,
+le fait d'établir la perturbation sur un intervalle de temps H/e ou d'introduire
+progressivement l'état initial sur un intervalle de temps H/e
+fait que l'état obtenu à l'instant t = O n'est pas (pour $\epsilon$  O) un état
+propre de H, Il existe sur son énergie une incertitude, qui provient de sa
+préparation même de l'ordre de $\epsilon$. On peut encore dire, qu'avant de faire
+tendre $\epsilon$ + 0, l'état obtenu à l'instant t = O,  qui obéit à l'équation 
+
+% 125
+
+est une superposition d'états stationnaires  avec une dispersion
+de l'ordre de $\epsilon$. . représente donc en quelque sorte un "paquet
+d'ondes" de largeur en énergie $\epsilon$, auquel nous pouvons appliquer les résultats précédents .
+
+En d'autres termes, le fait d'introduire progressivement la
+perturbation (ou l'état initial) sur un temps de l'ordre de H/ est une
+façon commode de simuler un paquet d'ondes de dispersion en énergie $\epsilon$ (s)
+Il est de plus beaucoup plus aisé de travailler avec des états du type
+. qu'avec des paquets d'ondes. C'est 1à tout l'intérêt de la
+théorie formelle des collisions qui est basée sur l'emploi systématique
+des états 
+
+Il faut cependant prendre une précaution essentielle : le
+paramètre $\epsilon$, qui a été introduit dans tous les calculs a, ainsi que nous
+venons de le voir, une signification physique très simple et fondamentale :
+il représente l'incertitude sur l'énergie dans l'expérience physique réelle :
+
+cette incertitude existe toujours. Tous les calculs mathématiques conduisent
+aux grandeurs physiques devront donc être faits avec un $\epsilon$ fini différent de
+zéro. Ce n'est qu'à la fin des calculs qu'on pourra faire tendre $\epsilon$ vers zéro.
+Deux cas peuvent alors se présenter : ou bien la limite existe et elle
+représente la grandeur physique cherchée dans le cas où la définition en
+
+ On peut encore dire qu'il revient au même de "faire passer" le paquet
+d'ondes pendant un temps  devant la perturbation (ce qui correspond
+à l'expérience physiaue réelle) ou, par exemple, de brancher la perturbation sur
+une onde plane libre pendant le même temps (\S 3-1).
+
+ 
+% 126
+
+énergie de l'expérience était très bonne; ou bien la limite n'existe pas
+ou est absurde : cela signifie alors que le résultat physique dépend cru
+cialement de la forme du paquet d'ondes et la théorie formelle des collisions
+ne peut s'appliquer : il faut raisonner sur les paquets d'ondes.
+
+En d'autres termes, tant que le résultat physique est indépendant de la
+forme du paquet d'ondes incident, la théorie formelle des collisions
+s'applique et permet de résoudre les problèmes de façon élégante. Nous
+allons d'ailleurs en voir un exemple en appliquant toute l'étude précédente à la
+théorie des collisions.
+
+D - Application de l'étude précédente : Théorie des collisions
+1°) Définition de la section efficace différentielle de diffusion
+
+a) Probabilité de transition :
+
+Soit  la probabilité de trouver à l'instant t le
+vecteur d'onde de 1a particule dans  solide .
+
+Soit  la dérivée 
+
+La quantité  représente la probabilité pour
+
+qu'entre les instants t et t  la particule ait été diffusée dans
+l'angle solide 
+
+si  est ndérendent du temps, on définit alors 
+comme la probebilité  de transition par unité de temps.
+
+Enfin, si  vecteur d'onde de la particule: incidente, il
+est évident que 
+
+ représente la probabilité totale pour qu'après
+la collision da particule ait été diffusée dans l'angle solide 
+et on a la relation
+
+% 127
+
+b) Flux des particules libres :
+Supposons maintenant que V = O et que la particule est
+toujours libre.
+
+ Appelons le flux à l'instant t, au point r de la
+particule libre et prenons le point F à l'intérieur de la zone, d'extension
+où règne le potentiel V. Le flux  ne varie d'ailleure pas
+d'un point à l'autre de cette zone si, comme nous en avons fait l'hypothèse,
+la largeur du paquet d'ondes est grande devant
+
+Soit  la densité de probabilité de présence de la
+particule libre  à l'instant t. On a alors
+
+Soit  une surface située en r et perpendiculaire à la vitesse initisle
+de le particule libre : la probabilité totale pour que la particule
+libre soit passée à travers  est
+
+c) Définition de la section efficace différentielle de diffusion :
+
+La section efficace différentielle de diffusion pour
+l'angle solide  est une surface  définie de la façon suivante :
+
+La probabilité globale pour que, sous l'effet de V, la particule soit diffusée
+dans l'angle solide  est égale à  fois
+la probabilité globale pour que la particule passe à travers la surface
+ si elle restait toujours libre,  est perpendiculaire à la
+vitesse de la particule incidente et située  un point  où règne le
+potentiel V),
+
+\[
+\tag{49}=
+\]
+\[
+\tag{50}=
+\]
+% 128
+
+Par définition, on a donc
+
+Vis-à-vis de la diffusion dans la direction  tout se passe donc comme
+si le potentiel V était remplacé par la surface , perpendiculaire
+à la vitesse de la particule libre incidente : toute particule libre passant à
+travers  est diffusée dans la direction  d'où le nom de
+section efficace de diffusion donné à .
+
+La définition (h9) présente une très grande importance car elle.
+est indépendante de la forme du paquet d'ondes si celui-ci est suffisamment large
+(c'est ce que nous démontrons plus loin). La notion de section
+efficace présente ainsi un très grand intérêt physique et elle correspond
+bien à ce que mesure l'expérimentateur.
+
+Nous n'avons jusqu'ici étudié que la diffusion d'une seule parti
+cule par un seul centre diffuseur, Les problèmes réels sont plus compliqués
+du fait des interactions possibles entre les particules incidentes et de
+la diffusion multiple due au grand nombre de particules de la cible, Mais
+nous n'étudierons pas ces problèmes.
+
+Notons enfin que l'on obtient la section efficace totale en sommant sur les angles
+solides la section efficace différentielle de diffusion
+
+total
+Pour effectuer le calcul de la section efficace différentielle
+
+de diffusion, nous allons utiliser deux méthodes :
+
+% 129
+
+a) Le méthode des paquets d'ondes, la plus physique, qui nous permettra
+d'interpréter de façon physique simple les conditions mathématiques qui
+rendent la section efficace indépendante de la forme du paquet d'ondes.
+b) La théorie formelle des coïlisions, beaucoup plus simple, mais présentant des
+points délicats qu'il nous faudra discuter.
+
+d'ondes
+
+A l'instant  , nous envisageons le paquet d'ondes libres , qui est équivalent au paquet .
+
+A l'instant  , le paquet d'ondes est représenté par la
+formule (7-b). Nous calculerons tout d'abord la probabilité 
+pour que la particule ait alors sa direction comprise dans l'angle solide.
+
+Nous calculerons ensuite le flux du paquet d'ondes libres incident en un point où
+règne le potentiel V, à l'instant t, puis nous intègrerons le flux de  dans le temps.
+
+Nous calculerons enfin la section efficace en appliquent la relation (49),
+
+Nous ne ferons le calcul de la section efficace que pour une direction  nettement
+différente de fa; de façon que dans le calcul de
+, seul le 2e terme de la relation (7-b) intervienne : physiquement,
+cela revient à placer le détecteur dens une direction différente de la direction
+incidente, de façon à éviter qu'il ne détecte le paquet d'ondes non diffusé,
+vecteur D'après (7-b), la probabilité de trouver à  direction du
+onde entre  et  et sa longueur entre  et  est
+
+% 130
+
+\[
+\tag{51}=
+\]
+\[
+\tag{52}=
+\]
+\[
+\tag{53}=
+\]
+
+On obtient P (a, + ©) en sommant sur  :
+
+  est donné par la relation (k7-c).
+
+Dans cette relation, varie notablement sur des intervalles en  de l'ordre
+de 1/r,  : portée du potentiel), c'est-à-dire
+varie très peu sur l'intervalle de variation de , la longueur
+du paquet d'ondes étant très grande devant 
+
+On peut donc remplacer, dans la formule (51) le terme
+
+ qui figure dans l'expression de  par
+
+Compte tenu de cette remarque et de (7-c), (51) devient :
+
+Toujours en raison de la variation rapide de  autour de  on
+
+peut maintenant remplacer dans (52)  par
+
+ou encore par
+
+(52) devient alors
+
+% 131
+
+- Nous devons calculer le flux en un point F où règne le potentiel, du
+paquet d'ondes libres. Ce flux  est égal à 
+
+On a donc
+
+- Le paquet d'ondes libres  est composé d'ondes planes  dont
+les directions sont lérèrement dispersées autour de la direction  qu'on
+prenne pour axe. Cette dispersion des directions est responsables des
+dimensions transversales finies du paquet d'ondes. Elle ne se fait sentir
+que sur les bords latéraux du paquet d'ondes, Au centre du paquet, notamment
+dans la région où règne le potentiel V, la fonction d'onde est la
+même que si on remplaçait chaque onde plane  par l'onde. plane du
+vecteur d'onde  dirigé suivant Oz. Cette approximation n'est valable que
+si la région où règne le potentiel reut être considérée comme "au centre"
+du paquet d'ondes, donc si les dimensions transversales du paquet d'ondes
+sont grandes devant la portée du potentiel. On peut alors remplacer le paquet d'ondes libres . Est
+par le paquet à une dimension est
+
+Posons
+On a alors
+\[
+\tag{55}=
+\]
+% 132
+
+\[
+\tag{56}=
+\]
+
+
+Dans (55), nous pouvons écrire après un calcul élémentaire :
+
+Dans (5), l'intégration de  s'effectuera en pratique sur un
+intervalle de temps de l'ordre du passage du paquet d'ondes au point r,
+
+qui est (cf page 118).
+Pendant cet intervalle de temps, la phase de la première exponentielle du
+second membre de (56) varie d'un terme de l'ordre
+
+Or nous avons fait l'hypothèse que <<1 (étalement négligeable
+
+du paquet d'ondes). La phase de la première exponentielle varie donc très
+
+La troisième exponentielle est un facteur de phase indépendant de
+
+peu autour de zéro et on peut remplacer  par 1.
+la variable k; et qui disparaîtra quand on formera .
+
+Finalement, on peut écrire
+
+Posons 
+ devient  avec
+
+% 133
+
+L'intégration sur u donne 
+et finalement
+\[
+\tag{57}=
+\]
+De (49), (53) et (57), on déduit
+
+Nous avons ainsi obtenu, comme annoncé, une section efficace de
+
+diffusion incépendente de la forme du paauet d'ondes, le terme dépendant de
+
+cette forme  s'étant éliminé dans le quotient des relations
+(53) et (57);  est à noter que la probabilité  et le flux
+
+ n'étaient pas, quant à eux, indépendants de cette forme
+
+le calcul que nous verons de feire est ripoureux moyennant les
+conditions imposées au paquet d'ondes (longueur et largeur suffisantes).
+Si ces conditions n'étaient pas satisfaites, il n'aurait pas été possible de
+définir une section efficace indépendente de la forme du paquet d'ondes.
+
+La relation (58) nous montre l'importance de la matrice  de
+réaction qui, à elle seule, permet de calculer les sections efficaces
+Notons enfin que la formule (58) se différencie par un facteur  des formules de
+certains auteurs qui utilisent au lieu d'ondes planes "normées" à
+
+l'unité,  $\epsilon$ , comme nous l'avons fait, des ondes planes non
+
+normées e . Le facteur  se retrouve alors dans l'élément de
+matrice
+\[
+\tag{59}=
+\]
+\[
+\tag{60}=
+\]
+\[
+\tag{61}=
+\]
+% 134
+
+3°) Calcul de o par la théorie formelle des collisions
+
+ 
+
+a) Introduction : Les calculs à l'aide des paquets d'ondes,
+dont la signification physique est très claire, sont longs et assez pénibles.
+
+La théorie formelle des collisions consiste à travailler avec
+des "quasi états de collision"  qui vérifient l'équation de
+Lippnann-Schwinger
+
+avec un paremètre $\epsilon$ petit mais non nul, ce qui permet de simuler un paquet
+d'ondes.
+
+Les calculs sont alors beaucoup plus simples, mais comportent de
+nombreux pièmes. En règle générale, il faut garder à l'esprit le sens physique
+de $\epsilon$ qui représente la dispersion en énergie de la particule incidente
+et ne faire tendre e vers zéro qu'à la fin des calculs,
+
+Supposons done qu'à l'instant t = O, la particule ait été préparée
+de telle manière qu'elle se trouve dans l'état  défini par la relation (59). .
+n'est pas un état propre de H, C'est un état approché
+ayant une dispersion $\epsilon$ en énergie. Il évolue, après , sous l'effet du
+
+hamiltonien H = T + V et à un instant t, il devient
+
+La probabilité de trouver à l'instant t la particule dans l'état ,
+ s'écrit :
+
+
+Nous allons tout d'abord calculer la dérivée à l'instant t = O de cette
+quantité, puis nous rattacherons cette dérivée à la section efficace.
+
+ 
+% 135
+
+b) Calcul de 
+
+En dérivant la formule (60) par rapport au temps, on obtient :
+
+\[
+\tag{62}=
+\]
+
+Compte tenu de (61) et (62), on a :
+
+Le terme entre crochets est épal à la différence de deux termes complexes
+conjugués l'un de l'autre, On a donc
+
+\[
+\tag{63}=
+\]
+
+Rappelons que H = T + V.
+
+On a notamment
+
+ est en effet un état propre de T de valeur propre .
+
+Or  qui est réel, a sa partie imaginaire nulle.
+Finalement, on peut donc, dans (63), remplacer H par V et on obtient
+
+Posons
+
+D'autre part, pour calculer , remplaçons  par son
+
+expression (59); on obtient alors
+
+% 136
+
+\[
+\tag{66}=
+\]
+\[
+\tag{67}=
+\]
+\[
+\tag{68}=
+\]
+Compte tenu de (65) et (66), (64) devient :
+
+ Cependant, on peut montrer, en calculant la dérivée seconde, que
+
+Nous n'avons en toute rigueur calculé la dérivée  qu'au point
+
+ varie très peu sur des temps inférieurs à . On peut donc considérer
+
+
+et représentant la probabilité de transition par unité de temps vers
+l'état | \S; ?e
+Comme nous l'avons déjà fait, nous allons supposer que i  j,
+
+Pi comme une constante, Mis donnée par la formule (67)
+
+autrement dit que l'observation se fait dans une direction différente de
+la direction incidente, On a alors, d'après (67),
+
+Nous voyons que la probabilité de transition n'est appréciable
+que si l'énergie E est égale à E à  près. Ceci rend compte de la conservation
+de l'énergie, compte tenu de l'incertitude $\epsilon$ sur l'état initial.
+
+Nous devons calculer en fait la probabilité de transition par
+unité de temps vers un état dont le vecteur d'onde  pointe
+dans l'angle solide.
+
+% 137
+
+ $\epsilon$ 
+Nous avons évidemment (en supposant que Rji varie peu lorsque
+ varie autour de 
+
+\[
+\tag{69}=
+\]
+avec le changement de variable
+ (69) devient
+
+Si  est suffisamment petit, l'intégrale en E donne tout simplement 
+et on obtient
+
+\[
+\tag{70}=
+\]
+si (avec  dans )
+
+c) Calcul de la section efficace :
+Il ne nous reste plus qu'à calculer le flux de l'onde plane
+incidente . En représentation  et 
+
+Le flux est également indépendant du temps. En utilisant (49), il vient
+alors
+
+Ce n'est que maintenent que nous pouvons faire tendre (e) vers zéro.
+
+D'après (65), on a
+
+% 138
+
+Lorsqu'on fait tendre $\epsilon$ + O0, les seules divergences pourraient provenir
+du terme en  Mais cet opérateur est entouré par les opérateurs V et n'agit pas
+directerent sur une fonction .
+
+On peut ainsi montrer qu'en général, Bi converge régulièrement vers
+ lorsque $\epsilon$ + O, Lorsque $\epsilon$ est suffisamment petit,
+ est pratiquement égal à  et varie très peu quand  varie autour
+de , ce qui justifie l'hypothèse faite pour établir (69) et permet de
+remplacer  par .
+Finalement
+
+avec 
+
+Nous retrouvons ainsi l'expression (58),
+
+d) Remarques diverses :
+
+a) Ressemblance de la formule () avec la règle d'or de Fermi :
+
+La formule (68), donnant la probabilité par unité de temps 
+
+est riroureuse, Cependant, si on remplace  par 
+(approximation de Born), on obtient la relation approchée
+
+qui n'est autre que la règle d'or de Fermi,
+
+) Difficultés de la théorie formelle des collisions :
+
+Nous avons longuement insisté sur le fait qu'il fallait raisonner
+avec des états  avec $\epsilon$ fini non nul, de façon à simuler un paquet
+d'ondes physique de dispersion en énergie $\epsilon$, Si dans l'expression (61) :
+
+on avait fait tendre dès le début  vers zéro, aurait été remplacé à la limite par
+l'état stationnaire 
+
+aurait été une constante indérendante du temps. On aurait alors eu 
+
+% 139
+
+De même si dans l'expression (63) de  :
+
+on avait fait tendre $\epsilon$ vers zéro, et remplacé ,
+
+fonction propre de H de valeur propre on aurait eu
+
+On voit ainsi clairement qu‘en théorie formelle des collisions
+il ne faut faire tendre  qu'à la fin des calculs: Ceci re résulte
+pas d'un simple artifice methématique, mais se trouve lié à la signification
+physique même de .
+
+Citons comme dernier exemple le cas où, au lieu de traiter le
+spectre continu, on a enfermé ia particule dans une boîte de côté L. On
+est alors amené à la fin des calculs à faire tendre  et, , il
+intervient dans le calcui des termes du type  qui conduisent à une forme
+indéterminée : c'est la nature physique de $\epsilon$ qui permet de lever l'indétermination : 
+étant la dispersion en énergie du "pseudo paquet d'ondes", la
+longueur de ce dernier est de l'ordre de v. Pour que les conditions aux
+limites ne modifient pas le problème, il faut évidemment que l'on ait L 
+soit , IL faut dons à la fin des calculs faire tendre
+
+) Expression de la section efficace en fonction de l'amplitude  de diffusion
+
+En posant dans la formule (1)
+
+ 
+
+devient une fonction de , et de  qui s'écrit
+
+On peut donc dans (5) remplacer . Soit finalement
+
+\[
+\tag{73}=
+\]
+% 140
+
+49°) Théorère optique
+
+Elle s'écrit, d'après (63),
+
+(compte tenu de la relation de fermeture .
+
+Or l'opérateur H est hermitique et sa valeur moyenne dans l'état 
+
+est réelle. On a donc
+
+La relation (7) exprime le fait que la somme des probabilités
+de transition par unité de temps vers tous les états  est nulle :
+c'est une équation de conservation de la probabilité de présence globale
+de la particule : en effet, en intégrant (7) on arrive à l'équation
+
+ (indépendante du temps)
+
+qui exprime le fait que la somme des probabilités pour que la particule
+soit dans un état  quelconque est constante.
+
+La relation (7h), compte tenu de (67), conduit à 3
+
+Si  est suffisamment petit, 21 se comporte comme une
+
+distribution de Dirac. On a alors
+
+% 141
+
+ou, à la limite où  :
+
+ce qui s'écrit encore, compte tenu de (50) :
+
+ou bien, compte tenu de (72) :
+
+La relation (75) (ou 75) porte 1e nom de relation de
+Bohr-Peieris-Piaczek et traduit le "théorème optique" : la section
+efficace totale de diffusion est proportionnelle à le partie imeginaire de
+l'amplitude de diffusion vers l'avant.
+
+Le théorème optique se présente comme une conséquence
+de la conservation de ia norme ou de la probabilité de présence de la
+particule : physiquement, la probabilité de présence globale de la particule
+doit se conserver au cours de la collision. Pour qu'il apparaisse,
+après collision, une probabilité de présence non nulle dans des directions
+autres que la direction incidente, il faut donc qu'après la collision, la
+probabilité de présence dans la direction incidente soit plus petite
+qu'avant la collision. Ceci n'est possible que s'il existe une interférence
+destructrice entre l'onde transmise (qui est identique à l'onde
+incidente) et l'onde diffusée vers l'avant, décrite à l'aide de
+. La quantité dont diminue la probabilité de présence dans la
+direction incidente mesure l'"absorption" sur le faisceau incident qui
+est égale à la probabilité totaïe de diffusion dans toutes les autres
+
+directions, liée à  IL est donc naturel qu'il existe une relation
+
+entre . le théorère optiaue montre de plus que c'est
+
+la partie imasinaire de l'amplitude de diffusion vers l'avant  qui
+
+\[
+\tag{71}=
+\]
+\[
+\tag{78}=
+\]
+
+% 1
+
+décrit l'absorption sur le faisceau incident.
+
+5°) Approximation de Born
+
+Nous avons vu dans les paragraphes précédents que la quantité
+essentielle pour le calcul des sections efficaces de collision est l'élément de
+matrice R..,
+
+Or on a :
+
+Soit en introduisant dans le dernier membre 1a relation de fermeture
+
+L'équation intégrale (76) est l'analogue pour les éléments de la matrice
+de Péaction de l'équation de Lippmann-Schwinger pour les états de collision.
+Pour résoudre les différents problèmes de collision, on est amené à appliquer à
+(76) les diverses méthodes de résolution et d'approximation des
+équations intégrales,
+
+On peut notamment faire le développement en série de NeumannLiouville:
+
+qui porte le nom de Dévelonnement de Born des éléments de la matrice de
+réaction. Ce développement permet de calculer la section efficace sous
+forme d'un développement limité en V.
+
+Au premier ordre, nous avons l'approximation de Bormm : 
+
+qui conduit à la section efficace :
+
+Nous n'aborderons pas ici la discussion de la validité de cette approximation,
+ni de ses applications.
+
+\[
+\tag{80}=
+\]
+
+%13
+
+E - Matrice S
+Nous allons maintenant définir et étudier de façon précise
+
+la matrice de collision S.
+
+1°) Rappels sur la représentation d'interaction ou "point
+D
+
+- de vue de Dirac")
+Dans le point de vue de Schrödinger, l'état  évolue
+conformément à l'équation de Schrödinger
+ou encore sous l'effet de l'opérateur unitaire U (t", t')
+
+ vérifiant l'équation
+
+Effectuons sur les vecteurs d'états et sur les observables ia trensformation
+unitaire définie par l'opérateur  et V deviennent
+alors :
+
+Il est alors immédiat de montrer que | y (t) > évolue dans le temps conformément
+à l'équation :
+
+% 1
+
+Par définition  est le vecteur d'état du système dans
+la "représentation" d'interaction, L'équation (80) montre que
+
+ n'évolue pas si l'interaction V est nulle : autrement
+dit, le point de vue d'interaction sépare dans le mouvement ce
+qui provient du hamiltonien de la particule libre T et ce qui
+provient du potentiel V qui décrit la collision.
+
+On peut montrer aisément que l'équation (80) est équivalente à :
+
+\[
+\tag{81}=
+\]
+où U (t'", t') est l'opérateur unitaire défini par
+
+\[
+\tag{82}=
+\]
+vérifiant l'équation
+
+\[
+\tag{83}=
+\]
+
+et possédant les mêmes propriétés de groupe que U (t", t') :
+
+\[
+\tag{84-a}=
+\]
+\[
+\tag{84-b}=
+\]
+\[
+\tag{84-c}=
+\]
+Les opérateurs T et V étant indépendants du temps, nous pouvons
+de plus écrire :
+
+et l'équation (82) devient alors :
+
+% 
+L'intérêt de la représentation d'interaction dans le problème de la collision
+réside dans le fait que le vecteur d'état n'évolue
+pas si l'interaction est nulle : longtemps avant ou après la collision,
+les deux systèmes dont on étudie l'évolution sont éloignés l'un de
+l'autre; ils n'interagissent pas et le vecteur d'état qui les représente dans
+la représentation d'interaction est immobile : la collision
+doit donc faire évoluer Le vecteur d'état du système d'une position
+fixe, dans le passé lointain que nous roterons  à une
+autre position fixe, dans le futur lointain que nous noterons ,
+
+conformément à la figure ci-dessous
+
+Nous allons étudier, dans ce qui suit, la transformation S qui permet de
+passer de :
+
+et nous allons voir dans quelle mesure on peut assimiler 
+
+% 146
+
+2°) Définition de la matrice S. Méthode
+
+ 
+
+a) Position du problème
+
+Soient  et  deux paquets d'ondes libres
+en représentation d'interaction. Ces paquets n'évoluent pas au
+cours du temps et peuvent s'écrire :
+
+Les états 
+
+norme est finie,
+ sont des états physiques puisque leur
+
+Considérons la quantité
+
+qui représente l'amplitude de probabilité pour que le système
+étant dans l'état  à l'instant t' se trouve dans l'état
+à l'instant t",
+
+Nous allons montrer que cette quantité admet une
+limite lorsque  et  et nous appellerons cette
+
+limite élément de matrice de la matrice de collision S entre
+ matrice de collision 
+
+%
+
+b) Définition et propriétés des vecteurs  et 
+
+Dans la représentation de Schrödinger, considérons les deux
+paquets de collision associés à  et  que nous avons
+étudiés au \S C : Est
+
+D'après (h7-a), (kB) et (79-a), nous savons que
+
+En passant en représentation d'interaction :
+
+On a d'après (88-a) et (88-b) :
+
+\[
+\tag{89-a}=
+\]
+\[
+\tag{89-b}=
+\]
+
+% 148
+
+c)Limite de 
+
+Considérons la quantité
+D'après (8h-a), elle est égale à
+
+et donc indépendante de  et de ,
+D'autre part, d'après (89-a) et (89-b), la différence
+
+tend vers zéro lorsque ,
+
+On en déduit donc :
+
+ce qui constitue la propriété annoncée au \S a),
+On a donc, d'après (87) :
+\[
+\tag{91}=
+\]
+a Matrice S
+A l'instant t = O, la représentation d'interaction
+
+est équivalente à celle de Schrödinger. Nous avons donc
+
+et (91) s'écrit :
+
+Mais, d'autre part, grâce à la relation de fermeture, on a
+
+% 149
+
+(92) et (93) nous conduisent à poser
+
+\[
+\tag{94}=
+\]
+
+ce qui rejoint la définition formelle (28) de la matrice de collision :
+
+Les éléments de matrice  apparaissent ainsi comme des distributions
+qui agissent sur les fonctions (cf équation 93).
+Remarque : 
+Nous avons montré que  admet une limite lorsque
+, Lorsque  et  sont des paquets d'ondes.
+Nous avons vu que cette limite se nous axors naturellement à l'aide
+des éléments de matrice
+Mais nous n'avons, en aucune façon, prouvé que l'opérateur 
+admet une limite lorsque 
+
+Nous allons étudier maintenant la quantité
+et nous constaterons notamment qu elle n'admet pas de Limite lorsque
+
+3°) Caleul direct 
+
+Au lieu de raisonner sur des paquets d'ondes, nous allons revenir
+à une théorie formelle des collisions et raisonner sur des états libres
+Nous savons qu'il faut alors (cf \S C et D) introduire dans l'interaction un
+facteur de convergence dont nous avons suffisamment explicité la signification
+physique. Nous allons procéder ici d'une façon quelque peu différente,
+d'une part pour montrer que l'opérateur  n'admet pes en toute rigueur de limite
+pour , et d'autre part parce que la
+méthode que nous allons employer est celle qu'utilisent de nombreux auteurs
+
+pour introduire la matrice S et calculer la section efficace de collision.
+
+% 150
+
+a Nous allons calculer l'amplitude de probabilité
+ pour que le système qui était à l'instant -1 dans l'état libre représenté dons
+ le point de vue d'interaction par le ket fixe  se trouve à l'instant +T dans
+l'état Nous étudierons ce que devient cette quantité lorsque t tend vers
+l'infini et dans quelle mesure il est possible alors
+de lui donner un sens,
+
+L'équation (83), compte tenu de , conduit pour
+
+%
+ à l'équation intégrale :
+
+dont le développement par itérations successives est :
+
+Ce développement (96) a été rencontré à diverses reprises sous des
+formes légèrement différentes : en effet, d'après (82), on a
+\[
+\tag{97}=
+\]
+D'autre part, pour t > O, U (rt, -1) est identique à l'opérateur
+fonction de Green avancée x, (rt, -t) (cf formule 39, page 82),
+
+On a donc alors
+
+\[
+\tag{98}=
+\]
+
+D'autre part, l'opérateur fonction de Green avancée du système
+ s'écrit :
+
+libre  s'écrit
+
+()
+\[
+\tag{99}=
+\]
+\[
+\tag{100}=
+\]
+
+% 151
+
+Compte tenu de (79-b), (98) et (99), le développement (96) est identique au
+développement en série de Neumann-Liouville de l'opérateur fonction de Green
+avancée (cf formule 3, page 83).
+
+Il faut cependant remarquer que dans le développement (96),
+les temps sont rangés  dans l'ordre  et que les
+
+opérateurs  et 
+
+ne commutant pas, leur ordre dans les intégrales doit être conservé.
+A l'aide de (96), nous allons étudier le développement en
+puissance de V de l'amplitude de probabilité
+
+a) Terme d'ordre zéro :
+
+b) Terme d'ordre 
+
+Il correspond à ce terme l'ensemble des diagrammes
+
+qui décrivent une transition à l'instant t' de l'état i à l'état j sous
+
+l'effet de l'interaction V. Le terme du premier ordre représente  interférence
+des chemins correspondant aux diverses valeurs de 
+
+est pondéré par son amplitude de probabilité  Visé
+
+Chaque chemin
+
+%
+ 
+Nous allons voir que l'interférence de ces différents
+chemins sera destructrice si la phase varie trop vite d'un chemin
+à l'autre, c'est-à-dire si
+
+\[
+\tag{101}=
+\]
+
+Nous interprétons ainsi la conservation de l'énergie
+(plus précisément la "quatrième" relation d'incertitude "temps-énergie") en mécanique quantique,
+
+De façon plus précise, nous avons
+
+ce qui, en posant :
+
+nous conduit à écrire le terme d'ordre 1 sous la forme.
+
+\[
+\tag{103}=
+\]
+
+Le fonction  est la fonction de diffraction classique, normée, représentée ci-dessous
+
+%
+Cette fonction a une largeur de l'orére de , ce qui justifie
+l'inégalité (101).
+
+Cependant, pour une valeur fixée de cette fonction
+n'admet-pas de limite lorsque . L'opérateur  n'a donc
+pas de limite lorsque  puisque son élément de matrice
+le , au premier ordre, n'en a pas. Physiquement,
+cette absence de limite se comprend aisément : l'introduction brutale
+à un instont donné  d'un état propre  du hamiltonien libre T
+feit apparaître un régime "transitoire" qui subsiste à l'instant rt (quel
+que grand que soit T) et qui explique l'oscillation et l'absence de limite
+lorsque T +, de  Nous aurions évité ces
+régimes transitoires gênants et qui n'ont pes de sens physique en introduisant
+dans V un facteur de convergence (branchement adiabatique) ou en
+introduisant progressivement l'état initial.
+
+Nous pouvons également remarquer que les états physiques réels
+sont normés (paquets d'ondes) et qu'en conséquence, les éléments de matrice
+de  doivent être celculés sur des fonctions de cnrré sommable,
+les éléments de matrice  agissant sur ces fonctions
+comme des distributions. Nous savons alors, qu'au sens des distributicens,
+ tend vers la distribution de Dirac  lorsque
+, Nous pouvons donc dire que le terme du prenier orêre du développement
+de  admet, lorsque  , une limite au sens des
+distributions agissant sur les fonctions d'onde de carré sommable, cette
+
+limite étant
+
+% 15
+
+c) Termes d'ordre 2 :
+
+Au terme (104) correspondent les diagrammes du type :
+
+qui décrivent l'évolution du système de l'état  à l'état
+ via l'état  sous l'effet de deux transitions aux
+instants t" et t'. Pour obtenir le terme du deuxième ordre (104),
+il faut faire interférer tous les chemins de ce type en sommant
+sur t' compris entre =T et +t , puis sur t" - t' compris entre
+ et O et enfin sur l'état intermédiaire k,. Nous pouvons enfin
+faire tendre t vers l'infini pour obtenir, comme au premier ordre,
+une distribution.
+
+% 155
+
+\[
+\tag{(105)}=
+\]
+Fixons d'abord l'état intermédiaire  et sa durée
+La sommation sur l'exponentielle  fait, comme
+pour le premier ordre, que 1'interférence est destructrice si
+
+L'amplitude de probabilité est encore nulle si l'énergie de l'état
+initial n'est pas érale à celle de l'état final :
+
+Supposons maintenant que  fixons l'état intermédiaire  de
+et sommons sur la durée de la transition intermédiaire  : Deux
+cas se présentent alors
+
+a) le facteur de phase est le même quel que soit
+(égal à 1) : tous les chemins interfèrent de façon constructive et la durée
+de la transition intermédiaire peut prendre toutes les veleurs possibles :
+on dit que l'on a une trans sition intermédiaire réelle
+d'un chemin à l'autre, la phase varie. Il va y avoir une
+interférence partiellement destructive : il faut calculer l'intégrale
+
+en posant u=t"-t'.
+
+Cette intégrale n'admet pas de limite au sens des fonctions, mais nous savons
+qu'au sens des distributions, elle tend vers  qui, pour
+
+ est égal à 
+
+% 156
+
+Nous obtenons, à un facteur 2 près, le même résultat si
+
+dans  (105), on prend comme borne inférieure
+
+En effet
+C'est dans cette mesure que l'on peut dire que ces transitions
+que l'on appelle virtuelles, car elles ne conservent pas l'énergie, durent un temps de l'ordre de.
+
+ 
+
+Si on résume les résultats précédents, le terme d'ordre
+ du développement de  tend au sens des distributions, lorsque , vers
+
+Si on résume les résultats des \S a), b) et c), on obtient :
+
+(au sens
+des distributions)
+
+Soit, en rapprochant ce résultat de la formule (77) de la page 142 :
+
+\[
+\tag{106}=
+\]
+
+% 157
+
+La formule (106) nous montre donc, qu'au sens des
+distributions sur les foncticns d'onde de carré sommable,
+ tend vers 8; et on retrouve ainsi les résultats du \S 2,
+
+Remarque  importante : Calculons la probabilité de transition
+ à la limite . Si i  j, la relation
+(106) nous conduit à l'expression
+
+qui fait intervenir le carré d'une distribution , ce ce qui n'a à pas. £e
+
+sense L'erreur à ne pas commettre est en effet de faire tendre T, qui
+
+ion, vers l'infini avant
+
+ique de La coili
+
+représente le temps
+d'avoir achevé Le calcul des grandeurs physiques.
+Si on se souvient que  provient de la fonction
+
+ on doit envisager en fait la fonction
+
+qui est représentée sur la figure ci-dessous :
+
+% 158
+
+et que l'on peut encore écrire :
+
+tend donc au sens des
+Le fonction
+
+distributi ver et est équivalent à .
+On en déduit :
+
+d'où l'existence d'une probabilité de transition par unité de
+temps :
+
+analogue à celle déjà trouvée par ailleurs (formule 68, page 136),
+et permettant de retrouver la section efficace de collision.
+
+Le principe à suivre est donc, comme toujours, de ne faire tendre
+le temps de la collision (r ou Y/e) vers l'infini qu'un fois tous
+les calculs mathématiques achevés et les grandeurs physiques obtenues,
+
+% 159
+
+4°) Collisions entre particules identiques
+
+Nous n'avons envisaré jusqu'à présent que le problème de
+collision de particules différentes. Nous allons voir maintenant
+que le formalisme de la matrice S permet de traiter aisément, en introduisant le
+principe de Pauli, le problème des collisions de particules identiques (bosons ou
+fermions). Nous allons au préalable
+analyser à nouveau une expérience de collision entre particules différentes :
+a) Particules différentes
+
+Envisageons, dans un problème à symétrie cylindrique, la diffusion de deux
+particules différentes A et A dans le référentiel
+du centre de masse. Soient O et 5 les angles polaires des directions
+incidentes de A, et de À, et plaçons un détecteur dans l'angle polaire 
+L'amplitude de probabilité pour que la diffusion de A ait iieu dans l'angle 68
+(figure a) peut s'écrire :
+
+\[
+\tag{8}=
+\]
+ est 1ié simplement  à  qui permet de calculer la probabilité de transition et
+ la section efficace.
+De même l'amplitude de probabilité pour que le diffusion de
+ait lieu dens l'angle 6 (figure 8) peut s'écrire :
+
+% 160
+Figure
+
+Figure 8
+
+La probabilité de trouver la particule A dans la
+direction 6 est , La probabilité de trouver la particule  dans La direction  est
+ Si maintenant,
+le détecteur ne permet pas de distinguer les particules différentes , et  et
+détecte donc indifféremment  ou A, la
+probabilité de trouver l'une quelconque des particules dans
+direction  est alors .
+b) Particules identiques
+
+Le processus physique est maintenant le suivant
+
+deux particules identiques du type  se dirigent l'une vers
+l'autre dans le référentiel du centre de masse. Elles interagissent et on cherche
+la probabilité pour qu'un détecteur,
+la direction 6, en détecte une, On cherche donc l'amplitude
+
+processus unique représenté par la figure ci-dessous :
+
+la
+
+dans
+du
+
+ 
+% 161
+
+Du point de vue mathématique, humérotons les particules et
+
+envisageons les quatre processus formels représentés par les figures
+
+et les amplitudes de probabilité ci-dessous :
+
+% 162
+
+Du fait de l'indiscernabilité des particules, le
+hamiltonien H, et par suite S, sont invariants par permutation
+des particules 1 et 2, En désignant par P l'opérateur de permutation, on a
+
+D'où l'on déduit :
+
+ce qui permet d'identifier les amplitudes  et  égales à
+ et par un raisonnement analogue les amplitudes  et 
+égales à 
+
+Quels sont maintenant les états mathématiques 
+et qui représentent l'état physique initial  et
+
+l'état physique final 
+
+D'après le postulat de symétrisation, ce sont les deux
+États, symétriques ou antisymétriques, selon qu'il s'agit de bosons
+ou de fermions :
+
++1 bosons.
+
+-1 fermions)
+
+% 163
+
+L'amplitude de probabilité associée à la diffusion s'écrit
+
+alors :
+
+soit, en se reportant aux expressions des amplitudes (1) (2) (3) (k) :
+
+Par suite, la probabilité du processus de diffusion dans l'angle 0 sera
+
+ce qui est différent de  qui était 1a probabilité pour que le détecteur détecte
+une particule (sans préciser laquelle),
+lorsque les deux particules sont différentes.
+
+Lorsque les particules sont identiques, il y a donc interférence entre les
+amplitudes de probabilité associées eux deux schémas
+de diffusion :
+
+% 164
+
+Ceci est particulièrement frappant pour la diffusion à angle
+droit  :
+
+pour deux particules différentes : probabilité
+
+pour deux bosons : probabilité
+pour deux fermions : probabilité
+
+c) Interprétation dans le formalisme de leynman
+
+Dans le formalisme de Feynman, l'amplitude de probabilité
+associée à un processus de diffusion quantique s'obtient en sommant
+les contributions de tous les chemins classiques H partant de l'état
+initial et aboutissent à l'état final. On peut dans ces chemins classiques
+suivre d'un bout à l'autre la trajectoire de la particule et
+
+il existe alors deux types de chemins aboutissant au même état final :
+
+Il faut sommer les amplitudes de probabilité associées aux chemins du
+
+type.  On obtient .
+
+% 165
+
+De même, pour les chemins du type (b), on obtient ,
+11 faut maintenant tenir compte de l'interférence entre les chemins
+du type (a) et ceux du type (t). Pour cela, nous devons introduire
+
+dans notre formalisme un postulat supplémentaire de symétrisation qui
+
+indique qu'il faut sommer les chemins du type (a) et (b) avec un facteur de
+phase égal à +1 ou -1 suivant qu'il s'agit de bosons ou de
+fermions.
+
+Si les particules sont différentes, les deux types de chemins (a) et (b)
+ne peuvent interférer, car ils conduisent à des états
+finaux différents.
+
+Si les particules sont identiques, les deux tyres de chemins
+
+conduisent au même état final : ie système peut donc prendre
+
+l'autre type de chemins et tant qu'on ne fait pas de mesure pour se
+voir quel chemin il emprunte, il y a interférence entre les emplitudes
+de probabilité associées aux deux tyres de chemins.
+d) Exemple d'application : diffusion de deux électrons
+Supposons l'énergie suffisamment basse pour que l'interaction ne
+dépende pas des spins. Deux cas peuvent alors se présenter :
+
+a) cas où les deux spins sont parallèles :
+
+Les deux particules sont alors identiques et la probabilité de
+
+diffusion à angle droit est nulle,
+
+% 166
+
+B) cas où les deux spins, sont antiparallèles :
+
+Les particules sont alors différentes vis-à-vis de la
+détection et la probabilité de détecter un électron, sans préciser
+lequel, à angle droit est alors .
+
+Ainsi, bien que les forces ne dépendent pas des spins, la section
+efficace dépend de façon critique de l'orientation relative des
+spins. Il y a une analogie très nette avec les termes d'énergie
+d'échange, introduits par le principe d'exclusion de Pauli qui
+distinguent, en dehors de toute interaction magnétique, les états
+singulets et triplets de l'atome d'hélium.
+
+) Cas de deux électrons non polarisés :
+
+Chacun des processus possibles :
+
+sois
+
+probabilité
+
+s'effectue avec une probabilité 1/h, La probabilité totale de détec
+tion à angle droit est donc dans ce cas .
+
+ 
+% 167
+
+F - Diffusion par un système. de N particules dans l'approximation de Born
+
+1°) Introduction
+
+Au lieu d'envisager, comme nous l'avons fait jusqu'ici la diffusion per un seul
+centre, nous allons étudier maintenant la diffusion par
+un système constitué par N particules (par exemple,les divers électrons d'un
+atome).
+
+Cette étude va nous permettre de relier les sections efficaces
+de diffusion à des grandeurs physiques importantes, caractéristiques du système de
+N particules : la densité simple, la fonction de corrélation spatiale
+(densité à deux corps), 1e fonction de corrélation spatio temporelle,
+
+Toutes ces grandeurs physiques ont une interprétation cleire et
+simple. Il est intéressant de pouvoir les déduire de la mesure des sections
+efficaces et de comparer les résultats aux prévisions de a mécæiique statistique
+qui permet de les calculer théoriquement.
+
+Nous ferons le calcul des sections efficaces dans le cadre de
+l'approximation de Born (ou ce qui revient au même, comme nous l'avons vu dans
+le cadre de la règle d'or de Fermi). Cette approximation est valable pour la
+diffusion des photons, des électrons rapides et des neutrons lents,
+
+Nous mettrons ici principalement l'accent sur l'établissement
+des relations entre les sections efficaces et les diverses fonctions
+caractéristiques ainsi que sur la validité des approximations, Pour
+l'étude de l'aspect "problème à N corps" proprement dit, on peut se rapporter à l'article de
+Van Hove (Phys. Rev. 95, 249, 1954) ou à l'ouvrage de Nozières ("le problème
+à N corps").
+
+% 166
+
+2°)Notations
+
+a) Diverses particules
+
+Soient
+
+système,  la position de leur centre de masse et  la coordonnée relative
+
+les coordonnées des N particules du
+
+de la ième particule. On a évidemment
+
+ est le vecteur d'onde du centre de masse après la collision (il est supposé
+nul avant la collision).
+
+ est la position de la particule incidente,  son vecteur d'onde avant la
+collision,  son vecteur d'onde après la collision;  le transfert au cours de
+la collision :
+
+D'autre part, l'énergie transférée par la particule incidente au cours de la
+collision est
+
+b) Etats du système
+
+L'état des N particules diffusantes dans le système de leur centre
+de masse est respectivement avant et après la collision :
+
+| nm > d'énergie E,
+
+| n> d'énergie E,
+
+% 169
+
+si bien que l'on pourra noter l'état du système global en interaction avant
+
+et après la collision par :
+
+d'énergie
+
+énergie
+ d'énergie
+
+en appelant m et M respectivement les masses de la particule incidente et de
+l'ensemble du système diffuseur.
+
+Dans la représentation r, ces états sont représentés par les
+fonctions d'onde
+
+et
+
+c) Interaction entre le système diffuseur et la particule incidente
+Nous supposerons que le potentiel d'interaction ne dépend que
+de la position relative de la particule incidente et des particules diffusantes,
+supposées identiques et le hamiltonien d'interaction peut s'écrire :
+
+marque :
+
+Il semble que le cas où la particule incidente est un photon échappe à cette
+théorie. Nous verrons qu’il n'en est rien et que les calculs que nous. allons
+
+faire s'étendent aisément à ce cas.
+
+ment de matrice  de  entre l'état initial
+
+3) Calcul de
+
+et l'état final
+
+Calculons l'élément de matrice 
+
+Il s'écrit :
+ 
+% 170
+\[
+\tag{112}=
+\]
+\[
+\tag{113}=
+\]
+Or nous pouvons écrire
+
+L'expression (111) s'écrit alors
+
+Nous allons intégrer cette expression successivement sur les différentes variables :
+a) Intégration sur
+
+b) Intégration sur  :
+La distribution , introduite par l'intégration précédente conduit à
+remplacer dans (113)  par .
+L'élément de matrice devient alors
+ 
+% 171
+\[
+\tag{114}=
+\]
+
+
+ce qui peut encore s'écrire, après une transformation évidente
+
+Soit en prenant comme nouvelles variables Le  et  :
+
+c) Intégrations sur  et 
+
+Introduisons la transfornée de Fourier du potentiel V
+
+valeur YX :
+
+Il vient alors :
+
+L'intégration sur Fest immédiate :
+
+Finalement, l'élément de matrice de H, entre les États final et initial s'écrit :
+
+L'expression (114) est essentielle pour le calcul des sections efficaces  l'approximation
+de Born. Elic se présente sous une forme remarquablement simyile
+
+- le premier terme  décrit la conservation de l'impulsion globale au
+cours de la diffusion : La quantité d'impulsion x cédée par la perticule incidente
+est transmise intégralement au système diffuseur, Ceci étant, l'impulsion 
+
+% 172
+
+ ne joue pas de rôle essentiel dans notre problème et nous pouvons ne
+plus en tenir compte : si la messe M est grande devant la masse m de la particule
+diffusée, l'énergie cinétique d'ensemble ER est négligeable devant
+
+mouvement
+
+les autres énergies du problème. On peut donc négliger l'ensemble du
+
+système diffuseur (ce qui revient à confondre r; et P;) étant bien entendu
+que ce mouvement existe et satisfait à la conservation de l'impulsion globale.
+
+ le deuxième terme , transformée de Fourier à le valeur x du potentiel
+
+V ne dépend que de l'interaction ob du transfert d'impulsion (et pas de l'état
+
+quantique du système difluseur
+
+- le troisième terme  dépend de l'état initial et de
+il
+l'état final du système diffuseur à N particules (dans le référentiel de son
+centre de masse) (mais ne dépend pas du potentiel).
+
+Remarque  cas des photons
+
+\[
+\tag{115}=
+\]
+
+Montrens que la diffusion des photons (de longueur d'onde suffisamment courte) par
+un système de  électrons liés (atome) conduit à une expression analogue à (11).
+Le hamiltonien d'interaction s'obtient en développant le terme
+ où  représente la masse de l'électron,  sa charge, 
+
+l'impulsion du électron et  (61) la valeur eu point  du potentiel
+vecteur.
+
+L'interaction s'écrit alors
+
+Pour des longueurs d'onde suffisamment courtes (diffusion de rayons X), on montre
+
+que le dernier terme est prépondérant et on peut alors écrire
+
+% 173
+\[
+\tag{116}=
+\]
+
+
+Or le potentiel vecteur du champ électromagnétique quantifié s'écrit sous
+la forme
+où EL porte sur tous les vecteurs d'onde et  sur tous les états de polarisation,
+représente le vecteur de polarisation, à x et , les opérateurs
+de création et d'annihilation d'un photon dans 1'état K,  et a un coefficient
+
+dépendant notamment de 
+
+Calculons l'élément de matrice de H, l'atome passant de l'état
+l'état | n > et le photon de l'état  à l'état.
+Les seuls termes dont la contribution ne sera pas nulle seront ceux qui contiendront
+le produit  à et on aura :
+
+ce qui est bien une expression analopue à (11) dans laquelle  est ren
+
+placé par On ne retrouve pas le terme, mais cela est
+normal car nous n'avons pas tenu compte ici des degrés de liberté de translation
+du système atomique global,
+
+) Diffusion élastique ou cohérente
+
+a) Définition et exemples :
+On dit que la diffusion est élastique (ou cohérente) si l'état quantique du système
+diffuseur ne change pas au Cours de la diffusion :
+
+C'est par exemple le cas de la diffusion Thomson des photons X par un atome :
+
+Dans ce cas la conservation de l'énergie au cours de la diffusion exige
+
+ En k (on néglige l'énergie cinétique d'ensemble)
+
+et on a donc
+
+%
+\[
+\tag{117}=
+\]
+\[
+\tag{118}=
+\]
+\[
+\tag{119}=
+\]
+\[
+\tag{120}=
+\]
+
+b) Calcul de la section efficace :
+
+A l'approximation de Born, la section efficace est donnée par
+la fornule (78) de la page 142, qui s'applique mème au cas de la diffusion
+pur un centre diffuseur complexe puisqu'elle peut s'établir à partir de la
+règle d'or de Fermi :
+
+Nous devons calculer la quantité
+
+que l'on peut encore écrire :
+
+ce qui n'est autre que la probabilité pour que la 17m particule soit au point
+Fr, In sommant cette expression sur i, dans l'expression (118), on obtient la
+probabilité globale pour qu'une particule quelconque soit au point F, c'est-à-dire
+encore la densité à un corps Pa (M). Finalement, d'après (118) :
+
+et d'après (11) et (117), on obtient la section efficace de diffusion élastique
+
+qui dans le cas de la diffusion des photons s'écrit
+
+% 175
+
+Remarques :
+
+- Il est clair, d'après la définition de la densité à un corps, que
+
+ Rappelons en effet que
+
+- La transformée de Fourier de la densité à un corps qui intervient dans la
+section efficace s'appelle le facteur de forme du système diffuseur.
+
+- On voit que la section efficace de diffusion élastique se met sous la forme
+remarquablement simple du produit de deux termes dont l'un dépend de l'interaction,
+mais non pas du système diffuseur et l'autre du facteur de forme
+du système diffuseur et non pas de l'interaction.
+
+On.conçoit ainsi que les expériences de diffusion élastique sont
+très utiles pour l'étude de 1s répartition des particules dans le centre diffuseure
+
+Dans le cas de la diffusion par un système cristallin, la formule
+(119) contient notamment la formule de Bragge
+c) Discussion de la diffusion Thomson
+
+On appelle "diffusion Thomson" la diffusion élastique de photons X
+par un atome : la diffusion  fait elors sans chengement de fréquence et la
+
+section efficace différentielle de diffusion est donnée par la formule (120) qui
+
+s'écrit, en posant = re (rayon classique de l'électron) :
+
+% 
+Vous devons envisarer deux cas limites intéressants :
+
+a) Photons X mous : Le longueur d'onde À des photons est
+grande devant les dimensions atomiques (de l'ordre de quelques angstrôms
+par exemple). Le facteur oscillant  reste sensiblement égal à 1 dans
+le domaine où la densité est importante, si bien que l'on a
+
+ (Z : nombre d'électrons)
+
+La relation (121) se réduit alors à
+
+Le diffusion est isotrope et la section efficace est proportionnelle au carré
+
+de la charge électronique,
+
+8) Photons X "durs" : La longueur d'onde À est petite devant les
+dimensions atomiques. Le facteur e oscille un très grand nombre de fois
+dans le domaine d'extension de , sauf si | x | est suffisamment voisin
+de zéro : l'intégrale  se moyenne alors à zéro, sauf pour
+La diffusion est fortement concentrée dans la direction avant.
+
+5°) Cas général : section efficace
+
+a) Définition :
+En général la diffusion n'est pas élastique, c'est-à-dire que le
+centre diffuseur peut changer d'état quantique. Dans ce cas, l'énergie de la
+particule incidente,  est modifiée par la diffusion et devient :
+
+On peut alors définir une section efficace différentielle de diffusion, plus générale
+que celle que nous avons envisagée jusqu'à présent, que nous appellerons
+
+% 177
+\[
+\tag{122}=
+\]
+\[
+\tag{123}=
+\]
+
+ et qui est telle que aide dfde est égal au quotient par le flux
+de la particule incidente, de la probabilité par unité de temps pour que la
+particule ait été diffusée dans l'angle solide df autour de Q avec une énergie comprise
+entre $\epsilon$ et $\epsilon$ +de. On voit que cette section efficace est une
+quantité plus complexe que la section efficace puisqu'elle exige pour
+sa mesure à la fois une analyse en direction et en énergie de la particule
+diffusée. On doit s'attendre également à ce que sa mesure fournisse des
+renseignements plus riches sur la répartition des particules dans le centre
+diffuseur. :
+
+b) Calcul de 
+
+La probabilité par unité de temps de voir la particule diffusée
+dans l'angle solide  avec un nombre d'onde compris entre k et k + dk
+
+s'écrit, en appliquant la règle d'or de Fermi :
+
+L'état initial du système diffuseur est  on somme sur les états finaux
+ puisqu'on n fobserve que ia particule diffusée.
+En remarquant que  , que le flux incident est 
+
+et que la distribution  peut s'écrire
+
+on obtient la section efficace érentiente :
+
+On peut généraliser cette expression en cons sidérent que l'état initial du centre
+diffuseur n'est pas l'état  , mais un état statistique représenté par la
+matrice densité
+
+% 178
+\[
+\tag{127}=
+\]
+\[
+\tag{128}=
+\]
+
+
+On obtient alors
+
+Soit, en posant
+
+La section efficace se présente ainsi comme le produit de deux quantités dont
+l'une, , ne dépend que de la nature de l'interaction et l'autre,
+ne dépend que du centre diffuseur. Nous allons maintenant étudier cette dernière quantité.
+c) Transformation de 
+
+En utilisant la forme intégrale de la distribution de Dirac :
+
+il vient
+
+Soit en tenant compte de la relation de fermeture i de la
+relation qui permet de passer de la représentation" de Schrödinger à celle de
+Heisenberg :
+
+% 179
+Posons
+
+On peut alors écrire
+
+\[
+\tag{129}=
+\]
+
+avec
+
+où la notation < > représente la valeur moyenne dans l'état initial représenté
+par la matrice densité
+
+Remarque : I1 apparaît dans l'expression  le produit de convolution de deux
+
+distributions 6. Les opérateurs  et  relatifs à deux instants différents
+ne commutent pas et il faut donc respecter l'ordre des termes dans l'expression (130).
+
+6°) Interprétation physique Approximation quasistatique
+
+ 
+
+Afin d'interpréter physiquement l'expression relativement complexe
+
+de , nous allons tout d'abord analyser le cas simple où  = 0. Nous allons
+tout d'abord montrer que le quantité G  intervient dans une approximation
+très fréquente, l'approximation quasistatique.
+
+% 180
+\[
+\tag{131}=
+\]
+
+a) Section efficace :
+
+Très souvent, on ne mesure pas à Ja fois l'angle de diffusion
+
+et l'énergie de la particule diffusée, On mesure seulement l'angle de diffusion.
+Au lieu de s'intéresser à la section efficace différentielle
+
+double  on s'intéresse alors à la section efficace intégrée sur
+l'énergie
+
+Cette quantité n'est en général pas simple à calculer. En effet, nous avons
+posé (relation (127))
+
+et la quantité dépend en général de  comme il est facile de s'en assu
+rer sur l'expression (125) et sur la figure de la page 168 :  dépend de x
+par l'intermédiaire de  et du rapport  et pour un angle de diffusion
+ donné, x lui-même dépend du transfert d'énergie .
+
+Il faut donc, dans l'intégration (131), tenir compte d'une dépendance explicite
+
+pendant un cas où le problème est considérablement simplifié, c'est celui de
+
+et implicite en w de » Ce qui rend le calcul difficile. Il existe cel'approximation quasistatique.
+
+b) Approximation quasistatique :
+
+Faisons l'hypothèse que le transfert d'énergie est très faible
+devant l'énergie de la particule incidente, Cela s'exprime sur la figure
+(pe 168) par la relation BC << OA,
+C'est le cas par exemple de la diffusion des rayons X par un atome (le déplacement
+Compton est alors très petit devant l'énergie des photons X), ou celui
+
+de 1a diffusion d'électrons rapides (10 Kev) par un atome,
+
+% 181
+\[
+\tag{132}=
+\]
+\[
+\tag{133}=
+\]
+
+Dans ce cas, le triangle AOB est pratiquement isocèle et on
+peut négliger la variation de x avec  : en effet, M reste alors pratiquement égal
+à CA et ne dépend plus que de l'angle de diffusion :
+
+Dans l'intégration (131) sur , À reste alors constant et peut être sorti
+du signe somme. D'autre part  n'est plus qu'une fonction explicite
+de  :
+
+D'autre part, d'après (129)
+
+d'où
+
+Nous voyons alors que la section efficace se factorise une fois de plus
+
+en deux termes dont l'un, , ne dépend que de l'interaction, et l'autre ne
+dépend que du centre diffuseur par l'intermédiaire de .
+
+c) Sens physique de :
+
+ et  qui sont deux opérateurs relatifs au même instant
+commutent (à la différence de  et ). On peut done les considérer
+
+comme des nombres, et dans L'expression
+
+effectuer le produit de convolution. I1 vient
+
+% 182
+\[
+\tag{136}=
+\]
+
+
+Dans la double somme séparons les termes i = j et. Les termes
+
+i = j donnent
+
+On a donc finalement
+
+avec
+
+Afin d'interpréter g (T), fixons i et considérons tout d'abord la quantité
+
+Si l'on réserve la sommation sur j, l'intégration sur les variables autres que
+
+Fi représente la probabilité pour que la particule i soit en A et la particule
+j en  .
+
+L'intégration sur Tr; donne la probabilité pour que les particules
+i et j soient distantes de re
+
+La sommation sur  donne alors  ou encore la probabilité
+pour qu'une particule quelconque (autre que i) soit à une distance r de la
+particule i.
+
+% 163
+
+ représente donc la densité au point r du système, vue à partir de
+la particule i.
+
+On doit donc avoir , ce que l'on vérifie
+aisément :
+
+or
+
+Revenons maintenent à 
+
+qui s'interprète maintenant comme étant la densité moyenne au point r du
+système vue à partir d'une particule quelconque du système (la position de
+cette particule étent prise pour origine )e
+
+On peut encore dire que  est la probabilité pour qu'une
+
+particule quelconque du système étant en un point, une autre particule
+
+quelconque du système soit, au même instant, à une distance vectorielle
+de ce pointe
+
+ mesure donc les corrélations statiques entre les particules et est relie
+à la fonction de distribution à deux corps de la mécanique statistique.
+
+% 184
+\[
+\tag{137}=
+\]
+\[
+\tag{138}=
+\]
+La figure ci-dessous représente l'allure générale de  dans un fluide
+
+de particules neutres
+
+ attraction
+
+disparition de la corrélation
+
+ répulsion
+
+Nous sommes maintenant en mesure de justifier le terme d'approximation
+quasistatique : dans cette approximation, la diffusion ne dépend du système diffuseur
+que par l'intermédiaire de la quantité  qui décrit
+
+les corrélations entre les positions de deux particules à un instant donné.
+
+Nous allons maintenant préciser le lien entre et .
+) Lien entre  et  :
+
+Nous pouvons d'après (132) écrire
+
+ou encore pour la diffusion des photons :
+
+permet donc d'atteindre la transformée de Fourier de .
+
+La mesure de
+
+% 185
+
+\[
+\tag{139}=
+\]
+\[
+\tag{140}=
+\]
+
+Exemples d'application de la formule précédente :
+
+Revenons à la diffusion des rayons X par un atome :
+Nous avons vu que la section efficace de diffusion élastique
+(diffusion Thomson) était donnée par la relation
+
+Lorsque la diffusion s'accompagne d'un changement de fréquence du photon,
+on dit qu'il s'agit de la diffusion Compton. La formule (138) donne la
+section efficace globale, compte tenu de la diffusion élastique et de la
+diffusion avec changement de fréquence. I1 s'agit donc de la section efficace des processus Thomson et Compton :
+
+Distinguons, comme nous l'avons déjà fait, le cas des rayons X mous et des
+rayons X durs 3
+
+a) Photons X mous :  est  devant l'extension des
+
+fonctions  et  : on peut remplacer e par 1 dans l'intégravion
+
+des formules (139) et (140),
+
+La diffusion Thomson donne une section efficace
+
+et 1a diffusion "Thomson + Compton" une section efficace 
+
+On en déduit que la diffusion est élastique (uniquement Thomson).
+
+Le recul produit par l'impact du photon X mou, peu énergique, est "encaissé"
+l'atome tout entier qui reste dans le même état quantique : le photon ne change
+pas de fréquence. Il existe une certeine enalogie avec l'effet Méssbauer âans
+lequel le recul est "encaissé" par un réseau tout entier et non par les atomes
+individuels qui le constituent.
+
+% 186
+\[
+\tag{141}=
+\]
+
+ Photons X durs : L est petit devant l'extension des
+
+fonctions  et . L'exponentielle 
+
+oscille très rapidement
+pour , ce qui rend négligeables les intégrales correspondantes, Si on
+exclut la diffusion en avant, on a
+
+tandis que la diffusion "Thomson + Compton" donne
+
+La diffusion, dans les directions autres que la direction avant,
+est uniquement du type Compton (avec changement de fréquence).
+
+Si on se souvient que  est la section efficace
+différentielle de diffusion classique d'un électron, tout se passe alors
+comme si les Z électrons diffusaient indépendamment les uns des autres : Le
+recul produit par l'impact du photon X dur, très énergique, est encaissé non
+plus par l'atome, mais par les électrons individuels.
+
+La mesure de la section efficace de diffusion des photons X durs
+est donc proportionnelle au nombre d'électrons diffuseurs et permet la mesure
+
+du numéro atomique (cf expériences de Bækla).
+ 
+% 187
+
+7°) Interprétation physique et npronriétés essentielles de
+
+a) Interprétation approchée :
+
+En première approximation, on peut ne pas tenir compte du
+fait que  et ne commutent pas dans l'expression (130), les
+considérer comme des nonbres et effectuer le produit de convolution entre
+les deux distributions de Dirac. On assimile alors  à la quantité
+
+ce qui constitue l'approximation classique
+
+Par un raisonnement analogue à celui développé à propos de
+, on montre que cette quantité, , que l'on appelle la
+Fonction de Corrélation spatio-temporelle de Van Hove, représente la probabilité
+pour qu'une particule quelconque du système étant en un point donné,
+une particule .quélconque du système (la même ou ue autre) soit à une distance
+vectorielle ? de ce point, un instant t plus tard
+b) Effets quantiques :
+
+Cependant le fait que  et  ne commutent pas fait que
+ n'est pas égal à cette différence est responsable d'effets
+purement quantiques,
+
+Par exemple  est manifestement réel alors que 
+
+est en général complexe. En effet, on peut écrire, d'après (130)
+
+ ne commutent pas.
+
+De façon plus précise, en effectuant le changement de variable muette
+
+% 188
+
+L'état initial du système diffuseur
+
+étant stationnaire, la valeur moyenne  n'est pas modifiée par une
+translation dans le temps de  si bien que l'on a :
+On aboutit donc à la relation
+
+\[
+\tag{142}=
+\]
+qui était évidente a priori puisque d'après (129), elle constitue la condition
+nécessaire et suffisante pour que  soit réel.
+c) Valeur asymptotique de 
+On doit s'attendre à ce que les corrélations disparaissent
+lorsque  où . Or en l'absence de corrélations, la valeur
+moyenne d'un produit est égele au produit des valeurs moyennes. On a donc
+
+Remarque : On aurait dû en fait écrire . L'état initial du
+système diffuseur étant stationnaire, les densités ne dépendent pas du temps.
+On déduit donc d'après (130) :
+
+asymptotique
+
+Pour un système homogène p est constant et égale à N/V.
+On a alors
+
+% 189
+\[
+\tag{144}=
+\]
+\[
+\tag{145}=
+\]
+La quantité physiquement intéressante, pour la mesure des corrélations
+spatio-temporelles est la différence entre  et sa partie asymptotique, si bien que nous poserons :
+
+On a alors
+
+Or la deuxième intégrale s'écrit
+
+et représente le produit de  par la transformée de Fourier d'un produit
+
+de convolution, qui est égale au produit des transformées de Fourier. On a
+
+donc
+
+D'où
+
+On en déduit donc que la contribution à  de la valeur asymptotique de
+ permet de décrire la diffusion élastique alors que la contribution de
+ permet de décrire la diffusion inélastique.
+à) Portée de la corrélation. Temps de corrélation :
+
+Nous avons vu que c'est finalement la quantité  qui
+mesure les corrélations spatio-temporelles entre les particules du centre
+
+diffuseur. Cette quantité tend vers zéro lorsque
+
+% 190
+\[
+\tag{146}=
+\]
+\[
+\tag{147}=
+\]
+
+Physiquement, on peut dire que si une particule passe en un
+point donné à un instant donné, elle perturbe la distribution des particules
+aux points environnants et aux instants voisins. C'est cette perturbation qui
+est représentée par . Elle s'évanouit à une distance suffisante et
+au bout d'un temps suffisamment longs qualitativement, on peut définir une
+longueur Re telle que  soit négligeable quel que soit t si
+ représente la portée de la corrélation.
+
+De même, on peut définir un temps T, tel que ,  soit
+négligeable quel que soit r si  représente le temps de corrélation ou de relaxation,
+au bout duquel la perturbation a disparu.
+
+Les notions de portée et de temps de corrélation sont très importants. Leur sens
+physique est très clair, mais il est difficile en général
+de les calculer.
+
+On peut qualitativement dire, la "partie inélastique" de S (X)
+étant la transformée de Tourier de , que la diffusion inélastique
+
+n'est importante que si les inégalités suivantes sont satisfaites
+
+e) Condition de validité de l'approximation quasistatique :
+Nous pouvons maintenant revenir aux conditions de validité de
+
+l'approximation quasistatique.
+
+colors
+% 191
+
+
+\[
+\tag{148}=
+\]
+
+\[
+\tag{149}=
+\]
+
+Nous avons vu qu'il faut que le triangle AOB soit pratiquement isocèle et
+notamment on doit avoir
+
+Or , avec 
+
+D'où  (d'après(147))
+
+en appelant V, la vitesse de la particule incidente.
+
+De même AB = | X | (d'après(1l6))
+
+Finalement l'inégalité (148) s'écrit
+
+soit R,
+
+TD est le temps mis par la particule pour parcourir une distance égale à la
+portée de la corrélation.
+
+Si ce temps T est très court devant le temps de relaxation To la particule
+incidente va trop vite pour être sensible aux corrélations temporelles : la
+diffusion est décrite par la corrélation spatiale . On peut dire
+
+ à un instant
+
+encore que la particule diffusée voit le centre diffuseur fig
+donné si elle va suffisamment vite. D'où le nom d'approximation quasistatique
+et le signification physique de l'inégalité (149).
+
