@@ -1,18 +1,18 @@
-\chapter{}%
+\part{Application des fonctions de Green à l'étude du spectre du hamiltonien}%APPLICATION DES FONCTIONS DE GREEN A L'ETUDE DU SPECTRE DU HAMILTONTEN
 %
 \section{Introduction}%
 % 88 
-APPLICATION DES FONCTIONS DE GREEN A L'ETUDE DU SPECTRE DU HAMILTONTEN
 
-Nous avons, dans les chapitre précédents, développé le formalisme de Feynman.
+
+Nous avons, dans les chapitres précédents, développé le formalisme de Feynman.
 Ceci nous a amené tout naturellement à l'étude de
 la fonction de Green de l'équation de Schrödinger et à celle de sa transformée
-de Fourier, le propagateur,
+de Fourier, le propagateur.
 
 Nous avons ainsi fait connaissance avec certains objets mathématiques, d'une
 utilisation très courante en physique théorique moderne et qui se révèlent très
 importants pour l'étude d'un grand nombre
-de problèmes,
+de problèmes.
 
 Nous allons, dans cette partie du cours, passer en revue un
 certain nombre de ces problèmes afin de nous familiariser un peu plus
@@ -21,199 +21,237 @@ d'introduire des notions très importantes qui nous serviront constamment
 par la suite.
 
 Le thème général de notre étude sera la recherche des valeurs
-propres et des états propres d'un hamiltonien  constitué d'une partie
+propres et des états propres d'un hamiltonien $\mc{H}$ constitué d'une partie
 , dont le spectre est supposé connu, et d'une perturbation V. Cela pourra être
 le cas d'un système libre placé dans un potentiel extérieur ou de 
 deux systèmes couplés par une interaction. Nous nous attacherons, en outre,
-à donner une image physique des états propres de Fb en étudiant comment
-ils peuvent s'obtenir, dans une approche temporelle, à partir de ceux de
-.
+à donner une image physique des états propres de $\mc{H}$ en étudiant comment
+ils peuvent s'obtenir, dans une approche \ul{temporelle}, à partir de ceux de
+$\mc{H}_0$.
 
-Le spectre de ae présentera en général deux parties : un spectre continu et un
+Le spectre de $\mc{H}$ présentera en général deux parties : un spectre continu et un
 spectre discret. Cette division sera respectée dans le
 plan de cette étude qui sera le suivant :
 
 % 89 
-1°) Etude des états stationnaires de collisions (états propres
+1°) \ul{Etude des états stationnaires de collisions} (états propres
 du spectre continu) :
 
-Nous étudierons tout d'abord, de façon mathématique , les états
+Nous étudierons tout d'abord, de façon mathématique, les états
 propres du spectre continu (non normés) satisfaisant à certaines conditions
 aux limites. Ceci nous conduira à l'équation intégrale de la diffusion, ou
-équation de Lippmann-Schwinger
- Nous donnerons ensuite une image physique et temporelle de ces
-états, ce qui nous conduira à la matrice S et à la théorie des collisions.
-Nous terminerons par quelques méthodes d'approximation,
+équation de Lippmann-Schwinger.
 
-2°) Etude des états liés (états propres du spectre discret) :
+Nous donnerons ensuite une image physique et temporelle de ces
+états, ce qui nous conduira à la matrice S et à la théorie des collisions.
+Nous terminerons par quelques méthodes d'approximation.
+
+2°) \ul{Etude des états liés} (états propres du spectre discret) :
 
 Nous verrons l'utilité de la résolvante pour l'étude des états
-liés du hamiltonien  , Ce qui nous donnera une nouvelle théorie des perturbations stationnaires,
+liés du hamiltonien $\mc{H}$, Ce qui nous donnera une nouvelle théorie des perturbations stationnaires.
 
-3°) Etude des états instables :
+3°) \ul{Etude des états instables} :
+
 Nous aborderons enfin le problème des états instables qui, dans
 une certaine mesure, est intermédiaire entre celui des états liés et celui
 des états de collision. Nous donnerons, à partir de la résolvante une théorie de la durée de vie.
 
 % 90
-
-1 - ETATS STATIONNAIRES DE COLLISION
-
-1°) Description du système
+\chapter{ETATS STATIONNAIRES DE COLLISION}% 1
+\section{Introduction}% A
+\subsection{Description du système}% 1°) 
 
 - Le système que nous étudierons sera celui d'une particule
-
-dans un potentiel V (fr). Son hamiltonien s'écrira donc
-H=T+v(r)
-
-T représente le hamiltonien d'énergie cinétique égal à ;
-
- un potentiel décroissant avec la distance plus vite que ,
+dans un potentiel V($\vec{\mt{r}}$). Son hamiltonien s'écrira donc
+\begin{center}
+H=T+v($\vec{\mt{r}}$)
+\end{center}
+T représente le hamiltonien d'énergie cinétique égal à p$^2$/2m ;
+V($\vec{\mt{r}}$) un potentiel décroissant avec la distance plus vite que $\frac{1}{|\vec{\mt{r}}\,|}$,
+non nécessairement central.
 
 - Nous pouvons ramener au problème précédent, celui de deux
-
-non nécessairement central,
-
 particules A et B en interaction. Le hamiltonien s'écrit alors
-
-Le système présente l'inveriance de translation et l'impulsion totale du
+\[
+\mt{H} = \frac{\mt{P}_\mt{A}^2}{2\mt{m}_\mt{A}} + \frac{\mt{P}_\mt{B}^2}{2\mt{m}_\mt{B}} + \mt{V(A,B)}
+\]
+Le système présente l'invariance de translation et l'impulsion totale du
 mouvement est donc constante.
+
 Nous pouvons séparer le mouvement du centre de masse, rectiligne et uniforme,
 du mouvement relatif dont le hamiltonien s'écrit
+\begin{center}
+H = T + V \hspace{2cm} avec \hspace{1cm} T = P$^2$/2m
+\end{center}
 
-m =  (masse réduite)
-
+\begin{minipage}[c]{.35\linewidth}
+\begin{center}
 en posant :
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.55\linewidth}
+\[
+\begin{array}{rl}
+\mt{m} & = \frac{\mt{m}_\mt{A}\mt{m}_\mt{B}}{\mt{m}_\mt{A}+\mt{m}_\mt{B}} \hspace{1cm} \mt{(masse réduite)}\\
+\vec{\mt{P}} & = \frac{\mt{m}_\mt{B}\vec{\mt{P}}_\mt{A}-\mt{m}_\mt{A}\vec{\mt{P}}_\mt{B}}{\mt{m}_\mt{A}+\mt{m}_\mt{B}}\\
+\vec{\mt{r}} & =\vec{\mt{r}}_\mt{A}-\vec{\mt{r}}_\mt{B}
+\end{array}
+\]
+\end{minipage}
 
-%
-Les particules À et B peuvent de plus être douées de degrés
+Les particules A et B peuvent de plus être douées de degrés
 de liberté interne (spin).
 
 - On pourrait envisager le cas plus complexe où A et B sont
-eux-mêmes des états liés de plusieurs particules, par exemple ées atomes.
+eux-mêmes des états liés de plusieurs particules, par exemple des atomes.
+Le hamiltonien relatif s'écrirait alors
+\[
+\mc{H} = \mt{T}_\mt{A,B} + \mt{h}_\mt{A} + \mt{h}_\mt{B} + \mt{V}_\mt{AB}
+\]
+où T$_\mt{A,B}$ représente l'énergie cinétique relative, h$_\mt{A}$ et h$_\mt{B}$ les énergies internes des
+atomes A et B, V$_\mt{AB}$ l'interaction.
 
-Le hamiltonien reiatif s'écrirait alors
-
-où  représente l'énergie cinétique relative, h, et b les énergies internes des
-atomes A et B, Vas l‘interaction.
-
-Un tei cas pourrait conduire à des collisions inélastiques
+Un tel cas pourrait conduire à des collisions inélastiques
 (où les atomes A et B voient leur énergie interne modifiée) ou à des collisions
 de réarrangement où la composition de A et B peut être elle-même
 modifiée).
 
 Nous n'étudierons pas ces cas plus complexes pour ne pas
-alourdir trop l'exposé. En fait, les méthodes que nous ailons étudier
+alourdir trop l'exposé. En fait, les méthodes que nous allons étudier
 s'appliquent parfaitement à ces problèmes.
 
 Nous ne soulèverons pas non plus au début les difficultés
-liées à l‘indiscernabilité des particules et nous considérerons les collisions
+liées à l'indiscernabilité des particules et nous considérerons les collisions
 entre deux particules différentes.
 
-2°) Le spectre de T et de H
+\subsection{Le spectre de T et de H}% 2°) 
 
-a) Spectre de T :
-C'est un spectre continu de O à l'infini que l'on peut écrire
-
-Nous omettrons parfois dans la suite le facteur de normalisation
+\subsubsection{Spectre de T}% a)  :
+C'est un spectre continu de 0 à l'infini que l'on peut écrire
+E$_\mt{i}=\frac{\hbar^2\mt{k}_\mt{i}^2}{2\mt{m}}$. A chaque valeur de E$_\mt{i}$
+sont associés les états propres $|\ \Phi_{\vec{\mt{k}}_\mt{i}}>$
+( avec $|\ \vec{\mt{k}}_\mt{i}\ |=\mt{k}_\mt{i}$ ) qui dans la représentation $\vec{\mt{r}}$
+s'écrivent $<\vec{\mt{r}}\ |\ \Phi_{\vec{\mt{k}}_\mt{i}}>=(\frac{1}{2\pi})^{3/2}\mt{ e}^{\vec{\mt{k}}_\mt{i}.\vec{\mt{r}}}$.
+( Nous omettrons parfois dans la suite le facteur de normalisation $(\frac{1}{2\pi})^{3/2}$ )
 
  
 % 92 
-Le système , lorsqu'on a spécifié éventuellement les
-états de spin des deux particules  et  constitue un système complet
+Le système $|\ \phi_{\vec{\mt{k}}_\mt{i}}>$, lorsqu'on a spécifié éventuellement les
+états de spin des deux particules $\mu_\mt{A}$ et $\mu_\mt{B}$ constitue un système complet
 de fonctions propres. (De façon rigoureuse, il faudrait écrire
-
-. Pour simplifier, nous écrirons les états propres 
-
-
-ou même tant qu'il n'y aura pas d'ambiguité.
+$|\ \vec{\mt{k}}_\mt{i},\,\mu_\mt{A},\,\mu_\mt{B}>$.
+Pour simplifier, nous écrirons les états propres $|\ \phi_{\vec{\mt{k}}_\mt{i}}>$
+ou même $|\ \phi_\mt{i}>$ tant qu'il n'y aura pas d'ambiguité).
 
 Nous ne soulèverons pas ici les difficultés liées au spectre
-continu (les fonctions d'onde représentant  ne sont pas de carré
+continu (les fonctions d'onde représentant $|\ \phi_\mt{i}>$ ne sont pas de carré
 sommable et seuls les paquets d'onde ont un sens physique).
 
-b) Spectre de H :
-Nous  qu'à chaque état propre de T, de va
-leur propre , On peut associer au moins deux états propres
-
- du hamiltonien H, de même valeur propre 
+\subsubsection{Spectre de H}% b)  :
+Nous allons voir qu'à chaque état propre $|\ \phi_\mt{i}>$ de T, de valeur propre
+$\mt{E}_\mt{i}=\frac{\hbar^2\mt{k}_\mt{i}^2}{2\mt{m}}$, on peut associer au moins deux états propres
+$|\ \psi_\mt{i}^\pm>$ du hamiltonien H, de \ul{même valeur} propre $\mt{E}_\mt{i}$
 
 Le spectre de H comprend donc au moins une partie continue qui
 va de zéro à l'infini.
 
 On sait d'autre part que si V est attractif, il y a en plus un
 spectre discret de valeurs négatives, les états correspondants étant les
+états liés : le spectre de H présente donc en général l'aspect suivant :\begin{center}
+\begin{tikzpicture}
+\draw [thick] (0.1,-0.13) -- (0.1,0.13) node [above]{$0$}; \draw [thick] [->] (0.1,0) -- (4,0) node [above]{$+\infty$};
+\foreach \s in {1,2,...,8}
+{
+\draw (-\s*\s/12-0.1,0.1) -- (-\s*\s/12+0.1,-0.1);
+\draw (-\s*\s/12+0.1,0.1) -- (-\s*\s/12-0.1,-0.1);
+}
+\end{tikzpicture} \end{center}
 
-états liés : le spectre de H présente donc en général l'aspect suivant :
-
-Notons que les , qui constituent ce qu'on appellera
+Notons que les $|\ \psi_\mt{i}^\pm>$, qui constituent ce qu'on appellera
 les "états stationnaires de collision", ne forment donc certainement pas
 en général un système complet, car ils ne représentent pas la partie
-
 discrète du spectre.
 
 % 93 
-3°) Plan suivi
-
+\subsection{Plan suivi}% 3°) 
 - Nous allons tout d'abord, de façon purement mathématique, rechercher les états
 propres de H ayant un comportement asymptotique donné,
-que nous appellerons et  (états stationnaires de collision).
+que nous appellerons $|\ \psi_\mt{i}^+>$ et $|\ \psi_\mt{i}^->$ (états stationnaires de collision).
 Pour cela, nous utiliserons les fonctions de Green. Nous serons conduits
 à l'équation intégrale de la diffusion (\S B).
 
 - Nous verrons ensuite à quoi correspondent physiquement les
 états mathématiques ainsi introduits. Nous verrons notamment que si on
-établit adiabatiquement la perturbation V et si on appelle U l'opérateur
-
+établit \ul{adiabatiquement} la perturbation V et si on appelle U l'opérateur
 d'évolution correspondant à cet établissement adiabatique, alors
-
-ce qui justifiera les définitions d'onde entrante et d'onde sortante données à  et à 
+\[
+|\ \psi_\mt{i}^+>=\lim_{\mt{t}_0\to-\infty}\mt{ U(0, t}_0\ |\ \phi_\mt{i}>
+\]
+\[
+|\ \psi_\mt{i}^->=\lim_{\mt{t}_0\to+\infty}\mt{ U(0, t}_0\ |\ \phi_\mt{i}>
+\]
+ce qui justifiera les définitions d'onde entrante et d'onde sortante données à
+$|\ \psi_\mt{i}^+>$ et à $|\ \psi_\mt{i}^->$
 
 - Nous serons alors amenés à étudier la quantité 
+\[
+\mt{S}=\lim_{ \mt{t}_2\to-\infty,\ \mt{t}_1\to+\infty}
+\mt{U}(\mt{t}_1,\mt{t}_2) \hspace{3cm} \mt{(matrice S)}
+\]
 
-(matrice S). 
 - Nous verrons enfin l'utilité des états stationnaires de collision
 pour le calcul des sections efficaces de collision.
 
-B. Approche mathématique.
-
-1°) Problème mathématique
-
-Les états propres du spectre continu de pie sont donnés par
+\section{Approche mathématique}% B
+\subsection{Problème mathématique}% 1°) 
+Les états propres du spectre continu de $\mc{H}$ sont donnés par
 l'équation de Schrödinger indépendante du temps :
-
-% 94
-
-Posons E =
-
-(1) devient alors
-
 \[
-\tag{2}=
+\tag{1}-\frac{\hbar^2}{2\mt{m}}\ \Delta\psi(\vec{\mt{r}}\,) + \mt{V}(\vec{\mt{r}}\,)\ \psi(\vec{\mt{r}}\,)
+ = \mt{E}\ \psi(\vec{\mt{r}}\,) \hspace{3cm} (\mt{E}>0)
+\]
+% 94
+Posons \hspace{1.5cm} E $=\frac{\hbar^2\mt{k}^2}{2\mt{m}}$ \hspace{1.5cm}
+V$(\vec{\mt{r}}\,)=\frac{\hbar^2}{2\mt{m}}$ U(r) \hspace{1.5cm}
+(1) devient alors
+\[
+\tag{2}\big[-\Delta + \mt{U}(\vec{\mt{r}}\,)\ \big]\ \psi(\vec{\mt{r}}\,)=\mt{k}^2\ \psi(\vec{\mt{r}}\,)
+\]
+Nous cherchons les solutions de (2) $\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}\,)$ qui
+lorsque | $\vec{\mt{r}}$ | tend vers l'infini ont pour forme asymptotique
+\[
+\Lambda_\pm(\vec{\mt{r}}\,)=\mt{e}^{\mt{i}\vec{\mt{k}}_\mt{i}\vec{\mt{r}}}
++ \mt{f}_\pm(\vec{\mt{k}}_\mt{i},\,\theta,\,\phi)\ \frac{\mt{e}^{\pm}\mt{i k}_\mt{i}\mt{r}}{r}
+\hspace{2cm} \mt{avec} \hspace{1cm} \mt{k}_\mt{i}=|\,\vec{\mt{k}}_\mt{i}\,| \ \ ;\ \ \mt{r}=|\,\vec{\mt{r}}\ |
 \]
 
-Nous cherchons les solutions de ( qui lorsque | r | tend vers
-
-l'infini ont pour forme asymptotique 
-
-ce qui signifie que l'on a, lorsque | r | tend vers l'infini :
+ce qui signifie que l'on a, lorsque | $\vec{\mt{r}}$ | tend vers l'infini :
 
 \[
-\tag{3}=
+\tag{3}\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}\,)-\Lambda_\pm(\vec{\mt{r}}\,)=\mt{O}\left(\frac{1}{\mt{r}}\right)
 \]
 Nous appellerons ces solutions ondes stationnaires de collisions entrantes
-et sortantes,
+et sortantes.
+
 Le fait qu'il existe des solutions asymptotiques de cette forme pour un
-potentiel U (x) quelconque n'est pes évident. Nous pouvons ici
-établir une condition nécessaire de son existence : il faut que U (r) décroisse plus vite que 
+potentiel U($\vec{\mt{r}}\,$) quelconque \ul{n'est pas évident}. Nous pouvons ici
+établir une condition \ul{nécessaire} de son existence : \ul{il faut que U$(\vec{\mt{r}}\,)$ décroisse plus vite que 1/r}.
 
-En effet, aussi bien e que sont solutions de
-
-l'équation "non perturbée",
+En effet, aussi bien e$^{\mt{i}\vec{\mt{k}}_\mt{i}\vec{\mt{r}}}$ que
+$\frac{\mt{e}^{\mt{i k}_\mt{i}}\mt{r}}{\mt{r}}$ sont solutions de
+l'équation "non perturbée" $(\Delta+\mt{k}_\mt{i}^2)$ f $=$ 0.
 
 % 95
 
 Il en résulte que
+\[
+\begin{array}{rl}
+\big[\Delta+\mt{k}_\mt{i}^2-\mt{U}(\vec{\mt{r}}\,)\big] \big[\mt{A}_\pm(\vec{\mt{r}}\,)-\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}\,)\big] & =  \\
+ & 
+\end{array}
+\]
 
 Or  décroit en 1/r lorsque r + , quel que soit
  (d'après la forme du laplacien en coordonnées sphériques).
@@ -240,6 +278,7 @@ Nous montrons par le même raisonnement que , s'il
 
 
 
+\subsection{}%
 2°) Fonction de Green de
 
 Pour déterminer, si elles existent, les fonctions ,
@@ -333,7 +372,8 @@ G sont donc les solutions à onde sortante (ou entrante),
 
 % 99
 
-3°) Equation intésrale de 1e diffusion
+\subsection{}%
+3°) Equation intégrale de 1e diffusion
 
 Reprenons maintenant l'équation (k) et traitons le second
 
@@ -411,6 +451,7 @@ Il nous reste maintenant, comme nous l'avons fait dans les
 chapitres précédents, à nous effranchir de la représentation r et à donner une forme
 intrinsèque à l'équation intégrale (12).
 
+\subsection{}%
 4°) Lien entre les fonctions de Green  et le
 propagateur de T
 
@@ -536,6 +577,7 @@ Ce développement constitue le développement de Born de l'état stationnaire
 de collision, Il nous permetira d'obtenir le déveloprement à différents
 ordres de la section efficace différentielle de diffusion.
 
+\subsection{}%
 6°) Propriétés mathématiques des états stationnaires. de collision
 
 - Etats propres de H
@@ -613,6 +655,7 @@ avons donc la relation :
 \]
 % 108
 
+\section{}%
 C - Approche physique
 
 Nous avons, dans le \S B, trouvé des états propres de H
@@ -621,7 +664,7 @@ entrante. Nous avons obtenu pour ces états une équation intégrale et un déve
 en série ainsi que certaines propriétés d'orthogonalité et de fermeture.
 Il nous reste maintenant à dégager la signification physique des états  et 
 
-Nôus allons montrer que  est l'état que L'on obtient
+Nous allons montrer que  est l'état que L'on obtient
 à l'instant t = O en étant parti de l'état libre  à l'instant
 t = -  le couplage V transforme l'état libre initial  en 
 
@@ -654,6 +697,7 @@ d'une coupure, adiabatique du couplage V.
 
 3°) Evolution d'un paquet d'onde formé avec les états stationnaires de collision.
 
+\subsection{}%
 1°) Branchement (ou coupure) adiabatique de la perturbation
 
 Supposons que la perturbation V stationnaire est remplacée
@@ -756,6 +800,7 @@ interprétation physique des états . De
 
 % 113
 
+\subsection{}%
 2°) Introduction progressive de l'état initial
 
 Revenons au couplage stationnaire V.
@@ -810,6 +855,7 @@ avec un amortissement tendant vers zéro.
 
 % 115
 
+\subsection{}%
 3°) Evolution d'un paquet d'ondes
 
 Lemme préliminaire.
@@ -871,6 +917,7 @@ Ces résultats sont indépendants de | t | et on a donc :
 Rappelons que la limite $\epsilon$ , est prise avant la limite  , cette
 dernière signifiant simplement que , x étant la largeur de
 
+\subsubsection{}%
 a) Définition et propriétés du paquet d'ondes libres :
 
 Considérons, dans une situation où V est nul, un paquet d'ondes
@@ -938,6 +985,7 @@ passe sur la région où règnera l‘interaction, suffisamment bien défini en
 portée effective de i'interaction V et pour que son étalement soit négligeable
 durant son passage dans la région de cette portée effective.
 
+\subsubsection{}%
 b) Paquet d'onde formé avec les
 
 Considérons maintenant une situation où l'interaction V ()
@@ -958,6 +1006,8 @@ Nous avons ainsi créé deux paquets d'ondes  parti
 culièrement bien adaptés au problème de la collision. I1 nous reste à voir
 le lien qui existe erire ces paquets d'ondes et le paquet d'ondes libres
  auquel ils correspondent. Raisonnons tout d'abord sur .
+ 
+\subsubsection{}%
 c) Lien entre .
 
 Remplaçons dans (41) par l'expression (17) de l'équation de Lippmann-Schwinger. On obtient : Et
@@ -1034,6 +1084,7 @@ Elle conduit notamment au résultat
 \]
 % 122
 
+\subsubsection{}%
 d) Conclusion et inteprétation physique.
 
 Nous venons donc de montrer que le paquet d'ondes  ,
@@ -1096,6 +1147,7 @@ physique. Elle va nous permettre également d'éclairer sous un jour nouveau
 "l'approche adiabatique" ou celle de l'introduction progressive de l'état
 "initial" faites aux \S 1°) et 2°) :
 
+\subsubsection{}%
 e) Lien avec les 2 autres approches physiques (\S 3-1 et 3-2)
 
 Plus la fonction de répartition  est étroite autour
@@ -1161,9 +1213,12 @@ s'applique et permet de résoudre les problèmes de façon élégante. Nous
 allons d'ailleurs en voir un exemple en appliquant toute l'étude précédente à la
 théorie des collisions.
 
+\section{}%
 D - Application de l'étude précédente : Théorie des collisions
+\subsection{}%
 1°) Définition de la section efficace différentielle de diffusion
 
+\subsubsection{}%
 a) Probabilité de transition :
 
 Soit  la probabilité de trouver à l'instant t le
@@ -1188,6 +1243,7 @@ et on a la relation
 
 % 127
 
+\subsubsection{}%
 b) Flux des particules libres :
 Supposons maintenant que V = O et que la particule est
 toujours libre.
@@ -1205,6 +1261,7 @@ Soit  une surface située en r et perpendiculaire à la vitesse initisle
 de le particule libre : la probabilité totale pour que la particule
 libre soit passée à travers  est
 
+\subsubsection{}%
 c) Définition de la section efficace différentielle de diffusion :
 
 La section efficace différentielle de diffusion pour
@@ -1415,10 +1472,10 @@ matrice
 \]
 % 134
 
+\subsection{}%
 3°) Calcul de o par la théorie formelle des collisions
 
- 
-
+\subsubsection{}%
 a) Introduction : Les calculs à l'aide des paquets d'ondes,
 dont la signification physique est très claire, sont longs et assez pénibles.
 
@@ -1451,6 +1508,7 @@ quantité, puis nous rattacherons cette dérivée à la section efficace.
  
 % 135
 
+\subsubsection{}%
 b) Calcul de 
 
 En dérivant la formule (60) par rapport au temps, on obtient :
@@ -1540,6 +1598,7 @@ et on obtient
 \]
 si (avec  dans )
 
+\subsubsection{}%
 c) Calcul de la section efficace :
 Il ne nous reste plus qu'à calculer le flux de l'onde plane
 incidente . En représentation  et 
@@ -1568,6 +1627,7 @@ avec
 
 Nous retrouvons ainsi l'expression (58),
 
+\subsubsection{}%
 d) Remarques diverses :
 
 a) Ressemblance de la formule () avec la règle d'or de Fermi :
@@ -1628,7 +1688,8 @@ On peut donc dans (5) remplacer . Soit finalement
 \]
 % 140
 
-49°) Théorère optique
+\subsubsection{}%
+4°) Théorème optique
 
 Elle s'écrit, d'après (63),
 
@@ -1698,6 +1759,7 @@ la partie imasinaire de l'amplitude de diffusion vers l'avant  qui
 
 décrit l'absorption sur le faisceau incident.
 
+\subsubsection{}%
 5°) Approximation de Born
 
 Nous avons vu dans les paragraphes précédents que la quantité
@@ -1733,11 +1795,13 @@ ni de ses applications.
 
 %13
 
+\section{}%
 E - Matrice S
 Nous allons maintenant définir et étudier de façon précise
 
 la matrice de collision S.
 
+\subsection{}%
 1°) Rappels sur la représentation d'interaction ou "point
 D
 
@@ -1817,10 +1881,10 @@ et nous allons voir dans quelle mesure on peut assimiler
 
 % 146
 
+\subsection{}%
 2°) Définition de la matrice S. Méthode
 
- 
-
+\subsubsection{}%
 a) Position du problème
 
 Soient  et  deux paquets d'ondes libres
@@ -1846,6 +1910,7 @@ limite élément de matrice de la matrice de collision S entre
 
 %
 
+\subsubsection{}%
 b) Définition et propriétés des vecteurs  et 
 
 Dans la représentation de Schrödinger, considérons les deux
@@ -1867,6 +1932,7 @@ On a d'après (88-a) et (88-b) :
 
 % 148
 
+\subsubsection{}%
 c)Limite de 
 
 Considérons la quantité
@@ -1916,11 +1982,12 @@ admet une limite lorsque
 Nous allons étudier maintenant la quantité
 et nous constaterons notamment qu elle n'admet pas de Limite lorsque
 
-3°) Caleul direct 
+\subsection{}%
+3°) Calcul direct 
 
 Au lieu de raisonner sur des paquets d'ondes, nous allons revenir
 à une théorie formelle des collisions et raisonner sur des états libres
-Nous savons qu'il faut alors (cf \S C et D) introduire dans l'interaction un
+Nous savons qu'il faut alors (cf \S 3 et 4) introduire dans l'interaction un
 facteur de convergence dont nous avons suffisamment explicité la signification
 physique. Nous allons procéder ici d'une façon quelque peu différente,
 d'une part pour montrer que l'opérateur  n'admet pes en toute rigueur de limite
@@ -1987,8 +2054,10 @@ ne commutant pas, leur ordre dans les intégrales doit être conservé.
 A l'aide de (96), nous allons étudier le développement en
 puissance de V de l'amplitude de probabilité
 
+\subsubsection{}%
 a) Terme d'ordre zéro :
 
+\subsubsection{}%
 b) Terme d'ordre 
 
 Il correspond à ce terme l'ensemble des diagrammes
@@ -2058,6 +2127,7 @@ limite étant
 
 % 15
 
+\subsubsection{}%
 c) Termes d'ordre 2 :
 
 Au terme (104) correspondent les diagrammes du type :
@@ -2137,7 +2207,7 @@ Remarque  importante : Calculons la probabilité de transition
  à la limite . Si i  j, la relation
 (106) nous conduit à l'expression
 
-qui fait intervenir le carré d'une distribution , ce ce qui n'a à pas. £e
+qui fait intervenir le carré d'une distribution , ce ce qui n'a à pas. e
 
 sense L'erreur à ne pas commettre est en effet de faire tendre T, qui
 
@@ -2174,7 +2244,7 @@ le temps de la collision (r ou Y/e) vers l'infini qu'un fois tous
 les calculs mathématiques achevés et les grandeurs physiques obtenues,
 
 % 159
-
+\subsection{}%
 4°) Collisions entre particules identiques
 
 Nous n'avons envisaré jusqu'à présent que le problème de
@@ -2183,6 +2253,7 @@ que le formalisme de la matrice S permet de traiter aisément, en introduisant l
 principe de Pauli, le problème des collisions de particules identiques (bosons ou
 fermions). Nous allons au préalable
 analyser à nouveau une expérience de collision entre particules différentes :
+\subsubsection{}%
 a) Particules différentes
 
 Envisageons, dans un problème à symétrie cylindrique, la diffusion de deux
@@ -2212,6 +2283,7 @@ le détecteur ne permet pas de distinguer les particules différentes , et  et
 détecte donc indifféremment  ou A, la
 probabilité de trouver l'une quelconque des particules dans
 direction  est alors .
+\subsubsection{}%
 b) Particules identiques
 
 Le processus physique est maintenant le suivant
@@ -2290,7 +2362,8 @@ pour deux particules différentes : probabilité
 pour deux bosons : probabilité
 pour deux fermions : probabilité
 
-c) Interprétation dans le formalisme de leynman
+\subsubsection{}%
+c) Interprétation dans le formalisme de Feynman
 
 Dans le formalisme de Feynman, l'amplitude de probabilité
 associée à un processus de diffusion quantique s'obtient en sommant
@@ -2327,6 +2400,7 @@ conduisent au même état final : ie système peut donc prendre
 l'autre type de chemins et tant qu'on ne fait pas de mesure pour se
 voir quel chemin il emprunte, il y a interférence entre les emplitudes
 de probabilité associées aux deux tyres de chemins.
+\subsubsection{}%
 d) Exemple d'application : diffusion de deux électrons
 Supposons l'énergie suffisamment basse pour que l'interaction ne
 dépende pas des spins. Deux cas peuvent alors se présenter :
@@ -2366,8 +2440,10 @@ tion à angle droit est donc dans ce cas .
  
 % 167
 
+\section{}%
 F - Diffusion par un système. de N particules dans l'approximation de Born
 
+\subsection{}%
 1°) Introduction
 
 Au lieu d'envisager, comme nous l'avons fait jusqu'ici la diffusion per un seul
@@ -2399,8 +2475,10 @@ Van Hove (Phys. Rev. 95, 249, 1954) ou à l'ouvrage de Nozières ("le problème
 
 % 166
 
+\subsection{}%
 2°)Notations
 
+\subsubsection{}%
 a) Diverses particules
 
 Soient
@@ -2421,6 +2499,7 @@ la collision :
 D'autre part, l'énergie transférée par la particule incidente au cours de la
 collision est
 
+\subsubsection{}%
 b) Etats du système
 
 L'état des N particules diffusantes dans le système de leur centre
@@ -2449,6 +2528,7 @@ fonctions d'onde
 
 et
 
+\subsubsection{}%
 c) Interaction entre le système diffuseur et la particule incidente
 Nous supposerons que le potentiel d'interaction ne dépend que
 de la position relative de la particule incidente et des particules diffusantes,
@@ -2463,6 +2543,7 @@ faire s'étendent aisément à ce cas.
 
 ment de matrice  de  entre l'état initial
 
+\subsection{}%
 3) Calcul de
 
 et l'état final
@@ -2588,8 +2669,10 @@ placé par On ne retrouve pas le terme, mais cela est
 normal car nous n'avons pas tenu compte ici des degrés de liberté de translation
 du système atomique global,
 
+\subsection{}%
 ) Diffusion élastique ou cohérente
 
+\subsubsection{}%
 a) Définition et exemples :
 On dit que la diffusion est élastique (ou cohérente) si l'état quantique du système
 diffuseur ne change pas au Cours de la diffusion :
@@ -2616,6 +2699,7 @@ et on a donc
 \tag{120}=
 \]
 
+\subsubsection{}%
 b) Calcul de la section efficace :
 
 A l'approximation de Born, la section efficace est donnée par
@@ -2657,6 +2741,7 @@ très utiles pour l'étude de 1s répartition des particules dans le centre diff
 
 Dans le cas de la diffusion par un système cristallin, la formule
 (119) contient notamment la formule de Bragge
+\subsubsection{}%
 c) Discussion de la diffusion Thomson
 
 On appelle "diffusion Thomson" la diffusion élastique de photons X
@@ -2688,8 +2773,9 @@ dans le domaine d'extension de , sauf si | x | est suffisamment voisin
 de zéro : l'intégrale  se moyenne alors à zéro, sauf pour
 La diffusion est fortement concentrée dans la direction avant.
 
+\subsection{}%
 5°) Cas général : section efficace
-
+\subsubsection{}%
 a) Définition :
 En général la diffusion n'est pas élastique, c'est-à-dire que le
 centre diffuseur peut changer d'état quantique. Dans ce cas, l'énergie de la
@@ -2716,6 +2802,7 @@ diffusée. On doit s'attendre également à ce que sa mesure fournisse des
 renseignements plus riches sur la répartition des particules dans le centre
 diffuseur. :
 
+\subsubsection{}%
 b) Calcul de 
 
 La probabilité par unité de temps de voir la particule diffusée
@@ -2751,6 +2838,7 @@ Soit, en posant
 La section efficace se présente ainsi comme le produit de deux quantités dont
 l'une, , ne dépend que de la nature de l'interaction et l'autre,
 ne dépend que du centre diffuseur. Nous allons maintenant étudier cette dernière quantité.
+\subsubsection{}%
 c) Transformation de 
 
 En utilisant la forme intégrale de la distribution de Dirac :
@@ -2780,6 +2868,7 @@ Remarque : I1 apparaît dans l'expression  le produit de convolution de deux
 distributions 6. Les opérateurs  et  relatifs à deux instants différents
 ne commutent pas et il faut donc respecter l'ordre des termes dans l'expression (130).
 
+\subsection{}%
 6°) Interprétation physique Approximation quasistatique
 
  
@@ -2795,6 +2884,7 @@ très fréquente, l'approximation quasistatique.
 \tag{131}=
 \]
 
+\subsubsection{}%
 a) Section efficace :
 
 Très souvent, on ne mesure pas à Ja fois l'angle de diffusion
@@ -2819,6 +2909,7 @@ pendant un cas où le problème est considérablement simplifié, c'est celui de
 
 et implicite en w de » Ce qui rend le calcul difficile. Il existe cel'approximation quasistatique.
 
+\subsubsection{}%
 b) Approximation quasistatique :
 
 Faisons l'hypothèse que le transfert d'énergie est très faible
@@ -2854,6 +2945,7 @@ Nous voyons alors que la section efficace se factorise une fois de plus
 en deux termes dont l'un, , ne dépend que de l'interaction, et l'autre ne
 dépend que du centre diffuseur par l'intermédiaire de .
 
+\subsubsection{}%
 c) Sens physique de :
 
  et  qui sont deux opérateurs relatifs au même instant
@@ -3023,8 +3115,9 @@ du numéro atomique (cf expériences de Bækla).
  
 % 187
 
-7°) Interprétation physique et npronriétés essentielles de
-
+\subsection{}%
+7°) Interprétation physique et propriétés essentielles de
+\subsubsection{}%
 a) Interprétation approchée :
 
 En première approximation, on peut ne pas tenir compte du
@@ -3040,6 +3133,7 @@ Fonction de Corrélation spatio-temporelle de Van Hove, représente la probabili
 pour qu'une particule quelconque du système étant en un point donné,
 une particule .quélconque du système (la même ou ue autre) soit à une distance
 vectorielle ? de ce point, un instant t plus tard
+\subsubsection{}%
 b) Effets quantiques :
 
 Cependant le fait que  et  ne commutent pas fait que
@@ -3067,6 +3161,7 @@ On aboutit donc à la relation
 \]
 qui était évidente a priori puisque d'après (129), elle constitue la condition
 nécessaire et suffisante pour que  soit réel.
+\subsubsection{}%
 c) Valeur asymptotique de 
 On doit s'attendre à ce que les corrélations disparaissent
 lorsque  où . Or en l'absence de corrélations, la valeur
@@ -3106,6 +3201,7 @@ D'où
 On en déduit donc que la contribution à  de la valeur asymptotique de
  permet de décrire la diffusion élastique alors que la contribution de
  permet de décrire la diffusion inélastique.
+\subsubsection{}%
 à) Portée de la corrélation. Temps de corrélation :
 
 Nous avons vu que c'est finalement la quantité  qui
@@ -3142,6 +3238,7 @@ On peut qualitativement dire, la "partie inélastique" de S (X)
 
 n'est importante que si les inégalités suivantes sont satisfaites
 
+\subsubsection{}%
 e) Condition de validité de l'approximation quasistatique :
 Nous pouvons maintenant revenir aux conditions de validité de
 
