@@ -222,8 +222,8 @@ V$(\vec{\mt{r}}\,)=\frac{\hbar^2}{2\mt{m}}$ U(r) \hspace{1.5cm}
 Nous cherchons les solutions de (2) $\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}\,)$ qui
 lorsque | $\vec{\mt{r}}$ | tend vers l'infini ont pour forme asymptotique
 \[
-\Lambda_\pm(\vec{\mt{r}}\,)=\mt{e}^{\mt{i}\vec{\mt{k}}_\mt{i}\vec{\mt{r}}}
-+ \mt{f}_\pm(\vec{\mt{k}}_\mt{i},\,\theta,\,\phi)\ \frac{\mt{e}^{\pm}\mt{i k}_\mt{i}\mt{r}}{r}
+\Lambda_\pm(\vec{\mt{r}}\,)=\mt{e}^{i\vec{\mt{k}}_\mt{i}\vec{\mt{r}}}
++ \mt{f}_\pm(\vec{\mt{k}}_\mt{i},\,\theta,\,\phi)\ \frac{\mt{e}^{\pm i \mt{k}_\mt{i}\mt{r}}}{r}
 \hspace{2cm} \mt{avec} \hspace{1cm} \mt{k}_\mt{i}=|\,\vec{\mt{k}}_\mt{i}\,| \ \ ;\ \ \mt{r}=|\,\vec{\mt{r}}\ |
 \]
 
@@ -240,7 +240,7 @@ potentiel U($\vec{\mt{r}}\,$) quelconque \ul{n'est pas évident}. Nous pouvons i
 établir une condition \ul{nécessaire} de son existence : \ul{il faut que U$(\vec{\mt{r}}\,)$ décroisse plus vite que 1/r}.
 
 En effet, aussi bien e$^{\mt{i}\vec{\mt{k}}_\mt{i}\vec{\mt{r}}}$ que
-$\frac{\mt{e}^{\mt{i k}_\mt{i}}\mt{r}}{\mt{r}}$ sont solutions de
+$\frac{\mt{e}^{\mt{i k}_\mt{i}\mt{r}}}{\mt{r}}$ sont solutions de
 l'équation "non perturbée" $(\Delta+\mt{k}_\mt{i}^2)$ f $=$ 0.
 
 % 95
@@ -248,90 +248,96 @@ l'équation "non perturbée" $(\Delta+\mt{k}_\mt{i}^2)$ f $=$ 0.
 Il en résulte que
 \[
 \begin{array}{rl}
-\big[\Delta+\mt{k}_\mt{i}^2-\mt{U}(\vec{\mt{r}}\,)\big] \big[\mt{A}_\pm(\vec{\mt{r}}\,)-\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}\,)\big] & =  \\
- & 
+\big[\Delta+\mt{k}_\mt{i}^2-\mt{U}(\vec{\mt{r}}\,)\big] \big[\mt{A}_\pm(\vec{\mt{r}}\,)-\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}\,)\big] & = \big[\Delta+\mt{k}_\mt{i}^2-\mt{U}(\mt{r}\,)\big]\mt{A}_\pm(\vec{\mt{r}}\,) \\
+ & =-\mt{U}(\vec{\mt{r}}\,)\mt{A}_\pm(\vec{\mt{r}}\,) + \frac{\mt{e}^{\pm\mt{i k}_\mt{i}\mt{r}}}{r}\ \Delta\mt{f}_\pm(\vec{\mt{k}}_\mt{i},\,\theta,\,\phi)
 \end{array}
 \]
 
-Or  décroit en 1/r lorsque r + , quel que soit
- (d'après la forme du laplacien en coordonnées sphériques).
-On en déduit donc (à moins que U (r) décroisse plus vite que 1/r) que
-la partie principale de  est
+Or $\Delta\mt{f}_\pm(\vec{\mt{k}}_\mt{i},\,\theta,\,\phi)$ décroit en 1/r$^2$ lorsque r $\to\infty$, quel que soit
+f$_\pm(\vec{\mt{k}}_\mt{i},\,\theta,\,\phi)$ (d'après la forme du laplacien en coordonnées sphériques).
+On en déduit donc (à moins que U$(\vec{\mt{r}}\,)$ décroisse plus vite que 1/r$^3$) que
+la partie principale de $\big[\Delta+\mt{k}_\mt{i}^2-\mt{U}(\vec{\mt{r}}\,)\big] \big[\mt{A}_\pm(\vec{\mt{r}}\,)-\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}\,)\big]$ est $-\mt{U}(\vec{\mt{r}}\,)\mt{e}^{i\vec{\mt{k}}_\mt{i}\vec{\mt{r}}}$.
 
-Or, d'après ja définition (3), le partie principale de
-
- est en avec . La partie principale de
-
- doit donc également être en 1/r
-
-(à cause du terme en , les termes en A et U () conduisent à des
+Or, d'après la définition (3), la partie principale de
+$\mt{A}_\pm(\vec{\mt{r}}\,)-\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}\,)$
+ est en 1/r$^\alpha$ avec $\alpha>1$. La partie principale de
+$\big[\Delta+\mt{k}_\mt{i}^2-\mt{U}(\vec{\mt{r}}\,)\big] \big[\mt{A}_\pm(\vec{\mt{r}}\,)-\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}\,)\big]$
+doit donc également être en 1/r$^\alpha$
+(à cause du terme en $\mt{k}_\mt{i}^2$, les termes en $\Delta$ et U$(\vec{\mt{r}}\,)$ conduisent à des
 ordres supérieurs).
 
-Il est donc nécessaire que U (r) décroisse en 1/r avec
+\ul{Il est donc nécessaire} que U$(\vec{\mt{r}}\,)$ décroisse en 1/r$^\alpha$ avec
+$\ul{\alpha>1}$ . Nous imposerons cette condition à U$(\vec{\mt{r}}\,)$ dans la suite de cette
+étude. ({\footnotesize 
+Nous excluons donc le cas du potentiel coulombien en 1/r. On sait
+dans ce cas traiter le problème rigoureusement (cf. Messiah, Mécanique Quantique, t. I, page 357).})
 
-a > 1 . Nous imposerons cette condition à U (F) dans la suite de cette
-étude.
+Nous montrons par le même raisonnement que $\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}\,)$, s'il
+existe, est solution de (2) avec k = k$_i$, et représente donc un état propre H d'énergie ($\hbar^2$k$_i^2$)/2m.
 
-existe, est solution de (2) avec k = k, et représente donc un état propre H d'énergie ()/2m.
-
-Nous montrons par le même raisonnement que , s'il
-
-
-
-\subsection{}%
-2°) Fonction de Green de
-
-Pour déterminer, si elles existent, les fonctions ,
-solutions de (2), admettant A, (F) pour forme asymptotique, 1a méthode
-
+\subsection{Fonction de Green de $\Delta+\mt{k}_\mt{i}^2$}% 2°) 
+Pour déterminer, si elles existent, les fonctions $\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}\,)$,
+solutions de (2), admettant $\mt{A}_\pm(\vec{\mt{r}}\,)$ pour forme  asymptotique, 1a méthode
 de choix est celle des fonctions de Green.
 
- Nous excluons donc le cas du potentiel coulombien en 1/r. On sait
-dans ce cas traiter le problème rigoureusement (cf. Messiah, Mécanique Quantique, t. I, page 357).
-
-%
-\[
-\tag{5}=
-\]
-\[
-\tag{6}=
-\]
-\[
-\tag{7}=
-\]
-
+% 96
 Il suffit en effet d'écrire l'équation (2) formellement
-
 sous la forme inhomogène :
+\[
+\tag{4}(\Delta+\mt{k}_\mt{i}^2)\ \psi(\vec{\mt{r}}\,)=\mt{U}(\vec{\mt{r}}\,)\ \psi(\vec{\mt{r}}\,)
+\]
+et de considérer U$(\vec{\mt{r}}\,)\ \psi(\vec{\mt{r}}\,)$ comme une "source".
 
-et de considérer  comme une "source",
 Nous sommes donc amenés à chercher la fonction de Green
+G$_{\vec{\mt{k}}_\mt{i}}(\vec{\mt{r}}-\vec{\mt{r}}\,')$
+de l'opérateur $\Delta+\mt{k}_\mt{i}^2$ vérifiant les "bonnes conditions"
+aux limites pour r$\to\infty$.
 
- de l'opérateur  vérifiant les "bonnes conditions"
-
-aux limites pour ,
-
-L'équation vérifiée par  est
+L'équation vérifiée par G$_{\vec{\mt{k}}_\mt{i}}(\vec{\mt{r}}-\vec{\mt{r}}\,')$ est
+\[
+\tag{5}(\Delta+\mt{k}_\mt{i}^2)\mt{G}_{\vec{\mt{k}}_\mt{i}}(\vec{\mt{r}}-\vec{\mt{r}}\,')=\delta(\vec{\mt{r}}-\vec{\mt{r}}\,')
+\]
 
 Nous ne préciserons pas à ce niveau la forme des conditions aux limites sur G.
 Nous nous contenterons de choisir a priori parmi
-les solutions deux fonctions G, et G et nous vérifierons qu'elles conduisent
-bien, par résolution de (k), aux fonctions 54 (r).
+les solutions deux fonctions G$_+$ et G$_-$ et nous vérifierons qu'elles conduisent
+bien, par résolution de (4), aux fonctions $\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}\,)$.
 
 Pour résoudre (5), nous allons, selon une méthode qui nous
-est maintenant habituelle, utiliser la transformée de Fourier :
-
-Posons
-
+est maintenant habituelle, utiliser la transformée de Fourier : Posons
+\[
+\tag{6}\mt{G}_{\vec{\mt{k}}_\mt{i}}(\vec{\mt{r}}-\vec{\mt{r}}\,')=\left(\frac{1}{2\pi}\right)^3
+\int \mt{G}_{\vec{\mt{k}}_\mt{i}}(\vec{\chi}\,)\mt{e}^{i\vec{\chi}(\vec{\mt{r}}-\vec{\mt{r}}\,')}\mt{d}^3\chi
+\]
 La transformée de Fourier de (3) conduit à :
+\[
+\tag{7}(-\chi^2+\mt{k}_\mt{i}^2)\ \mt{G}_{\vec{\mt{k}}_\mt{i}}(\vec{\chi})=1
+\]
 
-L'équation (7) est analogue à l'équation (27) de la page
-. Sa solution générale s'écrit (cf page 71)
-
+L'équation (7) est analogue à l'équation (27) du chapitre 5
+. Sa solution générale s'écrit :
+\[
+\mt{G}_{\vec{\mt{k}}_\mt{i}}(\vec{\chi})=\frac{1}{2\mt{k}_\mt{i}}\left\{\mc{P}\left[\frac{1}{\chi-\mt{k}_\mt{i}}\right]-\lambda\delta(\chi-\mt{k}_\mt{i})
+-\mc{P}\left[\frac{1}{\chi+\mt{k}_\mt{i}}\right]+\lambda'\delta(\chi+\mt{k}_\mt{i})\right\}
+\]
 Envisageons a priori les solutions
+\[
+\left\{
+\begin{array}{rl}
+\lambda & =-i\pi \\
+\lambda' & =+i\pi
+\end{array}
+\right.
+\hspace{2cm}\mt{et}\hspace{1cm}
+\left\{
+\begin{array}{rl}
+\lambda & =+i\pi \\
+\lambda' & =-i\pi
+\end{array}
+\right.
+\]
 
 % 97
-
 Elles donnent
 
 Soit, en faisant le changement de variable $\epsilon$ =  :
