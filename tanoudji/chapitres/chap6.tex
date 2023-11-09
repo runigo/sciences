@@ -336,238 +336,382 @@ Envisageons a priori les solutions
 \end{array}
 \right.
 \]
-
 % 97
 Elles donnent
-
-Soit, en faisant le changement de variable $\epsilon$ =  :
-
-Ce sont les deux fonctions  que nous allons choisir a priori pour
-notre problème : elles correspondent aux contours d'intégration des figures a) et b),
-
-Nous constatons que  ne sont fonctions que de  et
-
-nous allons les écrire G (x).
-
-Pour obtenir , il suffit d'utiliser la formule (6) : en passant en coordonnées
-cylindriques avec r = r' pour axe polaire et en posant | r - r'. | = p, (6) devient
-
-% 98
-
-et après intégration sur 6 :
-
 \[
-\tag{27}=
+\mt{G}_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\chi})=\lim_{\epsilon'\to 0_+}\frac{-1}{2\mt{k}_\mt{i}}\left[\frac{1}{\chi-\mt{k}_\mt{i}\mp\mt{i}\epsilon'}-\frac{1}{\chi+\mt{k}_\mt{i}\pm\mt{i}\epsilon'}\right]
+\]
+\[
+=\lim_{\epsilon'\to 0_+}\frac{1}{\mt{k}_\mt{i}^2-\chi^2\pm 2\mt{i}\mt{k}_\mt{i}\epsilon'}
+\]
+Soit, en faisant le changement de variable $\epsilon$ = $2\mt{k}_\mt{i}\epsilon'$ :
+\[
+\tag{8}\mt{G}_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\chi})=\lim_{\epsilon\to 0_+}\frac{1}{\mt{k}_\mt{i}^2-\chi^2\pm \mt{i}\epsilon}
+\]
+Ce sont les deux fonctions G$_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\chi})$ que nous allons choisir a priori pour
+notre problème : elles correspondent aux contours d'intégration des figures a) et b).
+
+\vspace{0.3cm}
+\begin{minipage}[c]{.45\linewidth}
+\begin{center} \begin{tikzpicture}
+\draw [very thick] (-2.25,0) -- (-1.45,0); \draw [very thick] (-0.75,0) -- (0.75,0); \draw [very thick] (1.45,0) -- (2.25,0);
+\draw (-1,-0.05) node [below]{-k$_\mt{i}$}; \draw (1.2,0.05) node [above]{+k$_\mt{i}$};
+\draw (-1.2,-0.1) -- (-1,0.1); \draw (-1.2,0.1) -- (-1,-0.1); \draw [very thick] (-1.45,0)  arc (180:0:0.35);
+\draw (1,-0.1) -- (1.2,0.1); \draw (1,0.1) -- (1.2,-0.1); \draw [very thick] (0.75,0)  arc (-180:0:0.35);
+\end{tikzpicture}
+
+(a) : G$_{\vec{\mt{k}}_\mt{i}}^+(\chi)$
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+\begin{center} \begin{tikzpicture}
+\draw [very thick] (-2.25,0) -- (-1.45,0); \draw [very thick] (-0.75,0) -- (0.75,0); \draw [very thick] (1.45,0) -- (2.25,0);
+\draw (-1,0.05) node [above]{$-$k$_\mt{i}$}; \draw (1.2,-0.05) node [below]{$+$k$_\mt{i}$};
+\draw (-1.2,-0.1) -- (-1,0.1); \draw (-1.2,0.1) -- (-1,-0.1); \draw [very thick] (-1.45,0)  arc (-180:0:0.35);
+\draw (1,-0.1) -- (1.2,0.1); \draw (1,0.1) -- (1.2,-0.1); \draw [very thick] (0.75,0)  arc (180:0:0.35);
+\end{tikzpicture}
+
+(b) : G$_{\vec{\mt{k}}_\mt{i}}^-(\chi)$
+\end{center}
+\end{minipage}
+\vspace{0.3cm}
+
+Nous constatons que G$^\pm$ ne sont fonctions que de $\chi^2$ et
+nous allons les écrire G$^\pm(\chi^2)$.
+
+Pour obtenir G$_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}-\vec{\mt{r}'})$, il suffit d'utiliser la formule (6) : en passant en coordonnées
+cylindriques avec $\vec{\mt{r}}-\vec{\mt{r}'}$ pour axe polaire et en posant $|\vec{\mt{r}}-\vec{\mt{r}'}|=\rho$, (6) devient
+% 98
+\[
+\mt{G}_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}-\vec{\mt{r}}\;')=\frac{1}{(2\pi)^3}\int_0^\infty 2\pi\ \chi^2\mt{ d}\chi\mt{ G}^\pm(\chi^2)\int_0^\pi \mt{e}^{\mt{i}\chi\rho\cos\theta}\sin\theta\mt{ d}\theta
+\]
+et après intégration sur $\theta$ :
+\[
+\mt{G}_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}-\vec{\mt{r}}\;')=\frac{1}{\mt{i}\rho}\frac{1}{(2\pi)^2}\int_0^\infty\chi\mt{d}\chi(\mt{ e}^{\mt{i}\chi\rho}-\mt{e}^{-\mt{i}\chi\rho}) \mt{ G}^\pm(\chi^2)
+\]
+\[
+=\frac{1}{\mt{i}\rho}\frac{1}{(2\pi)^2}\int_{-\infty}^\infty\chi\mt{d}\chi\mt{ e}^{\mt{i}\chi\rho}\mt{ G}^\pm(\chi^2)
+\]
+\[
+=\frac{1}{\mt{i}\rho}\frac{1}{(2\pi)^2}\int_{-\infty}^\infty\chi\mt{d}\chi\mt{ e}^{\mt{i}\chi\rho}\ \frac{1}{\mt{k}_\mt{i}^2-\chi^2\pm \mt{i}\epsilon}
 \]
 
 Pour calculer cette intégrale par la méthode des résidus, il faut fermer
-le contour d'intégration par un demi-grand cercle dans le plan des x tel
-
-que  tende vers zéro. Il faut donc fermer le contour
-
+le contour d'intégration par un demi-grand cercle dans le plan des $\chi$ tel
+que | e$^{\mt{i}\chi\rho}$ | $=$ e$^{-\mc{I}\mt{m}\chi\rho}$ tende vers zéro. Il faut donc fermer le contour
 dans le demi-plan supérieur
 
- Résidu
+\vspace{0.3cm}
+\begin{minipage}[c]{.45\linewidth}
+\begin{center} \begin{tikzpicture}
+\draw [very thick] (-2.25,0) -- (-1.45,0); \draw [very thick] (-0.75,0) -- (0.75,0); \draw [very thick] (1.45,0) -- (2.25,0);
+\draw (-1,-0.05) node [below]{$-$k$_\mt{i}$}; \draw (1.2,0.05) node [above]{$+$k$_\mt{i}$};
+\draw (-1.2,-0.1) -- (-1,0.1); \draw (-1.2,0.1) -- (-1,-0.1); \draw [very thick] (-1.45,0)  arc (180:0:0.35);
+\draw (1,-0.1) -- (1.2,0.1); \draw (1,0.1) -- (1.2,-0.1); \draw [very thick] (0.75,0)  arc (-180:0:0.35);
+ \draw [very thick] (-2.25,0)  arc (180:0:2.25);
+ \draw [very thick] (1.25,1.7) -- (1.1,1.95) -- (1.4,1.95);
+\end{tikzpicture}
 
-Soit finalement
+(a) : G$_{\vec{\mt{k}}_\mt{i}}^+(\chi)$
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+\begin{center} \begin{tikzpicture}
+\draw [very thick] (-2.25,0) -- (-1.45,0); \draw [very thick] (-0.75,0) -- (0.75,0); \draw [very thick] (1.45,0) -- (2.25,0);
+\draw (-1,0.05) node [above]{-k$_\mt{i}$}; \draw (1.2,-0.05) node [below]{+k$_\mt{i}$};
+\draw (-1.2,-0.1) -- (-1,0.1); \draw (-1.2,0.1) -- (-1,-0.1); \draw [very thick] (-1.45,0)  arc (-180:0:0.35);
+\draw (1,-0.1) -- (1.2,0.1); \draw (1,0.1) -- (1.2,-0.1); \draw [very thick] (0.75,0)  arc (180:0:0.35);
+ \draw [very thick] (-2.25,0)  arc (180:0:2.25);
+ \draw [very thick] (1.25,1.7) -- (1.1,1.95) -- (1.4,1.95);
+\end{tikzpicture}
 
+(b) : G$_{\vec{\mt{k}}_\mt{i}}^-(\chi)$
+\end{center}
+\end{minipage}
+\vspace{0.3cm}
+
+et on a
 \[
-\tag{9}=
+\mt{G}_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}-\vec{\mt{r}}\;')=2\mt{i}\pi\times\frac{1}{\mt{i}\rho}\ \frac{1}{(2\pi)^2}\mt{Résidu}\left[\frac{\chi\mt{ e}^{\mt{i}\chi\rho}}{\mt{k}_\mt{i}^2-\chi^2\pm \mt{i}\epsilon}\right]
 \]
-G sont donc les solutions à onde sortante (ou entrante),
+ 
+Soit finalement
+\[
+\tag{9}\mt{G}_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}-\vec{\mt{r}}\;')=-\frac{1}{4\pi}\ \frac{\mt{ e}^{\pm\mt{i k}_\mt{i}|\vec{\mt{r}}-\vec{\mt{r}}\;'|}}{|\vec{\mt{r}}-\vec{\mt{r}}\;'|}
+\]
+G$^\pm$ sont donc les solutions à onde sortante (ou entrante)
 
 % 99
+\subsection{Equation intégrale de la diffusion}%3°) 
+Reprenons maintenant l'équation (4) et traitons le second
+membre U$(\vec{\mt{r}})$ $\psi(\vec{\mt{r}})$ comme une source $\rho(\vec{\mt{r}})$.
 
-\subsection{}%
-3°) Equation intégrale de 1e diffusion
-
-Reprenons maintenant l'équation (k) et traitons le second
-
-membre  comme une source .
-
-Nous savons que  permet de construire les solutions
+Nous savons que $\mt{G}_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}-\vec{\mt{r}}\;')$ permet de construire les solutions
+\[
+\tag{10}\psi(\vec{\mt{r}})=\int\mt{G}_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}-\vec{\mt{r}}\;')\ \rho(\vec{\mt{r}}\;')\mt{ d}^3\vec{\mt{r}}\;'
+\]
+\[
+=\int\mt{G}_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}-\vec{\mt{r}}\;')\mt{ U}(\vec{\mt{r}}\;')\ \psi(\vec{\mt{r}}\;')\ \mt{ d}^3\vec{\mt{r}}\;'
+\]
 
 L'équation (10) est une équation intégrale qui remplace
-l'équation ()  satisfaisant (10), satisfait nécessairement (4).
-Mais on peut ajouter à  une solution de l'équation "sans second
-membre" , par exemple ,
+l'équation (4) : $\psi(\vec{\mt{r}})$ satisfaisant (10), satisfait nécessairement (4).
+Mais on peut ajouter à $\psi(\vec{\mt{r}})$ une solution de l'équation "sans second
+membre" $(\Delta+\mt{k}_\mt{i}^2)\ \phi(\vec{\mt{r}})=0$, par exemple e$^{\mt{i}\vec{\mt{k}}_\mt{i}.\vec{\mt{r}}}$.
 
 L'équation intégrale (10) devient alors
+\[
+\tag{11}\psi(\vec{\mt{r}})=\mt{e}^{\mt{i}\vec{\mt{k}}_\mt{i}.\vec{\mt{r}}}+\int\mt{G}_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}-\vec{\mt{r}}\;')\mt{ U}(\vec{\mt{r}}\;')\ \psi(\vec{\mt{r}}\;')\ \mt{ d}^3\vec{\mt{r}}\;'
+\]
 
 Il est facile de s'assurer que toute solution de l'équation
-intégrale (11) satisfait épalement à l'équation (h)e
+intégrale (11) satisfait également à l'équation (4).
 
-Nous admettrons sans discussion que si le potentiel ,
+Nous admettrons sans discussion que si le potentiel U$(\vec{\mt{r}})$,
 qui décroît plus vite que 1/r est suffisamment régulier, l'équation intégrale (11)
-admet une solution pour  et une solution pour
-. Nous montrons par la suite que ces solutions admettent
-
-A  pour forme asmptotique. Nous avons donc ramené le problème que
-
+admet une solution pour G$_{\vec{\mt{k}}_\mt{i}}^+(\vec{\mt{r}}-\vec{\mt{r}}\;')$ et une solution pour
+G$_{\vec{\mt{k}}_\mt{i}}^-(\vec{\mt{r}}-\vec{\mt{r}}\;')$. Nous montrons par la suite que ces solutions admettent
+A$_\pm(\vec{\mt{r}})$ pour forme asmptotique. Nous avons donc ramené le problème que
 nous nous étions posé à la solution de l'équation intégrale :
-
 \[
-\tag{12}=
+\tag{12}\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}})=\mt{e}^{\mt{i}\vec{\mt{k}}_\mt{i}.\vec{\mt{r}}}+\int\mt{G}_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}-\vec{\mt{r}}\;')\mt{ U}(\vec{\mt{r}}\;')\ \psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}\;')\ \mt{ d}^3\vec{\mt{r}}\;'
 \]
-qui porte le nom d'équation intégrale de la diffusion.
+qui porte le nom d'\ul{équation intégrale de la diffusion}.
 
 % 100
-\[
-\tag{4}=
-\]
 
 
-Montrons en effet que les solutions  (dont nous
+Montrons en effet que les solutions $\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}})$ (dont nous
 admettons l'existence) ont le bon comportement asymptotique.
 
 L'intégrale de (12) convergeant, il existe nécessairement
-une valeur de  telle que la contribution à l'intégrale des valeurs
-de telles que  soit négligeable : en d'autres termes,
-on peut toujours prendre  suffisamment grand pour que  soit
+une valeur de | $\vec{\mt{r}}$ | telle que la contribution à l'intégrale des valeurs
+de $\vec{\mt{r}}\,'$ telles que | $\vec{\mt{r}}\,'$ | > | $\vec{\mt{r}}$ | soit négligeable : en d'autres termes,
+on peut toujours prendre | $\vec{\mt{r}}$ | suffisamment grand pour que | $\vec{\mt{r}}\,'$ | soit
+très petit devant | $\vec{\mt{r}}$ |.
 
-très petit devant .
-
+On peut alors développer | $\vec{\mt{r}}-\vec{\mt{r}}\,'$ | = r-$\frac{\vec{\mt{r}}}{|\vec{\mt{r}}|}\vec{\mt{r}}\,'$
  ou encore,
-
-On peut alors développer 
-
-en appelant  le vecteur unitaire dans la direction 6, à 
+en appelant $\vec{\mt{n}}$ le vecteur unitaire dans la direction $\theta$, $\phi$ de $\vec{\mt{r}}$ :
+\[
+|\vec{\mt{r}}-\vec{\mt{r}}\,'|=\mt{r}-\vec{\mt{n}}.\vec{\mt{r}}\,'
+\]
 
 On développe alors :
-
+\[
+\mt{G}_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}-\vec{\mt{r}}\;')\sim-\frac{1}{4\pi}\frac{\mt{e}^{\pm\mt{i k}_\mt{i}\mt{r}}}{\mt{r}}\times\mt{e}^{\mp\mt{i k}_\mt{i}\vec{\mt{n}}.\vec{\mt{r}}\,'}
+\]
 et (12) conduit à :
-
-L'intégrale au second membre n'est plus qu'une fonction de  et de a,
-c'est-à-dire de 6 et  et on peut l'écrire :
-
-et (13), compte tenu de (1h), nous donne bien le comportement asymptotique
+\[
+\tag{13}\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}})\sim
+\mt{e}^{\mt{i}\vec{\mt{k}}_\mt{i}.\vec{\mt{r}}}-
+\frac{1}{4\pi}\frac{\mt{e}^{\mt{i k}_\mt{i}\mt{r}}}{\mt{r}}
+\int\mt{e}^{\mp\mt{i k}_\mt{i}\;\vec{\mt{n}}.\vec{\mt{r}}\,'}\mt{ U}(\vec{\mt{r}}\;')
+\ \psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}\;')\mt{ d}^3\vec{\mt{r}}\;'
+\]
+L'intégrale au second membre n'est plus qu'une fonction de k$_\mt{i}$ et de $\vec{\mt{n}}$,
+c'est-à-dire de $\theta$ et $\phi$ et on peut l'écrire :
+\[
+\tag{14}\mt{f}_\pm(\vec{\mt{k}}_\mt{i},\theta, \phi)=
+-\frac{1}{4\pi}
+\int\mt{e}^{\mp\mt{i k}_\mt{i}\;\vec{\mt{n}}.\vec{\mt{r}}\,'}\mt{ U}(\vec{\mt{r}}\;')
+\ \psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}\;')\mt{ d}^3\vec{\mt{r}}\;'
+\]
+et (13), compte tenu de (14), nous donne bien le comportement asymptotique
 cherché.
 
 Les solutions de l'équation intégrale (12) sont donc bien
 les ondes stationnaires de diffusion cherchées et les fonctions de Green
 choisies a priori étaient bien celles qui correspondaient au problème
-étudié. De plus, la formule (1) nous donne le calcul explicite, connaissant
-
+étudié. De plus, la formule (14) nous donne le calcul explicite, connaissant
 % 101
+l'état stationnaire de collision, de la fonction f$_\pm(\vec{\mt{k}}_\mt{i},\theta, \phi)$, qui comme
+nous le verrons joue un rôle essentiel dans le calcul des sections efficaces.
 
-l'état stationnaire de collision, de la fonction , qui comme
-nous le verrons joue un rôle essentiel dans le calcul des sections efficaces
+{\footnotesize
+Nous pouvons montrer que l'intégrale (14) est toujours convergente à
+l'infini si U$(\vec{\mt{r}}\,)$ décroît plus vite que 1/r. En effet nous pouvons majorer
+$\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}})$ par un nombre M et U$(\vec{\mt{r}}\,')$ par 1/r'$^\alpha$ ($\alpha>1$).
+
+En intégrant d'abord sur es angles polaires de $\vec{\mt{r}}\,'$ par rapport
+à $\vec{\mt{n}}$, il vient
+$
+|\mt{f}|<\frac{\mt{M}}{\mt{k}_\mt{i}}\int\frac{\sin \mt{k}_\mt{i} \mt{r}'}{\mt{r}'^{\alpha+1}}\mt{ r}'^2\mt{ dr}'
+$
+qui converge puisque \ul{$\alpha+1>2$}.
+}
 
 Il nous reste maintenant, comme nous l'avons fait dans les
-chapitres précédents, à nous effranchir de la représentation r et à donner une forme
+chapitres précédents, à nous affranchir de la représentation r et à donner une forme
 intrinsèque à l'équation intégrale (12).
 
-\subsection{}%
-4°) Lien entre les fonctions de Green  et le
-propagateur de T
+\subsection{Lien entre les fonctions de Green G$_\pm(\vec{\mt{r}}-\vec{\mt{r}}\;')$ et le
+propagateur de T}%4°) 
 
 Rappelons que le propagateur avancé ou retardé de T s'écrit
-
-Le relation (6) peut s'écrire
-
 \[
-\tag{15}=
+\mc{G}_\pm(\mt{E}_\mt{i})=\lim_{\epsilon\to 0_+}\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}=\lim_{\epsilon\to 0_+}\frac{1}{\frac{\hbar^2\mt{k}_\mt{i}^2}{2\mt{m}}-\mt{T}\pm\mt{i}\epsilon}
 \]
-Appelons  les états propres de T de valeur propre
-
- représentant une onde plane de vecteur d'onde .
-
-nous pouvons montrer que l'intégrale (13) est toujours convergente à
-l'infini si  décroît plus vite que . En effet nous pouvons majorer
- par un nombre  et  par .
-En intégrant d'abord sur es angles polaires de  par rapport
-à , il vient
-
+{\footnotesize
 La définition que nous donnons ici du propagateur diffère d'un terme
-en ik de celle du chapitre V de la première partie.
+en i$\hbar$ de celle du chapitre V de la première partie.
+}
+
+La relation (6) peut s'écrire
+\[
+\tag{15}\mt{G}^\pm_{\vec{\mt{k}}_\mt{i}}(\vec{\mt{r}}-\vec{\mt{r}}\,')=\lim_{\epsilon\to 0_+}\left(\frac{1}{2\pi}\right)^3
+\int
+\mt{e}^{i\vec{\chi}.\vec{\mt{r}}}
+\frac{1}{\mt{k}_\mt{i}^2-\chi^2\pm \mt{i}\epsilon}
+\mt{e}^{-i\vec{\chi}.\vec{\mt{r}}\,'}
+\mt{d}^3\vec{\chi}
+\]
+
+Appelons $|\;\vec{\chi}>$ les états propres de T de valeur propre $\frac{\hbar^2\chi^2}{2\mt{m}}$
+ représentant une onde plane de vecteur d'onde $\vec{\chi}$.
 
 % 102
+Nous avons les relations
 \[
-\tag{16}=
+\left\{
+\begin{array}{rcl}
+ <\vec{\mt{r}}\;|\;\vec{\chi}> & = & (\frac{1}{2\pi})^{3/2}\mt{e}^{i\vec{\chi}.\vec{\mt{r}}} \\
+ <\vec{\chi}\;|\;\vec{\mt{r}}\;'> & = & (\frac{1}{2\pi})^{3/2}\mt{e}^{-i\vec{\chi}.\vec{\mt{r}}\,'}
+\end{array} \right.
 \]
 
-
-Nous avons les relations
-
-Compte tenu de ces relations et äu fait que l'ensemble des  est
+Compte tenu de ces relations et du fait que l'ensemble des $|\;\vec{\chi}>$ est
 complet, (15) peut s'écrire :
-
+\[
+\mt{G}^\pm_{\vec{\mt{k}}_\mt{i}}(\vec{\mt{r}}-\vec{\mt{r}}\,')=\frac{\hbar^2}{2\mt{m}}
+\lim_{\epsilon\to 0_+}\int
+<\vec{\mt{r}}\;|\;\vec{\chi}>
+<\vec{\chi}\;|\;
+\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}
+\;|\;\vec{\chi}\,'><\vec{\chi}\,'\;|\;\vec{\mt{r}}\;'>
+\mt{d}^3\vec{\chi}\mt{ d}^3\vec{\chi}\,'
+\]
+\[=\frac{\hbar^2}{2\mt{m}}
+\lim_{\epsilon\to 0_+}
+<\vec{\mt{r}}\;|\;
+\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}
+\;|\;\vec{\mt{r}}\;'>
+\]
 Soit
+\[
+\tag{16}\mt{G}^\pm_{\vec{\mt{k}}_\mt{i}}(\vec{\mt{r}}-\vec{\mt{r}}\,')=
+\frac{\hbar^2}{2\mt{m}}
+<\vec{\mt{r}}\;|\;
+\mc{G}_\pm(\mt{E}_\mt{i})
+\;|\;\vec{\mt{r}}\;'>
+\]
 
-Remarque :
-
+\ul{Remarque} :
 Ce résultat peut être obtenu très simplement par ailleurs : l'équation
-(5) vérifiée par (r - Z') est la transformée de Fourier par rapport
-au temps de l'équation vérifiée par la fonction de Green de la particule
-libre (équa. 13-a, p. 6) (à un coefficient en  près). D'autre part les
-conditions aux limites adoptées sur les transformées de Fourier totales
-
-(par rapport au temps et à l'espace) sont les mêmes pour  et
-
+(5) vérifiée par $\mt{G}^\pm_{\vec{\mt{k}}_\mt{i}}(\vec{\mt{r}}-\vec{\mt{r}}\,')$ est la \ul{transformée de Fourier par rapport
+au temps} de l'équation vérifiée par la fonction de Green de la particule
+libre (équa. 13-a, p. 6) (à un coefficient en $\hbar$ près). D'autre part les
+conditions aux limites adoptées sur les "transformées de Fourier totales"
+(par rapport au temps et à l'espace) sont les mêmes pour
+$\mt{G}^\pm_{\vec{\mt{k}}_\mt{i}}(\vec{\mt{r}}-\vec{\mt{r}}\,')$ et
 pour les fonctions de Green retardées et avancées de la particule libre
 (comparer les formules (20) p. 67 et (8) de ce chapitre qui sont identiques à des
 changements de variable évidents près : la "variable d'énergie"
- est remplacée par  la "variable d'impulsion"  par. On en déduit que  est la transformée
- de Fourier par rapport au temps
+$\hbar\omega$ est remplacée par k$_i^2$ et la "variable d'impulsion" k par $\chi$). On en déduit que
+$\mt{G}^\pm_{\vec{\mt{k}}_\mt{i}}(\vec{\mt{r}}-\vec{\mt{r}}\,')$ est la \ul{transformée
+de Fourier par rapport au temps}
 de la fonction de Green retardée ou avancée de la particule libre (à un
-coefficient en H près). Or nous savons (cf pare 81) que la fonction de
-
+coefficient en $\hbar$ près). Or nous savons (cf page 81) que la fonction de
 %
-Green de la particule libre est l'élément de matrice entre 
-de l'opérateur fonction de Green  est donc l'élément de matrice entre  et de la
+Green de la particule libre est l'élément de matrice entre <$\vec{\mt{r}}$ | et | $\vec{\mt{r}}$ '>
+de l'opérateur fonction de Green. $\mt{G}^\pm_{\vec{\mt{k}}_\mt{i}}(\vec{\mt{r}}-\vec{\mt{r}}\,')$ est donc l'élément de matrice entre <$\vec{\mt{r}}$ | et | $\vec{\mt{r}}$ '> de la
 transfornée de Fourier (par rapport au
 temps évidemment) de 1‘opérateur fonction de Green, c'est-à-dire du propagateur
-avancé ou retardé (au coefficient  près). C'est ce qu'exprime
+avancé ou retardé (au coefficient $\hbar^2$/2m près). C'est ce qu'exprime
 la formule (16) ci-dessus.
 
-5°) Equation de Lippmann-Schwinger
+\subsection{Equation de Lippmann-Schwinger}%5°) 
 
 Compte tenu de (16), l'équation intégrale de la diffusion (12)
-
-peut s'écrire en considérant  comme La fonction d'onde du vecteur
-
- dans la représentation  et en notant que
-
-ce qui représente la projection sur  de l'équation entre vecteurs
+peut s'écrire en considérant $\psi_{\vec{\mt{k}}_\mt{i}}^\pm(\vec{\mt{r}}\,)$ comme La fonction d'onde du vecteur
+| $\psi_{\vec{\mt{k}}_\mt{i}}^\pm>$
+ dans la représentation $|\;\vec{\mt{r}}>$ et en notant que
+$<\vec{\mt{r}}\;'\;|$ V $\;|\;\vec{\mt{r}}\;''>=\delta$ ($\vec{\mt{r}}\;'-\vec{\mt{r}}\;'')$ V $(\vec{\mt{r}}\;'\;)$
+\[
+<\vec{\mt{r}}\;|\;\psi_{\vec{\mt{k}}_\mt{i}}^\pm>=
+<\vec{\mt{r}}\;|\;\phi_{\vec{\mt{k}}_\mt{i}}>+
+\int<\vec{\mt{r}}\;|\;\mc{G}_\pm(\mt{E}_\mt{i})\;|\;\vec{\mt{r}}\;'>
+<\vec{\mt{r}}\;|\mt{ V }|\;\vec{\mt{r}}\;''><\vec{\mt{r}}\;''\;|\;\psi_{\vec{\mt{k}}_\mt{i}}^\pm>
+\mt{ d}^3\vec{\mt{r}}\;'\mt{ d}^3\vec{\mt{r}}\;''
+\]
+ce qui représente la projection sur $|\;\vec{\mt{r}}>$ de l'équation entre vecteurs
 d'états :
 \[
-\tag{17}=
+\tag{17}|\;\psi_\mt{i}^\pm>=|\;\phi_\mt{i}>+\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}
+\mt{ V }|\;\psi_\mt{i}^\pm>
 \]
 
 (17) représente l'équation de Lippmann-Schwinger de la diffusion.
 On peut lui associer l'équation conjuguée entre bras :
-
 \[
-\tag{18}=
+\tag{18}<\psi_\mt{i}^\pm\;|=<\phi_\mt{i}\;|+
+<\psi_\mt{i}^\pm\;|\mt{ V }\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}
 \]
-dans laquelle il faut remarquer le changement de signe devant ie
-Nous pouvons donner à l'équation (17) une autre forme, non
+dans laquelle il faut remarquer le changement de signe devant i$\epsilon$.
 
+Nous pouvons donner à l'équation (17) une autre forme, non
 intégrale. Partons de la relation générale entre opérateurs :
+\[
+\frac{1}{\mt{A}}-\frac{1}{\mt{B}}=\frac{1}{\mt{B}}(\mt{B}-\mt{A})\frac{1}{\mt{A}}
+\]
 
 % 104
 \[
-\tag{19}=
+\begin{array}{rcl}
+\mt{et posons \hspace{3cm} A} &=& \mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon\\
+\mt{B} &=&\mt{E}_\mt{i}-\mt{H}\pm\mt{i}\epsilon \\
+\end{array}
+\]
+Nous avons alors \ B$-$A$=-$V \ et
+\[
+\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}-\frac{1}{\mt{E}_\mt{i}-\mt{H}\pm\mt{i}\epsilon}=
+\frac{1}{\mt{E}_\mt{i}-\mt{H}\pm\mt{i}\epsilon}(-\mt{ V })\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}
+\]
+Soit
+\[
+\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}=\frac{1}{\mt{E}_\mt{i}-\mt{H}\pm\mt{i}\epsilon}
+\left[1-\mt{ V }\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}\right]
+\]
+d'où
+\[
+\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}\mt{ V }=\frac{1}{\mt{E}_\mt{i}-\mt{H}\pm\mt{i}\epsilon}
+\left[\mt{ V }-\mt{ V }\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}\mt{ V }\right]
 \]
 \[
-\tag{20}=
+=\frac{1}{\mt{E}_\mt{i}-\mt{H}\pm\mt{i}\epsilon}\mt{ V }
+\left[1-\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}\mt{ V }\right]
+\]
+d'où
+\[
+\tag{19}\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}\mt{ V }|\;\psi_\mt{i}^\pm>=
+\frac{1}{\mt{E}_\mt{i}-\mt{H}\pm\mt{i}\epsilon}\mt{ V}
+\left[\;|\;\psi_\mt{i}^\pm>-\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}\mt{ V }|\;\psi_\mt{i}^\pm>\right]
+\]
+Or le terme entre crochets dans le membre de droite n'est autre que
+$|\;\phi_\mt{i}>$(d'après (17)).
+
+(17) et (19) entraînent donc
+\[
+\tag{20}|\;\psi_\mt{i}^\pm>=|\;\phi_\mt{i}>+\frac{1}{\mt{E}_\mt{i}-\mt{H}\pm\mt{i}\epsilon}\mt{ V }|\;\phi_\mt{i}>
 \]
 
-
-Nous avons alors  et
-
-d'où
-
-Or le terme entre crochets dans le membre de droite n'est autre que
-(d'après (17)).
-(17) et (19) entraînent donc
-
-Remarque :
-
+\ul{Remarque} :
 Nous avons donc remplacé l'équation intégrale (17) par l'équation (20),
 qui n'est plus intégrale. Cependant la difficulté est reportée sur le calcul des
-éléments de matrice  du propagateur
- du Hamiltonien H.
+éléments de matrice < r | $\frac{1}{\mt{E}_\mt{i}-\mt{H}\pm\mt{i}\epsilon}$ | r' > du propagateur
+$\frac{1}{\mt{E}-\mt{H}\pm\mt{i}\epsilon}$ du Hamiltonien H.
 
 % 105
 
