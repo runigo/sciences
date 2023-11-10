@@ -715,127 +715,158 @@ $\frac{1}{\mt{E}-\mt{H}\pm\mt{i}\epsilon}$ du Hamiltonien H.
 
 % 105
 
-Nous savons d'ailleurs (grâce à la remarque du h) qui se transpose sans difficulté)
+Nous savons d'ailleurs (grâce à la remarque du 4°) qui se transpose sans difficulté)
 que cet élément de matrice représente une des fonctions
 de Green solution de l'équation :
+\[
+[\Delta+\mt{k}^2-\mt{U(r)}]\mt{ G}_{\vec{\mt{k}}}(\vec{\mt{r}}-\vec{\mt{r}}\,')
+=\delta(\vec{\mt{r}}-\vec{\mt{r}}\,')
+\]
 
 Nous pouvons obtenir, à partir de l'équation (17), un développement en série de
 l'état stationnaire de collision :
+\[
+\tag{21}|\;\psi_\mt{i}^\pm>=\left[1+\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}\mt{ V }+\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}\mt{ V }\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}\mt{ V }+...\right]|\;\phi_\mt{i}>
+\]
 
-Ce développement constitue le développement de Born de l'état stationnaire
-
-de collision, Il nous permetira d'obtenir le déveloprement à différents
+Ce développement constitue le \ul{développement de Born} de l'état stationnaire
+de collision. Il nous permettra d'obtenir le déveloprement à différents
 ordres de la section efficace différentielle de diffusion.
 
-\subsection{}%
-6°) Propriétés mathématiques des états stationnaires. de collision
+\subsection{Propriétés mathématiques des états stationnaires de collision}% 6°)
+{\bf—} Etats propres de H
 
-- Etats propres de H
+Nous savons déjà que les états stationnaires de collision | $\psi_\mt{i}^+>$
+et | $\psi_\mt{i}^->$ sont états propres de H avec la valeur propre E$_i=\frac{\hbar^2\mt{k}_\mt{i}^2}{2\mt{m}}$.
 
-Nous savons déjà que les états stationnaires de coxlision
-et  sont états propres de H avec la valeur propre 
- Orthonormalisation
+{\bf—} Orthonormalisation
 
-Calculons le produit scalaire 
+Calculons le produit scalaire $<\psi_\mt{j}^+\;|\;\psi_\mt{i}^+>$
 
-En prenant pour  1a forme  et pour  la forme
-, il vient :
-
-%
+En prenant pour $<\psi_\mt{j}^+\;|$ la forme (20) et pour $|\;\psi_\mt{i}^+>$ la forme
+(17), il vient :
 \[
-\tag{22}=
+<\psi_\mt{j}^+\;|\;\psi_\mt{i}^+>=<\phi_\mt{j}\;|\;\phi_\mt{i}>+
+<\phi_\mt{j}\;|\;\frac{1}{\mt{E}_\mt{i}-\mt{T}+\mt{i}\epsilon}\mt{ V }|\;\psi_\mt{i}^+>+
+<\phi_\mt{j}\;|\mt{ V }\frac{1}{\mt{E}_\mt{j}-\mt{H}-\mt{i}\epsilon}\;|\;\psi_\mt{i}^+>
 \]
 \[
-\tag{23}=
+=<\phi_\mt{j}\;|\;\phi_\mt{i}>+
+\frac{1}{\mt{E}_\mt{i}-\mt{E}_\mt{j}+\mt{i}\epsilon}<\phi_\mt{j}\;|\mt{ V }|\;\psi_\mt{i}^+>+
+\frac{1}{\mt{E}_\mt{j}-\mt{E}_\mt{i}-\mt{i}\epsilon}<\phi_\mt{j}\;|\mt{ V }|\;\psi_\mt{i}^+>
 \]
 \[
-\tag{24}=
-\]
-\[
-\tag{25}=
-\]
-\[
-\tag{26}=
+=<\phi_\mt{j}\;|\;\phi_\mt{i}>=\delta({\vec{\mt{k}}_\mt{j}}-{\vec{\mt{k}}_\mt{i}})
 \]
 % 106 
-On montre une formule identique pour  . On a donc :
-
-L'ensemble des et l'ensemble des  , pris séparément
-
-forment donc deux ensembles orthonormés .
+On montre une formule identique pour $<\psi_\mt{j}^-\;|\;\psi_\mt{i}^->$. On a donc :
+\[
+\tag{22}<\psi_\mt{j}^+\;|\;\psi_\mt{i}^+>=\delta({\vec{\mt{k}}_\mt{j}}-{\vec{\mt{k}}_\mt{i}})
+\]
+\[
+\tag{23}<\psi_\mt{j}^-\;|\;\psi_\mt{i}^->=\delta({\vec{\mt{k}}_\mt{j}}-{\vec{\mt{k}}_\mt{i}})
+\]
+L'ensemble des $|\;\psi_\mt{i}^+>$ et l'ensemble des $|\;\psi_\mt{i}^->$, pris séparément
+forment donc \ul{deux ensembles} \ul{orthonormés}.
 
 Nous admettrons que si on ajoute à chacun de ces ensembles
-les vecteurs propres  du spectre discret de H, on obtient un système orthonormé
-complet (il est évident que les  et les  , correspondant à des valeurs propres
+les vecteurs propres $|\;\psi_\beta>$ du spectre discret de H, on obtient un système orthonormé
+complet (il est évident que les $|\;\psi_\beta>$ et les $|\;\psi_\mt{i}^+>$, correspondant à des valeurs propres
 différentes de H sont orthogonaux).
 
 On a donc les relations
-
-Calculons enfin le produit scalaire 
+\[
+\tag{24}\int|\;\psi_\mt{i}^+><\psi_\mt{i}^+\;|\mt{ di}+\sum_\beta|\;\psi_\beta><\psi_\beta\;|=1
+\]
+\[
+\tag{25}\int|\;\psi_\mt{i}^-><\psi_\mt{i}^-\;|\mt{ di}+\sum_\beta|\;\psi_\beta><\psi_\beta\;|=1
+\]
+Calculons enfin le produit scalaire $<\psi_\mt{j}^-\;|\;\psi_\mt{i}^+>$.
 
 Nous avons :
-
-Posons < et considérons  comme 1'élément de matrice entre  et  d'une matrice R,
-dite matrice de
-réaction
-
-% 107
-
-Finalement :
-
 \[
-\tag{27}=
+<\psi_\mt{j}^-\;|\;\psi_\mt{i}^+>=<\phi_\mt{j}\;|\;\phi_\mt{i}>+
+<\phi_\mt{j}\;|\;\frac{1}{\mt{E}_\mt{i}-\mt{T}+\mt{i}\epsilon}\mt{ V }|\;\psi_\mt{i}^+>+
+<\phi_\mt{j}\;|\mt{ V }\frac{1}{\mt{E}_\mt{j}-\mt{H}+\mt{i}\epsilon}\;|\;\psi_\mt{i}^+>
 \]
-Remarque :
-
- sont vecteurs propres de H correspondant
-
-si  et 
-à des valeurs propres différentes. Il est donc normal que la relation
-(27) donne alors
-.
-
-Par définition, nous appellerons élément de matrice entre
- de la matrice S de collision , et nous
-
-avons donc la relation :
-
 \[
-\tag{28}=
+=\delta({\vec{\mt{k}}_\mt{i}}-{\vec{\mt{k}}_\mt{j}})+<\phi_\mt{j}\;|\mt{ V }|\;\psi_\mt{i}^+>
+\left\{
+\frac{1}{\mt{E}_\mt{i}-\mt{E}_\mt{j}+\mt{i}\epsilon}+\frac{1}{\mt{E}_\mt{j}-\mt{E}_\mt{i}+\mt{i}\epsilon}
+\right\}
+\]
+
+{\bf—} Matrice R. Matrice S.
+
+Posons $<\phi_\mt{j}$ | V | $\psi_\mt{i}^+>=$R$_\mt{ji}$ et considérons R$_\mt{ji}$ comme l'élément de
+matrice entre $<\phi_\mt{j}$ | et | $\phi_\mt{i}>$ d'une matrice R,
+dite \ul{matrice de réaction}
+\[
+\tag{26}\mt{R}_\mt{ji}=<\phi_\mt{j}\;|\mt{ R }|\;\phi_\mt{i}>=<\phi_\mt{j}\;|\mt{ V }|\;\psi_\mt{i}^+>
+\]
+% 107
+On a donc :
+\[
+<\psi_\mt{j}^-\;|\;\psi_\mt{i}^+>=\delta({\vec{\mt{k}}_\mt{i}}-{\vec{\mt{k}}_\mt{j}})+
+\mt{R}_\mt{ji}
+\frac{-2\mt{i}\epsilon}{\epsilon^2+(\mt{E}_\mt{i}-\mt{E}_\mt{j})^2}
+\]
+Or
+\[
+\lim_{\epsilon\to0}\frac{2\mt{i}\epsilon}{\epsilon^2+(\mt{E}_\mt{i}-\mt{E}_\mt{j})^2}=
+2\mt{i}\pi\,\delta(\mt{E}_\mt{i}-\mt{E}_\mt{j})
+\]
+Finalement :
+\[
+\tag{27}<\psi_\mt{j}^-\;|\;\psi_\mt{i}^+>=\delta({\vec{\mt{k}}_\mt{i}}-{\vec{\mt{k}}_\mt{j}})-
+2\mt{i}\pi\,\mt{R}_\mt{ji}\,\delta(\mt{E}_\mt{i}-\mt{E}_\mt{j})
+\]
+\ul{Remarque} : si E$_\mt{i}\neq\mt{E}_\mt{j}$, $|\;\psi_\mt{j}^->$ et $|\;\psi_\mt{i}^+>$
+sont vecteurs propres de H correspondant
+à des valeurs propres \ul{différentes}. Il est donc normal que la relation
+(27) donne alors
+\[
+<\psi_\mt{j}^-\;|\;\psi_\mt{i}^+>=0
+\]
+
+Par définition, nous appellerons élément de matrice entre $<\phi_\mt{j}$ | et | $\phi_\mt{i}>$
+\ul{de la matrice S de} \ul{collision} $<\psi_\mt{j}^-\;|\;\psi_\mt{i}^+>$, et nous
+avons donc la relation :
+\[
+\tag{28}\mt{S}_\mt{ji}=\delta({\vec{\mt{k}}_\mt{i}}-{\vec{\mt{k}}_\mt{j}})-
+2\mt{i}\pi\,\mt{R}_\mt{ji}\,\delta(\mt{E}_\mt{i}-\mt{E}_\mt{j})
 \]
 % 108
 
-\section{}%
-C - Approche physique
+\section{Approche physique}% C
 
-Nous avons, dans le \S B, trouvé des états propres de H
-ayant à l'infini un comportement asymptotique en onde plane  onde sortante ou
+Nous avons, dans le \S 2, trouvé des états propres de H
+ayant à l'infini un comportement asymptotique en onde plane $+$ onde sortante ou
 entrante. Nous avons obtenu pour ces états une équation intégrale et un développement
 en série ainsi que certaines propriétés d'orthogonalité et de fermeture.
-Il nous reste maintenant à dégager la signification physique des états  et 
+Il nous reste maintenant à dégager la signification physique des états $|\;\psi_\mt{i}^+>$
+et $|\;\psi_\mt{i}^->$.
 
-Nous allons montrer que  est l'état que L'on obtient
-à l'instant t = O en étant parti de l'état libre  à l'instant
-t = -  le couplage V transforme l'état libre initial  en 
-
-De même nous allons montrer que  est l'état à l'instant t = 0, qui
-sous l'effet de V deviendra l'état  à l'instant t =  (d'ailleurs
- et  se déduisent l'un de l'autre par renversement du temps,
-si l'on fait abstraction des spins),
+Nous allons montrer que $|\;\psi_\mt{j}^+>$ est l'état que l'on obtient
+à l'instant t $=$ 0 en étant parti de l'état libre $|\;\phi_\mt{j}>$ à l'instant
+t $= -\infty$ : le couplage V transforme l'état libre initial $|\;\phi_\mt{j}>$ en $|\;\psi_\mt{j}^+>$.
+De même nous allons montrer que $|\;\psi_\mt{j}^->$ est l'état à l'instant t $=$ 0, qui
+sous l'effet de V deviendra l'état $|\;\phi_\mt{j}>$ à l'instant t $= +\infty$ (d'ailleurs
+$|\;\psi_\mt{j}^->$ et $|\;\psi_\mt{j}^+>$ se déduisent l'un de l'autre par renversement du temps,
+si l'on fait abstraction des spins).
 
 Ces propriétés justifieront le nom d'état stationnaire
-sortant ou entrant donné à  et à .
+sortant ou entrant donné à $|\;\psi_\mt{j}^+>$ et à $|\;\psi_\mt{j}^->$.
 
-Remarque importante :
-
- sont des états propres du hamiltonien H. lis sont donc stationnaires et
- n'évoluent pas au cours du temps. En toute rigueur, les propriétés
-que nous venons d'énoncer sur les liens entre et   sont donc
-inexactes : l'état  qui n'est pas un état propre de H ne pourra pas
-évoluer à l'instant t = O vers l'état  et de même l'état propre
- ne pourra pas évoluer à l'instant t =  vers l'état .
+\ul{Remarque importante} :
+$|\;\psi_\mt{j}^\pm>$ sont des \ul{états propres} du hamiltonien H. Ils sont donc \ul{stationnaires} et
+\ul{n'évoluent pas} au cours du temps. En toute rigueur, les propriétés
+que nous venons d'énoncer sur les liens entre $|\;\psi_\mt{j}^\pm>$ et $|\;\phi_\mt{j}>$ sont donc
+inexactes : l'état $|\;\phi_\mt{j}>$ qui n'est pas un état propre de H ne pourra pas
+évoluer à l'instant t $=$ 0 vers l'état $|\;\psi_\mt{j}^+>$ et de même l'état propre
+$|\;\psi_\mt{j}^->$ ne pourra pas évoluer à l'instant t $= +\infty$ vers l'état $|\;\phi_\mt{j}>$.
 Cependant, nous allons voir que les propriétés que nous avons énoncées
-sont des propriétés limites, valables sous certaines conditions qu'il va
+sont des \ul{propriétés limites}, valables sous certaines conditions qu'il va
 falloir préciser. Nous allons en considérer trois :
 
 1°) Evolution du système sous l'effet d'un branchement, ou
@@ -844,14 +875,24 @@ d'une coupure, adiabatique du couplage V.
 2°) Evolution d'un état initial introduit progressivement
  
 % 109
-
 3°) Evolution d'un paquet d'onde formé avec les états stationnaires de collision.
 
-\subsection{}%
-1°) Branchement (ou coupure) adiabatique de la perturbation
+\subsection{Branchement (ou coupure) adiabatique de la perturbation}% 1°) 
+
+\begin{center} \begin{tikzpicture}
+\draw (0,0) -- (3,0);
+\draw [->] (0,-3) -- (0,3.1) node [left] {t};
+\node at (0,0) [left]{0};
+\draw [densely dashed, <->] (0,0.5)  -- (2,0.5);
+\node at (1.3,0.5) [above] {V};
+\draw [densely dashed, <->] (2,-0.1) -- (2,-2);
+\node at (2,-1) [right]{$\hbar/\epsilon$};
+\draw [line width=1.5pt] (0.01,-3) .. controls (0.01,-1) and (1.5,-0.5) .. (2,0);
+\draw [line width=1.5pt] (0.01,3) .. controls (0.01,1) and (1.5,0.5) .. (2,0);
+%\draw [line width=1.5pt] (1,3) .. controls (1.9,3) and (3.9,1.9) .. (4,1);
+\end{tikzpicture} \end{center}
 
 Supposons que la perturbation V stationnaire est remplacée
-
 par une perturbation dépendant du temps
 (avec e très petit).
 
