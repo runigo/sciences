@@ -891,141 +891,217 @@ d'une coupure, adiabatique du couplage V.
 
 Supposons que la perturbation V stationnaire est remplacée
 par une perturbation dépendant du temps
-(avec e très petit).
-
+\[
+\mt{V e}^{-\frac{\epsilon}{\hbar}|\mt{t}|} \hspace{2cm} \mt{(avec }\epsilon\mt{ très petit).}
+\]
 cela revient à considérer que la perturbation V a été branchée sur. un intervalle
-de temps de l'ordre de  dans le passé et qu'elle est coupée
-dans le futur avec la même constante de temps (cf figure). Lorsque $\epsilon$ ,
+de temps de l'ordre de $\hbar/\epsilon$ dans le passé et qu'elle est coupée
+dans le futur avec la même constante de temps (cf figure). Lorsque $\epsilon\to 0$,
 le branchement ou la coupure deviennent de plus en plus longs et la perturbation
-est pratiquement égale à V sur un très grand intervalle de temps autour de t = O :
+est pratiquement égale à V sur un très grand intervalle de temps autour de t = 0 :
 nous avons un branchement (ou une coupure) adiabatique de
-la perturbation,
+la perturbation.
 
 Envisageons maintenant un instant t très lointain dans le
 passé et antérieur à l'établissement de la perturbation (c'est-à-dire tel
-). Considérons qu'à cet instant, l'état initial est constitué par
-
-une onde libre de vecteur d'onde
-
-Cherchons à déterminer l'état du système  à l'instant . Le
-hamiltonien total du système est  et
-
-nous pouvons développer sa fonction de Green avancée, X  en fonction de
-
-% 110
-
-la fonction de Green avancée de ,
-On obtient alors le développement diagrammatique :
-
-qui permet d'écrire :
-
+$|$t$|$ $>>\hbar/\epsilon$). Considérons qu'à cet instant, l'état initial est constitué par
+une onde libre de vecteur d'onde $|\ \vec{\mt{k}}_\mt{i}>$ :
 \[
-\tag{29}=
+|\ \psi_\mt{i}\mt{(t)}>\;=|\ \phi_\mt{i}\mt{(t)}>\;=|\ \phi_\mt{i}>\mt{e}^{-\frac{\mt{i E}_\mt{i}\mt{ t}}{\hbar}}
+\]
+Cherchons à déterminer l'état du système $\psi_\mt{i}\mt{(0)}>$ à l'instant t $=$ 0. Le
+hamiltonien total du système est $\mc{H}$(t) $=$ T + V(t) = T $+$ V e $^{\frac{\epsilon|\mt{t}|}{\hbar}}$ et
+nous pouvons développer sa fonction de Green avancée, $\mc{K}_0^+$ en fonction de
+% 110
+la fonction de Green avancée $\mc{K}_\epsilon^+$ de T.
+
+On obtient alors le développement diagrammatique :
+\begin{center}
+\begin{tikzpicture}
+\def\espace{2.3}
+\draw (0,-1.5) node {$\bullet$} node [left]{t} -- (0,1.5) node {$\bullet$} node [left]{0};
+\draw (\espace/2,0) node{\bf{=}};
+
+\draw [dashed] (\espace,-1.5) node {$\bullet$} node [left]{t} -- (\espace,1.5) node {$\bullet$} node [left]{0};
+\draw (3*\espace/2,0) node{\bf{+}};
+
+\draw [dashed] (2*\espace,-1.5) node {$\bullet$} node [left]{t} -- (2*\espace+0.9,0) node {$\bullet$} ;
+\draw (2*\espace+0.9,0) circle (0.25);
+\draw (2*\espace+1.2,0.4) node {t'};
+\draw [dashed] (2*\espace+0.9,0) -- (2*\espace,1.5) node {$\bullet$} node [left]{0};
+
+\draw (6.5*\espace/2,0) node{\bf{+}};
+
+\draw [dashed] (4*\espace,-1.5) node {$\bullet$} node [left]{t} -- (4*\espace+0.7,-0.5) node {$\bullet$};
+\draw (4*\espace+0.7,-0.5) circle (0.25);
+\draw (4*\espace+1.2,-0.4) node {t''};
+\draw [dashed] (4*\espace+0.7,-0.5) -- (4*\espace-0.6,0.5) node {$\bullet$};
+\draw (4*\espace-0.6,0.5) circle (0.25);
+\draw (4*\espace-0.1,0.6) node {t'};
+\draw [dashed] (4*\espace-0.6,0.5) -- (4*\espace,1.5) node {$\bullet$} node [left]{0};
+
+\end{tikzpicture} \end{center}
+qui permet d'écrire :
+\[
+\tag{29}|\ \psi_\mt{i}(0)>\;=\mc{K}_\epsilon^+(0,\mt{t})\ |\ \phi_\mt{i}(\mt{t})>
+\]
+\[
+=\mc{K}_0^+(0,\mt{t})\ |\ \phi_\mt{i}(\mt{t})>+\frac{1}{\mt{i}\hbar}
+\int\mc{K}_0^+(0,\mt{t'})\mt{ V(t') }\mc{K}_0^+(\mt{t', t})\ |\ \phi_\mt{i}(\mt{t})>\mt{ dt'}
+\]
+\[
++(\frac{1}{\mt{i}\hbar})^2
+\int\mc{K}_0^+(0,\mt{t'})\mt{ V(t') }\mc{K}_0^+(\mt{t', t''})\ \mt{V(t'')}\ 
+\mc{K}_0^+(\mt{t'', t})\ |\ \phi_\mt{i}(\mt{t})>\mt{ dt' dt''}+...
 \]
 avec :
-
+\[
+\tag{30}\mc{K}_0^+(\mt{t', t''})=\mt{e}^{-\mt{i}\frac{\mt{T(t'}-\mt{t''})}{\hbar}}\theta\mt{(t'}-\mt{t''})
+\]
 Evaluons les termes successifs du développement (29) :
-1er terme :  étant un état propre de T, on a évidemment
- (avec les conventions de phase choisies).
 
-solos
-
- 
+\ul{1$^\mt{er}$ terme} : $|\ \phi_\mt{i}>$ étant un état propre de T, on a évidemment
+\[
+\mc{K}_0^+(0,\mt{t})\ |\ \phi_\mt{i}(\mt{t})>\;=|\ \phi_\mt{i}(0)>\;=|\ \phi_\mt{i}> \hspace{1.5cm} \mt{(avec les conventions de phase choisies).}
+\]
 % 111
 
-2e terme : Le 2e terme peut s‘écrire en tenant compte de (30) et de la
-relation 
+\ul{2$^\mt{e}$ terme} : Le 2e terme peut s'écrire en tenant compte de (30) et de la
+relation $|\ \phi_\mt{i}(\mt{t'})>\;=\mt{e}^{-\frac{\mt{i E}_\mt{i}\mt{ t'}}{\hbar}}|\ \phi_\mt{i}>$
+\[
+\frac{1}{\mt{i}\hbar}
+\int_\mt{t}^0\mt{e}^{\frac{\mt{i T t'}}{\hbar}}\mt{e}^{-\frac{\epsilon\mt{ t'}}{\hbar}}\mt{ V }|\ \phi_\mt{i}(\mt{t'})>\mt{ dt'}=
+\int_\mt{t}^0\mt{e}^{\frac{\mt{(E}_\mt{i}-\mt{T}+\mt{i}\epsilon)}{\mt{i}\hbar}}\mt{ V }|\ \phi_\mt{i}>\mt{ dt'}
+\]
+Comme $-$t$>>\frac{\hbar}{\epsilon}$, nous pouvons remplacer la borne inférieure par $-\infty$
+et nous obtenons $\frac{1}{\mt{E}_\mt{i}-\mt{T}+\mt{i}\epsilon}\mt{ V }|\ \phi_\mt{i}>$
 
-Comme  , nous pouvons remplacer la borne inférieure par
-et nous obtenons 
-
-3e terme : Il s'écrit
-
-Soit, en faisant le changement de variable 
-
-Comme , nous pouvons encore remplacer la borne inférieure par ,
+\ul{3$^\mt{e}$ terme} : Il s'écrit
+\[
+(\frac{1}{\mt{i}\hbar})^2
+\int_\mt{t}^0\mt{dt'}\int_\mt{t}^\mt{t'}\mt{dt'' }
+\mt{e}^{\frac{\mt{i T t'}}{\hbar}}\mt{e}^{-\frac{\epsilon\mt{ t'}}{\hbar}}
+\mt{ V }\mt{e}^{-\mt{i}\frac{\mt{T(t'}-\mt{t''})}{\hbar}}\mt{e}^{-\frac{\epsilon\mt{ t''}}{\hbar}}
+\mt{ V }\mt{e}^{-\frac{\mt{i E}_\mt{i}\mt{ t''}}{\hbar}}\ |\ \phi_\mt{i}>
+\]
+Soit, en faisant le changement de variable
+\[
+\left\{
+\begin{array}{rcl}
+\tau' & = & \mt{t'}-0 \\
+\tau'' & = & \mt{t''}-\mt{t'}
+\end{array}\right.
+\]
+\[
+(\frac{1}{\mt{i}\hbar})^2
+\int_\mt{t}^0\mt{d}\tau'\int_\mt{t}^0\mt{d}\tau''
+\mt{ e}^{\frac{\mt{E}_\mt{i}-\mt{T}+2\mt{i}\epsilon}{\mt{i}\hbar}\tau'}
+\mt{ V }\mt{e}^{\frac{\mt{E}_\mt{i}-\mt{T}+\mt{i}\epsilon}{\mt{i}\hbar}\tau''}
+\mt{ V }|\ \phi_\mt{i}>
+\]
+Comme $-$t$>>\frac{\hbar}{\epsilon}$, nous pouvons encore remplacer la borne inférieure par $-\infty$,
 et nous obtenons
+\begin{center}
+$\frac{1}{\mt{E}_\mt{i}-\mt{T}+2\mt{i}\epsilon}$ V 
+$\frac{1}{\mt{E}_\mt{i}-\mt{T}+\mt{i}\epsilon}\mt{ V }|\ \phi_\mt{i}>$
+\end{center}
+etc...
 
 La loi de formation des termes successifs devient évidente : avec les
 changements de variable
-
-%
-()
 \[
-\tag{31}=
+\left\{
+\begin{array}{rcl}
+\tau' & = & \mt{t'} \\
+\tau'' & = & \mt{t''}-\mt{t'} \\
+\tau''' & = & \mt{t'''}-\mt{t''}
+\end{array}\right.
 \]
-\[
-\tag{32}=
-\]
+etc...
 
 % 112 
 On obtient les termes
-
-Lorsque $\epsilon$ > 0, , chaque terme de la série ainsi obtenue tend vers le terme
-correspondant du développement de Born de.
-
+\begin{center}
+$\frac{1}{\mt{E}_\mt{i}-\mt{T}+\mt{ni}\epsilon}$ V .....
+$\frac{1}{\mt{E}_\mt{i}-\mt{T}+2\mt{i}\epsilon}$ V 
+$\frac{1}{\mt{E}_\mt{i}-\mt{T}+\mt{i}\epsilon}\mt{ V }|\ \phi_\mt{i}>$
+\end{center}
+Lorsque $\epsilon\to0_+$, chaque terme de la série ainsi obtenue tend vers le terme
+correspondant du développement de Born de $|\ \psi_\mt{i}^+>$.
+\[
+|\ \psi_\mt{i}^+>=|\ \phi_\mt{i}>
++\;\mc{G}^+(\mt{E}_\mt{i})\mt{ V }|\ \phi_\mt{i}>
++\;\mc{G}^+(\mt{E}_\mt{i})\mt{ V }\mc{G}^+(\mt{E}_\mt{i})\mt{ V }|\ \phi_\mt{i}>+\;.....
+\]
 Si l'on suppose que les deux développements sont uniformément convergents,
 on en déduit
-
-On montrerait de même que
-
-
-L'état  est l'état à l'instant t = O qui a évolué à
-$\epsilon$ 1
-
-partir d'un état initial d'onde libre établi à un instant antérieur au
-
-branchement adiabatique de la perturbation,
-. La relation (31) signifie donc qu'à la limite où le branchement
-devient de plus en plus lent (e + 0) et où l'instant initial, tout en étant
-antérieur à l'établissement de la perturbation, tend vers = +, l'onde libre
-évolue vers l'état stationnaire de collision d'onde sortante. De même la
-relation (32) signifie qu'à la limite où la coupure devient de) plus en plus
-lente (e + O) et où l'instant final, tout en étant postérieur à la disparition
-de la perturbation, tend vers +, l'état stationnaire de collision
-. d'onde entrante évolue vers l'onde libre, Nous avons ainsi. donné une première
-interprétation physique des états . De 
-
-% 113
-
-\subsection{}%
-2°) Introduction progressive de l'état initial
-
-Revenons au couplage stationnaire V.
-Introduisons à un instant t < O un état d'onde libre 
-. À l'instant t = 0, cet état est devenu
-
 \[
-\tag{33}=
+\tag{31}\lim_{\epsilon\to0_+,\mt{t}\to-\infty} ^{|\mt{t}|>>\hbar/\epsilon}
+\mc{K}^+_\epsilon(0,\mt{ t})\;|\ \phi_\mt{i}\mt{(t)}>\;=|\ \psi_\mt{i}^+>
 \]
- exprime pas simplement car  est pas un état propre
-. de H et la relation (33), développée sur les  , fait intervenir un
+On montrerait de même que
+\[
+\tag{31}\lim_{\epsilon\to0_+,\mt{t}\to+\infty} ^{|\mt{t}|>>\hbar/\epsilon}
+\mc{K}^-_\epsilon(0,\mt{ t})\;|\ \phi_\mt{i}\mt{(t)}>\;=|\ \psi_\mt{i}^->
+\]
+L'état $\mc{K}^+_\epsilon(0,\mt{ t})\ |\ \phi_\mt{i}\mt{(t)}>$ est l'état à l'instant t $=$ 0 qui a évolué à
+partir d'un état initial d'onde libre établi à un instant \ul{antérieur} au
+branchement adiabatique de la perturbation.
+
+La relation (31) signifie donc qu'à la limite où le branchement
+devient de plus en plus lent ($\epsilon\to0$) et où l'instant initial, tout en étant
+antérieur à l'établissement de la perturbation, tend vers $-\infty$, l'onde libre
+évolue vers l'état stationnaire de collision d'onde sortante. De même la
+relation (32) signifie qu'à la limite où la coupure devient de plus en plus
+lente ($\epsilon\to0$) et où l'instant final, tout en étant postérieur à la disparition
+de la perturbation, tend vers $+\infty$, l'état stationnaire de collision
+d'onde entrante évolue vers l'onde libre, Nous avons ainsi. donné une première
+interprétation physique des états $|\ \psi_\mt{i}^\pm>$.
+% 113
+\subsection{Introduction progressive de l'état initial}% 2
+Revenons au couplage stationnaire V.
+
+Introduisons à un instant t $<$ 0 un état d'onde libre 
+$|\ \phi_\mt{i}(\mt{t})>$. A l'instant t $=$ 0, cet état est devenu
+\[
+\tag{33}|\ \psi_\mt{i}(0)>\;=\mt{e}^{\frac{\mt{i H}}{\hbar}\mt{t}}\ |\ \phi_\mt{i}(\mt{t})>\;=
+\mt{e}^{\frac{\mt{i(H}-\mt{E}_\mt{i})}{\hbar}\mt{t}}\ |\ \phi_\mt{i}(\mt{t})>
+\]
+$|\ \phi_\mt{i}(0)>$ ne s'exprime pas simplement car $|\ \phi_\mt{i}>$ n'est pas un état propre
+de H et la relation (33), développée sur les $|\ \psi_\mt{i}^\pm>$, fait intervenir un
 paquet complexe d'ondes de collision : on dit qu'on 8 un régime transitoire
 dû au fait que l'état introduit n'est pas un état propre du hamiltonien.
 Essayons d'échapper à cet inconvénient en envisageent un état introduit
-de façon progressive entre les instants - t et O : de façon plus précise,
-supposons qu'à l'instant t < O, on introduise un état  , à l'instant
- un état à, (, etc. et étudions ce que devient cette superposition linéaire d'états,
- sous l'effet du hamiltonien H à l'instant t = 0.
-
+de façon progressive entre les instants $\tau$ et 0 : de façon plus précise,
+supposons qu'à l'instant t $<$ 0, on introduise un état $\phi_\mt{i}$(t), à l'instant
+t$+\epsilon$ un état $\phi_\mt{i}$(t$+\epsilon$), etc. et étudions ce que devient cette
+\ul{superposition linéaire} d'états, sous l'effet du hamiltonien H à l'instant t $=$ 0.
 Nous obtenons un état
-
-(le facteur 1/r est un facteur de normalisation. Supposons en effet qu'il
-n'y ait pas de couplage et que H = T. Alors
-
-Envisageons maintenant que l'instant  et introduisons alors un facteur de convergence
-$\epsilon$ et/H qui représente un effet d'amortissement des ondes
-introduites ns un passé lointain, on obtient un état
-
-%
 \[
-\tag{35}=
+\tag{34}|\ \psi_\mt{i}(0)>\;=\frac{1}{\tau}\int_{-\tau}^0\mt{e}^{\frac{\mt{i H}}{\hbar}\mt{t}}\ |\ \phi_\mt{i}(\mt{t})>\;\mt{dt}
 \]
-$\epsilon$ 
+\[
+=\frac{1}{\tau}\int_{-\tau}^0
+\mt{e}^{\frac{\mt{i(H}-\mt{E}_\mt{i})}{\hbar}\mt{t}}\ |\ \phi_\mt{i}>\;\mt{dt}
+\]
 
-(le facteur e/H est encore introduit pour des raisons de normalisation :
+(le facteur 1/$\tau$ est un facteur de normalisation. Supposons en effet qu'il
+n'y ait pas de couplage et que H $=$ T. Alors
+$|\ \psi_\mt{i}(0)>\;=\frac{1}{\tau}\int_{-\tau}^0\mt{e}^{-\mt{i}(\mt{E}_\mt{i}-\mt{E}_\mt{i})\mt{t}}\ |\ \phi_\mt{i}>\;\mt{dt}=|\ \phi_\mt{i}>)$.
 
-supposons en effet que H = T. Alors, on montre que .
+Envisageons maintenant que l'instant $\tau\to-\infty$ et introduisons alors un facteur de convergence
+e$^\epsilon\mt{t}/\hbar$ qui représente un effet d'amortissement des ondes
+introduites dans un passé lointain, on obtient un état
+\[
+\tag{35}|\ \psi_\mt{i}^{\epsilon}(0)>\;=\frac{\epsilon}{\hbar}\int_{-\infty}^0\mt{e}^{\frac{\mt{i H}}{\hbar}\mt{t}}
+\mt{e}^{\frac{\epsilon}{\hbar}\mt{t}}\ |\ \phi_\mt{i}(\mt{t})>\;\mt{dt}
+\]
+\[
+=\frac{\epsilon}{\hbar}\int_{-\infty}^0
+\mt{e}^{\frac{\mt{i}}{\hbar}\mt{ (H}-\mt{E}_\mt{i}-\mt{i}\epsilon)\mt{ t}}\ |\ \phi_\mt{i}>\;\mt{dt}
+\]
+(le facteur $\epsilon/\hbar$ est encore introduit pour des raisons de normalisation :
+supposons en effet que H $=$ T. Alors, on montre que $|\ \psi_\mt{i}^{\epsilon}(0)>\;=|\ \phi_\mt{i}>$).
 (35) s'intègre alors immédiatement
 
 et finalement, puisque :
@@ -1198,7 +1274,8 @@ le lien qui existe erire ces paquets d'ondes et le paquet d'ondes libres
 \subsubsection{}%
 c) Lien entre .
 
-Remplaçons dans (41) par l'expression (17) de l'équation de Lippmann-Schwinger. On obtient : Et
+Remplaçons dans (41) par l'expression (17) de l'équation de Lippmann-Schwinger.
+On obtient : Et
 
 Soit, en utilisant la relation de fermeture,
 
@@ -3249,7 +3326,8 @@ Nous avons vu que la section efficace de diffusion élastique
 Lorsque la diffusion s'accompagne d'un changement de fréquence du photon,
 on dit qu'il s'agit de la diffusion Compton. La formule (138) donne la
 section efficace globale, compte tenu de la diffusion élastique et de la
-diffusion avec changement de fréquence. I1 s'agit donc de la section efficace des processus Thomson et Compton :
+diffusion avec changement de fréquence. I1 s'agit donc de la section efficace des
+processus Thomson et Compton :
 
 Distinguons, comme nous l'avons déjà fait, le cas des rayons X mous et des
 rayons X durs 3
