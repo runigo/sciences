@@ -1,4 +1,4 @@
-\chapter{Étude du spectre discret de H au moyen de la résolvanate}
+\chapter{Étude du spectre discret de H au moyen de la résolvante}
 % 192  II - ETUDE DU SPECTRE DISCRET DE H AU MOYEN DE LA RESOLVANTE
 \section{Introduction}
 Après avoir étudié, avec les états stationnaires de collision, la
@@ -132,118 +132,151 @@ reste finie et tend vers $\frac{<\mt{b}\;|\;\lambda>}{<\mt{a}\;|\;\lambda>}$ :
 \frac{<\mt{b}\;|\;\lambda>}{<\mt{a}\;|\;\lambda>}
 \]
 Les $|$ b $>$ formant un système complet, on a encore
-
 \[
-\tag{9}=
+\tag{9}\lim_{\mt{E}\to\mt{E}_\lambda}\frac{1}{\mt{G}_\mt{a}(\mt{E})}\;\mt{G(E)}\;|\;\mt{a}>=
+\sum_\mt{b}|\;\mt{b}>\lim_{\mt{E}\to\mt{E}_\lambda}
+\frac{<\mt{b}\;|\;\mt{G(E}_\lambda)\;|\;\mt{a}>}{\mt{G}_\mt{a}(\mt{E}_\lambda)}
 \]
-Enfin la connaissance de  nous permet grâce à (3) de calculer
-
-qui représente l'amplitude de probabilité pour que le système étant dans l'étet |e >
-à l'instant t = O y soit encore à l'instant t > O,
-
-t étant positif le contour d'intégration est le suivant :
-
+\[
+=\sum_\mt{b}|\;\mt{b}>\frac{<\mt{b}\;|\;\lambda>}{<\mt{a}\;|\;\lambda>}=
+\frac{1}{<\mt{a}\;|\;\lambda)>}\;|\;\lambda>
+\]
+Enfin la connaissance de G$_\mt{a}$(E) nous permet grâce à (3) de calculer
+\[
+<\mt{a}\;|\;\mt{U(t)}\;|\;\mt{a}>\;=\frac{1}{2\mt{i}\pi}\int_\mt{c}\mt{G}_\mt{a}\mt{(E) e}^{-\mt{i}\frac{\mt{Et}}{\hbar}}\mt{ dE}
+\]
+qui représente l'amplitude de probabilité pour que le système étant dans l'état $|$ a $>$
+à l'instant t = 0 y soit encore à l'instant t > 0. t étant positif le contour d'intégration est le suivant :
+\begin{center}
+\begin{tikzpicture}
+\draw [->] (-2.2,-0.2) -- (2.5,-0.2) node [right] {axe réel};
+\draw [very thick] (-2.25,0) -- (2.25,0);
+\draw [very thick] (-2.25,0)  arc (180:360:2.25);
+\draw [very thick] (-1.5,-1.9) -- (-1.2,-1.9) -- (-1.3,-1.6);
+\draw (-1.3, 0) node [above] {c};
+\end{tikzpicture}
+\end{center}
 %%%%196 
 et on a :
-
 \[
-\tag{10}=
+\tag{10}<\mt{a}\;|\;\mt{U(t)}\;|\;\mt{a}>\;=\sum\mt{Res}\left[\mt{G}_\mt{a}\mt{(E) e}^{-\mt{i}\frac{\mt{Et}}{\hbar}}\right]
 \]
-La relation (10) que nous venons d'établir à l'aide de la résolvante est d'ail
-leurs évidente : l'état | a > qui s'écrit à l'instant t = O
-
-devient, à l'instant t :
-
-et l'amplitude de probabilité pour que le système soit dans l'état | a > à l'instant t est bien i Et
-
-2°) Définition des opérateurs F et R :
-
-\subsection{}%
-Les relations (8) et (9) nous conduisent à définir un nouvel opérateur, F(E), par l'identité :
-
 \[
-\tag{11-a}=
+=\sum_\lambda|<\mt{a}\;|\;\lambda>|^2\mt{ e}^{-\mt{i}\frac{\mt{E}_\lambda\mt{t}}{\hbar}}
+\]
+La relation (10) que nous venons d'établir à l'aide de la résolvante est d'ailleurs
+évidente : l'état $|$ a $>$ qui s'écrit à l'instant t = 0
+\[
+|\;\mt{a}>\;=\sum_\lambda|\;\lambda>|<\lambda\;|\;\mt{a}>
+\]
+devient, à l'instant t : $\sum_\lambda|\;\lambda>|<\lambda\;|\;\mt{a}>\mt{e}^{-\mt{i}\frac{\mt{E}_\lambda\mt{t}}{\hbar}}$
+et l'amplitude de probabilité pour que le système soit dans l'état $|$ a $>$ à l'instant t est bien
+\[
+=\sum_\lambda|<\lambda\;|\;\mt{a}>|^2\mt{ e}^{-\mt{i}\frac{\mt{E}_\lambda\mt{t}}{\hbar}}
+\]
+\subsection{Définition des opérateurs F et R}% 2
+Les relations (8) et (9) nous conduisent à définir un nouvel opérateur, F(E), par l'identité :
+\[
+\tag{11-a}<\mt{b}\;|\;\mt{G(E)}\;|\;\mt{a}>\;=\;<\mt{b}\;|\;\mt{F(E)}\;|\;\mt{a}><\mt{a}\;|\;\mt{G(E)}\;|\;\mt{a}>
 \]
 où encore
-
-L'opérateur F(E), d'après (8), n'a pas de singularité lorsque E + E, et on à évidemment l'égalité
-
 \[
-\tag{12}=
+\tag{11-b}<\mt{b}\;|\;\mt{F(E)}\;|\;\mt{a}>\;=\frac{<\mt{b}\;|\;\mt{G(E)}\;|\;\mt{a}>}{<\mt{a}\;|\;\mt{G(E)}\;|\;\mt{a}>}
 \]
-| b > formant un système complet, nous pouvons de même définir l'action de
-
+L'opérateur F(E), d'après (8), n'a pas de singularité lorsque E $\to$ E$_\lambda$, et on a évidemment l'égalité
 \[
-\tag{13}=
+\tag{12}<\mt{a}\;|\;\mt{F(E)}\;|\;\mt{a}>\;=1
+\]
+$|$ b $>$ formant un système complet, nous pouvons de même définir l'action de F(E) sur $|$ a $>$ :
+\[
+\tag{13}\mt{F(E)}\;|\;\mt{a}>\;=\frac{1}{\mt{G}_\mt{a}\mt{(E)}}\;\mt{G(E)}\;|\;\mt{a}>
 \]
 et d'après (9)
+\[
+\tag{14}\mt{F(E}_\lambda)\;|\;\mt{a}>\;=\frac{1}{<\mt{a}\;|\;\lambda>}\;|\;\lambda>
+\]
 
 %%%%197 
-L'opérateur F(E) est donc 1'opérateur qui, iorsque ESE, transforme l'état propre discret | a > de H, en état propre discret | $\lambda$ > de H.
-Appelons maintenant R (E) 1' opérateur défini par son action sur le
+L'opérateur F(E) est donc l'opérateur qui, lorsque E $=$ E$_\lambda$, transforme l'état propre discret $|$ a $>$ de H$_0$, en état propre discret | $\lambda$ > de H.
 
-vecteur | a > :
- est l'élément diagonal de R (E) :
-
-3°) Deuxième expression de CG, (E) :
-\subsection{}%
-Nous sommes maintenant en mesure d'établir une deuxième expression
-rigoureuse, mais plus condensée de .
-De (k), (11) et (15), on déduit :
-
-Soit
-
-L'expression (16) est rigoureuse. Les valeurs propres de H étant Les zéros de
-, le spectre de H est donc fourni par l'équation implicite
-
+Appelons maintenant R(E) l' opérateur défini par son action sur le
+vecteur $|$ a $>$ :
 \[
-\tag{17}=
+\tag{15}\mt{R(E)}\;|\;\mt{a}>\;=\mt{V F(E) }|\;\mt{a}>
 \]
-D'où le nom d'opérateur shift donné à R (E) : ses éléments diagonaux dans l'état
-| a >, pris pour E = Es représentent  différence entre E, et E e
+R$_\mt{a}\mt{(E)}$ est l'élément diagonal de R (E) :
+\[
+\mt{R}_\mt{a}\mt{(E)}=\;<\mt{a}\;|\;\mt{ R(E) }|\;\mt{a}>
+\]
+\subsection{Deuxième expression de G$_\mt{a}\mt{(E)}$}% 3
+Nous sommes maintenant en mesure d'établir une deuxième expression
+rigoureuse, mais plus condensée de G$_\mt{a}\mt{(E)}$.
+De (4), (11) et (15), on déduit :
+\[
+\mt{G}_\mt{a}\mt{(E)}=\frac{1}{\mt{E}-\mt{E}_\mt{a}}+\frac{1}{\mt{E}-\mt{E}_\mt{a}}\;<\mt{a}\;|\;\mt{V G(E) }|\;\mt{a}>
+\]
+\[
+=\frac{1}{\mt{E}-\mt{E}_\mt{a}}+\mt{G}_\mt{a}\mt{(E)}\frac{1}{\mt{E}-\mt{E}_\mt{a}}\;<\mt{a}\;|\;\mt{V F(E) }|\;\mt{a}>
+\]
+\[
+=\frac{1}{\mt{E}-\mt{E}_\mt{a}}+\mt{G}_\mt{a}\mt{(E)}\frac{1}{\mt{E}-\mt{E}_\mt{a}}\;\mt{R}_\mt{a}\mt{(E)}
+\]
+Soit
+\[
+\mt{G}_\mt{a}\mt{(E)}=\frac{1}{\mt{E}-\mt{E}_\mt{a}-\mt{R}_\mt{a}\mt{(E)}}
+\]
+L'expression (16) est rigoureuse. Les valeurs propres de H étant Les zéros de
+(G$_\mt{a}$(E))$^{-1}$, le spectre de H est donc fourni par l'équation \ul{implicite}
+\[
+\tag{17}\mt{E}_\lambda-\mt{E}_\mt{a}=\mt{R}_\mt{a}\mt{(E}_\lambda)
+\]
+D'où le nom d'\ul{opérateur shift} donné à R(E) : ses éléments diagonaux dans l'état
+$|$ a $>$, pris pour E = E$_\lambda$ représentent la différence entre E$_\lambda$ et E$_\mt{a}$.
 
 % 198 —
-
-Remarque : L'équation implicite (17) fournit théoriquement toutes les énergies
+\ul{Remarque} : L'équation implicite (17) fournit \ul{théoriquement toutes} les énergies
 discrètes du hamiltonien H, et non pas uniquement, comme on pourrait le croire,
-l'énergie E, de l'état | à > qui tend vers | à > lorsque y +0.
+l'énergie E$_\alpha$, de l'état $|\;\alpha>$ qui tend vers $|$ a $>$ lorsque V $\to$ 0.
 
-Cependant, pour ce niveau | a >, le déplacement ,
+Cependant, pour ce niveau $|\;\alpha>$, le déplacement R$_\mt{a}$(E$_\alpha) =$ E$_\alpha$ - E$_\mt{a}$
 sera une quantité petite lorsque V sera petit et on pourra en donner des
-expressions approchées intéressantes. L'équation (17) est donc surtout pratiquement utile pour le niveau d'énergie E, qui tend vers E, lorsque V + 0,
-
-4°) Calcul de F(E)
-
-\subsection{}%
-Appelons P, = | a > <a | le projecteur sur l'état | a > et
-, le projecteur complémentaire
+expressions approchées intéressantes. L'équation (17) est donc surtout \ul{pratiquement} utile pour le niveau d'énergie E$_\alpha$ qui tend vers E$_\mt{a}$ lorsque V $\to$ 0.
+\subsection{Calcul de F(E) $|$ a $>$}%4
+Appelons P$_\mt{a}=|\;\mt{a}><\mt{a}\;|$ le projecteur sur l'état $|$ a $>$ et
+Q$_\mt{a}=1-$P$_\mt{a}$ le projecteur complémentaire.
 
 Nous pouvons écrire
-
-Soit, en remplaçant G(E) par  et en remarquant que:
+\[
+\mt{F(E)}\;|\;\mt{a}>\;=\;|\;\mt{a}>\;<\mt{a}\;|\mt{ F(E) }|\;\mt{a}>+\sum_{\mt{b}\neq\mt{a}}\;|\;\mt{b}>\;<\mt{b}\;|\mt{ F(E) }|\;\mt{a}>
+\]
+\[
+=\;|\;\mt{a}>+\mt{ Q}_{\mt{a}}\;\mt{F(E)}\;|\;\mt{a}>
+\]
+\[
+=\;|\;\mt{a}>+\;\frac{1}{\mt{G}_{\mt{a}}\mt{(E)}}\mt{Q}_{\mt{a}}\;\mt{G(E)}\;|\;\mt{a}>
+\]
+Soit, en remplaçant G(E) par G$_0\;+$ G$_0$VG  et en remarquant que Q$_\mt{a}$ G$_0\;|$ a $>\;=0$ :
+\[
+\mt{F(E)}\;|\;\mt{a}>\;=\;|\;\mt{a}>\;+\;\frac{1}{\mt{G}_{\mt{a}}\mt{(E)}}
+\frac{\mt{Q}_{\mt{a}}}{\mt{E-}-\mt{H}_0}\;\mt{V G(E)}\;|\;\mt{a}>
+\]
 
 D'où, finalement, compte tenu de (13) :
-
 \[
-\tag{18}=
+\tag{18}\mt{F(E)}\;|\;\mt{a}>\;=\;|\;\mt{a}>\;+\;
+\frac{1}{\mt{E}-\mt{H}_0}\;\mt{Q}_{\mt{a}}\mt{ V F(E)}\;|\;\mt{a}>
 \]
-
-qui s'écrit par
-
+qui s'écrit pour E $=$ E$_\alpha$
 \[
-\tag{19}=
+\tag{19}\mt{F(E}_\alpha)\;|\;\mt{a}>\;=\;|\;\mt{a}>\;+\;
+\frac{1}{\mt{E}_\alpha-\mt{H}_0}\;\mt{Q}_{\mt{a}}\mt{ V F(E}_\alpha)\;|\;\mt{a}>
 \]
-Or  | a > est, d'après (1), proportionnel à |  > . (19) est donc une
-équation "intégrale" reliant entre eux les vecteurs propres de H et de H et
+Or F(E$_\alpha$) $|$ a $>$ est, d'après (1), proportionnel à $|\;\alpha>$. (19) est donc une
+équation "intégrale" reliant entre eux les vecteurs propres de H et de H$_0$ et
 présente une grande analogie avec l'équation de Lippmam Schwinger reliant les
-états propres de collision | vs" > et les états propres 9, de l'énergie cinétique T :
+états propres de collision $|\;\psi_\mt{i}^\pm>$ et les états propres $\phi_\mt{i}$, de l'énergie cinétique T :
 
-solos
-
- 
-
- 
-%- 109 —
+% 109
 
 Si V est petit, on peut résoudre l'équation (19) par itération : on obtient
 
