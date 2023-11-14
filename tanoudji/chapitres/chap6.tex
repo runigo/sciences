@@ -1093,7 +1093,7 @@ Envisageons maintenant que l'instant $\tau\to-\infty$ et introduisons alors un f
 e$^\epsilon\mt{t}/\hbar$ qui représente un effet d'amortissement des ondes
 introduites dans un passé lointain, on obtient un état
 \[
-\tag{35}|\ \psi_\mt{i}^{\epsilon}(0)>\;=\frac{\epsilon}{\hbar}\int_{-\infty}^0\mt{e}^{\frac{\mt{i H}}{\hbar}\mt{t}}
+\tag{35}|\ \psi_\mt{i}^{(\epsilon)}(0)>\;=\frac{\epsilon}{\hbar}\int_{-\infty}^0\mt{e}^{\frac{\mt{i H}}{\hbar}\mt{t}}
 \mt{e}^{\frac{\epsilon}{\hbar}\mt{t}}\ |\ \phi_\mt{i}(\mt{t})>\;\mt{dt}
 \]
 \[
@@ -1103,220 +1103,294 @@ introduites dans un passé lointain, on obtient un état
 (le facteur $\epsilon/\hbar$ est encore introduit pour des raisons de normalisation :
 supposons en effet que H $=$ T. Alors, on montre que $|\ \psi_\mt{i}^{\epsilon}(0)>\;=|\ \phi_\mt{i}>$).
 (35) s'intègre alors immédiatement
-
-et finalement, puisque :
-
-Ce qui n'est autre que la définition (20) de, D'où :
-
 \[
-\tag{36}=
+|\ \psi_\mt{i}^{(\epsilon)}(0)>\;=
+\frac{\mt{i}\epsilon}{\mt{E}_\mt{i}-\mt{H}+\mt{i}\epsilon}
+\ |\ \phi_\mt{i}>
 \]
-limite
-Nous avons ainsi fourni une deuxième image physique de  :
- est l'état obtenu à l'instant t = O à la limite où l'on a introduit
-de façon progressive des états d'onde libre  depuis l'instant t = - 
+\[
+=\frac{1}{\mt{E}_\mt{i}-\mt{H}+\mt{i}\epsilon}
+\big[\mt{E}_\mt{i}-\mt{H}+\mt{i}\epsilon-(\mt{E}_\mt{i}-\mt{H})\big]
+\ |\ \phi_\mt{i}>
+\]
+\[
+=|\ \phi_\mt{i}>+
+\frac{1}{\mt{E}_\mt{i}-\mt{H}+\mt{i}\epsilon}
+(\mt{H}-\mt{E}_\mt{i})\ |\ \phi_\mt{i}>
+\]
+et finalement, puisque (H$-$E$_\mt{i}$) $|\ \phi_\mt{i}>\;=$ V $|\ \phi_\mt{i}>$ :
+\[
+|\ \psi_\mt{i}^{(\epsilon)}(0)>\;=
+|\ \phi_\mt{i}>+
+\frac{1}{\mt{E}_\mt{i}-\mt{H}+\mt{i}\epsilon}
+\mt{ V }|\ \phi_\mt{i}>
+\]
+Ce qui n'est autre que la définition (20) de $|\ \psi_\mt{i}^+>$. D'où :
+\[
+\tag{36}\lim_{\epsilon\to0}\ |\ \psi_\mt{i}^{(\epsilon)}(0)>\;=|\ \psi_\mt{i}^+>
+\]
+Nous avons ainsi fourni une deuxième image physique de $|\ \psi_\mt{i}^+>$ :
+$|\ \psi_\mt{i}^+>$ est l'état obtenu à l'instant t $=$ O à la limite où l'on a introduit
+de façon progressive des états d'onde libre $|\ \phi_\mt{i}>$ depuis l'instant t $=-\infty$
 avec un amortissement tendant vers zéro.
 
 % 115
 
-\subsection{}%
-3°) Evolution d'un paquet d'ondes
+\subsection{Evolution d'un paquet d'ondes}% 3
+\ul{Lemme préliminaire}
 
-Lemme préliminaire.
 Soit f(x) une fonction suffisamment régulière de x (continue,
-intégrale, différentiable) et soient  les deux fonctions de t définies
+intégrale, différentiable) et soient g$_\pm$(t) les deux fonctions de t définies par
+\[
+\tag{37}\mt{g}_\pm\mt{(t)}=\lim_{\epsilon\to\,0_+}
+\int_{-\infty}^{+\infty}\mt{f(x) }\frac{\mt{e}^{-\mt{ixt}}}{\mt{x}\pm\mt{i}\epsilon}\mt{ dx}
+\]
+Cherchons la limite de g$_\pm$(t) lorsque t$\to\pm\infty$.
 
-Cherchons la limite de  lorsque t ,
-
-Remarque :
-
-I1 est évident que de la façon dmt nous avons posé le problème, la limite
-e , doit être prise avant la limite
-Posons f(x) = f(0) + f(x) - f(0)
-
-Nous avons
-
-Le première intégrale tend vers zéro lorsque
-
- n'a pas de singularité (pour x = 0, elle tend vers
-
-En effet
-f(x) lorsque $\epsilon$ + 0). L'intégrale sur x du produit de cette fonction régulière
-par l'exponentielle oscillante  dont la période en x, F tend vers
-zéro lorsque , tend elle-même vers zéro lorsque , si  est
-
+\ul{Remarque} :
+Il est évident que de la façon dont nous avons posé le problème, la limite
+$\epsilon\to\,0_+$ , doit être prise \ul{avant} la limite t$\to\pm\infty$.
+Posons f(x) $=$ f(0) $+$ f(x) $-$ f(0). Nous avons
+\[
+\tag{38}\mt{g}_\pm\mt{(t)}=\lim_{\epsilon\to\,0_+}\int_{-\infty}^{+\infty}
+\frac{\mt{f(x)}-\mt{f(0)}}{\mt{x}\pm\mt{i}\epsilon}\mt{e}^{-\mt{ixt}}\mt{ dx}+\mt{f(0)}
+\lim_{\epsilon\to\,0_+}\int_{-\infty}^{+\infty}
+\frac{\mt{e}^{-\mt{ixt}}}{\mt{x}\pm\mt{i}\epsilon}\mt{ dx}
+\]
+La première intégrale tend vers zéro lorsque t$\to\pm\infty$.
+En effet $\frac{\mt{f(x)}-\mt{f(0)}}{\mt{x}\pm\mt{i}\epsilon}$ n'a pas de singularité (pour x $=$ 0, elle tend vers f'(x) lorsque $\epsilon\to\,0$). L'intégrale sur x du produit de cette fonction régulière
+par l'exponentielle oscillante e$^{-\mt{ixt}}$ dont la période en x, 1/t, tend vers
+zéro lorsque t$\to\pm\infty$, tend elle-même vers zéro lorsque t$\to\pm\infty$. Si f(x) est
+une courbe en "cloche" de largeur $\Delta$x, la largeur de $\frac{\mt{f(x)}-\mt{f(0)}}{\mt{x}\pm\mt{i}\epsilon}$ est du même
 ordre, et on peut dire de façon plus précise que la contribution de la première
-
-une courbe en "cloche" de largeur Ax, la largeur de est du même
-
- intégrale de (38) devient négligeable dès que la période devient petite
-
-devant, c'est-à-dire dès que 
-
+intégrale de (38) devient négligeable dès que la période 1/|t| devient petite
+devant $\Delta$x, c'est-à-dire dès que |t|>>1/$\Delta$x.
 Quant à la seconde intégrale
-
+\[
+\mt{f(0)}\lim_{\epsilon\to\,0_+}\int_{-\infty}^{+\infty}
+\frac{\mt{e}^{-\mt{ixt}}}{\mt{x}\pm\mt{i}\epsilon}\mt{ dx}
+\]
 nous la calculons, selon une méthode habituelle, par les résidus en fermant
-le contour vers le bas si t > O et vers le haut si t < O.
+le contour vers le bas si t > 0 et vers le haut si t < 0.
 
 % 116
-
 Finalement, on trouve
-
-et
+\[
+\mt{g}_+\mt{(t)}=-2\mt{i}\pi\mt{ f(0) }\theta\mt{(t)}\lim_{\epsilon\to\,0_+}
+\mt{e}^{-\epsilon\mt{t}}=-2\mt{i}\pi\mt{ f(0) }\theta\mt{(t)}
+\]
+\[
+\mt{g}_-\mt{(t)}=2\mt{i}\pi\mt{ f(0) }\theta(-\mt{t)}\lim_{\epsilon\to\,0_+}
+\mt{e}^{\epsilon\mt{t}}=-2\mt{i}\pi\mt{ f(0) }\theta(-\mt{t)}
+\]
 Ces résultats sont indépendants de | t | et on a donc :
 
 \[
-\tag{39-a}=
+\tag{39-a}\lim_{\mt{t}\to-\infty}\lim_{\epsilon\to\,0_+}
+\int_{-\infty}^{+\infty}\mt{f(x) }
+\frac{\mt{e}^{-\mt{ixt}}}{\mt{x}+\mt{i}\epsilon}\mt{ dx}=0
 \]
 \[
-\tag{39-b}=
+\tag{39-b}\lim_{\mt{t}\to+\infty}\lim_{\epsilon\to\,0_+}
+\int_{-\infty}^{+\infty}\mt{f(x) }
+\frac{\mt{e}^{-\mt{ixt}}}{\mt{x}+\mt{i}\epsilon}\mt{ dx}=-2\pi\mt{if(0)}
 \]
 \[
-\tag{39-c}=
+\tag{39-c}\lim_{\mt{t}\to-\infty}\lim_{\epsilon\to\,0_+}
+\int_{-\infty}^{+\infty}\mt{f(x) }
+\frac{\mt{e}^{-\mt{ixt}}}{\mt{x}-\mt{i}\epsilon}\mt{ dx}=2\pi\mt{if(0)}
 \]
 \[
-\tag{39-d}=
+\tag{39-d}\lim_{\mt{t}\to+\infty}\lim_{\epsilon\to\,0_+}
+\int_{-\infty}^{+\infty}\mt{f(x) }
+\frac{\mt{e}^{-\mt{ixt}}}{\mt{x}-\mt{i}\epsilon}\mt{ dx}=0
 \]
-
-Rappelons que la limite $\epsilon$ , est prise avant la limite  , cette
-dernière signifiant simplement que , x étant la largeur de
-
-\subsubsection{}%
-a) Définition et propriétés du paquet d'ondes libres :
-
-Considérons, dans une situation où V est nul, un paquet d'ondes
-libres formé par une superposition linéaire d'ondes planes 
+Rappelons que la limite $\epsilon\to0_+$ , est prise \ul{avant} la limite |t|$\to\infty$ , cette
+dernière signifiant simplement que |t|>>1/$\Delta$x, $\Delta$x étant la \mt{largeur} de f(x).
+\subsubsection{Définition et propriétés du paquet d'ondes libres}% a)
+Considérons, dans une situation où V est nul, un paquet \ul{d'ondes
+libres} $|\ \phi\mt{(t)}>$ formé par une superposition linéaire d'ondes planes $|\ \phi_\mt{i}>$
 (qui seront ici normées à l'unité) :
-
 \[
-\tag{40}=
+\tag{40}|\ \phi\mt{(t)}>\;=\int\mt{c}_\mt{i}\ \mt{e}^{-\mt{i(E}_\mt{i}\mt{t)/}\hbar}\ |\ \phi_\mt{i}>\mt{di}
 \]
-La sommation résume une sommation sur le module  et sur la
-
-direction  du vecteur d'onde de :
-
- est une fonction régulière de  et de  que nous supposerons
-de plus très concentrée autour des valeurs moyennes  et .
+La sommation $\int\mt{c}_\mt{i}\mt{ di}$ résume une sommation sur le module k$_\mt{i}$ et sur la
+direction $\Omega_\mt{i}$ du vecteur d'onde de $|\ \phi_\mt{i}>$ :
+\[
+\int\mt{c}_\mt{i}\mt{ di}=\int\mt{C}(\mt{k}_\mt{i},\Omega_\mt{i})\mt{ k}_\mt{i}^2\mt{ dk}_\mt{i}\mt{ d}\Omega_\mt{i}
+\]
+C({k$_\mt{i},\Omega_\mt{i})$ est une fonction régulière de k$_\mt{i}$ et de $\Omega_\mt{i}$ que nous supposerons
+de plus très concentrée autour des valeurs moyennes $\overline{\mt{k}_\mt{i}}$ et $\overline{\Omega_\mt{i}}$.
 
 % 117
 
-Nous avons ainsi défini un paquet d'ondes libres ,
+Nous avons ainsi défini un paquet d'ondes libres $|\ \phi\mt{(t)}>$,
 dont l'évolution au cours du temps, en l'absence de V, est parfaitement
-connue (équation ),
-Ce paquet d'onde possède une direction moyenne Qi, une vitesse moyenne :  et une
-énergie moyenne , Ces résultats sont classiques. Pour trouver la région de l'espace
+connue (équation 40).
+
+Ce paquet d'onde possède une direction moyenne $\overline{\Omega_\mt{i}}$, une vitesse moyenne $\hbar\overline{\mt{k}_\mt{i}}/$m et une
+énergie moyenne $\hbar^2\overline{\mt{k}_\mt{i}}^2/2$m. Ces résultats sont classiques.
+Pour trouver la région de l'espace
 où se trouve concentré le paquet d'ondes à l'instant t, il faut passer en
-représentation r et appliquer
-la méthode de La phase stationnaire (cf Messiah, page 3).
-Nous supposons que la phase de est telle qu'à
-l'instant t = 0, le paquet se trouve autour de F = 0, dans la
-région où sera appliqué v (r).
-. Nous allons rappeler quelques résultats classiques relatifs
-aux dimensions et à l'étalement de ce paquet d'ondes 
- les dimensions longitucinales et transversales du paquet d'ondes sont
-d'autant plus grandes que la larreur de la fonction  autour de
- et  est plus petite. Nous ferons l'hypothèse que les dispersions en
-direction et en énergie  et  seront suffisamment petites pour que les
-dimensions du paquet d'ondes soient très grandes devant la portée r du
-potentiel :
+représentation $\vec{\mt{r}}$ et appliquer
+la méthode de la phase stationnaire (cf Messiah, page 43).
+
+Nous supposons que la phase de C({k$_\mt{i},\Omega_\mt{i})$ est telle qu'à
+l'instant t = 0, le paquet $|\ \phi\mt{(t)}>$ se trouve autour de $\vec{\mt{r}} = \vec{0}$, dans la
+région où sera appliqué V($\vec{\mt{r}}$).
+
+Nous allons rappeler quelques résultats classiques relatifs
+aux dimensions et à l'étalement de ce paquet d'ondes :
+
+{\bf—} \ul{les dimensions longitudinales et transversales du paquet d'ondes} sont
+d'autant plus grandes que la largeur de la fonction C({k$_\mt{i},\Omega_\mt{i})$ autour de
+$\overline{\mt{k}_\mt{i}}$ et $\overline{\Omega_\mt{i}}$ est plus petite. Nous ferons l'hypothèse que les dispersions en
+direction et en énergie $\Delta\Omega$ et $\Delta\mt{k}$ seront suffisamment petites pour que les
+dimensions du paquet d'ondes soient très grandes devant la portée r$_0$ du
+potentiel :\begin{center}
+\begin{tikzpicture}
+%Onde
+\draw [dashed, <->] (-2.4,2) -- (1.6,2);\draw (-0.4,2) node [above]{$\Delta$x};
+\def\lond{0.35}
+\foreach \s in {-7,-6,...,5}
+{
+\draw (\s*\lond,-1.5) -- (\s*\lond,1.6);
+}
+\draw [->] (1.8,0) -- (3,0);\draw (2.5,0) node [above]{$\vec{\mt{v}}$};
+%Potentiel
+\draw [dashed] (-0.8,0) -- (-0.8,-2);\draw [dashed] (0.8,0) -- (0.8,-2);
+\draw [dashed, <->] (-0.8,-2) -- (0.8,-2);\draw (0,-2) node [below]{r$_0$};
+\draw (0,0) circle (0.8);
+\end{tikzpicture} \end{center}
 % 118
 
-- Etalement du paquet d'ondes : la longueur du paquet d'ondes, , est
-de l'ordre de . Le temps de passage du paquet d'ondes en un point
-
- ( étant la dispersion en énergie T )
+{\bf—} Etalement du paquet d'ondes : la longueur du paquet d'ondes, $\Delta$x, est
+de l'ordre de 1/$\Delta$k. Le temps de passage du paquet d'ondes en un point
+est $\Delta\mt{t}=\frac{\Delta\mt{x}}{\mt{v}}=\frac{\mt{m}}{\hbar\mt{k}\Delta\mt{k}}=\frac{\hbar}{\Delta\mt{E}}$,
+($\Delta\mt{E}$ étant la dispersion en énergie $\frac{\hbar^2\mt{k}\Delta\mt{k}}{\mt{m}}$)
 ce qui n'est autre que l'expression de la quatrième relation d'incertitude
 temps-énergie.
 
-Pendant le temps 1, le paquet d'ondes subit un étalement (dû à
-la dispersion des vitesses Av = dk), Cet étalement est égal à
-
-. Cet étalement peut être considéré comme négligeable tant
-qu'il est très petit devant la longueur Ax du paquet d'ondes, c'est-à-dire
-
-tant que 
-
+Pendant le temps $\tau$, le paquet d'ondes subit un étalement (dû à
+la dispersion des vitesses $\Delta$v$=\frac{\hbar\Delta\mt{k}}{\mt{m}}$). Cet étalement est égal à
+$\tau\Delta$v$=\frac{\hbar\tau\Delta\mt{k}}{\mt{m}}$.
+Cet étalement peut être considéré comme négligeable tant
+qu'il est très petit devant la longueur $\Delta$x du paquet d'ondes, c'est-à-dire tant que
+\[
+\frac{\hbar\tau(\Delta\mt{k})^2}{\mt{m}}<<1
+\]
 Nous ferons l'hypothèse que pendant le temps mis par le paquet d'ondes
-
-pour passer en un point  il subit un étalement négligeable,
+pour passer en un point $\Delta\mt{t}=\frac{\mt{m}}{\hbar\mt{k}\Delta\mt{k}}$, il subit un étalement négligeable,
 c'est-à-dire que l'on a :
-
- soit 
-
-En résumé, nous envisageons donc un paquet d'ondes libres  , qui
+\[
+\hbar\ \Delta\mt{t}\ \frac{(\Delta\mt{k})^2}{\mt{m}}<<1 \hspace{1cm} \mt{soit} \hspace{1cm} \frac{\Delta\mt{k}}{\mt{k}}<<1
+\]
+\ul{En résumé}, nous envisageons donc un paquet d'ondes libres $|\ \phi\mt{(t)}>$, qui
 passe sur la région où règnera l‘interaction, suffisamment bien défini en
-énergie et en direction pour que Ses dimensions soient grandes devant la
+énergie et en direction pour que ses dimensions soient grandes devant la
 portée effective de i'interaction V et pour que son étalement soit négligeable
 durant son passage dans la région de cette portée effective.
-
-\subsubsection{}%
-b) Paquet d'onde formé avec les
-
-Considérons maintenant une situation où l'interaction V ()
+\subsubsection{Paquet d'onde formé avec les $|\ \psi_\mt{i}^\pm>$}% b
+Considérons maintenant une situation où l'interaction V($\vec{\mt{r}}$)
 existe et envisageons le paquet d'ondes formé avec les états de collision
- (ou les états ,avec les mêmes coefficients  que
-ceux que nous avons définis pour le paquet d'ondes libres. A chaque paquet
-d'ondeslibres  vérifiant les conditions du \S a), nous associons
-
-ainsi deux "paquets de collision"  définis par
-
-% 119
-
-dont l'évolution aucours du temps est parfaitement connue (et donnée par
-(u1)) puisque les | vs > sont des états propres du hamiltonien global
-H = T + V avec la valeur propre 
-
-Nous avons ainsi créé deux paquets d'ondes  parti
-culièrement bien adaptés au problème de la collision. I1 nous reste à voir
-le lien qui existe erire ces paquets d'ondes et le paquet d'ondes libres
- auquel ils correspondent. Raisonnons tout d'abord sur .
- 
-\subsubsection{}%
-c) Lien entre .
-
-Remplaçons dans (41) par l'expression (17) de l'équation de Lippmann-Schwinger.
-On obtient : Et
-
-Soit, en utilisant la relation de fermeture,
-
-en posant
- (selon la définition 26) .
-En détaillant les intégrations, (k2) s'écrit :
-
-Nous avons posé.
-
-%
-(012)
-
+$|\ \psi_\mt{i}^+>$ (ou les états $|\ \psi_\mt{i}^->$, avec les \ul{mêmes coefficients}
+C({k$_\mt{i},\Omega_\mt{i})$ que
+ceux que nous avons définis pour le paquet d'ondes libres. A \ul{chaque} paquet
+d'ondes libres $|\ \phi\mt{(t)}>$ vérifiant les conditions du \S précédent, nous associons
+ainsi deux "paquets de collision" $|\ \psi_\mt{i}^\pm>$} définis par
 \[
-\tag{45}=
+\tag{41}|\ \psi^\pm\mt{(t)}>\;=
+\int\mt{C}_\mt{i}\ \mt{e}^{-\mt{i(E}_\mt{i}\mt{t)/}\hbar}\ |\ \psi_\mt{i}^\pm>\mt{d}_\mt{i}
 \]
+% 119
+dont l'évolution aucours du temps est parfaitement connue (et donnée par
+(41)) puisque les $|\ \psi_\mt{i}^\pm>$ sont des états propres du hamiltonien global
+H $=$ T $+$ V avec la valeur propre E$_\mt{i}$.
 
+Nous avons ainsi créé deux paquets d'ondes $|\ \psi^\pm\mt{(t)}>$ particulièrement
+bien adaptés au problème de la collision. I1 nous reste à voir
+le lien qui existe entre ces paquets d'ondes et le paquet d'ondes libres
+$|\ \phi\mt{(t)}>$ auquel ils correspondent. Raisonnons tout d'abord sur $|\ \psi^+\mt{(t)}>$.
+ 
+\subsubsection{Lien entre $|\ \psi^+\mt{(t)}>$ et $|\ \phi\mt{(t)}>$}% c
+
+Remplaçons dans (41) $|\ \psi^+_\mt{i}>$ par l'expression (17) de l'équation de Lippmann-Schwinger.
+On obtient :
+\[
+|\ \psi^+\mt{(t)}>\;=|\ \phi\mt{(t)}>+\lim_{\epsilon\to0_+}
+\int\mt{d}_\mt{i}\mt{ C}_\mt{i}\ \mt{e}^{-\mt{i(E}_\mt{i}\mt{t)/}\hbar}
+\ \frac{1}{\mt{E}_\mt{i}-\mt{H}+\mt{i}\epsilon}\mt{ V }|\ \psi_\mt{i}^+>
+\]
+Soit, en utilisant la relation de fermeture $\int\mt{d}_\mt{j}\ |\ \phi_\mt{j}><\phi_\mt{j}\ |=1$.
+\[
+\tag{42}
+|\ \psi^+\mt{(t)}>\;=|\ \phi\mt{(t)}>+\lim_{\epsilon\to0_+}
+\int\int\mt{d}_\mt{i}\mt{ d}_\mt{j}\mt{ C}_\mt{i}\ 
+\ \frac{\mt{e}^{-\mt{i}\frac{\mt{E}_\mt{i}-\mt{E}_\mt{j}}{\hbar}\mt{t}}}{\mt{E}_\mt{i}-\mt{E}_\mt{j}+\mt{i}\epsilon}\mt{ R}_\mt{ji}\ |\ \phi_\mt{j}\mt{(t)}>
+\]
+en posant
+\[
+\left\{ \begin{array}{rcl}
+|\ \phi_\mt{j}\mt{(t)}> & = & \mt{e}^{-\mt{i(E}_\mt{i}\mt{t)/}\hbar}\ |\ \phi_\mt{j}> \\
+\mt{ R}_\mt{ji} & = & <\phi_\mt{j}\ |\ \mt{V}\ |\ \psi_\mt{i}^+> \hspace{1cm}
+\mt{(selon la définition 26)}\end{array} \right.
+\]
+En détaillant les intégrations, (42) s'écrit :
+\[
+\tag{43}
+|\ \psi^+\mt{(t)}>-\;|\ \phi\mt{(t)}>\;=
+\int\int\mt{d}\Omega_\mt{j}\mt{ k}_\mt{j}\mt{ k}_\mt{j}^2\ |\ \phi_{\vec{\mt{k}}\,\mt{j}}\mt{(t)}>
+\]
+\[
+\times\lim_{\epsilon\to0_+}
+\int\mt{k}_\mt{i}^2\mt{ dk}_\mt{i}
+\ \frac{\mt{e}^{-\mt{i}\frac{\mt{E}_\mt{i}-\mt{E}_\mt{j}}{\hbar}\mt{t}}}{\mt{E}_\mt{i}-\mt{E}_\mt{j}+\mt{i}\epsilon}
+\int\mt{d}\Omega_\mt{i}\mt{ C}(\mt{k}_\mt{i }\Omega_\mt{i})
+\mt{ R(k}_\mt{j}\ \Omega_\mt{j };\mt{ k}_\mt{i }\Omega_\mt{i})
+\]
+Nous avons posé $\mt{R}_\mt{ji}=\mt{ R(k}_\mt{j }\Omega_\mt{j };\mt{ k}_\mt{i }\Omega_\mt{i})$.
 % 120
-
 Pour simplifier cette relation, nous devons faire appel aux hypothèses
-de a) et b)  le coefficient  n'est important qu'au voisinage
-immédiat de  (sur une étendue ). Or R  varie peu en
- approximation de Born,  est égal
-à , transformée de Fourier au potentiel V (x) à la valeur
-
- étant fixé,  varie donc notablement dans
-l'espace des K; sur des intervalles de l'ordre de 1/r. r étant la portée
-effective du potentiel V Or au \S a), nous avons justement choisi 
+des paragraphes précédents : le coefficient C(k$_\mt{i }\Omega_\mt{i})$ n'est important qu'au voisinage
+immédiat de $\Omega_\mt{i}$ (sur une étendue $\Delta\Omega$). Or R(k$_\mt{j}\ \Omega_\mt{j };\mt{ k}_\mt{i }\Omega_\mt{i})$
+varie peu en $\Omega_\mt{i}$ sur $\Delta\Omega$ : à
+l'approximation de Born, R(k$_\mt{j}\ \Omega_\mt{j };\mt{ k}_\mt{i }\Omega_\mt{i})$ est égal
+à $<\phi_\mt{j}\ |\ \mt{V}\ |\ \phi_\mt{i}>$, transformée de Fourier du potentiel V($\vec{\mt{r}}$) à la valeur
+$\vec{\mt{k}}_\mt{j}-\vec{\mt{k}}_\mt{i}$. $\vec{\mt{k}}_\mt{i}$
+étant fixé, R(k$_\mt{j }\Omega_\mt{j };\mt{ k}_\mt{i }\Omega_\mt{i})$ varie donc notablement dans
+l'espace des $\vec{\mt{k}}_\mt{i}$ sur des intervalles de l'ordre de 1/r$_0$, r$_0$ étant la portée
+effective du potentiel V($\vec{\mt{r}}\,)$. Or au premier \S, nous avons justement choisi $\Delta\Omega$
 suffisamment petit pour que l'intervalle de variation correspondant pour
- soit très petit devant . IL en résulte donc que 
-varie peu en  sur l'intervalle , largeur de la fonction  On
-peut donc écrire la dernière intégration de (h3) :
-
+$\vec{\mt{k}}_\mt{i}$ soit très petit devant 1/r$_0$. Il en résulte donc que R(k$_\mt{j}\ \Omega_\mt{j };\mt{ k}_\mt{i }\Omega_\mt{i})$
+varie peu en $\Omega_\mt{i}$ sur l'intervalle $\Delta\Omega$, largeur de la fonction $\mt{C}(\mt{k}_\mt{i},\Omega_\mt{i})$. On
+peut donc écrire la dernière intégration de (43) :
+\[
+\int\mt{d}\Omega_\mt{i}\mt{ C}(\mt{k}_\mt{i }\Omega_\mt{i})
+\mt{ R(k}_\mt{j}\ \Omega_\mt{j };\mt{ k}_\mt{i }\Omega_\mt{i})\to
+\mt{ R(k}_\mt{j}\ \Omega_\mt{j };\mt{ k}_\mt{i }\overline{\Omega_\mt{i}})
+\int\mt{d}\Omega_\mt{i}\mt{ C}(\mt{k}_\mt{i }\Omega_\mt{i})
+\]
 Posons alors
-
+\[
+\tag{44}\mt{k}_\mt{i }\mt{ R(k}_\mt{j}\ \Omega_\mt{j };\mt{ k}_\mt{i }\overline{\Omega_\mt{i}})
+\int\mt{d}\Omega_\mt{i}\mt{ C}(\mt{k}_\mt{i},\ \Omega_\mt{i})=\mt{ F(k}_\mt{i},\mt{ k}_\mt{j},\ \Omega_\mt{j}).
+\]
 La relation (3) nous conduit done à calculer
-
-c'est-à-dire, en effectuant le changement de variables 
-
-En supposant que  est une fonction suffisamment régulière
-de  on peut calculer  à l'aide du lemme résumé dans les
-relations (39-a) et (39-b) et on a donc
+\[
+\mt{ B(t},\mt{ k}_\mt{j }\Omega_\mt{j})=\lim_{\epsilon\to\;0_+}
+\int\mt{k}_\mt{i}\mt{ dk}_\mt{i }\mt{ F(k}_\mt{i},\mt{ k}_\mt{j},\ \Omega_\mt{j})
+\ \frac{\mt{e}^{-\mt{i}\frac{\mt{E}_\mt{i}-\mt{E}_\mt{j}}{\hbar}\mt{t}}}{\mt{E}_\mt{i}-\mt{E}_\mt{j}+\mt{i}\epsilon}
+\]
+c'est-à-dire, en effectuant le changement de variables E$_\mt{i}=\frac{\hbar^2\mt{k}_\mt{i}^2}{2\mt{m}}$ :
+\[
+\tag{45}\mt{ B(t},\mt{ k}_\mt{j }\Omega_\mt{j})=\lim_{\epsilon\to\;0_+}
+\int\frac{\mt{m}}{\hbar^2}\mt{ F(E}_\mt{i},\mt{ k}_\mt{j},\ \Omega_\mt{j})
+\ \frac{\mt{e}^{-\mt{i}\frac{\mt{E}_\mt{i}-\mt{E}_\mt{j}}{\hbar}\mt{t}}}{\mt{E}_\mt{i}-\mt{E}_\mt{j}+\mt{i}\epsilon}
+\mt{ dE}_\mt{i }
+\]
+En supposant que F(E$_\mt{i},\mt{ k}_\mt{j }\Omega_\mt{j})$ est une fonction suffisamment régulière
+de E$_\mt{i}$ on peut calculer $\mt{ B(t},\mt{ k}_\mt{j }\Omega_\mt{j})$ à l'aide du lemme résumé dans les
+relations (39-a) et (39-b) et on a donc :
 
 % 121
 
