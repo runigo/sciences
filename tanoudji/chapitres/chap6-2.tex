@@ -46,282 +46,303 @@ phase stationnaire pour déterminer la répartition à chaque
 instant du paquet d'ondes. On obtient alors l'image représentée par les
 figures suivantes (cf Messiah, p. 316 et suivantes).\begin{center}
 \begin{tikzpicture}
-%Onde
-\draw [dashed, <->] (-2.4,2) -- (1.6,2);\draw (-0.4,2) node [above]{$\Delta$x};
-\def\lond{0.35}
-\foreach \s in {-7,-6,...,5}
-{
-\draw (\s*\lond,-1.5) -- (\s*\lond,1.6);
-}
-\draw [->] (1.8,0) -- (3,0);\draw (2.5,0) node [above]{$\vec{\mt{v}}$};
-%Potentiel
-\draw [dashed] (-0.8,0) -- (-0.8,-2);\draw [dashed] (0.8,0) -- (0.8,-2);
-\draw [dashed, <->] (-0.8,-2) -- (0.8,-2);\draw (0,-2) node [below]{r$_0$};
-\draw (0,0) circle (0.8);
-\end{tikzpicture} \end{center}\begin{center}
-\begin{tikzpicture}
-
-%Onde
-\draw [dashed, <->] (-2.4,2) -- (1.6,2);\draw (-0.4,2) node [above]{$\Delta$x};
-\def\lond{0.35}
-\foreach \s in {-7,-6,...,5}
-{
-\draw (\s*\lond,-1.5) -- (\s*\lond,1.6);
-}
-\draw [->] (1.8,0) -- (3,0);\draw (2.5,0) node [above]{$\vec{\mt{v}}$};
-%Potentiel
-\draw [dashed] (-0.8,0) -- (-0.8,-2);\draw [dashed] (0.8,0) -- (0.8,-2);
-\draw [dashed, <->] (-0.8,-2) -- (0.8,-2);\draw (0,-2) node [below]{r$_0$};
-\draw (0,0) circle (0.8);
+  \def\lond{0.25}
+  %Potentiel I
+  \fill[color=gray!10,draw=gray, ultra thin] (0,3) circle (0.4);
+  \draw (-8,4) node {I};
+\begin{scope}[xshift=-5 cm,yshift=3 cm]
+  %Onde I
+  \foreach \s in {-5,-4,...,3}
+    {\draw (\s*\lond,-1.1) -- (\s*\lond,1.1);}
+  \draw [->] (0.75,0) -- (1.6,0);\draw (1.25,0) node [above]{$\vec{\mt{v}}$};
+  \draw (0.75,1.1) -- (-1.25,1.1); \draw (0.75,-1.1) -- (-1.25,-1.1);
+\end{scope}
+  %Potentiel II
+  \draw (-8,1) node {II};
+  \fill[color=gray!10,draw=gray, ultra thin] (0,0) circle (0.4);
+  %Onde II
+  \foreach \s in {-5,-4,...,3}
+    {\draw (\s*\lond,-1.1) -- (\s*\lond,1.1);}
+  \draw [->] (0.75,0) -- (1.6,0);\draw (1.25,0) node [above]{$\vec{\mt{v}}$};
+  \draw (0.75,1.1) -- (-1.25,1.1); \draw (0.75,-1.1) -- (-1.25,-1.1);
+  %Potentiel III
+  \draw (-8,-2) node {III};
+  \fill[color=gray!10,draw=gray, ultra thin] (0,-5.5) circle (0.4);
+\begin{scope}[xshift=3 cm,yshift=-5.5 cm]
+  %Onde III
+  \foreach \s in {-5,-4,...,3}
+    {\draw (\s*\lond,-1.1) -- (\s*\lond,1.1);
+    \draw (-3,0) circle(3+\s*\lond);}
+  \draw [->] (0.75,0) -- (1.6,0);\draw (1.25,0) node [above]{$\vec{\mt{v}}$};
+  \draw (0.75,1.1) -- (-1.25,1.1); \draw (0.75,-1.1) -- (-1.25,-1.1);
+  \draw [>=stealth,->] (-0.3,2.6) -- (0.3,3.2);\draw [>=stealth,->] (-5.7,2.6) -- (-6.3,3.2);
+  \draw [>=stealth,->] (-0.3,-2.6) -- (0.3,-3.2);\draw [>=stealth,->] (-5.7,-2.6) -- (-6.3,-3.2);
+\end{scope}
 \end{tikzpicture} \end{center}
 % 12
 
 Nous avons ainsi établi un nouveau lien physique entre les
-états stationnaires de collision  et les états libres  , par
+états stationnaires de collision $|\ \psi^+_\mt{i}>$ et les états libres $|\ \phi_\mt{i}>$, par
 l'intermédiaire des paquets d'ondes. C'est cette dernière propriété des
- qui e le plus de signification physique car nous venons de montrer
+$|\ \psi^+_\mt{i}>$ qui est le plus de signification physique car nous venons de montrer
 qu'elle est liée de façon évidente à la description même de l'expérience
 physique. Elle va nous permettre également d'éclairer sous un jour nouveau
 "l'approche adiabatique" ou celle de l'introduction progressive de l'état
-"initial" faites aux \S 1°) et 2°) :
+"initial" faites aux \S 1 et 2 :
 
-\subsubsection{}%
-e) Lien avec les 2 autres approches physiques (\S 3-1 et 3-2)
-
-Plus la fonction de répartition  est étroite autour
-des valeurs moyennes  plus le paquet d'ondes  est proche
-de l'état stationnaire  et plus le paquet d'ondes  est proche
-de l'état stationnaire de diffusion  et  sont les
-paquets d'ondes à l'instant t = O à La limite où on a remplacé 
-par une fonction de Dirac au point  Mais tant que  possède
-une certaine dispersion AE en énergie, on a vu qu'il existe un temps
-, tel que le "paquet de collision" qui est très proche de l'état
+\subsubsection{Lien avec les 2 autres approches physiques (\S 3.1 et 3.2)} % e) 
+Plus la fonction de répartition C($\mt{k}_\mt{i},\Omega_\mt{i}$) est étroite autour
+des valeurs moyennes $\overline{\mt{k}_\mt{i}}$ et $\overline{\Omega_\mt{i}}$,
+plus le paquet d'ondes $|\ \phi(0)>$ est proche
+de l'état stationnaire $|\ \overline{\phi_\mt{i}}>$ et plus le paquet d'ondes $|\ \psi^+(0)>$ est proche
+de l'état stationnaire de diffusion $|\ \overline{\psi^+_\mt{i}}>$, $|\ \phi_\mt{i}>$
+et $|\ \psi_\mt{i}^+>$ sont les
+paquets d'ondes à l'instant t = 0 à la limite où on a remplacé C($\mt{k}_\mt{i},\Omega_\mt{i}$)
+par une fonction de Dirac au point $\overline{\mt{k}_\mt{i}},\overline{\Omega_\mt{i}}$.
+Mais tant que C($\mt{k}_\mt{i},\Omega_\mt{i}$) possède
+une certaine dispersion \ul{$\Delta$E en énergie}, on a vu qu'il existe un temps
+t<<$-\frac{\hbar}{\Delta\mt{E}}$, tel que le "paquet de collision" qui est très proche de l'état
 stationnaire de collision à l'instant t = 0, se réduise à ce temps au "paquet libre",
-qui est lui très proche de l'état libre 
+qui est lui très proche de l'état libre $|\ \phi_\mt{i}>$.
 
 Dans les deux autres approches physiques que nous avons données,
-le fait d'établir la perturbation sur un intervalle de temps H/e ou d'introduire
-progressivement l'état initial sur un intervalle de temps H/e
-fait que l'état obtenu à l'instant t = O n'est pas (pour $\epsilon$  O) un état
+le fait d'établir la perturbation sur un intervalle de temps $\hbar/\epsilon$ ou d'introduire
+progressivement l'état initial sur un intervalle de temps $\hbar/\epsilon$
+fait que l'état obtenu à l'instant t = 0 n'est pas (pour $\epsilon\neq0$) un état
 propre de H, Il existe sur son énergie une incertitude, qui provient de sa
 préparation même de l'ordre de $\epsilon$. On peut encore dire, qu'avant de faire
-tendre $\epsilon$ + 0, l'état obtenu à l'instant t = O,  qui obéit à l'équation 
-
+tendre $\epsilon\to0$, l'état obtenu à l'instant t $=$ 0, $|\ \psi^+_\mt{i}>_\epsilon$ qui obéit à l'équation (35 après intégration).
+\[
+|\;\psi_\mt{i}^+(0)>_\epsilon\,=|\;\phi_\mt{i}>+\frac{1}{\mt{E}_\mt{i}-\mt{H}\pm\mt{i}\epsilon}\mt{ V }|\;\phi_\mt{i}>
+\]
 % 125
+est une superposition d'états stationnaires $|\ \psi^+_\mt{i}>$ avec une dispersion
+de l'ordre de $\epsilon$. $|\ \psi^+_\mt{i}>_\epsilon$ représente donc en quelque sorte un "paquet
+d'ondes" de largeur en énergie $\epsilon$, auquel nous pouvons appliquer les résultats précédents.
 
-est une superposition d'états stationnaires  avec une dispersion
-de l'ordre de $\epsilon$. . représente donc en quelque sorte un "paquet
-d'ondes" de largeur en énergie $\epsilon$, auquel nous pouvons appliquer les résultats précédents .
-
+\vspace{1.5cm}
 En d'autres termes, le fait d'introduire progressivement la
-perturbation (ou l'état initial) sur un temps de l'ordre de H/ est une
-façon commode de simuler un paquet d'ondes de dispersion en énergie $\epsilon$ (s)
+perturbation (ou l'état initial) sur un temps de l'ordre de $\hbar/\epsilon$ est une
+façon commode de simuler un paquet d'ondes de dispersion en énergie $\epsilon$ {\footnotesize (On peut encore dire qu'il revient au même de "faire passer" le paquet
+d'ondes pendant un temps $\hbar/\Delta\mt{E}$ devant la perturbation (ce qui correspond
+à l'expérience \ul{physique réelle}) ou, par exemple, de brancher la perturbation sur
+une onde plane libre pendant le même temps (\S 3-1).)}
 Il est de plus beaucoup plus aisé de travailler avec des états du type
-. qu'avec des paquets d'ondes. C'est 1à tout l'intérêt de la
-théorie formelle des collisions qui est basée sur l'emploi systématique
-des états 
+$|\ \psi^+_\mt{i}>_\epsilon$ qu'avec des paquets d'ondes. C'est 1à tout l'intérêt de la
+\ul{théorie formelle des collisions} qui est basée sur l'emploi systématique
+des états $|\ \psi^+_\mt{i}>_\epsilon$.
 
-Il faut cependant prendre une précaution essentielle : le
+Il faut cependant prendre une \ul{précaution essentielle} : le
 paramètre $\epsilon$, qui a été introduit dans tous les calculs a, ainsi que nous
-venons de le voir, une signification physique très simple et fondamentale :
-il représente l'incertitude sur l'énergie dans l'expérience physique réelle :
-
+venons de le voir, une signification physique très \ul{simple et fondamentale} :
+il représente l'incertitude sur l'énergie dans l'expérience \ul{physique réelle} :
 cette incertitude existe toujours. Tous les calculs mathématiques conduisent
-aux grandeurs physiques devront donc être faits avec un $\epsilon$ fini différent de
-zéro. Ce n'est qu'à la fin des calculs qu'on pourra faire tendre $\epsilon$ vers zéro.
+aux grandeurs \ul{physiques} devront donc être faits avec un $\epsilon$ \ul{fini différent de
+zéro}. Ce n'est qu'à la fin des calculs qu'on pourra faire tendre $\epsilon$ vers zéro.
 Deux cas peuvent alors se présenter : ou bien la limite existe et elle
 représente la grandeur physique cherchée dans le cas où la définition en
-
- On peut encore dire qu'il revient au même de "faire passer" le paquet
-d'ondes pendant un temps  devant la perturbation (ce qui correspond
-à l'expérience physiaue réelle) ou, par exemple, de brancher la perturbation sur
-une onde plane libre pendant le même temps (\S 3-1).
-
- 
 % 126
-
 énergie de l'expérience était très bonne; ou bien la limite n'existe pas
-ou est absurde : cela signifie alors que le résultat physique dépend cru
-cialement de la forme du paquet d'ondes et la théorie formelle des collisions
+ou est absurde : cela signifie alors que le résultat physique dépend crucialement
+de la forme du paquet d'ondes et la théorie formelle des collisions
 ne peut s'appliquer : il faut raisonner sur les paquets d'ondes.
-
 En d'autres termes, tant que le résultat physique est indépendant de la
 forme du paquet d'ondes incident, la théorie formelle des collisions
 s'applique et permet de résoudre les problèmes de façon élégante. Nous
 allons d'ailleurs en voir un exemple en appliquant toute l'étude précédente à la
 théorie des collisions.
 
-\section{}%
-D - Application de l'étude précédente : Théorie des collisions
-\subsection{}%
-1°) Définition de la section efficace différentielle de diffusion
+\section{Application de l'étude précédente : Théorie des collisions}% D
+\subsection{Définition de la section efficace différentielle de diffusion}% 1 
 
-\subsubsection{}%
-a) Probabilité de transition :
+\subsubsection{Probabilité de transition}% a
 
-Soit  la probabilité de trouver à l'instant t le
-vecteur d'onde de 1a particule dans  solide .
+Soit P($\Omega_\mt{j}$, t) d$\Omega_\mt{j}$ la probabilité de trouver à l'instant t le
+vecteur d'onde de 1a particule dans l'angle solide ($\Omega_\mt{j}$, $\Omega_\mt{j}+$d$\Omega_\mt{j}$).
 
-Soit  la dérivée 
+Soit W($\Omega_\mt{j}$, t) la dérivée $\frac{\mt{d}}{\mt{dt}}$ P($\Omega_\mt{j}$, t).
 
-La quantité  représente la probabilité pour
+La quantité d$\Omega_\mt{j}$ dt W($\Omega_\mt{j}$) représente la probabilité pour
+qu'entre les instants t et t $+$ dt la particule ait été diffusée dans
+l'angle solide ($\Omega_\mt{j}$, $\Omega_\mt{j}+$d$\Omega_\mt{j}$).
 
-qu'entre les instants t et t  la particule ait été diffusée dans
-l'angle solide 
+Si W($\Omega_\mt{j}$, t) est indépendent du temps, on définit alors W($\Omega_\mt{j}$)
+comme la \ul{probabilité de} \ul{transition par unité de temps}.
 
-si  est ndérendent du temps, on définit alors 
-comme la probebilité  de transition par unité de temps.
+Enfin, si $\vec{\mt{k}}_\mt{j}\neq\vec{\mt{k}}_\mt{i}$ vecteur d'onde de la particule incidente, il
+est évident que P($\Omega_\mt{j},-\infty)=0$.
 
-Enfin, si  vecteur d'onde de la particule: incidente, il
-est évident que 
-
- représente la probabilité totale pour qu'après
-la collision da particule ait été diffusée dans l'angle solide 
-et on a la relation
-
+P($\Omega_\mt{j},+\infty)$ d$\Omega_\mt{j}$ représente la probabilité totale pour qu'après
+la collision da particule ait été diffusée dans l'angle solide
+($\Omega_\mt{j}$, $\Omega_\mt{j}+$d$\Omega_\mt{j}$) et on a la relation
+\[
+\mt{P}(\Omega_\mt{j},+\infty)=\int_{-\infty}^{+\infty}\mt{W}(\Omega_\mt{j},\mt{t})\mt{ dt}
+\]
 % 127
+\subsubsection{Flux des particules libres}% b
+Supposons maintenant que V = 0 et que la particule est
+\ul{toujours libre}.
 
-\subsubsection{}%
-b) Flux des particules libres :
-Supposons maintenant que V = O et que la particule est
-toujours libre.
-
- Appelons le flux à l'instant t, au point r de la
-particule libre et prenons le point F à l'intérieur de la zone, d'extension
-où règne le potentiel V. Le flux  ne varie d'ailleure pas
+Appelons $\vec{\mt{J}}(\vec{\mt{r}},\mt{t})$ le flux à l'instant t, au point $\vec{\mt{r}}$ de la
+\ul{particule libre} et prenons le point $\vec{\mt{r}}$ à l'intérieur de la zone, d'extension r$_0$
+où règne le potentiel V. Le flux $\vec{\mt{J}}(\vec{\mt{r}},\mt{t})$ ne varie d'ailleurs pas
 d'un point à l'autre de cette zone si, comme nous en avons fait l'hypothèse,
-la largeur du paquet d'ondes est grande devant
+la largeur du paquet d'ondes est grande devant v.
 
-Soit  la densité de probabilité de présence de la
-particule libre  à l'instant t. On a alors
+Soit $\rho(\vec{\mt{r}},\mt{t})$ la densité de probabilité de présence de la
+particule libre en $\vec{\mt{r}}$ à l'instant t. On a alors
+\[
+\vec{\mt{J}}(\vec{\mt{r}},\mt{t})=\rho(\vec{\mt{r}},\mt{t})\;\vec{\mt{v}}=
+\rho(\vec{\mt{r}},\mt{t})\;\frac{\hbar\;\overline{\vec{\mt{k}}_\mt{i}}}{\mt{m}}
+\]
+Soit $\sigma$ une surface située en $\vec{\mt{r}}$ et perpendiculaire à la vitesse initiale
+de la particule libre : la probabilité totale pour que la particule
+\ul{libre} soit passée à travers $\sigma$ est
+\[
+\sigma\int_{-\infty}^{+\infty}\mt{J}(\vec{\mt{r}},\mt{t})\mt{ dt}
+\]
 
-Soit  une surface située en r et perpendiculaire à la vitesse initisle
-de le particule libre : la probabilité totale pour que la particule
-libre soit passée à travers  est
-
-\subsubsection{}%
-c) Définition de la section efficace différentielle de diffusion :
+\subsubsection{Définition de la section efficace différentielle de diffusion}% c
 
 La section efficace différentielle de diffusion pour
-l'angle solide  est une surface  définie de la façon suivante :
+l'angle solide $\Omega_\mt{j}$ est une surface $\sigma(\Omega_\mt{j})$ définie de la façon suivante :
 
 La probabilité globale pour que, sous l'effet de V, la particule soit diffusée
-dans l'angle solide  est égale à  fois
-la probabilité globale pour que la particule passe à travers la surface
- si elle restait toujours libre,  est perpendiculaire à la
-vitesse de la particule incidente et située  un point  où règne le
-potentiel V),
-
-\[
-\tag{49}=
-\]
-\[
-\tag{50}=
-\]
+dans l'angle solide ($\Omega_\mt{j}$, $\Omega_\mt{j}+$d$\Omega_\mt{j}$) est égale à d$\Omega_\mt{j}$ fois
+la probabilité globale pour que la particule passe à travers la surface $\sigma(\Omega_\mt{j})$
+si elle restait toujours libre. ($\sigma(\Omega_\mt{j})$ est perpendiculaire à la
+vitesse de la particule incidente et située en un point $\vec{\mt{r}}$ où règne le
+potentiel V).
 % 128
-
 Par définition, on a donc
-
-Vis-à-vis de la diffusion dans la direction  tout se passe donc comme
-si le potentiel V était remplacé par la surface , perpendiculaire
+\[
+\sigma(\Omega_\mt{j})\mt{ d}\Omega_\mt{j}\int_{-\infty}^{+\infty}\mt{J}(\vec{\mt{r}},\mt{t})\mt{ dt}
+=\mt{ d}\Omega_\mt{j}\mt{ P}(\Omega_\mt{j},+\infty)
+\]
+Soit
+\[
+\tag{49}\sigma(\Omega_\mt{j})=\frac{\mt{P}(\Omega_\mt{j},+\infty)}{\int_{-\infty}^{+\infty}\mt{J}(\vec{\mt{r}},\mt{t})\mt{ dt}}
+=\frac{\int_{-\infty}^{+\infty}\mt{W}(\Omega_\mt{j},\mt{t})}{\int_{-\infty}^{+\infty}\mt{J}(\vec{\mt{r}},\mt{t})\mt{ dt}}
+\]
+Vis-à-vis de la diffusion dans la direction $\Omega_\mt{j}$ tout se passe donc comme
+si le potentiel V était remplacé par la surface $\sigma(\Omega_\mt{j})$, perpendiculaire
 à la vitesse de la particule libre incidente : toute particule libre passant à
-travers  est diffusée dans la direction  d'où le nom de
-section efficace de diffusion donné à .
+travers $\sigma(\Omega_\mt{j})$ est diffusée dans la direction $\Omega_\mt{j}$, d'où le nom de
+section \ul{efficace} de diffusion donné à $\sigma(\Omega_\mt{j})$.
 
-La définition (h9) présente une très grande importance car elle.
+La définition (49) présente une très grande importance car elle.
 est indépendante de la forme du paquet d'ondes si celui-ci est suffisamment large
 (c'est ce que nous démontrons plus loin). La notion de section
 efficace présente ainsi un très grand intérêt physique et elle correspond
 bien à ce que mesure l'expérimentateur.
 
-Nous n'avons jusqu'ici étudié que la diffusion d'une seule parti
-cule par un seul centre diffuseur, Les problèmes réels sont plus compliqués
+Nous n'avons jusqu'ici étudié que la diffusion d'une \ul{seule particule}
+par un \ul{seul centre diffuseur}, Les problèmes réels sont plus compliqués
 du fait des interactions possibles entre les particules incidentes et de
-la diffusion multiple due au grand nombre de particules de la cible, Mais
+la diffusion multiple due au grand nombre de particules de la cible. Mais
 nous n'étudierons pas ces problèmes.
 
-Notons enfin que l'on obtient la section efficace totale en sommant sur les angles
+Notons enfin que l'on obtient la \ul{section efficace totale} en sommant sur les angles
 solides la section efficace différentielle de diffusion
+\[
+\tag{50}\sigma_\mt{total}=\int_{4\pi}\sigma(\Omega)\mt{ d}\Omega
+\]
 
-total
 Pour effectuer le calcul de la section efficace différentielle
-
 de diffusion, nous allons utiliser deux méthodes :
 
 % 129
-
-a) Le méthode des paquets d'ondes, la plus physique, qui nous permettra
+a) \ul{La méthode des paquets d'ondes}, la plus physique, qui nous permettra
 d'interpréter de façon physique simple les conditions mathématiques qui
 rendent la section efficace indépendante de la forme du paquet d'ondes.
-b) La théorie formelle des coïlisions, beaucoup plus simple, mais présentant des
+
+b) \ul{La théorie formelle des collisions}, beaucoup plus simple, mais présentant des
 points délicats qu'il nous faudra discuter.
 
+\subsection{Calcul de la section efficace par la méthode des paquets d'ondes}% 2
+\subsubsection{}% 
 d'ondes
 
-A l'instant  , nous envisageons le paquet d'ondes libres , qui est équivalent au paquet .
+A l'instant t$=-\infty$, nous envisageons le paquet d'ondes libres $|\ \phi(\mt{t})>$, qui est équivalent au paquet $|\ \psi^+(\mt{t})>$.
 
-A l'instant  , le paquet d'ondes est représenté par la
-formule (7-b). Nous calculerons tout d'abord la probabilité 
-pour que la particule ait alors sa direction comprise dans l'angle solide.
+A l'instant t$=+\infty$, le paquet d'ondes est représenté par la
+formule (47-b). Nous calculerons tout d'abord la probabilité P$(\Omega_\mt{j},+\infty)$ d$\Omega_\mt{j}$
+pour que la particule ait alors sa direction comprise dans l'angle solide ($\Omega_\mt{j}$, $\Omega_\mt{j}+$d$\Omega_\mt{j}$).
 
-Nous calculerons ensuite le flux du paquet d'ondes libres incident en un point où
-règne le potentiel V, à l'instant t, puis nous intègrerons le flux de  dans le temps.
+Nous calculerons ensuite le flux du \ul{paquet d'ondes libres} incident en un point où
+règne le potentiel V($\vec{\mt{r}}\,$), à l'instant t, puis nous intègrerons le flux de
+$+\infty$ à $+\infty$ dans le temps.
 
-Nous calculerons enfin la section efficace en appliquent la relation (49),
+Nous calculerons enfin la section efficace en appliquant la relation (49).
 
-Nous ne ferons le calcul de la section efficace que pour une direction  nettement
-différente de fa; de façon que dans le calcul de
-, seul le 2e terme de la relation (7-b) intervienne : physiquement,
+\subsubsection{Calcul de P$(\Omega_\mt{j},+\infty)$}% b
+Nous ne ferons le calcul de la section efficace que pour une direction $\Omega_\mt{j}$ nettement
+différente de $\overline{\Omega_\mt{i}}$ de façon que dans le calcul de
+P$(\Omega_\mt{j},+\infty)$, seul le 2$^\mt{ème}$ terme de la relation (47-b) intervienne : physiquement,
 cela revient à placer le détecteur dens une direction différente de la direction
-incidente, de façon à éviter qu'il ne détecte le paquet d'ondes non diffusé,
-vecteur D'après (7-b), la probabilité de trouver à  direction du
-onde entre  et  et sa longueur entre  et  est
+incidente, de façon à éviter qu'il ne détecte le paquet d'ondes non diffusé.
+
+D'après (47-b), la probabilité de trouver à t $=+\infty$ la direction du
+vecteur d'onde entre $\Omega_\mt{j}$ et $\Omega_\mt{j}+$d$\Omega_\mt{j}$ et sa longueur entre k$_\mt{j}$
+et k$_\mt{j}+$dk$_\mt{j}$ est $|\lambda(\mt{k}_\mt{j},\Omega_\mt{j})|^2$ k$^2_\mt{j}$ dk$_\mt{j}$ d$\Omega_\mt{j}$.
 
 % 130
-
+On obtient P$(\Omega_\mt{j},+\infty)$ en sommant sur k$_\mt{j}$ :
 \[
-\tag{51}=
+\tag{51}\mt{P}(\Omega_\mt{j},+\infty)=\int_0^\infty|\lambda(\mt{k}_\mt{j},\Omega_\mt{j})|^2
+\mt{ k}^2_\mt{j}\mt{ dk}_\mt{j}
 \]
-\[
-\tag{52}=
-\]
-\[
-\tag{53}=
-\]
-
-On obtient P (a, + ©) en sommant sur  :
-
-  est donné par la relation (k7-c).
-
-Dans cette relation, varie notablement sur des intervalles en  de l'ordre
-de 1/r,  : portée du potentiel), c'est-à-dire
-varie très peu sur l'intervalle de variation de , la longueur
-du paquet d'ondes étant très grande devant 
+$\lambda(\mt{k}_\mt{j},\Omega_\mt{j})$ est donné par la relation (47-c).
+Dans cette relation, k$_\mt{j}$ R$(\mt{k}_\mt{j }\Omega_\mt{j };\mt{ k}_\mt{j }\overline{\Omega_\mt{i}})$
+varie notablement sur des intervalles en k$_\mt{j}$ de l'ordre
+de 1/r$_0$ (r$_0$ : portée du potentiel), c'est-à-dire
+varie très peu sur l'intervalle de variation de C$(\mt{k}_\mt{j},\Omega_\mt{j})$, la longueur
+du paquet d'ondes étant très grande devant r$_0$.
 
 On peut donc remplacer, dans la formule (51) le terme
+k$_\mt{j}$ R$(\mt{k}_\mt{j }\Omega_\mt{j };\mt{ k}_\mt{j }\overline{\Omega_\mt{i}})$
+qui figure dans l'expression de $\lambda(\mt{k}_\mt{j},\Omega_\mt{j})$ par
+$\overline{\mt{k}_\mt{i}}$
+R$(\overline{\mt{k}_\mt{i}}\,\Omega_\mt{j };\;\overline{\mt{k}_\mt{i}}\,\overline{\Omega_\mt{i}})$
 
- qui figure dans l'expression de  par
-
-Compte tenu de cette remarque et de (7-c), (51) devient :
-
-Toujours en raison de la variation rapide de  autour de  on
-
-peut maintenant remplacer dans (52)  par
-
+Compte tenu de cette remarque et de (47-c), (51) devient :
+\[
+\tag{52}\mt{P}(\Omega_\mt{j},+\infty)=\frac{4\pi^2\mt{m}^2}{\hbar^4}\;\overline{\mt{k}_\mt{i}}^2
+\ |\mt{R}(\overline{\mt{k}_\mt{i}}\,\Omega_\mt{j };\;\overline{\mt{k}_\mt{i}}\,\overline{\Omega_\mt{i}})|^2
+\int\mt{k}^2_\mt{j}\mt{ dk}_\mt{j}
+\ |\!\!\!\int\mt{d}\Omega_\mt{i}\mt{ C}(\mt{k}_\mt{j},\Omega_\mt{i})\,|^2
+\]
+Toujours en raison de la variation rapide de C$(\mt{k}_\mt{j},\Omega_\mt{i})$ autour de k$_\mt{i}$ on
+peut maintenant remplacer dans (52) $\overline{\mt{k}_\mt{i}}^2\int\mt{k}^2_\mt{j}\mt{ dk}_\mt{j}
+\ |\!\int\mt{d}\Omega_\mt{i}\mt{ C}(\mt{k}_\mt{j},\Omega_\mt{i})\,|^2$ par
+$\overline{\mt{k}_\mt{i}}^4\int\mt{ dk}_\mt{i}
+\ |\!\int\mt{d}\Omega_\mt{i}\mt{ C}(\mt{k}_\mt{j},\Omega_\mt{i})\,|^2$
 ou encore par
-
+$\int\mt{dk}_\mt{i}
+\ |\!\int\mt{d}\Omega_\mt{i}\mt{ k}_\mt{i}^2\mt{ C}(\mt{k}_\mt{j},\Omega_\mt{i})\,|^2$.
 (52) devient alors
+\[
+\tag{53}\mt{P}(\Omega_\mt{j},+\infty)=\frac{4\pi^2\mt{m}^2}{\hbar^4}
+\ |\mt{R}(\overline{\mt{k}_\mt{i}}\,\Omega_\mt{j };\;\overline{\mt{k}_\mt{i}}\,\Omega_\mt{i})|^2
+\int\mt{dk}_\mt{i}\ |\!\!\!\int\mt{d}\Omega_\mt{i}\mt{ k}_\mt{i}^2\mt{ C}(\mt{k}_\mt{j},\Omega_\mt{i})\,|^2
+\]
 
 % 131
+\subsubsection{Calcul de $\int_{-\infty}^{+\infty}$J$(\vec{\mt{r}}$,t) dt}% b
 
-- Nous devons calculer le flux en un point F où règne le potentiel, du
-paquet d'ondes libres. Ce flux  est égal à 
+{\bf—} Nous devons calculer le flux en un point $\vec{\mt{r}}$ où règne le potentiel, du
+paquet d'ondes \ul{libres}. Ce flux J$(\vec{\mt{r}}$,t) est égal à
+$\vec{\mt{v}}.\rho(\vec{\mt{r}},$t)$=?=\hbar\frac{\mt{k}_\mt{i}}{\mt{m}}|\phi(\vec{\mt{r}},\mt{t})|^2$
 
 On a donc
+\[
+\tag{54}\int_{-\infty}^{+\infty}\mt{J}(\vec{\mt{r}},\mt{t})=\frac{\hbar\overline{\mt{k}_\mt{i}}}{\mt{m}}
+\int_{-\infty}^{+\infty}|\phi(\vec{\mt{r}},\mt{t})|^2\mt{ dt}
+\]
 
-- Le paquet d'ondes libres  est composé d'ondes planes  dont
-les directions sont lérèrement dispersées autour de la direction  qu'on
-prenne pour axe. Cette dispersion des directions est responsables des
+{\bf—} Le paquet d'ondes libres $|\ \phi>$ est composé d'ondes planes $\phi_{\vec{\mt{k}}_\mt{i}}$ dont
+les directions sont légèrement dispersées autour de la direction $\overline{\Omega_\mt{i}}$ qu'on
+prenne pour axe Oz. Cette dispersion des directions est responsables des
 dimensions transversales finies du paquet d'ondes. Elle ne se fait sentir
 que sur les bords latéraux du paquet d'ondes, Au centre du paquet, notamment
 dans la région où règne le potentiel V, la fonction d'onde est la
