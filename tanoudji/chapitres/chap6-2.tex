@@ -289,7 +289,7 @@ et k$_\mt{j}+$dk$_\mt{j}$ est $|\lambda(\mt{k}_\mt{j},\Omega_\mt{j})|^2$ k$^2_\m
 % 130
 On obtient P$(\Omega_\mt{j},+\infty)$ en sommant sur k$_\mt{j}$ :
 \[
-\tag{51}\mt{P}(\Omega_\mt{j},+\infty)=\int_0^\infty|\lambda(\mt{k}_\mt{j},\Omega_\mt{j})|^2
+\tag{51}\mt{P}(\Omega_\mt{j},+\infty)=\int_0^\infty\big|\lambda(\mt{k}_\mt{j},\Omega_\mt{j})\big|^2
 \mt{ k}^2_\mt{j}\mt{ dk}_\mt{j}
 \]
 $\lambda(\mt{k}_\mt{j},\Omega_\mt{j})$ est donné par la relation (47-c).
@@ -308,9 +308,9 @@ R$(\overline{\mt{k}_\mt{i}}\,\Omega_\mt{j };\;\overline{\mt{k}_\mt{i}}\,\overlin
 Compte tenu de cette remarque et de (47-c), (51) devient :
 \[
 \tag{52}\mt{P}(\Omega_\mt{j},+\infty)=\frac{4\pi^2\mt{m}^2}{\hbar^4}\;\overline{\mt{k}_\mt{i}}^2
-\ |\mt{R}(\overline{\mt{k}_\mt{i}}\,\Omega_\mt{j };\;\overline{\mt{k}_\mt{i}}\,\overline{\Omega_\mt{i}})|^2
+\ \big|\mt{R}(\overline{\mt{k}_\mt{i}}\,\Omega_\mt{j };\;\overline{\mt{k}_\mt{i}}\,\overline{\Omega_\mt{i}})\big|^2
 \int\mt{k}^2_\mt{j}\mt{ dk}_\mt{j}
-\ |\!\!\!\int\mt{d}\Omega_\mt{i}\mt{ C}(\mt{k}_\mt{j},\Omega_\mt{i})\,|^2
+\ \left|\int\mt{d}\Omega_\mt{i}\mt{ C}(\mt{k}_\mt{j},\Omega_\mt{i})\,\right|^2
 \]
 Toujours en raison de la variation rapide de C$(\mt{k}_\mt{j},\Omega_\mt{i})$ autour de k$_\mt{i}$ on
 peut maintenant remplacer dans (52) $\overline{\mt{k}_\mt{i}}^2\int\mt{k}^2_\mt{j}\mt{ dk}_\mt{j}
@@ -323,13 +323,11 @@ $\int\mt{dk}_\mt{i}
 (52) devient alors
 \[
 \tag{53}\mt{P}(\Omega_\mt{j},+\infty)=\frac{4\pi^2\mt{m}^2}{\hbar^4}
-\ |\mt{R}(\overline{\mt{k}_\mt{i}}\,\Omega_\mt{j };\;\overline{\mt{k}_\mt{i}}\,\Omega_\mt{i})|^2
-\int\mt{dk}_\mt{i}\ |\!\!\!\int\mt{d}\Omega_\mt{i}\mt{ k}_\mt{i}^2\mt{ C}(\mt{k}_\mt{j},\Omega_\mt{i})\,|^2
+\ \left|\mt{R}(\overline{\mt{k}_\mt{i}}\,\Omega_\mt{j };\;\overline{\mt{k}_\mt{i}}\,\Omega_\mt{i})\right|^2
+\int\mt{dk}_\mt{i}\ \left|\int\mt{d}\Omega_\mt{i}\mt{ k}_\mt{i}^2\mt{ C}(\mt{k}_\mt{j},\Omega_\mt{i})\,\right|^2
 \]
-
 % 131
-\subsubsection{Calcul de $\int_{-\infty}^{+\infty}$J$(\vec{\mt{r}}$,t) dt}% b
-
+\subsubsection{Calcul de $\int_{-\infty}^{+\infty}$J$(\vec{\mt{r}}$,t) dt}% c
 {\bf—} Nous devons calculer le flux en un point $\vec{\mt{r}}$ où règne le potentiel, du
 paquet d'ondes \ul{libres}. Ce flux J$(\vec{\mt{r}}$,t) est égal à
 $\vec{\mt{v}}.\rho(\vec{\mt{r}},$t)$=?=\hbar\frac{\mt{k}_\mt{i}}{\mt{m}}|\phi(\vec{\mt{r}},\mt{t})|^2$
@@ -342,7 +340,7 @@ On a donc
 
 {\bf—} Le paquet d'ondes libres $|\ \phi>$ est composé d'ondes planes $\phi_{\vec{\mt{k}}_\mt{i}}$ dont
 les directions sont légèrement dispersées autour de la direction $\overline{\Omega_\mt{i}}$ qu'on
-prenne pour axe Oz. Cette dispersion des directions est responsables des
+prendra pour axe Oz. Cette dispersion des directions est responsables des
 dimensions transversales finies du paquet d'ondes. Elle ne se fait sentir
 que sur les bords latéraux du paquet d'ondes, Au centre du paquet, notamment
 dans la région où règne le potentiel V, la fonction d'onde est la
@@ -350,236 +348,274 @@ même que si on remplaçait chaque onde plane  par l'onde. plane du
 vecteur d'onde  dirigé suivant Oz. Cette approximation n'est valable que
 si la région où règne le potentiel reut être considérée comme "au centre"
 du paquet d'ondes, donc si les dimensions transversales du paquet d'ondes
-sont grandes devant la portée du potentiel. On peut alors remplacer le paquet d'ondes libres . Est
+sont grandes devant la portée du potentiel. On peut alors remplacer le paquet d'ondes libres
+\[
+\phi(\vec{\mt{r}},\mt{ t})=\frac{1}{(2\pi)^{3/2}}\iint\mt{k}_\mt{i}^2\mt{ dk}_\mt{i}\mt{ d}\Omega_\mt{i}
+\mt{ C}(\mt{k}_\mt{i},\Omega_\mt{i})\mt{ e}^{\mt{i}\vec{\mt{k}}_\mt{i}.\vec{\mt{r}}}
+\mt{ e}^{-\mt{i}\frac{\mt{E}_\mt{i}\mt{t}}{\hbar}}
+\]
 par le paquet à une dimension est
-
-Posons
+\[
+\phi(\mt{z},\mt{ t})=\frac{1}{(2\pi)^{3/2}}\int\mt{dk}_\mt{i}\mt{ e}^{\mt{i}\mt{ k}_\mt{i}\mt{ z}}
+\left[\int\mt{k}_\mt{i}^2\mt{ d}\Omega_\mt{i}\mt{ C}(\mt{k}_\mt{i},\Omega_\mt{i})\right]
+\mt{ e}^{-\mt{i}\frac{\mt{E}_\mt{i}\mt{t}}{\hbar}}
+\]
+Posons $\gamma(\mt{k}_\mt{i})=\int\mt{k}_\mt{i}^2\mt{ d}\Omega_\mt{i}\mt{ C}(\mt{k}_\mt{i},\Omega_\mt{i})$.
 On a alors
 \[
-\tag{55}=
+\tag{55}\phi(\mt{z},\mt{ t})=\frac{1}{(2\pi)^{3/2}}\int\mt{dk}_\mt{i }\gamma(\mt{k}_\mt{i})
+\mt{ e}^{\mt{i}\mt{ k}_\mt{i}\mt{ z}}\mt{ e}^{-\mt{i}\frac{\hbar\mt{ k}_\mt{i}^2}{2\mt{m}}\mt{t}}
 \]
 % 132
-
-\[
-\tag{56}=
-\]
-
-
 Dans (55), nous pouvons écrire après un calcul élémentaire :
+\[
+\tag{56}\mt{e}^{-\mt{i}\frac{\hbar\mt{ k}_\mt{i}^2}{2\mt{m}}\mt{t}}=
+\mt{e}^{-\mt{i}\frac{\hbar}{2\mt{m}}(\mt{ k}_\mt{i}-\overline{\mt{k}_\mt{i}})^2\mt{t}}
+\mt{ e}^{-\mt{i}\frac{\hbar}{\mt{m}}\overline{\mt{k}_\mt{i}}\mt{ k}_\mt{i}\mt{t}}
+\mt{ e}^{\frac{\mt{i}\hbar}{2\mt{m}}\overline{\mt{ k}_\mt{i}}^2\mt{t}}
+\]
+Dans (54), l'intégration de $-\infty$ à $+\infty$ s'effectuera en pratique sur un
+intervalle de temps de l'ordre du passage du paquet d'ondes au point $\vec{\mt{r}}$,
+qui est $\Delta$t $=\frac{\mt{m}}{\hbar\mt{k}\Delta\mt{k}}$ (cf page 118).
 
-Dans (5), l'intégration de  s'effectuera en pratique sur un
-intervalle de temps de l'ordre du passage du paquet d'ondes au point r,
-
-qui est (cf page 118).
 Pendant cet intervalle de temps, la phase de la première exponentielle du
-second membre de (56) varie d'un terme de l'ordre
+second membre de (56) varie d'un terme de l'ordre $\frac{\hbar}{2\mt{m}}\frac{\Delta\mt{k}^2\mt{m}}{\hbar\mt{k}\Delta\mt{k}}=\frac{1}{2}\frac{\Delta\mt{k}}{\mt{k}}$
 
-Or nous avons fait l'hypothèse que <<1 (étalement négligeable
-
+Or nous avons fait l'hypothèse que $\frac{\Delta\mt{k}}{\mt{k}}$<<1 (étalement négligeable
 du paquet d'ondes). La phase de la première exponentielle varie donc très
+peu autour de zéro et on peut remplacer $\mt{e}^{-\frac{\mt{i}\hbar}{2\mt{m}}(\mt{ k}_\mt{i}-\overline{\mt{k}_\mt{i}})^2\mt{t}}$ par 1.
 
 La troisième exponentielle est un facteur de phase indépendant de
-
-peu autour de zéro et on peut remplacer  par 1.
-la variable k; et qui disparaîtra quand on formera .
+la variable k$_\mt{i}$ et qui disparaîtra quand on formera $|\phi(\mt{z, t})|^2$.
 
 Finalement, on peut écrire
-
-Posons 
- devient  avec
-
+\[
+\mt{J}(\vec{\mt{r}},\mt{t})=\mt{J}(\mt{z},\mt{t})=\frac{\hbar\overline{\mt{k}_\mt{i}}}{\mt{m}}|\phi(\mt{z, t})|^2
+\ =\ (\frac{1}{2\pi})^3\;\frac{\hbar\overline{\mt{k}_\mt{i}}}{\mt{m}}\;\left|
+\int_0^\infty\mt{dk}_\mt{i }\gamma(\mt{k}_\mt{i})
+\mt{ e}^{\mt{i}\mt{ k}_\mt{i}\mt{ (z}-\frac{\hbar}{\mt{m}}\overline{\mt{k}_\mt{i}}\mt{ t})}\right|^2
+\]
+Posons z$-\frac{\hbar}{\mt{m}}\overline{\mt{k}_\mt{i}}$ t $=$ u.
+J(z, t) devient 
+J(z, u)$=(\frac{1}{2\pi})^3\;\frac{\hbar\overline{\mt{k}_\mt{i}}}{\mt{m}}\iint\mt{dk}_\mt{i }\mt{dk}_\mt{j }
+\gamma(\mt{k}_\mt{i})\gamma^*(\mt{k}_\mt{j})
+\mt{ e}^{\mt{i (k}_\mt{i}-\mt{k}_\mt{j})\mt{ u}}
+$
+et enfin $\int_{-\infty}^{+\infty}$J(z, t) dt $=\frac{\mt{m}}{\hbar\overline{\mt{k}_\mt{i}}}
+\int_{-\infty}^{+\infty}$J(z, u) du $=(\frac{1}{2\pi})^3\;
+\frac{\hbar\overline{\mt{k}_\mt{i}}}{\mt{m}}\iiint\mt{dk}_\mt{i }\mt{dk}_\mt{j }\mt{du }
+\gamma(\mt{k}_\mt{i})\gamma^*(\mt{k}_\mt{j})
+\mt{ e}^{\mt{i (k}_\mt{i}-\mt{k}_\mt{j})\mt{ u}}$
 % 133
 
-L'intégration sur u donne 
+L'intégration sur u donne $2\pi\;\delta\mt{(k}_\mt{i}-\mt{k}_\mt{j})$
 et finalement
 \[
-\tag{57}=
+\tag{57} \begin{array}{rcl}
+\int_{-\infty}^{+\infty}\mt{J(z, t)} & = & \frac{1}{4\pi^2}\left|\gamma(\mt{k}_\mt{i})\right|^2 \\
+ & = & \frac{1}{4\pi^2}\left|\int\mt{k}_\mt{i}^2
+ \mt{ d}\Omega_\mt{i}\mt{ C}(\mt{k}_\mt{i},\Omega_\mt{i})\right|^2 \end{array}
 \]
+
+\subsubsection{Calcul de $\sigma(\Omega_\mt{j})$}% 
 De (49), (53) et (57), on déduit
+\[
+\tag{58}\sigma(\Omega_\mt{j})=\frac{(2\pi)^4\mt{m}^2}{\hbar^4}\big|
+\mt{R}(\overline{\mt{k}_\mt{i}},\Omega_\mt{j},\overline{\mt{k}_\mt{i}},\overline{\Omega_\mt{i}})\big|^2
+\]
 
 Nous avons ainsi obtenu, comme annoncé, une section efficace de
+diffusion \ul{indépendante de} \ul{la forme du paquet d'ondes}, le terme dépendant de
+cette forme $\int\mt{k}_\mt{i}^2\mt{ d}\Omega_\mt{i}\mt{ C}(\mt{k}_\mt{i},\Omega_\mt{i})$
+s'étant éliminé dans le quotient des relations
+(53) et (57); il est à noter que la probabilité P($\Omega_\mt{j},+\infty$) et le flux
+$\int_{-\infty}^{+\infty}$J($\vec{\mt{r}}$, t) dt
+ n'étaient pas, quant à eux, indépendants de cette forme.
 
-diffusion incépendente de la forme du paauet d'ondes, le terme dépendant de
-
-cette forme  s'étant éliminé dans le quotient des relations
-(53) et (57);  est à noter que la probabilité  et le flux
-
- n'étaient pas, quant à eux, indépendants de cette forme
-
-le calcul que nous verons de feire est ripoureux moyennant les
+Le calcul que nous venons de faire est \ul{rigoureux} moyennant les
 conditions imposées au paquet d'ondes (longueur et largeur suffisantes).
 Si ces conditions n'étaient pas satisfaites, il n'aurait pas été possible de
 définir une section efficace indépendente de la forme du paquet d'ondes.
 
-La relation (58) nous montre l'importance de la matrice  de
-réaction qui, à elle seule, permet de calculer les sections efficaces
-Notons enfin que la formule (58) se différencie par un facteur  des formules de
+La relation (58) nous montre l'importance de la matrice R$_\mt{ji}$ de
+réaction qui, à elle seule, permet de calculer les sections efficaces.
+Notons enfin que la formule (58) se différencie par un facteur $(2\pi)^6$ des formules de
 certains auteurs qui utilisent au lieu d'ondes planes "normées" à
-
-l'unité,  $\epsilon$ , comme nous l'avons fait, des ondes planes non
-
-normées e . Le facteur  se retrouve alors dans l'élément de
-matrice
-\[
-\tag{59}=
-\]
-\[
-\tag{60}=
-\]
-\[
-\tag{61}=
-\]
+l'unité,  $(\frac{1}{2\pi})^{3/2}$ e$^{\mt{i k}_\mt{i}\mt{ r}}$ , comme nous l'avons fait, des ondes planes non
+"normées" e$^{\mt{i k}_\mt{i}\mt{ r}}$ . Le facteur $(2\pi)^6$ se retrouve alors dans l'élément de
+matrice $|\mt{R}_\mt{ji}|^2$
 % 134
 
-\subsection{}%
-3°) Calcul de o par la théorie formelle des collisions
-
-\subsubsection{}%
-a) Introduction : Les calculs à l'aide des paquets d'ondes,
+\subsection{Calcul de $\sigma$ par la théorie formelle des collisions}% 3
+\subsubsection{Introduction}% a
+Les calculs à l'aide des paquets d'ondes,
 dont la signification physique est très claire, sont longs et assez pénibles.
 
 La théorie formelle des collisions consiste à travailler avec
-des "quasi états de collision"  qui vérifient l'équation de
+des "quasi états de collision" $|\ \psi_\mt{i}^+>_\epsilon$ qui vérifient l'équation de
 Lippnann-Schwinger
-
-avec un paremètre $\epsilon$ petit mais non nul, ce qui permet de simuler un paquet
+\[
+\tag{59}|\ \psi_\mt{i}^+>_\epsilon=|\ \phi_\mt{i}>+\frac{1}{\mt{E}_\mt{i}-\mt{T}+\mt{i}\epsilon}
+\mt{ V }|\ \psi_\mt{i}^+>_\epsilon
+\]
+avec un paramètre $\epsilon$ petit mais non nul, ce qui permet de simuler un paquet
 d'ondes.
 
 Les calculs sont alors beaucoup plus simples, mais comportent de
-nombreux pièmes. En règle générale, il faut garder à l'esprit le sens physique
+nombreux pièges. En règle générale, il faut garder à l'esprit le sens physique
 de $\epsilon$ qui représente la dispersion en énergie de la particule incidente
-et ne faire tendre e vers zéro qu'à la fin des calculs,
+et ne faire tendre $\epsilon$ vers zéro qu'à la fin des calculs.
 
-Supposons done qu'à l'instant t = O, la particule ait été préparée
-de telle manière qu'elle se trouve dans l'état  défini par la relation (59). .
-n'est pas un état propre de H, C'est un état approché
-ayant une dispersion $\epsilon$ en énergie. Il évolue, après , sous l'effet du
-
+Supposons donc qu'à l'instant t = O, la particule ait été préparée
+de telle manière qu'elle se trouve dans l'état $|\ \psi_\mt{i}^+>_\epsilon$ défini par la relation (59).
+$|\ \psi_\mt{i}^+>_\epsilon$ n'est pas un état propre de H. C'est un état approché
+ayant une dispersion $\epsilon$ en énergie. Il évolue, après t $=$ 0, sous l'effet du
 hamiltonien H = T + V et à un instant t, il devient
-
-La probabilité de trouver à l'instant t la particule dans l'état ,
+\[
+\tag{60}|\ \psi_\mt{i}^+\mt{(t)}>_\epsilon=\mt{e}^{-\mt{i}\frac{\mt{Ht}}{\hbar}}|\ \psi_\mt{i}^+>_\epsilon
+\]
+La probabilité de trouver à l'instant t la particule dans l'état $|\ \phi_\mt{j}>$, P$_\mt{ji}$
  s'écrit :
-
-
-Nous allons tout d'abord calculer la dérivée à l'instant t = O de cette
+\[
+\tag{61}\mt{P}_\mt{ji}\mt{(t)}=\big|<\phi_\mt{j }|\ \psi_\mt{i}^+\mt{(t)}>_\epsilon\big|^2
+\]
+Nous allons tout d'abord calculer la dérivée à l'instant t = 0 de cette
 quantité, puis nous rattacherons cette dérivée à la section efficace.
-
- 
 % 135
-
-\subsubsection{}%
-b) Calcul de 
-
+\subsubsection{Calcul de}% b
 En dérivant la formule (60) par rapport au temps, on obtient :
-
 \[
-\tag{62}=
+\tag{62}\frac{\mt{d}}{\mt{dt}}|\ \psi_\mt{i}^+\mt{(t)}>_\epsilon\;=\frac{1}{i\hbar}\mt{ H }\mt{e}^{-i\frac{\mt{Ht}}{\hbar}}|\ \psi_\mt{i}^+>_\epsilon
 \]
-
 Compte tenu de (61) et (62), on a :
-
-Le terme entre crochets est épal à la différence de deux termes complexes
-conjugués l'un de l'autre, On a donc
-
 \[
-\tag{63}=
+\left[\frac{\mt{d}}{\mt{dt}}\mt{P}_\mt{ji}\mt{(t)}\right]_{\mt{t}=0}=
+\left[\frac{\mt{d}}{\mt{dt}}<\phi_\mt{j }|\ \psi_\mt{i}^+\mt{(t)}>_{\epsilon\ \epsilon}
+<\psi_i^+\mt{(t)}|\ \phi_\mt{j}>\right]_{\mt{t}=0}
+\]
+\[
+=\frac{1}{i\hbar}
+\left[<\phi_\mt{j }|\mt{ H }|\ \psi_\mt{i}^+>_{\epsilon\ \epsilon}<\psi_\mt{i}^+|\ \phi_\mt{j}>-
+<\phi_\mt{j }|\ \psi_\mt{i}^+>_{\epsilon\ \epsilon}<\psi_\mt{i}^+|\mt{ H }|\ \phi_\mt{j}>\right]
+\]
+Le terme entre crochets est égal à la différence de deux termes complexes
+conjugués l'un de l'autre. On a donc
+\[
+\tag{63}\left[\frac{\mt{d}}{\mt{dt}}\mt{P}_\mt{ji}\mt{(t)}\right]_{\mt{t}=0}=\frac{2}{\hbar}\;\mt{Im}
+\left[<\phi_\mt{j }|\mt{ H }|\ \psi_\mt{i}^+>_{\epsilon\ \epsilon}<\psi_\mt{i}^+|\ \phi_\mt{j}>\right]
+\]
+Rappelons que H $=$ T + V.
+
+On a notamment $<\phi_\mt{j }|\mt{ T }|\ \psi_\mt{i}^+>_{\epsilon\ \epsilon}<\psi_\mt{i}^+|\ \phi_\mt{j}>\;
+=$ E$_\mt{j }|<\phi_\mt{j }|\ \psi_\mt{i}^+>_\epsilon|^2$ \\
+($|\ \phi_\mt{j}>$ est en effet un état propre de T de valeur propre E$_\mt{j}$).
+
+Or E$_\mt{j }|<\phi_\mt{j }|\ \psi_\mt{i}^+>_\epsilon|^2$ qui est réel, a sa partie imaginaire nulle.
+Finalement, on peut donc, dans (63), remplacer H par V et on obtient
+\[
+\tag{64}\left[\frac{\mt{d}}{\mt{dt}}\mt{P}_\mt{ji}\mt{(t)}\right]_{\mt{t}=0}=\frac{2}{\hbar}\;\mt{Im}
+\left[<\phi_\mt{j }|\mt{ V }|\ \psi_\mt{i}^+>_{\epsilon\ \epsilon}<\psi_\mt{i}^+|\ \phi_\mt{j}>\right]
+\]
+Posons
+\[
+\tag{65}<\phi_\mt{j }|\mt{ V }|\ \psi_\mt{i}^+>_\epsilon=\mt{R}_\mt{ji}^{(\epsilon)}
 \]
 
-Rappelons que H = T + V.
-
-On a notamment
-
- est en effet un état propre de T de valeur propre .
-
-Or  qui est réel, a sa partie imaginaire nulle.
-Finalement, on peut donc, dans (63), remplacer H par V et on obtient
-
-Posons
-
-D'autre part, pour calculer , remplaçons  par son
-
+D'autre part, pour calculer $_\epsilon<\psi_\mt{i}^+|\ \phi_\mt{j}>$, remplaçons $|\ \psi_\mt{i}^+>_\epsilon$ par son
 expression (59); on obtient alors
 
 % 136
 
 \[
-\tag{66}=
+\tag{66}_\epsilon\!\!<\psi^+_\mt{i }|\ \phi_\mt{j}>=\delta\mt{(i}-\mt{j)}+
+\frac{1}{\mt{E}_\mt{i}-\mt{E}_\mt{j}+i\epsilon}{\ \ }_\epsilon\!\!<\psi^+_\mt{i }|\mt{ V }|\ \phi_\mt{j}>
 \]
 \[
-\tag{67}=
-\]
-\[
-\tag{68}=
+=\delta\mt{(i}-\mt{j)}+
+\frac{1}{\mt{E}_\mt{i}-\mt{E}_\mt{j}+i\epsilon}\mt{ R}_\mt{ji}^{(\epsilon)\,*}
 \]
 Compte tenu de (65) et (66), (64) devient :
-
- Cependant, on peut montrer, en calculant la dérivée seconde, que
-
-Nous n'avons en toute rigueur calculé la dérivée  qu'au point
-
- varie très peu sur des temps inférieurs à . On peut donc considérer
-
-
+\[
+\tag{67}\left[\frac{\mt{d}}{\mt{dt}}\mt{P}_\mt{ji}\mt{(t)}\right]_{\mt{t}=0}=\frac{2}{\hbar}\;\left[
+\mt{Im R}_\mt{ji}^{(\epsilon)}\delta\mt{(i}-\mt{j)}+\frac{\epsilon}{(\mt{E}_\mt{i}-\mt{E}_\mt{j})^2+\epsilon^2}\;
+|\mt{R}_\mt{ji}^{(\epsilon)}|^2\right]
+\]
+Nous n'avons en toute rigueur calculé la dérivée $\frac{\mt{d}}{\mt{dt}}\mt{P}_\mt{ji}$(t) qu'au point
+t $=$ 0. Cependant, on peut montrer, en calculant la dérivée seconde, que
+$\frac{\mt{d}}{\mt{dt}}\mt{P}_\mt{ji}$
+varie très peu sur des temps inférieurs à $\hbar/\epsilon$. On peut donc considérer
+$\frac{\mt{d}}{\mt{dt}}\mt{P}_\mt{ji}$
+comme une constante, W$_\mt{ji}$, donnée par la formule (67)
 et représentant la probabilité de transition par unité de temps vers
-l'état | \S; ?e
-Comme nous l'avons déjà fait, nous allons supposer que i  j,
+l'état $|\ \phi_\mt{j}>$
 
-Pi comme une constante, Mis donnée par la formule (67)
-
+Comme nous l'avons déjà fait, nous allons supposer que i $\neq$ j,
 autrement dit que l'observation se fait dans une direction différente de
-la direction incidente, On a alors, d'après (67),
+la direction incidente. On a alors, d'après (67),
+\[
+\tag{68}\mt{W}_\mt{ji}=
+\frac{2}{\hbar}\;\frac{\epsilon}{(\mt{E}_\mt{i}-\mt{E}_\mt{j})^2+\epsilon^2}\;
+|\mt{R}_\mt{ji}^{(\epsilon)}|^2
+\]
 
 Nous voyons que la probabilité de transition n'est appréciable
-que si l'énergie E est égale à E à  près. Ceci rend compte de la conservation
-de l'énergie, compte tenu de l'incertitude $\epsilon$ sur l'état initial.
+que si l'énergie E$_\mt{j}$ est égale à E$_\mt{i}$ à $\epsilon$ près. Ceci rend compte de la conservation
+de l'énergie, compte tenu de l'\ul{incertitude $\epsilon$ sur l'état initial}.
 
 Nous devons calculer en fait la probabilité de transition par
-unité de temps vers un état dont le vecteur d'onde  pointe
-dans l'angle solide.
+unité de temps W$(\Omega_\mt{j})$ d$\Omega_\mt{j}$ vers un état dont le vecteur d'onde k$_\mt{j}$ pointe
+dans l'angle solide ($\Omega_\mt{j}$, $\Omega_\mt{j }+$ d$\Omega_\mt{j}$).
 
 % 137
-
- $\epsilon$ 
-Nous avons évidemment (en supposant que Rji varie peu lorsque
- varie autour de 
-
+Nous avons évidemment (en supposant que R$_\mt{ji}^{(\epsilon)}$ varie peu lorsque
+k$_\mt{j}$ varie autour de k$_\mt{i}$)
 \[
-\tag{69}=
+\tag{69}\mt{W}(\Omega_\mt{j})\mt{ d}\Omega_\mt{j }=
+\mt{ d}\Omega_\mt{j}\int\mt{k}_\mt{j}^2\mt{ dk}_\mt{j}\mt{ W}_\mt{ji}
 \]
-avec le changement de variable
- (69) devient
-
-Si  est suffisamment petit, l'intégrale en E donne tout simplement 
+\[
+=\mt{ d}\Omega_\mt{j }\frac{2\pi}{\hbar}\;|\mt{R}_\mt{ji}^{(\epsilon)}|^2\int\mt{k}_\mt{j}^2
+\mt{ dk}_\mt{j}\;\frac{1}{\pi}\;\frac{\epsilon}{(\mt{E}_\mt{i}-\mt{E}_\mt{j})^2+\epsilon^2}
+\]
+avec le changement de variable E$_\mt{j}=\frac{\hbar^2\mt{k}_\mt{j}}{2\mt{m}}$,
+(69) devient
+\[
+\tag{69}\mt{W}(\Omega_\mt{j})=\frac{2\pi}{\hbar}\ |\mt{R}_\mt{ji}^{(\epsilon)}|^2\ \frac{\mt{m}}{\hbar^2}
+\int\mt{k}_\mt{j}
+\mt{ dE}_\mt{j}\ \frac{\epsilon}{\pi[\epsilon^2+(\mt{E}_\mt{j}-\mt{E}_\mt{i})^2]}
+\]
+Si $\epsilon$ est suffisamment petit, l'intégrale en E$_\mt{j}$ donne tout simplement k$_\mt{i}$
 et on obtient
-
 \[
-\tag{70}=
+\tag{70}\mt{W}(\Omega_\mt{j})=\frac{2\pi\mt{ m k}_\mt{i}}{\hbar^3}\ |\mt{R}_\mt{ji}^{(\epsilon)}|^2
+\hspace{1cm} (\mt{avec k}_\mt{j}=\mt{k}_\mt{i}\mt{ dans R}_\mt{ji}^\epsilon)
 \]
-si (avec  dans )
-
-\subsubsection{}%
-c) Calcul de la section efficace :
+\subsubsection{Calcul de la section efficace}% c
 Il ne nous reste plus qu'à calculer le flux de l'onde plane
-incidente . En représentation  et 
-
-Le flux est également indépendant du temps. En utilisant (49), il vient
-alors
-
-Ce n'est que maintenent que nous pouvons faire tendre (e) vers zéro.
-
+incidente $|\ \phi_\mt{i}>$. En représentation $|\ \vec{\mt{r}}>$, $<\vec{\mt{r}}\ |\ \phi_\mt{i}>=
+(\frac{1}{2\pi})^{3/2}$e$^{i\vec{\mt{k}}_\mt{i}.\vec{\mt{r}}}$ et J $=$ v$_\mt{i }\rho=
+\frac{\hbar\mt{ k}_\mt{i}}{\mt{m}}|\phi_\mt{i}\mt{(r)}|^2=\frac{\hbar\mt{ k}_\mt{i}}{\mt{m}}(\frac{1}{2\pi})^3$.
+Le flux est également indépendant du temps. En utilisant (49), il vient alors
+\[
+\tag{71}\sigma_\epsilon(\Omega_\mt{j})=\frac{\mt{W}(\Omega_\mt{j})}{\mt{J}}=\frac{(2\pi)^4\mt{m}^2}{\hbar^4}\;|\mt{R}_\mt{ji}^{(\epsilon)}|^2
+\]
+Ce n'est que maintenent que nous pouvons faire tendre ($\epsilon$) vers zéro.
 D'après (65), on a
-
+\[
+\mt{R}_\mt{ji}^{(\epsilon)}=\;<\phi_\mt{j }|\mt{ V }|\ \phi_\mt{i}>+
+<\phi_\mt{j }|\mt{ V }\frac{1}{\mt{E}_\mt{i}-\mt{T}+i\epsilon}\mt{ V }|\ \psi_\mt{i}^+>_\epsilon
+\]
 % 138
+Lorsqu'on fait tendre $\epsilon$ $\to$ 0, les seules divergences pourraient provenir
+du terme en $\frac{1}{\mt{E}_\mt{i}-\mt{T}+i\epsilon}$. Mais cet opérateur est entouré par les
+opérateurs V et n'agit pas directerent sur une fonction $|\ \phi_\mt{j}>$.
+On peut ainsi montrer qu'en général, R$_\mt{ji}^{(\epsilon)}$ converge régulièrement vers
+$<\phi_\mt{j }|\mt{ V }|\ \psi_\mt{i}^+>=$ R$_\mt{ji}$
+lorsque $\epsilon\to0$. Lorsque $\epsilon$ est suffisamment petit,
+R$_\mt{ji}^{(\epsilon)}$ est pratiquement égal à R$_\mt{ji}$ et varie très peu quand k$_\mt{j}$ varie autour
+de k$_\mt{i}$, ce qui justifie l'hypothèse faite pour établir (69) et permet de
+remplacer R$_\mt{ji}$ par R$(\mt{k}_\mt{i},\Omega_\mt{j},\mt{k}_\mt{i},\Omega_\mt{i})$.
 
-Lorsqu'on fait tendre $\epsilon$ + O0, les seules divergences pourraient provenir
-du terme en  Mais cet opérateur est entouré par les opérateurs V et n'agit pas
-directerent sur une fonction .
-
-On peut ainsi montrer qu'en général, Bi converge régulièrement vers
- lorsque $\epsilon$ + O, Lorsque $\epsilon$ est suffisamment petit,
- est pratiquement égal à  et varie très peu quand  varie autour
-de , ce qui justifie l'hypothèse faite pour établir (69) et permet de
-remplacer  par .
 Finalement
 
 avec 
