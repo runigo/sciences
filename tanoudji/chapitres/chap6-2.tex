@@ -580,7 +580,7 @@ k$_\mt{j}$ varie autour de k$_\mt{i}$)
 avec le changement de variable E$_\mt{j}=\frac{\hbar^2\mt{k}_\mt{j}}{2\mt{m}}$,
 (69) devient
 \[
-\tag{69}\mt{W}(\Omega_\mt{j})=\frac{2\pi}{\hbar}\ |\mt{R}_\mt{ji}^{(\epsilon)}|^2\ \frac{\mt{m}}{\hbar^2}
+\mt{W}(\Omega_\mt{j})=\frac{2\pi}{\hbar}\ |\mt{R}_\mt{ji}^{(\epsilon)}|^2\ \frac{\mt{m}}{\hbar^2}
 \int\mt{k}_\mt{j}
 \mt{ dE}_\mt{j}\ \frac{\epsilon}{\pi[\epsilon^2+(\mt{E}_\mt{j}-\mt{E}_\mt{i})^2]}
 \]
@@ -616,247 +616,270 @@ R$_\mt{ji}^{(\epsilon)}$ est pratiquement égal à R$_\mt{ji}$ et varie très pe
 de k$_\mt{i}$, ce qui justifie l'hypothèse faite pour établir (69) et permet de
 remplacer R$_\mt{ji}$ par R$(\mt{k}_\mt{i},\Omega_\mt{j},\mt{k}_\mt{i},\Omega_\mt{i})$.
 
-Finalement
+Finalement \ \ $\lim_{\epsilon\to\,0}\sigma_\epsilon(\Omega)=\sigma(\Omega)$ \ \ avec \ \ $\sigma(\Omega)=
+\frac{(2\pi)^4\mt{m}^2}{\hbar^4}|\mt{R(k}_\mt{i},\Omega_\mt{j};\mt{k}_\mt{i}\;\Omega_\mt{i})|^2$. \ \ 
+Nous retrouvons ainsi l'expression (58).
 
-avec 
+\subsubsection{Remarques diverses}% d
+$\alpha$) \ul{Ressemblance de la formule (68) avec la règle d'or de Fermi} :
 
-Nous retrouvons ainsi l'expression (58),
-
-\subsubsection{}%
-d) Remarques diverses :
-
-a) Ressemblance de la formule () avec la règle d'or de Fermi :
-
-La formule (68), donnant la probabilité par unité de temps 
-
-est riroureuse, Cependant, si on remplace  par 
+La formule (68), donnant la probabilité par unité de temps W$_\mt{ji}$
+est \ul{rigoureuse}. Cependant, si on remplace R$_\mt{ji}$ par
+$<\phi_\mt{j }|\mt{ V }|\ \phi_\mt{i}>\;=$ V$_\mt{ji}$
 (approximation de Born), on obtient la relation approchée
+\begin{center}
+W$_\mt{ji}\sim\frac{2\pi}{\hbar}\ \delta($E$_\mt{i}-$E$_\mt{j})\ |$V$_\mt{ji}|^2$
+\end{center}
+qui n'est autre que la règle d'or de Fermi.
 
-qui n'est autre que la règle d'or de Fermi,
-
-) Difficultés de la théorie formelle des collisions :
+$\beta$) \ul{Difficultés de la théorie formelle des collisions} :
 
 Nous avons longuement insisté sur le fait qu'il fallait raisonner
-avec des états  avec $\epsilon$ fini non nul, de façon à simuler un paquet
-d'ondes physique de dispersion en énergie $\epsilon$, Si dans l'expression (61) :
-
-on avait fait tendre dès le début  vers zéro, aurait été remplacé à la limite par
-l'état stationnaire 
-
-aurait été une constante indérendante du temps. On aurait alors eu 
+avec des états $|\ \psi_\mt{i}^+>_\epsilon$ avec $\epsilon$ \ul{fini non nul}, de façon à simuler un paquet
+d'ondes \ul{physique} de dispersion en énergie $\epsilon$. Si dans l'expression (61) :
+$\mt{P}_\mt{ji}\mt{(t)}=\big|<\phi_\mt{j }|\ \psi_\mt{i}^+\mt{(t)}>_\epsilon\big|^2$
+on avait fait tendre dès le début $\epsilon$ vers zéro, $|\ \psi_\mt{i}^+>_\epsilon$ aurait été remplacé
+à la limite par l'état \ul{stationnaire} $|\ \psi_\mt{i}^+>$e$^{-i\frac{E_\mt{i}\mt{t}}{\hbar}}$ et
+P$_\mt{ji}$(t) aurait été une constante \ul{indérendante du temps}. On aurait alors eu W$_\mt{ji}=0$.
 
 % 139
+De même si dans l'expression (63) de W$_\mt{ji}$ :
+$\mt{W}_\mt{ji}=\frac{2}{\hbar}\;\mt{Im}
+\left[<\phi_\mt{j }|\mt{ H }|\ \psi_\mt{i}^+>_{\epsilon\ \epsilon}<\psi_\mt{i}^+|\ \phi_\mt{j}>\right]$
+on avait fait tendre $\epsilon$ vers zéro, et remplacé $|\ \psi_\mt{i}^+>_\epsilon$,
+par $|\ \psi_\mt{i}^+>$ fonction propre de H de valeur propre on aurait eu
+\begin{center}
+$\mt{W}_\mt{ji}=\frac{2}{\hbar}\mt{ E}_\mt{i }\mt{ Im}
+\left|<\phi_\mt{j }|\mt{ H }|\ \psi_\mt{i}^+>\right|^2=0$
+\end{center}
 
-De même si dans l'expression (63) de  :
-
-on avait fait tendre $\epsilon$ vers zéro, et remplacé ,
-
-fonction propre de H de valeur propre on aurait eu
-
-On voit ainsi clairement qu‘en théorie formelle des collisions
-il ne faut faire tendre  qu'à la fin des calculs: Ceci re résulte
-pas d'un simple artifice methématique, mais se trouve lié à la signification
-physique même de .
+On voit ainsi \ul{clairement} qu‘en théorie formelle des collisions
+il ne faut faire tendre $\epsilon\to0$ qu'à la \ul{fin} des calculs. Ceci ne résulte
+pas d'un simple artifice \ul{mathématique}, mais se trouve lié à la \ul{signification
+physique} même de $\epsilon$.
 
 Citons comme dernier exemple le cas où, au lieu de traiter le
 spectre continu, on a enfermé ia particule dans une boîte de côté L. On
-est alors amené à la fin des calculs à faire tendre  et, , il
-intervient dans le calcui des termes du type  qui conduisent à une forme
+est alors amené à la fin des calculs à faire tendre L$\to0$ et $\epsilon\to0$. Or, il
+intervient dans le calcui des termes du type $\epsilon$L$^3$ qui conduisent à une forme
 indéterminée : c'est la nature physique de $\epsilon$ qui permet de lever l'indétermination : 
-étant la dispersion en énergie du "pseudo paquet d'ondes", la
-longueur de ce dernier est de l'ordre de v. Pour que les conditions aux
-limites ne modifient pas le problème, il faut évidemment que l'on ait L 
-soit , IL faut dons à la fin des calculs faire tendre
+$\epsilon$ étant la dispersion en énergie du "pseudo paquet d'ondes", la
+longueur de ce dernier est de l'ordre de $\frac{\hbar}{\epsilon}$v. Pour que les conditions aux
+limites ne modifient pas le problème, il faut évidemment que l'on ait L $>>$ l
+soit L$\epsilon >> \hbar$v. Il faut dons à la fin des calculs faire tendre $\epsilon$L$^3\to\infty$
 
-) Expression de la section efficace en fonction de l'amplitude  de diffusion
+$\gamma$) \ul{Expression de la section efficace en fonction de l'amplitude de diffusion f(k$_\mt{i, }\theta,\ \phi)$}
 
-En posant dans la formule (1)
-
- 
-
-devient une fonction de , et de  qui s'écrit
-
-On peut donc dans (5) remplacer . Soit finalement
-
+En posant dans la formule (14), k$_\mt{i}\vec{\mt{n}}=\vec{\mt{k}}_\mt{j}$,
+\ \ f$_+(\vec{\mt{k}}_\mt{i, }\theta,\ \phi)$ devient une fonction de $\vec{\mt{k}}_\mt{i}$, et de
+$\Omega_\mt{j}$ qui s'écrit
 \[
-\tag{73}=
+\tag{72}\mt{f}_+(\vec{\mt{k}}_\mt{i},\Omega_\mt{j})=
+-\frac{2\mt{m}}{4\pi\hbar^2}
+\int\mt{e}^{-i\vec{\mt{ k}}_\mt{j }\vec{\mt{r}}\,'}\mt{ V}(\vec{\mt{r}}\;')
+\ \psi_{\vec{\mt{k}}_\mt{i}}^+(\vec{\mt{r}}\;')\mt{ d}^3\vec{\mt{r}}\;'
+\]
+\[
+=-\;\frac{2\mt{m}}{4\pi\hbar^2}\ (2\pi)^3\mt{ R}_\mt{ji}=-\;\frac{4\pi^2\mt{m}}{\hbar^2}\mt{ R}_\mt{ji}
+\]
+On peut donc dans (58) remplacer R$_\mt{ji}$ par $-\;\frac{\hbar^2}{4\pi^2\mt{m}}\ \mt{f}
+(\vec{\mt{k}}_\mt{i},\Omega_\mt{j})$. Soit finalement
+\[
+\tag{73}\sigma(\Omega_\mt{j})=|\;\mt{f}(\vec{\mt{k}}_\mt{i},\Omega_\mt{j})\,|^2
 \]
 % 140
 
-\subsubsection{}%
-4°) Théorème optique
+\subsection{Théorème optique}% 4
 
-Elle s'écrit, d'après (63),
+Etudions la quantité $\sum_\mt{j}$ W$_\mt{ji}$. Elle s'écrit, d'après (63),
+\[
+\sum_\mt{j}\mt{W}_\mt{ji }=\;\frac{2}{\hbar}\;\mt{Im}
+\big[{}_\epsilon\!\!<\psi_\mt{i}^+|\ \phi_\mt{j}><\phi_\mt{j }|\mt{ H }|\ \psi_\mt{i}^+>_\epsilon\big]
+\]
+(compte tenu de la relation de fermeture $\sum_\mt{j}|\ \phi_\mt{j}><\phi_\mt{j }|=1$.
+Or l'opérateur H est \ul{hermitique} et sa valeur moyenne dans l'état $|\ \psi_\mt{i}^+>_\epsilon$
+est \ul{réelle}. On a donc
+\[
+\tag{74}\sum_\mt{j}\mt{W}_\mt{ji}=0
+\]
 
-(compte tenu de la relation de fermeture .
-
-Or l'opérateur H est hermitique et sa valeur moyenne dans l'état 
-
-est réelle. On a donc
-
-La relation (7) exprime le fait que la somme des probabilités
-de transition par unité de temps vers tous les états  est nulle :
+La relation (74) exprime le fait que la somme des probabilités
+de transition par unité de temps vers tous les états $|\ \phi_\mt{j}>$ est nulle :
 c'est une équation de conservation de la probabilité de présence globale
-de la particule : en effet, en intégrant (7) on arrive à l'équation
-
- (indépendante du temps)
-
+de la particule : en effet, en intégrant (74) on arrive à l'équation
+\[
+\sum_\mt{j}\mt{P}_\mt{ji}=\mt{C}\mt{te} \qquad \mt{(indépendante du temps)}
+\]
 qui exprime le fait que la somme des probabilités pour que la particule
-soit dans un état  quelconque est constante.
+soit dans un état $|\ \phi_\mt{j}>$ quelconque est constante.
 
-La relation (7h), compte tenu de (67), conduit à 3
-
-Si  est suffisamment petit, 21 se comporte comme une
-
-distribution de Dirac. On a alors
-
+La relation (74), compte tenu de (67), conduit à :
+\[
+\frac{2}{\hbar}\mt{ Im R}_\mt{ii}^{(\epsilon)}+\frac{2}{\hbar}\iint\mt{k}_\mt{j}^2\mt{ dk}_\mt{j}
+\mt{ d}\Omega_\mt{j }\frac{\epsilon}{(\mt{E}_\mt{i}-\mt{E}_\mt{j})^2+\epsilon^2}\;|\mt{R}_\mt{ji}^{(\epsilon)}|^2
+=0
+\]
+Si $\epsilon$ est suffisamment petit, $\frac{1}{\pi}\frac{\epsilon}{(\mt{E}_\mt{i}-\mt{E}_\mt{j})^2+\epsilon^2}$ se comporte comme une distribution de Dirac. On a alors
+\[
+\frac{2}{\hbar}\mt{ Im R}_\mt{ii}^{(\epsilon)}+\frac{2\pi\mt{m k}_\mt{i}}{\hbar^3}
+\int\mt{d}\Omega_\mt{j }|\mt{R}_\mt{ji}^\epsilon|^2=0
+\]
 % 141
-
-ou, à la limite où  :
-
+ou, à la limite où $\epsilon\to0_+$ :
+\[
+\frac{2}{\hbar}\mt{ Im R}_\mt{ii}+\frac{\hbar\mt{ k}_\mt{i}}{(2\pi)^3\mt{ m}}
+\int\sigma(\Omega_\mt{j})\mt{ d}\Omega_\mt{j}=0
+\]
 ce qui s'écrit encore, compte tenu de (50) :
-
+\[
+\tag{75}\sigma_\mt{total}=-(2\pi)^3\frac{2\mt{m}}{\hbar\mt{ k}_\mt{i}}\mt{ Im R}_\mt{ii}
+\]
 ou bien, compte tenu de (72) :
+\[
+\tag{75'}\sigma_\mt{total}=\frac{4\pi}{\mt{ k}_\mt{i}}\mt{ Im f}\,(\,\vec{\mt{k}}_\mt{i},\;0)
+\]
 
-La relation (75) (ou 75) porte 1e nom de relation de
-Bohr-Peieris-Piaczek et traduit le "théorème optique" : la section
-efficace totale de diffusion est proportionnelle à le partie imeginaire de
+La relation (75) (ou 75') porte 1e nom de relation de
+\ul{Bohr-Peierls-Placzek} et traduit le "\ul{théorème optique}" : la section
+efficace totale de diffusion est proportionnelle à le partie imaginaire de
 l'amplitude de diffusion vers l'avant.
 
 Le théorème optique se présente comme une conséquence
-de la conservation de ia norme ou de la probabilité de présence de la
+de la conservation de la norme ou de la probabilité de présence de la
 particule : physiquement, la probabilité de présence globale de la particule
 doit se conserver au cours de la collision. Pour qu'il apparaisse,
 après collision, une probabilité de présence non nulle dans des directions
-autres que la direction incidente, il faut donc qu'après la collision, la
+autres que la direction incidente, il faut donc qu'\ul{après la collision}, la
 probabilité de présence dans la direction incidente soit plus petite
-qu'avant la collision. Ceci n'est possible que s'il existe une interférence
-destructrice entre l'onde transmise (qui est identique à l'onde
-incidente) et l'onde diffusée vers l'avant, décrite à l'aide de
-. La quantité dont diminue la probabilité de présence dans la
+qu'\ul{avant la collision}. Ceci n'est possible que s'il existe une interférence
+\ul{destructrice} entre l'\ul{onde transmise} (qui est identique à l'onde
+incidente) et l'\ul{onde diffusée vers l'avant}, décrite à l'aide de
+f$\,(\,\vec{\mt{k}}_\mt{i},\;0)$. La quantité dont diminue la probabilité de présence dans la
 direction incidente mesure l'"absorption" sur le faisceau incident qui
-est égale à la probabilité totaïe de diffusion dans toutes les autres
-
-directions, liée à  IL est donc naturel qu'il existe une relation
-
-entre . le théorère optiaue montre de plus que c'est
-
-la partie imasinaire de l'amplitude de diffusion vers l'avant  qui
-
-\[
-\tag{71}=
-\]
-\[
-\tag{78}=
-\]
-
-% 1
-
+est égale à la probabilité totale de diffusion dans toutes les autres
+directions, liée à $\sigma_\mt{total}$. Il est donc naturel qu'il existe une relation
+entre $\sigma_\mt{total}$ et f$\,(\,\vec{\mt{k}}_\mt{i},\;0)$. le théorère optique montre de
+plus que c'est la partie imaginaire de l'amplitude de diffusion vers l'avant f$\,(\,\vec{\mt{k}}_\mt{i},\;0)$ qui
+% 142
 décrit l'absorption sur le faisceau incident.
-
-\subsubsection{}%
-5°) Approximation de Born
-
+\subsubsection{Approximation de Born}% 5
 Nous avons vu dans les paragraphes précédents que la quantité
 essentielle pour le calcul des sections efficaces de collision est l'élément de
-matrice R..,
+matrice R$_\mt{ji}$.
 
 Or on a :
-
-Soit en introduisant dans le dernier membre 1a relation de fermeture
-
+\[
+\mt{R}_\mt{ji}=\;<\phi_\mt{j }|\mt{ V }|\ \psi_\mt{i}^+>\;=\;<\phi_\mt{j }|\mt{ V }|\ \phi_\mt{i}>+
+\lim_{\epsilon\to\,0_+}<\phi_\mt{j }|\mt{ V }
+\frac{1}{\mt{E}_\mt{i}-\mt{T}+i\epsilon}\mt{ V }|\ \psi_\mt{i}^+>_\epsilon
+\]
+Soit en introduisant dans le dernier membre la relation de fermeture $\sum_\mt{k}|\phi_\mt{k }><\phi_\mt{k}|=1$
+\[
+\tag{76}\mt{R}_\mt{ji}=\mt{ V}_\mt{ji}+
+\lim_{\epsilon\to\,0_+}\int\mt{dk }
+\frac{\mt{V}_\mt{jk}\mt{ R}_\mt{ki}}{\mt{E}_\mt{i}-\mt{E}_\mt{k}+i\epsilon}
+\]
 L'équation intégrale (76) est l'analogue pour les éléments de la matrice
-de Péaction de l'équation de Lippmann-Schwinger pour les états de collision.
+de Réaction de l'équation de Lippmann-Schwinger pour les états de collision.
 Pour résoudre les différents problèmes de collision, on est amené à appliquer à
 (76) les diverses méthodes de résolution et d'approximation des
 équations intégrales,
 
-On peut notamment faire le développement en série de NeumannLiouville:
-
-qui porte le nom de Dévelonnement de Born des éléments de la matrice de
+On peut notamment faire le développement en série de Neumann-Liouville :
+\[
+\tag{77}\mt{R}_\mt{ji}=\mt{ V}_\mt{ji}+\lim_{\epsilon\to\,0_+}\int
+\frac{\mt{V}_\mt{jk}\mt{ V}_\mt{ki}}{\mt{E}_\mt{i}-\mt{E}_\mt{k}+i\epsilon}\mt{ dk }+
+\lim_{\epsilon\to\,0_+}\iint\frac{\mt{V}_\mt{jk}\mt{ V}_\mt{kl}\mt{ V}_\mt{li}\mt{ dk dl}}
+{(\mt{E}_\mt{i}-\mt{E}_\mt{k}+i\epsilon)(\mt{E}_\mt{i}-\mt{E}_\mt{l}+i\epsilon)}\;+\;...
+\]
+qui porte le nom de \ul{Développement de Born} des éléments de la matrice de
 réaction. Ce développement permet de calculer la section efficace sous
 forme d'un développement limité en V.
 
-Au premier ordre, nous avons l'approximation de Bormm : 
-
+Au premier ordre, nous avons l'\ul{approximation de Born} : R$_\mt{ji}=$ V$_\mt{ji}$
 qui conduit à la section efficace :
+\[
+\tag{78}\sigma_\mt{1}(\Omega_\mt{j})\;=\;\frac{(2\pi)^4\mt{m}^2}{\hbar^4}\ |\mt{ V}_\mt{ji }|^2
+\]
 
 Nous n'aborderons pas ici la discussion de la validité de cette approximation,
 ni de ses applications.
-
-\[
-\tag{80}=
-\]
-
 %13
-
-\section{}%
-E - Matrice S
+\section{Matrice S}% E
 Nous allons maintenant définir et étudier de façon précise
-
-la matrice de collision S.
-
-\subsection{}%
-1°) Rappels sur la représentation d'interaction ou "point
-D
-
-- de vue de Dirac")
-Dans le point de vue de Schrödinger, l'état  évolue
+la \ul{matrice de collision} S.
+\subsection{Rappels sur la représentation d'interaction (ou "point de vue de Dirac")}% 1
+Dans le point de vue de Schrödinger, l'état $|\ \psi\mt{(t)}>$ évolue
 conformément à l'équation de Schrödinger
-ou encore sous l'effet de l'opérateur unitaire U (t", t')
-
- vérifiant l'équation
-
-Effectuons sur les vecteurs d'états et sur les observables ia trensformation
-unitaire définie par l'opérateur  et V deviennent
+\[
+i\hbar\,\frac{\mt{d}}{\mt{dt}}\,|\ \psi\mt{(t)}>\ =\,\mt{H }|\ \psi\mt{(t)}>
+\]
+ou encore sous l'effet de l'opérateur unitaire U (t'', t')
+\[
+|\ \psi\mt{(t'')}>\ =\,\mt{U(t'', t') }|\ \psi\mt{(t')}>
+\]
+U (t'', t') vérifiant l'équation
+\[
+i\hbar\,\frac{\mt{d}}{\mt{dt''}}\mt{U(t'', t') }=\,\mt{H U(t'', t') }
+\]
+Effectuons sur les vecteurs d'états et sur les observables la trensformation
+unitaire définie par l'opérateur e$^{i\frac{\mt{Tt}}{\hbar}}|\ \psi\mt{(t)}>$ et V deviennent
 alors :
-
-Il est alors immédiat de montrer que | y (t) > évolue dans le temps conformément
+\[
+\tag{79-a}|\ \tilde{\psi}\mt{(t)}>=\mt{e}^{i\frac{\mt{Tt}}{\hbar}}|\ \psi\mt{(t)}>
+\]
+\[
+\tag{79-b}\tilde{\mt{V}}\mt{(t)}=\mt{e}^{i\frac{\mt{Tt}}{\hbar}}\mt{ V e}^{-i\frac{\mt{Tt}}{\hbar}}
+\]
+Il est alors immédiat de montrer que $|\ \tilde{\psi}\mt{(t)}>$ évolue dans le temps conformément
 à l'équation :
-
-% 1
-
-Par définition  est le vecteur d'état du système dans
-la "représentation" d'interaction, L'équation (80) montre que
-
- n'évolue pas si l'interaction V est nulle : autrement
+\[
+\tag{80}i\hbar\,\frac{\mt{d}}{\mt{dt}}\,|\ \tilde{\psi}\mt{(t)}>\ =\,\tilde{\mt{V}}\mt{(t) }|\ \tilde{\psi}\mt{(t)}>
+\]
+% 144
+Par définition $|\ \tilde{\psi}\mt{(t)}>$ est le vecteur d'état du système dans
+la "représentation" d'interaction. L'équation (80) montre que
+$|\ \tilde{\psi}\mt{(t)}>$ \ul{n'évolue pas} si l'interaction V est nulle : autrement
 dit, le point de vue d'interaction sépare dans le mouvement ce
 qui provient du hamiltonien de la particule libre T et ce qui
 provient du potentiel V qui décrit la collision.
 
 On peut montrer aisément que l'équation (80) est équivalente à :
-
 \[
-\tag{81}=
+\tag{81}|\ \tilde{\psi}\mt{(t'')}>\,=\tilde{\mt{U}}\mt{(t'', t') }|\ \tilde{\psi}\mt{(t')}>
 \]
-où U (t'", t') est l'opérateur unitaire défini par
-
+où $\tilde{\mt{U}}$(t'', t') est l'opérateur unitaire défini par
 \[
-\tag{82}=
+\tag{82}\tilde{\mt{U}}\mt{(t'', t')}=
+\mt{e}^{i\frac{\mt{Tt''}}{\hbar}}\mt{ U(t'', t') e}^{-i\frac{\mt{Tt'}}{\hbar}}
 \]
 vérifiant l'équation
+\[
+\tag{83}i\hbar\,\frac{\mt{d}}{\mt{dt}}\,\tilde{\mt{U}}\mt{(t'', t')}\,=
+\,\tilde{\mt{V}}\mt{(t'') }\tilde{\mt{U}}\mt{(t'', t')}
+\]
+et possédant les mêmes propriétés de groupe que U (t'', t') :
 
 \[
-\tag{83}=
-\]
-
-et possédant les mêmes propriétés de groupe que U (t", t') :
-
-\[
-\tag{84-a}=
+\tag{84-a}\tilde{\mt{U}}\mt{(t'', t')}=\tilde{\mt{U}}\mt{(t'', t)}\tilde{\mt{U}}\mt{(t, t')}
 \]
 \[
-\tag{84-b}=
+\tag{84-b}\tilde{\mt{U}}\mt{(t'', t')}=\tilde{\mt{U}}^{-1}\mt{(t', t'')}=\tilde{\mt{U}}^\dag\mt{(t'', t')}
 \]
 \[
-\tag{84-c}=
+\tag{84-c}\tilde{\mt{U}}\mt{(t, t)}=1
 \]
-Les opérateurs T et V étant indépendants du temps, nous pouvons
-de plus écrire :
-
+Les opérateurs T et V étant indépendants du temps, nous pouvons de plus écrire :
+\[
+\mt{U}\mt{(t'', t')}=\mt{e}^{-i\frac{\mt{H}}{\hbar}(\mt{t''}-\mt{t'})}
+\]
 et l'équation (82) devient alors :
+\[
+\tag{85}\tilde{\mt{U}}\mt{(t'', t')}=
+\mt{e}^{i\frac{\mt{Tt''}}{\hbar}}\mt{e}^{-i\frac{\mt{H}}{\hbar}\mt{(t''}-\mt{t')}}\mt{e}^{-i\frac{\mt{Tt'}}{\hbar}}
+\]
 
-% 
+% 145
 L'intérêt de la représentation d'interaction dans le problème de la collision
 réside dans le fait que le vecteur d'état n'évolue
 pas si l'interaction est nulle : longtemps avant ou après la collision,
@@ -864,26 +887,29 @@ les deux systèmes dont on étudie l'évolution sont éloignés l'un de
 l'autre; ils n'interagissent pas et le vecteur d'état qui les représente dans
 la représentation d'interaction est immobile : la collision
 doit donc faire évoluer Le vecteur d'état du système d'une position
-fixe, dans le passé lointain que nous roterons  à une
-autre position fixe, dans le futur lointain que nous noterons ,
-
+fixe, dans le passé lointain que nous noterons $|\ \tilde{\psi}\;(-\infty)>$ à une
+autre position fixe, dans le futur lointain que nous noterons $|\ \tilde{\psi}\;(+\infty)>$,
 conformément à la figure ci-dessous
-
+\begin{center} \begin{tikzpicture}
+\draw [very thick] (0,0) -- (3,2.4) node [right] {$|\ \tilde{\psi}\;(-\infty)>$};
+\draw [very thick] (2.9,2.0) -- (3,2.4) -- (2.6,2.4);
+\draw [very thick] (0,0) -- (-3.1,2.5) node [left] {$|\ \tilde{\psi}\;(+\infty)>$};
+\draw [very thick] (-3,2.1) -- (-3.1,2.5) -- (-2.7,2.5);
+\draw [thick] (2.8,2.8)  arc (45:135:4);
+\draw [thick] (-2.75,3.2) -- (-2.85,2.8) -- (-2.5,2.8);
+\end{tikzpicture} \end{center}
 Nous allons étudier, dans ce qui suit, la transformation S qui permet de
-passer de :
-
-et nous allons voir dans quelle mesure on peut assimiler 
+passer de $|\ \tilde{\psi}\;(-\infty)>$ à $|\ \tilde{\psi}\;(+\infty)>$:
+\begin{center}
+$|\ \tilde{\psi}\;(+\infty)>\;=\mt{S }|\ \tilde{\psi}\;(-\infty)>$
+\end{center}
+et nous allons voir dans quelle mesure on peut assimiler S à $\tilde{\mt{U}}(+\infty,-\infty)$.
 
 % 146
-
-\subsection{}%
-2°) Définition de la matrice S. Méthode
-
-\subsubsection{}%
-a) Position du problème
-
-Soient  et  deux paquets d'ondes libres
-en représentation d'interaction. Ces paquets n'évoluent pas au
+\subsection{Définition de la matrice S. Méthode}% 2
+\subsubsection{Position du problème}% a
+Soient $|\ \tilde{\phi}_\mt{A}>$ et $|\ \tilde{\phi}_\mt{B}>$ deux paquets d'ondes libres
+en représentation d'interaction. Ces paquets \ul{n'évoluent pas} au
 cours du temps et peuvent s'écrire :
 
 Les états 
