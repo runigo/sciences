@@ -911,53 +911,80 @@ et nous allons voir dans quelle mesure on peut assimiler S à $\tilde{\mt{U}}(+\
 Soient $|\ \tilde{\phi}_\mt{A}>$ et $|\ \tilde{\phi}_\mt{B}>$ deux paquets d'ondes libres
 en représentation d'interaction. Ces paquets \ul{n'évoluent pas} au
 cours du temps et peuvent s'écrire :
+\[
+\tag{86-a}|\ \tilde{\phi}_\mt{A}>=\int\mt{C}_\mt{A}\mt{(i) }|\ \phi_\mt{i}>\mt{di}
+\]
+\[
+\tag{86-b}|\ \tilde{\phi}_\mt{B}>=\int\mt{C}_\mt{B}\mt{(j) }|\ \phi_\mt{j}>\mt{dj}
+\]
+Les états $|\ \tilde{\phi}_\mt{A}>$ et $|\ \tilde{\phi}_\mt{B}>$ sont des états physiques puisque leur
+norme est finie.
 
-Les états 
-
-norme est finie,
- sont des états physiques puisque leur
-
-Considérons la quantité
-
+Considérons la quantité $<\tilde{\phi}_\mt{B}\ |\ \tilde{\mt{U}}\mt{(t'', t') }|\ \tilde{\phi}_\mt{A}>$
 qui représente l'amplitude de probabilité pour que le système
-étant dans l'état  à l'instant t' se trouve dans l'état
-à l'instant t",
+étant dans l'état $|\ \tilde{\phi}_\mt{A}>$ à l'instant t' se trouve dans l'état
+$|\ \tilde{\phi}_\mt{B}>$ à l'instant t",
 
 Nous allons montrer que cette quantité admet une
-limite lorsque  et  et nous appellerons cette
+limite lorsque t' $\to-\infty$ et t'' $\to+\infty$ et nous appellerons cette
+limite élément de matrice de la \ul{matrice de collision S} entre
+$<\tilde{\phi}_\mt{B}\ |$ et $|\ \tilde{\phi}_\mt{A}>$ :
+\[
+\tag{87}\lim_{\mt{t'}\to-\infty\mt{, t''}\to+\infty}
+<\tilde{\phi}_\mt{B}\ |\ \tilde{\mt{U}}\mt{(t'', t') }|\ \tilde{\phi}_\mt{A}>\ =
+\ <\tilde{\phi}_\mt{B}\ |\mt{ S }|\ \tilde{\phi}_\mt{A}>
+\]
 
-limite élément de matrice de la matrice de collision S entre
- matrice de collision 
+% matrice de collision 
 
-%
+\subsubsection{Définition et propriétés des vecteurs $|\ \tilde{\psi}_\mt{A}^+\mt{(t)}>$
+ et $|\ \tilde{\psi}_\mt{B}^-\mt{(t)}>$}% b
+Dans la \ul{}représentation de Schrödinger, considérons les deux
+paquets de collision associés à $|\ \phi_\mt{A}\mt{(t)}>$ et $|\ \phi_\mt{B}\mt{(t)}>$ que nous avons
+étudiés au \S C :
+\[
+|\ \tilde{\psi}_\mt{A}^+>=\int\mt{C}_\mt{A}\mt{(i) }|\ \psi_\mt{i}^+>
+\mt{ e}^{-i\frac{\mt{E}_\mt{i}\mt{t}}{\hbar}}\mt{ di}
+\]
+\[
+|\ \tilde{\psi}_\mt{B}^->=\int\mt{C}_\mt{B}\mt{(j) }|\ \psi_\mt{j}^->
+\mt{ e}^{-i\frac{\mt{E}_\mt{j}\mt{t}}{\hbar}}\mt{ dj}
+\]
 
-\subsubsection{}%
-b) Définition et propriétés des vecteurs  et 
-
-Dans la représentation de Schrödinger, considérons les deux
-paquets de collision associés à  et  que nous avons
-étudiés au \S C : Est
-
-D'après (h7-a), (kB) et (79-a), nous savons que
-
+D'après (47-a), (48) et (79-a), nous savons que
+\[
+\tag{88-a}\lim_{\mt{t}\to-\infty}|\ \psi_\mt{A}^+\mt{(t)}>\ =|\ \phi_\mt{A}\mt{(t)}>=
+\mt{ e}^{-i\frac{\mt{T}\mt{t}}{\hbar}}|\ \tilde{\phi}_\mt{A}>
+\]
+\[
+\tag{88-b}\lim_{\mt{t}\to+\infty}|\ \psi_\mt{B}^-\mt{(t)}>\ =|\ \phi_\mt{B}\mt{(t)}>=
+\mt{ e}^{-i\frac{\mt{T}\mt{t}}{\hbar}}|\ \tilde{\phi}_\mt{B}>
+\]
 En passant en représentation d'interaction :
-
+\[
+|\ \tilde{\psi}_\mt{A}^+\mt{(t)}>\ =\mt{ e}^{-i\frac{\mt{T}\mt{t}}{\hbar}}|\ \psi_\mt{A}^+\mt{(t)}>
+\]
+\[
+|\ \tilde{\psi}_\mt{B}^-\mt{(t)}>\ =\mt{ e}^{-i\frac{\mt{T}\mt{t}}{\hbar}}|\ \psi_\mt{B}^-\mt{(t)}>
+\]
 On a d'après (88-a) et (88-b) :
 
 \[
-\tag{89-a}=
+\tag{89-a}\lim_{\mt{t}\to-\infty}|\ \tilde{\psi}_\mt{A}^+\mt{(t)}>\ =|\ \tilde{\phi}_\mt{A}>
 \]
 \[
-\tag{89-b}=
+\tag{89-b}\lim_{\mt{t}\to+\infty}|\ \tilde{\psi}_\mt{B}^-\mt{(t)}>\ =|\ \tilde{\phi}_\mt{B}>
 \]
+%148
 
-% 148
-
-\subsubsection{}%
-c)Limite de 
-
+\subsubsection{Limite de $<\tilde{\phi}_\mt{B }|\ \tilde{\mt{U}}\mt{(t'', t') }|\ \tilde{\phi}_\mt{A}>$}% c
 Considérons la quantité
-D'après (8h-a), elle est égale à
+$<\tilde{\psi}_\mt{B}^-\mt{(t'') }|\ \tilde{\mt{U}}\mt{(t'', t') }|\ \tilde{\psi}_\mt{A}^+\mt{(t')}>$
+D'après (84-a), elle est égale à
+\begin{center}
+$<\tilde{\psi}_\mt{B}^-\mt{(t'') }|\ \tilde{\mt{U}}\mt{(t'', 0) }\tilde{\mt{U}}\mt{(0, t') }|\ \tilde{\psi}_\mt{A}^+\mt{(t')}>\ =\ 
+<\tilde{\psi}_\mt{B}^-(0)\ |\ \tilde{\psi}_\mt{A}^+(0)>$
+\end{center}
 
 et donc indépendante de  et de ,
 D'autre part, d'après (89-a) et (89-b), la différence
