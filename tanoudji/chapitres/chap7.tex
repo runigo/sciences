@@ -263,304 +263,401 @@ Soit, en remplaçant G(E) par G$_0\;+$ G$_0$VG  et en remarquant que Q$_\mt{a}$ 
 
 D'où, finalement, compte tenu de (13) :
 \[
-\tag{18}\mt{F(E)}\;|\;\mt{a}>\;=\;|\;\mt{a}>\;+\;
-\frac{1}{\mt{E}-\mt{H}_0}\;\mt{Q}_{\mt{a}}\mt{ V F(E)}\;|\;\mt{a}>
+\tag{18}\mt{F(E) }|\;\mt{a}>\;=\;|\mt{ a}>\;+\;
+\frac{1}{\mt{E}-\mt{H}_0}\mt{ Q}_{\mt{a}}\mt{ V F(E) }|\mt{ a}>
 \]
 qui s'écrit pour E $=$ E$_\alpha$
 \[
-\tag{19}\mt{F(E}_\alpha)\;|\;\mt{a}>\;=\;|\;\mt{a}>\;+\;
-\frac{1}{\mt{E}_\alpha-\mt{H}_0}\;\mt{Q}_{\mt{a}}\mt{ V F(E}_\alpha)\;|\;\mt{a}>
+\tag{19}\mt{F(E}_\alpha)\;|\mt{ a}>\;=\;|\mt{ a}>\;+\;
+\frac{1}{\mt{E}_\alpha-\mt{H}_0}\mt{ Q}_{\mt{a}}\mt{ V F(E}_\alpha)\;|\mt{ a}>
 \]
-Or F(E$_\alpha$) $|$ a $>$ est, d'après (1), proportionnel à $|\;\alpha>$. (19) est donc une
+Or F(E$_\alpha$) $|$ a $>$ est, d'après (14), proportionnel à $|\;\alpha>$. (19) est donc une
 équation "intégrale" reliant entre eux les vecteurs propres de H et de H$_0$ et
 présente une grande analogie avec l'équation de Lippmam Schwinger reliant les
 états propres de collision $|\;\psi_\mt{i}^\pm>$ et les états propres $\phi_\mt{i}$, de l'énergie cinétique T :
+\[
+|\;\psi_\mt{i}^\pm>=|\;\phi_\mt{i}>+\frac{1}{\mt{E}_\mt{i}-\mt{T}\pm\mt{i}\epsilon}\mt{ V }|\;\psi_\mt{i}^\pm>
+\]
 
 % 109
 
 Si V est petit, on peut résoudre l'équation (19) par itération : on obtient
+le développement de Wigner-Brillouin
+\[
+\tag{20}\mt{F(E}_\alpha)\;|\;\mt{a}>\;=|\;\mt{a}>+\;\frac{\mt{Q}_\mt{a}}{\mt{E}_\alpha-\mt{H}_0}\mt{ V }|\;\mt{a}>
+\]
+\[
++\frac{\mt{Q}_\mt{a}}{\mt{E}_\alpha-\mt{H}_0}\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}_\alpha-\mt{H}_0}\mt{ V }|\;\mt{a}>+\;...
+\]
+\[
++\left(\frac{\mt{Q}_\mt{a}}{\mt{E}_\alpha-\mt{H}_0}\mt{ V }\right)^\mt{n}|\;\mt{a}>+\;...
+\]
+Il faut remarquer que dans ce développement l'\ul{énergie perturbée} figure au
+dénominateur (contrairement au développement classique de Rayleigh-Schrödinger).
 
-le développement de Yigner-Erillouin
-
-Il faut remarquer que dans ce développement l'énergie perturbée figure au
-dénominateur (contrairement au développement classique de Rayleigh-Schrüdinger )e
-
-Le projecteur a fait que les somnations intermédiaires se font sur
-des états autres que | a > : les dénominateurs sont de la forme  si
-V est suffisamment petit, E , est petit et les termes en ne
+Le projecteur Q$_\mt{a}$ fait que les sommations intermédiaires se font sur
+des états autres que $|$ a $>$ : les dénominateurs sont de la forme E$_\alpha-$E$_\mt{b}$ si
+V est suffisamment petit, E$_\alpha-$E$_\mt{a}$ est petit et les termes en 
+$\frac{1}{\mt{E}_\alpha-\mt{E}_\mt{b}}$ ne
 divergent pas.
 
-L'équation (18) permet théoriquement de calculer tous les états propres de H, mais on voit ainsi que c'est uniquement l'état | a > que l'on peut
+L'équation (18) permet théoriquement de calculer tous les états propres de H,
+mais on voit ainsi que c'est uniquement l'état $|\;\alpha>$ que l'on peut
 atteindre par un calcul de perturbation.
-
-5°) Calcul de R, (E) :
-
-\subsection{}%
+\subsection{Calcul de R$_\mt{a}$(E)}% 5
 De (18) et (15) on déduit
-
 \[
-\tag{21}=
+\tag{21}\mt{R(E)}\;|\;\mt{a}>\;=\mt{ V }|\;\mt{a}>\;+\mt{ V }
+\frac{\mt{Q}_\mt{a}}{\mt{E}-\mt{H}_0}\mt{ R(E) }\;|\mt{ a}>
 \]
 que l'on peut écrire de façon opératorielle :
-
 \[
-\tag{22}=
+\tag{22}\mt{R(E)}=\mt{ V }+\mt{ V }
+\frac{\mt{Q}_\mt{a}}{\mt{E}-\mt{H}_0}\mt{ R(E)}
 \]
-étent bien entendu que les deux membres agissent sur 
-
-%%%%— 200 —
+\ul{étant bien entendu que les deux membres agissent sur $|$ a $>$}
+% 200
 
 Remarque : Notons ici l'analogie qui existe entre l'opérateur shift R(E) et la
-matrice de réaction en théorie des collisions,
-
+matrice de réaction en théorie des collisions.
 Nous avons en effet, d'après (15)
-
-ce qui, compte tenu de l'analogie déjà notée entre |  > et  |  >,
-est l'analogie de l'équation
-
-Nous pouvons maintenant effectuer un développement par itération de l'équation (22) :
-
-ce qui nous donne le développement de R, (E) :
-
 \[
-\tag{23}=
+<\mt{b }|\mt{ R(E}_\alpha)\ |\mt{ a}>=<\mt{b }|\mt{ V F(E}_\alpha)\ |\mt{ a}>
 \]
 
-Ce développement ne pourra converger que si R(E) est suffisamment petit, donc
-notamment pour E = E
+ce qui, compte tenu de l'analogie déjà notée entre $|\ \psi_\mt{i}^+>$ et  F(E$_\alpha)|$ a $>$,
+est l'analogie de l'équation
+\[
+\mt{R}_\mt{ji}=<\phi_\mt{i}\ |\mt{ V }|\ \psi_\mt{i}^+>
+\]
+Nous pouvons maintenant effectuer un développement par itération de l'équation (22) :
+\[
+\mt{R(E) }=\mt{ V }+\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}-\mt{H}_0}\mt{ V }+...+
+\mt{ V }\left(\frac{\mt{Q}_\mt{a}}{\mt{E}-\mt{H}_0}\mt{ V }\right)^\mt{n}+...
+\]
 
-Compte tenu de l'équation (17), on obtient alors le développement de
-Wigner-Brillouin de l'énergie perturbée :
+ce qui nous donne le développement de R$_\mt{a}$(E) :
 
 \[
-\tag{24}=
+\tag{23}\mt{R}_\mt{a}(\mt{E})=<\mt{a}\;|\mt{ V }|\;\mt{a}>+<\mt{a}\;|\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}-\mt{H}_0}\mt{ V }|\;\mt{a}>+...
+\]
+\[
++<\mt{a}\;|\mt{ V }\left(\frac{\mt{Q}_\mt{a}}{\mt{E}-\mt{H}_0}\mt{ V }\right)^\mt{n}|\;\mt{a}>+...
+\]
+
+Ce développement ne pourra converger que si R$_\mt{a}$(E) est suffisamment petit, donc
+notamment pour E = E$_\alpha$.
+
+Compte tenu de l'équation (17), on obtient alors le \ul{développement de
+Wigner-Brillouin} de l'énergie perturbée :
+\[
+\tag{24}\mt{E}_\alpha=\mt{E}_\mt{a}+<\mt{a}\;|\mt{ V }|\;\mt{a}>+<\mt{a}\;|\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}_\alpha-\mt{H}_0}\mt{ V }|\;\mt{a}>+\;...
+\]
+\[
++<\mt{a}\;|\mt{ V }\left(\frac{\mt{Q}_\mt{a}}{\mt{E}_\alpha-\mt{H}_0}\mt{ V }\right)^\mt{n}|\;\mt{a}>+\;...
 \]
 
 Tout comme dans le développement (20), l'énergie perturbée apparaît au dénominateur, mais pour les mêmes raisons, aucun dénominateur ne peut s'annuler si la
-
 perturbation est suffisamment petite.
 
 %%%%- 201 
 En remplaçant de proche en proche dans les dénominateurs l'énergie
-perturbée É par le développement (24) lui-même, on peut obtenir aux ordres
-successifs le développement de Rayleiph-Schrüdinger, qui est explicite, mais
+perturbée E par le développement (24) lui-même, on peut obtenir aux ordres
+successifs le développement de \ul{Rayleigh-Schrödinger}, qui est explicite, mais
 moins simple,
 
-Faisons à titre d'exemple le calcul jusqu'au 3e ordre :
+Faisons à titre d'exemple le calcul jusqu'au 3$^\mt{ème}$ ordre :
 
-Jusqu'au 2e ordre inclus, le développement (2) reste valable, le
-remplacement de E, par E, dans le terme du 2e ordre introduisant ure correction au 3e ordre : on a en effet, en posant
-
-D'où le développement de Rayleigh-Schrôdinger au 3e ordre :
+Jusqu'au 2$^\mt{ème}$ ordre inclus, le développement (24) reste valable, le
+remplacement de E$_\alpha$ par E$_\mt{a}$ dans le terme du 2$^\mt{ème}$ ordre introduisant ure correction au 3$^\mt{ème}$ ordre : on a en effet, en posant $<$ a $|$ V $|$ a $>$ = V$_\mt{aa}$
 \[
-\tag{25}=
++<\mt{a}\;|\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}_\alpha-\mt{H}_0}\mt{ V }|\;\mt{a}>\;=\;
+<\mt{a}\;|\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}_\alpha-\mt{H}_0+\mt{V}_\mt{aa}+\mt{O(V)}}\mt{ V }|\;\mt{a}>
 \]
-L'expression (22) de R(E) est une expression implicite. Nous allons maintenant
-donner une forme explicite de R qui pourra être utile pour certeines applications. (22) peut s'écrire
+\[
+-<\mt{a}\;|\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}_\alpha-\mt{H}_0+\mt{V}_\mt{aa}+\mt{O(V)}}\mt{ V }|\;\mt{a}>+\;...
+\]
+\[
++<\mt{a}\;|\mt{ V }\left(\frac{\mt{Q}_\mt{a}}{\mt{E}_\alpha-\mt{H}_0}\mt{ V }\right)^\mt{n}|\;\mt{a}>+\;...
+\]
 
-ou
-
-Soit
-
+D'où le développement de Rayleigh-Schrödinger au 3$^\mt{ème}$ ordre :
+\[
+\tag{25}\mt{E}_\alpha=\mt{E}_\mt{a}+<\mt{a}\;|\mt{ V }|\;\mt{a}>+<\mt{a}\;|\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}_\mt{a}-\mt{H}_0}\mt{ V }|\;\mt{a}>
+\]
+\[
++<\mt{a}\;|\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}_\mt{a}-\mt{H}_0}\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}_\mt{a}-\mt{H}_0}\mt{ V }|\;\mt{a}>-<\mt{a}\;|\mt{ V }\frac{\mt{Q}_\mt{a}}{\left(\mt{E}_\mt{a}-\mt{H}_0\right)^2}\mt{ V P}_\mt{a}\mt{ V }|\;\mt{a}>
+\]
+L'expression (22) de R(E) est une expression \ul{implicite}. Nous allons maintenant
+donner une forme explicite de R$_\mt{a}$(E) qui pourra être utile pour certaines applications. (22) peut s'écrire
+\[
+\tag{22}\left[1-\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}-\mt{H}_0}\right]\mt{R(E)}=\mt{ V}
+\]
+\[
+\mt{ou}\qquad\left(\mt{E}-\mt{H}_0-\mt{ V Q}_\mt{a}\right)\frac{1}{\mt{E}-\mt{H}_0}\mt{R(E)}=\mt{ V}
+\]
+\[
+\mt{Soit}\qquad\frac{1}{\mt{E}-\mt{H}_0}\mt{R(E)}=\frac{1}{\mt{E}-\mt{H}_0-\mt{V Q}_\mt{a}}\mt{ V}
+\]
 et en utilisant l'identité :
-
-%%%%
-
 \[
-\tag{26}=
+\frac{1}{\mt{E}-\mt{H}_0-\mt{ V\,Q}_\mt{a}}=\frac{1}{\mt{E}-\mt{H}_0}+
+\frac{1}{\mt{E}-\mt{H}_0}\mt{ V\,Q}_\mt{a }\frac{1}{\mt{E}-\mt{H}_0-\mt{V\,Q}_\mt{a}}
 \]
-
-\[
-\tag{27}=
-\]
-
-
-\[
-\tag{28}=
-\]
-
-
-\[
-\tag{29}=
-\]
-
-% 202 —
-
+%%%% 202
 il vient :
-
+\[
+\tag{26}\frac{1}{\mt{E}-\mt{H}_0}\,\mt{R(E)}=\frac{1}{\mt{E}-\mt{H}_0}\mt{ V}+\frac{1}{\mt{E}-\mt{H}_0}\mt{ V\,Q}_\mt{a }\frac{1}{\mt{E}-\mt{H}_0-\mt{V\,Q}_\mt{a}}\mt{ V}
+\]
 Utilisons à nouveau l'identité
-
+\[
+\frac{1}{\mt{E}-\mt{H}_0-\mt{V\,Q}_\mt{a}}
+=\frac{1}{\mt{E}-\mt{H}_0-\mt{P}_\mt{a}\mt{V\,Q}_\mt{a}-\mt{Q}_\mt{a}\mt{V\,Q}_\mt{a}}=
+\]
+\[
+\frac{1}{\mt{E}-\mt{H}_0-\mt{Q}_\mt{a}\mt{V\,Q}_\mt{a}}
++\frac{1}{\mt{E}-\mt{H}_0-\mt{Q}_\mt{a}\mt{V\,Q}_\mt{a}}\mt{P}_\mt{a}\mt{V\,Q}_\mt{a}
+\frac{1}{\mt{E}-\mt{H}_0-\mt{V\,Q}_\mt{a}}
+\]
 dans l'expression (26); on obtient
+\[
+\tag{27}\frac{1}{\mt{E}-\mt{H}_0}\,\mt{R(E)}=\frac{1}{\mt{E}-\mt{H}_0}\mt{ V}+
+\frac{1}{\mt{E}-\mt{H}_0}\mt{ V\,Q}_\mt{a }\frac{1}{\mt{E}-\mt{H}_0-\mt{Q}_\mt{a}\mt{V\,Q}_\mt{a}}\mt{ V}
+\]
+\[
++\frac{1}{\mt{E}-\mt{H}_0}\mt{ V\,Q}_\mt{a }
+\frac{1}{\mt{E}-\mt{H}_0-\mt{Q}_\mt{a}\mt{V\,Q}_\mt{a}}\mt{ P}_\mt{a}\mt{\,V\,Q}_\mt{a }
+\frac{1}{\mt{E}-\mt{H}_0-\mt{V\,Q}_\mt{a}}\mt{ V}
+\]
+Q$_\mt{a}$, commute avec E$-$H$_0-$Q$_\mt{a}$V\,Q$_\mt{a}$, 
+donc avec $\frac{1}{\mt{E}-\mt{H}_0-\mt{Q}_\mt{a}\mt{V\,Q}_\mt{a}}$.
+On peut donc commuter Q$_\mt{a}$ et $\frac{1}{\mt{E}-\mt{H}_0-\mt{Q}_\mt{a}\mt{V\,Q}_\mt{a}}$ dans le dernier terme du
+développement (27). On fait alors apparaître le produit Q$_\mt{a}$P$_\mt{a}\equiv0$ et le dernier terme est nul.
+D'autre part, on peut dans l'avant-dernier terme, en remarquant que Q$_\mt{a}=$Q$_\mt{a}^2$ écrire
+Q$_\mt{a}\frac{1}{\mt{E}-\mt{H}_0-\mt{Q}_\mt{a}\mt{V\,Q}_\mt{a}}\equiv$ Q$_\mt{a}
+\frac{1}{\mt{E}-\mt{H}_0-\mt{Q}_\mt{a}\mt{V\,Q}_\mt{a}}$Q$_\mt{a}$
+On obtient enfin, en multipliant les deux membres de (27) à gauche par (E$-$H$_0$)
+\[
+\tag{28}\mt{R(E)}=\mt{ V}+\mt{ V Q}_\mt{a}\frac{1}{\mt{E}-\mt{H}_0-\mt{Q}_\mt{a}\mt{V\,Q}_\mt{a}}\mt{ Q}_\mt{a}\mt{V}
+\]
+Etant bien entendu que dans (28), les deux membres sont des opérateurs agissant sur $|$ a $>$.
 
-, commute avec ; donc avec 
-
-On peut donc commuter  et  dans le dernier terme du
-développement (27). On fait alors apparaître le produit  et le dernier terme est nul.
-D'autre part, on peut dans l'avant-dernier terme, en remarquant que  écrire
-On obtient enfin, en multipliant les deux membres de (27) à gauche par
-
-Etant bien entendu que dans (28), les deux membres sont des opérateurs agissant
-
-sur 
 On a en particulier :
-
-Si on revient à la définition de
-
+\[
+\tag{29}\mt{R}_\mt{a}\mt{(E)}=\,<\mt{a}\;|\mt{ V }|\;\mt{a}>+
+<\mt{a}\;|\mt{ V Q}_\mt{a}\frac{1}{\mt{E}-\mt{H}_0-\mt{Q}_\mt{a}\mt{V\,Q}_\mt{a}}\mt{ Q}_\mt{a}\mt{V }|\;\mt{a}>
+\]
+Si on revient à la définition de R(E) :
+\begin{center}
+R(E) $|$ a $>\;=$ V F(E) $|$ a $>$
+\end{center}
 l'équation (28) conduit à l'équation que l'on aurait pu établir directement :
-
 % 203
-
 \[
-\tag{30}=
+\tag{30}\mt{F(E) }|\;\mt{a}>\;=|\;\mt{a}>+\frac{1}{\mt{E}-\mt{H}_0-\mt{Q}_\mt{a}\mt{V\,Q}_\mt{a}}\mt{V }|\;\mt{a}>
 \]
+qui, pour E$=$E$_\alpha$, s'écrit
 \[
-\tag{31}=
+\tag{31}\mt{F(E}_\alpha)\;|\;\mt{a}>\;=|\;\mt{a}>+\;
+\frac{1}{\mt{E}_\alpha-\mt{H}_0-\mt{Q}_\mt{a}\mt{V\,Q}_\mt{a}}\mt{V }|\;\mt{a}>
 \]
-
-qui, pour , s'écrit
-
 équation qui présente une grande analogie avec la forme explicite de
-l'équation de Liprpmann-Schwinger :
-
- 
-\section{}
-D, Cas de deux niveaux | a > et | b > dégénérés où quasi-dégénérés.
-
-\subsection{}%
-1°) Position du problème :
-
-Nous allons maintenant envisager le cas où deux des niveaux d'énergie, a et b, du hamiltonien non perturbé  sont dégénérés où très voisins l'un
+l'équation de Lippmann-Schwinger :
+\[
+|\;\psi_\mt{i}^\pm>\;=|\;\phi_\mt{i}>+\frac{1}{\mt{E}_\mt{i}-\mt{H}\pm\mt{i}\epsilon}\mt{ V }|\;\phi_\mt{i}>
+\]
+\section{Cas de deux niveaux | a > et | b > dégénérés où quasi-dégénérés}% D
+\subsection{Position du problème}% 1
+Nous allons maintenant envisager le cas où deux des niveaux d'énergie, a et b, du hamiltonien
+non perturbé H$_0$ sont dégénérés où très voisins l'un
 de l'autre, c'est-à-dire tels que leur différence d'énergie est très faible devant
 celles qui les séparent de tous les autres niveaux.
-
-Energie
+\begin{center}
+\begin{tikzpicture}
+\draw [thick, ->] (-0.9,-1.7) -- (-0.9,3.4) node [right]{Energie};
+\draw [thick] (0,3) -- (3,3) node [right]{e};
+\draw [thick] (0,1.5) -- (3,1.5) node [right]{d};
+\draw [thick] (0,0.1) -- (3,0.1) node [right]{\ a};
+\draw [thick] (0,-0.1) -- (3,-0.1) node [right]{b};
+\draw [thick] (0,-1.5) -- (3,-1.5) node [right]{c};
+\end{tikzpicture} \end{center}
 
 L'introduction de la perturbation V va en général perturber fortement
 les niveaux a et b et lever la dégénéréscence.
 
 % 204
-Les quantités intéressantes à calculer vont être 
- soit encore en appelant , le projecteur sur la multiplicité
-dépénérée , la matrice , L'étude de ces quantités va nous permettre
+Les quantités intéressantes à calculer vont être G$_\mt{aa}$(E), G$_\mt{ab}$(E), G$_\mt{ba}$(E),
+G$_\mt{bb}$(E), soit encore en appelant P$_0$ le projecteur sur la multiplicité
+dégénérée ab, la matrice P$_0$GP$_0$. L'étude de ces quantités va nous permettre
 de calculer les nouveaux niveaux d'énergie et les nouveaux états propres.
 
-L'étude de  est également intéressante pour une autre raison :
- permet en effet, grâce à la relation (3), de calculer la quantité
- qui représente l'amplitude de probabilité pour que le système étant
-dans l'état non rerturbé a à l'instant t = O se trouve dans l'état non perturbé b à l'instant t.
+L'étude de G$_\mt{ba}$ est également intéressante pour une autre raison :
+G$_\mt{ba}$(E) permet en effet, grâce à la relation (3), de calculer la quantité
+U$_\mt{ba}$(t) qui représente l'amplitude de probabilité pour que le système étant
+dans l'état non perturbé a à l'instant t = O se trouve dans l'état non perturbé b à l'instant t.
 
 L'étude de la probabilité de transition entre deux niveaux a et b
-d'un hamiltonien H sous l'effet d'une perturbation V est un problème très
-important en physique ;: il arrive que les niveaux de He dépendent d'un para
-mètre  (ils Sont par exemple fonction du champ magnétique). Pour certaines
-valeurs du paramètre, deux niveaux a et b de He se croisent. L'effet de la
-perturbation V peut être spectaculaire en ces points de croisement, La probabilité de transition entre a et b induite par V passe par un maximum résonnant
-
+d'un hamiltonien H$_0$ sous l'effet d'une perturbation V est un problème très
+important en physique : il arrive que les niveaux de H$_0$ dépendent d'un paramètre $\epsilon$
+(ils sont par exemple fonction du champ magnétique). Pour certaines
+valeurs du paramètre, deux niveaux a et b de H$_0$ se croisent. L'effet de la
+perturbation V peut être spectaculaire en ces points de croisement. La probabilité
+de transition entre a et b induite par V passe par un maximum résonnant
 en ces points. Nous en verrons un exemple important dans la suite.
+\begin{center}
+\begin{tikzpicture}
+\draw [thick, ->] (0,0) -- (0,3.3) node [right]{Energie};
+\draw [thick, ->] (0,0) -- (4,0) node [right]{$\epsilon$};
+\draw [thick] (0.5,0.5) -- (3,1.3) node [right]{\ a};
+\draw [thick] (0.5,1.5) -- (3,0.7) node [right]{b};
+\draw [thick] (0.5,3) -- (3,2.5) node [right]{c};
+\draw [thick, dashed] (2.1,1) -- (2.1,0) node [below]{$\epsilon_0$};
+\end{tikzpicture} \end{center}
 
-Energie
 
 % 205
 
-Plutôt que d'étudier le théorie es perturbations dégénérées proprement dites, nous allons surtout insister sur l'étude des probabilités de
-transition entre deux niveaux dégénérés de He Nous soulignerons d'ailleurs
-au fur et à mesure les liens étroits qui existent entre ces deux problèmes,
+Plutôt que d'étudier le théorie des perturbations dégénérées proprement dites,
+nous allons surtout insister sur l'étude des probabilités de
+transition entre deux niveaux dégénérés de H$_0$ Nous soulignerons d'ailleurs
+au fur et à mesure les liens étroits qui existent entre ces deux problèmes.
 
-. Afin de nous familiariser davantage eævec l'emploi de la résolvente,
-nous allons tout d'abord envisager un ess très simple, que l'on peut traiter
-rigoureusement jusqu'au bout et qui ne mécessite pas l'emploi de techniques
-mathématiques aussi élaborées, ous allons envisager un problème à doux niveaux a et b couplés par une perturbation non diagonale V et nous montrerons
-comment Les formules simples obtenues peuvent se généraliser au cas plus compliqué où il existe un grand nombre de niveaux.
-\subsection{}
-2°) Etude d'un cas simple (problème à deux niveaux :
+Afin de nous familiariser davantage evec l'emploi de la résolvante,
+nous allons tout d'abord envisager un cas très simple, que l'on peut traiter
+rigoureusement jusqu'au bout et qui ne nécessite pas l'emploi de techniques
+mathématiques aussi élaborées. Nous allons envisager un problème à deux niveaux
+a et b couplés par une perturbation non diagonale V et nous montrerons
+comment Les formules simples obtenues peuvent se généraliser au cas plus compliqué
+où il existe un grand nombre de niveaux.
+\subsection{Etude d'un cas simple (problème à deux niveaux)}% 2
+Appelons E$_\mt{a}$ et E$_\mt{b}$ les énergies des deux niveaux $|$ a $>$ et $|$ b $>$ en
+l'absence de la perturbation. Après avoir éventuellement intégré dans H$_0$ les
+éléments diagonaux de la perturbation V, le seul élément de matrice non nul de
+V reste V$_\mt{ba}=$ V$_\mt{ab}^*$.
 
-Aprelons E et E les énergies des deux niveaux | a > et | b > en
-l'absence de la perturbation. Après avoir éventuellement intégré dans  les
-Éléments diagonaux de la perturbation V, le seul élément de matrice non nul de
- reste 
-
-Calculons l'élément de matrice non diagonal de la résolvente 
-nouveau La relation () :
-
-Ecrivons à
-
-et itérons-le au deuxième ordre :
-
+Calculons l'élément de matrice non diagonal de la résolvante G$_\mt{ba}$.
+Ecrivons à nouveau La relation (4) :
+\begin{center}
+G $=$ G$_0\;+\;$G$_0$V\,G
+\end{center}
+et itérons-la au deuxième ordre :
+\begin{center}
+G $=$ G$_0\;+\;$G$_0$V\,G$_0$ $+$G$_0$V\,G$_0$V\,G
+\end{center}
 On obtient
-
+\begin{center}
+G$_\mt{ba}=<$ b $|$ G$_0\;|$ b $>$ V$_\mt{ba}<$ a $|$ G$_0\;|$ a $>+<$
+ b $|$ G$_0\;|$ b $>$ V$_\mt{ba}<$ a $|$ G$_0\;|$ a $>$ V$_\mt{ab}<$ b $|$ G$\;|$ a $>$
+\end{center}
 Ou encore
-
 \[
-\tag{32}=
+\mt{G}_\mt{ba}(\mt{E})=\frac{\mt{V}_\mt{ba}}{(\mt{E}-\mt{E}_\mt{b})(\mt{E}-\mt{E}_\mt{a})}+
+\frac{|\mt{V}_\mt{ba}|^2}{(\mt{E}-\mt{E}_\mt{b})(\mt{E}-\mt{E}_\mt{a})}\mt{G}_\mt{ba}
 \]
-
-\[
-\tag{33}=
-\]
-
-\[
-\tag{34}=
-\]
-
-% 206 =
-
+%%%% 206
 Soit
-
-Nous sevons que les zéros de  représentent les énergies perturbées
-
+\[
+\tag{32}\mt{G}_\mt{ba}(\mt{E})=
+\frac{\mt{V}_\mt{ba}}{(\mt{E}-\mt{E}_\mt{b})(\mt{E}-\mt{E}_\mt{a})-|\mt{V}_\mt{ba}|^2}
+\]
+Nous savons que les zéros de $\big($G$_\mt{ba}$(E)$\big)^{-1}$ représentent les énergies perturbées
 qui sont donc les racines de l'équation du second degré
-
+\[
+\tag{33}(\mt{E}-\mt{E}_\mt{b})(\mt{E}-\mt{E}_\mt{a})-|\mt{V}_\mt{ba}|^2=0
+\]
 qui s'écrivent
-
-Le calcul de l'élément de matrice Ga (E) nous a ainsi fourni au passage l'expression
+\[
+\tag{34}\mt{E}_\pm=\frac{\mt{E}_\mt{a}+\mt{E}_\mt{b}}{2}\pm
+\sqrt{|\mt{V}_\mt{ba}|^2+\frac{(\mt{E}_\mt{b}-\mt{E}_\mt{a})^2}{4}}
+\]
+Le calcul de l'élément de matrice G$_\mt{ba}$(E) nous a ainsi fourni au passage l'expression
 des énergies perturbées, résultat que l'on aurait pu obtenir beaucoup
 plus simplement dans ce cas en diagonalisant la matrice
-
-La relation (32) peut s'écrire en fonction des énergies E, et E :
-
+\[
+\left[ \begin{array}{cc}
+\mt{E}_\mt{a} & \mt{V}_\mt{ab} \\
+\mt{V}_\mt{ba} & \mt{E}_\mt{b} \end{array} \right]
+\]
+La relation (32) peut s'écrire en fonction des énergies E$_+$ et E$_-$ :
+\[
+\mt{G}_\mt{ba}(\mt{E})=
+\frac{\mt{V}_\mt{ba}}{(\mt{E}-\mt{E}_+)(\mt{E}-\mt{E}_-)}=\frac{\mt{V}_\mt{ba}}{\mt{E}_+-\mt{E}_-}
+\left[\frac{1}{\mt{E}-\mt{E}_+}-\frac{1}{\mt{E}-\mt{E}_-}\right]
+\]
 On en déduit l'amplitude de probabilité de transition
- étant le contour
-
+\[
+\mt{U}_\mt{ba}\mt{(t)}=\frac{1}{2i\pi}\int_\mt{C}\mt{e}^{-i\frac{\mt{E t}}{\hbar}}\mt{ G}_\mt{ba}\mt{(E) dE}
+\]
+C étant le contour
+\begin{center} \begin{tikzpicture}
+\draw [->] (-2.4,0) -- (2.5,0);
+\draw (-1,-0.05) node [below]{E$_-$}; \draw (1.2,-0.05) node [below]{E$_+$};
+\draw (-1.2,-0.1) -- (-1,0.1); \draw (-1.2,0.1) -- (-1,-0.1);
+\draw (1,-0.1) -- (1.2,0.1); \draw (1,0.1) -- (1.2,-0.1);
+\draw [very thick] (-2.25,0.2) -- (2.25,0.2);
+\draw [very thick] (-2.25,0.2)  arc (-185:5:2.25);
+\draw [very thick] (0.8,-1.9) -- (1.1,-1.95) -- (0.95,-2.25);
+\end{tikzpicture}
+\end{center}
 % 201
-
-\[
-\tag{36}=
-\]
-\[
-\tag{37}=
-\]
-\[
-\tag{}=
-\]
 D'où
-Résidus
+\[
+\tag{35}\mt{U}_\mt{ba}\mt{(t)}=\frac{\mt{V}_\mt{ba}}{\mt{E}_+-\mt{E}_-}\sum\mt{Résidus}\left\{
+\mt{e}^{-i\frac{\mt{E t}}{\hbar}}\big(\frac{1}{\mt{E}-\mt{E}_+}-\frac{1}{\mt{E}-\mt{E}_-}\big)\right\}
+\]
+\[
+=\frac{\mt{V}_\mt{ba}}{\mt{E}_+-\mt{E}_-}
+\left(\mt{e}^{-i\frac{\mt{E}_+\mt{ t}}{\hbar}}\mt{e}^{-i\frac{\mt{E}_-\mt{ t}}{\hbar}}\right)
+\]
+\[
+=\frac{\mt{V}_\mt{ba}}{\mt{E}_+-\mt{E}_-}\mt{ e}^{-i\left(\frac{\mt{E}_++\mt{E}_-}{2\hbar}\right)\mt{t}}\left[
+\mt{e}^{-i\left(\frac{\mt{E}_+-\mt{E}_-}{2\hbar}\right)\mt{t}}-
+\mt{e}^{-i\left(\frac{\mt{E}_+-\mt{E}_-}{2\hbar}\right)\mt{t}}\right]
+\]
+\[
+=\frac{\mt{V}_\mt{ba}}{\sqrt{|\mt{V}_\mt{ab}|^2+\frac{(\mt{E}_\mt{b}-\mt{E}_\mt{a})^2}{4}}}
+\mt{ e}^{-i\left(\frac{\mt{E}_++\mt{E}_-}{2\hbar}\right)\mt{t}}
+\sin\sqrt{|\mt{V}_\mt{ab}|^2+\frac{(\mt{E}_\mt{b}-\mt{E}_\mt{a})^2}{4}}\ \frac{\mt{t}}{\hbar}
+\]
 On en déduit la probabilité de transition de l'état a à l'état b à l'instent t :
+\[
+\tag{36}\mt{P}_\mt{ba}\mt{(t)}=|\mt{U}_\mt{ba}\mt{(t)}|^2=
+\frac{|\mt{V}_\mt{ba}|^2}{|\mt{V}_\mt{ba}|^2+(\frac{\mt{E}_\mt{b}-\mt{E}_\mt{a}}{2})^2}
+\sin^2\sqrt{|\mt{V}_\mt{ab}|^2+\frac{(\mt{E}_\mt{b}-\mt{E}_\mt{a})^2}{4}}\ \frac{\mt{t}}{\hbar}
+\]
+La formule (36) s'appelle \ul{la formule de Rabi}.
 
-169
-La formule (36) s'appelle la formule de Rabi
-
-Faisons l'hypotnèse que la perturbation V est appliquée à un ensemble comportant un très
+Faisons l'hypothèse que la perturbation V est appliquée à un ensemble comportant un très
 grand nombre de systèmes à deux niveaux a et b identiques
 à celui que nous venons d'étudier et que le temps pendant lequel la perturbation
 V est appliquée varie aléatoirement d'un système à l'autre, la probabilité pour
-que l'interaction dure un temps compris entre t et t + dt étant égale à 
-(r étant le temps caractéristique du processus aléatoire),
+que l'interaction dure un temps compris entre t et t + dt étant égale à $\frac{\mt{dt}}{\tau}$e$^{-\mt{t}/\tau}$
+($\tau$ étant le temps caractéristique du processus aléatoire).
 
 On obtient la probabilité moyenne de transition de l'état a vers l'état
-b en moyennant sur le temps  On obtient
-
-(en posant T =
+b en moyennant sur le temps P$_\mt{ba}$(t). On obtient
+\[
+\overline{\mt{P}_\mt{ba}}=\frac{1}{\tau}\int\mt{e}^{-\mt{t}/\tau}\mt{P}_\mt{ba}\mt{(t) dt}
+=\Gamma\int\mt{e}^{-\Gamma\mt{t}}\mt{P}_\mt{ba}\mt{(t) dt}\quad\mt{(en posant }\Gamma=1/\tau)
+\]
 ce qui, après un calcul simple, donne, compte tenu de (36),
+\[
+\overline{\mt{P}_\mt{ba}}=\frac{2|\mt{V}_\mt{ba}|^2}
+{\hbar^2\Gamma^2+4|\mt{V}_\mt{ba}|^2+(\mt{E}_\mt{b}-\mt{E}_\mt{a})^2}
+\]
 
-%%%%
-Supposons maintenant que les énergies non perturbées E et E varient linéairement
-en fonction d'un paramètre . Nous avons représenté en
+%%%% 208
+Supposons maintenant que les énergies non perturbées E$_\mt{a}$ et E$_\mt{b}$ varient linéairement
+en fonction d'un paramètre $\epsilon$. Nous avons représenté en
 trait pointillé sur la figure ci-dessous ces deux niveaux qui se coupent en
 un point I
-
- 
-
- 
+\begin{center} \begin{tikzpicture}
+\draw (-3,4) .. controls (-1,3.3) and (2,4.3) .. (3,5);
+\draw (-3,1) .. controls (-1,2) and (1,2.1) .. (3,1.5);
+\draw (-3,3.7) -- (3,1.8);
+\draw (-3,1.3) -- (3,4.7);
+\end{tikzpicture}
+\end{center}
 
 Nous avons représenté en trait plein les niveaux perturbés E, et E qui
 se repoussent, en formant ce qu'on appelle un anticroisement, constitué par les
