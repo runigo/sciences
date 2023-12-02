@@ -22,13 +22,15 @@ Nous allons étudier comment les états $|\;\lambda>$ et les énergies E, se dé
 états $|$ i $>$ et des énergies E$_\mt{i}$.
 
 Le traitement que nous donnons, du spectre discret est entièrement basé
-sur l'utilisation de la résolvante, et présente par suite une grande analogie fomelle
+sur l'utilisation de la résolvante, et présente par suite une grande analogie formelle
 avec celui du spectre continu présenté dans le chapitre précédent; il nous
 permet par ailleurs d'établir des résultats qui nous serviront pour l'étude des
 états instables.
 
-Nous commençons par rappeler rapidement quelques propriétés de la résolvante ( \S B). Puis, nous étudions le cas d'un niveau non dégénéré de H$_0$ (\S C), ce qui
-nous permet d'établir plusieurs résultats intéressants : (développement de Wigner-Brillouin des états propres et des énergies). Nous abordons ensuite le cas de 2
+Nous commençons par rappeler rapidement quelques propriétés de la résolvante ( \S B). Puis,
+nous étudions le cas d'un niveau non dégénéré de H$_0$ (\S C), ce qui
+nous permet d'établir plusieurs résultats intéressants : (développement de Wigner-Brillouin
+des états propres et des énergies). Nous abordons ensuite le cas de 2
 niveaux dégénérés ou quasidégénérés (\S D) et appliquons les résultats obtenus à
 l'étude quantitative des transitions atomiques faisant intervenir l'absorption ou
 l'émission de plusieurs quanta du champ électromagnétique (\S E).
@@ -82,7 +84,8 @@ qui permet d'obtenir par itération le développement :
 Soit $|$ a $>$, un état propre non dégénéré du hamiltonien H$_0$
 d'énergie E$_\mt{a}$.
 
-Nous allons voir que si l'on connaît l'action sur $|$ a $>$ de la résolvente G(E) et en particulier l'élément de matrice $<$ a $|$ G(E) $|$ a $>$, on est capable
+Nous allons voir que si l'on connaît l'action sur $|$ a $>$ de la résolvente G(E) et en
+particulier l'élément de matrice $<$ a $|$ G(E) $|$ a $>$, on est capable
 d'en déduire, tout au moins \ul{théoriquement}, le spectre \ul{complet} des états propres
 et des énergies du hamiltonien H. Pratiquement, on peut en déduire le développement
 en série de la perturbation de l'état propre qui tend vers $|$ a $>$ lorsque
@@ -102,7 +105,8 @@ On voit tout de suite sur l'expression (6) que les E$_\lambda$, du spectre discr
 pôles, de résidu $|<\mt{a}\;|\;\lambda>|^2$ de G$_\mt{a}$(E) (sauf si $<\mt{a}\;|\;\lambda>\;=$ 0). On peut donc dire
 qu'en général, les valeurs propres de H sont les zéros de (G$_\mt{a}$(E))$^{-1}$.
 
-{\footnotesize (La relation de fermeture $\sum_\lambda\;|\;\lambda><\lambda\;|\;=1$ doit évidemment porter sur les états du
+{\footnotesize (La relation de fermeture $\sum_\lambda\;|\;\lambda><\lambda\;|\;=1$
+doit évidemment porter sur les états du
 spectre discret \ul{et} les états du spectre continu de $\mc{H}$. Seules les énergies propres
 E$_\lambda$ du spectre \ul{discret} correspondent à des \ul{pôles} de la résolvante. Nous verrons plus
 tard que le spectre continu $\mc{H}$ correspond à une "coupure" de la résolvante G(z)
@@ -115,7 +119,8 @@ qu'il faut éventuellement y ajouter une sommation sur les états du spectre con
 Calculons maintenant l'élément de matrice $<$ b $|$ G(E) $|$ a $>$, $|$ b $>$
 étant un état quelconque autre que $|$ a $>$ : on a de même
 \[
-\tag{7}<\mt{b}\;|\;\mt{G(E)}\;|\;\mt{a}>=\sum_\lambda\ \frac{<\mt{b}\;|\;\lambda><\lambda\;|\;\mt{a}>}{\mt{E}-\mt{E}_\lambda}
+\tag{7}<\mt{b}\;|\;\mt{G(E)}\;|\;\mt{a}>=\sum_\lambda\ \frac{<\mt{b}\;|\;\lambda>
+<\lambda\;|\;\mt{a}>}{\mt{E}-\mt{E}_\lambda}
 \]
 Lorsque E $\to$ E$_\lambda$, les relations (6) et (7) permettent d'écrire
 \[
@@ -143,7 +148,8 @@ Les $|$ b $>$ formant un système complet, on a encore
 \]
 Enfin la connaissance de G$_\mt{a}$(E) nous permet grâce à (3) de calculer
 \[
-<\mt{a}\;|\;\mt{U(t)}\;|\;\mt{a}>\;=\frac{1}{2\mt{i}\pi}\int_\mt{c}\mt{G}_\mt{a}\mt{(E) e}^{-\mt{i}\frac{\mt{Et}}{\hbar}}\mt{ dE}
+<\mt{a}\;|\;\mt{U(t)}\;|\;\mt{a}>\;=\frac{1}{2\mt{i}\pi}\int_\mt{c}\mt{G}_\mt{a}
+\mt{(E) e}^{-\mt{i}\frac{\mt{Et}}{\hbar}}\mt{ dE}
 \]
 qui représente l'amplitude de probabilité pour que le système étant dans l'état $|$ a $>$
 à l'instant t = 0 y soit encore à l'instant t > 0. t étant positif le contour d'intégration est le suivant :
@@ -159,7 +165,8 @@ qui représente l'amplitude de probabilité pour que le système étant dans l'�
 %%%%196 
 et on a :
 \[
-\tag{10}<\mt{a}\;|\;\mt{U(t)}\;|\;\mt{a}>\;=\sum\mt{Res}\left[\mt{G}_\mt{a}\mt{(E) e}^{-\mt{i}\frac{\mt{Et}}{\hbar}}\right]
+\tag{10}<\mt{a}\;|\;\mt{U(t)}\;|\;\mt{a}>\;=\sum\mt{Res}\left[\mt{G}_\mt{a}\mt{(E) e}^{-\mt{i}
+\frac{\mt{Et}}{\hbar}}\right]
 \]
 \[
 =\sum_\lambda|<\mt{a}\;|\;\lambda>|^2\mt{ e}^{-\mt{i}\frac{\mt{E}_\lambda\mt{t}}{\hbar}}
@@ -197,7 +204,8 @@ et d'après (9)
 \]
 
 %%%%197 
-L'opérateur F(E) est donc l'opérateur qui, lorsque E $=$ E$_\lambda$, transforme l'état propre discret $|$ a $>$ de H$_0$, en état propre discret | $\lambda$ > de H.
+L'opérateur F(E) est donc l'opérateur qui, lorsque E $=$ E$_\lambda$, transforme l'état
+propre discret $|$ a $>$ de H$_0$, en état propre discret | $\lambda$ > de H.
 
 Appelons maintenant R(E) l' opérateur défini par son action sur le
 vecteur $|$ a $>$ :
@@ -233,14 +241,15 @@ L'expression (16) est rigoureuse. Les valeurs propres de H étant Les zéros de
 D'où le nom d'\ul{opérateur shift} donné à R(E) : ses éléments diagonaux dans l'état
 $|$ a $>$, pris pour E = E$_\lambda$ représentent la différence entre E$_\lambda$ et E$_\mt{a}$.
 
-% 198 —
+% 198
 \ul{Remarque} : L'équation implicite (17) fournit \ul{théoriquement toutes} les énergies
 discrètes du hamiltonien H, et non pas uniquement, comme on pourrait le croire,
 l'énergie E$_\alpha$, de l'état $|\;\alpha>$ qui tend vers $|$ a $>$ lorsque V $\to$ 0.
 
 Cependant, pour ce niveau $|\;\alpha>$, le déplacement R$_\mt{a}$(E$_\alpha) =$ E$_\alpha$ - E$_\mt{a}$
 sera une quantité petite lorsque V sera petit et on pourra en donner des
-expressions approchées intéressantes. L'équation (17) est donc surtout \ul{pratiquement} utile pour le niveau d'énergie E$_\alpha$ qui tend vers E$_\mt{a}$ lorsque V $\to$ 0.
+expressions approchées intéressantes. L'équation (17) est donc surtout \ul{pratiquement}
+utile pour le niveau d'énergie E$_\alpha$ qui tend vers E$_\mt{a}$ lorsque V $\to$ 0.
 \subsection{Calcul de F(E) $|$ a $>$}%4
 Appelons P$_\mt{a}=|\;\mt{a}><\mt{a}\;|$ le projecteur sur l'état $|$ a $>$ et
 Q$_\mt{a}=1-$P$_\mt{a}$ le projecteur complémentaire.
@@ -280,7 +289,6 @@ présente une grande analogie avec l'équation de Lippmam Schwinger reliant les
 \]
 
 % 109
-
 Si V est petit, on peut résoudre l'équation (19) par itération : on obtient
 le développement de Wigner-Brillouin
 \[
@@ -324,7 +332,6 @@ Nous avons en effet, d'après (15)
 \[
 <\mt{b }|\mt{ R(E}_\alpha)\ |\mt{ a}>=<\mt{b }|\mt{ V F(E}_\alpha)\ |\mt{ a}>
 \]
-
 ce qui, compte tenu de l'analogie déjà notée entre $|\ \psi_\mt{i}^+>$ et  F(E$_\alpha)|$ a $>$,
 est l'analogie de l'équation
 \[
@@ -339,7 +346,8 @@ Nous pouvons maintenant effectuer un développement par itération de l'équatio
 ce qui nous donne le développement de R$_\mt{a}$(E) :
 
 \[
-\tag{23}\mt{R}_\mt{a}(\mt{E})=<\mt{a}\;|\mt{ V }|\;\mt{a}>+<\mt{a}\;|\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}-\mt{H}_0}\mt{ V }|\;\mt{a}>+...
+\tag{23}\mt{R}_\mt{a}(\mt{E})=<\mt{a}\;|\mt{ V }|\;\mt{a}>+<\mt{a}\;|\mt{ V }
+\frac{\mt{Q}_\mt{a}}{\mt{E}-\mt{H}_0}\mt{ V }|\;\mt{a}>+...
 \]
 \[
 +<\mt{a}\;|\mt{ V }\left(\frac{\mt{Q}_\mt{a}}{\mt{E}-\mt{H}_0}\mt{ V }\right)^\mt{n}|\;\mt{a}>+...
@@ -351,7 +359,8 @@ notamment pour E = E$_\alpha$.
 Compte tenu de l'équation (17), on obtient alors le \ul{développement de
 Wigner-Brillouin} de l'énergie perturbée :
 \[
-\tag{24}\mt{E}_\alpha=\mt{E}_\mt{a}+<\mt{a}\;|\mt{ V }|\;\mt{a}>+<\mt{a}\;|\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}_\alpha-\mt{H}_0}\mt{ V }|\;\mt{a}>+\;...
+\tag{24}\mt{E}_\alpha=\mt{E}_\mt{a}+<\mt{a}\;|\mt{ V }|\;\mt{a}>+<\mt{a}\;|\mt{ V }
+\frac{\mt{Q}_\mt{a}}{\mt{E}_\alpha-\mt{H}_0}\mt{ V }|\;\mt{a}>+\;...
 \]
 \[
 +<\mt{a}\;|\mt{ V }\left(\frac{\mt{Q}_\mt{a}}{\mt{E}_\alpha-\mt{H}_0}\mt{ V }\right)^\mt{n}|\;\mt{a}>+\;...
@@ -383,10 +392,13 @@ remplacement de E$_\alpha$ par E$_\mt{a}$ dans le terme du 2$^\mt{ème}$ ordre i
 
 D'où le développement de Rayleigh-Schrödinger au 3$^\mt{ème}$ ordre :
 \[
-\tag{25}\mt{E}_\alpha=\mt{E}_\mt{a}+<\mt{a}\;|\mt{ V }|\;\mt{a}>+<\mt{a}\;|\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}_\mt{a}-\mt{H}_0}\mt{ V }|\;\mt{a}>
+\tag{25}\mt{E}_\alpha=\mt{E}_\mt{a}+<\mt{a}\;|\mt{ V }|\;\mt{a}>+<\mt{a}\;|\mt{ V }
+\frac{\mt{Q}_\mt{a}}{\mt{E}_\mt{a}-\mt{H}_0}\mt{ V }|\;\mt{a}>
 \]
 \[
-+<\mt{a}\;|\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}_\mt{a}-\mt{H}_0}\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}_\mt{a}-\mt{H}_0}\mt{ V }|\;\mt{a}>-<\mt{a}\;|\mt{ V }\frac{\mt{Q}_\mt{a}}{\left(\mt{E}_\mt{a}-\mt{H}_0\right)^2}\mt{ V P}_\mt{a}\mt{ V }|\;\mt{a}>
++<\mt{a}\;|\mt{ V }\frac{\mt{Q}_\mt{a}}{\mt{E}_\mt{a}-\mt{H}_0}\mt{ V }
+\frac{\mt{Q}_\mt{a}}{\mt{E}_\mt{a}-\mt{H}_0}\mt{ V }|\;\mt{a}>-<\mt{a}\;|\mt{ V }
+\frac{\mt{Q}_\mt{a}}{\left(\mt{E}_\mt{a}-\mt{H}_0\right)^2}\mt{ V P}_\mt{a}\mt{ V }|\;\mt{a}>
 \]
 L'expression (22) de R(E) est une expression \ul{implicite}. Nous allons maintenant
 donner une forme explicite de R$_\mt{a}$(E) qui pourra être utile pour certaines applications. (22) peut s'écrire
@@ -407,7 +419,8 @@ et en utilisant l'identité :
 %%%% 202
 il vient :
 \[
-\tag{26}\frac{1}{\mt{E}-\mt{H}_0}\,\mt{R(E)}=\frac{1}{\mt{E}-\mt{H}_0}\mt{ V}+\frac{1}{\mt{E}-\mt{H}_0}\mt{ V\,Q}_\mt{a }\frac{1}{\mt{E}-\mt{H}_0-\mt{V\,Q}_\mt{a}}\mt{ V}
+\tag{26}\frac{1}{\mt{E}-\mt{H}_0}\,\mt{R(E)}=\frac{1}{\mt{E}-\mt{H}_0}\mt{ V}+
+\frac{1}{\mt{E}-\mt{H}_0}\mt{ V\,Q}_\mt{a }\frac{1}{\mt{E}-\mt{H}_0-\mt{V\,Q}_\mt{a}}\mt{ V}
 \]
 Utilisons à nouveau l'identité
 \[
@@ -652,185 +665,225 @@ en fonction d'un paramètre $\epsilon$. Nous avons représenté en
 trait pointillé sur la figure ci-dessous ces deux niveaux qui se coupent en
 un point I
 \begin{center} \begin{tikzpicture}
-\draw (-3,4) .. controls (-1,3.3) and (2,4.3) .. (3,5);
-\draw (-3,1) .. controls (-1,2) and (1,2.1) .. (3,1.5);
-\draw (-3,3.7) -- (3,1.8);
-\draw (-3,1.3) -- (3,4.7);
+\draw [very thick] (-3,4.3) .. controls (-1,3.3) and (1,3.3) .. (3,4.3);
+\draw [very thick] (-3,1) .. controls (-1,2) and (1,2.1) .. (3,1.5);
+\draw [dashed, thick] (-3,4) -- (3,1.8) node [right] {b};
+\draw [dashed, thick] (-3,1.3) -- (3,4.0) node [right] {a};
+\draw [->] (-3.2,0) -- (3.3,0) node [right] {$\epsilon$};
+\draw [densely dotted] (0.35,3.55) -- (0.35,0) node [below] {$\epsilon_0$};
+\draw [densely dotted] (0.35,3.525) -- (-3,3.525);
+\draw [densely dotted] (0.35,1.85) -- (-3,1.85);
+\draw [<->] (-3,3.525) -- (-3,1.85);
+\draw (0.35,2.4) node [right] {I};
+\draw (-3,2.6) node [right] {2|V$_\mt{ab}$|};
 \end{tikzpicture}
 \end{center}
 
-Nous avons représenté en trait plein les niveaux perturbés E, et E qui
+Nous avons représenté en trait plein les niveaux perturbés E$_\mt{a}$ et E$_\mt{b}$ qui
 se repoussent, en formant ce qu'on appelle un anticroisement, constitué par les
-deux branches d'une hyperbole centrée en I dont la distance des sommets est égale
+deux branches d'une hyperbole centrée en I dont la distance des sommets est égale à 2|V$_\mt{ab}$|.
 
 % 209
 
-Nous voyons sur la formule (37) que la probabilité moyenne de transition de L'état a à l'état b sous l'effet du couplage V passe par un maxirum
-résonnant au point d'anticroisement I (tel que E = E
+Nous voyons sur la formule (37) que la probabilité moyenne de transition de L'état a à l'état b sous l'effet
+du couplage V passe par un \ul{maximum résonnant} au point d'anticroisement I (tel que E$_\mt{a}$ = E$_\mt{b}$)
 
-La forme de la raie de résonance est Lorentzienne. L'intensité à
-résonance varie comme  pour les valeurs faibles de V (tant que
-) et est donc d'autant plus srande que les niveaux E, et E se
-
-Lorsque V augnentee
-
-.repoussent pluse Elle se sature et tend vers 
-
-
-dépend à la fois du temps
-
-La largeur de le résonance, à
-caractéristique d'interaction r = 1/7 et ce 1'intensité du couplage. Pour 
-faibles valeurs de  la largeur  est sensiblement égale à l
+La forme de la raie de résonance est \ul{lorentzienne}. L'intensité à la
+résonance varie comme |V$_\mt{ba}|^2$ pour les valeurs faibles de V (tant que |V$_\mt{ba}|<<\hbar\Gamma$)
+et est donc d'autant plus grande que les niveaux E$_+$ et E$_-$ se
+repoussent plus. Elle se sature et tend vers 1/2
+lorsque V augmente.
+La largeur de la résonance, $\Delta=\sqrt{\hbar^2\Gamma^2+4|\mt{V}_\mt{ba}|^2}$ dépend à la fois du temps
+caractéristique d'interaction $\tau=1/\Gamma$ et de 1'intensité du couplage. Pour les
+faibles valeurs de V (|V$_\mt{ba}|<<\hbar\Gamma$) la largeur $\Delta$ est sensiblement égale à $\Gamma$
 ce qui correspond à la quatrième relation d'incertitude temps-énergie : l'interaction
-durant un temps moyen T: l'énergpie non perturbée est conservée à
- près. Pour les fortes valeurs de V, la largeur est égale à 
-distance des sommets de l‘hyperbole d'anticroisement:
+durant un temps moyen $\tau$, l'énergie non perturbée est conservée à
+$\hbar\Gamma=\hbar/\tau$ près. Pour les fortes valeurs de V, la largeur est égale à 2|V$_\mt{ba}|$
+distance des sommets de l‘hyperbole d'anticroisement.
 
-Le problème classique que nous venons d'étudier est extrêmement si:
+Le problème classique que nous venons d'étudier est extrêmement simple
 et pouvait être résolu sans faire appel à la résolvante. Il nous  cependant permis
-de mettre en évidence un certain nombre de résultats très pénéraux : nous
-avons vu comment l'introduction d'une perturbation non diegonale entre deux niveaux
+de mettre en évidence un certain nombre de résultats très généraux : nous
+avons vu comment l'introduction d'une perturbation non diagonale entre deux niveaux
 dégénérés repousse des deux niveaux et lève la dégénéréscence et comment
-l'anticroisement" ainsi créé peut être associé à une yésonance dans la probabilité
-de transition entre les deux niveaux non perturbése
+"l'anticroisement" ainsi créé peut être associé à une résonance dans la probabilité
+de transition entre les deux niveaux non perturbées.
 
-Les problèmes physiques sont en rénéral beaucoup plus compliqués : il
+Les problèmes physiques sont en général beaucoup plus compliqués : il
 existe plus de deux niveaux et la perturbation V peut induire un couplage entre
-a et bet des niveaux c autres que à et b. D'autre part, le couplage entre ies
-niveaux a et b peut être plus compliqué et s'effectuer par l'intermédiaire d'au
-tres niveaux.
+a et b et des niveaux c autres que a et b. D'autre part, le couplage entre les
+niveaux a et b peut être plus compliqué et s'effectuer par l'intermédiaire d'autres niveaux.
 
 Nous allons maintenant établir une formule riçoureuse généralisant
-
-l'expression (32) de Gba et valable dans tous les cas. Nous appliquerons ensuite
-cette formule à un exemple très important : celui des transitions 
-sieurs quantas Nous obtiendrons alors pour les probabilités de transition des
-
+l'expression (32) de G$_\mt{ba}$ et valable dans tous les cas. Nous appliquerons ensuite
+cette formule à un exemple très important : celui des transitions à \ul{plusieurs
+quantas} Nous obtiendrons alors pour les probabilités de transition des
 formules généralisant (37).
 
-%%%%
-3°) Cas général : On
-\subsection{}%
-Crateurs F et R :
- étant le projecteur sur les états a et b, appelons d le projecteur complémentaire :
-
-Nous avons vu que la rrandeur essentielle de notre théorie est la matrice
-
-Afin de calculer , nous allons, en généralisant la méthode employée
-pour le cas non dégénéré, définir deux opérateurs  et .
-Nous définissons  par la relation
-à : 
-qui généralise (1-a).
-
-Comme G(E) commute avec P, on a aussi
-vu
+%%%% 210
+\subsection{Cas général : Opérateurs F et R}% 3
+P$_0$ étant le projecteur sur les états a et b, appelons Q$_0$ le projecteur complémentaire :
 \[
-\tag{38-b}=
+\left\{ \begin{array}{rcl}
+\mt{P}_0 & = & |\mt{ a}>\,<\mt{a }|+|\mt{ b}>\,<\mt{b }| \\
+\mt{Q}_0 & = & 1-\mt{P}_0 \end{array} \right.
 \]
-qui généralise (11-b)
-Remarque : Nous voyons d'après (38-b) que l'on a défini en fait non pas l'opérateur
-F(E) mais l'opérateur
-On déduit de (38-b)
-
+Nous avons vu que la grandeur essentielle de notre théorie est la matrice
 \[
-\tag{39}=
+\tilde{\mt{G}}\mt{(E)}=\mt{P}_0\mt{ G(E) }\mt{P}_0=
+\left[ \begin{array}{cc}
+\mt{G}_\mt{aa}\mt{(E)} & \mt{G}_\mt{ab}\mt{(E)} \\
+\mt{G}_\mt{ba}\mt{(E)} & \mt{G}_\mt{bb}\mt{(E)} \end{array} \right]
+\]
+Afin de calculer $\tilde{\mt{G}}$(E), nous allons, en généralisant la méthode employée
+pour le cas non dégénéré, définir deux opérateurs F(E) et R(E).
+
+Nous définissons F(E) par la relation
+\[
+\tag{38-a}\mt{ G(E) }\mt{P}_0=\mt{ F(E) }\mt{P}_0\mt{ G(E) }\mt{P}_0=\mt{ F(E) }\tilde{\mt{G}}\mt{(E)}\mt{P}_0
+\]
+qui généralise (11-a).
+
+Comme $\tilde{\mt{G}}$(E) commute avec P$_0$, on a aussi
+\[
+\tag{38-b}\mt{F(E) }\mt{P}_0=\mt{G(E) }\big(\tilde{\mt{G}}\mt{(E)}\big)^{-1}\mt{ P}_0
+\]
+qui généralise (11-b).
+
+\ul{Remarque} : Nous voyons d'après (38-b) que l'on a défini en fait non pas l'opérateur
+F(E) mais l'opérateur F(E) P$_0$.
+On déduit de (38-b)
+\[
+\tag{39}\mt{P}_0\mt{ F(E) }\mt{P}_0=\mt{P}_0
 \]
 qui généralise (12).
 
-Nous définissons alors , par la relation
-
-et nous appelons R(E) la projection de R(E) dans Le sous-espace a,b
+Nous définissons alors R(E) P$_0$ par la relation
+\[
+\tag{40}\mt{R(E) }\mt{P}_0=\mt{ V F(E) }\mt{P}_0
+\]
+et nous appelons $\tilde{\mt{R}}$(E) la projection de R(E) dans Le sous-espace a,b
+\[
+\tag{41}\tilde{\mt{R}}\mt{(E)}=\mt{P}_0\mt{ R(E) }\mt{P}_0
+\]
 
 % 211 
-
+\subsection{Calcul de $\tilde{\mt{G}}$(E)}%
+Considérons à nouveau l'identité G $=$ G$_0$ $+$ G$_0$ V G. On en déduit
 \[
-\tag{43}=
+\tilde{\mt{G}}\mt{(E)}=\frac{\mt{P}_0}{\mt{E}-\mt{H}_0}+\mt{P}_0\frac{1}{\mt{E}-\mt{H}_0}\mt{ V G(E) P}_0
 \]
-
-°) Calcul de G(E) :
-\subsection{}%
-Considérons à nouveau l'identité
-
-on en déduit
-
 et compte tenu de (38-a)
+\[
+\tilde{\mt{G}}\mt{(E)}=\frac{\mt{P}_0}{\mt{E}-\mt{H}_0}+\mt{P}_0
+\frac{1}{\mt{E}-\mt{H}_0}\mt{ V F(E) P}_0\tilde{\mt{G}}\mt{(E)}
+\]
+\[
+=\frac{\mt{P}_0}{\mt{E}-\mt{H}_0}+\mt{P}_0
+\frac{1}{\mt{E}-\mt{H}_0}\tilde{\mt{R}}\mt{(E)}\tilde{\mt{G}}\mt{(E)}
+\]
+Soit
+\[
+\left[1-\frac{\mt{P}_0}{\mt{E}-\mt{H}_0}\tilde{\mt{R}}\mt{(E)}\right]\tilde{\mt{G}}\mt{(E)}=
+\frac{\mt{P}_0}{\mt{E}-\mt{H}_0}
+\]
 
-Soit en multipliant à gauche par , et en tenant compte du fait que
- et , commutent : .
-
-L'équation (42) est une égalité entre opérateurs agissant à l'intérieur du
-sous-espace . Elle signifie que, dans ce sous-espace, l'opérateur 
-
-est l'inverse de , Or E - H R(E) est représenté par la matrice
-
-G(E) est donc renprésenté par la matrice inverse et on trouve, après un calcul
+Soit en multipliant à gauche par E $-$ H$_0$, et en tenant compte du fait que
+(E $-$ H$_0$) et P$_0$, commutent :
+\[
+\tag{42}\mt{P}_0\;\big(\mt{E}-\mt{H}_0-\tilde{\mt{R}}\mt{(E)}\big)\;\tilde{\mt{G}}\mt{(E)}=\mt{P}_0
+\]
+L'équation (42) est une égalité entre opérateurs agissant à l'intérieur du sous-espace a,b. Elle signifie
+que, dans ce sous-espace, l'opérateur $\tilde{\mt{G}}$(E) est l'inverse de E $-$ H$_0$ $-$ $\tilde{\mt{R}}$(E).
+Or E $-$ H$_0$ $-$ $\tilde{\mt{R}}$(E) est représenté par la matrice
+\[
+\left[ \begin{array}{cc}
+\mt{E}-\mt{E}_\mt{a}-\tilde{\mt{R}}_\mt{aa}\mt{(E)} & \tilde{\mt{R}}_\mt{ab}\mt{(E)} \\
+-\tilde{\mt{R}}_\mt{ba}\mt{(E)} & \mt{E}-\mt{E}_\mt{b}-\tilde{\mt{R}}_\mt{bb}\mt{(E)} \end{array} \right]
+\]
+$\tilde{\mt{G}}$(E) \ul{est donc représenté par la matrice inverse} et on trouve, après un calcul
 simple : 
-
-La formule (43) rigoureuse, généralise la formule (32). Afin de l'utiliser, i
-
-nous faut être capable de calculer , et donc 
-
-%%%%
-
 \[
-\tag{45}=
+\tag{43}\tilde{\mt{G}}_\mt{ba}\mt{(E)}=\mt{G}_\mt{ba}\mt{(E)}=\frac{\tilde{\mt{R}}_\mt{ba}\mt{(E)}}
+{\big(\mt{E}-\mt{E}_\mt{a}-\tilde{\mt{R}}_\mt{aa}\mt{(E)}\big)
+\big(\mt{E}-\mt{E}_\mt{b}-\tilde{\mt{R}}_\mt{bb}\mt{(E)}\big)-
+|\tilde{\mt{R}}_\mt{ab}\mt{(E)}|^2}
 \]
-\[
-\tag{46}=
-\]
-\[
-\tag{47}=
-\]
-5°) Calcul de 
+La formule (43) \ul{rigoureuse}, généralise la formule (32). Afin de l'utiliser, il
+nous faut être capable de calculer $\tilde{\mt{R}}$(E), et donc F(E) P$_0$.
 
-\subsection{}%
+%%%% 212
+\subsection{Calcul de F(E) P$_0$}% 5
 Nous avons
-
+\[
+\mt{F(E) }\mt{P}_0=\mt{P}_0\mt{ F(E) }\mt{P}_0+\mt{Q}_0\mt{ F(E) }\mt{P}_0
+\]
 ce qui, compte tenu de (39) et de (38-b), s'écrit
-
-Remplaçons alors  par  il vient
-
+\[
+\mt{F(E) }\mt{P}_0=\mt{P}_0+\mt{Q}_0\mt{ G(E) }\big(\tilde{\mt{G}}\mt{(E)}\big)^{-1}\mt{ P}_0
+\]
+Remplaçons alors G(E) par G$_0$(E) $+$ G$_0$(E) V G(E); il vient
+\[
+\mt{F(E) }\mt{P}_0=\mt{P}_0+\frac{\mt{Q}_0}{\mt{E}-\mt{H}_0}\mt{ V G(E) }\big(\tilde{\mt{G}}\mt{(E)}\big)^{-1}\mt{ P}_0
+\]
 et finalement
+\[
+\tag{44}\mt{F(E) }\mt{P}_0=\mt{P}_0+\frac{\mt{Q}_0}{\mt{E}-\mt{H}_0}\mt{ V F(E) }\mt{ P}_0
+\]
 
 expression qui généralise (18).
-
+\subsection{Calcul de R(E) P$_0$}% 6
 De (44) et de (40), on déduit
-
+\[
+\tag{45}\mt{R(E) }\mt{P}_0=\mt{V P}_0+\mt{V }\frac{\mt{Q}_0}{\mt{E}-\mt{H}_0}\mt{ R(E) }\mt{P}_0
+\]
 expression qui généralise (21).
 
-On peut déduire de (45) le développement de Wigner-Brillouin de R(E) :
+On peut déduire de (45) le développement de Wigner-Brillouin de $\tilde{\mt{R}}$(E) :
+\[
+\tag{46}\tilde{\mt{R}}\mt{(E)}=\mt{P}_0\mt{ R(E) }\mt{P}_0=\mt{P}_0\mt{ V }\mt{P}_0+\mt{P}_0\mt{ V }
+\frac{\mt{Q}_0}{\mt{E}-\mt{H}_0}\mt{ V }\mt{P}_0
+\]
+\[
++\mt{P}_0\mt{ V }\frac{\mt{Q}_0}{\mt{E}-\mt{H}_0}\mt{ V }
+\frac{\mt{Q}_0}{\mt{E}-\mt{H}_0}\mt{ V }\mt{P}_0+\;...
+\]
 
 Les sommations sur les états intermédiaires dans (46) font intervenir tous les
 états autres que a et b et le développement pourra donc converger si on donne
-à E des valeurs assez voisines de a et
-On peut enfin donner à (E) une forme explicite analogue à (28) et qui
+à E des valeurs assez voisines de E$_\mt{a}$ et E$_\mt{b}$.
+
+On peut enfin donner à $\tilde{\mt{R}}$(E) une forme explicite analogue à (28) et qui
 se démontre de la même manière
-
-%%%%- 213 
-\section{}
-E. Application : théorie des transitions à plusieurs quanta
-
+\[
+\tag{47}\tilde{\mt{R}}\mt{(E)}=\mt{P}_0\mt{ V }\mt{P}_0+\mt{P}_0\mt{ V }\mt{Q}_0\;
+\frac{1}{\mt{E}-\mt{H}_0-\mt{Q}_0\mt{ V }\mt{Q}_0}\mt{ Q}_0\mt{ V }\mt{P}_0
+\]
+%%%% 213
+\section{Application : théorie des transitions à plusieurs quanta}% E
+\begin{flushright}
+J.M. WINTER - Thèse Paris 1958 (Ann. Phys. 4, 1959, p. 745)
+\end{flushright}
 Nous allons appliquer les résultats du paragraphe précédent aux
 transitions à plusieurs quanta de radiofréquence entre les sous-niveaux
 Zeeman d'un atome.
-
-1°) Description. expérimentale ;
-
-\subsection{}%
+\subsection{Description expérimentale}% 1
 Considérons un niveau atomique de spin J = 1/2 et supposons que
-par un procédé quelconque, nous puissions orienter le spin dans une direction donnée, le long de laquelle est appliqué un champ magnétique statique
-B. Supposons que ce spin interagisse pendant un temps t avec un champ de
-radiofréquence Ë cos $\omega$ t, linéaire, de pulsation $\omega$, orienté perpendiculairement à H. Supposons enfin que le système observé est constitué par un
+par un procédé quelconque, nous puissions orienter le spin dans une direction donnée,
+le long de laquelle est appliqué un champ magnétique statique
+H$_0$. Supposons que ce spin interagisse pendant un temps t avec un champ de
+radiofréquence $\vec{\mt{H}}_1$ cos $\omega$t, linéaire, de pulsation $\omega$, orienté perpendiculairement
+à H. Supposons enfin que le système observé est constitué par un
 grand nombre de spins indépendants, le temps d'interaction t avec le champ
-de radiofréquence variant aléatoirement d'un spin à l'autre et que l'on me
-sure la probabilité moyenne P de trouver le spin renversé à la fin de l'in
-teraction (ces conditions expérimentales pourront par exemple être réalistes
+de radiofréquence variant aléatoirement d'un spin à l'autre et que l'on mesure
+la probabilité moyenne P de trouver le spin renversé à la fin de l'interaction
+(ces conditions expérimentales pourront par exemple être réalistes
 sur un jet atomique orienté par un aimant de type Stern et Gerlach et passant
 dans une région où règne le champ de radiofréquence perpendiculaire au champ
-statique (ef fig. a). La variation du temps d'interaction entre le spin et
-la radiofréquence est alors due à la dispersion des vitesses. On peut également envisager une orientation des spins par pompage optique longitudinal
-d'une cellule de résonance placée dans un champ cos $\omega$t (fig. b). Le
+statique (cf fig. a). La variation du temps d'interaction entre le spin et
+la radiofréquence est alors due à la dispersion des vitesses. On peut également envisager
+une orientation des spins par pompage optique longitudinal
+d'une cellule de résonance placée dans un champ $\vec{\mt{H}}_0+\vec{\mt{H}}_1$ cos $\omega$t (fig. b). Le
 temps d'interaction dépend alors de la relaxation des spins dans la cellule).
 cos $\omega$
 orientation
@@ -840,7 +893,6 @@ action
 
 Figure a Figure b
 
-J.MH. WINTER - Thèse Paris 1958 (Anne Physe h, 1959, pe 745) of
 
  
 % 214
@@ -848,8 +900,10 @@ J.MH. WINTER - Thèse Paris 1958 (Anne Physe h, 1959, pe 745) of
 Quel que soit le procédé expérimental utilisé, on constate que P
 passe par un meximum résonnant lorsque la fréquence de Larmor dans le champ
 magnétique  u$\omega$ = , (y raprort gyromagnétique), est égale à la fréquence
-$\omega$ de la radiofréquence : il s'agit de le résonance magnétique classique ordinaire. Lorsqu'on augmente l'intensité de la radiofréquence, on constate que
-la résonance  s'élargit et subit un déplacement vers les faibles valeurs du chemp H (shift de Bloch-Siegert) alors qu'il apparaît une nouvelle
+$\omega$ de la radiofréquence : il s'agit de le résonance magnétique classique ordinaire. 
+Lorsqu'on augmente l'intensité de la radiofréquence, on constate que
+la résonance  s'élargit et subit un déplacement vers les faibles valeurs du chemp H
+(shift de Bloch-Siegert) alors qu'il apparaît une nouvelle
 résonance pour $\omega$, = $\omega$, Cette résonance subit à son tour un élargissement et
 un déplacement, etc, On peut ainsi mettre en évidence tout un spectre impair
 de raies de résonance magnétique qui apparaissent lorsque la fréquence de
@@ -863,7 +917,8 @@ de la radiofréquence
  $\omega$ 3$\omega$ 5$\omega$ 7$\omega$ $\omega$
 Il est possible de donner une interprétation physique simple de ces
 résonances : le champ de radiofréquence linéaire peut être décomposé en deux
-composantes circulaires droite et gauche , et . Les résonances observées correspondent à des transitions entre les deux sous-niveaux Zeeman +1/2 et -1/2
+composantes circulaires droite et gauche , et . Les résonances observées correspondent
+à des transitions entre les deux sous-niveaux Zeeman +1/2 et -1/2
 par absorption d'un ou plusieurs photons de radiofréquence. La nécessité de
 
 conserver à la fois l'énergie et le moment angulaire au cours de la transition
@@ -937,7 +992,8 @@ Le hamiltonien  s'écrit alors
 Pour évaluer cette constante, nous devons faire une hypothèse sur
 l'état quantique représentant le champ de radiofréquence classique.
 
-Nous prendrons pour représenter Le champ l'état quantique se rapprochant le plus de l'état classique, c'est-à-dire un état cohérent de
+Nous prendrons pour représenter Le champ l'état quantique se rapprochant le plus de l'état
+classique, c'est-à-dire un état cohérent de
 Glauber | y > (cf Phys. Rev.131,1963,2766 ). Rappelons que cet état est tel
 que les valeurs moyennes de l'énergie et du champ sont égales aux grandeurs
 classiques correspondantes et qu'il s'obtient en faisant agir un opérateur
@@ -1061,7 +1117,8 @@ exemple le cas des transitions à un quantum ($\omega$, = $\omega$) et à trois 
 \subsection{}%
 Nous allons prendre pour états | a > et | b > les états
 
-Remarque : L'état du champ de rayonnement n'est pas un état | n >, mais une superposition cohérente d'états | n > autour d'une valeur moyenne N. Le caractère
+Remarque : L'état du champ de rayonnement n'est pas un état | n >, mais une superposition
+cohérente d'états | n > autour d'une valeur moyenne N. Le caractère
 cohérent du champ n'intervient pas dans l'étude de la probabilité de transition.
 La dispersion relative du nombre de photons du champ  étant très
 petite, tout se passe comme si l'état initial du champ était un état | n >
@@ -1167,7 +1224,8 @@ déplacement radiatif en $\omega$ vers les faibles valeurs du champ
 
 . subit un
 
-On peut très facilement calculer les formes de raie pour les transitions à (2n+1 quanta et trouver des formules analogues à (53) et (54),
+On peut très facilement calculer les formes de raie pour les transitions à (2n+1 quanta
+et trouver des formules analogues à (53) et (54),
 
 On montrerait notamment que la résonance à (2n+1) quanta  une intensité
 proportionnelle à H pour des valeurs suffisamment faibles de  une
