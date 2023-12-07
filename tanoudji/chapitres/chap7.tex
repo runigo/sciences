@@ -941,10 +941,32 @@ Larmor est un multiple \ul{impair} de la fréquence $\omega$ de la radiofréquen
 subissent des \ul{élargissements} et des \ul{déplacements} importants lorsque l'intensi
 té de la radiofrédquence augmente. (cf figure ci-dessous)
 \begin{center} \begin{tikzpicture}
-\draw [dashed, thick] (2,5) -- (2,0) node [below] {$\omega$};
-\draw [dashed, thick] (6,5) -- (6,0) node [below] {$3\omega$};
-\draw [dashed, thick] (10,5) -- (10,0) node [below] {$5\omega$};
-\draw [dashed, thick] (14,5) -- (14,0) node [below] {$7\omega$};
+\draw [dashed, gray] (2,5) -- (2,0) node [below, black] {$\omega$};
+\draw [very thick] (0.1,0.2) .. controls +(1.9,0.1) and +(-0.3, 0) .. (2,2);	% montée - sommet	1
+\draw [very thick] (2,2) .. controls +(0.3,0) and +(-1,0.1) .. (3.5,0.6);	% sommet - interm	1
+\draw [very thick] (3.5,0.6) .. controls +(1,-0.1) and +(-6,0.1) .. (15,0.1);% interm - fin		1
+\draw [dashed, gray] (6,5) -- (6,0) node [below, black] {$3\omega$};
+\draw [very thick] (0.1,1.5) .. controls +(1.3,0.2) and +(-0.3, 0) .. (1.9,2.5);	% montée - sommet 1
+\draw [very thick] (1.9,2.5) .. controls +(0.3,0) and +(-1.5,0.15) .. (3.9,1.5);	% sommet 1 - interm 1
+\draw [very thick] (3.9,1.5) .. controls +(2,-0.2) and +(-0.2,0) .. (5.9,2.4);	% interm 1 - sommet 2
+\draw [very thick] (5.9,2.4) .. controls +(0.2,0) and +(-1,0.1) .. (7,1.4);	% sommet 2 - interm 2
+\draw [very thick] (7,1.4) .. controls +(1,-0.1) and +(-6,0.1) .. (15,1);	% interm 2 - fin 2
+\draw [dashed, gray] (10,5) -- (10,0) node [below, black] {$5\omega$};
+\draw [very thick] (0.1,2.6) .. controls +(1.3,0.2) and +(-0.5, 0) .. (1.7,3);	% montée - sommet 1
+\draw [very thick] (1.7,3) .. controls +(0.5,0) and +(-1.5,0.15) .. (3.5,2.6);	% sommet 1 - interm 1
+\draw [very thick] (3.5,2.6) .. controls +(1.5,-0.15) and +(-0.4,0) .. (5.7,3.1);	% interm 1 - sommet 2
+\draw [very thick] (5.7,3.1) .. controls +(0.4,0) and +(-2,0.2) .. (8,2.4);	% sommet 2 - interm 2
+\draw [very thick] (8,2.4) .. controls +(2,-0.2) and +(-0.2,-0.2) .. (9.8,3);	% interm 2 - sommet 3
+\draw [very thick] (9.8,3) .. controls +(0.2,-0.2) and +(-1.5,0.15) .. (11,2.3);	% sommet 3 - interm 3
+\draw [very thick] (11,2.3) .. controls +(1,-0.1) and +(-1,0.1) .. (15,2);	% interm 3 - fin 3
+\draw [dashed, gray] (14,5) -- (14,0) node [below, black] {$7\omega$};
+\draw [very thick] (0.1,4) .. controls +(0.7,0.2) and +(-0.5, 0) .. (1.5,4.3);	% montée - sommet 1
+\draw [very thick] (1.5,4.3) .. controls +(0.5,0) and +(-1.4,0.1) .. (3.5,4.1);	% sommet 1 - interm 1
+\draw [very thick] (3.5,4.1) .. controls +(1.4,-0.1) and +(-0.5,0) .. (5.5,4.3);	% interm 1 - sommet 2
+\draw [very thick] (5.5,4.3) .. controls +(0.5,0) and +(-2,0.2) .. (8,3.9);	% sommet 2 - interm 2
+%\draw [very thick] (8,2.4) .. controls +(2,-0.2) and +(-0.2,-0.2) .. (9.8,3);	% interm 2 - sommet 3
+%\draw [very thick] (9.8,3) .. controls +(0.2,-0.2) and +(-1.5,0.15) .. (11,2.3);	% sommet 3 - interm 3
+%\draw [very thick] (11,2.3) .. controls +(1,-0.1) and +(-1,0.1) .. (15,2);	% interm 3 - fin 3
 \draw [->] (0,0) -- (0,6) node [right] {Intensité};
 \draw [->] (0,0) -- (15,0) node [above] {$\omega_0=\gamma$H};
 \end{tikzpicture} \end{center}
