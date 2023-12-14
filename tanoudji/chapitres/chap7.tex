@@ -964,216 +964,308 @@ té de la radiofrédquence augmente. (cf figure ci-dessous)
 \draw [very thick] (1.5,4.3) .. controls +(0.5,0) and +(-1.4,0.1) .. (3.5,4.1);	% sommet 1 - interm 1
 \draw [very thick] (3.5,4.1) .. controls +(1.4,-0.1) and +(-0.5,0) .. (5.5,4.3);	% interm 1 - sommet 2
 \draw [very thick] (5.5,4.3) .. controls +(0.5,0) and +(-2,0.2) .. (8,3.9);	% sommet 2 - interm 2
-%\draw [very thick] (8,2.4) .. controls +(2,-0.2) and +(-0.2,-0.2) .. (9.8,3);	% interm 2 - sommet 3
-%\draw [very thick] (9.8,3) .. controls +(0.2,-0.2) and +(-1.5,0.15) .. (11,2.3);	% sommet 3 - interm 3
-%\draw [very thick] (11,2.3) .. controls +(1,-0.1) and +(-1,0.1) .. (15,2);	% interm 3 - fin 3
+\draw [very thick] (8,3.9) .. controls +(1,-0.1) and +(-0.5,0) .. (9.7,4.2);	% interm 2 - sommet 3
+\draw [very thick] (9.7,4.2) .. controls +(0.5,0) and +(-1.5,0.15) .. (12,3.6);	% sommet 3 - interm 3
+\draw [very thick] (12,3.6) .. controls +(1.5,-0.15) and +(-0.01,0.01) .. (13.8,4.2);	% interm 3 - sommet 4
+\draw [very thick] (13.8,4.2) .. controls +(0.01,-0.01) and +(-1,0.1) .. (15,3.4);	% sommet 4 - fin 4
 \draw [->] (0,0) -- (0,6) node [right] {Intensité};
 \draw [->] (0,0) -- (15,0) node [above] {$\omega_0=\gamma$H};
 \end{tikzpicture} \end{center}
 
 Il est possible de donner une interprétation physique simple de ces
 résonances : le champ de radiofréquence linéaire peut être décomposé en deux
-composantes circulaires droite et gauche , et . Les résonances observées correspondent
+composantes circulaires droite et gauche $\sigma_+$ et $\sigma_-$. Les résonances observées correspondent
 à des transitions entre les deux sous-niveaux Zeeman +1/2 et -1/2
 par absorption d'un ou plusieurs photons de radiofréquence. La nécessité de
-
-conserver à la fois l'énergie et le moment angulaire au cours de la transition
-
+conserver à la fois l'énergie \ul{et} le moment angulaire au cours de la transition
 %%%%
-fait que le nombre de photons intervenant est nécessairement impair : chaque
-photon transportant une unité de moment angulaire le long de seul un
-nombre impair d'entre eux permet d'induire des transitions ,
+fait que le nombre de photons intervenant est \ul{nécessairement} impair : chaque
+photon transportant une unité de moment angulaire $\pm1$ le long de H$_0$ seul un
+nombre impair d'entre eux permet d'induire des transitions $\Delta\mt{m}=1$.
 
-Ce raisonnement, qui justifie le spectre impair, ne nous pérmet cependant pas
-de rendre compte des élarrissements @t déplacements observés, Nous allons pour
-cela faire une théorie plus complète de ces transitions en traitant quantique
+\begin{minipage}[c]{.45\linewidth}
+\begin{center} \begin{tikzpicture}
+%\draw [dashed, gray] (2,5) -- (2,0) node [below, black] {$\omega$};
+\draw [thick] (2,1) -- (-2,1) node [left] {$+1/2$};
+\draw [thick] (2,-1) -- (-2,-1) node [left] {$-1/2$};
+\draw (-1,0) node [left] {$\omega_0=\omega$};
+\draw [dashed, <->] (-1,0.95) -- (-1,-0.95);
+\draw [-{Classical TikZ Rightarrow[length=2mm]}] (0,-1) -- (0,1);
+\draw (0,0) node [right] {$\sigma_+$};
+\end{tikzpicture} \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+\begin{center} \begin{tikzpicture}
+%\draw [dashed, gray] (2,5) -- (2,0) node [below, black] {$\omega$};
+\draw [thick] (2,3) -- (-2,3) node [left] {$+1/2$};
+\draw [thick] (2,-3) -- (-2,-3) node [left] {$-1/2$};
+\draw (-1,0) node [left] {$\omega_0=3\,\omega$};
+\draw [dashed, <->] (-1,2.95) -- (-1,-2.95);
+\draw [-{Classical TikZ Rightarrow[length=2mm]}] (0,1) -- (0,3);
+\draw (0,2) node [right] {$\sigma_+$};
+\draw [dashed, -{Classical TikZ Rightarrow[length=2mm]}] (0,-1) -- (0,1);
+\draw (0,0) node [right] {$\sigma_-$};
+\draw [-{Classical TikZ Rightarrow[length=2mm]}] (0,-3) -- (0,-1);
+\draw (0,-2) node [right] {$\sigma_+$};
+\end{tikzpicture} \end{center}
+\end{minipage}
 
-ment le champ de radiofréquence,
+Ce raisonnement, qui justifie le spectre \ul{impair}, ne nous permet cependant pas
+de rendre compte des élargissements et déplacements observés, Nous allons pour
+cela faire une théorie plus complète de ces transitions en traitant quantiquement le champ de radiofréquence.
 
-2°) Hamiltonien du système "spin-radiofréquence"
+\subsection{Hamiltonien du système "spin-radiofréquence"}% 2
 
-\subsection{}%
+Orientons H$_0$ le long de Oz et $\vec{\mt{H}}_1$ le long de Ox.
 
-Orientons  le long de Oz et H le long de Ox.
+Appelons a et a$^+$ les opérateurs d'unnihilation et de création d'un
+photon dans le mode du champ. Le hemiltonien du \ul{système combiné} constitué par
+le spin 1/2 \ul{couplé} au champ de radiofréquence est constitué de trois termes :
 
-Appelons a et a les onérateurs d'unnihilation et de création d'un
-photon dans le mode du champ. Le hemiltonien du système combiné constitué par
-le spin 1/2 couplé au champ de radiofréquence est constitué de trois termes :
-$\alpha$) Le hamiltonien Zeeman du spin 1/2 :
-$\beta$) Le hamiltonien du champ de radiofréquence : $\omega$
+$\alpha$) \ul{Le hamiltonien Zeeman} du spin 1/2 : $\hbar\omega_0$J$_\mt{z}$
 
-(en négligeant le terme 1/2 Hu ce qui est justifié étant donné -le très grand
+$\beta$) \ul{Le hamiltonien du champ} de radiofréquence : $\hbar\omega$(a$^+$a)
+(en négligeant le terme 1/2 $\hbar\omega$ ce qui est justifié étant donné le très grand
 nombre de photons contenus dans le champ de radiofréquence).
 
-$\gamma$) Le hamiltonien d'interaction entre le spin et Le champ : 
-
+$\gamma$) \ul{Le hamiltonien d'interaction} entre le spin et Le champ : H$_\mt{I}$
 Ce hamiltonien s'écrit classiquement.
+\begin{center}
+$\gamma\vec{\mt{H}}_1$(t).$\vec{\mt{J}}=\hbar\omega_1$ J$_\mt{x}$ cos $\omega$ t \qquad ($\omega_1=\gamma$H$_1$).
+\end{center}
 
 % 216
 
-Afin de traiter quantiquement H(t), rappelons que le potentiel
-vecteur À du champ électromagnétique s'écrit
-
-étant une somme portant sur les directions et polarisations des modes
-dont les opérateurs d'annihilation et de création respectifs sont
-
-Le champ magnétique  s'écrit
-
-Dans le cas présent, un seul mode du champ est rempli, celui dont la polarisation
-est parallèle à Ox et dont le module du vecteur d'onde
-
-On peut donc écrire
-
-étant Le vecteur unitaire Le long de Ox et « une constante de proportionnalité
-réelle. Afin de se débarrasser de la constante imaginaire i, il est toujours
-possible de faire sur la variable *un changement d'origine en posant
-
-On en déduit :
-
-La longueur d'onde du champ de radiofréquence est très grande et nous supposerons
-que l'interaction avec les spins se fait sur des distances beaucoup plus courtes;
- on peut alors poser 
-
-et 
-Le hamiltonien  s'écrit alors
-
-À étant une constante de proportionnalité,
-
-% 217
-
+Afin de traiter quantiquement $\vec{\mt{H}}_1$(t), rappelons que le potentiel
+vecteur $\vec{\mt{A}}$ du champ électromagnétique s'écrit
 \[
-\tag{49}=
+\overrightarrow{A}=\sum_\mt{k}\sum_\lambda\alpha_\mt{k}\left[\,\mt{a}_{\mt{k}\lambda}\;\vec{\mt{e}}_\lambda\;
+\mt{e}^{i\,\vec{\mt{k}}.\vec{\mt{r}}}+
+a^+_{\mt{k}\lambda}\;\vec{\mt{e}}^{\;*}_\lambda\;\mt{e}^{-i\,\vec{\mt{k}}.\vec{\mt{r}}}\,\right]
 \]
 
+$\sum_\mt{k}\sum_\lambda$ étant une somme portant sur les directions et polarisations des modes
+dont les opérateurs d'annihilation et de création respectifs sont a$_{\mt{k}\lambda}$ et a$^+_{\mt{k}\lambda}$.
+Le champ magnétique $\vec{\mt{H}}$ s'écrit
+\[
+\overrightarrow{\mt{H}}=\mt{rot }\overrightarrow{A}=-i\sum_k\sum_\lambda\alpha_\mt{k}\left[\mt{a}_{\mt{k}\lambda}\;\vec{\mt{e}}_\lambda\;\wedge\;\vec{\mt{k}}
+\;\mt{e}^{i\,\vec{\mt{k}}.\vec{\mt{r}}}-a^+_{\mt{k}\lambda}\;\vec{\mt{e}}^{\;*}_\lambda\;\wedge\;\vec{\mt{k}}
+\;\mt{e}^{-i\,\vec{\mt{k}}.\vec{\mt{r}}}\right]
+\]
+
+Dans le cas présent, un seul mode du champ est rempli, celui dont la polarisation
+$\vec{\mt{e}}_\lambda\;\wedge\;\vec{\mt{k}}$
+est parallèle à Ox et dont le module du vecteur d'onde $|$k$|$$=\frac{\omega}{\mt{c}}$.
+On peut donc écrire
+\[
+\overrightarrow{\mt{H}}=-\alpha\;i\;\vec{e}_\mt{x}\left[\mt{a}\;\mt{e}^{i\,\vec{\mt{k}}.\vec{\mt{r}}}
+-\mt{a}^+\;\mt{e}^{-i\,\vec{\mt{k}}.\vec{\mt{r}}}\right]
+\]
+
+$\vec{e}_\mt{x}$ étant Le vecteur unitaire le long de Ox et $\alpha$ une constante de proportionnalité
+réelle. Afin de se débarrasser de la constante imaginaire $i$, il est toujours
+possible de faire sur la variable $\vec{\mt{r}}$ un changement d'origine en posant
+\begin{center}
+$\vec{\mt{r}}=\vec{\mt{r}}_0+\vec{\rho}$\quad avec $\vec{\mt{k}}.\vec{\mt{r}}_0=\frac{\pi}{2}$
+\end{center}
+\[
+\mt{On en déduit}\quad\left\{ \begin{array}{rcl}
+\mt{e}^{i\,\vec{\mt{k}}.\vec{\mt{r}}} & = & i\,\mt{e}^{i\,\vec{\mt{k}}.\vec{\rho}} \\
+\mt{e}^{-i\,\vec{\mt{k}}.\vec{\mt{r}}} & = & -i\,\mt{e}^{-i\,\vec{\mt{k}}.\vec{\rho}} \end{array} \right.
+\quad
+\mt{et}\quad\overrightarrow{\mt{H}}=-\alpha\;\vec{e}_\mt{x}\left[\mt{a}\;\mt{e}^{i\,\vec{\mt{k}}.\vec{\rho}}
++\mt{a}^+\;\mt{e}^{-i\,\vec{\mt{k}}.\vec{\rho}}\right]
+\]
+La longueur d'onde du champ de radiofréquence est très grande et nous supposerons
+que l'interaction avec les spins se fait sur des distances beaucoup plus courtes;
+on peut alors poser e$^{i\,\vec{\mt{k}}.\vec{\rho}}\simeq1$ et
+$\overrightarrow{\mt{H}}=-\alpha\;\vec{e}_\mt{x}$ (a $+$ a$^+$).
+Le hamiltonien H$_\mt{I}$ s'écrit alors
+\begin{center}
+H$_\mt{I}=\lambda$J$_\mt{x}$ (a $+$ a$^+$)
+\end{center}
+
+$\lambda$ étant une constante de proportionnalité.
+
+% 217
 Pour évaluer cette constante, nous devons faire une hypothèse sur
-l'état quantique représentant le champ de radiofréquence classique.
+\ul{l'état quantique} représentant le champ de \ul{radiofréquence classique}.
 
 Nous prendrons pour représenter Le champ l'état quantique se rapprochant le plus de l'état
 classique, c'est-à-dire un état cohérent de
-Glauber | y > (cf Phys. Rev.131,1963,2766 ). Rappelons que cet état est tel
+Glauber $|\ \psi >$ (cf Phys. Rev. \ul{131}, 1963, 2766). Rappelons que cet état est tel
 que les valeurs moyennes de l'énergie et du champ sont égales aux grandeurs
 classiques correspondantes et qu'il s'obtient en faisant agir un opérateur
+de \ul{déplacement} D($\alpha$) sur l'état représentant le vide $|$ 0 $>$ :
+\[
+\tag{48}|\ \psi >\;=\mt{D}(\alpha)\ |\ 0 >
+\]
+L'opérateur D($\alpha$) se définit par son action sur les opérateurs  :
+\[
+\tag{}\left\{ \begin{array}{rcl}
+\mt{D}^+(\alpha)\mt{ a D}(\alpha) & = & \mt{a}+\alpha \\
+\mt{D}^+(\alpha)\mt{ a}^+\;\mt{D}(\alpha) & = & \mt{a}^++\alpha \end{array} \right.
+\]
+Rappelons enfin que le nombre moyen de photons contenu dans l'état $|\ \psi >$,
+$\overline{\mt{N}}$ est égal à $\sqrt\alpha$.
 
-de déplacement  sur l'état représentant le vide | O > :
+D'après la propriété fondamentale de l'état $|\ \psi >$, la valeur moyenne dans cet état de
+l'opérateur $\lambda$(a $+$ a$^+$) doit être égale à la grandeur classique correspondante, $\hbar\omega_1$ :
+\begin{center}
+$\lambda<\psi\;|$ (a $+$ a$^+)\;|\;\psi>=\hbar\omega_1$
+\end{center}
+or $<\psi\;|$ a $+$ a$^+\;|\;\psi>=<0\;|$ D$(\alpha)$ (a $+$ a$^+)$ D$(\alpha)\;|\;0>$
+\begin{center}
+$=<0\;|$ a $+$ a$^++2\alpha$ D$(\alpha)\;|\;0>=2\alpha=2\sqrt{\,\overline{\mt{N}}}$
+\end{center}
+On en déduit
+\[
+\tag{49}\hbar\omega_1=2\lambda\sqrt{\,\overline{\mt{N}}}
+\]
 
-L'opérateur  se définit par son action sur les opérateurs  :
-
-Rappelons enfin que le nombre moyen de photons contenu dans l'état |  >,
-N est égal à .
-
-D'après la propriété fondamentale de l'état |  > , la valeur moyenne’ dans cet état de
-l'opérateur  doit être égale à la grandeur classique correspondante, Ho, :
-
-or
 % 218
+\ul{Remarque} : L'énergie du champ de radiofréquence est proportionnelle à $\omega_1^2$
+(classiquemænt) et à $\overline{\mt{N}}$ (quantiquement). $\omega_1$, est donc proportionnel
+à $\sqrt{\overline{\mt{N}}}$.
+C'est cette proportionnalité que traduit la formule (49).
 
-Remarque : L'énergie du champ de radiofréquence est proportionnelle à y
-
+\ul{En conclusion} : le hamiltonien du système "spin 1/2, champ de radiofréquence"
+est $\mc{H}=\mc{H}_0+\mc{H}_\mt{I}$
+avec
 \[
-\tag{50-a}=
+\tag{50-a}\mc{H}_0=\hbar\omega_0\mt{ J}_\mt{z}+\hbar\omega\mt{ a}^+\mt{a}
 \]
 \[
-\tag{50-b}=
+\tag{50-b}\mc{H}_\mt{I}=\lambda\mt{ J}_\mt{x }(\mt{a}+\mt{a}^+)
 \]
+avec $2\lambda\sqrt{\,\overline{\mt{N}}}=\hbar\omega_1$
+\subsection{Etude des niveaux d'énergie de $\mc{H}_0$}%3
+Le hamiltonien $\mc{H}_0$ admet pour énergies propres les énergies
+E$_{\mt{n},\pm}=\pm\hbar\frac{\omega_0}{2}+\mt{n}\hbar\omega$
+les états propres étant les états $|\pm$, n$>$ représentant le spin dans l'état
+$\pm$ 1/2 le long de Oz en présence de n photons de radiofréquence.
+Le diagramme d'énergie de $\mc{H}_0$ est représenté sur la figure ci-dessous en
+fonction du champ magnétique $\mt{H}_0$.
 
-(classiquemænt) et à N (quantiquement). $\omega$, est donc proportionnel à N.
-
-C'est cette proportionnalité que traduit la formule (49) :
-
-En conclusion : le hamiltonien du système "spin 1/2, champ de radiofréquence"
-
-est
-avec
-
-avec
-3°) Etude des niveaux d'énergie de
-\subsection{}%
-Le hamiltonien  admet pour énergies propres les énergies
-
-les états propres étant les états |  > représentant le spin dans l'état
-+ 1/2 le long de Oz en présence de n photons de radiofréquence,
-Le diagramme d'énergie de , est représenté sur la figure ci-dessous en
-fonction du champ magnétique 
 Nous voyons que ce diagramme présente une infinité de croisements de
-niveaux pour toutes les valeurs du champ H, telles que $\omega$, = nu (n entier positif)
+niveaux pour toutes les valeurs du champ $\mt{H}_0$ telles que $\omega_0=$ n$\omega$ (n entier positif,
+négatif ou nul)
+\begin{center} \begin{tikzpicture}
+%\draw [dashed, gray] (2,5) -- (2,0) node [below, black] {};
+% axes
+\draw [thick, ->] (0,0) -- (0,8) node [left] {Energie};
+\draw [thick, ->] (0,0) -- (12,0) node [below] {$\omega_0$};
+% verticales
+\draw [dashed] (3,0) node [below] {$\omega$} -- (3,7);
+\draw [dashed] (9,0) node [below] {$3\omega$} -- (9,7);
+% obliques y = x/3 + b
+\draw [thick] (0,1) node [left] {n$\omega$} -- (12,5) node [right] {$|$ n $+>$};
+\draw [thick] (9,0) -- (0,3) node [left] {(n$+1)\omega$} -- (12,7);
+\draw [thick] (10,1.66666) -- (0,5) node [left] {(n$+2)\omega$} -- (10,8.33333);
+\draw [thick] (12,3) node [right] {$|$ n$+3\ ->$} -- (0,7) node [left] {(n$+3)\omega$};
+\end{tikzpicture} \end{center}
 
 %%%%- 219 
-Le couplage  possède des éléments de matrice non nuls
-entre les états tels que  et Un simple examen des niveaux
+Le couplage $\lambda$J$_\mt{x }($a$+$a$^+)$ possède des éléments de matrice non nuls
+entre les états tels que $\Delta$n$=\pm 1$ et $\Delta$m$=\pm 1$. Un simple examen des niveaux
 d'énergie montre alors que les niveaux qui se croisent aux points tels que
-$\omega$, = (2n+l)$\omega$ sont connectés par la perturbation (à l'ordre Pn+1) alors que
-les points de croisement tels que $\omega$, = 2n$\omega$ ne le sont à aucun ordre,
+$\omega_0=$(2n$+$1)$\omega$ sont connectés par la perturbation (à l'ordre 2n$+$1) alors que
+les points de croisement tels que $\omega_0=$ = 2n$\omega$ ne le sont à aucun ordre.
 
-4°) Principe du calcul des formes de raie des transitions
-\subsection{}%
-Nous sommes donc, pour les croisements tels que $\omega$, = (2n+l$\omega$)
-remenés à l'étude du \S D et nous pouvons prévoir une résonance dans la probabilité
-de transition sous l'effet du couplage H, entre les deux niveaux non
-perturbés qui se croisent. Afin de calculer les probebilités et les formes de
+\subsection{Principe du calcul des formes de raie des transitions à plusieurs quanta}%4
+Nous sommes donc, pour les croisements tels que $\omega_0=$(2n$+$1)$\omega$
+remenés à l'étude du \S 4 et nous pouvons prévoir une résonance dans la probabilité
+de transition sous l'effet du couplage H$_\mt{I}$, entre les deux niveaux non
+perturbés qui se croisent. Afin de calculer les probabilités et les formes de
 raie qui en résultent, il nous suffit d'appliquer les résultats résumés dans
 les relations (43) et (37).
 
 Pour calculer La probabilité de transition entre a et b, au point de croisement
-des niveaux non perturbés a et b, il faut partir de l'expression rigoureuse (43)
-
-à l'aide de laquelle on calcule. Et
-
+des niveaux non perturbés a et b, il faut partir de l'expression \ul{rigoureuse} (43)
+\[
+\mt{G}_\mt{ba}\mt{(E)}=\frac{\tilde{\mt{R}}_\mt{ba}\mt{(E)}}
+{\big(\mt{E}-\mt{E}_\mt{a}-\tilde{\mt{R}}_\mt{aa}\mt{(E)}\big)
+\big(\mt{E}-\mt{E}_\mt{b}-\tilde{\mt{R}}_\mt{bb}\mt{(E)}\big)-
+|\tilde{\mt{R}}_\mt{ab}\mt{(E)}|^2}
+\]
+à l'aide de laquelle on calcule
+\[
+\mt{U}_\mt{ba}\mt{(t)}=\frac{1}{2i\pi}\int_\mt{c}\mt{G}_\mt{ba}\mt{(E) e}^{-i\frac{\mt{Et}}{\hbar}}\mt{ dE}
+\]
 puis
-
+\[
+\mt{P}_\mt{ba}\mt{(t)}=|\mt{U}_\mt{ba}\mt{(t)}|^2
+\]
 et enfin
-
-Le calcul de  se fait par la méthode des résidus : nous avons vu (\S B) que
- admet pour pôles toutes les énergies propres discrètes E, du hamiltonien
-
- avec pour résidu .
+\[
+\overline{\mt{P}_\mt{ba}}=\Gamma\int\mt{e}^{-\Gamma\mt{t}}\mt{ P}_\mt{ba}\mt{(t) dt}
+\]
+Le calcul de U$_\mt{ba}$(t) se fait par la méthode des résidus : nous avons vu (\S 2) que
+G$_\mt{ba}$(E) admet pour pôles toutes les énergies propres discrètes E$_\lambda$, du hamiltonien
+$\mc{H}$ avec pour résidu $<$ a $|\ \lambda>\;<\lambda\ |$ b$>$.
 
 % 220
 
-\[
-\tag{51}=
-\]
-\[
-\tag{52}=
-\]
 Nous voyons tout de suite que les résidus les plus importants sont ceux pour
-lesquels | $\lambda$ > = | a > ou | b >, | a > et | b > étant les états perturbés de
-valeur propre E, et E, correspondant aux états non perturbés a et b. Tous
-les autres résidus seront d'un ordre supérieur, | a > et | b > étant pratiquement
-orthogonaux à tout état | $\lambda$ > autre que | a > ou | b >, Nous nous contenterons donc,
-pour le calcul de  des deux résidus aux pôles E et E
+lesquels $|\ \lambda>\ =|\ \alpha>$ ou $|\ \beta >$, $|\ \alpha>$ et $|\ \beta >$ étant les états \ul{perturbés} de
+valeur propre E$_\alpha$ et E$_\beta$, correspondant aux états non perturbés a et b. Tous
+les autres résidus seront d'un ordre supérieur, $|$ a $>$ et $|$ b $>$ étant pratiquement
+orthogonaux à tout état $|\ \lambda>$ autre que $|\ \alpha>$ ou $|\ \beta >$. Nous nous contenterons donc,
+pour le calcul de U$_\mt{ba}$(t) des deux résidus aux pôles E$_\alpha$ et E$_\beta$
 qui sont donnés par les équations implicites
+\[
+\tag{}\left\{ \begin{array}{rcl}
+\mt{E}_\alpha & = & \mt{E}_\mt{a}+\tilde{\mt{R}}_\mt{aa}\mt{(E}_\alpha) \\
+\mt{E}_\beta & = & \mt{E}_\mt{b}+\tilde{\mt{R}}_\mt{bb}\mt{(E}_\beta) \end{array} \right.
+\]
 
-Nous nous bornerons de plus à un calcul de perturbation à l'ordre
-
-le plus bas. Nous savons alors qu'il est possible de remplacer les énergies
-perturbées E et E
-l'énergie E correspondant au croisement des niveaux non perturbés E et E
+Nous nous bornerons de plus à un calcul de perturbation \ul{à l'ordre
+le plus bas}. Nous savons alors qu'il est possible de remplacer les énergies
+perturbées E$_\alpha$ et E$_\beta$
 par les énergies non perturbées, et en particulier par
-
+l'énergie $\overline{\mt{E}}$ correspondant au croisement des niveaux non perturbés E$_\mt{a}$ et E$_\mt{b}$.
 Nous pouvons alors écrire
+\[
+\tag{51}\mt{G}_\mt{ba}\mt{(E)}=\frac{\tilde{\mt{R}}_\mt{ba}(\overline{\mt{E}})}
+{\big(\mt{E}-\mt{E}_\mt{a}-\tilde{\mt{R}}_\mt{aa}(\overline{\mt{E}})\big)
+\big(\mt{E}-\mt{E}_\mt{b}-\tilde{\mt{R}}_\mt{bb}(\overline{\mt{E}})\big)-
+|\tilde{\mt{R}}_\mt{ab}(\overline{\mt{E}})|^2}
+\]
 
-Nous obtenons alors pour  une expression explicite approchée analogue
-
-à l'expression (32) à partir de laquelle nous pouvons, par les mêmes calculs,
-
-déduire pour  une expression analogue à (37) :
-
+Nous obtenons alors pour G$_\mt{ba}$(E) une expression \ul{explicite} approchée analogue
+à l'expression (32) à partir de laquelle nous pouvons, \ul{par les mêmes calculs},
+déduire pour $\overline{\mt{P}_\mt{ab}}$ une expression analogue à (37) :
+\[
+\tag{52}\overline{\mt{P}_\mt{ab}}=\frac{2|\tilde{\mt{R}}_\mt{ba}(\overline{\mt{E}})|^2}
+{\hbar^2\Gamma^2+4|\tilde{\mt{R}}_\mt{ba}(\overline{\mt{E}})|^2+\big(\mt{E}_\mt{b}-\mt{E}_\mt{a}
++\tilde{\mt{R}}_\mt{bb}(\overline{\mt{E}})-\tilde{\mt{R}}_\mt{aa}(\overline{\mt{E}})\big)^2}
+\]
 Il nous suffit maintenant, afin de calculer les formes de raie des transitions
-à plusieurs quante à l'ordre le plus bas de la perturbation, de nous placer au
-point de croisement des niveaux non perturbés correspondant (u$\omega$, = (2n+1)u$\omega$) et
-de calculer à l'ordre le plus bas où elles sont non nulles chacune des trois
-quantités  à l'aide du développement en série de la perturbation (46).
+à plusieurs quanta à l'ordre le plus bas de la perturbation, de nous placer au
+point de croisement des niveaux non perturbés correspondant ($\omega_0=(2n+1)\omega$) et
+de calculer \ul{à l'ordre le plus bas où elles sont non nulles} chacune des trois
+quantités R$_\mt{ba}(\overline{\mt{E}})$, R$_\mt{aa}(\overline{\mt{E}})$, R$_\mt{bb}(\overline{\mt{E}})$,
+à l'aide du développement en série de la perturbation (46).
 
 % 221 
-L'expression (52) fournit alors la forme de Fe et donne notamment l'intensité (qui dépend de ),
-la largeur  et le déplacement radiatif Rate R(E) - AC (E) de la résonance, Nous allons prendre pour
-exemple le cas des transitions à un quantum ($\omega$, = $\omega$) et à trois quanta
+L'expression (52) fournit alors la forme de raie et donne notamment l'intensité 
+(qui dépend de $\tilde{\mt{R}}_\mt{ba}$(E)),
+la largeur $\sqrt{\Gamma^2+4|\tilde{\mt{R}}_\mt{ba}(\overline{\mt{E}})|^2}$ et le déplacement 
+radiatif $\tilde{\mt{R}}_\mt{ba}(\overline{\mt{E}})-\tilde{\mt{R}}_\mt{aa}(\overline{\mt{E}})$ 
+de la résonance, Nous allons prendre pour
+exemple le cas des transitions à un quantum ($\omega_0=\omega$) et à trois quanta
+($\omega_0=3\omega$).
 
-5°) Transition à un quantum : Shift de Bloch et Siegert
-\subsection{}%
-Nous allons prendre pour états | a > et | b > les états
+\subsection{Transition à un quantum : Shift de Bloch et Siegert}%5
+Nous allons prendre pour états $|$ a $>$ et $|$ b $>$ les états
+\begin{center}
+$|$ a $>=|$n, $+>$
 
-Remarque : L'état du champ de rayonnement n'est pas un état | n >, mais une superposition
+$|$ b $>=|$n$+1\ ->$
+\end{center}
+
+\ul{Remarque} : L'état du champ de rayonnement n'est pas un état | n >, mais une superposition
 cohérente d'états | n > autour d'une valeur moyenne N. Le caractère
 cohérent du champ n'intervient pas dans l'étude de la probabilité de transition.
 La dispersion relative du nombre de photons du champ  étant très
