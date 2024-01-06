@@ -329,7 +329,7 @@ f$_\mt{H}$(t$_\mt{k}$) et g$_\mt{H}$(t$_\mt{l}$) les valeurs de ces grandeurs po
 la quantité :
 \[
 \tag{6}\subset \mt{x''t''} | \mt{F(t}_\mt{k}) \mt{ G(t}_\mt{l}) | \mt{x't'}\supset\ =
-\sum_H \mt{N f}_\mt{H}(\mt{t}_\mt{k}) \mt{ g}_\mt{H}(\mt{t}_\mt{l})
+\sum_\mt{H} \mt{N f}_\mt{H}(\mt{t}_\mt{k}) \mt{ g}_\mt{H}(\mt{t}_\mt{l})
 \mt{ exp}\frac{\mt{i}}{\hbar}\mt{S}_\mt{H}
 \]
 représente l'élément de matrice au sens de Feynman entre les états < x't' |
@@ -442,169 +442,235 @@ vers la gauche.
 On déduit immédiatement du point de vue de Heisenberg :
 
 \[
-\subset \mt{x''t''} | \mt{X(t}_\mt{k}) \mt{ X(t}_\mt{l}) | \mt{x't'}\supset\ =
-< \mt{x''t''} | \mt{ X(t}_\mt{l}) \mt{X(t}_\mt{k}) | \mt{x't'} >
+\tag{9}\subset \mt{x''t''} | \mt{ X(t}_k) \mt{ X(t}_l)\ | \mt{x't'}\supset\ =
+< \mt{x''t''}|\mt{ U(t'', t}_l)
+\ \ul{\mt{X}}\ \mt{ U(t}_l,\mt{ t}_k)
+\ \ul{\mt{X}}\ \mt{ U(t}_k,\mt{ t') }|\mt{x't'} >
 \]
 De façon plus générale, si nous avons affaire à des grandeurs physiques
-
-relatives à des instants ty tys ve th différents, nous introduisons
-
-,
-l'opérateur d'ordre P aui ronge les temps dans l'ordre croissant de la
-droite vers la pauche et nous avons
-
+relatives à des instants t$_k$, t$_l$, ... t$_p$ différents, nous introduisons
+l'opérateur d'ordre P qui range les temps dans l'ordre croissant de la
+droite vers la gauche et nous avons
+\[
+\tag{10}\subset \mt{x''t''} | \mt{ X(t}_k) \mt{ X(t}_l)... \mt{ X(t}_p)\ | \mt{x't'}\supset\ =
+< \mt{x''t''}|\mt{ P}[\mt{ X(t}_k) \mt{ X(t}_l)... \mt{ X(t}_p)]
+\ |\mt{x't'} >
+\]
+\[=
+< \mt{x''t''}|\mt{ U(t'', t}_p)
+\ \ul{\mt{X}}\ \mt{ U(t}_p,\mt{ t}_(p-1))
+\ \ul{\mt{X}}...
+\ \ul{\mt{X}}\ \mt{ U(t}_l,\mt{ t}_k)
+\ \ul{\mt{X}}\ \mt{ U(t}_k,\mt{ t') }|\mt{x't'} >
+\]
+\begin{center}
+avec t'' > t$_p$ > t$_{p-1}$ > ... > t$_l$ > t$_k$ > t'
+\end{center}
 %34
 
-Remarques :
+\ul{Remarques} :
 a) Nous comprenons maintenant la raison pour laquelle nous avons adopté,
-pour désigner les éléments de matrice au sens de Feynman,une notation différente de celle de Heisenberg. La relation (10) nous montre en effet que
+pour désigner les éléments de matrice au sens de Feynman, une notation différente de celle de Heisenberg. La relation (10) nous montre en effet que
 les deux notions ne sont pas identiques et qu'il faut, pour passer de l'une
 à l'autre, ranger de façon convenable les opérateurs.
 b) Que devient maintenant, dans le formalisme de Heisenberg, l'opérateur
-associé à la prandeur physique  ?
+associé à la grandeur physique ?
 
-Nous avons vu au paragraphe À qu'il faut, pour que cette
-
+Nous avons vu au paragraphe 1 qu'il faut, pour que cette
 quantité soit définie, la remplacer par
-
-Il lui correspond,dans le formalisme de Heisenberg, l'opérateur
+\[
+\lim_{\epsilon\to\, 0}\frac{\mt{x(t}_k)+\mt{x(t}_{k+1})}{2}\ \frac{\mt{x(t}_{k+1})-\mt{x(t}_k)}{\epsilon}
+\]
+Il lui correspond, dans le formalisme de Heisenberg, l'opérateur
+\[
+\lim_{\epsilon\to\, 0}\mt{P}\left[\frac{\mt{x(t}_k)+\mt{x(t}_{k+1})}{2}\ \frac{\mt{x(t}_{k+1})-\mt{x(t}_k)}{\epsilon}\right]
+\]
+\[
+=\lim_{\epsilon\to\, 0}\left\{\frac{1}{2}\mt{X(t}_{k+1})\frac{\mt{X(t}_{k+1})-\mt{X(t}_k)}{\epsilon}+
+\frac{1}{2}\ \frac{\mt{X(t}_{k+1})-\mt{X(t}_k)}{\epsilon}\mt{X(t}_k)\right\}
+\]
+\[
+=\frac{1}{2}\left[\mt{X(t}_k)\mt{V(t}_k)+
+\mt{V(t}_k)\mt{X(t}_k)\right]
+\]
 
 
 Si l'on adopte donc la définition de Feynman pour les opérateurs
 associés à une grandeur physique, on obtient très naturellement la règle de
 symétrisation : l'opérateur quantique correspondant à un produit de grandeurs
-physiques et le produit syrétrisé, Ce produit symétrisé est différent du
-
+physiques et le produit symétrisé. Ce produit symétrisé est différent du
 produit ordinaire si les opérateurs ne commutent pas.
 
 \subsection{Cas général} % C.
 
 Nous avons défini jusqu'à présent des opérateurs correspondant à
-
 un ou plusieurs instants en nombre fini. Mous avons pu le faire, à la condition
 de pouvoir associer à chaque histoire H de la particule définie par la
 %35
-suite () une grandeur classique 
-Considérons maintenant que  ne dépend plus seulement d'une
-suite finie de positions  mais, globalement, de tout le chemin
+suite (M', M$_1$, M$_2$, ... M$_i$, ... M$_{n-1}$, M'') une grandeur classique f$_\mt{H}$
 
+Considérons maintenant que f$_\mt{H}$ ne dépend plus seulement d'une
+suite finie de positions x$_\mt{H}$(t$_k$) mais, globalement, de tout le chemin x$_\mt{H}$(t).
 Nous définissons ainsi comme grandeur physique une fonctionnelle du
-chemin  qui dépend de toute l'histoire H,
+chemin f$_\mt{H}=$ f$[$x$_\mt{H}$(t)$]$ qui dépend de \ul{toute} l'histoire H,
 
-Dans les paragraphes À et B, nous avons envisagé des fonctionnelles particulièrement simples. Par exemnle :
+Dans les paragraphes 1 et 2, nous avons envisagé des fonctionnelles particulièrement simples. Par exemple :
+\[
+\tag{\S 1}\mt{f}[\mt{x}_\mt{H}(\mt{t})]=\mt{x}_\mt{H}(\mt{t}_k)
+\]
+\[
+\tag{\S 2}\mt{f}[\mt{x}_\mt{H}(\mt{t})]=\mt{x}_\mt{H}(\mt{t}_k)\mt{x}_\mt{H}(\mt{t}_l)
+\]
 
 Nous pouvons maintenant envisager des fonctionnelles beaucoup
 plus générales. Par exemple :
+\[
+\mt{f}[\mt{x}_\mt{H}(\mt{t})]=\int_{\mt{t'}}^{\mt{t''}}\mt{x}_\mt{H}\mt{(t)dt}
+\]
+\[
+\tag{11}\mt{f}[\mt{x}_\mt{H}(\mt{t})]=\int_{\mt{t'}}^{\mt{t''}}\left\{\frac{1}{2}\mt{m}[\dot{\mt{x}}_\mt{H}\mt{(t)}]^2-\mt{v}[\mt{x}_\mt{H}(\mt{t})]\right\}\mt{dt}
+\]
+\[
+=\mt{S}_\mt{H}
+\]
 
 Cette dernière fonctionnelle représente simplement l'action
-pour l'histoire H. Comme nous l'avons déjà fait en À et B, nous définissons
-l'élément de matrice au sens de Feynman entre les états  et 
-
-de l'opérateur fonctionnel  correspondant à la grandeur classique
+pour l'histoire H. Comme nous l'avons déjà fait en 1 et 2, nous définissons
+l'élément de matrice au sens de Feynman entre les états $<$ x''t'' $|$ et $|$ x't' $>$
+de l'opérateur fonctionnel F\{X(t)\} correspondant à la grandeur classique f$[$x$_\mt{H}$(t)$]$
 par la relation
+\[
+\tag{12}\subset \mt{ x''t'' }|\mt{ F\{X(t)\} }|\mt{ x't'}\supset\ =
+\sum_\mt{H} \mt{N f \{x}_\mt{H}(\mt{t})\}\mt{ exp}\frac{\mt{i}}{\hbar}\mt{S}_\mt{H}
+\]
 par exemple on définit l'élément de matrice de l'opérateur action quantique
+\[
+\mc{S}=\int\left[\frac{1}{2}\mt{m}\left\{\frac{\mt{dX(t)}}{\mt{dt}}\right\}^2-\mc{V}[\mt{X(t), t}]\right]\mt{dt}
+\]
+\[
+\tag{13}\subset \mt{ x''t'' }|\ \mc{S}\ |\mt{ x't'}\supset\ =
+\sum_\mt{H} \mt{N S}_\mt{H}\mt{ exp }\frac{\mt{i}}{\hbar}\mt{ S}_\mt{H}
+\]
 
 %-36
-En résumé : le formalisme de Feynman nous a permis de définir les opérateurs à
-quantiques, non plus par leur action sur un vecteur d'état  au système
+\ul{En résumé} : le formalisme de Feynman nous a permis de définir les opérateurs
+quantiques, non plus par leur action sur un vecteur d'état $|\ \phi\ >$ du système
 envisagé à un instant donné t, mais plutôt par leurs éléments de matrice
 entre deux états à des instants différents, ce qui les associe étroitement
 à l'évolution du système entre t' et t''.
 
 Ceci nous a permis de retrouver tout d'abord les opérateurs de
-la mécanique quantique habituelle, en précisent de facon plus naturelle la
+la mécanique quantique habituelle, en précisant de facon plus naturelle la
 correspondance entre mécanique classique et quantique et en justifiant la
-rèrle de symétrisation. Enfin, nous pouvons définir (formule 12) une classe
-d'opérateurs beaucoup plus vaste, agissant sur tout un intervalle d'espacetemps, celle des onérateurs fonctionnels.
+règle de symétrisation. Enfin, nous pouvons définir (formule 12) une classe
+d'opérateurs beaucoup plus vaste, agissant sur tout un intervalle d'espace-temps, celle des opérateurs fonctionnels.
 
-Pemarque imrortante : 
-Tant que la grandeur classique  ne dépendait que d'une suite finie
-d'instants  il a été possible de trouver l'équivalent de l'élément
+\ul{Remarque importante} : 
+Tant que la grandeur classique f$[$x$_\mt{H}$(t)$]$ ne dépendait que d'une suite finie
+d'instants t$_\mt{k}$ (\S 1, 2) il a été possible de trouver l'équivalent de l'élément
 de matrice de Feynman dans le point de vue de Heisenberg (formule 10). Dans
-le cas où  est la fonctionnelle la plus rénérale du chemin H, la
-formule (10) peut se rénéraliser formellement :
+le cas où f$[$x$_\mt{H}$(t)$]$ est la fonctionnelle la plus générale du chemin H, la
+formule (10) peut se généraliser formellement :
+\[
+\tag{14}\subset \mt{ x''t'' }|\ \mt{F}\mt{\{X(t)\}}\ |\mt{ x't'}\supset\ =\ 
+<\mt{ x''t'' }|\ \mt{P}[\mt{F}\mt{\{X(t)\}}]\ |\mt{ x't'}>
+\]
 
-La formule (1) sipnifie que s'il est possible, d'une façon ou d'une autre,
+La formule (14) signifie que s'il est possible, d'une façon ou d'une autre,
 de développer la fonctionnelle F en une série de produits dépendant d'une
-suite d'instants  alors il faudra, pour passer au point de vue
+suite d'instants t$_1$, t$t_2$ ..., alors il faudra, pour passer au point de vue
 de Heisenberg, ranger dans chacun des termes de la série les temps croissants
-de la droite vers la rauche. Nous préciserons cette notion de façon naturelle
-
-au paragraphe D,
+de la droite vers la gauche. Nous préciserons cette notion de façon naturelle
+au paragraphe 4.
 
 \section{Application : Théorie des perturbations dépendant du temps} % D
 
 Le formalisme de Feynman est particulièrement bien adapté à
 l'étude des variations apportées à l'amplitude de probabilité < x''t'' | x't' >
-par une perturbation du hamiltonien ou du larrangien du système. Nous allons
-
+par une perturbation du hamiltonien ou du lagrangien du système. Nous allons
 voir que l'on peut ainsi retrouver de façon très simple les résultats de la
+théorie des perturbations dépendant du temps.
+% 37
 
-théorie des perturbations dépendent du temps.
+\subsection{Position du problème}%1°) 
 
- % 37-
+Considérons une particule dans un potentiel v$_0$ (x, t).
+Son lagrangien L$_0$ s'écrit
+\[
+\mt{L}_0=\frac{1}{2}\mt{m}\dot{\mt{x}}^2-\mt{v}_0\mt{(x, t)}
+\]
+et l'action S$_\mt{OH}$ associée à une histoire H :
+\[
+\mt{S}_\mt{OH} = \int_\mt{t'}^\mt{t''}\left[\frac{1}{2}\mt{m}\Big(\dot{\mt{x}}_\mt{H}(\mt{t})\Big)^2-\mt{v}_0\Big(\mt{x}_\mt{H}\mt{(t)}\Big)\right]\mt{dt}
+\]
 
-\subsection{}
-1°) Position du problème
+L'amplitude de probabilité relative au lagrangien L$_0$, que nous écrirons
+$<$ x''t'' $|$ x't' $>_{\mt{S}_0}$ est alors
+\[
+\tag{15} <\mt{ x''t'' }|\mt{ x't' }>_{\mt{S}_\mt{0}}=\sum_\mt{H}\mt{ N exp }\frac{\mt{i}}{\hbar}\mt{ S}_\mt{0H}
+\]
+ce qui s'écrit dans le point de vue de Schrödinger
+\[
+<\mt{ x''t'' }|\mt{ x't' }>_{\mt{S}_0}=<\mt{ x'' }|\mt{ U}_0\mt{(t'',t') }|\mt{ x' }>
+\]
 
-Considérons une particule dans un potentiel w (x, t).
+U$_0$ (t'', t') étant l'opérateur d'évolution de la particule dans le potentiel v$_0$.
 
-Son lagrangien L s'écrit
-
-et l'action S associée à une histoire H :
-
-L'amplitude de probabilité relative au lagrangien L, que nous écrirons
-
-ce qui s'écrit dans le point de vue de Schrôdinrer
-
-U (t'', t') étant l'opérateur d'évolution de la particule dans le potentiel
-
-On change maintenant le potentiel qui devient .
+On change maintenant le potentiel qui devient v$_0$(x,t)+w(x,t).
 Le lagrangien L s'écrit alors :
-
+\[
+\mt{L}=\frac{1}{2}\mt{m}\dot{\mt{x}}^2-\mt{v}_0(\mt{x,t})-\mt{w}(\mt{x,t})=\mt{L}_0-\mt{w}(\mt{x,t})
+\]
 l'action associée à une histoire H devient
-
-Enfin l'amplitude de probabilité relative au système perturbé, < x''t'' | x't' >.
-
-s'écrit
+\[
+\tag{16}\mt{S}_\mt{H}=\mt{S}_\mt{0H}+\delta\mt{S}_\mt{H}
+\]
+avec
+\[
+\tag{17}\delta\mt{S}_\mt{H}=-\int_\mt{t'}^\mt{t''}\mt{w}\big[\mt{x}_\mt{H}(\mt{t})\mt{,t}\big]\mt{dt}
+\]
+Enfin l'amplitude de probabilité relative au système perturbé, $<$ x''t'' $|$ x't' $>_\mt{S}$ s'écrit
+\[
+\tag{18}<\mt{ x''t'' }|\mt{ x't' }>_\mt{S}=<\mt{ x'' }|\mt{ U(t'',t') }|\mt{ x' }>=\sum_\mt{H}\mt{ N exp }\frac{\mt{i}}{\hbar}\mt{ S}_\mt{H}
+\]
+(U(t'',t') étant l'opérateur d'évolution de système perturbé).
 
 Le problème que l'on se pose est, connaissant l'amplitude de
-
-et la perturbation w (x,t), de déterminer < x''t''fx't' >, où
-
+$<$ x''t'' $|$ x't' $>_{\mt{S}_0}$
+et la perturbation w (x,t), de déterminer $<$ x''t'' $|$ x't' $>_\mt{S}$, où
 ce qui revient au même, dans un point de vue plus familier, connaissant
-
-et w (x,t), déterminer U,
+U$_0$
+et w(x,t), déterminer U.
 
 % 38
 Pour l'instant, nous ne faisons aucune hypothèse sur la
 grandeur de la perturbation w(x,t).
 
-Un cas particulier important est celui où ve (x,t) = 0.
+Un cas particulier important est celui où v$_0$ (x,t) = 0.
 Le système non perturbé est alors celui d'une particule libre dont on sait
-
-déterminer exactement le propagateur < x''t'' | x't' > (cf chapitre II).
+déterminer exactement le propagateur $<$ x''t'' $|$ x't' $>_{\mt{S}_0}$ (cf chapitre II).
 
 Le problème revient alors à déterminer, à partir de l'opérateur d'évolution
-
 de la particule libre, celui de la particule se déplaçant dans un potentiel
-quelconque dépendant du temps w (x,t).
+quelconque dépendant du temps w(x,t).
 
-\subsection{}
-2°) Expression de < x''t'' | x't! >s
+\subsection{Expression de $<$ x''t'' $|$ x't' $>_\mt{S}$}%2°)
 
 De (16), (17), (18) on déduit immédiatement
-
+\[
+\tag{19} <\mt{ x''t'' }|\mt{ x't' }>_\mt{S}=\sum_\mt{H}\mt{ N exp }-\frac{\mt{i}}{\hbar}\int_\mt{t'}^\mt{t''}\mt{w}\big[\mt{x}_\mt{H}(\mt{t})\mt{,t}\big]\mt{dt exp }\frac{\mt{i}}{\hbar} \mt{ S}_\mt{0H}
+\]
 ce qui n'est autre que l'élément de matrice au sens de Feynman
-
- étant l'opérateur quantique associé à w et l'indice 5 étant là
-rour rappeler que l'élément de matrice est relatif au système non perturbé.
+\[
+\subset \mt{ x''t'' }|\mt{ exp }-\frac{\mt{i}}{\hbar}\int_\mt{t'}^\mt{t''}\mt{W}\big[\mt{X}(\mt{t})\mt{,t}\big]\mt{ dt }|\mt{ x't'}\supset_{\mt{ S}_0}
+\]
+W$\big[$X(t),t$\big]$ étant l'opérateur quantique associé à w et l'indice S$_0$ étant là
+pour rappeler que l'élément de matrice est relatif au système non perturbé.
 
 Nous pouvons donner de l'expression précédente une interprétation physique imagée très simple :
 
 La perturbation w multiplie la contribution de chaque chemin H à l'amplitude
-
-de probabilité par un facteur de déphasage exp dt, La
+de probabilité par un facteur de déphasage exp $-\frac{\mt{i}}{\hbar}\int_\mt{t'}^\mt{t''}\mt{w}\big[\mt{x}_\mt{H}(\mt{t})\mt{,t}\big]$ dt, La
 modification globale de l'amplitude de probabilité s'obtient en sommant
 tous ces déphasages sur les chemins. On peut dire, par analogie avec l'optique,
 que la perturbation modifie "l'indice de réfraction" dans l'espace-temps et
@@ -612,78 +678,149 @@ que le calcul de perturbation se ramène à un calcul de variation d'indice.
 
 % 39
 Afin d'alléger les notations, posons :
-
-W (t) dépend du temps explicitement et implicitement [par l'intermédiaire
-de X t] . L'opérateur correspondant dans le point de vue de Schrôdinrer
-n'a plus qu'une dépendance explicite dans le temps. Nous l'écrirons w (t).
+\[
+\begin{array}{rcr}
+\mt{w}\big[x_\mt{H}(t),t\big] & = & \mt{w}_\mt{H}\mt{(t)} \\
+\mt{W}\big[\mt{X(t),t}\big] & = & \mt{W(t)}
+\end{array}
+\]
+W (t) dépend du temps explicitement et implicitement \big[ par l'intermédiaire
+de X (t) \big] . L'opérateur correspondant dans le point de vue de Schrödinger
+n'a plus qu'une dépendance explicite dans le temps. Nous l'écrirons \ul{W} (t).
 Avec nos nouvelles notations, (19) s'écrit :
+\[
+\tag{20} <\mt{ x''t'' }|\mt{ x't' }>_\mt{S}\ =\ \subset \mt{ x''t'' }|\mt{ exp }-\frac{\mt{i}}{\hbar}\int_\mt{t'}^\mt{t''}\mt{W (t) dt }|\mt{ x't'}\supset_{\mt{ S}_0}
+\]
+\[
+\tag{21} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ <\mt{ x''t'' }|\mt{ P }\left[\mt{ exp }-\frac{\mt{i}}{\hbar}\int_\mt{t'}^\mt{t''}\mt{W (t) dt }\right]|\mt{ x't' }>_0
+\]
 
-L'opérateur d'ordre P a été défini dans le paragraphe C. Nous ne pourrons lui
-donner une signification précise qu'en développant l'exnronentielle en série,
-L'indice O de la formule (21) rappelle que les états | x't' > et | x''t'' >
+L'opérateur d'ordre P a été défini dans le paragraphe 2.3. Nous ne pourrons lui
+donner une signification précise qu'en développant l'exponentielle en série,
+L'indice 0 de la formule (21) rappelle que les états | x't' > et | x''t'' >
 sont les états propres des opérateurs de Heisenberg X(t') et X(t'') de la
+\ul{particule non perturbée}.
 
-particule non perturbée.
-
-\subsection{}
-3°) Développerent en série de la perturbation ;
-
-
+\subsection{Développerent en série de la perturbation}%3°)
 Développons en série :
+\[
+\tag{22} \mt{ exp }-\frac{\mt{i}}{\hbar}\int_\mt{t'}^\mt{t''}\mt{W (t) dt }\ =\ 1 +\frac{1}{\mt{i}\hbar}\ \frac{1}{1!}\ \int_\mt{t'}^\mt{t''}\mt{d}\tau_1\mt{ W }(\tau_1)
+\]
+\[
++\ (\frac{1}{\mt{i}\hbar})^2\ \frac{1}{2!}\ \int_\mt{t'}^\mt{t''}\int_\mt{t'}^\mt{t''}\mt{d}\tau_1\ \mt{d}\tau_2\mt{ W }(\tau_1)\mt{ W }(\tau_2)\ +\ ...
+\]
 
 Reportons ce développement dans la formule (20) : on obtient
+\[
+\tag{23} <\mt{ x''t'' }|\mt{ x't' }>_\mt{S}\ =\ \subset \mt{ x''t'' }|\ 1\ |\mt{ x't'}\supset_{\mt{S}_0}
+\]
+\[
+ +\frac{1}{\mt{i}\hbar}\ \frac{1}{1!}\  \subset \mt{ x''t'' }|\int_\mt{t'}^\mt{t''}\mt{ W }(\tau_1)\ \mt{d}\tau_1\ |\mt{ x't'}\supset_{\mt{S}_0}
+\]
+\[
+ +(\frac{1}{\mt{i}\hbar})^2\ \frac{1}{2!}\  \subset \mt{ x''t'' }|\int_\mt{t'}^\mt{t''}\int_\mt{t'}^\mt{t''}\mt{ W }(\tau_1)\ \mt{ W }(\tau_2)\ \mt{d}\tau_1\ \mt{d}\tau_2\ |\mt{ x't'}\supset_{\mt{S}_0}\ +\ ...
+\]
 %
 
 Pour passer au point de vue de Heisenberg, nous devons faire
 agir sur chaque terme de la série (22) l'opérateur d'ordre P.
 
 (23) conduit alors à :
+\[
+\tag{24} <\mt{ x''t'' }|\mt{ x't' }>_\mt{S}\ =\ <\mt{ x''t'' }|\mt{ x't'}>_{\mt{S}_0}
+ +\ \frac{1}{\mt{i}\hbar}\ <\mt{ x''t'' }|\int_\mt{t'}^\mt{t''}\mt{d}\tau_1\mt{ W}(\tau_1)\ |\mt{ x't'}>_0
+\]
+\[
+ +(\frac{1}{\mt{i}\hbar})^2\ \frac{1}{2!}\ <\mt{ x''t'' }|\mt{P}\left[\int_\mt{t'}^\mt{t''}\int_\mt{t'}^\mt{t''}\mt{d}\tau_1\ \mt{d}\tau_2\mt{ W}(\tau_1)\mt{ W}(\tau_2)\right]\ |\mt{ x't'}>_0
+\]
+\[
+ +(\frac{1}{\mt{i}\hbar})^3\ \frac{1}{3!}\ <\mt{ x''t'' }|\mt{P}\left[\int_\mt{t'}^\mt{t''}\int_\mt{t'}^\mt{t''}\int_\mt{t'}^\mt{t''}\mt{d}\tau_1\ \mt{d}\tau_2\ \mt{d}\tau_3\mt{ W}(\tau_1)\mt{ W}(\tau_2)\mt{ W}(\tau_3)\right]\ |\mt{ x't'}>_0\ +\ ...
+\]
 
 L'opérateur P va ranger, dans chaque intégrale les opérateurs W qui ne commutent pas dans le point de vue de Heisenberg par ordre de temps croissants
 de la droite vers la gauche.
 
 On montre la relation générale :
+\[
+\tag{25}\mt{P}\left[\int_\mt{t'}^\mt{t''}\int_\mt{t'}^\mt{t''}...\int_\mt{t'}^\mt{t''}\mt{d}\tau_1\ \mt{d}\tau_2\ ...\mt{d}\tau_\mt{n}\mt{ W}(\tau_1)\mt{ W}(\tau_2)...\mt{ W}(\tau_\mt{n})\right]
+\]
+\[
+=\mt{ n!}\int\int ... \int_{\mt{t''}>\tau_\mt{n}>\tau_\mt{n-1}>...>\tau_1> t'}\mt{ W}(\tau_\mt{n})\mt{ W}(\tau_\mt{n-1})...\mt{ W}(\tau_2)\mt{ W}(\tau_1)\mt{d}\tau_1\ \mt{d}\tau_2\ ...\mt{d}\tau_\mt{n}
+\]
 
-I1 existe n! façons de ranger les n variables dans un ordre
-donné. Le région d'intégration de l'espace
- est constituée par la réunion des n! régions correspondant à
-
-chacun de ces arrangements. L'intégrale I =
-est la somme de n! intégrales prises sur chacune de ces régions, A chacune de
-ces intégrales, l'onérateur d'ordre P, aui range les opérateurs par ordre de
+{\it Preuve} : Il existe n! façons de ranger les n variables $\tau_1$, $\tau_2$, .. $\tau_\mt{n}$ dans un ordre
+donné. Le région d'intégration de l'espace R$^n$ : t'' > $\tau_1$ > t'; t'' > $\tau_2$ > t';...  t'' > $\tau_\mt{n}$ > t'...
+est constituée par la réunion des n! régions correspondant à
+chacun de ces arrangements. L'intégrale I = $\int_\mt{t'}^\mt{t''}..\int_\mt{t'}^\mt{t''}\mt{d}\tau_1..\ \mt{d}\tau_\mt{n}\mt{ W}(\tau_1)..\mt{ W}(\tau_\mt{n})$
+est la somme de n! intégrales prises sur chacune de ces régions. A chacune de
+ces intégrales, l'opérateur d'ordre P, qui range les opérateurs par ordre de
 temps croissants de la droite vers la gauche, fait correspondre par définition
+la \ul{même} intégrale J = $\int_{\tau_\mt{n}\ >}..\int_{>\ \tau_\mt{1}}\mt{d}\tau_1..\ \mt{d}\tau_\mt{n}\mt{ W}(\tau_\mt{n})..\mt{ W}(\tau_1)$.
+On a donc P\big[\;I\;\big] = n! J,  ce qui n'est autre que la relation (25)
 
-la même intégrale
-
-
-
-On a donc  ce qui n'est autre que la relation (25)
-
+(24) devient alors
+\[
+ <\mt{ x''t'' }|\mt{ x't' }>_\mt{S}\ =\ <\mt{ x''t'' }|\mt{ x't'}>_{\mt{S}_0}
+ +\ \frac{1}{\mt{i}\hbar}\ <\mt{ x''t'' }|\int_\mt{t'}^\mt{t''}\mt{d}\tau_1\mt{ W}(\tau_1)\ |\mt{ x't'}>_0
+\]
+\[
+ +(\frac{1}{\mt{i}\hbar})^2\ <\mt{ x''t'' }|\iint_{\tau_2>\tau_1}\mt{W}(\tau_1)\mt{ W}(\tau_2)\ \mt{d}\tau_1\ \mt{d}\tau_2\ |\mt{ x't'}>_0
+\]
+\[
+\tag{26} +(\frac{1}{\mt{i}\hbar})^3\ <\mt{ x''t'' }|\iiint_{\tau_3>\tau_2>\tau_1}\mt{W}(\tau_3)\mt{ W}(\tau_2)\mt{ W}(\tau_1)\ \mt{d}\tau_1\mt{d}\tau_2\mt{d}\tau_3\ |\mt{ x't'}>_0\ +\ ...
+\]
 Les factorielles de la relation (24) ont disparu.
+
 Passons maintenant au point de vue de Schrödinger :
 (26) devient
+\[
+\tag{27} <\mt{ x'' }|\mt{ U(t'', t') }|\mt{ x' }>\ =\ <\mt{ x'' }|\mt{ U}_0\mt{(t'', t') }|\mt{ x'}>
+\]
+\[
++\ \frac{1}{\mt{i}\hbar}\ <\mt{ x'' }|\int_\mt{t'}^\mt{t''}\mt{ U}_0\mt{(t''}, \tau_1)\ \overline{\mt{W}}(\tau_1)
+\mt{ U}_0(\tau_1,\mt{ t') }\mt{d}\tau_1\ |\mt{ x'}>
+\]
+\[
+ +(\frac{1}{\mt{i}\hbar})^2\ <\mt{ x'' }|\iint_{\tau_2>\tau_1}\mt{U}_0\mt{(t''}, \tau_2)\ \overline{\mt{W}}(\tau_2)
+\mt{ U}_0(\tau_2, \tau_1)\ \overline{\mt{W}}(\tau_1)\ \mt{ U}_0(\tau_1,\mt{ t'})\ \mt{d}\tau_1\ \mt{d}\tau_2\ |\mt{ x'}>\ +\ ...
+\]
+ce qui nous donne le développement de U en puissance de la perturbation :
+\[
+\mt{U}\mt{(t'',t'})=\mt{U}_0\mt{(t'',t'})+\mt{U}_1\mt{(t'',t'}) + ... +\mt{U}_\mt{n}\mt{(t'',t'})
+\]
 
-ce qui nous donne le développerient de U en puissance de la perturbation :
-
-%
+% 42
+avec
+\[
+\tag{28}\left\{ \begin{array}{rcl}
+\mt{U}_1\mt{(t'',t'}) & = & \frac{1}{\mt{i}\hbar}\ <\mt{ x'' }|\int_\mt{t'}^\mt{t''}\mt{ U}_0\mt{(t''}, \tau_1)
+\ \overline{\mt{W}}(\tau_1)\mt{ U}_0(\tau_1,\mt{ t') }\mt{d}\tau_1\ |\mt{ x'}> \\
+ & : & \\
+ & : & \\
+\mt{U}_\mt{n}\mt{(t'',t'}) & = & (\frac{1}{\mt{i}\hbar})^\mt{n}\int...\int\mt{U}_0\mt{(t''},\tau_\mt{n})
+\overline{\mt{W}}(\tau_\mt{n})\mt{U}_0(\tau_\mt{n},\tau_{\mt{n}-1})...\overline{\mt{W}}(\tau_1)
+\mt{U}_0(\tau_1,\mt{t'})\mt{d}\tau_\mt{n}...\mt{d}\tau_1 \\
+ &  & \mt{t''}>\tau_\mt{n}>\tau_{\mt{n}-1}>...>\tau_1>\mt{t'} \end{array}
+\right. \]
 
 Nous retrouvons ainsi le développement classique à tous les
 ordres de la théorie des perturbations dépendant du temps (cf Messiah, tome II,
 p. 620).
-Remarque :
-Le formalisme de FeYnman nous a permis d'obtenir, sans aucun calcul, une
+
+\ul{Remarque} :
+Le formalisme de Feynman nous a permis d'obtenir, \ul{sans aucun} \ul{calcul}, une
 forme symbolique et intégrée de ce développement à tous les ordres (formule 21)
-grâce à l'introduction de l'opérateur d'ordre P,
+grâce à l'introduction de l'opérateur d'ordre P.
+
 En mécanique quantique habituelle, on procède de façon inverse.
-On étebiit d'abord le développement (28) dans lequel les temps 
-sont ordonnés. On s'affranchit ensuite de cet ordre en faisant apparaître artificiellement les factorielles qui conduisent à la relation (2h) et à la
-forme symbolique (21).
+On étebiit d'abord le développement (28) dans lequel les temps $\tau_1,\,\tau_2\,...\,\tau_\mt{n}$
+sont ordonnés. On s'affranchit ensuite de cet ordre en faisant apparaître artificiellement les factorielles
+qui conduisent à la relation (24) et à la forme symbolique (21).
+
 Les calculs sont ainsi plus longs et plus compliqués que dans
-le formalisme de Feynman dans lequel les opérateurs corresrondant à des temps
-différents commutent,. Ce formalisme présente en outre le grand avantage de
-donner une sisnification physique simple (en terme de modification de
-
+le formalisme de Feynman dans lequel les opérateurs correspondant à des temps
+différents commutent. Ce formalisme présente en outre le grand avantage de
+donner une signification physique simple (en terme de modification de
 l'indice de réfraction dans l'espace-temps) à la théorie des perturbations
-
 dépendant du temps.
 
