@@ -421,9 +421,9 @@ techniques développées dans les parties précédentes à l'étude de la diffus
 résonnante au voisinage d'un croisement de niveaux d'énergie (effet Hanle {\bf —}
 effet Franken).
 
-\subsection{Etude d'un modèle simple}% B..
+\section{Etude d'un modèle simple}% B
 
-\subsection{Hypothèse simplificatrice}% 1°) :
+\subsection{Hypothèse simplificatrice}% 1
 
 Faisons l'hypothèse que les seuls éléments non nuls de $\mc{H}_\mt{I}$ sont
 les éléments $<$ a, $\vec{\mt{k}}\ \lambda\ |\ \mc{H}_\mt{I}\ |$ b 0 $>$ qui joignent l'état excité dans le vide
@@ -449,9 +449,9 @@ en posant, d'après la formule 29 p.202 :
 \mt{Q}_\mt{b}\ \mc{H}_\mt{I}\ |\mt{ b 0}>
 \]
 
-Q$b$ étant le projecteur 1 $-\ |$ b 0 $>\ <$ b 0 $|$.
+Q$_\mt{b}$ étant le projecteur 1 $-\ |$ b 0 $>\ <$ b 0 $|$.
 
-Mais, d'après les hypothèses simplificatrices du 1°)
+Mais, d'après les hypothèses simplificatrices du 1. :
 \[
    \left \{
    \begin{array}{r c l}
@@ -858,247 +858,354 @@ $\int_0^\infty\frac{\mt{f(k)dk}}{\mt{y}^2 + \hbar^2\mt{c}^2\mt{k}^2}$
 \hspace{1cm} se comporte comme \hspace{1cm}
 $\int_0^\infty\frac{\mt{k}^2\mt{dk}}{\mt{y}^2 + \hbar^2\mt{c}^2\mt{k}^2}$
 \end{center}
-
-
-
 Soit, en faisant le changement de variable u = k/y,
-comme y$\int_0^\infty\frac{\mt{du}}{1+ \hbar^2\mt{c}^2\mt{u}^2}$
-
+comme y$\int_0^\infty\frac{\mt{du}}{1+ \hbar^2\mt{c}^2\mt{u}^2}$.
 On en conclut donc que $\mc{I}m$ T$_\mt{b}$( E$_\mt{a}$ $+$ iy ) varie comme -y$^2$.
 
 D'autre part, comme pour t très grand, la contribution la plus
-importante à A dans (24) provient de z voisin de E$_\mt{a}$ on peut dans les dénomineteurs remplacer z par E$_\mt{a}$. On a alors
+importante à A dans (24) provient de z voisin de E$_\mt{a}$ on peut dans les dénominateurs remplacer z par E$_\mt{a}$. On a alors
 \[
-\mt{A}\simeq\frac{1}{2\mt{i}\pi}\frac{1}{(\mt{E}_\mt{a}-\mt{E}_\mt{b})^2}\int_0^\infty\mt{e}^{-\frac{\mt{yt}}{\hbar}}
-\ 2\mc{I}m\ (\ \mt{T}_\mt{b}(\mt{E}_\mt{a}+\mt{iy})\ )\ \mt{dy}
+\mt{A}\simeq\frac{1}{2\mt{i}\pi}\ \frac{1}{(\mt{E}_\mt{a}-\mt{E}_\mt{b})^2}\int_0^\infty\mt{e}^{-\frac{\mt{yt}}{\hbar}}
+\ 2\mc{I}m\ (\ \mt{T}_\mt{b}(\mt{E}_\mt{a}+\mt{iy})\ )\ \mt{dy},
 \]
+quantité qui varie donc comme $\int$e$^{-\frac{\mt{yt}}{\hbar}}$ y$^2$ dy.
 
-quantité qui varie donc comme
-
-% 250 =
-
-En faisant enfin le changement de variable v = ty, on a
- dt  .
- dv et on montre ainsi que, pour t très grand,
-
-la contribution du lacet varie en 1/t”.
+% 250
+En faisant enfin le changement de variable v $=$ ty, on a
+$\int$e$^{-\frac{\mt{yt}}{\hbar}}$ y$^2$ dy $=\frac{1}{\mt{t}^3}\int$e$^{-\frac{\mt{v}}{\hbar}}$ v$^2$ dv
+et on montre ainsi que, \ul{pour t très grand},
+la contribution du lacet varie en $\frac{1}{\mt{t}^3}$.
+{\footnotesize (On trouverait une contribution du lacet en 1/t$^{3/2}$ au lieu de 1/t$^{3}$ si on étudiait
+la durée de vie d'un système sous l'effet de désintégration produisent des particules ayant
+une masse \ul{différente de zéro}, et non des photons de \ul{masse nulle}, comme
+c'est le cas dans l'émission spontanée.)}
 
 Elle diminue donc beaucoup moins vite que la contribution du
-
-résidu qui varie en e D
+résidu qui varie en e$^{-(\Gamma_\mt{b}\mt{t})/2\hbar}$.
 
 On peut résumer les résultats précédents, en fonction du temps,
-sur lea figure ci-dessous. On a porté en ordonnée le module de la contribution
-à <b O[U (t[b O > du résidu exponentielle en trait plein) et du lacet
-
+sur la figure ci-dessous. On a porté en ordonnée le module de la contribution
+à $<$ b 0 $|$ U(t) $|$ b 0 $>$ du résidu (exponentielle en trait plein) et du lacet
 (en trait pointillé).
 
-
-* On trouverait une contribution du lacet en 1/t3/2 au lieu de 1/43 si on étudiait
-la durée de vie d'un système sous l'effet de désintégration produisent des parti
-cules ayant une masse différente de zéro, et non des photons de masse nulle, comme
-c'est le cas dans l'émission spontances
+\begin{center}
+\begin{tikzpicture}
+% Axes
+\draw [thick, ->] (3,0) -- (3,4);
+\draw [thick, ->] (3,0) -- (10,0) node [right]{t};
+% Courbes
+\def \A {200}
+\draw [thick, domain=4:9, samples=100] plot (\x,{\A/exp(\x)});
+\def \B {100}
+\draw [thick, dashed, domain=4:9, samples=100] plot (\x,{\B/(\x^3)});
+% Point
+\draw [thick, dotted] (6.15,0.4) -- (6.15,0) node [below]{t$_0$};
+\end{tikzpicture} \end{center}
 
 % 251
-On voit que cette dernière vart, pour t  0, d'une quantité
-
-de l'ordre de 
-
-5 mm et décroit pour t très grand en 1/43, Four un certain
-
-temps t. très rrand, elle devient plus importante que celle de 1
- de
-
-xponentielle.
-
-Mais alors U, (t) cst pratiquement nul ct la désintécration est pour ainsi dire
-
+On voit que cette dernière part, pour t $=$ 0, d'une quantité
+de l'ordre de $\frac{\Gamma}{\mt{E}_\mt{a}-\mt{E}_\mt{b}}$
+et décroit pour t très grand en 1/t$^3$. Pour un certain
+temps t$_0$ \ul{très grand}, elle devient plus importante que celle de l'exponentielle.
+Mais alors U$_\mt{b}$(t) est pratiquement nul et la désintégration est pour ainsi dire
 terminée.
 
 En d'autres termes, la loi de décroissance exponentielle de
-l'état instable n'est pas thécrinnement vérifiée pour des tenps très longs.
-pas
-Elle l'est cependant tant que l'on est pratiquement capuble d'observer le vro
-cessus de la désintégration.
+l'état instable n'est pas \ul{théoriquement} vérifiée pour des temps très longs.
+Elle l'est cependant tant que l'on est \ul{pratiquement} capable d'observer le processus de la désintégration.
 
-Conclusion : La contribution à l'évolution de l'était instable du pôle eu point
+\ul{Conclusion} : La contribution à l'évolution de l'état instable du pôle au point
+z$_0$ est de loin la plus importante. Elle nous a permis de prévoir une durée de
+vie et un déplacement radiatif de l'énergie de cet état. On néglige en général
+la contribution du lacet introduit par la méthode des résidus, ce qui revient
+à remplacer G$_\mt{b}$(z) par
+\[
+\frac{1}{\mt{z}-\mt{E}_\mt{b}-\mt{T}^+_\mt{b}(\mt{E}_\mt{b})}
+\]
+fonction analytique qui n'a plus de coupure mais qui présente un pôle au voisinage de z$_0$ au point
+E$_\mt{b}+\Delta($E$_\mt{b})-i\frac{\Gamma(\mt{E}_\mt{b})}{2}$
+\[
+\tag{25}\frac{1}{\mt{z}-\mt{E}_\mt{b}-\mt{T}^+_\mt{b}(\mt{E}_\mt{b})}=
+\frac{1}{\mt{z}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2)}
+\]
+en posant $\Delta($E$_\mt{b})=\Delta_\mt{b}$ et $\Gamma($E$_\mt{b})=\Gamma_\mt{b}$.
 
-Ze est de loin la plus importante. Elle nous à permis de prévoir une duréc de
-
-ice en générel
-
-vie et un déplacement rediatif de l'énergie de cet état. On n
-
-la contribution du lecut introduit par la méthode des résidus, ce qui revient
-
-à remplacer G, (2) par
-
-
-fonction analytique qui n'a plus de coupure mais qui présente un pôle au voisi: (T
-
-nage de CP au point E
-
-5
-
-en posant 
-
-\subsection{}%4°) Produits de dé
-
-Nous alions maintenant étudier les produits de la désintégration de
-
-tégration de l'état instable :
-
-
-
-l'état | b O >. Pour cela, il nous faut calculer l'omplitude de probabilité
-
-<a  [U (t) | b O > pour que le système dans l'état | b 0 > à l'instant t =
-se trouve dans l'état | e k À > représentant l'atome dans l'état fondemental a
-en présence d'un photon KA, à l'instent t. Nous allons d'abord calculer la quan
-tité <a| G (x) | bo >.
+\subsection{Produits de désintégration de l'état instable}% 4°)
+Nous allons maintenant étudier les produits de la désintégration de
+l'état $|$ b 0 $>$. Pour cela, il nous faut calculer l'amplitude de probabilité
+$<$ a $\vec{\mt{k}}\ \lambda\ |$ U(t) $|$ b 0 $>$ pour que le système dans l'état $|$ b 0 $>$ à l'instant t $=$
+0 se trouve dans l'état $|$ a $\vec{\mt{k}}\ \lambda>$ représentant l'atome dans l'état fondamental a
+en présence d'un photon $\vec{\mt{k}}\,\lambda$, à l'instant t. Nous allons d'abord calculer la quantité
+$<$ a $\vec{\mt{k}}\ \lambda\ |$ G(z) $|$ b 0 $>$.
 
 % 252
+\subsubsection{Etude de $<$ a $\vec{\mt{k}}\ \lambda\ |$ G(z) $|$ b 0 $>=$G$_{\mt{a}\vec{\mt{k}}\lambda,\mt{b}0}$}% a)
+Nous partons de la relation G(z) $=$ G$_0$(z) $+$ G$_0$(z) $\mc{H}_\mt{I}$ G(z).
+Etant donnée l'hypothèse simplificatrice, seuls les éléments de matrice
+$<$ a $\vec{\mt{k}}\ \lambda\ |\ \mc{H}_\mt{I}\ |$ b 0 $>$ sont non nuls et on a, en adoptant l'expression (25)
+pour G$_\mt{b}$(z)
+\[
+\tag{26}\mt{G}_{\mt{a}\vec{\mt{k}}\lambda,\mt{b}0}\mt{(z)}=
+\frac{1}{\mt{z}-\mt{E}_\mt{a}-\hbar\mt{c}\mt{k}}
+<\mt{a }\vec{\mt{k}}\ \lambda\ |\ \mc{H}_\mt{I}\ |\mt{ b } 0 >
+\frac{1}{\mt{z}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2)}
+\]
 
-: +
-\subsubsection{}%a) Etude de
-
-Nous partons de la relation
-
-Etant donnée l'hypothèse simplificatrice, seuls les Éléments de matrice
-<a | | b O > sont non nuls et on a, en adoptant l'expression (25)
-
-pour G, (2)
 
 
-
-\subsubsection{}%b) Etude de <a K À | U(t) | b 0 >
-: On calcule l'expression
-
+\subsubsection{Etude de $<$ a $\vec{\mt{k}}\ \lambda\ |\ \mc{H}_\mt{I}\ |$ b 0 $>$}% b)
+On calcule l'expression
+\[
+<\mt{a }\vec{\mt{k}}\ \lambda\ |\ \mt{U(t)}\ |\mt{ b } 0 >=\frac{1}{2\pi i}\int_\mt{c}
+\mt{e}^{-\frac{i\mt{zt}}{\hbar}}\mt{G}_{\mt{a}\vec{\mt{k}}\lambda,\mt{b}0}\mt{(z) dz}
+\]
 par la méthode des résidus.
-Le quantité  possède deux pôles, l'un au point
 
-, l'autre au point  l'intégration par les résidus
+La quantité G$_{\mt{a}\vec{\mt{k}}\lambda,\mt{b}0}$(z) dz possède deux pôles, l'un au point E$_\mt{a}+\hbar$ck,
+l'autre au point E$_\mt{b}+\Delta_\mt{b}-i(\Gamma_\mt{b}/2)$ et l'intégration par les résidus
 donne :
+\[
+\tag{27}<\mt{a}\vec{\mt{k}}\lambda\,|\,\mt{U(t)}\,|\,\mt{b}0 >=
+<\mt{a}\vec{\mt{k}}\lambda\,|\,\mc{H}_\mt{I}\,|\,\mt{b}0 >
+\left[\frac{\mt{e}^{-i\frac{(\mt{E}_\mt{a}+\hbar\mt{ck)t}}{\hbar}}
+-\mt{e}^{-i\frac{(\mt{E}_\mt{b}+\Delta(\mt{E}_\mt{b})\mt{)t}}{\hbar}}
+\mt{e}^{-\frac{\Gamma_\mt{b}\mt{t}}{2\hbar}}}
+{\hbar\mt{ck}-(\mt{E}_\mt{b}+\Delta_\mt{b}-\mt{E}_\mt{a})+i\frac{\Gamma_\mt{b}}{2}}\right]
+\]
 
-Pour des temps t grands devant H/Tis la première exponentielle
+Pour des temps t grands devant $\hbar\Gamma_\mt{b}$ la première exponentielle
 de (27), de module 1, est prépondérante et la probabilité de trouver un photon
- émis est alors
+$\vec{\mt{k}}\lambda$ émis est alors
+\[
+\tag{28}\mt{P}_{\vec{\mt{k}}\lambda}=\frac{|<\mt{a}\vec{\mt{k}}\lambda\,|\,\mc{H}_\mt{I}\,|\,\mt{b}\,0 >|^2}
+{\big[\hbar\mt{ck}-(\mt{E}_\mt{b}+\Delta_\mt{b}-\mt{E}_\mt{a})\big]^2+\frac{\Gamma_\mt{b}^2}{4}}
+\]
 
 % 253
 
-La formule (28) nous donne les propriétés de la raie d'émission spontanée à partir du niveau b 3
+La formule (28) nous donne les propriétés de la raie d'émission spontanée à partir du niveau b :
 
-- L'élément de matrice <  k À | A | b O > qui donne l'intensité de la raie, décrit la "force" de la transition et contient toute l‘information sur le diagramme d'émission (direction et polarisation des photons
-émis).
+- L'élément de matrice $<$ a $\vec{\mt{k}}\ \lambda\ |\ \mc{H}_\mt{I}\ |$ b 0 $>$ qui donne l'intensité de la raie, décrit la "force" de la transition
+et contient toute l'information sur le diagramme d'émission (direction et polarisation des photons émis).
 
 - Le dénominateur d'énergie indique que la raie est lorentzienne,
 centrée pour une énergie du photon égale à la différence de l'énergie de l'état
-excité corrigée par le déplecement radietif À, et de l'état fondéemental, de
-largeur Ts inverse de la durée de vie de l'état excité. Tous ces résultats sont
-en accord avec le principe de conservation de l'énergie et le relation â‘incertitude.
+excité corrigée par le déplacement radiatif $\Delta_\mt{b}$ et de l'état fondamental, de
+largeur $\Gamma_\mt{b}$, inverse de la durée de vie de l'état excité. Tous ces résultats sont
+en accord avec le principe de conservation de l'énergie et le relation d'incertitude.
 
-\subsection{}% Etude de la diffusion résonnante :5°)
+\subsection{Etude de la diffusion résonnante}% 5°)
 
 
 
 Nous allons maintenant rattacher l'étude de l'évolution de l'état
-
-s
-
 instable à celle de la diffusion résonnante des photons par un atome.
-\subsubsection{}%a) Position du problème :
+\subsubsection{Position du problème}% a)
 
-Nous allons calculer la section efficace différentielle de diffusion d'un photon par un atome, l'interaction électromagnétique entre l'atome
+Nous allons calculer la section efficace différentielle de diffusion d'un photon par un atome,
+l'interaction électromagnétique entre l'atome
 et les photons ne possédant, suivant l'hypothèse simplificatrice que nous avons
-faite, que les éléments de matrice du type < a | b O > non nuls. Dans
-ces conditions, la diffusion EA, État ne peut s'effectuer que par le passage de
-l'atome de l'état a à l'état b par absorption du photon  et la retombée de
-
-l'état b à l'état a avec émission d'un photon k°A°', suivant ie schéma ci-dessous :
+faite, que les éléments de matrice du type $<$ a $\vec{\mt{k}}\ \lambda\ |\ \mc{H}_\mt{I}\ |$ b 0 $>$ non nuls.
+Dans ces conditions, la diffusion $\vec{\mt{k}}\lambda,\ \vec{\mt{k}}\,'\lambda'$, ne peut s'effectuer que par le
+passage de l'atome de l'état a à l'état b par absorption du photon $\vec{\mt{k}}\lambda$ et la retombée de
+l'état b à l'état a avec émission d'un photon $\vec{\mt{k}}\,'\lambda'$, suivant le schéma ci-dessous :
+\begin{center} \begin{tikzpicture}
+\draw [->, very thick] (-3,0) node [above right] {$\vec{\mt{k}}\lambda$} -- (-1,0);
+\draw [->, very thick] (0.9,0.45) -- (3,1.5) node [right] {$\vec{\mt{k}}\,'\lambda'$};
+\draw [very thick] (0, 0) circle (0.5);
+\end{tikzpicture} \end{center}
 
 % 254
-
 Il est donc naturel de s'attendre à des phénomènes résonnants
-lorsque l'énergie du photon incident sera de l'ordre de la différence d'énergie E  - E +
+lorsque l'énergie du photon incident sera de l'ordre de la différence d'énergie E$_\mt{b}-$E$_\mt{a}$.
 
 Nous allons tout d'abord calculer l'élément de matrice de la
-résolvante <a K' À! | G(z) [aka >= Gérar ane NOUS pourrons alors évaluer l'amplitude de probabilité < a k'  | U(t) | a > pour que l'atome
+résolvante $<$ a $\vec{\mt{k}}\,'\ \lambda'\ |\mt{ G(z) }|$ a $\vec{\mt{k}}\ \lambda>\,=\,$
+G$_{\mt{a}\vec{\mt{k}}\,'\lambda',\mt{a}\vec{\mt{k}}\lambda}$.
+Nous pourrons alors évaluer l'amplitude de probabilité
+$<$ a $\vec{\mt{k}}\,'\ \lambda'\ |\mt{ U(t) }|$ a $\vec{\mt{k}}\ \lambda>$ pour que l'atome
+dans l'état fondamental a en présence d'un photon $\vec{\mt{k}}\lambda$ à l'instant $-$t/2 ait diffusé
+à l'instant t/2 un photon $\vec{\mt{k}}\,'\lambda'$.
 
-dans l'état fondamental a en présence d'un photon  à l'instant t ait diffu
-
-sé à l'instant t/2 un photon rate
-Nous avons vu (étude de la matrice S, page 149 et suivantes)
-
-que, pour t + , cette amplitude de probabilité n'admet pas de limite au
-
+Nous avons vu (étude de la matrice S, chapitre 6)
+que, pour t$\to\infty$, cette amplitude de probabilité n'admet pas de limite au
 sens usuel, mais que si on passe en "représentation d'interaction"
+$<$ a $\vec{\mt{k}}\,'\ \lambda'\ |\ \tilde{\mt{U}}\mt{(t) }|$ a $\vec{\mt{k}}\ \lambda>$
+admet comme limite \ul{au sens des distributions} sur
+les fonctions de $\vec{\mt{k}}$, l'élément de matrice S$_{\vec{\mt{k}}\,'\lambda',\,\vec{\mt{k}}\,\lambda}$.
 
-<ak'a U() | a > admet comme limite au sens des distributions sur
+Ayant calculé ainsi S$_{\vec{\mt{k}}\,'\lambda',\,\vec{\mt{k}}\,\lambda}$, nous en déduirons l'élément de
+la matrice de réaction $\mc{R}_{\vec{\mt{k}}\,'\lambda',\,\vec{\mt{k}}\,\lambda}$ et la section efficace de diffusion.
 
-les fonctions de K, l'élément de matrice 
-
-Ayant calculé ainsi ras, fa» nous en déduirons l'élément de
-
-la matrice de réaction VERS à  la section efficace de diffusion,
-» .
-
-\subsection{} Calcul de %b)
-
+\subsubsection{Calcul de G$_{\mt{a}\vec{\mt{k}}\,'\lambda',\,\mt{a}\vec{\mt{k}}\lambda}$}% b)
 Partons des deux relations équivalentes
-
+\[
+\left\{ \begin{array}{rcl}
+\mt{G} & = & \mt{G}_0+\mt{G}_0\,\mc{H}_\mt{I}\,\mt{G} \\
+\mt{G} & = & \mt{G}_0+\mt{G}\,\mc{H}_\mt{I}\,\mt{G}_0 \end{array} \right.
+\]
 qui, combinées, donnent
-
+\[
+\tag{29}\mt{G}=\mt{G}_0+\mt{G}_0\,\mc{H}_\mt{I}\,\mt{G}_0+\mt{G}_0\,\mc{H}_\mt{I}\,\mt{G}\,\mc{H}_\mt{I}\,\mt{G}_0
+\]
 On obtient alors
-
+\[
+\mt{G}_{\mt{a}\vec{\mt{k}}\,'\lambda',\,\mt{a}\vec{\mt{k}}\lambda}=
+\frac{\delta(\vec{\mt{k}}-\vec{\mt{k}}\,')\delta_{\lambda\lambda'}}{\mt{z}-\mt{E}_\mt{a}-\hbar\mt{ck}}+
+\frac{<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\,\mc{H}_\mt{I}\,|\,\mt{b}\,0 >\mt{G}_\mt{b}\mt{(z)}
+<\mt{b}\,0\,|\,\mc{H}_\mt{I}\,|\,\mt{a}\vec{\mt{k}}\lambda>}
+{(\mt{z}-\mt{E}_\mt{a}-\hbar\mt{ck'})(\mt{z}-\mt{E}_\mt{a}-\hbar\mt{ck})}
+\]
 % 255
-Soit, en remplaçant G, (2) per son expression approchée (25) :
+Soit, en remplaçant G$_\mt{b}$(z) par son expression approchée (25) :
+\[
+\mt{G}_{\mt{a}\vec{\mt{k}}\,'\lambda',\,\mt{a}\vec{\mt{k}}\lambda}=
+\frac{\delta(\vec{\mt{k}}-\vec{\mt{k}}\,')\delta_{\lambda\lambda'}}{\mt{z}-\mt{E}_\mt{a}-\hbar\mt{ck}}
+\]
+\[
+\tag{30}+\frac{<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\,\mc{H}_\mt{I}\,|\,\mt{b}\,0 >
+<\mt{b}\,0\,|\,\mc{H}_\mt{I}\,|\,\mt{a}\vec{\mt{k}}\lambda>}
+{(\mt{z}-\mt{E}_\mt{a}-\hbar\mt{ck'})(\mt{z}-\mt{E}_\mt{a}-\hbar\mt{ck})
+(\mt{z}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2))}
+\]
 
-\subsection{} Calcul de <  > et de la matrice S%c)
+\subsubsection{Calcul de $<$ a$\vec{\mt{k}}\,'\lambda'\,|$ U(t) $|$ a$\vec{\mt{k}}\lambda>$ et de la matrice S}% c)
+Comme nous l'avons vu aux pages 149 et suivantes, il faut,
+afin de calculer la matrice S, évaluer la limite au sens des distributions
+pour t$\to\infty$ de $\tilde{\mt{U}}$ (t/2, $-$t/2), le signe $\tilde{ }$ dénotant la représentacion d'interaction.
 
-Comme nous l'avons vu aux pages 149 et suivantes, il i'aut,
-afin de calculer la matrice 5, évaluer la limite au sens des distributions
-pour  de  (t/2, -t/2), le signe  dénotant la représentacion d'intere
-action.
+Or, nous avons, d'après lu relation (82), chapitre 6 :
+\[
+\tag{31}\tilde{\mt{U}}(\mt{t}/2,-\mt{t}/2)=\mt{e}^{i\frac{\mt{H}_0}{2\hbar}\mt{t}}
+\ \mt{U}(\mt{t}/2,-\mt{t}/2)\ \mt{e}^{i\frac{\mt{H}_0}{2\hbar}\mt{t}}
+\]
 
-Or, nous avens, d'après lu relation (82), page 1kh :
-
-Nous devons done commencer par calculer les éléments de matrice de
-Nous savons d'autre part que 
-
+Nous devons done commencer par calculer les éléments de matrice de U(t/2, $-$t/2)
+Nous savons d'autre part que U(t/2, $-$t/2)$=$e$^{-i\frac{H}{\hbar}(\mt{t}/2+\mt{t}/2)}=$
+e$^{-i\frac{H}{\hbar}\mt{t}}=$U(t,0).
 Nous sommes donc ramenés au calcul de l'élément de matrice
- que nous évaluerons par les résidus à partir de la
-
-relation
-
+$<$ a$\vec{\mt{k}}\,'\lambda'\,|$ U(t) $|$ a$\vec{\mt{k}}\lambda>$
+que nous évaluerons par les résidus à partir de la relation
+\[
+<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\mt{ U(t) }|\,\mt{a}\vec{\mt{k}}\lambda>=\frac{1}{2i\pi}\int_\mt{c}\mt{e}
+^{-i\frac{\mt{zt}}{\hbar}}\mt{G}_{\mt{a}\vec{\mt{k}}\,'\lambda',\,\mt{a}\vec{\mt{k}}\lambda}\mt{(z) dz}
+\]
 La contribution du premier terme du second. membre de (30) donne immédiatement
+\[
+\mt{e}^{-i\frac{(\mt{E}_\mt{a}+\hbar\mt{ck)t}}{\hbar}}\delta(\vec{\mt{k}}-\vec{\mt{k}}\,')\delta_{\lambda\lambda'}
+\]
 
-Comme nous allons Être amenés à prendre le limite pour 
-
+Comme nous allons être amenés à prendre la limite pour t$\to\infty$
 de l'expression obtenue, nous pouvons dans la contribution du second terme de
-r
-dont le module décreft en
-
-
-
-(30) négliger le résidu du pôle 2, = E, + Ai
-
+(30) négliger le résidu du pôle z$_0=$E$_\mt{b}+\Delta_\mt{b}-i\frac{\Gamma_\mt{b}}{2}$
+dont le module décroît en e$^{-\frac{\Gamma_\mt{b}\mt{t}}{2\hbar}}$.
 % 256
- On ne tiendre compte finalement que des résidus des pôles
+On ne tiendra compte finalement que des résidus des pôles z $=$ E$_\mt{a}+\hbar$ck et z $=$ E$_\mt{a}+\hbar$ck'.
 
 On obtient alors
+\[
+<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\mt{ U(t) }|\,\mt{a}\vec{\mt{k}}\lambda>=
+\delta(\vec{\mt{k}}-\vec{\mt{k}}\,')\delta_{\lambda\lambda'}
+\,\mt{e}^{-i\frac{(\mt{E}_\mt{a}+\hbar\mt{ck)t}}{\hbar}}\ +
+\]
+\[
+<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\,\mc{H}_\mt{I}\,|\,\mt{b}\,0 >
+<\mt{b}\,0\,|\,\mc{H}_\mt{I}\,|\,\mt{a}\vec{\mt{k}}\lambda>\left[
+\frac{\mt{e}^{-i\frac{(\mt{E}_\mt{a}+\hbar\mt{ck)t}}{\hbar}}}{\hbar\mt{c(k}-\mt{k')}}
+\ \frac{1}{\hbar\mt{ck}+\mt{E}_\mt{a}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2)}
+\right .
+\]
+\[
+\tag{32-a}-\ \left.
+\frac{\mt{e}^{-i\frac{(\mt{E}_\mt{a}+\hbar\mt{ck')t}}{\hbar}}}{\hbar\mt{c(k}-\mt{k')}}
+\ \frac{1}{\hbar\mt{ck'}+\mt{E}_\mt{a}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2)}
+\right]
+\]
 
 La relation (32-a) s'écrit, en remarquant que l'on peut, dans le premier
-
-terme, en raison de la distribution , remplacer
-
+terme, en raison de la distribution $\delta(\vec{\mt{k}}-\vec{\mt{k}}\,')$, remplacer
+e$^{-i\frac{(\mt{E}_\mt{a}+\hbar\mt{ck)t}}{\hbar}}$ par
+e$^{-\frac{i}{\hbar}\left[\mt{E}_\mt{a}+\hbar\mt{c}\frac{(\mt{k}+\mt{k')t}}{2}\right]}$ et que
+\[
+\left\{ \begin{array}{rcl}
+\mt{E}_\mt{a}+\hbar\mt{ck} & = & \mt{E}_\mt{a}+\hbar\mt{c}\frac{(\mt{k}+\mt{k')}}{2}
++\hbar\mt{c}\frac{(\mt{k}-\mt{k')}}{2} \\
+\mt{E}_\mt{a}+\hbar\mt{ck'} & = & \mt{E}_\mt{a}+\hbar\mt{c}\frac{(\mt{k}+\mt{k')}}{2}
++\hbar\mt{c}\frac{(\mt{k'}-\mt{k)}}{2} \end{array} \right.
+\]
 % 257
+\[
+<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\mt{ U(t) }|\,\mt{a}\vec{\mt{k}}\lambda>=
+<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\mt{ U}(\frac{\mt{t}}{2},\ -\frac{\mt{t}}{2}) |\,\mt{a}\vec{\mt{k}}\lambda>
+\]
+\[
+=\mt{exp}-\frac{i}{\hbar}\left[\mt{E}_\mt{a}+\hbar\mt{c}\frac{\mt{(k}+\mt{k}')}{2}\mt{t}\right]
+\ \delta(\vec{\mt{k}}-\vec{\mt{k}}\,')\ \delta_{\lambda\lambda'}
+\]
+\[
++\mt{ exp}-\frac{i}{\hbar}\left[\mt{E}_\mt{a}+\hbar\mt{c}\frac{\mt{(k}+\mt{k}')}{2}\mt{t}\right]
+<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\,\mc{H}_\mt{I}\,|\,\mt{b }0>
+<\mt{b }0\,|\,\mc{H}_\mt{I}\,|\,\mt{a}\vec{\mt{k}}\lambda>\times
+\]
+\[
+\left[
+\frac{\mt{e}^{-i\hbar\mt{c}\frac{\mt{(k}-\mt{k}')}{2\hbar}\mt{t}}}{\hbar\mt{c(k}-\mt{k')}}
+\ \frac{1}{\hbar\mt{ck}+\mt{E}_\mt{a}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2)}
+\right .
+\]
+\[
+\tag{32-b}-\ \left.
+\frac{\mt{e}^{-i\hbar\mt{c}\frac{\mt{(k}-\mt{k}')}{2\hbar}\mt{t}}}{\hbar\mt{c(k}-\mt{k')}}
+\ \frac{1}{\hbar\mt{ck'}+\mt{E}_\mt{a}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2)}
+\right]
+\]
 
-Passons maintenant en représentatica d'interaction, (31) s'écrit :
+Passons maintenant en représentation d'interaction. (31) s'écrit :
+\[
+<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\tilde{\mt{U}}(\frac{\mt{t}}{2},\ -\frac{\mt{t}}{2})|\,\mt{a}\vec{\mt{k}}\lambda>=
+\mt{e}^{-\frac{i}{2\hbar}\left[\mt{E}_\mt{a}+\hbar\mt{ck}'\right]\mt{t}}
+<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\mt{ U}(\mt{t) }|\,\mt{a}\vec{\mt{k}}\lambda>
+\mt{e}^{-\frac{i}{2\hbar}\big[\mt{E}_\mt{a}+\hbar\mt{ck}\big]\mt{t}}
+\]
+\[
+=\mt{exp }\frac{i}{\hbar}\left[\mt{E}_\mt{a}+\hbar\mt{c}\frac{\mt{(k}+\mt{k}')}{2}\right]\mt{t}
+<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\mt{ U}(\mt{t) }|\,\mt{a}\vec{\mt{k}}\lambda>
+\]
 
 Le passage en représentation d'interaction revient donc à supprimer Le terme
-
-de phase exp. qui est en facteur dans l'expression (32«b)
+de phase exp $-\frac{i}{\hbar}\left[\mt{E}_\mt{a}+\hbar\mt{c}\frac{\mt{(k}+\mt{k}')}{2}\right]\mt{t}$ 
+qui est en facteur dans l'expression (32-b)
 et on obtient finalement :
+\[
+<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\tilde{\mt{U}}(\frac{\mt{t}}{2},\ -\frac{\mt{t}}{2})|\,\mt{a}\vec{\mt{k}}\lambda>=
+\ \delta(\vec{\mt{k}}-\vec{\mt{k}}\,')\ \delta_{\lambda\lambda'}
+\]
+\[
+<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\,\mc{H}_\mt{I}\,|\,\mt{b}\,0 >
+<\mt{b}\,0\,|\,\mc{H}_\mt{I}\,|\,\mt{a}\vec{\mt{k}}\lambda>\left[
+\frac{\mt{e}^{-i\frac{\mt{c(k}-\mt{k')}}{\hbar}}}{\hbar\mt{c(k}-\mt{k')}}
+\ \frac{1}{\hbar\mt{ck}+\mt{E}_\mt{a}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2)}
+\right .
+\]
+\[
+\tag{33}-\ \left.
+\frac{\mt{e}^{-i\frac{(\mt{E}_\mt{a}+\hbar\mt{ck')t}}{\hbar}}}{\hbar\mt{c(k}-\mt{k')}}
+\ \frac{1}{\hbar\mt{ck'}+\mt{E}_\mt{a}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2)}
+\right]
+\]
+\[
+<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\mt{ U}(\mt{t) }|\,\mt{a}\vec{\mt{k}}\lambda>
+\mt{e}^{-\frac{i}{2\hbar}\big[\mt{E}_\mt{a}+\hbar\mt{ck}\big]\mt{t}}
+=\mt{exp }\frac{i}{\hbar}\left[\mt{E}_\mt{a}+\hbar\mt{c}\frac{\mt{(k}+\mt{k}')}{2}\right]\mt{t}
+<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\mt{ U}(\mt{t) }|\,\mt{a}\vec{\mt{k}}\lambda>
+\]
+\[
+\mt{e}^{-\frac{i}{2\hbar}\left[\mt{E}_\mt{a}+\hbar\mt{ck}'\right]\mt{t}}
+<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\mt{ U}(\mt{t) }|\,\mt{a}\vec{\mt{k}}\lambda>
+\mt{e}^{-\frac{i}{2\hbar}\big[\mt{E}_\mt{a}+\hbar\mt{ck}\big]\mt{t}}
+=\mt{exp }\frac{i}{\hbar}\left[\mt{E}_\mt{a}+\hbar\mt{c}\frac{\mt{(k}+\mt{k}')}{2}\right]\mt{t}
+<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\mt{ U}(\mt{t) }|\,\mt{a}\vec{\mt{k}}\lambda>
+\]
 
 
 % 258
