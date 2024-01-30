@@ -1177,51 +1177,58 @@ de phase exp $-\frac{i}{\hbar}\left[\mt{E}_\mt{a}+\hbar\mt{c}\frac{\mt{(k}+\mt{k
 qui est en facteur dans l'expression (32-b)
 et on obtient finalement :
 \[
-<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\tilde{\mt{U}}(\frac{\mt{t}}{2},\ -\frac{\mt{t}}{2})|\,\mt{a}\vec{\mt{k}}\lambda>=
-\ \delta(\vec{\mt{k}}-\vec{\mt{k}}\,')\ \delta_{\lambda\lambda'}
+<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\tilde{\mt{U}}(\frac{\mt{t}}{2},\ -\frac{\mt{t}}{2})|\,\mt{a}\vec{\mt{k}}\lambda>\ =
+\ \delta(\vec{\mt{k}}-\vec{\mt{k}}\,')\ \delta_{\lambda\lambda'}\ +
 \]
 \[
 <\mt{a}\vec{\mt{k}}\,'\lambda'\,|\,\mc{H}_\mt{I}\,|\,\mt{b}\,0 >
 <\mt{b}\,0\,|\,\mc{H}_\mt{I}\,|\,\mt{a}\vec{\mt{k}}\lambda>\left[
-\frac{\mt{e}^{-i\frac{\mt{c(k}-\mt{k')}}{\hbar}}}{\hbar\mt{c(k}-\mt{k')}}
+\frac{\mt{e}^{-i\,\hbar\mt{c}\,\frac{\mt{c(k}-\mt{k')}}{2\hbar}\mt{t}}}{\hbar\mt{c(k}-\mt{k')}}
 \ \frac{1}{\hbar\mt{ck}+\mt{E}_\mt{a}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2)}
 \right .
 \]
 \[
 \tag{33}-\ \left.
-\frac{\mt{e}^{-i\frac{(\mt{E}_\mt{a}+\hbar\mt{ck')t}}{\hbar}}}{\hbar\mt{c(k}-\mt{k')}}
+\frac{\mt{e}^{-i\,\hbar\mt{c}\,\frac{\mt{c(k}-\mt{k')}}{2\hbar}\mt{t}}}{\hbar\mt{c(k}-\mt{k')}}
 \ \frac{1}{\hbar\mt{ck'}+\mt{E}_\mt{a}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2)}
 \right]
 \]
-\[
-<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\mt{ U}(\mt{t) }|\,\mt{a}\vec{\mt{k}}\lambda>
-\mt{e}^{-\frac{i}{2\hbar}\big[\mt{E}_\mt{a}+\hbar\mt{ck}\big]\mt{t}}
-=\mt{exp }\frac{i}{\hbar}\left[\mt{E}_\mt{a}+\hbar\mt{c}\frac{\mt{(k}+\mt{k}')}{2}\right]\mt{t}
-<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\mt{ U}(\mt{t) }|\,\mt{a}\vec{\mt{k}}\lambda>
-\]
-\[
-\mt{e}^{-\frac{i}{2\hbar}\left[\mt{E}_\mt{a}+\hbar\mt{ck}'\right]\mt{t}}
-<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\mt{ U}(\mt{t) }|\,\mt{a}\vec{\mt{k}}\lambda>
-\mt{e}^{-\frac{i}{2\hbar}\big[\mt{E}_\mt{a}+\hbar\mt{ck}\big]\mt{t}}
-=\mt{exp }\frac{i}{\hbar}\left[\mt{E}_\mt{a}+\hbar\mt{c}\frac{\mt{(k}+\mt{k}')}{2}\right]\mt{t}
-<\mt{a}\vec{\mt{k}}\,'\lambda'\,|\mt{ U}(\mt{t) }|\,\mt{a}\vec{\mt{k}}\lambda>
-\]
-
 
 % 258
-
 Séparons dans le crochet du second membre de (33) les parties
-réelleset imaginaires des exponentielles. Le terme associé aux parties réelles,
+réelles et imaginaires des exponentielles. Le terme associé aux parties réelles,
+A, s'écrit :
+\[
+\mt{A}=\frac{\mt{cos c }\frac{\mt{(k}-\mt{k')}}{2}\mt{t}}{\hbar\mt{c (k}-\mt{k')}}
+\left[\ \frac{1}{\hbar\mt{ck}+\mt{E}_\mt{a}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2)}\right.
+\]
+\[
+\left.-\ \frac{1}{\hbar\mt{ck'}+\mt{E}_\mt{a}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2)}\right]
+\]
+\[
+=-\,\mt{cos c }\frac{\mt{(k}-\mt{k')}}{2}\mt{ t }\times
+\]
+\[
+\frac{1}{(\hbar\mt{ck}+\mt{E}_\mt{a}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2))
+(\hbar\mt{ck'}+\mt{E}_\mt{a}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2))}
+\]
 
-À, s'écrit :
 
-
-C'est une fonction de k et k' qui reste bornée quel que soit te
-Lorsque t augmente indéfiniment, sa pé éricde, hn/ct, tend vers zéro et la fonction oscille de plus en plus vite. L'intégrale de son produit par une autre
-fonction .sommable tend donc vers zéro lorsque t + et À tend xers zéro cu
-sens des distributions sur les fonctions de k etk' :
- lim
+C'est une fonction de k et k' qui reste bornée quel que soit t.
+Lorsque t augmente indéfiniment, sa période, $4\pi/$ct, tend vers zéro et la fonction oscille de plus en plus vite. L'intégrale de son produit par une autre
+fonction sommable tend donc vers zéro lorsque t$\to\infty$ et \ul{A tend vers zéro au
+sens des distributions sur les fonctions de k et k'} :
+\[
+\tag{34-a}\lim_{\mt{t}\to\infty}\mt{A}=0
+\]
 Le terme associé aux parties imaginaires, B, s'écrit :
+\[
+\tag{34-b}\mt{B}=-\,\mt{cos c }\frac{\mt{(k}-\mt{k')}}{2}\mt{ t }\times
+\]
+\[
+\frac{1}{(\hbar\mt{ck}+\mt{E}_\mt{a}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2))
+(\hbar\mt{ck'}+\mt{E}_\mt{a}-\mt{E}_\mt{b}-\Delta_\mt{b}+i(\Gamma_\mt{b}/2))}
+\]
 
 Or, nous savons a'après p. 152 et 153) que la limite au sens des distributions
 
