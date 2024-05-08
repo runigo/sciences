@@ -1,17 +1,13 @@
-tanoudji/document.aux
-tanoudji/document.log
-tanoudji/document.out
-tanoudji/document.pdf
-tanoudji/document.toc
-tanoudji/document.dvi
-mathematique/document.aux
-mathematique/document.log
-mathematique/document.out
-mathematique/document.pdf
-mathematique/document.toc
-relatElecMag/document.aux
-relatElecMag/document.log
-relatElecMag/document.out
-relatElecMag/document.pdf
-relatElecMag/document.toc
+# Latex
+*.aux
+*.log
+*.pdf
+*.toc
+*.idx
+
+# Object files
+*.o
+
+# Executables
+*.out
 
