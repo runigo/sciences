@@ -2,35 +2,44 @@
 {}%
 {\bf Chapitre 3 : Espace vectoriel tangent (suite)}
 
-{Vitesse d'une courbe en un point}%
-
-Variété topologique de dimension n : (M, O, A)
-
-Variété différentielle de dimension n : (M, O, A_inf)
-
-
-
+%{Vitesse d'une courbe en un point}%(rappel)
+\subsection{rappels}
+Une variété topologique de dimension n un ensemble de point munie d'une topologie et d'un atlas : (M, $\mc{O}$, $\mc{A}$).
+Un atlas est un ensemble de cartes, une carte est une application homéomorphe d'un ouvert autour d'un point dans  $\mb{R}^\mt{n}$ :
 \[
-\begin{array}{ l l l l }
- \gamma : & R & -> & M \\ 
-  & \lambda & -> & \gamma(\lambda) \\
+\mc{A} = \{ (\mc{U}, x) : \mc{U} \to \mb{R}^\mt{n}
+\}
+\]
+Si l'atlas est restreint aux cartes qui peuvent être reliées par des transformations infiniment dérivables, on a une variété différentielle : (M, $\mc{O}$, $\mc{A}_\infty$).
+
+ = localement (autour de chaque point), la variété est isomorphe à $\mb{R}^\mt{n}$ : $\mc{A}$ est un ensemble de cartes, les cartes étant des applications homéomorphe d'un ouvert autour de chaque point dans $\mb{R}^\mt{n}$ qui permet de donner des coordonnées aux points
+
+\begin{minipage}[c]{.5\linewidth}
+\[
+\begin{array}{ l r l l }
+ \gamma : & \mb{R}^\mt{n} & \to & M \\ 
+  & \lambda & \mapsto & \gamma(\lambda) \\
 \end{array}
 \]
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.5\linewidth}
+\[
+\begin{array}{ l r l l }
+ {v}_{\gamma,p} : & \mc{C}^\infty(\mt{M}) & \to & \mb{R} \\ 
+  & \mt{f} & \mapsto & {v}_{\gamma,p}(\mt{f})=(f\circ\gamma)'|_{\lambda_0} \\
+\end{array}
+\]
+\end{minipage}
+
 
 \[
 \gamma(\lambda_0)=p\in M
 \]
 
 
-\[
-\begin{array}{ l l l l }
- v_{\gamma, p}  : & C^\infty (M) & -> & R \\ 
-  & f & -> & \gamma(\lambda) \\
-\end{array}
-\]
-
-{"Reparamétrage" d'une courbe}%
-{Espace vectoriel tangent, TpM : addition de deux vitesses et multiplication par un scalaire}%
-{Courbes coordonnées (d'une carte donnée) et vitesses associées}%
-{Base de TpM associée à une carte donnée}%
-{Notation importante : "dérivée partielle d'une fonction", représentée dans une carte}%
+%{"Reparamétrage" d'une courbe}%
+%{Espace vectoriel tangent, TpM : addition de deux vitesses et multiplication par un scalaire}%
+%{Courbes coordonnées (d'une carte donnée) et vitesses associées}%
+%{Base de TpM associée à une carte donnée}%
+%{Notation importante : "dérivée partielle d'une fonction", représentée dans une carte}%
