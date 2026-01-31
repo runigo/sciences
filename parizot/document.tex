@@ -91,7 +91,9 @@ pdfstartview={FitH}}	% ajuste la page à la largeur de l'écran
 \newcommand{\mt}[1]{\text{#1}}
 \newcommand{\ul}[1]{\underline{#1}}
 \newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\mb}[1]{\mathbb{#1}}
 \newcommand{\pt}[1]{\dot{\text{#1}}}
+\newcommand{\mv}[1]{\text{\bf{#1}}}
 %======================== DEBUT DU DOCUMENT ========================
 %
 \begin{document}
@@ -100,12 +102,10 @@ pdfstartview={FitH}}	% ajuste la page à la largeur de l'écran
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 %
 % Titre, résumé, ... %
-\input{./presentation/presentation.tex}
+%\input{./presentation.tex}
 %
 % Table des matières
-\tableofcontents
-\thispagestyle{empty}
-\setcounter{page}{0}
+%\tableofcontents \thispagestyle{empty} \setcounter{page}{0}
 %
 %espacement entre les lignes des tableaux
 \renewcommand{\arraystretch}{1.5}
@@ -116,17 +116,9 @@ pdfstartview={FitH}}	% ajuste la page à la largeur de l'écran
 \thispagestyle{empty}
 %recommencer la numérotation des pages à "1"
 \setcounter{page}{0}
-\newpage
+%\newpage
 %
-\input{./chapitres/chap1.tex}
-\input{./chapitres/chap2.tex}
-\input{./chapitres/chap3.tex}
-\input{./chapitres/chap4.tex}
-\input{./chapitres/chap5.tex}
-\input{./chapitres/chap6-1.tex}
-\input{./chapitres/chap6-2.tex}
-\input{./chapitres/chap7.tex}
-\input{./chapitres/chap8.tex}
+\input{./2025/2025.tex}
 %
 %
 %====================== INCLUSION DE LA BIBLIOGRAPHIE ======================
