@@ -16,8 +16,8 @@ Si l'atlas est restreint aux cartes qui peuvent être reliées par des transform
 
 \begin{minipage}[c]{.5\linewidth}
 \[
-\begin{array}{ l r l l }
- \gamma : & \mb{R}^\mt{n} & \to & M \\ 
+\begin{array}{ l c l l }
+ \gamma : & \mb{R} & \to & M \\ 
   & \lambda & \mapsto & \gamma(\lambda) \\
 \end{array}
 \]
@@ -25,9 +25,9 @@ Si l'atlas est restreint aux cartes qui peuvent être reliées par des transform
 \hfill
 \begin{minipage}[c]{.5\linewidth}
 \[
-\begin{array}{ l r l l }
+\begin{array}{ l c l l }
  {v}_{\gamma,p} : & \mc{C}^\infty(\mt{M}) & \to & \mb{R} \\ 
-  & \mt{f} & \mapsto & {v}_{\gamma,p}(\mt{f})=(f\circ\gamma)'|_{\lambda_0} \\
+  & \mt{f} & \mapsto & {v}_{\gamma,p}(\mt{f})=(\mt{f}\circ\gamma)'|_{\lambda_0} \\
 \end{array}
 \]
 \end{minipage}
@@ -38,6 +38,20 @@ Si l'atlas est restreint aux cartes qui peuvent être reliées par des transform
 \]
 
 
+\begin{tikzpicture}
+\draw(-3, 1) to[out=50, in=160] (2,2) node[below left]{$M$}
+to[out=-50, in=70] (2.5,-1)
+to[out=150, in=70] (-2,-1.5)
+to[out=120, in=-90] (-3, 1); % Espace
+%
+\draw(-1.5,1) node[above]{$\gamma 	$};
+\draw(-2,0.5) to[out=60, in=110] (-0.5,0.8)
+to[out=-80, in=180]  (0.2,0.5) node[above]{$p$}
+to[out=0, in=190] (1,0.6); % Courbe
+%
+\draw(0.1,0.6) -- (0.3,0.4);
+\draw(0.1,0.4) -- (0.3,0.6);
+\end{tikzpicture}
 %{"Reparamétrage" d'une courbe}%
 %{Espace vectoriel tangent, TpM : addition de deux vitesses et multiplication par un scalaire}%
 %{Courbes coordonnées (d'une carte donnée) et vitesses associées}%
