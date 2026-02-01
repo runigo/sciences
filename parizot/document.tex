@@ -11,7 +11,7 @@
 \usepackage[utf8x]{inputenc}
 %\usepackage[latin1]{inputenc}
 
-%pour gérer les positionnement d'images
+% Pour gérer les positionnement d'images
 \usepackage{float}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -21,34 +21,37 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{url}
 
-%pour les informations sur un document compilé en PDF et les liens externes / internes
+% Pour les informations sur un document compilé en PDF et les liens externes / internes
 \usepackage[pdfborder=0]{hyperref}
 \hypersetup{
 	colorlinks = true
 	}
 
-%pour la mise en page des tableaux
+% Pour la mise en page des tableaux
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage{multirow}
 \usepackage{multicol}
 \setlength{\columnsep}{50pt}
 
-%pour utiliser \floatbarrier
+% Utiliser une police droite dans les formules
+\usepackage{mathastext}
+
+% Pour utiliser \floatbarrier
 %\usepackage{placeins}
 %\usepackage{floatrow}
 
-%espacement entre les lignes
+% Espacement entre les lignes
 \usepackage{setspace}
 
-%modifier la mise en page de l'abstract
+% Modifier la mise en page de l'abstract
 \usepackage{abstract}
 
-%police et mise en page (marges) du document
+% Police et mise en page (marges) du document
 \usepackage[T1]{fontenc}
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 
-%Pour les galerie d'images
+% Pour les galerie d'images
 \usepackage{subfig}
 
 \usepackage{pdfpages}
@@ -88,7 +91,6 @@ pdfstartview={FitH}}	% ajuste la page à la largeur de l'écran
 %pdfproducer = {} % Société avec produit le logiciel
 
 %======================== DEFINITION COMMANDES ========================
-\newcommand{\mt}[1]{\text{#1}}
 \newcommand{\ul}[1]{\underline{#1}}
 \newcommand{\mc}[1]{\mathcal{#1}}
 \newcommand{\mb}[1]{\mathbb{#1}}
