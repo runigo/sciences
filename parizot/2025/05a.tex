@@ -11,10 +11,41 @@ Soit l'espace vectoriel (V, $+$,$\cdot$) de dimension fini n. $\{\mv{e}_{(i)}\}_
 \]
 
 \[
-\mv{e}_{(i)} \to\ \mv{e'}_{(i)} \ \ \mv{v}=\sum_{i=1}^n \ v'^{\,i}\ \mv{e'}_{(i)}
+\mv{e}_{(i)} \to\ \mv{e'}_{(i)}=\sum_{j=1}^n \ P_i^j\ \mv{e'}_{(j)}
+\]
+$P_i^j$ est la matrice de passage. On a alors :
+
+\[
+\mv{v}=\sum_{i=1}^n \ v'^{\,i}\ \mv{e'}_{(i)} \qquad avec \qquad v^i=\sum_{j=1}^i P_i^j v'^j
 \]
 
+\[
+[P^i_j]^{-1} \neq [P^j_i] \qquad et \qquad V = P V'\ \to\ V'=P'V
+\]
 
+Application linéaire
+
+\[
+(V, +,\cdot)\ \tilde{\to}\ (W, +,\cdot)
+\]
+
+\[
+(Hom(V, W), +,\cdot)\ =\ espace\ vectoriel \ dim V \times dim W
+\]
+
+\[
+V^* = Hom(V,\mb{R})\ =\ dual,\ dim\ V^*\ =\ dim\ V
+\]
+
+\[
+\{\ \mv{e}_{\ (i)}\}_{i=1,...,n}\ \ base\ de\ V\ \to\ base\ duale\ \ 
+\{\ \mathclap{\underset{\leftarrow}{\bf x}}^{\ (i)}\}_{i=1,...,n}
+\]
+
+\[
+\{\ \mv{e}_{\ (i)}\}_{i=1,...,n}\ \ base\ de\ V\ \to\ base\ duale\ \ 
+\{\ \mathclap{\underset{\leftarrow}{\boldsymbol \varepsilon}}^{\ (i)}\}_{i=1,...,n}
+\]
 
 Composantes d'un vecteur ou d'une forme linéaire, relativement à une base donnée
 Changement de base
