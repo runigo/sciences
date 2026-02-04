@@ -7,8 +7,10 @@
 Une variété topologique de dimension n un ensemble de point munie d'une topologie et d'un atlas : (M, $\mc{O}$, $\mc{A}$).
 Un atlas est un ensemble de cartes, une carte est une application homéomorphe d'un ouvert autour d'un point dans  $\mb{R}^n$ :
 \[
-\mc{A} = \{ (\mc{U}, x) : \mc{U} \to \mb{R}^n
-\}
+\mc{A} = \{ (\mc{U}, x) : \mc{U} \to \mb{R}^n\}
+\]
+\[
+\mathscr{A} = \{ (\mathscr{U}, x) : \mathscr{O} \to \mb{R}^n\}
 \]
 Si l'atlas est restreint aux cartes qui peuvent être reliées par des transformations infiniment dérivables, on a une variété différentielle : (M, $\mc{O}$, $\mc{A}_\infty$).
 
@@ -26,7 +28,7 @@ Si l'atlas est restreint aux cartes qui peuvent être reliées par des transform
 \begin{minipage}[c]{.5\linewidth}
 \[
 \begin{array}{ l c l l }
- {v}_{\gamma,p} : & \mc{C}^\infty(M) & \to & \mb{R} \\ 
+ \mathscr{V}_{\gamma,p} : & \mc{C}^\infty(M) & \to & \mb{R} \\ 
   & f & \mapsto & {v}_{\gamma,p}(f)=(f\circ\gamma)'|_{\lambda_0} \\
 \end{array}
 \]
@@ -60,9 +62,9 @@ to[out=0, in=190] (1,0.6); % Courbe
 \]
 
 \section{Espace vectoriel tangent}
-Par définition, l'espace vectoriel tangent à M au point M est :
+Par définition, l'espace vectoriel tangent à M au point p est :
 \[
-T_pM = \{ {v}_{\gamma,p} | \gamma : I \to M  \}
+T_pM = \{ {v}_{\gamma,p}\ |\ \gamma : I \to M  \}
 \]
 x, y étant deux cartes de M, on a :
 \[
@@ -76,6 +78,15 @@ et
 \[
 y \circ x^{-1} : \mb{R}^n \to \mb{R}^n
 \]
+
+\begin{tikzpicture} % "THE GLOBE" showcase
+\def\R{2.5} % sphere radius
+\def\angEl{35} % elevation angle
+%\filldraw[ball] (0,0) circle (\R);
+\draw (0,0) circle (\R);
+\foreach \t in {-80,-50,...,80} { \DrawLatitudeCircle[\R]{\t} }
+\foreach \t in {10,-35,...,-150} { \DrawLongitudeCircle[\R]{\t} }
+\end{tikzpicture}
 
 %{"Reparamétrage" d'une courbe}%
 %{Espace vectoriel tangent, TpM : addition de deux vitesses et multiplication par un scalaire}%
