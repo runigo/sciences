@@ -28,7 +28,7 @@ Si l'atlas est restreint aux cartes qui peuvent être reliées par des transform
 \begin{minipage}[c]{.5\linewidth}
 \[
 \begin{array}{ l c l l }
- \mathscr{V}_{\gamma,p} : & \mc{C}^\infty(M) & \to & \mb{R} \\ 
+ \mr{V}_{\gamma,p} : & \mc{C}^\infty(M) & \to & \mb{R} \\ 
   & f & \mapsto & {v}_{\gamma,p}(f)=(f\circ\gamma)'|_{\lambda_0} \\
 \end{array}
 \]
@@ -79,15 +79,59 @@ et
 y \circ x^{-1} : \mb{R}^n \to \mb{R}^n
 \]
 
+\begin{minipage}[c]{.45\linewidth}
 \begin{tikzpicture} % "THE GLOBE" showcase
-\def\R{2.5} % sphere radius
-\def\angEl{35} % elevation angle
-%\filldraw[ball] (0,0) circle (\R);
-\draw (0,0) circle (\R);
+\def\R{2.5} \def\angEl{35} % sphere radius, elevation angle
+\draw (0,0) circle (\R);%\filldraw[ball] (0,0) circle (\R);
 \foreach \t in {-80,-50,...,80} { \DrawLatitudeCircle[\R]{\t} }
 \foreach \t in {10,-35,...,-150} { \DrawLongitudeCircle[\R]{\t} }
+\draw[very thick](-1.1,0.42) -- (-0.6,-0.3)node[right]{$\ \mv{v}$};
+\draw[very thick](-0.85,-0.25) -- (-0.6,-0.3) -- (-0.6,-0.05);
+\draw[very thick](0.3,0.25) -- (1.1,-0.25)node[right]{$\ \mv{v}\ '$};
+\draw[very thick](0.9,-0.3) -- (1.1,-0.25) -- (1.05,-0.05);
 \end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+\end{minipage}
 
+\begin{minipage}[c]{.45\linewidth}
+$(T_pM, +, \cdot)$ est un espace vectoriel.
+
+$+$ : addition de vitesse
+
+$\cdot$ : multiplication par un scalaire
+
+\end{minipage}
+ \begin{proof}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+Soit $\gamma_1$ et $\gamma_2$ deux courbes lisses ($\in \mc{C}^\infty$). On étudie $\mr{V}_{\gamma_1,p}+\mr{V}_{\gamma_2,p}$ :
+\[
+f \mapsto(\mr{V}_{\gamma_1,p}+\mr{V}_{\gamma_2,p})(f) =
+\mr{V}_{\gamma_1,p}(f)+\mr{V}_{\gamma_2,p}(f)
+\]
+\end{minipage}
+
+\begin{minipage}[c]{.45\linewidth}
+\[
+\lambda \in \mb{R}, \ \mr{V}_\gamma \in T_{p\,}M
+\]
+\[
+\lambda \cdot \mr{V}_\gamma
+\]
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+\[
+\begin{array}{ l c l l }
+ \mr{V}_{\gamma,p} : & \mc{C}^\infty(M) & \to & \mb{R} \\ 
+  & f & \mapsto & {v}_{\gamma,p}(f)=(f\circ\gamma)'|_{\lambda_0} \\
+\end{array}
+\]
+\end{minipage}
+
+\end{proof}
 %{"Reparamétrage" d'une courbe}%
 %{Espace vectoriel tangent, TpM : addition de deux vitesses et multiplication par un scalaire}%
 %{Courbes coordonnées (d'une carte donnée) et vitesses associées}%
