@@ -3,6 +3,44 @@
 
 Rappels sur les espaces vectoriels
 
+(V, $+$,$\cdot$) est un espace vectoriel. Par définition, $+$ et $\cdot$ respecte les axiomes (CANI ADDU) :
+
+L'opération $+$, est Commutative, Associative, il y a un vecteur Nul et tout vecteur possède un Inverse.
+
+L'opération $\cdot$ est :
+
+ - Associative
+$\mu\cdot(\lambda\cdot\,\mv{v}\ )=(\mu.\lambda)\cdot\,\mv{v}$
+{ \it il faut distinguer ici la multiplication dans $\mb{R}$ "." de la multiplication dans V "$\cdot$"}
+
+ - Distributive :
+$(\lambda + \mu)\cdot\,\mv{v} = \lambda\cdot\,\mv{v} + \mu\cdot\,\mv{v}$
+
+
+ - Distributive :
+ $\lambda\cdot(\,\mv{v}+\,\mv{w}\ ) = \lambda\cdot\mv{v}\, + \lambda\cdot\,\mv{w}$
+
+ - Unité : $1\cdot\,\mv{v} = \mv{v}$
+
+En dimension fini, il existe une base $\{\,\mv{e}_{\ (1)},\ \mv{e}_{\ (2)},\,...\,,\ \mv{e}_{\ (n)} \}$ tel que quelquesoit $\ \mv{v}\ $ il existe un unique $(v^1,...,v^n)$ tel que $\ \mv{v}\ =\sum \ v^{\,i\,}\ \mv{e}_{\ (i)}$. Autrement dit,
+
+\[
+\exists \{\,\mv{e}_{\ (i)}\}_{i=1,...,n}\ tq\ \forall\ \mv{v}\ \in V, \exists!\ (v^1,...,v^n)\ tq\ \ \mv{v}\ =\sum_{i=1}^n \ v^{\,i\,}\ \mv{e}_{\ (i)}
+\]
+
+\[
+\mv{e}_{\ (i)} \to\ \mv{e'}_{\ (i)}=\sum_{j=1}^n \ P_i^{\,j}\ \ \mv{e'}_{\ (j)}
+\]
+$P_i^j$ est la matrice de passage. On a alors :
+
+\[
+\mv{v}\ =\sum_{i=1}^n \ v'^{\,i\,}\ \mv{e'}_{(i)} \qquad avec \qquad v^{\,i} = \sum_{j=1}^i P_i^{\,j} v'^j
+\]
+
+\[
+[P^{\,i}_j]^{-1} \neq [P^{\,j}_i] \qquad et \qquad V = P V'\ \to\ V'=P'V
+\]
+
 Base et dimension
 
 Composantes contravariantes
