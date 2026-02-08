@@ -4,46 +4,31 @@
 
 %{Vitesse d'une courbe en un point}%(rappel)
 \subsection{rappels}
-Une variété topologique de dimension n un ensemble de point munie d'une topologie et d'un atlas : (M, $\mc{O}$, $\mc{A}$).
+Une variété topologique de dimension n est un ensemble de point munie d'une topologie et d'un atlas : (M, $\mc{O}$, $\mc{A}$).
 Un atlas est un ensemble de cartes, une carte est une application homéomorphe d'un ouvert autour d'un point dans  $\mb{R}^n$ :
 \[
 \mc{A} = \{ (\mc{U}, x) : \mc{U} \to \mb{R}^n\}
 \]
-\[
-\mathscr{A} = \{ (\mathscr{U}, x) : \mathscr{O} \to \mb{R}^n\}
-\]
-Si l'atlas est restreint aux cartes qui peuvent être reliées par des transformations infiniment dérivables, on a une variété différentielle : (M, $\mc{O}$, $\mc{A}_\infty$).
 
- = localement (autour de chaque point), la variété est isomorphe à $\mb{R}^n$ : $\mc{A}$ est un ensemble de cartes, les cartes étant des applications homéomorphe d'un ouvert autour de chaque point dans $\mb{R}^n$ qui permet de donner des coordonnées aux points
+Nous avons vue que nous pouvions restreindre l'atlas aux cartes qui peuvent être reliées par des transformations infiniment dérivables, on a alors une variété différentielle : (M, $\mc{O}$, $\mc{A}_\infty$). La variété est alors munie d'une structure donnant un sens à des fonctions continues et différentiables :
+
+% = localement (autour de chaque point), la variété est isomorphe à $\mb{R}^n$ : $\mc{A}$ est un ensemble de cartes, les cartes étant des applications homéomorphe d'un ouvert autour de chaque point dans $\mb{R}^n$ qui permet de donner des coordonnées aux points
 
 \begin{minipage}[c]{.5\linewidth}
+\hspace{0.5cm}Soit une courbe $\gamma$
 \[
 \begin{array}{ l c l l }
  \gamma : & \mb{R} & \to & M \\ 
   & \lambda & \mapsto & \gamma(\lambda) \\
+\multicolumn{2}{c}{\gamma(\lambda_0)=p\in M } &  &  \\
 \end{array}
 \]
 \end{minipage}
 \hfill
 \begin{minipage}[c]{.5\linewidth}
-\[
-\begin{array}{ l c l l }
- \mr{V}_{\gamma,p} : & \mc{C}^\infty(M) & \to & \mb{R} \\ 
-  & f & \mapsto & {v}_{\gamma,p}(f)=(f\circ\gamma)'|_{\lambda_0} \\
-\end{array}
-\]
-\end{minipage}
-
-
-\[
-\gamma(\lambda_0)=p\in M
-\]
-
-
 \begin{tikzpicture}
 \draw(-3, 1) to[out=50, in=160] (2,2) node[below left]{$M$}
-to[out=-50, in=70] (2.5,-1)
-to[out=150, in=70] (-2,-1.5)
+to[out=-50, in=70] (2.5,-1) to[out=150, in=70] (-2,-1.5)
 to[out=120, in=-90] (-3, 1); % Espace
 %
 \draw(-1.5,1) node[above]{$\gamma 	$};
@@ -51,21 +36,66 @@ to[out=120, in=-90] (-3, 1); % Espace
 to[out=-80, in=180]  (0.2,0.5) node[above]{$p$}
 to[out=0, in=190] (1,0.6); % Courbe
 %
-\draw(0.1,0.6) -- (0.3,0.4);
-\draw(0.1,0.4) -- (0.3,0.6);
+\draw(0.1,0.6) -- (0.3,0.4); \draw(0.1,0.4) -- (0.3,0.6);
 \end{tikzpicture}
+\end{minipage}
+On peut alors définir une "vitesse", une "dérivée directionnelle" comme une application linéaire qui à une fonction associe un nombre :
+\[
+\begin{array}{ l c l l }
+ \mr{V}_{\gamma,p} : & \mc{C}^\infty(M) & \to & \mb{R} \\ 
+  & f & \mapsto & {v}_{\gamma,p}(f)=(f\circ\gamma)'|_{\lambda_0} \\
+\end{array}
+\]
 
+$\mr{V}_{\gamma,p}$ est linéaire :
+
+\[
+\mr{V}_{\gamma,p}(f_1+\lambda f_2) = 
+\big((f_1+\lambda f_2)\circ\gamma\big)'|_{\lambda_0} =
+(f_1\circ\gamma)'|_{\lambda_0} +
+\lambda(f_2+\lambda f_2)\circ\gamma)'|_{\lambda_0}
+\]
+\[
+=\mr{V}_{\gamma,p}(f_1) + \lambda\mr{V}_{\gamma,p}(f_2)
+\]
+
+L'ensemble des vitesses en un point va nous permettre de définir un espace vectoriel : il faut pour cela munir cet ensemble d'une addition et d'une multiplication : 
+
+\begin{comment}
 \[
 (f_1+f_2)(x)=f_1(x)+f_2(x)
  \qquad 
 (\lambda f)(x)=\lambda f(x)
 \]
+\end{comment}
 
 \section{Espace vectoriel tangent}
 Par définition, l'espace vectoriel tangent à M au point p est :
 \[
 T_pM = \{ {v}_{\gamma,p}\ |\ \gamma : I \to M  \}
 \]
+
+
+\begin{tikzpicture}
+\def\largeur{3} \def\hauteur{2} \def\decalage{0.3}
+\node (A) at (0,0) {$I\ $};
+\node (B) at (\largeur,0) {$\ M$};
+\node (C) at (\largeur,\hauteur) {$\mb{R}^n$};
+\node (D) at (\largeur,-\hauteur) {$\mb{R}^n$};
+\node (E) at (0.5*\largeur-\decalage ,0.5*\hauteur+\decalage) {$y\circ\gamma$};
+\node (F) at (0.5*\largeur-\decalage ,-\decalage-0.5*\hauteur) {$x\circ\gamma$};
+\node (G) at (\largeur+\decalage ,0.5*\hauteur) {$y$};
+\node (H) at (\largeur+\decalage ,-0.5*\hauteur) {$x$};
+\node (I) at (0.5*\largeur ,\decalage) {$\gamma$};
+\draw[thick,->] (A)--(B);
+\draw[thick,->] (A)--(C);
+\draw[thick,->] (A)--(D);
+\draw[thick,->] (B)--(C);
+\draw[thick,->] (B)--(D);
+\end{tikzpicture}
+
+
+
 x, y étant deux cartes de M, on a :
 \[
 \gamma : I \to M \qquad x : M \to \mb{R}^n \qquad y : M \to \mb{R}^n
