@@ -77,12 +77,90 @@ C'est pour cela qu'on appelle contravariante les composantes des vecteurs, elles
 \]
 
 \subsection{Fonctions linéaires}
-Une application f : (V, $+$,$\cdot$) $\to$ (W, $+$,$\cdot$) est linéaire si :
+Une application f d'un espace vectoriel vers un autre espace vectorielle
 \[
-\forall (\mv{w}, \mv{v})
+f : (V, +,\cdot) \to (W, +,\cdot)
 \]
+est linéaire si
+\[
+\forall\ (\ \mv{u}\ ,\ \mv{v}\ )\in V,\forall\ \lambda\in\mb{R},
+\qquad f(\ \mv{u}\ +\lambda\cdot\ \mv{v}\ )=f(\ \mv{u}\ )+\lambda\cdot f(\ \mv{v}\ )
+\]
+
+On note Hom (d'homomorphisme) l'ensemble des applications linéaire :
+\[
+Hom = \{applications\ linéaire\ de V\ dans\ W\}
+\]
+c'est un espace vectoriel si on le munie d'une addition et d'une multiplication scalaire "point par point", c'est à dire :
+
+\[
+\forall\ \mv{v}\ ,\qquad( f_1 +\lambda f_2 ) v = ( f_1(v) +\lambda f_2(v) )
+\]
+on passe de $(+,\dot)$ de Hom à $(+,\dot)$ de W.
+
+Remarque : une application linéaire f est entièrement caractérisée si on connaît l'image des vecteurs d'une base de V par f :
+\[
+Soit\ une\ base\ de\ V\ : \quad \mr{B}\{\ \mv{e}_{\ (i)} \}_{i=1,...,dim V}
+\]
+alors
+\[
+\forall\ \ \mv{v}\ \in V,\ \ \exists v^1, v^2,...\ ,v^n \ \ 
+\ \mv{v}\ =\sum_i v^i\ \ \mv{e}_{\ (i)} \
+\]
+et
+\[
+f(\ \mv{v}\ )\ = f(\sum_i v^i\ \ \mv{e}_{\ (i)} \ )
+= \sum_i v^i\ f(\ \mv{e}_{\ (i)} \ )
+\]
+
+
+Donc, si l'on connaît l'image de n éléments, par linéarité, on connaît l'image de tous les éléments.
+
+Or $ f(\ \mv{e}_{\ (i)} \ ) \in W$, on peut donc l'écrire dans une base de W, $\mr{B}_W\{\ \mv{f}_{\ (i)} \}$ :
+
+\[
+f(\ \mv{e}_{\ (i)} \ ) = \sum_{j=1}^{dim\ W} F^j_i\ \ \mv{h}_{\ (j)}
+\]
+et on obtient alors
+\[
+f(\ \mv{v}\ )\ =
+\sum_i v^i\ \sum_j F^j_i\ \ \mv{h}_{\ (j)} =
+\sum_j \sum_i v^i\ F^j_i\ \ \mv{h}_{\ (j)} \equiv \ \mv{w}
+\]
+Soit
+\[
+(v^1,...,v^{dim V}) \in V\ \to
+\ (w^1,...,w^{dim W}) \in W
+\]
+et finallement
+\[
+w^j = \sum_i F^j_iv^i
+\]
+$F^j_i$ est une matrice (dim W $\times$ dim V), on en déduit la dimension de Hom :
+\[
+dim\ Hom(V,W) = dim V . dim W
+\]
+
 \subsection{Espace vectoriel dual, V*}
-
+Le dual de V , noté V* est Hom(V,$\mb{R}$), est l'ensemble des formes
+linéaires ( = application linéaire de V dans $\mb{R}$ ). C'est un espace
+vectoriel de même dimension que V (en dimension fini, mais l'espace-temps
+est de dimension fini, à priori).
 \subsection{Base duale d'une base donnée}
+Si $\{\ \mv{e}_{\ (i)} \}_{i=1,...,dim V}$ est une base de
+(V, $+$, $\cdot$) la base dual de ($V^*$,$+$, $\cdot$) est la famille de
+forme linéaire $\{\ \vd{\varepsilon}^{\ (i)}\}_{i=1,...,n}$ tel que
 
+\[
+\forall i, \forall i, \qquad \vd{\varepsilon}^{\ (i)}(\ \mv{e}_{\ (i)} )
+= \delta^i_j
+\]
+
+Une forme linéaire de $V^*$ est entièrement défini si on connaît l'image des $\ \mv{e}_{\ (i)}$
+
+\[
+\forall\ \vd{\varrho}\ \in V^*, \qquad \ \vd{\varrho}\ =\sum_i
+\left[ \ \vd{\varrho}\ (\ \mv{e}_{\ (i)} )\right] \vd{\varepsilon}^{\ (i)}
+\equiv \rho_i \ \vd{\varepsilon}^{\ (i)}
+\]
 
