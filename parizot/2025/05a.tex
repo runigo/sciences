@@ -1,25 +1,45 @@
 %2025 - 5a
 \section{05a : Annexe : Algèbre multilinéaire}
-Espace vectoriel dual, V*, et notion de base duale
-
-Soit l'espace vectoriel (V, $+$,$\cdot$) de dimension fini n. $\{\ \mv{e}_{\ (i)}\}_{i=1,...,n}$ une base de V.
-
-
 \[
-\forall\ \ \mv{v}\ \in V ,\ \ \exists !\ (v^1,...,v^n)\ \ \ \mv{v}\ =\sum_{i=1}^n \ v^{\,i\,}\ \mv{e}_{\ (i)}
+T_pM \qquad (M, \mc{O}, \mc{A}) \qquad \{ \mr{V}_{\gamma,p}\ \ lisse\}
 \]
 
 \[
-\mv{e}_{\ (i)} \to\ \mv{e'}_{\ (i)}=\sum_{j=1}^n \ P_i^{\,j}\ \ \mv{e'}_{\ (j)}
+\begin{array}{ l c l l }
+ \mr{V}_{\gamma,p} : & \mc{C}^\infty(M) & \to & \mb{R} \\ 
+  & f & \mapsto & {v}_{\gamma,p}(f)=(f\circ\gamma)'|_{\lambda_0} \\
+\end{array}
+\qquad \gamma(\lambda_0)=p
+\]
+
+\[
+\begin{array}{ l c l }
++ &  &  \\
+\cdot & \to & \mb{R} \\
+\end{array}
+\]
+
+\subsection {Espace vectoriel dual, V*, et notion de base duale}
+Soit l'espace vectoriel (V, $+$,$\cdot$) de dimension fini n. $\{\ \mv{e}_{\ (i)}\}_{i=1,...,n}$ une base de V.
+\[
+(V, +,\cdot) \qquad dim V < \infty
+\]
+
+\[
+\{\,\mv{e}_{\ (i)}\}_{i=1...dim V}\qquad \forall\ \mv{v}\ \in V, \exists!\ (v^1,...,v^n)\ tq\ \ \mv{v}\ =\sum_{i=1}^n \ v^{\,i\,}\ \mv{e}_{\ (i)}
+\]
+$v^{\,i\,}$ est contravariant. Changement de base
+\[
+\mv{e}_{\ (i)}\quad \to\qquad \mv{e'}_{\ (i)}=\sum_{j=1}^n \ P_i^{\,j}\ \ \mv{e'}_{\ (j)}
 \]
 $P_i^j$ est la matrice de passage. On a alors :
-
 \[
-\mv{v}\ =\sum_{i=1}^n \ v'^{\,i\,}\ \mv{e'}_{(i)} \qquad avec \qquad v^{\,i} = \sum_{j=1}^i P_i^{\,j} v'^j
+\mv{v}\ =\sum_{i=1}^n \ v'^{\,i\,}\ \mv{e'}_{(i)} \qquad avec \qquad
+\boxed{\ v^{\,i} = \sum_{j=1}^n P_j^{\,i}\ v'^j\ }
 \]
-
 \[
-[P^{\,i}_j]^{-1} \neq [P^{\,j}_i] \qquad et \qquad V = P V'\ \to\ V'=P'V
+[P^{\,i}_j]^{-1}\ \xcancel{=}\ [P^{\,j}_i] \qquad et
+\qquad V = P V'\ \to\ V'=P^{-1}V
 \]
 
 Application linéaire
@@ -33,15 +53,41 @@ Application linéaire
 \]
 
 \[
-V^* = Hom(V,\mb{R})\ =\ dual,\ dim\ V^*\ =\ dim\ V
+dual : V^* = Hom(V,\mb{R})\ =\ ,\ \boxed{dim\ V^*\,=\ dim\ V}
+\]
+base duale
+\[
+\{\ \mv{e}_{\ (i)}\}_{i=1,...,n}\ \ base\ de\ V\ \ \to\ \ \exists!\ base\ duale\ \ 
+\{\ \vd{\varepsilon}^{\ (i)}\}_{i=1,...,n} \qquad tq\qquad
+\vd{\varepsilon}^{\ (i)}(\ \mv{e}_{\ (i)} ) = \delta^i_j
+\]
+\[
+\mv{v}\ \in\ V\ \ \to\ \ \mv{v}\ =\sum_i \ v^{\,i\,}\ \mv{e}_{\ (i)}
+\qquad \llap{``} \equiv v^{\,i\,}\ \mv{e}_{\ (i)}\ \rlap{''}
+\]
+\[
+\vd{\varepsilon}^{\ (k)}(\ \mv{v}\ ) =
+\vd{\varepsilon}^{\ (k)}\left(\sum_i \ v^{\,i\,}\ \mv{e}_{\ (i)}\right) = 
+\sum_iv^{\,i\,} \ \vd{\varepsilon}^{\ (k)}\ \ \mv{e}_{\ (i)} = v^{\,k\,}
+\]
+\subsection{Composantes d'un vecteur ou d'une forme linéaire, relativement à une base donnée}
+\[
+\forall\ \ \vd{\omega}\quad \exists! (\omega_1,...,\omega_2)\in\mb{R},
+\ \ \vd{\omega}\ = \sum_{i=1}^n\omega_i\ \ \vd{\varepsilon}^{\ (i)}
+\]
+\[
+\vd{\omega}\ \ (\ \mv{e}_{\ (k)} )=
+\sum_{i=1}^n\omega_i\ \ \vd{\varepsilon}^{\ (i)}(\ \mv{e}_{\ (k)} ) 
+\qquad \boxed{\ \ \vd{\omega}\ \ (\ \mv{e}_{\ (k)} )=\omega_k}
 \]
 
 \[
-\{\ \mv{e}_{\ (i)}\}_{i=1,...,n}\ \ base\ de\ V\ \to\ base\ duale\ \ 
-\{\ \vd{\varepsilon}^{\ (i)}\}_{i=1,...,n}
+\vd{\omega}\ = \sum_i\omega_{\,i}\ \ \vd{\varepsilon}^{\ (\,i)}
+\hspace{3cm} \mv{v}\ = \sum_jv^{\,j}\ \ \mv{e}_{\ (\,j)}
 \]
-
-Composantes d'un vecteur ou d'une forme linéaire, relativement à une base donnée
+\[
+\]
+%\[\]   \ \ \boxed{}
 Changement de base
 Co-variance et contra-variance des composantes
 Produit scalaire, forme bilinéaire non dégénérée
