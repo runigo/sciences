@@ -1,18 +1,21 @@
 %2025 - 5a
 \section{05a : Annexe : Algèbre multilinéaire}
+Nous avons introduit $T_pM$, l'espace vectoriel tangent au point p à la variété
+lisse $(M, \mc{O}, \mc{A}_\infty)$
 \[
-T_pM \qquad (M, \mc{O}, \mc{A}) \qquad \{ \mr{V}_{\gamma,p}\ \ lisse\}
+T_pM = \{ \mr{V}_{\gamma,p}\ \ lisse\}
 \]
-
+Les vitesses $\mr{V}_{\gamma,p}$ étant définie comme des appplications :
 \[
 \begin{array}{ l c l l }
  \mr{V}_{\gamma,p} : & \mc{C}^\infty(M) & \to & \mb{R} \\ 
-  & f & \mapsto & {v}_{\gamma,p}(f)=(f\circ\gamma)'|_{\lambda_0} \\
+  & f & \mapsto & {v}_{\gamma,p}(f)=(f\circ\gamma)'|_\lambda \\
 \end{array}
-\qquad \gamma(\lambda_0)=p
+\qquad \gamma(\lambda)=p
 \]
-
-\[
+Et si on munie cet ensemble d'une addition et d'une multiplication par un
+scalaire, on obtient bien un espace vectorielle.
+\[ 
 \begin{array}{ l c l }
 + &  &  \\
 \cdot & \to & \mb{R} \\
@@ -20,23 +23,31 @@ T_pM \qquad (M, \mc{O}, \mc{A}) \qquad \{ \mr{V}_{\gamma,p}\ \ lisse\}
 \]
 
 \subsection {Espace vectoriel dual, V*, et notion de base duale}
-Soit l'espace vectoriel (V, $+$,$\cdot$) de dimension fini n. $\{\ \mv{e}_{\ (i)}\}_{i=1,...,n}$ une base de V.
+Soit l'espace vectoriel (V, $+$,$\cdot$) de dimension fini n.
+$\{\ \mv{e}_{\ (i)}\}_{i=1,...,n}$ une base de V.
 \[
 (V, +,\cdot) \qquad dim V < \infty
 \]
-
+on a alors,
 \[
-\{\,\mv{e}_{\ (i)}\}_{i=1...dim V}\qquad \forall\ \mv{v}\ \in V, \exists!\ (v^1,...,v^n)\ tq\ \ \mv{v}\ =\sum_{i=1}^n \ v^{\,i\,}\ \mv{e}_{\ (i)}
+\{\,\mv{e}_{\ (i)}\}_{i=1...dim V}\qquad \forall\ \mv{v}\ \in V,
+\exists!\ (v^1,...,v^n)\ tq\ \ \mv{v}\ =\sum_{i=1}^n \ v^{\,i\,}\ \mv{e}_{\ (i)}
 \]
-$v^{\,i\,}$ est contravariant. Changement de base
+Naturellement, on peut changer de base
 \[
-\mv{e}_{\ (i)}\quad \to\qquad \mv{e'}_{\ (i)}=\sum_{j=1}^n \ P_i^{\,j}\ \ \mv{e'}_{\ (j)}
+\mv{e}_{\ (i)}\quad \to\qquad \mv{e'}_{\ (i)}=\sum_{j=1}^n \ P_i^{\,j}
+\ \ \mv{e}_{\ (j)}
 \]
-$P_i^j$ est la matrice de passage. On a alors :
+$P_i^j$ est la matrice de passage. Chaque vecteur de la nouvelle
+base est une combinaison linéaire des vecteur de l'ancienne base.
+On a alors la nouvelle écriture de $\ \mv{v}\ $:
 \[
 \mv{v}\ =\sum_{i=1}^n \ v'^{\,i\,}\ \mv{e'}_{(i)} \qquad avec \qquad
 \boxed{\ v^{\,i} = \sum_{j=1}^n P_j^{\,i}\ v'^j\ }
 \]
+$P_i^j$ permet de passer de v' à v
+alors que $P_i^j$ permet de passer de $\ \mv{e}_{\ (i)}\ $ à $\ \mv{e'}_{\ (i)}\ $
+($\ \mv{e}_{\ (i)}\ $ est covariant, $v^{\,i\,}$ est contravariant : ) ; un indice en bas correspond à une grandeur covariante, un indice en haut correspond à une grandeur contravariante.
 \[
 [P^{\,i}_j]^{-1}\ \xcancel{=}\ [P^{\,j}_i] \qquad et
 \qquad V = P V'\ \to\ V'=P^{-1}V
@@ -70,7 +81,8 @@ base duale
 \vd{\varepsilon}^{\ (k)}\left(\sum_i \ v^{\,i\,}\ \mv{e}_{\ (i)}\right) = 
 \sum_iv^{\,i\,} \ \vd{\varepsilon}^{\ (k)}\ \ \mv{e}_{\ (i)} = v^{\,k\,}
 \]
-\subsection{Composantes d'un vecteur ou d'une forme linéaire, relativement à une base donnée}
+\subsection{Composantes d'un vecteur ou d'une forme linéaire, relativement
+à une base donnée}
 \[
 \forall\ \ \vd{\omega}\quad \exists! (\omega_1,...,\omega_2)\in\mb{R},
 \ \ \vd{\omega}\ = \sum_{i=1}^n\omega_i\ \ \vd{\varepsilon}^{\ (i)}
