@@ -98,9 +98,32 @@ base duale
 \hspace{3cm} \mv{v}\ = \sum_jv^{\,j}\ \ \mv{e}_{\ (\,j)}
 \]
 \[
+\vd{\omega}\ (\ \mv{v}\ ) = \sum_i\omega_{\,i}\ \ \vd{\varepsilon}^{\ (\,i)}
+\left( \sum_jv^{\,j}\ \ \mv{e}_{\ (\,j)}\right)
+\]
+En utilisant la convention de sommation des indices répétés
+\[
+= \omega_{\,i}\ \ \vd{\varepsilon}^{\ (\,i)}
+\left( v^{\,j}\ \ \mv{e}_{\ (\,j)}\right)
+= \omega_{\,i}\ v^{\,j}\ \ \vd{\varepsilon}^{\ (\,i)}
+\left( \ \mv{e}_{\ (\,j)}\right)
+= \omega_{\,i}\ v^{\,j}\ \ \delta_{i,j}
+\]
+soit
+\[
+\boxed{\ \ \vd{\omega}\ (\ \mv{v}\ ) = \sum_i\omega_{\,i}\ v^{\,i}\ }
 \]
 %\[\]   \ \ \boxed{}
-Changement de base
+\subsection{Changement de base}
+\[
+\{\ \mv{e}_{\ (i)}\}\ \to \ \{\ \mv{e'}_{\ (\,i)}\}
+\qquad \mv{e'}_{\ (i)}=\sum_{j=1}^n \ P_i^{\,j}\ \ \mv{e}_{\ (j)}
+\]
+\[
+\vd{\varepsilon}^{\ (\,i)}(v'^k\ \mv{e'}_{\ (\,k)})
+=v'^k\ \vd{\varepsilon}^{\ (\,i)}(\ P_k^{\,j}\ \ \mv{e}_{\ (j)})
+=v'^k\ P_k^{\,j}\ \delta^i_j = v'^k\ P_k^{\,i}
+\]
 Co-variance et contra-variance des composantes
 Produit scalaire, forme bilinéaire non dégénérée
 Isomorphisme canonique ?
