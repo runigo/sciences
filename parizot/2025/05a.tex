@@ -113,19 +113,173 @@ soit
 \[
 \boxed{\ \ \vd{\omega}\ (\ \mv{v}\ ) = \sum_i\omega_{\,i}\ v^{\,i}\ }
 \]
-%\[\]   \ \ \boxed{}
 \subsection{Changement de base}
 \[
 \{\ \mv{e}_{\ (i)}\}\ \to \ \{\ \mv{e'}_{\ (\,i)}\}
 \qquad \mv{e'}_{\ (i)}=\sum_{j=1}^n \ P_i^{\,j}\ \ \mv{e}_{\ (j)}
 \]
 \[
-\vd{\varepsilon}^{\ (\,i)}(v'^k\ \mv{e'}_{\ (\,k)})
-=v'^k\ \vd{\varepsilon}^{\ (\,i)}(\ P_k^{\,j}\ \ \mv{e}_{\ (j)})
-=v'^k\ P_k^{\,j}\ \delta^i_j = v'^k\ P_k^{\,i}
+\vd{\varepsilon}^{\ (i)}(v'^{\,k}\ \mv{e'}_{\ (k)})
+=v'^{\,k}\ \vd{\varepsilon}^{\ (i)}(\ P_k^{\,j}\ \ \mv{e}_{\ (j)})
+=v'^{\,k}\ P_k^{\,j}\ \delta^i_j = v'^{\,k}\ P_k^{\,i}
 \]
-Co-variance et contra-variance des composantes
-Produit scalaire, forme bilinéaire non dégénérée
-Isomorphisme canonique ?
-Tenseurs de rang (r,s)
-Composantes des tenseurs relativement à une base
+\[
+\forall\ \mv{v}\ \quad\vd{\varepsilon}^{\ (i)}(\ \mv{v}\ )
+=P_k^{\,i}\ \ \vd{\varepsilon '\,}^{\ (k)}(\ \mv{v}\ )
+\]
+\[
+\Rightarrow \qquad \boxed{\ \ \vd{\varepsilon}^{\ (i)}=
+P_k^{\,i}\ \ \vd{\varepsilon '\,}^{\ (k)}(\ \mv{v}\ )\ }
+\]
+\[
+\boxed{\ \ \vd{\varepsilon}^{\ (i)}\ \ \mv{e}_{\ (j)}=
+\delta^i_j\ }
+\]
+\subsection{Co-variance et contra-variance des composantes}
+\[
+\boxed{\ \ \mv{e'}_{\ (i)}=\sum_j P^j_i\ \ \mv{e}_{\ (j)}}
+\]
+\[
+\vd{\omega}\ =\sum_k\omega'_k\ \ \vd{\varepsilon '\,}^{\ (k)}
+\]
+\[
+\vd{\omega}\ \ (\ \,\mv{e'}_{\ k})=\ \vd{\omega}\ \ (P_k^{\,i}\ \,\mv{e}_{\ i})=P_k^{\,i}\,\ \ \vd{\omega}\ \ (\ \,\mv{e}_{\ i})
+\]
+\[
+\boxed{\ \omega'_{\ k}=\sum_i\ P_k^{\,i}\ \omega_{\ i}}\quad\to
+\quad \omega_{\ i}\ sont\ dits\ covariants
+\]
+
+\subsection{Produit scalaire, forme bilinéaire non dégénérée}
+\[
+\forall\ \mv{v}\ \in V\qquad\forall\ \vd{\varepsilon} \ \in\ V^*
+\qquad\vd{\varepsilon}\ \ (\ \mv{v}\ )\ \in \mb{R}
+\]
+\[
+\vd{\varepsilon}\ \ (\ \mv{v}\ )\ =\sum_i\omega_iv^i\ =\sum_i\omega'_iv'\,^i
+\]
+\subsubsection{Isomorphisme canonique ?}
+dim V = n, dim V*=n, Pas d'isomorphisme canonique
+\[
+\mv{v}\ \ \in\ V\quad\longrightarrow\qquad\vd{\varepsilon}\ \ \in\ V^*
+\]
+\[
+\{\ \mv{e}_{\ (i)}\}\qquad\qquad\{\ \ \vd{\rho}^{\ (j)}\}
+\]
+\[
+\mv{v}\ \ =\sum v^i\ \mv{e}_{\ (i)}\ \to\ \ \vd{v}=\sum v^i\ \ \vd{\rho}^{\ (j)}
+\]
+MAIS S'il existe un "produit scalaire", forme bilinéaire non dégénérée sur V
+Alors il existe un isomorphosme canonique
+\[
+\begin{array}{ c c c }
+V\times V & \longrightarrow & \mb{R} \\
+(\ \ \mv{u}\ ,\ \mv{v}\ \ ) & \longmapsto & s\,(\,\ \mv{u}\ ,\ \mv{v}\,\ ) \\
+\end{array}
+\]
+\[
+s\,(\,\ \mv{u}\ ,\ \mv{v}\,\ )
+= s\,(u^i\,\ \mv{e}_{\ i}\ ,v^{\,j}\,\ \mv{e}_{\ j}\,\ )
+= u^i\,v^{\,j}\,s\,(\,\ \mv{e}_{\ i}\ ,\,\ \mv{e}_{\ j}\ )
+\]
+\[
+\boxed{\ s\,(\,\ \mv{u}\ ,\ \mv{v}\,\ )=s_{\,i\,j}u^{\,i}\,v^{\,j}\ }
+\]
+\[
+Si\quad\forall\ \mv{v}\ ,\quad s\,(\,\ \mv{u}\ ,\ \mv{v}\,\ )=0,\ alors
+\quad \mv{u}\,\ =\,\ \mv{0}
+\]
+À tout $\ \mv{v}\ $, on peut associer la forme linéaire $\ \vd{\omega}\ \in V^*$
+définie par $\ \vd{\omega}\ \equiv s\,(\ \mv{v}\ ,\cdot)$
+\[
+|\,\psi>\ \to(<\psi\,|\,)\ (\,|\,\phi>)=<\psi\,|\,\phi>=h(\,|\,\psi>,|\,\phi>)
+\]
+
+Soit $\ \mv{v}\ \ =\sum v^i\ \mv{e}_{\ (i)}\ \in V\quad$ Quelles sont les composantes de $\boxed{s(\ \mv{v}\ ,\cdot)}$ dans la base duale $\{\ \vd{\varepsilon}^{\ (i)}\}$ de $V^*$
+
+Si $\ \vd{\omega}\ \ =\sum \omega\,_i\ \vd{\varepsilon}^{\ (i)}
+\qquad\ \vd{\omega}\ (\ \mv{u}\ )=\sum \omega_iu^i$
+
+\[
+s(\ \mv{v}\ ,\cdot)(\ \mv{u}\ )\ =s\,(\,\ \mv{v}\ ,\ \mv{u}\,\ )
+=\sum_i\omega_{\,i}u^i
+\]
+
+$\vd{\varepsilon}\ \ \in\ V^*$
+
+$\to \ \mv{v}\ $ associé canoniquement à $ \ \mv{\omega}\ $
+
+est l'unique vecteur tel que $\ \mv{\omega}\ =s(\ \mv{v}\ ,\cdot))$
+
+$\ \mv{\omega}\ (\ \mv{e}\ _{i})=\omega_i$
+
+$u^i=\sum_k t^{ik}\omega_k$
+
+$\omega_i=\sum_i\sum_ks_{ij}t^{ik}\omega_k$
+
+\subsection{Tenseurs de rang (r,s)}
+$(V,+,\cdot)\to(V,+,\cdot)$
+
+forme multilinéaire
+\[
+T_{rang(rs)} : \underbrace{V^*\times...\times V^*}_{\text{r}}
+\times\underbrace{V\times...\times V}_{\text{s}}
+\quad\xrightarrow{\sim}\quad\mb{R}
+\]
+
+Exemple : tenseur de rang (2,1)
+
+\[
+\begin{array}{ c c c }
+ V^*\times V^*\times V & \xrightarrow{\sim} & \mb{R} \\
+  (\omega, \rho, u) & \longmapsto & T(\omega, \rho, u) \\
+\end{array}
+\]
+\[
+T(\omega_1+\lambda\omega_2, \rho, u)=T(\omega_1, \rho, u)+\lambda T(\omega_2, \rho, u)
+\]
+\[
+T(\omega, \rho, u_1+\lambda u_2)=T(\omega, \rho, u_1)+\lambda T(\omega, \rho, u_2)
+\]
+\subsection{Composantes des tenseurs relativement à une base}
+\[
+\{\ \mv{e}_{\ (i)}\}\quad et\quad\{\ \ \vd{\varepsilon}^{\ (j)}\}\qquad base\ duale\ de\ V\ et\ V^*
+\]
+Si on connait
+\[
+T\big(\,\underbrace{\ \vd{\varepsilon}^{\ (i)},...,\ \vd{\varepsilon}^{\ (j)}}_{\text{r}}\ ,
+\ \underbrace{\ \mv{e}_{\ (k)},...,\ \mv{e}_{\ (l)}}_{\text{s}}\big)
+\]
+alors on connait
+\[
+T\big(\ \,\vd{\omega}^{\ (i)},...,\ \ \vd{\omega}^{\ (j)},\ \mv{u}_{\ (k)},...,\ \mv{u}_{\ (l)}\big)
+\]
+En effet, par multilinéarité
+\[
+T\big(\,\omega_{\,i_1}\,\ \vd{\varepsilon}^{\ (i_1)},...,\ \omega_{\,i_r}\ \vd{\varepsilon}^{\ (i_r)}
+\ ,v^{j_1}\ \mv{e}_{\ (j_1)},...,v^{j_s}\ \mv{e}_{\ (j_s)}\,\big)
+\]
+\[
+=\omega_{\,i_1}...\omega_{\,i_r}v^{\,j_1}...v^{\,j_s}\ T\ \big(\ \,\vd{\varepsilon}^{\ (i_1)},...,\ \vd{\varepsilon}^{\ (i_r)}
+\ ,\ \mv{e}_{\ (\,j_1)},...,\ \mv{e}_{\ (\,j_s)}\,\big)
+\]
+Exemple : forme bilinéaire $s:V\times V\ \xrightarrow{\sim}\ \mb{R}$ : tenseur de rang(0,2)
+\[
+s\,(\ \mv{u}\ ,\ \mv{v}\ )=u^iv^{\,j}\,s\,(\ \mv{e}_{\,(i)}\ ,\ \mv{e}_{\,(j)})=s_{ij}\,u^iv^{\,j}
+\]
+\[
+s\,(\ \mv{u}\ ,\ \mv{v}\ )=u'^{\,i}v'^{\,j}\,s\,(\ \mv{e'}_{\,(i)}\ ,\ \mv{e'}_{\,(j)})
+\]
+\[
+s'_{ij}\,=\,s\,(\ \mv{e'}_{\,(i)}\ ,\ \mv{e'}_{\,(j)})
+\]
+\[
+=\,s\,(\sum_kP^k_i\,\ \mv{e}_{\,(k)}\ ,\sum_lP^l_j\,\ \mv{e}_{\,(l)})
+\]
+\[
+=\sum_k\sum_lP^k_i\,P^l_j\,s\,(\ \mv{e}_{\,(k)}\ ,\ \mv{e}_{\,(l)})
+\]
+\[
+s'_{ij}\,=\sum_k\sum_lP^k_i\,P^l_j\,s_{kl}
+\]
+%\[\]   \ \ \boxed{}
