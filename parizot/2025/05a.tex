@@ -23,6 +23,7 @@ scalaire, on obtient bien un espace vectorielle.
 \]
 
 \subsection {Espace vectoriel dual, V*, et notion de base duale}
+\subsubsection{Rappels}
 Soit l'espace vectoriel (V, $+$,$\cdot$) de dimension fini n.
 $\{\ \mv{e}_{\ (i)}\}_{i=1,...,n}$ une base de V.
 \[
@@ -48,6 +49,8 @@ On a alors la nouvelle écriture de $\ \mv{v}\ $:
 $P_i^j$ permet de passer de v' à v
 alors que $P_i^j$ permet de passer de $\ \mv{e}_{\ (i)}\ $ à $\ \mv{e'}_{\ (i)}\ $
 ($\ \mv{e}_{\ (i)}\ $ est covariant, $v^{\,i\,}$ est contravariant : ) ; un indice en bas correspond à une grandeur covariante, un indice en haut correspond à une grandeur contravariante.
+
+Remarque
 \[
 [P^{\,i}_j]^{-1}\ \xcancel{=}\ [P^{\,j}_i] \qquad et
 \qquad V = P V'\ \to\ V'=P^{-1}V
@@ -62,16 +65,26 @@ Application linéaire
 \[
 (Hom(V, W), +,\cdot)\ =\ espace\ vectoriel \ dim V \times dim W
 \]
-
+Dual de V
 \[
 dual : V^* = Hom(V,\mb{R})\ =\ ,\ \boxed{dim\ V^*\,=\ dim\ V}
 \]
-base duale
+base duale : le choix d'une base de V définie de façon univoque une base duale. 
 \[
 \{\ \mv{e}_{\ (i)}\}_{i=1,...,n}\ \ base\ de\ V\ \ \to\ \ \exists!\ base\ duale\ \ 
 \{\ \vd{\varepsilon}^{\ (i)}\}_{i=1,...,n} \qquad tq\qquad
 \vd{\varepsilon}^{\ (i)}(\ \mv{e}_{\ (i)} ) = \delta^i_j
 \]
+On insiste sur le passage de V à $V*$, la distinction entre ces deux espaces: lettre latine $\to$ lettre
+grec, flèche en haut $\to$ flèche en bas, flèche vers la droite $\to$ flèche
+vers la gauche. Ceci est à rapprocher au passage du ket vers le bra en mécanique
+quantique : le ket appartient à l'espace de Hilbert, le bra est une forme
+linéaire sur l'espace de Hilbert.
+
+ FIN DU RAPPEL
+\subsection{Composantes d'un vecteur ou d'une forme linéaire, relativement
+à une base donnée}
+
 \[
 \mv{v}\ \in\ V\ \ \to\ \ \mv{v}\ =\sum_i \ v^{\,i\,}\ \mv{e}_{\ (i)}
 \qquad \llap{``} \equiv v^{\,i\,}\ \mv{e}_{\ (i)}\ \rlap{''}
@@ -81,8 +94,13 @@ base duale
 \vd{\varepsilon}^{\ (k)}\left(\sum_i \ v^{\,i\,}\ \mv{e}_{\ (i)}\right) = 
 \sum_iv^{\,i\,} \ \vd{\varepsilon}^{\ (k)}\ \ \mv{e}_{\ (i)} = v^{\,k\,}
 \]
-\subsection{Composantes d'un vecteur ou d'une forme linéaire, relativement
-à une base donnée}
+L'application du k-ième vecteur de la base duale permet "d'extraire la k-ième composante d'un vecteur dans une certaine base.
+
+Dans notre cours, nous n'allons avoir à faire qu'à des applications linéaire. Ainsi dans l'expression on peut permuter le signe somme avec l'application $\varepsilon$. Cela justifie la convention de sommation sur les indices répétés :
+\[
+\vd{\varepsilon}^{\ (k)}(\ \mv{v}\ ) =
+\vd{\varepsilon}^{\ (k)}\,v^{\,i\,}\ \mv{e}_{\ (i)} =  v^{\,k\,}
+\]
 \[
 \forall\ \ \vd{\omega}\quad \exists! (\omega_1,...,\omega_2)\in\mb{R},
 \ \ \vd{\omega}\ = \sum_{i=1}^n\omega_i\ \ \vd{\varepsilon}^{\ (i)}
