@@ -274,19 +274,23 @@ T\big(\ \,\vd{\omega}^{\ (i)},...,\ \ \vd{\omega}^{\ (j)},\ \mv{u}_{\ (k)},...,\
 \]
 En effet, par multilinéarité
 \[
-T\big(\,\omega_{\,i_1}\,\ \vd{\varepsilon}^{\ (i_1)},...,\ \omega_{\,i_r}\ \vd{\varepsilon}^{\ (i_r)}
+T\big(\,\omega_{\,i_1}\,\ \vd{\varepsilon}^{\ (i_1)},...,\ \omega_{\,i_r}
+\ \vd{\varepsilon}^{\ (i_r)}
 \ ,v^{j_1}\ \mv{e}_{\ (j_1)},...,v^{j_s}\ \mv{e}_{\ (j_s)}\,\big)
 \]
 \[
-=\omega_{\,i_1}...\omega_{\,i_r}v^{\,j_1}...v^{\,j_s}\ T\ \big(\ \,\vd{\varepsilon}^{\ (i_1)},...,\ \vd{\varepsilon}^{\ (i_r)}
+=\omega_{\,i_1}...\omega_{\,i_r}v^{\,j_1}...v^{\,j_s}\ T\ \big(
+\ \,\vd{\varepsilon}^{\ (i_1)},...,\ \vd{\varepsilon}^{\ (i_r)}
 \ ,\ \mv{e}_{\ (\,j_1)},...,\ \mv{e}_{\ (\,j_s)}\,\big)
 \]
 Exemple : forme bilinéaire $s:V\times V\ \xrightarrow{\sim}\ \mb{R}$ : tenseur de rang(0,2)
 \[
-s\,(\ \mv{u}\ ,\ \mv{v}\ )=u^iv^{\,j}\,s\,(\ \mv{e}_{\,(i)}\ ,\ \mv{e}_{\,(j)})=s_{ij}\,u^iv^{\,j}
+s\,(\ \mv{u}\ ,\ \mv{v}\ )=u^iv^{\,j}\,s\,(\ \mv{e}_{\,(i)}\ ,\ \mv{e}_{\,(j)})
+=s_{ij}\,u^iv^{\,j}
 \]
 \[
-s\,(\ \mv{u}\ ,\ \mv{v}\ )=u'^{\,i}v'^{\,j}\,s\,(\ \mv{e'}_{\,(i)}\ ,\ \mv{e'}_{\,(j)})
+s\,(\ \mv{u}\ ,\ \mv{v}\ )
+=u'^{\,i}v'^{\,j}\,s\,(\ \mv{e'}_{\,(i)}\ ,\ \mv{e'}_{\,(j)})
 \]
 \[
 s'_{ij}\,=\,s\,(\ \mv{e'}_{\,(i)}\ ,\ \mv{e'}_{\,(j)})
@@ -299,5 +303,29 @@ s'_{ij}\,=\,s\,(\ \mv{e'}_{\,(i)}\ ,\ \mv{e'}_{\,(j)})
 \]
 \[
 s'_{ij}\,=\sum_k\sum_lP^k_i\,P^l_j\,s_{kl}
+\]
+\[
+Exemple\ rang\ (2,1)\quad T\big(\ \ \vd{\omega}\ , \ \vd{\rho}\ ,\ \mv{u}\ \big)
+\quad\to\quad T^{ab}_c=
+T\big(\,\ \vd{\omega}^{\ (a)}\ , \ \vd{\rho}^{\ (b)}\ ,\ \mv{u}_{\ (c)}\,\ \big)
+\]
+
+Les coefficient $T^{ab}_c$ définissent entièrement T. Comment se transforme ces coefficient lors d'un changement de base ?
+\[
+T'^{ab}_c=%\vd{\varepsilon '\,}^{\ (k)}
+T\big(\ \ \vd{\varepsilon '\ }^{\ (a)},\ \ \vd{\varepsilon '\ }^{\ (b)},\ \ 
+\mv{e'}_{\ (c)}\,\ \big)
+\]
+
+Les vecteurs de base u se transforme avec P, les vecteurs de la base duale $\varepsilon$ avec $P^{-1}$ :
+\[
+\vd{\varepsilon '\ }^{\ (a)}=[P^{-1}]_i^a\ \ \vd{\varepsilon}^{\ (i)}\ ,
+\qquad\vd{\varepsilon '\ }^{\ (b)}=[P^{-1}]_j^b\ \ \vd{\varepsilon}^{\ (j)}\ ,
+\qquad\mv{e'}_{\ (c)}=[P]_c^k\ \ \mv{e}_{\ (k)}
+\]
+et donc par linéarité,
+\[
+\boxed{\ T'^{ab}_c=P^{_{-1}a}_i\ P^{_{-1}b}_j\ P^{k}_c\ T^{ij}_k
+\ }
 \]
 %\[\]   \ \ \boxed{}
