@@ -72,10 +72,26 @@ L'ensemble des vitesses en un point va nous permettre de définir un espace vect
 \section{Espace vectoriel tangent}
 Par définition, l'espace vectoriel tangent à M au point p est :
 \[
-T_pM = \{ {v}_{\gamma,p}\ |\ \gamma : I \to M  \}
+\boxed{T_pM = \{ {v}_{\gamma,p}\ |\ \gamma : I \to M  \}}
 \]
 
+x, y étant deux cartes de M, on a :
 
+\hspace*{2cm}
+\begin{minipage}[c]{.45\linewidth}
+\[
+\gamma : I \to M \qquad x : M \to \mb{R}^n \qquad y : M \to \mb{R}^n
+\]
+\[
+x \circ \gamma : I \to \mb{R}^n \qquad y \circ \gamma : I \to \mb{R}^n
+\]
+\[
+y \circ x^{-1} : \mb{R}^n \to \mb{R}^n
+\]
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+\hspace*{2cm}
 \begin{tikzpicture}
 \def\largeur{3} \def\hauteur{2} \def\decalage{0.3}
 \node (A) at (0,0) {$I\ $};
@@ -93,21 +109,11 @@ T_pM = \{ {v}_{\gamma,p}\ |\ \gamma : I \to M  \}
 \draw[thick,->] (B)--(C);
 \draw[thick,->] (B)--(D);
 \end{tikzpicture}
+\end{minipage}
 
 
 
-x, y étant deux cartes de M, on a :
-\[
-\gamma : I \to M \qquad x : M \to \mb{R}^n \qquad y : M \to \mb{R}^n
-\]
-et
-\[
-x \circ \gamma : I \to \mb{R}^n \qquad y \circ \gamma : I \to \mb{R}^n
-\]
-et
-\[
-y \circ x^{-1} : \mb{R}^n \to \mb{R}^n
-\]
+
 
 \begin{minipage}[c]{.45\linewidth}
 \begin{tikzpicture} % "THE GLOBE" showcase
@@ -156,13 +162,56 @@ f \mapsto(\mr{V}_{\gamma_1,p}+\mr{V}_{\gamma_2,p})(f) =
 \[
 \begin{array}{ l c l l }
  \mr{V}_{\gamma,p} : & \mc{C}^\infty(M) & \to & \mb{R} \\ 
-  & f & \mapsto & {v}_{\gamma,p}(f)=(f\circ\gamma)'|_{\lambda_0} \\
+  & f & \mapsto & \mr{V}_{\gamma,p}(f)=(f\circ\gamma)'|_{\lambda_0} \\
 \end{array}
 \]
 \end{minipage}
 
 \end{proof}
-%{"Reparamétrage" d'une courbe}%
+
+\subsection{"Reparamétrage" d'une courbe}
+
+\begin{minipage}[c]{.45\linewidth}
+\[
+\lambda \in \mb{R}, \ \mr{V}_\gamma \in T_{p\,}M
+\]
+\[
+\lambda \cdot \mr{V}_\gamma
+\]
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+Reparamétrage de $\lambda$
+\[
+\begin{array}{ l c l l }
+\mu : & \mb{R} & \to & \mb{R} \\ 
+\gamma\circ\mu & J & \to & \mb{R} \\
+\end{array}
+\]
+\[
+\gamma\circ\mu\ (\lambda_0)=p
+\]
+\end{minipage}
+
+\[
+\begin{array}{ l c l l }
+ \mr{V}_{\gamma,p} : & \mc{C}^\infty(M) & \to & \mb{R} \\ 
+  & f & \mapsto & \mr{V}_{\gamma,p}(f)=(f\circ\gamma\circ\mu)'|_{\lambda_0}
+ =(f\circ\gamma)'.\mu'=\mu'.\mr{V}_{\gamma,p}(f) \\
+\end{array}
+\]
+
+\begin{tikzpicture}
+\draw(-3, 1) to[out=50, in=160] (2,3) node[below left]{$M$}
+to[out=-50, in=70] (2.5,1) to[out=150, in=70] (-2,-1)
+to[out=120, in=-90] (-3, 1); % Espace, variété M
+%
+\draw(-2,1) node[above]{$\gamma$};
+\draw(-2,0.5) to[out=60, in=170] (0.2,1.9) node[above]{$p$}
+to[out=-10, in=190] (2,2); % Courbe gamma
+%
+\draw(0.1,2) -- (0.3,1.8); \draw(0.1,1.8) -- (0.3,2);% croix
+\end{tikzpicture}
 %{Espace vectoriel tangent, TpM : addition de deux vitesses et multiplication par un scalaire}%
 %{Courbes coordonnées (d'une carte donnée) et vitesses associées}%
 %{Base de TpM associée à une carte donnée}%
