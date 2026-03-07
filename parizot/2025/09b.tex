@@ -2,10 +2,138 @@
 
 {\bf Chapitre 6 : Métrique et géodésiques (suite)}
 "Compatibilité" entre métrique et dérivée covariante
-Connexion de Levi-Civita
-Tenseur de courbure de Ricci
-Courbure scalaire de Ricci
-Tenseur d'Einstein (et équations d'Einstein)
 
-Remarque :
-gravitation newtonienne et espace-temps courbe
+$(M, \mc{O}, \mc{A}, g, ^{LC}\nabla)$
+\[
+\tag{1}(\nabla_{\frac{\partial}{\partial x^a}}g)_{bc} =
+\frac{\partial}{\partial x^a} g_{bc}-\Gamma^i_{ca}\,g_{ib}-\Gamma^j_{ba}\,g_{cj}
+\]
+\[
+\tag{2}(\nabla_{\frac{\partial}{\partial x^b}}g)_{ca} =
+\frac{\partial}{\partial x^b} g_{ca}-\Gamma^i_{ab}\,g_{ic}-\Gamma^j_{cb}\,g_{aj}
+\]
+\[
+\tag{3}(\nabla_{\frac{\partial}{\partial x^c}}g)_{ab} =
+\frac{\partial}{\partial x^c} g_{ab}-\Gamma^i_{bc}\,g_{ia}-\Gamma^j_{ac}\,g_{bj}
+\]
+
+(1)-(2)-(3)
+
+
+\[
+0=\frac{\partial}{\partial x^a} g_{bc}-\frac{\partial}{\partial x^b} g_{ca}
+-\frac{\partial}{\partial x^c} g_{ab}-2\Gamma^i_{cb}g_{ia}
+\]
+
+\[
+g_{ia}\Gamma^i_{cb}=\frac{1}{2}\left(\frac{\partial}{\partial x^b} g_{ca} +
+\frac{\partial}{\partial x^c} g_{ba}-\frac{\partial}{\partial x^a} g_{bc}\right)
+\]
+
+\[
+g^{ka}_{jk}
+\]
+
+Connexion de Levi-Civita
+
+dérivé covariante, "commute" avec les "montées/descentes" d'indice
+
+\[
+\nabla_{\frac{\partial}{\partial x^i}}(Bra(X)) =
+Bra(\nabla_{\frac{\partial}{\partial x^i}}X)
+\]
+
+\[
+Bra(\nabla_{\frac{\partial}{\partial x^i}}X) =
+g_{kj}\nabla_{\frac{\partial}{\partial x^i}}^k
+\]
+
+\[
+X = X^i\frac{\partial}{\partial x^i} \qquad Bra(X) = X_jdx^j \quad
+o\grave u  \quad X_j = g_{ij}X^i
+\]
+\[
+\nabla_Y(Bra(X))=Bra(\nabla_YX) \qquad \nabla_{\frac{\partial}{\partial x^i}}X
+\]
+
+Tenseur de courbure de Ricci
+\[
+(\nabla_Xg)_j=0
+\]
+
+
+Courbure scalaire de Ricci
+
+\[
+\begin{array}{ c c l }
+ \mc{R}^i_{jkl} & \to & \mc{R}^i_{jil} \equiv R_{jl} \\
+  Riemann &  & Ricci \\
+    & \xrightarrow[\text{g}]{} & g^{jk}R_{jl} = R^k_l \to R^k_k=R \\
+\end{array}
+\ \ 
+\]
+\[
+g,\ (1,3) \quad \to \quad ^\mc{U}\Gamma \quad symboles\ de\ Christoffel
+\]
+\[
+\mc{R}^i_{jkl}=\partial\Gamma-\partial\Gamma+\Gamma\Gamma-\Gamma\Gamma
+\]
+\[
+\frac{\partial g}{\partial x^i} \qquad (\nabla _X g)_j=0
+\]
+\[
+\mc{R}^i_{jkl} \to \frac{\partial ^2g}{\partial x^i\partial x^j}
+\]
+
+Tenseur d'Einstein (et équations d'Einstein)
+\[
+\boxed{ G_{\mu\nu} = R_{\mu\nu}-\frac{1}{2}Rg_{\mu\nu} }
+\qquad G_{\mu\nu} = \kappa T_{\mu\nu}
+\]
+$T_{\mu\nu}$ est le tenseur énergie impulsion
+\[
+S=\int \underbrace{\mc{R}\sqrt{-g}}_{\displaystyle \mc{L}_{espace-temps}}\ d
+ + \mc{L}_{mati\grave{e}re}
+\]
+$\mc{L}_{mati\grave{e}re}$ correspondant à $T_{\mu\nu}$
+
+
+%Remarque :
+%gravitation newtonienne et espace-temps courbe
+\section{Gravitation newtonienne}
+\[
+m_{inerte}\frac{d\vec{v}}{dt}=\vec{F}_{Grav}=m_{Grav}\vec{g}
+\]
+\[
+\ddot{x}^i_\gamma-\frac{F}{m}^i(\gamma)=0
+\]
+\[
+\ddot{x}^i_\gamma-\frac{F}{m}^i(\gamma)
+\times\underset{\substack{\downarrow \\ \frac{dt}{dt}}}{1}
+\times\underset{\substack{\downarrow \\ \frac{dt}{dt}}}{1}=0
+\]
+
+\[
+\ddot{x}^i_\gamma-\frac{F}{m}^i\dot{x}^0\dot{x}^0=0
+\quad (x^0=t,\ x^1,\ x^2,\ x^3)
+\]
+\[
+\Gamma^i_{jk} = 0 \quad sauf \quad \Gamma^i_{00}=-\frac{F}{m}^i
+\]
+\[
+\frac{\vec{F}}{m}=\vec{g}=-\vec{grad}\phi
+\qquad \Delta\phi=4\pi G\rho
+\]
+\[
+R_{00}=4\pi G T_{\mu\nu}
+\]
+\[
+g^{\mu\nu}G_{\mu\nu}=R-\frac{1}{2}Rg^{\mu\nu}g_{\mu\nu}
+ = 8\pi Gg^{\mu\nu}T_{\mu\nu}
+\]
+\[
+R_{\mu\nu}=8\pi G(T_{\mu\nu}-\frac{1}{2}Tg_{\mu\nu})
+\]
+
+
+
