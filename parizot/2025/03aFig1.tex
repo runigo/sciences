@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+% x
+\draw[->] (4,2.2) -- (6.1,2.2) node[right] {$x^1$};
+\draw [->] (4.2,2) -- (4.2,3.8) node[above] {$x^2$};
+% y
+\draw[->] (0,3.3) -- (1.5,3.3);% node[right] {$y^1$}
+\draw [->] (0.2,3.1) -- (0.2,4.5);% node[above] {$y^2$}
+% z
+\draw[->] (0.4,0.8) -- (2.2,0.8);% node[right] {$z^1$}
+\draw [->] (0.6,0.6) -- (0.6,2.2);% node[above] {$z^2$}
+%
+\draw(5.3, 6.7) to[out=0, in=90] (6.6,5.7) to[out=-90, in=0] (5.5,5.1)
+to[out=180, in=0] (4.3,5.4) to[out=180, in=0] (2.7,3.8) to[out=180, in=-90]
+(2.3,4.8) to[out=90, in=180] (5.3, 6.7);
+\end{tikzpicture}
