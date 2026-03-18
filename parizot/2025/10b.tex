@@ -170,18 +170,13 @@ f dérivable
 \frac{\partial f}{\partial x^i}=\partial_i(f\circ x^{-1})
 \]
 \[
-\int_\mc{U}f=\int_{x}(f\circ x^{-1})dx^1...dx^n
+\begin{array}{ r c l }
+ \int_\mc{U}f & = & \int_{x(\mc{U})}(f\circ x^{-1})dx^1...dx^n \\
+  & = & \int_{y(\mc{U})}(f\circ y^{-1})dy^1...dy^n \\
+  & = & \int\big(f\circ x^{-1}\big)\circ\big(x\circ y^{-1}\big)dy \\
+\end{array}
 \]
 \end{minipage}
-
-
 \[
-\]
-\[
-\]
-\[
-\]
-\[
-\]
-\[
+J = det(|\frac{\partial y^j}{\partial x^i}|)
 \]
