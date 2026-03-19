@@ -1,0 +1,127 @@
+
+{\bf 03 (2017-2018)}
+
+ III-4 Mesure, Rappels.
+
+Copenhague : disparition aléatoire
+
+Everett : refuse la disparition,
+
+\subsection{Résultat effectif d'une mesure} % III-6
+\subsubsection{Indéterminisme et aléatoire} % a)
+
+$|g_i>$
+
+$\sum_i\alpha_i|g_i>$
+
+\[
+\]
+
+\subsubsection{Règle de Born} % b)
+
+$\sum_i\alpha_i|g_i>$
+
+$|g_i>$
+
+$\mc{P}(g_i) \propto |\alpha_i|^2$
+
+\[
+\mc{P}(g_i)=\frac{|\alpha_i|^2}{\sum_j|\alpha_j|^2}
+\]
+
+1957
+
+$|g_i>$ $\lambda|g_i>$
+
+\[
+\mc{P}(g_i)=\frac{|\lambda|^2}{|\lambda|^2}
+\]
+
+\[
+\alpha_1|g_1>+\alpha_2|g_2>+...+\alpha_n|g_n>
+\]
+
+$\forall\lambda\in\mb{C}$
+
+\subsection{Comment distinguer deux états} % 7
+\subsubsection{Classique} % a
+\subsubsection{Quantique} % b
+
+\subsection{Préparation d'un système} % 8
+
+\subsection{Irréversibilité} % 9
+
+\section{Structure hermitienne, rappels} % î®
+\subsection{Produit scalaire sur un $\mb{R}$-espace vectoriel} % 1
+\subsubsection{Définition} % a
+Forme bilinéaire symétrique définie positive
+\[
+\begin{array}{ c r c l }
+ f : & \mc{E}\times\mc{E} & \to & \mb{R} \\
+  & u,v & \mapsto & f(u,v) \\
+\end{array}
+\]
+linéaire à droite
+\[
+f(u,\lambda v_1+\mu v_2)=\lambda f(u,v_1)+\mu f(u,v_2)
+\]
+linéaire à gauche
+\[
+f(\lambda u_1+\mu u_2, v)=\lambda f(u_1,v)+\mu f(u_2,v)
+\]
+symétrique
+\[
+f(u,v)=f(v,u)
+\]
+positive
+\[
+f(u,v)\geqslant 0
+\]
+définie
+\[
+f(u,u)=0_\mb{R} \Leftrightarrow u=0_\mc{E}
+\]
+
+Exemple $\mb{R}^n$
+\[
+\left(\begin{array}{ c }
+ u_1 \\ \vdots \\ u_n \\
+\end{array}\right)
+\qquad
+\left(\begin{array}{ c }
+ u_1 \\ \vdots \\ u_n \\
+\end{array}\right)
+\quad\to\quad f(u,v)=u.v
+\]
+Norme associée
+\[
+||u||=\sqrt{f(u,u)}
+\]
+
+\subsubsection{Notion d'orthogonalité} % b
+
+\[
+u \perp v \quad alors\quad f(u,v)=0
+\]
+Soit A une partie de $\mc{E}$
+\[
+A^\perp = \{u\in\mc{E},\ \forall a \in A,\ f(a,u)=0\}
+\]
+
+$\to$ famille orthogonale
+\[
+\{u_i\}\ telle\ que\ \forall i,j,\ i\neq j \Rightarrow f(u_i,u_j)=0
+\]
+
+En dimension finie, il existe une base orthogonale
+\subsubsection{Expression dans une base orthogonale} % c
+\[
+\{e_i\}_{i\in\{1,...,n\}} \qquad f(e_i,e_j)=\delta_{ij}
+\]
+\[
+f(u,v)=f(\sum_iu_ie_i,\sum_jv_je_j)=\sum_i\sum_ju_iv_jf(e_i,e_j)=\sum_iu_iv_i
+\]
+soit
+\[
+\boxed{f(u,v)=\sum_iu_iv_i}
+\]
