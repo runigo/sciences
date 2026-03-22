@@ -1,0 +1,195 @@
+
+{\bf 04 IV Structure hermitienne}
+
+\subsection{Produit scalaire sur un $\mb{C}$-espace vectoriel} % IV. 2.
+\subsubsection{Définition}
+\[
+h(u,v)=h(v,u)^*\qquad h(u,u)\in\mb{R}^+
+\]
+\[
+h(u,u)=0\ ssi\ u=0\qquad||u||^2=h(u,u)
+\]
+\subsubsection{Notion d'orthogonalité}
+\[
+u \perp v \quad alors\quad h(u,v)=0
+\]
+\[
+A^\perp = \{u\in\mc{E},\ \forall a \in A,\ h(a,u)=0\}
+\]
+famille orthogonale
+\[
+\{v_i\}\ telle\ que\ \forall i,j,\ i\neq j \Rightarrow h(v_i,v_j)=0
+\]
+
+\[
+v'_2=\frac{h(v_1,v_2)v_1}{h(v_1,v_1)}\qquad et\qquad v_2-v'_2\ \perp v_1
+\]
+{\footnotesize\[
+h(v_1,v_2-v'_2)=h(v_1,v_2)-h(v_1,v'_2)=
+h(v_1,v_2)-h(v_1,\frac{h(v_1,v_2)v_1}{h(v_1,v_1)})=
+h(v_1,v_2)-\frac{h(v_1,v_2)}{h(v_1,v_1)}h(v_1,v_1)=0\ \blacksquare
+\]}
+
+\subsubsection{Expression d'un vecteur}
+$\{e_i\}_{i\in I}$
+
+\[
+\forall u\in\mc{E},\ \exists!\{u_i\}_{i\in I}\quad tel\ que\quad u=\sum_iu_ie_i
+\]
+
+\[u=
+\left(\begin{array}{ c }
+ u_1 \\ u_2 \\ \vdots \\ u_n \\
+\end{array}\right)
+\]
+
+\[
+h(u,v)=h(\sum_iu_ie_i,\sum_jv_je_j)=\sum_i\sum_ju_i^*v_jh(e_i,e_j)
+\]
+$\{e_i\}_{i\in I}$ est une base orthonormé $h(u,v)=\delta_{ij}$
+\[
+\boxed{h(u,v)=\sum_iu_i^*v_i}
+\]
+
+\subsubsection{Notation}
+On note 
+\[
+h(u,v)=\braket{u}{v}
+\]
+
+\[
+\braket{v}{u}=\braket{u}{v}^*
+\]
+\subsection{Opérateurs linéaires} % 3.
+\subsubsection{Définition} % a.
+
+\newcommand{\wA}[0]{\widehat A}
+\[
+\begin{array}{ c r c l }
+ \wA : & \mc{E} & \to & \mc{E} \\
+  & u & \mapsto & v=\wA (u) \\
+  &  &  & \ket{v}=\wA \ket{u} \\
+\end{array}
+\]
+\[
+\wA \big(\alpha_1\ket{u_1}+\alpha_2\ket{u_2}\big)=
+\alpha_1\wA \ket{u_1}+\alpha_2\wA \ket{u_2}
+\]
+Action de $\wA$
+\[
+\{\ket{e_i}\}_{i\in I}\qquad\ket{v}=\sum_iv_i\ket{e_i}
+\]
+\[
+\wA\ket{u}=\sum_iu_i\wA\ket{e_i}
+\]
+\subsubsection{Représentation dans une base orthonormé} % b.
+\[
+\{\ket{e_i}\}_{i\in I}\qquad h(\ket{e_i},\ket{e_j})=\braket{e_i}{e_j}
+\]
+\[
+\forall i\quad\ket{e_j}\quad\to\quad\wA\ket{e_j}=\sum_ia_{ij}\ket{e_i}\qquad
+\]
+$\wA$
+\[
+\wA=\left[\begin{array}{ c c c c }
+ a_{11} & a_{12} & \ldots & a_{1n} \\
+ a_{21} & a_{22} & \ldots & a_{2n} \\
+ \vdots & \vdots &  & \vdots \\
+ a_{n1} & a_{n2} & \ldots & a_{nn} \\
+\end{array}\right]
+\qquad,\qquad\left[\begin{array}{ c }
+ a_{11} \\
+ a_{21} \\
+ \vdots \\
+ a_{n1} \\
+\end{array}\right]
+est\ l'image\ de\ \ket{e_1}\ ...
+\]
+\subsubsection{Éléments de matrice} % c.
+\[
+\boxed{a_{ij}=\bra{e_i}\wA\ket{e_j}}
+\]
+
+{\footnotesize
+\[
+\wA\ket{e_j}=\sum_ka_{kj}\ket{e_k}\qquad,\qquad
+h(\ket{e_i},\wA\ket{e_j})=a_{ij}=\bra{e_i}\wA\ket{e_j}
+\blacksquare\]}
+De manière générale, $\bra{u}\wA\ket{v}$ a un sens car le produit matriciel est associatif.
+ 
+\subsubsection{Valeur propre et vecteur propre} % d.
+$\ket{\Psi}$ $\lambda$
+\[
+\wA\ket{\Psi}=\lambda\ket{\Psi}
+\]
+\[
+\lambda\in\mb{C}
+\]
+
+\[
+\{\ket{}e_i\}_{i\in I}\qquad
+\]
+
+\subsection{Opérateur adjoint} % 
+\subsubsection{Définition} % a.
+Soit 
+\[
+(\mc{E},h(\cdot,\cdot))
+\]
+\[
+a\in\mc{E}\qquad u\mapsto h(a,u)\quad\in\mb{R} 
+\]
+Th
+\[
+\forall f(u) \ lin\acute eaire,\quad\exists!\ b\quad tel\ que\quad
+f(u)=\braket{b}{u}
+\]
+
+\[
+\forall\ket{v}\quad\ket{u}\mapsto h(\ket{v},\wA\ket{u})\quad
+est\ lin\acute eaire\ en \ket{u}\ donc
+\]
+\[
+\exists\ket{v'}\quad tel\ que\quad h(\ket{v},\wA\ket{u})=h(\ket{v'},\ket{u})
+\]
+\[
+par\ d\acute efinition,\quad \ket{v'}=\wA^\dagger\ket{v}
+\]
+Autrement dit,
+\[
+\forall\ket{v}\quad\exists!\ \ket{v'}\quad tel\ que\quad h(\ket{v},\wA\ket{u})=
+h(\ket{v'},\ket{u})
+\]
+et $\ket{v}$ $\ket{v'}$ $\wA$ $\wA^\dagger$ $\ket{v}\mapsto\ket{v'}$
+
+Autrement dit
+\[
+\boxed{h(\ket{v},\wA\ket{u})=h(\wA^\dagger\ket{v},\ket{u})}
+\]
+Autrement dit
+\[
+\bra{v}\wA\ket{u}=\braket{(\wA^\dagger\ket{v})}{u}
+\]
+
+\subsubsection{Représentation matricielle} % b.
+$\wA^\dagger$ $\ket{e_i}$
+\[
+h(\wA^\dagger\ket{e_i},\ket{e_j})=h(\ket{e_i},\wA\ket{e_j})
+\]
+{\footnotesize
+\[
+h(\wA^\dagger\ket{e_i},\ket{e_j})=h(\ket{e_j},\wA^\dagger\ket{e_i})^*
+=\bra{e_i}\wA^\dagger\ket{e_j}=a^\dagger{ji}
+\]
+et
+\[
+h(\ket{e_i},\wA\ket{e_j})=\bra{e_i}\wA\ket{e_j}=a_{ij}
+\]
+}
+d'où
+\[
+a_{ji}^{\dagger *}=a{ij}\qquad soit\qquad\boxed{a_{ij}^\dagger = a_{ji}^*}
+\]
+
+$\wA^\dagger$ $\wA$
+
