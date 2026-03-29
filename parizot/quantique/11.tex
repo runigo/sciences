@@ -1,83 +1,139 @@
 
 {\bf Combinaison de deux systèmes quantiques}
 - Espace des états : produit tensoriel
-- Action linéaire dans l'espace produit tensoriel : produit tensoriel de deux opérateurs linéaires
+- Action linéaire dans l'espace produit tensoriel : produit tensoriel de deux 
+opérateurs linéaires
 - "Promotion" d'un opérateur agissant sur un seul sous-système
 - Exemple de deux qubits
 - Mesures individuelles sur un qubit intriqué
 
 \section{Systèmes de deux qubis, états intriqués}
 
+$\mr{H}_1$ et $\mr{H}_2$ sont deux espaces de Hilbert associés aux systèmes 1 et
+2. Les e$_i$ et f$_j$ sont des bases orthonormées de ces espaces.
 \[
 \begin{array}{llll}
 sous-syst\grave{e}me\ 1\ :\ \mr{H}_1 & \to\ base & \{e_i\}_{i\in I} \\
 sous-syst\grave{e}me\ 2\ :\ \mr{H}_2 & \to\ base & \{f_i\}_{i\in J} \\
 \end{array}
 \]
+
+$\mr{H}$ est l'espace de Hilbert du système global
 \[
 \to\ syst\grave{e}me\ global\qquad \mr{H}=\mr{H}_1\otimes\mr{H}_2
 \quad\to\ base\ \{e_i\otimes f_j\}_{i,j\in I\times J}
 \]
+h est le produit hermitien sur $\mr{H}$
 \[
 h(e_i\otimes f_j\,,\,e_k\otimes f_l)=\delta_{ik}\delta_{jl}
 \]
+
+Certains état du système global peuvent s'écrire
 \[
-\ket{\phi}^{(1)}\otimes\ket{\psi}^{(2)}\qquad 2\ qubits\ :
+\ket{\phi}^{(1)}\otimes\ket{\psi}^{(2)}
 \]
+mais il existe des états qui ne peuvent pas s'écrire ainsi : les états intriqués.
+
+Exemple de deux qubits : la composante suivant l'axe z du spin d'un sous-système
+peut prendre deux valeur : $\hbar / 2$ et $-\hbar / 2$, les états correspondant
+sont noté $\ket{+}_z$ et $\ket{-}_z$.
 \[
 \begin{array}{ c }
  \{\ket{+}^{(1)}_z,\ket{-}^{(1)}_z\} \\
  \{\ket{+}^{(2)}_z,\ket{-}^{(2)}_z\} \\
 \end{array}
 \]
+sont des bases orthonormé des espaces $\mr{H}_1$ et $\mr{H}_2$. On définie alors une base
+orthonormé de $\mr{H}$ :
 \[
 \begin{array}{ c }
  \ket{+}^{(1)}_z\otimes\ket{+}^{(2)}_z=\ket{+\,+} \\
  \ket{+}^{(1)}_z\otimes\ket{-}^{(2)}_z=\ket{+\,-} \\
  \ket{-}^{(1)}_z\otimes\ket{+}^{(2)}_z=\ket{-\,+} \\
- \ket{-}^{(1)}_z\otimes\ket{-}^{(2)}_z=\ket{-\,-} \\
+ \ket{-}^{(1)}_z\otimes\ket{-}^{(2)}_z=\ket{-\ -} \\
 \end{array}
 \]
+
+On a alors les états intriqués $\ket{s}$ et $\ket{t}$
 \[
 \begin{array}{ c }
 \ket{s}=\frac{1}{\sqrt{2}}(\ket{+\,-}-\ket{-\,+}) \\
 \ket{t}=\frac{1}{\sqrt{2}}(\ket{+\,-}+\ket{-\,+})
 \end{array}
 \]
+ces deux vecteurs sont orthogonaux, entre eux et avec les états $\ket{+\,+}$ et
+$\ket{-\ -}$
 \[
 \braket{t}{s}=0
 \]
 \[
-\braket{++}{s}=0\qquad\braket{++}{t}=0
+\braket{+\,+}{s}=0\qquad\braket{+\,+}{t}=0
 \]
 \[
-\braket{--}{s}=0\qquad\braket{--}{t}=0
+\braket{-\ -}{s}=0\qquad\braket{-\ -}{t}=0
 \]
-L'ensemble
+
+On a alors une autre base orthonormé de $\mr{H}$.
 \[
-\{\ket{+\,+},\ket{-\,-},\ket{t},\ket{s}\}
+\{\ket{+\,+},\ket{-\ -},\ket{t},\ket{s}\}
 \]
-est une base.
 \subsection{Action sur l'espace des états du système global} % 4
 \subsubsection{Produit tensoriel d'applications linéaires} % a
+Soient E, F, E', F' des espaces vectoriels sur le même corps $\mb{K}$, f et g deux applications linéaires :
 \[
 \begin{array}{ c c c c }
  f\ : & E & \to & E' \\
  g\ : & F & \to & F' \\
 \end{array}
 \]
+
+L'application
 \[
 \begin{array}{ c c c c }
   & E\otimes F & \to & E'\otimes F' \\
   & (x,y) & \mapsto & f(x)\otimes g(y) \\
 \end{array}
 \]
-est bilinéaire
+est bilinéaire, elle est notée $f\otimes g$.
+\subsubsection{Action sur les étas de $\mr{H}=\mr{H}_1\otimes\mr{H}_2$} % a
+Soit l'opérateur $\wG$ agissant sur $\mr{H}_1$
 \[
-\braket{+}{s}=0
+\wG\ket{g_i}^{(1)}=g_i\ket{g_i}^{(1)}
+\]
+si l'état du système 1 est $\ket{\phi}^{(1)}$,
+\[
+\ket{\phi}^{(1)}=\sum_i\alpha_i\ket{g_i} \qquad alors\qquad
+\wG\ket{\phi}^{(1)}=\sum_i\alpha_i\,g_i\ket{g_i}^{(1)}
+\]
+
+$\wG$ peut être promu en un opérateur agissant dans $\mr{H}$ de la façon suivante :
+\[
+\wG'=\wG\otimes\wId^{(2)}
+\]
+$\wG$ agit sur $\mr{H}_1$ et $\wId^{(2)}$ agit sur $\mr{H}_2$. $\wG'$ agit bien sur $\mr{H}$.
+\[
+\ket{\phi}^{(1)}\otimes\ket{\psi}^{(2)}
+\]
+est un état séparable.
+\[
+\wG'(\ket{\phi}^{(1)}\otimes\ket{\psi}^{(2)})=(\wG\otimes\wId^{(2)})
+\ket{\phi}^{(1)}\otimes\ket{\psi}^{(2)}
+\]
+\[
+=(\wG\ket{\phi}^{(1)})\otimes(\wId^{(2)}\ket{\psi}^{(2)})
+\]
+\[
+=(\sum_i\alpha_i\,g_i\ket{g_i}^{(1)})\otimes(\ket{\psi}^{(2)})
+\]
+La particule 2 est "spectatrice". 32 min
+\[
+\ket{}
 \]
 \[
 \ket{}
+\]
+\[
+\braket{+}{s}=0
 \]
 \[
 \ket{}
