@@ -113,8 +113,9 @@ $\wG$ peut être promu en un opérateur agissant dans $\mr{H}$ de la façon suiv
 $\wG$ agit sur $\mr{H}_1$ et $\wId^{(2)}$ agit sur $\mr{H}_2$. $\wG'$ agit bien sur $\mr{H}$.
 \[
 \ket{\phi}^{(1)}\otimes\ket{\psi}^{(2)}
+\qquad est\ un\ \acute{e}tat\ s\acute{e}parable\ :
 \]
-est un état séparable.
+
 \[
 \wG'(\ket{\phi}^{(1)}\otimes\ket{\psi}^{(2)})=(\wG\otimes\wId^{(2)})
 \ket{\phi}^{(1)}\otimes\ket{\psi}^{(2)}
@@ -125,19 +126,223 @@ est un état séparable.
 \[
 =(\sum_i\alpha_i\,g_i\ket{g_i}^{(1)})\otimes(\ket{\psi}^{(2)})
 \]
-La particule 2 est "spectatrice". 32 min
+La particule 2 est "spectatrice".\qquad Soit l'opérateur $\wF$ agissant sur
+$\mr{H}_2$. On a :
 \[
-\ket{}
+\wF\ket{f_i}^{(2)}=f_i\ket{f_i}^{(2)}
 \]
 \[
-\ket{}
+\wF'=\wId^{(1)}\otimes\wF
 \]
 \[
-\braket{+}{s}=0
+\wF'(\ket{\phi}^{(1)}\otimes\ket{\psi}^{(2)})
+=\ket{\phi}^{(1)}\otimes\wF\ket{\psi}^{(2)}
+\]
+Le premier sous système est spectateur. On envisage alors l'action conjointe de
+$\wG$ et $\wF$
+\[
+\wG\otimes\wF(\ket{\phi}^{(1)}\otimes\ket{\psi}^{(2)})
+=(\wG(\ket{\phi}^{(1)})\otimes(\wF\ket{\psi}^{(2)})
+\]
+Sur un état séparable, l'action est trivial. De façon générale, on obtient pour les vecteurs de base :
+\[
+\wG\otimes\wF(\ket{g_i}\otimes\ket{f_i}) = g_i\ket{g_i}\otimes f_i\ket{f_i}
+=g_if_i\ket{g_i}\otimes\ket{f_i}
+\]
+Pour une combinaison linéaire,
+\[
+\ket{\phi}^{(1)}=\sum_i\alpha_i\ket{g_i}
+\qquad\ket{\psi}^{(2)}=\sum_j\beta_j\ket{f_i}
+\]
+on obtient par linéarité
+\[
+\wG\otimes\wF(\ket{\phi}^{(1)})\otimes(\ket{\psi}^{(2)})
+=\sum_{ij}\alpha_i\,\beta_j\,g_i\,f_i\ket{g_i}\otimes\ket{f_i}
+\]
+\subsection{Action sur un système de deux qubits}
+On considère l'action sur la particule 1 de l'opérateur de spin $\wS_z$ suivant Oz
+\[
+\wS_z^{(1)\prime}=\wS_z^{(1)}\otimes\wId^{(2)}
 \]
 \[
-\ket{}
+\wS_z^{(1)\prime}\ket{+\,+}=\wS_z^{(1)}\ket{+}_z^{(1)}\otimes
+\ \wId^{(2)}\ket{+}_z^{(2)}
+=\frac{\hbar}{2}\ket{+}_z^{(1)}\otimes\ket{+}_z^{(2)}
+=\frac{\hbar}{2}\ket{+\,+}
 \]
+De la même façon, 
+\[
+\wS_z^{(1)\prime}\ket{+\,-}=\frac{\hbar}{2}\ket{+\,-}
+\]
+\[
+\wS_z^{(1)\prime}\ket{-\,+}=-\frac{\hbar}{2}\ket{-\,+}
+\]
+\[
+\wS_z^{(1)\prime}\ket{-\,-}=-\frac{\hbar}{2}\ket{-\,-}
+\]
+Prenons l'exemple de $\ket{s}=\frac{1}{\sqrt{2}}(\ket{+\,-}-\ket{-\,+})$
+\[
+\wS_z^{(1)\prime}\ket{s}=\frac{1}{\sqrt{2}}(\ket{+\,-}-\ket{-\,+})
+\]
+\[
+=\frac{\hbar}{2}(\frac{1}{\sqrt{2}}\ket{+\,-}+\frac{1}{\sqrt{2}}\ket{-\,+})
+\]
+On obtient $\ket{t}$
+\[
+\wS_z^{(1)\prime}\ket{s}=\frac{\hbar}{2}\ket{t}
+\]
+et de la même façon
+\[
+\wS_z^{(1)\prime}\ket{t}=\frac{\hbar}{2}\ket{s}
+\]
+$\ket{s}$ et $\ket{t}$ ne sont pas vecteur propre de $\wS_z^{(1)\prime}$.
 
+Écrivons la matrice de $\wS_z^{(1)\prime}$ dans la base $\{\ket{+\,+}
+\ket{+\,-}\ket{-\,+}\ket{-\,-}\}$ :
+\[
+\wS_z^{(1)\prime}=\frac{\hbar}{2}\left[\begin{array}{ c c c c }
+ 1 & 0 & 0 & 0 \\
+ 0 & 1 & 0 & 0 \\
+ 0 & 0 & -1 & 0 \\
+ 0 & 0 & 0 & -1 \\
+\end{array}\right]
+\]
+Dans la base $\{\ket{+\,+}\ket{-\,-}\ket{t}\ket{s}\}$ :
+\[
+\wS_z^{(1)\prime}=\frac{\hbar}{2}\left[\begin{array}{ c c c c }
+ 1 & 0 & 0 & 0 \\
+ 0 & -1 & 0 & 0 \\
+ 0 & 0 & 0 & 1 \\
+ 0 & 0 & 1 & 0 \\
+\end{array}\right]
+\]
+Action des opérateurs $\wS_x^{(1)\prime}$ et $\wS_y^{(1)\prime}$ :
+\[
+\wS_x^{(1)}=\frac{\hbar}{2}\left[\begin{array}{ c c }
+ 0 & 1 \\ 1 & 0 \\ \end{array}\right] \qquad
+\wS_y^{(1)}=\frac{\hbar}{2}\left[\begin{array}{ c c }
+ 0 & -i \\ i & 0 \\ \end{array}\right]
+\]
+On obtient alors
+\[
+\wS_x^{(1)\prime}\ket{+\,+}=\wS_x^{(1)}\otimes\wId^{(2)}
+(\ket{+}_z^{(1)}\otimes\ket{+}_z^{(2)})
+=\frac{\hbar}{2}\ket{-}_z^{(1)}\otimes\ket{+}_z^{(2)}
+=\frac{\hbar}{2}\ket{-\,+}
+\]
+et de la même façon
+\[
+\wS_x^{(1)\prime}\ket{+\,-}=\frac{\hbar}{2}\ket{-\,-}
+\]
+\[
+\wS_x^{(1)\prime}\ket{-\,+}=\frac{\hbar}{2}\ket{+\,+}
+\]
+\[
+\wS_x^{(1)\prime}\ket{-\,-}=\frac{\hbar}{2}\ket{+\,-}
+\]
+Les matrices dans la première base sont
+\[
+\wS_x^{(1)\prime}=\frac{\hbar}{2}\left[\begin{array}{ c c c c }
+ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\
+ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\
+\end{array}\right]\qquad et\qquad
+\wS_y^{(1)\prime}=\frac{\hbar}{2}\left[\begin{array}{ c c c c }
+ 0 & 0 & -i & 0 \\
+ 0 & 0 & 0 & -i \\
+ i & 0 & 0 & 0 \\
+ 0 & i & 0 & 0 \\
+\end{array}\right]
+\]
+\subsection{Mesure individuelle sur deux qubits intriqué} % 6
+\subsubsection{Mesure de $\wS_z^{(1)}$} % a
+Valeur moyenne sur l'état $\ket{\phi}^{(1)}\otimes\ket{\psi}^{(2)}$ normé
+\[
+<\wS_z^{(1)\prime}>=^{(2)}\!\bra{\psi}\,\otimes^{(1)}\!\!\!\bra{\phi}
+\ \wS_z^{(1)\prime}\ket{\phi}^{(1)}\otimes\ket{\psi}^{(2)}
+\]
+or,
+\[
+\wS_z^{(1)\prime}\ket{\phi}^{(1)}\otimes\ket{\psi}^{(2)}
+=\wS_z^{(1)}\ket{\phi}^{(1)}\otimes\ket{\psi}^{(2)}
+\]
+donc
+\[
+<\wS_z^{(1)\prime}>=^{(2)}\!\bra{\psi}\,\otimes^{(1)}\!\!\!\bra{\phi}
+\ \wS_z^{(1)}\ket{\phi}^{(1)}\otimes\ket{\psi}^{(2)}
+\]
+finallement
+\[
+<\wS_z^{(1)\prime}>=<\wS_z^{(1)}>
+\]
+Pour un état séparable, la valeur moyenne du spin de la particule 1 dans l'état
+global est égale à la valeur moyenne du spin de la particule 1 dans l'état sans
+la particule 2.
 
+Pour un état quelconque, (supposé normé)
+\[
+\ket{\psi} = \alpha\ket{+\,+}+\beta\ket{+\,-}+\gamma\ket{-\,+}+\delta\ket{-\,-}
+\]
+Si on mesure la valeur moyenne du spin de la particule 1, on aura les
+probabilités :
+\[
+\mc{P}(\frac{\hbar}{2}) = |\alpha|^2+|\beta|^2 \qquad et
+\qquad \mc{P}(-\frac{\hbar}{2}) = |\gamma|^2+|\delta|^2
+\]
+et donc
+\[
+<\wS_z^{(1)\prime}>=\frac{\hbar}{2}(|\alpha|^2+|\beta|^2-|\gamma|^2-|\delta|^2)
+\]
+Dans l'état $\ket{s}$, 
+\[
+\alpha=0\quad,\qquad\beta=\frac{1}{\sqrt{2}}\quad,\qquad
+\gamma=-\frac{1}{\sqrt{2}}\quad et\qquad\delta=0
+\]
+et donc
+\[
+<\wS_z^{(1)\prime}>=0
+\]
+On peut retrouver ces résultats en utilisant la représentation matricielle :
+\[
+\ket{phi}=\left[\begin{array}{ c }
+ \alpha \\ \beta \\ \gamma \\ \delta \\
+\end{array}\right]
+\]
+\[
+<\wS_z^{(1)\prime}>_{\ket{\phi}}=
+\left[\begin{array}{ c c c c }
+ \alpha^* & \beta^* & \gamma^* & \delta^* \\
+\end{array}\right]
+\frac{\hbar}{2}\left[\begin{array}{ c c c c }
+ 1 & 0 & 0 & 0 \\
+ 0 & 1 & 0 & 0 \\
+ 0 & 0 & -1 & 0 \\
+ 0 & 0 & 0 & -1 \\
+\end{array}\right]\left[\begin{array}{ c }
+ \alpha \\ \beta \\ \gamma \\ \delta \\
+\end{array}\right]
+=\frac{\hbar}{2}(|\alpha|^2+|\beta|^2-|\gamma|^2-|\delta|^2)
+\]
+et
+\[
+<\wS_x^{(1)\prime}>_{\ket{\phi}}=
+\left[\begin{array}{ c c c c }
+ \alpha^* & \beta^* & \gamma^* & \delta^* \\
+\end{array}\right]
+\frac{\hbar}{2}\left[\begin{array}{ c c c c }
+ 0 & 0 & 1 & 0 \\
+ 0 & 0 & 0 & 1 \\
+ 1 & 0 & 0 & 0 \\
+ 0 & 1 & 0 & 0 \\
+\end{array}\right]\left[\begin{array}{ c }
+ \alpha \\ \beta \\ \gamma \\ \delta \\
+\end{array}\right]
+=\frac{\hbar}{2}(\alpha^*\gamma+\beta^*\delta+\gamma^*\alpha+\delta^*\beta)
+\]
+Et pour l'état $\ket{s}$
+\[
+\ket{s}=\left[\begin{array}{ c }
+ 0 \\ \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} \\ 0 \\
+\end{array}\right]
+\qquad nous\ donne\qquad<\wS_x^{(1)\prime}>_{\ket{s}}=0
+\]
 
