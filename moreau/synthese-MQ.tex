@@ -1,0 +1,97 @@
+\section{Synthèse du formalisme quantique}
+\subsection{Cadre mathématique}
+\subsubsection{Espace de Banach}
+ = Espace vectoriel normé sur un sous corps de C et complet
+ pour la distance issue de sa norme.
+
+\subsubsection{Espace de Hilbert} = $\mr{H}$ = Espace de Banach dont la norme découle du produit scalaire
+ hermitien = Généralisation pour toute dimension (dont infini) d'un espace
+ hermitien.
+
+\subsubsection{Espace hermitien} = Espace vectoriel euclidien bâti sur le corps C. (donc muni
+ d'un produit hermitien)) 
+
+\subsubsection{Espace vectoriel euclidien} = Espace vectoriel muni d'un produit scalaire
+ (forme bilinéaire symétrique définie positive : $<{\bf v_1},{\bf v_2}>\in corps$,
+ $||{\bf v}|| \wt{=} \sqrt{<{\bf v},{\bf v}>}$ : norme)
+
+\subsubsection{Espace vectoriel} = Ensemble des éléments v muni d'une
+
+ - loi externe (produit) : $\lm{}\in corps (\mb{C}, \mb{R} : scalaire)\lm{} v
+ \in \mr{E}$
+\[
+\lm{1}(\lm{2}{\bf v}) = (\lm{1}\lm{2}){\bf v} \qquad
+(\lm{1}+\lm{2}){\bf v} = \lm{1}{\bf v}+\lm{2}{\bf v} \qquad
+\lm{}({\bf v_1}{\bf v_2}) = \lm{}{\bf v_1} + \lm{}{\bf v_2} \qquad
+1.{\bf v} = {\bf v}
+\]
+
+ - loi interne (composition) : ${\bf v_1}, {\bf v_2} \in \mr{E} \Rightarrow
+  {\bf v_1}+{\bf v_2} \in \mr{E}$
+\[
+\bf{(v_1+v_2)+v_3 = v_1+(v_2+v_3) \qquad 0+v=v+0=v} \qquad
+\]
+
+Opérateurs $\wt{\mc{O}}$ : ${\bf v}\in\mr{E} \Rightarrow
+\wt{\mc{O}}{\bf v}={\bf v'}\in\mr{E}$. Linéarité (nécessaire) : 
+\[\wt{\mc{O}} (\lm{1}{\bf v_1}+\lm{2}{\bf v_2}) = 
+\lm{1}\wt{\mc{O}}{\bf v_1}+\lm{2}\wt{\mc{O}}{\bf v_2}  
+\]
+
+\subsection{Formalisme quantique}
+"Représentaion équivalentes ... de Heisenberg \& ... de Schrödinger"
+\subsubsection{Représentation x}
+"bra" : $\bra{x}$
+
+$\ph{x}{\alpha}=\phi_\alpha(x)$ : "fonction d'onde"
+
+\subsubsection{Notation symbolique de Dirac }
+
+Elément $\ket{\alpha}$ ("ket") $\in \mr{H}$ = état physique
+
+Produit hermitien $\ph{\alpha}{\alpha}=1$
+
+Projecteur orthogonal : $(\;\ket{\alpha}\bra{\alpha})\;\ket{\eta}=
+\ph{\alpha}{\eta}\ket{\alpha}$
+
+Base orthonormé (B.O.N.) : $\{\ket{\al{n}};\ph{\al{n}}{\al{m}}=\delta_{nm}\}\Rightarrow
+\sum_n\ket{\al{n}}\bra{\al{n}}$ : relation de fermeture
+
+B.O.N. continue : $\{\ket{x};\ph{x}{y}=\delta(x-y)\} \&
+\int dx\ph{\beta}{x} = \int \phi_\beta^*(x)\phi_\beta(x)=
+\int dx|\phi_\beta(x)|^2$ : fonction de carré sommable $(\mr{L}^2)$
+
+Observable = opérateur hermitique : $\wt{\mc{O}}^\dagger=\wt{\mc{O}}$
+$\qquad \bra{x}\wt{\mc{O}}\;\ket{\alpha}=\wt{\mc{O}}\;\phi_\alpha$
+
+exemple : $\wt{\mc{O}}=\wt{P},$ $\wt{\mc{O}}=\wt{X}$ avec
+$\wt{X}\bra{x}=x\bra{x}$, valeur propre et vecteur propre.
+
+valeurs propres $\al{n}$ -> résultats possibles $\in \mc{R}$
+
+états propres $\ket{\al{n}^g}$ -> B.O.N.
+
+\subsubsection{Représentation matricielle}
+$\ket{\alpha}\equiv$ vecteur \qquad $\bra{\alpha}=(\ket{\alpha})^\dagger\wt{=}
+(\ket{\alpha})^{t*}$
+
+$\ph{\alpha}{\beta}=\sum_i\alpha_i^*\beta_i \qquad
+ \ph{\alpha}{\eta}=||\;\ket{\alpha}||.||\;\ket{\alpha}||.cos\theta$
+
+$\wt{\mc{O}}^\dagger\wt{=}\wt{\mc{O}}^{t*}$
+
+$\bra{i}\wt{\mc{O}}\ket{j}=\mc{O}_{ij}$ élément de matrice
+
+\subsubsection{Théorie de la mesure}
+Système (dans l'état initial $\ket{i}$) \qquad Observable $\wt{\mc{O}}$ mesurée :
+
+\[
+P_{\ket{i}}(\al{m})=\sum_g|\ph{\al{m}^g}{i}|^2 \quad \Rightarrow \quad 
+\sum_mP_{\ket{i}}(\al{m})=1
+\]
+Spectre continu
+\[
+\frac{dP_{\ket{i}}(x)}{dx}=|\ph{x}{i}|^2 \quad \Rightarrow \quad 
+\int dx\frac{dP}{dx}=1
+\]
+

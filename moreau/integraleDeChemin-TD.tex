@@ -1,0 +1,62 @@
+TD Intégrale de chemin
+
+\section{Introduction}
+\subsection{}
+Soit l'observable de position $\wt{X}$. Ses valeurs/vecteurs propres vérifiant
+$\wt{X}\ket{x}=x\ket{x}$, à l'instant t=0. À quelle condition cette relation
+reste-t-elle vérifiée à un temps ultérieur ? Adopter les points de vue de
+Schrödinger puis de Heisenberg. (Pour cela montrer l'unitarité de U(t).)
+
+\[
+\left(e^{-\frac{i}{\hbar}\wt{H}t}\right)\wt{X}\ket{x}
+=\left(e^{-\frac{i}{\hbar}\wt{H}t}\right)x\ket{x}
+\]
+implique (Schrödinger)
+\[
+\wt{X}\ket{x}=x\ket{x}
+\]
+si et seulement si
+\[
+\cp{\wt{H}}{\wt{X}}=0 \qquad \forall t
+\]
+
+(Heisenberg)
+\[
+\wt{X}(t)=\wt{U}^\dagger(t)\;\wt{X}\;\wt{U}(t) \qquad 
+\wt{U}(t)\;\wt{X}\;\wt{U}^\dagger(t)=\wt{X}(t)
+\]
+avec à l'ordre t
+\[
+\wt{U}^\dagger(t)= I + \frac{i}{\hbar}\wt{H}^\dagger t + O(t^2)
+\]
+entrainant
+\[
+\wt{U}(t)\wt{U}^\dagger(t)=
+(I - \frac{i}{\hbar}\wt{H}^\dagger t + O(t^2))
+(I + \frac{i}{\hbar}\wt{H}^\dagger t + O(t^2)) =
+I + O(t^2)
+\]
+d'où
+\[
+\wt{U}(t)\wt{X}\wt{U}^\dagger(t)\ket{x} = x \ket{x}
+\]
+impliquant
+\[
+\wt{X}(t)\wt{U}(t)\wt{U}^\dagger(t)\ket{x} = x \ket{x}
+\]
+si et seulement si
+\[
+\cp{\wt{X}(t)}{\wt{U}(t)} = 0 =
+\wt{U}^\dagger\wt{X}\wt{U}\wt{U}-\wt{U}\wt{U}^\dagger\wt{X}\wt{U}
+\]
+\[
+=\wt{X}\wt{U}-\wt{X}\wt{U} = 0
+\]
+si
+\[
+\cp{\wt{X}}{\wt{U}(t)} = 0 \qquad \forall t
+\]
+soit
+\[
+\cp{\wt{X}}{\wt{H}} = 0 \qquad -> \qquad \cp{\wt{X}}{\wt{H}^m} = 0
+\]
