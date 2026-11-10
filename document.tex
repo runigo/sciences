@@ -1,0 +1,159 @@
+\documentclass[12pt, a4paper]{report}
+
+%====================== PACKAGES ======================
+\usepackage[french]{babel}
+\frenchbsetup{StandardLists=true}
+\usepackage{enumitem}
+\usepackage{pifont}
+\usepackage[utf8x]{inputenc}
+%\usepackage[latin1]{inputenc}
+
+% Pour gérer les positionnement d'images
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+  \usepackage{amsthm}
+
+  \renewcommand{\qedsymbol}{$\blacksquare$}
+\DeclareMathOperator{\dt}{dt}
+\usepackage{graphicx}
+%\usepackage{tabularx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{url}
+% Pour les flèches sous les lettres
+%\usepackage{accents}
+\usepackage{mathtools}
+
+% Pour les lettre \mathscr
+\usepackage{mathrsfs}
+
+% Pour les informations sur un document compilé en PDF et les liens externes / internes
+\usepackage[pdfborder=0]{hyperref}
+\hypersetup{
+	colorlinks = true
+	}
+
+% Pour la mise en page des tableaux
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{multicol}
+\setlength{\columnsep}{50pt}
+
+% Utiliser une police droite dans les formules
+\usepackage{mathastext}
+\usepackage{cancel} % Pour barrer des caractères
+% Pour utiliser \floatbarrier
+%\usepackage{placeins}
+%\usepackage{floatrow}
+
+% Espacement entre les lignes
+\usepackage{setspace}
+
+% Modifier la mise en page de l'abstract
+\usepackage{abstract}
+
+% Police et mise en page (marges) du document
+\usepackage[T1]{fontenc}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+% Pour les galerie d'images
+\usepackage{subfig}
+
+\usepackage{pdfpages}
+
+\usepackage{tikz}
+\usetikzlibrary{trees}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.pathreplacing,calligraphy}
+\usetikzlibrary {arrows.meta}
+%\usetikzlibrary{decorations}
+\usetikzlibrary{angles, quotes}
+\usepackage{verbatim}
+\usepackage{appendix}
+\usepackage{comment}
+\usepackage{xcolor}
+%\PreviewEnvironment{tikzpicture}
+%\setlength\PreviewBorder{0pt}%
+
+%====================== INFORMATION ET REGLES ======================
+
+%rajouter les numérotation pour les \paragraphe et \subparagraphe
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\hypersetup{							% Information sur le document
+pdfauthor = {Stephan Runigo},			% Auteurs
+pdftitle = {Documentation},			% Titre du document
+pdfsubject = {Documentation},		% Sujet
+pdfkeywords = {Document},	% Mots-clefs
+pdfstartview={FitH}}	% ajuste la page à la largeur de l'écran
+%pdfcreator = {MikTeX},% Logiciel qui a crée le document
+%pdfproducer = {} % Société avec produit le logiciel
+
+%======================== DEFINITION COMMANDES ========================
+\newcommand{\ul}[1]{\underline{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}} % Opérateur
+\newcommand{\mb}[1]{\mathbb{#1}}
+\newcommand{\mr}[1]{\mathscr{#1}} % Ensemble, espace
+\newcommand{\pt}[1]{\dot{\text{#1}}}
+
+\newcommand{\mv}[1]{\mathclap{\overset{\rightarrow}{\bf{#1}}}}
+\newcommand{\vd}[1]{\mathclap{\underset{\leftarrow}{\boldsymbol{#1}}}}
+\newcommand{\wt}[1]{\widehat{#1}}
+
+\newcommand{\bra}[1]{<{#1}\;|\;}
+\newcommand{\ket}[1]{|\;{#1}>\;}
+\newcommand{\ph}[2]{<{#1}\;|\ {#2}>}
+\newcommand{\cp}[2]{\left[\;{#1},{#2}\;\right]}
+
+\newcommand{\lm}[1]{\lambda_{#1}}
+\newcommand{\al}[1]{\alpha_{#1}}
+\newcommand{\bt}[1]{\lambda_{#1}}
+%======================== DEBUT DU DOCUMENT ========================
+%
+\begin{document}
+% Écart entre le cadre et les formules
+\setlength{\fboxsep}{7pt}
+%régler l'espacement entre les lignes
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+%
+% Titre, résumé, ... %\input{./presentation.tex}
+%
+% Table des matières
+\tableofcontents \thispagestyle{empty} \setcounter{page}{0}
+%
+%espacement entre les lignes des tableaux
+\renewcommand{\arraystretch}{1.5}
+%
+%====================== INCLUSION DES CHAPITRES ======================
+%
+~
+\thispagestyle{empty}
+%recommencer la numérotation des pages à "1"
+\setcounter{page}{0}
+%\newpage
+%
+%\input{./moreau/integraleDeChemin-td.tex}
+%\input{./moreau/synthese-MQ.tex}
+\input{./moreau/integraleDeChemin-cours.tex}
+%
+%
+%====================== INCLUSION DE LA BIBLIOGRAPHIE ======================
+%
+%récupérer les citation avec "/footnotemark" : 
+\nocite{*}
+%
+% choix du style de la biblio
+\bibliographystyle{plain}
+%
+% inclusion de la biblio
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliographie}
+\bibliography{bibliographie.bib}
+%
+%====================== FIN DU DOCUMENT ======================
+%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
