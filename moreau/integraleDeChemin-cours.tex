@@ -1,17 +1,19 @@
-Cours sur l'intégrale de chemin
-
-\section{Introduction}
-\subsection{Notions quantiques}
-\subsubsection{Évolution temporelle}
+\chapter{L'intégrale de chemin}
+%(Grégory Moreau)
+\section{Introduction} % I
+\subsection{Notions quantiques} % A
+\subsubsection{Évolution temporelle} % 1
 formalisme : variables classiques ($p_x$)\quad$\to$\quad opérateurs quantiques
-($-i\hbar \frac{\partial}{\partial x}$)
+($-i\hbar \frac{\partial}{\partial x}=\wt{P}_x$)
 
-Point de vue de Schrödinger ($\psi(t)$), équation de Schrödinger : 
+Point de vue de Schrödinger ($\psi(t)$) : 
 
 \[
-\wt{H}\ket{\psi(t)}={i}{\hbar}\frac{\partial}{\partial t}\ket{\psi(t)}
+\boxed{\wt{H}\ \ket{\psi(t)}={i}\;{\hbar}\;\frac{\partial}{\partial t}\;\ket{\psi(t)}
+} \qquad \text{équation de Schrödinger}
 \]
 
+%ex. Particules : $\wt{H}=\frac{\wt{\mv{P}}{\ }^2}{2m}+\wt{V}(\wt{X})$
 Solution :
 
 \[
@@ -21,10 +23,121 @@ Solution :
 car 
 
 \[
-\partial_te^{-\frac{i}{\hbar}\wt{H}t} = \partial_t\left(I-\frac{i}{\hbar}\wt{H}t + 
+\partial_te^{-\frac{i}{\hbar}\wt{H}t} = \partial_t\left(\wt{I}-\frac{i}{\hbar}\wt{H}t + 
 \frac{1}{2!}\left(\frac{-1}{\hbar^2}\right)\wt{H}^2t^2+...\right)=
--\frac{i}{\hbar}\wt{H}-\frac{-1}{\hbar^2}\wt{H}^2t
+-\frac{i}{\hbar}\wt{H}-\frac{-1}{\hbar^2}\wt{H}^2t+...=
+-\frac{i}{\hbar}\wt{H}\left(\wt{I}-\frac{i}{\hbar}\wt{H}t+...\right)=
+-\frac{i}{\hbar}\wt{H}e^{-\frac{i}{\hbar}\wt{H}t}
 \]
 
-%ex. Particules : $\wt{H}=\frac{\wt{\mv{P}}{\ }^2}{2m}+\wt{V}(\wt{X})$
+$e^{-\frac{i}{\hbar}\wt{H}(t-t_0)} = \wt{U}(t-t_0) = \wt{U}_0(t)$ : opérateur d'évolution temporelle
+\[
+\ub{\bra{\psi_0}U_0^\dagger(t)}{\bra{\psi(t)}} \wt{\mc{O}}_0
+\ub{U_0(t)\ket{\psi_0}}{\ket{\psi(t)}} \qquad\qquad\bra{\psi_0}
+\ob{U_0^\dagger(t)\wt{\mc{O}}_0U_0(t)}{\wt{\mc{O}}(t)}\ket{\psi_0}
+\]
+\[
+\ket{\psi(t)}=e^{-\frac{i}{\hbar}\wt{H}(t-t_0)}\ket{\psi(t_0)}
+\]
+
+Point de vue de Heisenberg :
+\[
+\boxed{\wt{H}\ \wt{U}_0(t)=i\;\hbar\;\frac{\partial}{\partial t}\;\wt{U}_0(t)}
+\qquad puisque\ \ket{\psi(t_0)}\neq 0 \text{ (état physique normé)}
+\]
+
+Explicite : 
+
+\[
+\widetilde{U}_0(t) = \ub{\theta(t-t_0)exp\{-\frac{i}{\hbar}\wt{H}(t-t_0)\}}
+{\text{fonction de Green}}\qquad\qquad avec\quad 
+\theta(t-t_0) \left \{
+   \begin{array}{r c l}
+      =1 & si & t-t_0\geqslant0 \\
+      =0 & si  & t-t_0<0 
+   \end{array}
+\right . \text{fonction de Heaviside}
+\]
+
+solution de 
+\[
+\boxed{\left(i\;\hbar\;\frac{\partial}{\partial t}-\wt{H}\right)
+\widetilde{U}_0(t) = i\;\hbar\;\delta(t-t_0)}
+\]
+% preuve
+\[
+i\;\hbar\;\theta(t-t_0)\;\frac{\partial}{\partial t}\wt{U}_0(t)+i\;\hbar\;
+\ob{\frac{\partial}{\partial t}\theta(t-t_0)}{\delta(t-t_0)}\wt{U}_0(t) - 
+\wt{H}\;\theta(t-t_0)\wt{U}_0(t) = i\;\hbar\;\delta(t-t_0)\;
+\ub{\left(e^{-\frac{i}{\hbar}\wt{H}(t-t_0)}\right)}{\wt{U}_0(t)}
+\]
+% fin preuve
+\subsubsection{Espace des moments (1D)} % 2
+
+\[
+\ob{\bra{x}\wt{P}_x\ket{p_x}}{-i\;\hbar\;\frac{\partial}{\partial x}\ph{x}{p_x}}
+\wt{=}\ \ob{\bra{x}p_x\ket{p_x}}{p_x\ph{x}{p_x}}
+\qquad \Rightarrow \qquad \ph{x}{p_x} =
+\frac{e^{\frac{i}{\hbar}p_xx}}{\sqrt{2\pi\hbar}}
+\]
+On introduit dans la fonction d'onde $\psi(x)=\ph{x}{\psi}$ la relation de fermeture :
+\[
+\ph{x}{\psi} = \bra{x}\int dp_x\ket{p_x}\bra{p_x}\ket{\psi}
+%\int dp_x\bra{x}\ph{x}{p_x}\psi(p_x) = 
+\]
+faisant apparaître la "fonction d'onde en p" $\psi(p_x)=\ph{p_x}{\psi}$. La relation
+$p=\hbar k$ donne alors
+\[
+\int dp_x\ph{x}{p_x}\psi(p_x) = \frac{1}{\sqrt{2\pi}}\int dk\;e^{ikx}\widetilde{\psi}(k)
+\equiv T.F[\widetilde{\psi}(k)]
+\]
+et
+\[
+\widetilde{\psi}(k) = T.F^{\;-1}[\psi(x)] = 
+\frac{1}{\sqrt{2\pi}}\int dx\;e^{-ikx}\psi(x)
+\]
+avec
+\[
+T.F^{\;-1}[\sqrt{2\pi}\delta(x)]=1=
+\frac{1}{\sqrt{2\pi}}\int dx\;e^{-ikx}\sqrt{2\pi}\delta(x)
+\]
+Transformé de Fourier $\Rightarrow$ l'inégalité de Heisenberg
+\[
+\Delta\wt{X}.\Delta\wt{P}_x\geqslant\frac{\hbar}{2}
+\]
+\[
+\frac{1}{2}|<\ub{\cp{\wt{X}}{\wt{P}_x}}{=i\hbar}>|
+\]
+où $\Delta\wt{\mc{O}}\;\wt{=}\;\sqrt{<\wt{\mc{O}}^2>-<\wt{\mc{O}}>^2}$ est l'écart type. Exemple :
+\[
+<\wt{P}_x>_{\ket{\psi}}=\bra{\psi}\wt{P}_x\int dp_x\;\ket{p_x}\ph{p_x}{\psi} =
+\int dp_x\;p_x\;|\psi(p_x)|^2
+\]
+\subsubsection{États propres de position} % 3
+Motivation : construire les états propres (de position) de l'observable de
+position à tout instant.
+
+Considérons l'état quantique :
+\[
+\ket{x,t}\wt{=}\;e^{\frac{i}{\hbar}\wt{H}(t-t_0)}\ket{x}
+\]
+$\ket{x}$ = état propre à $t_0$ de $\wt{X}(t_0)$ (valeur propre x)
+
+Différent de la solution de l'équation de Schrödinger
+\[
+\ket{x(t)}=\;\ub{e^{-\frac{i}{\hbar}\wt{H}(t-t_0)}}{\wt{U}_0(t)}
+\ub{\ket{x(t_0)}}{\ket{x}(!)}
+\]
+On a
+\[
+\wt{X}(t)\ket{x,t}=\;
+\ub{e^{\frac{i}{\hbar}\wt{H}^\dagger(t-t_0)}}{\wt{U}_0^\dagger(t)}
+\ub{\wt{X}_0}{\wt{X}(t_0)}
+\ub{e^{-\frac{i}{\hbar}\wt{H}(t-t_0)}}{\wt{U}_0(t)}
+\;e^{\frac{i}{\hbar}\wt{H}(t-t_0)}\ket{x}
+\]
+
+
+
+
 
