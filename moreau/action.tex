@@ -8,7 +8,7 @@ Augustin d'Hippone (4 ème) et Thomas d'Aquin (13 ème)
 \subsection{17 ème Optique géométrique}
 Héron d'Alexandrie (-1 er) : égalité des angles de réflexion.
 
-Lois de W. Snell & R.Descartes [conservation de la quantité de mouvement
+Lois de W. Snell \& R.Descartes [conservation de la quantité de mouvement
 scalaire]
 
 Principe de P. de Fermat [G. Leibniz, différrentielles]
@@ -23,13 +23,20 @@ autre sur un trajet tel que la durée de parcours soit extrémale."
 \]
 avec
 \[
-\left{
-\begin{array}{ c c c }
+\left\{
+\begin{array}{ r c l }
  p= & \hbar k & = \frac{h}{\lambda} \\
  E= & \hbar \omega & = \frac{h}{T} = h\nu \\
 \end{array}
+\right .
 \]
-(De Broglie & Planck-Einstein)
+(Relation de De Broglie \& Planck-Einstein à 1D.)
+\[%\ob{}{\phi(t)}
+\frac{dP}{dx}=|\ph{x}{k}|^2 \qquad \text{"fonction d'onde"}
+\]
+L'EXPLICATION QUANTIQUE DU PARADOXE
+
+
 
 Jean Bernoulli trouve [calcul infinitésimal, "variationnel"] la véritable
 brachistochrome : "lien à la mécanique"
@@ -42,6 +49,97 @@ calcul différentiel)
 Description ondulatoire (lumière) - C. Huygens [conservation de la quantité
 de mouvement sommée] Retrouve les lois de Snell-Descartes (+ A. Fresnel,
 19 ème)
+\subsection{18 ème}
+P. Moreau de Maupertuis : ordre immanent établi par Dieu $\Rightarrow$ principee digne de l'être suprême.
 
-\subsection{}
-\subsection{}
+Critiqué par les philosophes des lumières tel D. Diderot, opposé aux matérialistes-mécanistes (Epicure, Descartes, Newton)
+
+1744 : Principe de la moindre quantité d'action (inspiré par Fermat -> méca.) pour "quelque changement dans la nature",
+
+\[
+\delta s=0\ ,\ s=\int^{\mv{X}_B}_{\mv{X}_A}m\mv{v}.d\mv{x}\ \propto\ 
+\int^{t_B}_{t_A}(\frac{1}{2}m\mv{v}.d\mv{x}
+\]
+
+1744 : Formalisation des principes métaphysiques par L. Euler et J. Lagrange [-> Mécanique analytique] : Calcul variationnel(fonctionnelle ; 19 ème, C.3) et principe de moindre action $\delta S[x]=0$ (C.3, C.8)
+\subsection{19 ème}
+Formalisme autour du principe de moindre action : C Jacobi et H. Helmholtz.
+
+La Géométrie rayons $\perp$ fronts d'onde $\equiv$ iso-contours de phase $phi$
+
+Prémises quantiques : Mécanique de W. Hamilton, transformation de Legendre : espace de configuration (x,$\pt{x}$) -> espace de phase (x,p)
+
+ex. Lentille convergente, onde plane -> onde sphérique \\
+
+\begin{minipage}[c]{.45\linewidth}
+Onde lumineuse
+
+Huyghens, Fresnel, Maxwell
+\[\phi=\mv{k}.\mv{r}-\omega t\qquad,\qquad\ \mv{k}=\mv{\nabla}\phi\]
+\[-> \left(
+\begin{array}{ c }
+ \phi \\ 
+ \mv{A} \\ %3 & 4 & 7 \\
+\end{array}\right)
+\equiv A^\mu
+\]
+\[
+ \qquad \Rightarrow \qquad \text{Radiations e.m., }\mv{E},\mv{B}
+\]
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+Onde mécanique 
+\[
+\widetilde{\phi}=\hbar\phi=\mv{p}.\mv{r}-Et \qquad \mv{p}\mv{\widetilde{\phi}}
+\]
+\[
+fonction\ d'onde\ \gamma\ p\wt{=}\frac{\partial L}{\partial\pt{x}}
+\]
+\[
+S=\int L\;dt=\int(T-V)dt
+\]
+
+%\]
+\[
+Si\ V=0,\ S=H\;\Delta t=L\;\Delta t
+\]
+\end{minipage}
+\begin{minipage}[c]{.45\linewidth}
+$\mr{R}$ : rayons lumineux portés par $\mv{k}$
+
+Principe de Fermat
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.5\linewidth}
+$\mr{R}$ : trajectoires classiques matérielles selon $\mv{p}$
+
+Principe de moindre action
+\end{minipage}
+\subsection{20 ème}
+1941 : H. Jehle indique à R Feynman (étudiant en thèse à Princeton) un article
+de P. Dirac mentionnant,
+\[
+\ph{x_2\;t_2}{x_1\:t_1} \varpropto exp(\frac{i}{\hbar}S[x])
+\]
+
+1942 : Thèse de R. Feynman
+\begin{itemize}[leftmargin=1cm, label=\ding{221}, itemsep=1pt]
+\item établit la relation $\ph{x_2\;t_2}{x_1\:t_1}=\mr{C}\int\mr{D}x\;
+exp(\frac{i}{\hbar}S[x])\;,\ \forall V(x(t))$
+\item $\ph{x'}{\psi(t')}=\int dx\ph{x't'}{xt}\ph{x}{\phi(t)}$ obtenu
+\item re-dérive l'équation de Schrödinger en différentiant
+$\ph{x_2\;t_2}{x_1\:t_1}$
+\end{itemize}
+
+1965 : Prix Nobel pour leurs travaux sur l'électrodynamique quantique à R. Feynman, J. Schwinger et S.-I. Tomonoga
+
+Intégrale de chemin utile notamment pour la quantification des théories de
+jauge non-abéliennes ($SU(2)_L\otimes SU(3)_C$) car cette approche simplifie
+la quantification canonique
+
+Concept similaire à l'intégrale de chemin : formule de Feynman-Kac pour le mouvement Brownien (en physique statistique)
+
+Règles de Feynman pour le calcul d'amplitudes de probabilté de réactions à
+haute énergie.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
