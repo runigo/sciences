@@ -1,0 +1,296 @@
+\section{Les interprétations réalistes}
+\subsection{Brisure de la chaîne de Von Neumann (mécanisme dans les règles quantiques)}
+\subsubsection{Décohérence macroscopique}
+(Zurek, Zeh, Gell-Mann, Hartle, voir aussi la logique partielle de Griffiths, Omnès)
+Considérons un atome dans un état quantique superposé du type
+\[
+a\ket{\alpha}+b\ket{\beta}
+\]
+tel que permis par l’Équation de E.Schrödinger. On parle alors d’état cohérent dans le sens
+où les coefficients, a et b, sont reliés par la normalisation de l’état global et ont une phase
+physique relative. Ces états ortho-normalisés $\ket{\alpha}$,
+ $\ket{\beta}$ de l’atome peuvent être des états
+propres d’énergie (excitation : modèle en couche), de position,... Supposons maintenant que
+cet atome émet un photon dont l’impulsion correspond à un certain état de l’atome. L’état du
+Système atome + photon pourrait alors s’écrire comme suit,
+\[
+a\ket{\alpha}c_{\alpha 1}\ket{k_\alpha}+b\ket{\beta}c_{\beta 1}\ket{k_\beta}
+\]
+$\ket{k_\alpha}$, $\ket{k_\beta}$ étant les états propres orthonormés de l’impulsion du photon
+ et $c_{\alpha 1}$ , $c_{\beta 1}$ des coefficients ; il s’agit là d’un état dit intriqué. Si
+ le photon a l’impulsion $k_\alpha$ ($k_\beta$), suite à une
+mesure, alors l’atome est dans l’état réduit $\ket{\alpha}$ ($\ket{\beta}$) – ce qui fait
+ sens physiquement ici.
+Dans le cas où un deuxième photon serait émis par l’atome, il faudrait alors considérer l’état
+global initial du Système atome + 2 photons – vis-à-vis de la mesure éventuelle des
+impulsions des 2 photons émis – qui serait le suivant,
+\[
+a\ket{\alpha}c_{\alpha 1}\ket{k_\alpha}c_{\alpha 2}\ket{k_\alpha}+
+b\ket{\beta}c_{\beta 1}\ket{k_\beta}c_{\beta 2}\ket{k_\beta}
+\]
+Une mesure macroscopique en physique classique revient justement à un grand nombre
+(dans l’espace et le temps) d’interactions microscopiques et de mesures (quantiques) via par
+exemple la lecture « à l’oeil » d’un cadran gradué muni d’une aiguille. Dans l’exemple
+typique ci-dessus, où l’atome ferait partie du système physique soumis à la mesure
+macroscopique, les nombreuses mesures s’appliqueraient aux photons « visibles » et
+seraient associées à l’état initial du Système atome + N photons (avec N >> 1) :
+\[
+a\ket{\alpha}c_{\alpha 1}\ket{k_\alpha}c_{\alpha 2}\ket{k_\alpha}...c_{\alpha N}\ket{k_\alpha}+
+b\ket{\beta}c_{\beta 1}\ket{k_\beta}c_{\beta 2}\ket{k_\beta}...c_{\beta N}\ket{k_\beta}
+\]
+Faisons l’hypothèse simplificatrice, tout en respectant la normalisation d’état, que par
+exemple les |$c_{\alpha i}$| ~ 1 alors que les |$c_{\beta 1}$| << 1 [i = 1,...,N] (des valeurs
+ autres conduiraient
+simplement à une convergence de probabilité plus lente et possiblement vers l’autre état
+final). Ainsi, l’amplitude de probabilité d’obtenir le résultat $k_\beta$ pour tous les
+ photons tend vers zéro :
+\[
+A_\beta=c_{\beta 1}c_{\beta 2}c_{\beta 3}c_{\beta 4}c_{\beta 5}c_{\beta 6}... \rightarrow 0
+\]
+et on observe bien que dans cette limite (de système ‘augmenté’) les photons visibles
+peuvent être dans l’état $\ket{\alpha}$, ce qui est intuitif (une certitude de signal
+ d’information
+croissante sur l’ensemble incluant les dernières émissions de photons) et signifie que
+l’atome est lui dans l’état, maintenant décohérent,
+associé à la valeur propre unique et classique, $\alpha$. L’on retrouve alors, dans cette
+ limite du
+formalisme quantique, le déterminisme de la mesure macroscopique (pour l’ensemble des
+atomes du système macroscopique) en physique classique.
+\subsubsection{Pragmatisme des laboratoires}
+Une possibilité est qu’il existe un mécanisme, non encore inclus dans la version standard de
+la Mécanique quantique (c.f. II.1), qui force l’annulation de l’amplitude ci-dessus,
+\[
+A_\beta=c_{\beta 1}c_{\beta 2}c_{\beta 3}c_{\beta 4}c_{\beta 5}...c_{\beta N} = 0
+\]
+au-delà d’un seuil de valeur de A$_\beta$ , suffisamment petit devant 1, donc après un certain
+nombre N d’interactions de l’atome enrichissant le vecteur d’état initial. Cette annulation
+réduit alors l’état de l’atome à
+\[
+\ket{\alpha}
+\]
+Cette version de la MQ évite donc la notion de superposition. L’existence d’interactions du
+système pourrait en effet être inévitable, intrinsèque à la théorie, en tout cas de manière
+effective et pragmatique au sein du laboratoire encadrant la mesure quantique. L’annulation
+de A$_\beta$ met un terme à la régression infinie d’états de particules supplémentaires
+ impliquées
+dans les interactions successives, appelée chaîne de J.Von Neumann (introduite par ce
+dernier afin de décrire les interactions du système avec l’appareil de mesure), au sens où les
+nouveaux états s’ajoutant n’enrichissent plus un état intriqué. L’annulation de A$_\beta$ , ou
+réduction de l’état de l’atome (existence d’une valeur déterminée pour une observable),
+peut ({\footnotesize Si c’est la prise de conscience de l’observateur (possiblement via l’effet
+ des courants électriques le long des neurones) qui brise la chaîne de Von Neumann, alors il
+ s’agit de « l’interprétation de Wigner » (la réduction du
+vecteur d’état est également liée à la conscience humaine et la faculté d’introspection chez
+ London \& Bauer).}) avoir lieu en amont et donc indépendamment d’un observateur, de sorte que
+  cette
+approche peut se classer, d’un point de vue philosophique, dans le réalisme. Et la valeur
+physique unique fait partie d’une vérité accessible (c.f. 1er tableau) puisque mesurable
+[depuis le monde perçu et via notre faculté de pensée].
+\subsection{Le réel voilé (sans modification des lois quantiques)}
+Pour B.d’Espagnat, il existe un réel fondamental ne nécessitant pas d’être rapporté à
+l’Homme, et, donc indépendant de notre appareil sensitif corporel (dont l’appareillage
+expérimental est le prolongement). Cet auteur se situe ainsi au coeur du réalisme et se
+rapproche en particulier de la vision du potentiel limité de la raison selon E.Kant en ce que,
+pour le premier, seules certaines structures générales du réel sont au mieux accessibles à la
+connaissance humaine. D’où l’appellation de réel voilé pour cette vision ontologique de la
+Mécanique quantique. Un vecteur d’état superposé ne retranscrit ici au mieux qu’une vision
+partielle du réel, évitant ainsi tout paradoxe à son égard au prix d’une forme d’ignorance
+inéluctable.
+\subsection{Les variables cachées (ajout d’un potentiel)}
+Parmi les théories (voir par exemple Wiener \& Siegel, Hiley, Holland ou Landé) à ‘variables
+cachées’ – dites aussi supplémentaires au sens non présentes dans la description standard de
+la MQ (c.f. II.1) – celle de De Broglie-Bohm est sans doute la plus célèbre. Celle-ci confère
+un rôle central à l’environnement d’un système physique. Il faut alors définir un état
+quantique global du Système + Environnement, c’est-à-dire un état de type produit tensoriel
+décrivant le système lui-même ainsi que chacun des nombreux éléments constituant son
+environnement direct. Toutes ces composantes introduisent de nouvelles variables
+quantiques les caractérisant que sont notamment leurs positions. Les vitesses associées (v),
+dites vitesses quantiques, sont définies à partir du courant de probabilité (J) impliquant les
+fonctions d’onde ($\Psi$) non normalisées (vitesses de phase), la normalisation se faisant sur
+l’état global :
+\[
+J\wt{=}-|\Psi|^2\frac{dR}{dt}\wt{=}\rho v
+\]
+t dénotant le temps et $\rho$ la densité de probabilité de présence, dans le cas à 1 dimension
+d’espace de coordonnée R. On retrouve ici la vitesse locale de la version hydrodynamique
+de l’Équation de E.Schrödinger introduite par E.Madelung (en 1927). L’effet de
+l’environnement (masse générique m) sur le Système intervient dans l’Équation de
+Schrödinger via l’énergie potentielle additionnelle suivante (sommée sur toutes les
+composantes),
+\[
+V=\frac{-\hbar^2}{2m}\frac{\Delta|\Psi(R,t)|}{|\Psi(R,t)|}
+\]
+où $\Delta$ est l’opérateur laplacien. Ce « potentiel quantique » permet de retrouver les
+prédictions probabilistes de la description standard de la MQ. Ces probabilités ne font que
+traduire notre niveau de méconnaissance de l’état du Système pré-existant à la procédure de
+mesure, celui-ci étant fixé au sein de l’état global unique du Système + Environnement via
+les interactions Système $\leftrightarrow$ Environnement (superposition effective et non
+ intrinsèque). Le
+résultat de la mesure lui ne fait que révéler, mettre en évidence la valeur propre unique
+associée à cet état propre d’observable antérieur du Système : cette théorie quantique
+recouvre le déterminisme classique. Ainsi, le système possède des propriétés bien
+déterminées (position, impulsion, etc) indépendamment de l’observateur, ce qui peut placer
+cette théorie dans le courant réaliste, avec accession à la vérité (c.f. 1er tableau) – par la
+simple mesure expérimentale.
+\subsection{Interprétation modale (ajout de vecteur d’état)}
+L’Équation de Schrödinger guide l’évolution temporelle des états possiblement superposés
+d’un système physique, appelés ici « états dynamiques ». Un autre état, dénommé ici « état
+des valeurs » et ne pouvant être que pur par construction, pourrait lui correspondre à la
+valeur propre unique mesurable ; l’état des valeurs représente les propriétés physiques du
+système considéré. On ne peut atteindre cet état déjà attribué à un système qu’au moment de
+la mesure de ses observables, ce qui classe possiblement cette interprétation dite modale
+dans le réalisme, avec accessibilité à la vérité (c.f. 1er tableau) via une simple mesure en
+laboratoire. Le formalisme modal permet, comme il se doit, de reconstruire les règles des
+probabilités de Born afin de ne pas générer de conflit avec l’ensemble des jeux de données
+expérimentales connus – probabilités reflétant ici juste notre ignorance partielle. On doit
+cette solution astucieuse au problème de la superposition, ne lui conférant qu’un statut
+formel d’implémentation temporelle, en particulier à B. van Fraassen ; d’autres versions de
+l’interprétation modale (Kochen, Dieks et Healey) relient les états dynamiques et les états
+des valeurs grâce à la décomposition bi-orthonormale (décomposition de Schmidt).
+\subsection{Modification de l’Équation de Schrödinger (ajout d’un terme)}
+En plus de décrire la dynamique temporelle, l’Équation de Schrödinger pourrait incorporer,
+induire la réduction du vecteur d’état (voir par exemple Pearle, ou encore Ghirardi, Rimini
+et Weber (GRW), pour des modèles sans variables supplémentaires prises au sens de la
+Section 4 précédente). Cette réduction pourrait se produire à des moments récurrents (entre
+lesquels une superposition indéfinie physiquement subsisterait) mais aléatoires suite aux
+conditions expérimentales microscopiques non reproductibles. Il pourrait donc exister un
+terme additionnel dans l’Équation de Schrödinger de nature fluctuante, stochastique. Dans
+ce contexte, l’observation ne jouerait alors plus de rôle particulier autre que de capter,
+mettre en évidence des propriétés physiques déjà bien définies via l’Équation de
+Schrödinger, à certains instants seulement. La présente approche peut donc être qualifiée de
+réaliste, dans une version du réalisme avec vérité connaissable (c.f. 1er tableau). Plus
+concrètement, par exemple dans le modèle de GRW, des « localisations spontanées » ont
+lieu dans l’espace, des sauts brusques récurrents avec une précision imparfaite
+ {\footnotesize  Mais inférieure à l’incertitude expérimentale de la nouvelle ‘mesure’ (devenue simple prise de donnée) afin de
+pouvoir retrouver un résultat unique – comme dans toute expérience.} (certaine
+largeur de la fonction d’onde piquée en un point) mais ne permettant pas de superposition au
+niveau macroscopique (décohérence spatiale assurée du même coup). Les probabilités de
+localisation obtenues dans ce modèle sont normalisées sur tout l’espace [plus précisément
+sur les positions possibles rj indicées par l’entier j] avec une amplitude plus élevée dans les
+régions où le système ponctuel a déjà une plus forte probabilité de présence, ce qui a pour
+effet de le localiser à terme en un point – lui ajoutant successivement des résonances (pics)
+sur sa fonction d’onde restant normalisée au cours du temps. L’implémentation de ce
+modèle dans l’Équation de Schrödinger se réalise via le nouveau terme ci-dessous,
+\[
+i\hbar\frac{d\rho(t)}{dt} = \lambda\sum_j[F_j\rho(t)F_j-\rho(t)]+[H,\rho(t)]
+\]
+où t désigne le temps, $\lambda$ une probabilité par unité de temps, H l’Hamiltonien, F$_j$(r)
+l’opérateur localisant (par exemple une courbe gaussienne en r centrée en r$_j$) la fonction
+d’onde $\ph{r}{\Psi}$ et $\rho$(t) l’opérateur densité :
+\[
+\rho(t)=\ket{\Psi(t)}\bra{\Psi(t)}
+\]
+Cette équation correspond à l’Équation de Schrödinger (dans sa version impliquant
+l’opérateur densité $\rho$(t) plutôt que l’état associé $\ket{\Psi(t)}$ ) à laquelle a été
+ ajouté le terme qui
+succède juste au symbole d’égalité. Ce terme représente une évolution temporelle possible
+de $\rho$(t) vers $F_j\ket{\Psi(t)}\bra{\Psi(t)}F_j$ . Notons qu’il existe des extensions
+ continues du modèle
+GRW, au prix de nouveaux termes encore, et même relativistes (ainsi qu’en théorie
+quantique des champs). De plus, la réalisation de la localisation spontanée de GRW pourrait
+trouver son origine dans la gravité (Diosi) via une localisation stochastique de la masse –
+dont l’intensité serait proportionnelle à la constante universelle de gravitation (G) de
+I.Newton. Cette voie rejoint celle de R.Penrose qui écrivait : « le seuil quantique de la
+gravité qui produit une auto-réduction du vecteur d’état joue un rôle vis-à-vis de la
+conscience » – possibilité plus générique donc d’une réduction du paquet d’onde par des
+effets de Relativité Générale (voir aussi Bricmont). Enfin, une possibilité expérimentale de
+(in)valider le modèle GRW serait la détection du faible effet de chauffage [atomes excités
+rayonnant] spontané prévu par les localisations spontanées mêlées à la dynamique
+temporelle (amenant même des questions sur la conservation de l’énergie lorsque combinées
+à des réductions d’états d’impulsions).
+\subsection{Familles cohérentes (ajout d’opérateurs)}
+Considérons un état initial au temps t$_0$ associé à l’opérateur densité
+\[
+\rho(t)=\ket{\Psi(t)}\bra{\Psi(t)}
+\]
+La probabilité P($\mr{E}_1\mr{E}_2\mr{E}_3$...) que cet état appartienne au sous-espace de
+Hilbert $\mr{E}_1$ au temps t$_1$ puis au sous-espace $\mr{E}_2$ au temps t$_2$ etc peut
+être obtenue par la combinaison d’amplitudes de
+transitions et constitue finalement la formule de Wigner :
+\[
+P(\mr{E}_1\mr{E}_2\mr{E}_3...)=
+Tr\{...P_3(t_3)P_2(t_2)P_1(t_1)\rho(t_0)P_1(t_1)P_2(t_2)P_3(t_3)...\}
+\]
+où $P_i(t_i)$ est le projecteur orthogonal [de type $\sum_{k=1}^D\ket{u_k}\bra{u_k}$ à un
+ instant donné] dans $\mr{E}_i$ –
+de dimension D – au temps t$_i$ (dépendance temporelle dans l’opérateur selon le point de vue
+de Heisenberg). La somme des probabilités, plutôt que des amplitudes, peut être bien
+normée,
+\[
+\sum_{\{\mr{E}\}}P(\mr{E}_1\mr{E}_2\mr{E}_3...)=1
+\]
+si l’on ne considère en effet que les « histoires cohérentes » c’est-à-dire les états consécutifs
+n’étant pas des combinaisons linéaires d’états appartenant à des sous-espaces Ei différents.
+L’ensemble des histoires cohérentes forme, par définition (Griffiths puis Omnès et Gell-
+Mann), une famille cohérente (définie donc par un ensemble de temps et d’un ‘découpage’
+spécifique plus ou moins précis de l’espace pour chacun de ces temps). Les états
+successivement projetés constituant ces histoires, ayant la vertu de ne pas être des
+superpositions, pourraient représenter les véritables états du système à considérer au cours
+du temps et les projecteurs associés (hermitiens) des observables ‘physiques’ – aux valeurs
+propres 1 pour chacun de ces états à un temps donné et 0 pour tout état de l’espace
+complémentaire en question. À remarquer néanmoins que lors de la transition entre deux
+espaces consécutifs, seule une partie du vecteur d’état projeté subsiste, mais sans que cela
+n’apparaisse tout-à-fait explicitement et formellement dans l’expression de
+$P(\mr{E}_1\mr{E}_2\mr{E}_3...)$.
+Quant aux séries de mesures (aux amplitudes de probabilité génériques bien normalisées)
+possibles ‘en parallèle’ des projections, entre des mêmes temps initial t$_0$ et final t$_k$ , celles-ci
+sont dictées par le formalisme usuel de la MQ, de manière compatible avec les résultats
+expérimentaux obtenus sur les positions, impulsions... représentant elles une catégorie
+d’observables habituelles. Ces séries de mesures doivent avoir une certaine correspondance
+avec les projections successives – correspondance notamment fixée par le choix de la classe
+de famille cohérente adéquate. En conclusion, les véritables états quantiques d’un système
+au cours d’une période donnée, période de réalisation générale de mesures successives
+(période comprenant donc notamment les phases antérieures aux mesures), sont
+systématiquement définis de manière univoque (sans superposition), ce qui justifie ici une
+approche réaliste. Il s’agit plus précisément de la version du réalisme avec vérité
+inconnaissable puisque les états ‘pré-mesure’ sont possiblement des combinaisons linéaires
+d’états propres des observables mesurables (habituelles).
+\subsection{Univers multiple (nouvelles applications des lois quantiques)}
+Le postulat de réduction du paquet d’onde est évité si l’on (sup)pose que chacune des
+valeurs, associées à tous les vecteurs d’état d’une combinaison linéaire, est effectivement
+obtenue lors d’une mesure (Everett, Graham, Saunders, Wallace et approche adoptée par
+DeWitt pour qui : « le formalisme mathématique de la théorie quantique est capable de
+fournir sa propre interprétation »). La superposition quantique est alors véritablement
+réalisée (!). Il faut alors faire l’une des deux hypothèses fortes suivantes.
+
+(i) Soit l’observateur possède lui-même plusieurs ‘composantes’ (comme une conscience
+et plusieurs inconscients), chacune révélant l’un des résultats quantitatifs mais ne pouvant le
+communiquer aux autres composantes – donnant bien l’impression d’un résultat unique dans
+toute expérience. Et la probabilité d’obtenir un certain résultat est ici interprétée comme la
+probabilité de se situer dans une certaine composante. Ainsi, la répétition d’une même
+mesure d’observable sur un système préparé de manière identique génère toujours plusieurs
+résultats selon la loi de probabilité de Born [déterminisme pour une composante donnée
+mais non pour l’observateur], mais des résultats variés s’interprétant maintenant via des
+changements de composantes pour l’observateur. Dans une composante, l’acte de mesure ne
+fait que révéler un résultat (valeur propre) associé à un vecteur (propre) d’état pré-existant
+vis-à-vis de la procédure de mesure – puisque tous les vecteurs propres revêtent ici une
+réalité après et donc également avant la mesure (par continuité usuelle des états). Par
+conséquent, on peut se trouver dans une vision réaliste avec vérité indépendante accessible.
+Il s’agit-là de l’interprétation dite des « multivers », dans un monde restant unique.
+
+(ii) Soit ces diverses composantes sont en fait des univers différents et la description ci-
+dessus est transposée en conséquence. Il s’agit alors de l’« interprétation des mondes
+multiples ». Ce scénario représente une réalisation de mondes parallèles permettant de
+contourner partiellement le « principe anthropique fort » (= réglage des constantes
+fondamentales de la nature dans l’objectif d’une apparition de la vie) : chaque univers
+parallèle peut correspondre à une valeur possible (associée à un état d’une combinaison
+linéaire dont le nombre de termes peut augmenter avec les assemblages d’atomes et autres
+interactions implémentées dans l’équation de Schrödinger) des nombreuses observables (les
+résultats des mesures humaines correspondant à des sous-classes de l’ensemble complet
+d’univers) et la probabilité est grande que dans au moins quelques univers la vie apparaisse
+bien. Nous sommes par définition dans l’un de ceux-ci. Néanmoins ici les constantes
+fondamentales elles permettent l’émergence d’organismes vivants dans au moins un
+univers ; un contournement plus radical du principe anthropique fort serait que les valeurs
+de ces constantes fondamentales soient distribuées au hasard parmi un grand nombre
+d’univers parallèles de telle sorte que la probabilité d’apparition de la vie dans l’un d’eux
+soit élevée. Notons enfin que dans le contexte de la recherche en cosmologie, surgit aussi
+parfois [questions de la matière/énergie noire, des transitions de phase, de l’inflation,...]
+l’idée de la présence de plusieurs univers (aux conditions physiques différentes) mais
+correspondant plutôt à différents domaines d’un monde unique.
+
+Les deux interprétations ci-dessus doivent, d’une manière ou d’une autre, avoir un caractère
+collectif au vu de l’universalité des expériences/expérimentations scientifiques
+reproductibles. Cette universalité est par exemple explicitement respectée dans la version de
+multivers appelée solipsisme [philosophie selon laquelle la seule réalité est le sujet pensant
+lui-même, donc lié à ses observations] convivial (Zwirn).
+
