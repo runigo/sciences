@@ -4,20 +4,20 @@ Historiquement, afin d’éviter le problème de l’énergie négative, P.A.M. 
 cherché une équation quantique relativiste linéaire, comme alternative à
 l’équation de Klein-Gordon,
 \[
-\tag{1} \boxed{(\dm\partial^\mu+\frac{m^2c^2}{\hbar^2})\Phi(x^\nu)=0
-} \qquad \Rightarrow\ \partial_t\rho+\mv{\nabla}.\mv{j}=0
+\tag{1} \boxed{(\dm\dr^\mu+\frac{m^2c^2}{\hbar^2})\Phi(x^\nu)=0
+} \qquad \ent\ \dt\rho+\mv{\nabla}.\mv{j}=0
 \]
 %\[(\Box + m^2)\,\phi = 0 \]
-%\[\left( \frac{1}{c^2}\frac{\partial^2}{\partial t^2}
+%\[\left( \frac{1}{c^2}\frac{\dr^2}{\dr t^2}
 %- \nabla^2+ \frac{m^2 c^2}{\hbar^2} \right) \phi(\vec{x}, t) = 0\]
 où $\Phi$ est la fonction d'onde et $\rho$ la densité de probabilité. La
-dépendance linéaire recherchée par rapport à $\partial_t$, associée à la forme
-de covariance (forme $\partial^\mu$ ), conduit également à une linéarité des
+dépendance linéaire recherchée par rapport à $\dt$, associée à la forme
+de covariance (forme $\dr^\mu$ ), conduit également à une linéarité des
 dérivées spatiales $(\mv{P}=-i\hbar\mv{\nabla})$.
 
 La forme générale est la suivante :
 \[
-\tag{2} \boxed{\wt{H}\ \Psi(t)={i}\;{\hbar}\;\partial_t\;\Psi(\mv{x},t)
+\tag{2} \boxed{\wt{H}\ \Psi(t)={i}\;{\hbar}\;\dt\;\Psi(\mv{x},t)
 } \qquad \text{équation de Schrödinger}
 \]
 avec
@@ -26,12 +26,12 @@ avec
 \]
 En particulier, il n’y a pas de termes constants pour satisfaire les conditions
 (équations
-linéaires en $\partial_t$) :
+linéaires en $\dt$) :
 \[
 \tag{3}
 \begin{array}{ r c l }
  \wt{H}^2\Psi & = & (\wt{\mv{P}}c^2+m^2c^4)\Psi \\
- \Rightarrow\ \ E^2 & = & (\mv{P}c^2+m^2c^4) \qquad \text{énergie relativiste}
+ \ent\ \ E^2 & = & (\mv{P}c^2+m^2c^4) \qquad \text{énergie relativiste}
 \end{array}
 \]
 Remarque : Il en résulte une cohérence globale de la théorie, car l’équation de
@@ -65,8 +65,8 @@ Quatre propriétés en découlent :
 \item $H^\dagger=\wt{P}_i\dagger\alpha_i^\dagger+m\beta^\dagger
 =H=\wt{P}_i\alpha_i+\beta m$
 \item $\beta\ket{\beta}=b\ket{\beta}, donc\ \beta^2\ket{\beta}=
-b(\beta\ket{\beta})\Leftrightarrow\beta^2\ket{\beta}=
-b^2\ket{\beta}\Leftrightarrow b=\pm 1$
+b(\beta\ket{\beta})\ssi\beta^2\ket{\beta}=
+b^2\ket{\beta}\ssi b=\pm 1$
 \item Conditions d’anticommutativité.
 \item Tr[$\alpha_i$]=Tr[$\beta$]=0
 \end{itemize}
@@ -76,7 +76,7 @@ N\ph{\mv{x}}{\mv{p}(t)}\otimes\ket{\eta_{spin}}$\\
 Les matrices de dimension la plus faible satisfaisant ces propriétés sont des
 matrices 4 × 4.
 
-$\Rightarrow$ Structure décrivant une particule de spin 1/2 (et son
+$\ent$ Structure décrivant une particule de spin 1/2 (et son
 antiparticule) :
 \setlength{\fboxsep}{3pt}
 \[
@@ -120,15 +120,15 @@ Les résultats physiques sont indépendants de ce référentiel conventionnel.
 \subsection{La forme originale}
 La forme générale $\beta$ :
 \[\tag{4}\begin{array}{ r c l }
-\beta.(\alpha_i\wt{P}_ic+\beta mc^2)\psi & = & i\hbar c\partial_t\beta\psi(x^\nu) \\
-\left[\beta\alpha_i\left(-i\hbar\frac{\partial}{\partial x^i}\right)c+m\frac{c^2}{\hbar}
--i\hbar c\beta\frac{\partial}{c\partial t}\right)]\psi & = & 0 \\
- \left(i\gm\frac{\partial}{\partial x^\mu}-\frac{m}{\hbar c}\right)\psi & = & 0 \\
+\beta.(\alpha_i\wt{P}_ic+\beta mc^2)\psi & = & i\hbar c\dt\beta\psi(x^\nu) \\
+\left[\beta\alpha_i\left(-i\hbar\frac{\dr}{\dr x^i}\right)c+m\frac{c^2}{\hbar}
+-i\hbar c\beta\frac{\dr}{c\dr t}\right)]\psi & = & 0 \\
+ \left(i\gm\frac{\dr}{\dr x^\mu}-\frac{m}{\hbar c}\right)\psi & = & 0 \\
 \end{array}\]
 où $\gamma^{\mu} = \{ \beta, \beta \alpha^i \}$. On montrera que les matrices
 de Dirac $\gamma^{\mu}$ sont bien des vecteurs à 4 dimensions.
 \[\boxed{\sum_{k=1}^4\left\{
-i\gm_{jk}\partial-m\delta_{jk}
+i\gm_{jk}\dr-m\delta_{jk}
 \right\}\psi_k(x^\nu)=0}\]
 Propriétés des matrices de Dirac :
 \[
@@ -165,10 +165,10 @@ Comme on pourrait prendre le conjugué complexe de l’équation de Klein-Gordon
 nous prenons ici le conjugué hermitien de l’équation (4),
 
 \[\tag{4}\begin{array}{ r c l }
-i\gamma^0\partial_0\psi+i\gamma^i\partial_i\psi-m\psi & = & 0 \\
--i\partial_0\psi^\dagger(\gamma^0)^\dagger+-i\partial_i\psi^\dagger(\gamma^i)^\dagger-
+i\gamma^0\dr_0\psi+i\gamma^i\dr_i\psi-m\psi & = & 0 \\
+-i\dr_0\psi^\dagger(\gamma^0)^\dagger+-i\dr_i\psi^\dagger(\gamma^i)^\dagger-
   m\psi^\dagger & = & 0 \\
--i\partial_0\psi^\dagger\gamma^0\gamma^0+-i\partial_i\psi^\dagger\gamma^i\gamma^0-
+-i\dr_0\psi^\dagger\gamma^0\gamma^0+-i\dr_i\psi^\dagger\gamma^i\gamma^0-
   m\psi^\dagger\gamma^0 & = & 0 \\
 i(\dm\overline{\psi})\gm+m\overline{\psi} & = & 0 \\
 \end{array}\]
@@ -198,26 +198,26 @@ On peut définir le courant de charge électronique : $\boxed{j^\mu =
 
 L'équation (7) doit être comparée à l'équation de Klein-Gordon pour le champ
 conjugué complexe $\phi^*$.
-\subsection{La forme hermitienne}
+\subsection{La description lagrangienne}
 Pour une particule libre, de spin 1/2 et de masse m, dans un cadre quantique relativiste, le lagrangien s'écrit
 comme suit :
 \[\boxed{\mc{L}=i\overline{\psi}\gm\dm\psi-m\overline{\psi}\psi}\]
 
 $\bullet$ Équation d’Euler-Lagrange pour le champ $\psi$ :
 \[
-\frac{\mc{L}}{\psi}=\dm\left[\frac{\mc{L}}{\partial(\dm\psi)}\right]
+\frac{\mc{L}}{\psi}=\dm\left[\frac{\mc{L}}{\dr(\dm\psi)}\right]
 \]
 
 Exercice : Écrivez cette équation.
-$-m\overline{\psi}=\dm[i\overline{\psi}\gm]\Leftrightarrow Eq.(7).$
+$-m\overline{\psi}=\dm[i\overline{\psi}\gm]\ssi Eq.(7).$
 
 $\bullet$ Équation d’Euler-Lagrange pour le champ $\overline{\psi}$ :
 \[
 \frac{\mc{L}}{\overline{\psi}}=
-\dm\left[\frac{\mc{L}}{\partial(\dm\overline{\psi})}\right]
+\dm\left[\frac{\mc{L}}{\dr(\dm\overline{\psi})}\right]
 \]
 Exercice : Écrivez cette équation.
-$i\gm\dm\psi-m\psi=0\Leftrightarrow Eq.(4).$
+$i\gm\dm\psi-m\psi=0\ssi Eq.(4).$
 Exercice : Montrez que $\mc{L}$ est hermitien.
 
 $(\overline{\psi}\psi)^\dagger=
@@ -230,7 +230,7 @@ $(\overline{\psi}i\gm\dm\psi)^\dagger=
 qui donne par intégration par partie
 $i\overline{\psi}\gm\dm\psi\ni\mc{L}$
 \subsection{Solutions}
-\subsection{Partie relative à la fonction d'onde}
+\subsubsection{Partie relative à la fonction d'onde}
 Exercice : Montrez que chacune des quatre composantes du spinor $\psi_i$ satisfait
 l’équation de Klein-Gordon.
 
@@ -243,18 +243,79 @@ Appliquons $\ga\da$ à l’équation de Dirac (4) :
 \end{array}\]
 Par conséquent,
 \[
-\psi_j=u_je^{-\frac{i}{\hbar}p_\mu x^\mu}
+\psi_j=u_je^{-\ish p_\mu x^\mu}
 \]
 on peut donc identifier $u_i\equiv\ket{\eta_{spin}}$ et $\ph{x}{\psi(t)}\equiv
 e^{-i/h p_\mu x^\mu}=e^{-i/h Et+i/h p.x}$.
 
 Exercice : De quel(s) opérateur(s) $\psi_{sol}$ est-il un état propre ?
 
-Nous avone $\wt{P}_i\psi=
--i\hbar\partial_i(ue^{-\frac{i}{\hbar}Et}e^{-\frac{i}{\hbar}\mv{p}.\mv{x}})=
--i\hbar u\; e^{-\frac{i}{\hbar}Et}\partial_ie^{-\frac{i}{\hbar}\mv{p}.\mv{x}}=
+Nous avons $\wt{P}_i\psi=
+-i\hbar\dr_i(ue^{-\ish Et}e^{-\ish\mv{p}.\mv{x}})=
+-i\hbar u\; e^{-\ish Et}\dr_ie^{-\ish\mv{p}.\mv{x}}=
 p_i\psi$, donc $\wt{P}_i\wt{P}_i\psi=p_i^2\psi$ puis $\wt{\mv{P}}\psi=\mv{p}^2\psi$
-et finallement, en utilisant Eq.(3),
+et finallement, en utilisant Eq.(3), $H^2\psi=E^2\psi$.
+
+Remarque : $\wt{P}_i\psi=p_i\psi \ent \wt{P}_iu\ph{\mv{x}}{\psi(t)}\;=
+p_iu\ph{\mv{x}}{\psi(t)}\ \ssi \wt{P}_i\ket{\psi(t)}=p_i\;\ket{\psi(t)}$
+
+$\psi$ doit également satisfaire la forme linéaire de l’équation de Schrödinger :
+\[
+H\psi=i\hbar\dt\psi\ \ssi H\psi=i\hbar\dt\left(u\;e^{-\ish p_\mu x^\mu}
+\right)=i\hbar u\left(-\frac{iE}{\hbar}\right)e^{-\ish p_\mu x^\mu}=E\psi\tag{9}
+\]
+\subsubsection{Détermination du spinor u}
+D'après les équations (8) et (4), on a :
+\[\begin{array}{ r c l }
+i\gm\frac{\dr}{\dr x^\mu}u\;e^{-\ish p_\nu x^\nu}-\frac{m}{\hbar/c}\psi & = & 0 \\
+i\gm u\left(-\ish p^\nu\frac{\dr x^\nu}{\dr x^\mu}\right)e^{-\ish p^\nu x^\nu} - 
+\frac{m}{\hbar/c}u\,e^{-\ish p^\nu x^\nu} & = & 0 \\
+(\gm p_\mu-m\,c)\,u & = & 0 \\
+(p-m\,c)\,u & = & 0 \\
+\end{array}\]
+Ensuite, les équations (3) et (9) donnent :
+\[\begin{array}{ r c l }
+\left(\mv{\alpha}.\wt{\mv{P}}+\beta m\right)\psi & = & E\,\psi \\
+\alpha_i\left(-i\hbar\right)\, u\,e^{-\ish p^\nu x^\nu}+\beta m\,u\,e^{-\ish p^\nu x^\nu}
+& = & E\,u\,e^{-\ish p^\nu x^\nu} \\
+\alpha_i\left(-i\hbar\left[\ish p^i\right]\right)\,u\,e^{-\ish p_\nu x^\nu}+
+\beta m\,u\,e^{-\ish p^\nu x^\nu} & = & E\,u\,e^{-\ish p_\nu x^\nu} \\
+\left(\mv{\alpha}.\mv{p}+\beta m\right)\,u & = & E\,u \\
+\end{array}\]
+Il existe quatre solutions indépendantes pour le spinor « u », deux avec E >
+0 et deux avec E < 0.\\
+
+Dans la représentation de Dirac-Pauli...\\
+
+\textcircled{a} Supposons que p = 0 (dans l’équation de Dirac).
+D’après l’équation (11), on a : $Hu = \beta m u = E_u \quad
+\Leftrightarrow (m 0 0 0 ; 0 m 0 0 ; 0 0 -m 0 ; 0 0 0 -m) u = E_u$.
+Les valeurs propres de H sont m et -m (dégénérescence de degré 2).
+Les vecteurs propres sont
+\[ \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix},\ 
+\begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix},\ 
+\begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix},\ 
+\begin{pmatrix} 0 \\ 0 \\ 0 \\ 1 \end{pmatrix}. \]
+
+
+\textcircled{b} Supposons maintenant que $\mv{p}\neq\mv{0}$.
+D’après l’équation (11) et l’équation de Dirac-Pauli, on a
+\[
+Hu=Eu=\left\{p_1
+\begin{pmatrix} 0 & \sigma_1 \\ \sigma_1 & 0 \end{pmatrix}+p_2
+\begin{pmatrix} 0 & \sigma_2 \\ \sigma_2 & 0 \end{pmatrix}+p_3
+\begin{pmatrix} 0 & \sigma_3 \\ \sigma_3 & 0\end{pmatrix} +
+\begin{pmatrix} m & 0 \\ 0 & -m \end{pmatrix} \right\}u
+\]
+\[
+=\begin{pmatrix} m & \mv{p}.\mv{\sigma} \\ \mv{p}.\mv{\sigma} & m \end{pmatrix}
+\begin{pmatrix} u_a \\ u_b \end{pmatrix}
+\]
+\[
+\tag{} \boxed{
+} \qquad %\{} \{} \{}  \qquad %\{} 
+\]
+
 
 \[
 \tag{} \boxed{
@@ -264,7 +325,7 @@ et finallement, en utilisant Eq.(3),
 
 \[
 \tag{} \boxed{
-} \qquad %\{} \{} \{} \[\] \qquad %\{} \[\]
+} \qquad %\{} \{} \{} \[\] \qquad %\{} \[\]\left[\right]
 \]
 
 
