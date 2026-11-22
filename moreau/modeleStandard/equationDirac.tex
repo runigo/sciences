@@ -1,10 +1,271 @@
 \section{L' équation de Dirac}
 \subsection{La forme originale}
-Historiquement, afin d’éviter le problème de l’énergie négative, P.A.M. Dirac a cherché
-une équation quantique relativiste linéaire, comme alternative à l’équation de
-Klein-Gordon,
+Historiquement, afin d’éviter le problème de l’énergie négative, P.A.M. Dirac a
+cherché une équation quantique relativiste linéaire, comme alternative à
+l’équation de Klein-Gordon,
+\[
+\tag{1} \boxed{(\dm\partial^\mu+\frac{m^2c^2}{\hbar^2})\Phi(x^\nu)=0
+} \qquad \Rightarrow\ \partial_t\rho+\mv{\nabla}.\mv{j}=0
+\]
+%\[(\Box + m^2)\,\phi = 0 \]
+%\[\left( \frac{1}{c^2}\frac{\partial^2}{\partial t^2}
+%- \nabla^2+ \frac{m^2 c^2}{\hbar^2} \right) \phi(\vec{x}, t) = 0\]
+où $\Phi$ est la fonction d'onde et $\rho$ la densité de probabilité. La
+dépendance linéaire recherchée par rapport à $\partial_t$, associée à la forme
+de covariance (forme $\partial^\mu$ ), conduit également à une linéarité des
+dérivées spatiales $(\mv{P}=-i\hbar\mv{\nabla})$.
+
+La forme générale est la suivante :
+\[
+\tag{2} \boxed{\wt{H}\ \Psi(t)={i}\;{\hbar}\;\partial_t\;\Psi(\mv{x},t)
+} \qquad \text{équation de Schrödinger}
+\]
+avec
+\[
+\boxed{\wt{H}=\mv{\alpha}.\wt{\mv{P}}+\beta m} \qquad%  \{} \
+\]
+En particulier, il n’y a pas de termes constants pour satisfaire les conditions
+(équations
+linéaires en $\partial_t$) :
+\[
+\tag{3}
+\begin{array}{ r c l }
+ \wt{H}^2\Psi & = & (\wt{\mv{P}}c^2+m^2c^4)\Psi \\
+ \Rightarrow\ \ E^2 & = & (\mv{P}c^2+m^2c^4) \qquad \text{énergie relativiste}
+\end{array}
+\]
+Remarque : Il en résulte une cohérence globale de la théorie, car l’équation de
+Schrödinger, associée à l’expression relativiste de l’énergie, conduit à
+l’équation de Klein-Gordon (pour une particule sans spin, s = 0) ou à
+l’équation de Dirac (s = 1/2).
+
+Détermination de $\alpha$ et $\beta$ : D’après l’équation (3), on a :
+\[
+H^2=(\alpha_1P_1\alpha_2P_2\alpha_3P_3+\beta m)
+(\alpha_1P_1\alpha_2P_2\alpha_3P_3+\beta m)
+\]
+\[
+=\sum_{i=1}^3(\alpha_iP_i)^2+\sum_{i\neq j,\ i,j\in\{1,2,3\}}\left[
+\alpha_iP_i.\alpha_jP_j+\alpha_jP_j.\alpha_iP_i\right]+
+\sum_{i=1}^3\left[
+\alpha_iP_i\beta+\beta\alpha_iP_i\right]m+(\beta m)^2
+\]
+\[
+=\sum_{i=1}^3(\alpha_iP_i)^2+\sum_{i\neq j,\ i,j\in\{1,2,3\}}
+(\alpha_i.\alpha_j+\alpha_j.\alpha_i)P_iP_j+
+\sum_{i=1}^3\left[
+\alpha_i\beta+\beta\alpha_i\right]P_im+\beta^2m^2
+\]
+et donc, $\{\alpha_i,\alpha_j\}=\{\alpha_i,\beta\}=0$
+et $\alpha_i^2=\beta^2=1$
+
+Quatre propriétés en découlent :
+
+\begin{itemize}[leftmargin=1cm,  itemsep=1pt]
+\item $H^\dagger=\wt{P}_i\dagger\alpha_i^\dagger+m\beta^\dagger
+=H=\wt{P}_i\alpha_i+\beta m$
+\item $\beta\ket{\beta}=b\ket{\beta}, donc\ \beta^2\ket{\beta}=
+b(\beta\ket{\beta})\Leftrightarrow\beta^2\ket{\beta}=
+b^2\ket{\beta}\Leftrightarrow b=\pm 1$
+\item Conditions d’anticommutativité.
+\item Tr[$\alpha_i$]=Tr[$\beta$]=0
+\end{itemize}
+Exemple : on peut considérer $\Psi(\mv{x},t)=
+N\ph{\mv{x}}{\mv{p}(t)}\otimes\ket{\eta_{spin}}$\\
+
+Les matrices de dimension la plus faible satisfaisant ces propriétés sont des
+matrices 4 × 4.
+
+$\Rightarrow$ Structure décrivant une particule de spin 1/2 (et son
+antiparticule) :
+\setlength{\fboxsep}{3pt}
+\[
+\boxed{
+\begin{array}{  c  }
+ s=\frac{1}{2},\ -\frac{1}{2}\leqslant s_z\leqslant\frac{1}{2}\\
+\end{array}}
+\]
+\setlength{\fboxsep}{7pt}
+\[
+\begin{array}{ r c l }
+ \wt{\mv{S}}{}^2\ket{s,s_z} & = & s(s+1)\hbar^2\ket{s,s_z}=\frac{3}{2}
+\hbar^2\ket{\frac{1}{2},\pm\frac{1}{2}} \\
+ \wt{S}_z\ket{s,s_z} & = & s_z\hbar\;\ket{s,s_z}=\pm\frac{\hbar}{2}
+\ket{\frac{1}{2},\pm\frac{1}{2}} \\
+ \wt{S}_i & = & \frac{\sigma_i\hbar}{2}\ \text{(Pauli matrices)}\\
+\end{array}
+\]
+Les matrices de Pauli
+\[
+\left\{
+\begin{array}{ c c c }
+ \sigma_x&=&\left(\begin{array}{cc}0&1\\0&0\\\end{array}\right)\\
+ \sigma_y&=&\left(\begin{array}{cc}0&-i\\i&0\\\end{array}\right)\\
+ \sigma_z&=&\left(\begin{array}{cc}1&0\\0&-1\\\end{array}\right)\\
+\end{array}
+\right .
+\]
+Le choix des matrices ($\mv{\alpha}$, $\beta$) n’est pas unique.
+
+Exemples :
+\begin{itemize}[leftmargin=1cm,  itemsep=1pt]
+\item La représentation de Dirac-Pauli : \[\alpha_i=\left(\begin{array}{cc}
+0&\sigma_i\\\sigma_i&0\\\end{array}\right),\ \beta=\left(\begin{array}{cc}
+1&0\\0&-1\\\end{array}\right)\]
+\item La représentation de Weyl : \[\alpha_i=\left(\begin{array}{cc}
+-\sigma_i&0\\0&\sigma_i\\\end{array}\right),\ \beta=\left(\begin{array}{cc}
+0&1\\1&0\\\end{array}\right)\]
+\end{itemize}
+Les résultats physiques sont indépendants de ce référentiel conventionnel.
+\subsection{La forme originale}
+La forme générale $\beta$ :
+\[\tag{4}\begin{array}{ r c l }
+\beta.(\alpha_i\wt{P}_ic+\beta mc^2)\psi & = & i\hbar c\partial_t\beta\psi(x^\nu) \\
+\left[\beta\alpha_i\left(-i\hbar\frac{\partial}{\partial x^i}\right)c+m\frac{c^2}{\hbar}
+-i\hbar c\beta\frac{\partial}{c\partial t}\right)]\psi & = & 0 \\
+ \left(i\gm\frac{\partial}{\partial x^\mu}-\frac{m}{\hbar c}\right)\psi & = & 0 \\
+\end{array}\]
+où $\gamma^{\mu} = \{ \beta, \beta \alpha^i \}$. On montrera que les matrices
+de Dirac $\gamma^{\mu}$ sont bien des vecteurs à 4 dimensions.
+\[\boxed{\sum_{k=1}^4\left\{
+i\gm_{jk}\partial-m\delta_{jk}
+\right\}\psi_k(x^\nu)=0}\]
+Propriétés des matrices de Dirac :
+\[
+\tag{5} \boxed{\gm\gamma^\nu+\gamma^\nu\gm = 2g^{\mu\nu}}
+\]
+Exercice : Démontrez cette propriété.
+\begin{itemize}
+ \item $\mu=\nu=0:(\gamma^0)^2+(\gamma^0)^2=2.I$ vrai si $\beta^2=I$
+ \item $\mu=1,\nu=0:\gamma^1\gamma^0+\gamma^0\gamma^1=0,
+  \beta(\alpha^1\beta)+\beta(\beta\alpha^1)=0$
+ \item $\mu=2,\nu=3:(\beta\alpha^2)(\beta\alpha^3)+(\beta\alpha^3)(\beta\alpha^2)=
+  0, -\alpha^2\alpha^3-\alpha^3\alpha^2=0$
+ \item $\mu=\nu=3:\beta\alpha^3.\beta\alpha^3+\beta\alpha^3.\beta\alpha^3=2(-1)$
+\end{itemize}
+On a également que
+\[
+\tag{6} \boxed{\gamma^{\mu\dagger} = \gamma^0\gm\gamma^0}
+\]
+En effet, si $\mu=0$, $(\gamma^0)^\dagger=\gamma^0\gamma^0\gamma^0$.\\
+Si $\mu=i\neq 0$, $(\gamma^i)^\dagger=\gamma^0\gamma^i\gamma^0=(\gamma^0)^2\gamma^i$.\\
+
+Il existe d'autres propriétées utiles :
+\begin{itemize}
+ \item $(\gamma^0)^\dagger=\gamma^0,(\gamma^0)=1$ puisque $(\gamma^0)^2=\beta$
+  hermitien (voir les 4 propriétés ci-dessus);
+ \item $(\gamma^i)^\dagger=-\gamma^i$ comme $(\gamma^i)^\dagger=
+  (\beta\alpha^i)^\dagger=\alpha^i\beta=-\beta\alpha^i$
+ \item $(\gamma^i)^2=-I$ puisque $\gamma^i\gamma^i=\beta\alpha^i\beta\alpha^i=
+  -\beta^2(\alpha^i)^2=-I$
+\end{itemize}
+\subsection{La forme hermitienne}
+
+Comme on pourrait prendre le conjugué complexe de l’équation de Klein-Gordon,
+nous prenons ici le conjugué hermitien de l’équation (4),
+
+\[\tag{4}\begin{array}{ r c l }
+i\gamma^0\partial_0\psi+i\gamma^i\partial_i\psi-m\psi & = & 0 \\
+-i\partial_0\psi^\dagger(\gamma^0)^\dagger+-i\partial_i\psi^\dagger(\gamma^i)^\dagger-
+  m\psi^\dagger & = & 0 \\
+-i\partial_0\psi^\dagger\gamma^0\gamma^0+-i\partial_i\psi^\dagger\gamma^i\gamma^0-
+  m\psi^\dagger\gamma^0 & = & 0 \\
+i(\dm\overline{\psi})\gm+m\overline{\psi} & = & 0 \\
+\end{array}\]
+On a donc :
+\[
+\tag{7} \boxed{
+i\dm(\overline{\psi})\gm+m\overline{\psi}=0
+}
+\]
+Quant à l’équation de Klein-Gordon, $\psi\times$[équation (4)]
+ + [équation (7)]$\times\psi$ donne :
+
+\[\begin{array}{ r c l }
+\overline{\psi}i\gm\dm\psi-m\overline{\psi}\psi+
+i(\dm\overline{\psi})\gm\psi+m\overline{\psi}\psi & = & 0+0 \\
+\dm(\overline{\psi}\gm\psi) & = & 0 \\
+\end{array}\]
+En définissant $j^\mu\psi\gm\psi$, on a $\dm j^\mu$ (équation de
+continuité). j est la densité de flux tandis que $j^0\equiv\rho$ est la
+densité de probabilité (de présence spatiale).
+\[
+\rho=\overline{\psi}\gamma^0\psi=\psi^\dagger\gamma^0\gamma^0\psi=\sum_{k=1}^4
+\psi^*_k\psi_k=\ph{\eta_s}{\eta_s}|\ph{\mv{x}}{\psi(t)}|^2\equiv\frac{dP}{d^3x}(t)>0
+\]
+On peut définir le courant de charge électronique : $\boxed{j^\mu =
+-e\overline{\psi}\gm\psi}$.\\
+
+L'équation (7) doit être comparée à l'équation de Klein-Gordon pour le champ
+conjugué complexe $\phi^*$.
+\subsection{La forme hermitienne}
+Pour une particule libre, de spin 1/2 et de masse m, dans un cadre quantique relativiste, le lagrangien s'écrit
+comme suit :
+\[\boxed{\mc{L}=i\overline{\psi}\gm\dm\psi-m\overline{\psi}\psi}\]
+
+$\bullet$ Équation d’Euler-Lagrange pour le champ $\psi$ :
+\[
+\frac{\mc{L}}{\psi}=\dm\left[\frac{\mc{L}}{\partial(\dm\psi)}\right]
+\]
+
+Exercice : Écrivez cette équation.
+$-m\overline{\psi}=\dm[i\overline{\psi}\gm]\Leftrightarrow Eq.(7).$
+
+$\bullet$ Équation d’Euler-Lagrange pour le champ $\overline{\psi}$ :
+\[
+\frac{\mc{L}}{\overline{\psi}}=
+\dm\left[\frac{\mc{L}}{\partial(\dm\overline{\psi})}\right]
+\]
+Exercice : Écrivez cette équation.
+$i\gm\dm\psi-m\psi=0\Leftrightarrow Eq.(4).$
+Exercice : Montrez que $\mc{L}$ est hermitien.
+
+$(\overline{\psi}\psi)^\dagger=
+\psi^\dagger(\psi^\dagger\gamma^0)^\dagger=
+\psi^\dagger(\gamma^0)^\dagger\psi=
+\overline{\psi}\psi\ni\mc{L}$
+
+$(\overline{\psi}i\gm\dm\psi)^\dagger=
+\dm\overline{\psi}\gm\psi(-i)$,
+qui donne par intégration par partie
+$i\overline{\psi}\gm\dm\psi\ni\mc{L}$
+\subsection{Solutions}
+\subsection{Partie relative à la fonction d'onde}
+Exercice : Montrez que chacune des quatre composantes du spinor $\psi_i$ satisfait
+l’équation de Klein-Gordon.
+
+Appliquons $\ga\da$ à l’équation de Dirac (4) :
+\[\begin{array}{ r c l }
+\ga\da i\gm\dm\psi - m\ga\da\psi & = & 0 \\
+\frac{i}{2}[\ga\gm\da\dm+\gm\ga\dm\da] & = & \frac{i}{2}[\ga\gm+\gm\ga]\da\dm \\
+(ig^{\alpha\mu}\da\dm+im^2)\psi & = & 0 \\
+(g^{\alpha\mu}\da\dm+m^2)\psi_i & = & 0 \\
+\end{array}\]
+Par conséquent,
+\[
+\psi_j=u_je^{-\frac{i}{\hbar}p_\mu x^\mu}
+\]
+on peut donc identifier $u_i\equiv\ket{\eta_{spin}}$ et $\ph{x}{\psi(t)}\equiv
+e^{-i/h p_\mu x^\mu}=e^{-i/h Et+i/h p.x}$.
+
+Exercice : De quel(s) opérateur(s) $\psi_{sol}$ est-il un état propre ?
+
+Nous avone $\wt{P}_i\psi=
+-i\hbar\partial_i(ue^{-\frac{i}{\hbar}Et}e^{-\frac{i}{\hbar}\mv{p}.\mv{x}})=
+-i\hbar u\; e^{-\frac{i}{\hbar}Et}\partial_ie^{-\frac{i}{\hbar}\mv{p}.\mv{x}}=
+p_i\psi$, donc $\wt{P}_i\wt{P}_i\psi=p_i^2\psi$ puis $\wt{\mv{P}}\psi=\mv{p}^2\psi$
+et finallement, en utilisant Eq.(3),
+
+\[
+\tag{} \boxed{
+} \qquad %\{} \{} \{}  \qquad %\{} 
+\]
 
 
+\[
+\tag{} \boxed{
+} \qquad %\{} \{} \{} \[\] \qquad %\{} \[\]
+\]
 
 
 
