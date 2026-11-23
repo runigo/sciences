@@ -1,0 +1,67 @@
+\section{Le mécanisme de Higgs}
+\subsection{Le potentiel scalaire}
+\subsubsection{Champ libre}
+En théorie quantique relativiste, le champ scalaire complexe peut avoir un lagrangien tel que
+\[
+\mc{L}=\dm\phi(\partial^\mu)^*-V\ ,\qquad V(\phi)=m^2\phi\phi^*
+\]
+ce qui conduit aux équations d'état : $( + m^2)\phi = 0\ \&\ ( + m2)\phi^* = 0$
+issées des équations d’Euler-Lagrange,
+\[
+\frac{\mc{L}}{\phi}=\partial^\mu\frac{\mc{L}}{\partial(\partial^\mu\Phi)}
+\]
+Le lagrangien peut être réécrit en termes de champs réels,
+\[
+\mc{L}_m(\phi,\phi^*)\;\ssi\;\mc{L}_m(\phi_1,\phi_2)=
+\sum^2_{i=1}\frac{1}{2}\dm\Phi_i\partial^\mu\phi_i-\frac{m^2}{2}\phi_i^2
+\]
+ce qui donne :
+\[
+EOM\ : \qquad \boxed{(\Box+m^2)\phi_i=0}
+\]
+La densité hamiltonienne est alors :
+\[
+\mc{H}_m\wt{=}\partial^0\phi_i\Pi_{\phi_i}\mc{L}
+\]
+\[
+=\sum^2_{i=1}\left(\left(\partial^0\phi_i\right)^2-\frac{1}{2}\left(\partial^0\phi_i\right)^2+
+\frac{1}{2}\mv{\nabla}\phi_i.\mv{\nabla}\phi_i+\frac{m^2}{2}\phi_i^2\right)
+\]
+\[
+\mc{H}_m=\sum^2_{i=1}\left(\frac{1}{2}\left(\partial^0\phi_i\right)^2+
+\frac{1}{2}\left(\mv{\nabla}\phi_i\right)^2+\frac{1}{2}m^2\phi_i^2\right)
+\]
+
+$H_m(\phi_i)\geqslant 0$ atteint son minimum à zéro pour les champs uniques $\phi_1^0=\phi_2^0=0$.
+
+\subsubsection{Auto-interaction}
+Le potentiel peut être modifié en conséquence comme suit :
+\[
+\mc{L}_V=\dm\phi\partial^\mu\phi^*-V\ , \qquad V(\phi)=_k^2|\phi|^2+\lambda|\phi|^4
+\]
+
+\[
+\mc{L}_V=\sum^2_{i=1}\left(\frac{1}{2}\dm\phi_i\,\partial^\mu\phi_i\right) +
+\frac{k^2}{2}\left(\phi_1^2+\phi_2^2\right)-
+\frac{\lambda}{4}\left(\phi_1^2+\phi_2^2\right)
+\]
+\[
+\frac{\partial\mc{L}^{nouveau}}{\partial\phi_i}=-2\frac{\lambda}{4}
+\left(\phi_1^2+\phi_2^2\right)\left[2\phi_i\right]\ ,\qquad afin\ que\ EOM\ :
+\boxed{\left(\Box -k^2\right)\phi_i=-2\lambda|\phi|^2\phi_i
+}
+\]
+
+ \begin{tikzpicture}[scale=1]
+\draw [thick] [->] (2,0.5) --++(0,2) node [right] {V};
+%thick : gras ; very thick : très gras ; ultra thick : hyper gras
+\draw (2,0.5) node [left] {O};
+\draw [thick] [->] (2,0.5) --++(2,0) node [below] {$|\phi|$};
+\end{tikzpicture} 
+
+\subsection{} %\{} \{} \{} \[\] %\{} \[\]\left[\right]\[\]
+\[
+\tag{}   %\{} \{} \{} \[\] %\{} \[\]\left[\right]\[\]\[\]\qquad\qquad
+\]
+
+
