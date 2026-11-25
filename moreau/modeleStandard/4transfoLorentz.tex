@@ -1,0 +1,183 @@
+\section{Transformations de Lorentz}
+\subsection{Termes bilinéaires}
+Dressons une liste exhaustive des grandeurs bilinéaires $\bar{\psi}f(\g^{\mu})\psi$
+afin de construire des objets invariants de Lorentz – utiles pour écrire des lagrangiens
+réalistes pour les particules de spin 1/2.
+
+À cette fin, nous introduisons la matrice $\g_5$ définie comme suit :
+\[
+\g^5=i\g^0\g^1\g^2\g^3\ \mathds{1}
+\]
+Exercice : Montrez que $\g^{5\dagger}=\g^5$, $(\g^{5})^2=I$ et
+$\g^5\gm+\gm\g^5=0$.\\
+Dans la représentation de Dirac-Pauli,
+\[
+\g^5=\begin{pmatrix}0&\Id\\\Id&0\end{pmatrix},\ avec\ \g^k=\beta\alpha^k
+=\begin{pmatrix} \Id & 0 \\ 0 & -\Id \end{pmatrix}
+\begin{pmatrix} 0 & \s^k \\ \s^k & 0 \end{pmatrix}=
+\begin{pmatrix} 0 & \s^k \\ -\s^k & 0 \end{pmatrix}
+\]
+puisque,
+\[
+\g^0\g^1 = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
+\begin{pmatrix} 0 & \s^k \\ -\s^k & 0 \end{pmatrix}=
+\begin{pmatrix} 0 & \s^1 \\ \s^1 & 0 \end{pmatrix}
+\]
+\[
+\g^0\g^1\g^2 = 
+\begin{pmatrix} -\s^1\s^2 & 0 \\ 0 & \s^1\s^2 \end{pmatrix}
+\]
+\[
+\g^0\g^1\g^2\g^3 = 
+\begin{pmatrix} -\s^1\s^2 & 0 \\ 0 & \s^1\s^2 \end{pmatrix}
+\begin{pmatrix} 0 & \s^3 \\ -\s^3 & 0 \end{pmatrix} = 
+\begin{pmatrix}0&-\s^1\s^2\s^3\\-\s^1\s^2\s^3&0\end{pmatrix}
+\]
+\[
+\ent\g^3 =
+\begin{pmatrix}0&-i\s^1\s^2\s^3\\-i\s^1\s^2\s^3&0\end{pmatrix}
+= \begin{pmatrix} 0_{2\times 2} & 
+\begin{matrix} 1 & 0 \\ 0 & 1 \end{matrix}
+ \\ 
+\begin{matrix} 1 & 0 \\ 0 & 1 \end{matrix}
+ & 0_{2\times 2} \end{pmatrix}
+\]
+comme,
+\[
+\s^1\s^2=\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
+\begin{pmatrix}0&-i\\i&0\end{pmatrix}=\begin{pmatrix}i&0\\0&-i\end{pmatrix}
+\]
+\[
+\s^1\s^2\s^3=\begin{pmatrix} i & 0 \\ 0 & -i \end{pmatrix}
+\begin{pmatrix}1&0\\0&-1\end{pmatrix}=\begin{pmatrix}i&0\\0&i\end{pmatrix}
+\]
+Liste des grandeurs bilinéaires :
+
+\begin{tabular}{lll}
+Nom & Expression & Nombre de composantes\\
+scalaire & $\overline{\psi}\psi$ & 1\\
+vecteur & $\overline{\psi}\g^{\mu}\psi$ & 4\\
+tenseur & $\overline{\psi}\s^{\mu\nu}\psi$ & 6\\
+vecteur axial & $\overline{\psi}\g^5\g^{\mu}\psi$ & 4\\
+pseudo-scalaire & $\overline{\psi}\g^5\psi$ & 1\\
+ &  & \\
+\end{tabular}
+
+$\bullet$ Ordre croissant des $\g$ : $\g^5\gm=i\g^0\g^1\g^2\g^3
+\gm\Leftrightarrow$ produit de 3 matrices $\g$ car $(\gm)^2=\pm\gm$
+
+
+$\bullet$ ex : $\g^5\g^2\g^3=i\g^0\g^1\g^2\g^3\g^2\g^3$ est un produit de $2\g\ent$
+c'est une liste exhaustive des possibilités.
+
+\subsection{Invariants de Lorentz}
+
+On s'attend à ce que, sous l'effet d'un boost de Lorentz,
+
+\[
+i\gm\frac{\partial}{\partial x^\mu}\psi(x)-m\psi(x)=0\quad\mapsto
+\quad i\gm\frac{\partial}{\partial x'^\mu}\psi'(x')-m\psi'(x')=0
+\]
+
+\[
+\text{avec la transformation de Lorentz :}\qquad x^\mu = \Lambda^{\mu.}_{.\nu} x^\nu{'}
+\]
+\[
+\text{et la transformation quantique :}\qquad \wt{X}'^\mu = T\;\wt{X}^\mu\;T^{-1}
+\]
+\[
+\text{de}\qquad \bra{\psi'}X'\ket{\psi'}=\bra{\psi}X\ket{\psi}
+\]
+\[
+\bra{\psi}T^\dagger X'T\ket{\psi}= \qquad \text{« invariance de mesure »}
+\]
+ainsi que la transformation du champ spinoriel :
+\[
+\psi(x^\nu)\quad\mapsto\quad \psi'(x^\nu{'})=T\;\psi(x^\nu)
+\]
+Dans le référentiel F,
+\[
+i\g^\r\ub{\partial_\r}{\Lambda^{\mu.}_{.\r}\partial_\mu'}\psi(x)-m\;\psi(x)=0
+\qquad \partial_{x^{{'}\mu}}=\Lambda^{.\nu}_{\mu.}\partial_{x^\nu}
+\]
+\[
+\rightarrow \Lambda^{\mu.}_{.\r}\partial_\mu'=\ub{\delta^\nu_\r\partial_\nu}{\partial_\r}
+\]
+tandis que dans le référentiel F',
+\[
+iT^{-1}\g^\mu\partial_{x^{{'}\mu}}\ub{T\psi(x)}{\psi'(x')}-m\ub{T^{-1}\psi'(x')}{\psi(x)}=0
+\]
+Par identification,
+\[
+\boxed{\Lambda^{\mu.}_{.\r}\g^\r=T^{-1}\g^\mu T}\quad\ssi
+\ub{\Lambda^{\mu.}_{.\r}(-\b)\g^\r}{\text{transfert classique avec }-\b}=
+\ub{T\g^\mu T^{-1}(\b)}{\text{transfert quantique par définition }(\g{'}^{\mu})}
+\]
+Exercice :
+Pour la transformation de Lorentz infinitésimale $\Lambda_{\cdot\mu}^{\nu} = 
+\delta_{\mu}^{\nu} + \epsilon_{\cdot\mu}^{\nu}$.
+vérifiez que la condition $T(\d^\mu_\r+\e^{\mu.}_\r)\g^\r=\g^\mu T$ est bien satisfaite par
+$\boxed{T=\Id-\frac{i}{4}\;\s_{\a\b}\;\e^{\a\b}}$
+\[
+\tag{}  \qquad %\{}{}{}{}{} \ \ \[\] \qquad %\{} \[\]\quad\quad
+\]
+
+\[
+\begin{array}{ r c l }
+(\cancel{\d^\mu_\r}+\e^{\mu.}_{.\r})\g^\r-\frac{i}{4}\s_{\a\b}\,\e^{\a\b}(\d^\mu_\r+\e^\mu_\r)\g^\r
+ & = & \cancel{\g^\mu}-\frac{i}{4}\g^\mu\e_{\a\b}\,\e^{\a\b} \\
+\e^\mu_\r\g^\r+\frac{i}{8}[-2\g_\b\g_\a]\g_\nu\e^{\a\b}\g^{\mu\nu}
+ & = & \frac{i}{8}\g^\mu[\g_\a\g_\b-\g_\b\g_\a]\e^{\a\b} \\
+  & = & -\frac{i}{4}\,\g_\nu\,\g_\b\,\g_\a\,\e^{\a\b}\,g^{\mu\nu} \\
+\end{array}
+\]
+
+\[
+\begin{array}{ r c l }
+\e^\mu_\r\g_\r-\frac{i}{4}(-)2\,\ub{g_{\b\nu}\,g^{\ob{\nu\mu}{sym.}}}
+ {\d^\mu_\b}\,\g_\a\,\e^{\a\b}-\frac{i}{4}\,\g_\r\,2\,\ub{g_{\a\nu}\,g^{\nu\mu}}
+ {\d^\mu_\b}\,\e^{\a\b} & = & 0 \\
+\e^{\mu\r}\g_\r+\ub{\frac{1}{2}\g_\a\e^{\a\mu}}{-\frac{1}{2}\g_\a\e^{\mu\a}}
+ -\frac{1}{2}\g_\b\e^{\mu\b} & = & 0 \\
+\e^{\mu\r}\g_\r-\g_\a\e^{\mu\a} & = & 0 \\
+\end{array}
+\]
+Exercice :Montrer que : $\boxed{T^{\dagger}\g^{0}=\g^{0}T^{-1}}$ d’ordre $\e^{\alpha
+\beta}$.Remarque : il convient de traiter avec soin la relation
+$T^{\dagger}=T^{-1}$ à $\mathcal{O}(\epsilon)$.
+Cela revient à montrer que,
+\[
+\begin{array}{ r c l }
+ T^\dagger\g^0T\g^0 & = & \Id \\ \ssi\Id & = & \big(1+\frac{1}{8}[
+ \ub{\gai\gbi-\gbi\gai}{\ub{\gbid\gaid-\gaid\gbid}{-(-\gbid\gaid+\gaid\gbid)}}
+]\e^{\a\b}\big)
+\ub{\g_0\big(1+\frac{1}{8}[\gai\gbi-\gbi\gai]\e^{\a\b}\big)\g_0}
+ {1+\frac{1}{8}[\gaid\gbid-\gbid\gaid]\e^{\a\b}} \\
+\end{array}
+\]
+Invariants de Lorentz (infinitésimaux) :
+
+Un premier invariant est :
+
+\[
+\begin{array}{ r c l }
+ \overline{\psi'}\psi' & = & (\psi')^\dagger\g^0T\psi \\
+ & = & (T\psi)^\dagger\g^0T\psi \\
+ & = & \psi^\dagger T^\dagger\g^0T\psi \\
+ & = & \overline{\psi}\psi \\
+\end{array}
+\]
+
+Par ailleurs, on peut désormais écrire :
+\[
+\overline{\psi'}\gm\psi' = \overline{\psi}\ub{T^{-1}\gm T}{\Lambda^{\mu.}_{.\r}\g^\r}\psi
+\]
+ainsi que,
+\[
+\d'_\mu=\Lambda^{.\s}_{\mu.}\ds=\Lambda^{-1\s.}_{.\mu}\ds
+\]
+de sorte qu’un autre invariant peut être construit,
+\[
+\overline{\psi'}\dm'\gm\psi' = \overline{\psi}\ub{\Lambda^{-1\s.}_{.\mu}\Lambda^{\mu.}_{.\r}}{matrice\ \delta^\s_\r}\gr\ds\psi = 
+\overline{\psi}\gr\dr\psi
+\]

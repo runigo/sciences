@@ -77,6 +77,9 @@
 %\PreviewEnvironment{tikzpicture}
 %\setlength\PreviewBorder{0pt}%
 
+%\usepackage{bbm}\mathbbm{1}
+\usepackage{dsfont}
+
 %====================== INFORMATION ET REGLES ======================
 
 %rajouter les numérotation pour les \paragraphe et \subparagraphe
@@ -93,6 +96,7 @@ pdfstartview={FitH}}	% ajuste la page à la largeur de l'écran
 %pdfproducer = {} % Société avec produit le logiciel
 
 %======================== DEFINITION COMMANDES ========================
+%\newcommand{\Id}{\text{\usefont{U}{bboldx}{m}{n}1}}
 \newcommand{\ul}[1]{\underline{#1}}
 \newcommand{\mc}[1]{\mathcal{#1}} % Opérateur
 \newcommand{\mb}[1]{\mathbb{#1}}
@@ -112,18 +116,33 @@ pdfstartview={FitH}}	% ajuste la page à la largeur de l'écran
 \newcommand{\ph}[2]{<{#1}\;|\ {#2}>}
 \newcommand{\cp}[2]{\left[\;{#1},{#2}\;\right]}
 
+\newcommand{\Id}{\mathds{1}}
+
 \newcommand{\lm}[1]{\lambda_{#1}}
 \newcommand{\al}[1]{\alpha_{#1}}
 \newcommand{\bt}[1]{\lambda_{#1}}
 
+\renewcommand{\a}{\alpha}
+\renewcommand{\b}{\beta}
+\newcommand{\g}{\gamma}
+\renewcommand{\d}{\delta}
+\newcommand{\e}{\varepsilon}
+\renewcommand{\r}{\rho}
+\newcommand{\s}{\sigma}
+
 \newcommand{\gm}{\gamma^\mu}
+\newcommand{\gr}{\gamma^\rho}
 \newcommand{\ga}{\gamma^\alpha}
-\newcommand{\pam}{\partial_\mu}
-\newcommand{\pa}{\partial_\alpha}
+\newcommand{\gmi}{\gamma_\mu}
+\newcommand{\gai}{\gamma_\alpha}
+\newcommand{\gbi}{\gamma_\beta}
+\newcommand{\gaid}{\gamma_\alpha^\dagger}
+\newcommand{\gbid}{\gamma_\beta^\dagger}
 \newcommand{\dm}{\partial_\mu}
 \newcommand{\da}{\partial_\alpha}
+\newcommand{\ds}{\partial_\sigma}
 \renewcommand{\dt}{\partial_t}
-\newcommand{\dr}{\partial}
+\newcommand{\dr}{\partial_\rho}
 \newcommand{\ish}{\frac{i}{\hbar}}
 \newcommand{\ih}{i\hbar}
 \newcommand{\ent}{\Rightarrow}
