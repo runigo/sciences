@@ -1,14 +1,100 @@
+\section{Opérateur de conjugaison de charge}
+Le lagrangien de l’électrodynamique quantique (QED) s’écrit :
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%\{}\{}\{}\{}\{}{}{}{}{} \[\]\[\]\[\]\[\]\[\]\[\]\[\]
 \[
-\begin{array}{ r c l }
-  & = &  \\  & = &  \\  & = &  \\
-\end{array}
+\boxed{\mc{L}_{QED}=i\pb\gm D_\m\p -m\pb\p
+-\frac{1}{4\m_0}F_{\m\n}F^{\m\n} }
 \]
 \[
-\tag{}  \qquad
+D_\m=\dm+iq/\hbar A_\m,\qquad Dimensions : [L]=[E]^4,[\p]=[E]^{3/2},[A]=[E]
+\]
+Transformations de jauge $A_\m\mapsto A_\m-\dm\l(x),\quad \p\mapsto\p-\dm\l(x)$
+
+Exercice: Montrez que le lagrangien de la QED est invariant sous les
+transformations de jauge.
+
+$F_{\m\n}$ est invariant, tout comme $\p\p$, puisque
+$\p=\p^\dagger\g^0=(\p^*)^t\g^0\mapsto(e^{-iq\l(x)}\p^*)^t\g^0=e^{-iq\l}\p$. Pour q = -e,
+\[
+\begin{array}{ r c l }
+ D_\m\p & \mapsto & (\dm-ieA\m+ie\dm\l)e^{-ie\l}\p \\ & = & 
+\cancel{-ie\dm\l e^{-ie\l}\p}+e^{-ie\l}\dm\p-ieA_\m e^{-ie\l}\p+\cancel{ie\dm\l e^{-ie\l}\p}\\
+  & = & e^{-ie\l}(\dm-ieA_\m)\p \\
+  & = &  e^{-ie\l}D_\m\p\\
+\end{array}
+\]
+Équation d’Euler-Lagrange avec un nouveau terme pour $\p$ :
+\[
+\begin{array}{ r c l }
+\frac{\partial}{\partial\pb}\left[i\pb\gm(iqA_\m)\p\right]
+ & = & e\gm A_\m\p \\
+\left[i\gm\dm\p-m\p\right]+e\gm A_\m\p & = & 0 \\
+i\gm\left(i\gm D_\m\p \right) -m\p & = & 0 \\
+\left(\dm-ieA_\m \right)^\dagger\g_0 -m\pb & = & 0 \\
+i\pb D_\m^*\g^0\g^{\m\dagger}\g^0 -m\pb & = & 0 \qquad \qquad \qquad \qquad (13)\\
+\end{array}
+\]
+Vérifions :
+\[
+\begin{array}{ r c l }
+-m\pb+e\pb\gm A_\m & = & i\dm\pb\gm \\
+i\left(\dm+ieA_\m\right)\pb\gm+m\pb & = & 0 \\
+\end{array}
+\]
+Il devrait exister une version de l’équation (13) pour l’état d’antiparticule $\psi_c$ :
+\[
+\tag{14}i\gm\left(\dm+ieA_\m\right)\p_c-m\p_c=0
+\]
+Cette équation définit $\psi_c$ ; trouvons-la à partir de l’équation (13), en la conjuguant complexement,
+\[
+-i\gm{^*}\left(\dm+ieA_\m\right)\p^*-m\p^*=0
+\]
+
+En utilisant $-C\g^0\gm{^*}=\gm C\g^0$,
+\[
+\begin{array}{ r c l }
+i\left[-C\g^0\gm{^*}\right]\left(\dm+ieA_\m\right)\p^*-mC\g^0\p^* & = & 0 \\
+\left\{i\gm\left(\dm+ieA_\m\right)-m\right\}C\g^0\p^* & = & 0 \\
+\end{array}
+\]
+Ainsi, l’identification de l’équation (13) et de l’équation (14) donne
+$\psi_C = C\bar{\psi}^t = C\gamma^0\psi^*$
+Vérifions que, dans la représentation de Dirac-Pauli, $C$ satisfait :
+\[
+C\g^0=i\g^2=i\b\a^2=\begin{pmatrix}1&0\\0&-1\end{pmatrix}
+\begin{pmatrix}0&\s_2\\\s_2&0\end{pmatrix}=i\begin{pmatrix}0&\s_2\\-\s_2&0\end{pmatrix}
+\]
+\[\tag{15} =i\begin{pmatrix}&&&-i\\&&i&\\&i&&\\-i&&&\end{pmatrix}
+=i\begin{pmatrix}&&&1\\&&-1&\\&-1&&\\1&&&\end{pmatrix}
+\]
+Action de $C$ sur $\psi^{(1)}:$
+\[
+\p^{(1)}_c=C\g^0\p^{(1)}=i\g^2\left(N_1\begin{pmatrix}1\\0\\\frac{1}{E+m}
+\begin{pmatrix}p_3\\p_1+ip_2\end{pmatrix}\end{pmatrix}e^{-ip\ul{.}x}\right)
+\]
+\[
+=\begin{pmatrix}&&&1\\&&-1&\\&-1&&\\1&&&\end{pmatrix}N^*_1
+\begin{pmatrix}1\\0\\\frac{1}{E+m}
+\begin{pmatrix}p_3\\p_1+ip_2\end{pmatrix}\end{pmatrix}e^{-ip\ul{.}x}
+\]
+\[
+=N^*_1
+\begin{pmatrix}
+\frac{1}{E+m}\begin{pmatrix}p_3\\p_1+ip_2\end{pmatrix}\\0\\1
+\end{pmatrix}e^{-ip\ul{.}x}
+\]
+\[
+=v^{(1)}(\mv{p})e^{-ip\ul{.}x}
+\]
+Les solutions spinoriales sont $\{\p^{(1)},\p^{(2)},\p^{(3)},\p^{(4)}\}$, avec :
+\[
+\begin{array}{ r c l }
+(\p_c)_c&=&(C\g^0\p^*)_c\\&=&C\g^0(C\g^0\p^*)^*\\&=&(C\g^0)^2\p\\&=&\p
+\end{array}
+\]
+%%%%%%%%\\\\\\\\{}\{}\{}\{}{}{}{}{}{}{} \[\]\[\]\[\]
+\[
+\tag{}  
 \]
 
 
