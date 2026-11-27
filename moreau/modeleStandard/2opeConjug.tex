@@ -14,7 +14,7 @@ Exercice: Montrez que le lagrangien de la QED est invariant sous les
 transformations de jauge.
 
 $F_{\m\n}$ est invariant, tout comme $\p\p$, puisque
-$\p=\p^\dagger\g^0=(\p^*)^t\g^0\mapsto(e^{-iq\l(x)}\p^*)^t\g^0=e^{-iq\l}\p$. Pour q = -e,
+$\p=\p\dag\g^0=(\p^*)^t\g^0\mapsto(e^{-iq\l(x)}\p^*)^t\g^0=e^{-iq\l}\p$. Pour q = -e,
 \[
 \begin{array}{ r c l }
  D_\m\p & \mapsto & (\dm-ieA\m+ie\dm\l)e^{-ie\l}\p \\ & = & 
@@ -30,7 +30,7 @@ $\p=\p^\dagger\g^0=(\p^*)^t\g^0\mapsto(e^{-iq\l(x)}\p^*)^t\g^0=e^{-iq\l}\p$. Pou
  & = & e\gm A_\m\p \\
 \left[i\gm\dm\p-m\p\right]+e\gm A_\m\p & = & 0 \\
 i\gm\left(i\gm D_\m\p \right) -m\p & = & 0 \\
-\left(\dm-ieA_\m \right)^\dagger\g_0 -m\pb & = & 0 \\
+\left(\dm-ieA_\m \right)\dag\g_0 -m\pb & = & 0 \\
 i\pb D_\m^*\g^0\g^{\m\dagger}\g^0 -m\pb & = & 0 \qquad \qquad \qquad \qquad (13)\\
 \end{array}
 \]
@@ -92,9 +92,54 @@ Les solutions spinoriales sont $\{\p^{(1)},\p^{(2)},\p^{(3)},\p^{(4)}\}$, avec :
 (\p_c)_c&=&(C\g^0\p^*)_c\\&=&C\g^0(C\g^0\p^*)^*\\&=&(C\g^0)^2\p\\&=&\p
 \end{array}
 \]
-%%%%%%%%\\\\\\\\{}\{}\{}\{}{}{}{}{}{}{} \[\]\[\]\[\]
+Exercice: Démontrez les formules utiles suivantes dans cette représentation.
 \[
-\tag{}  
+\boxed{C^{-1}\gm C=(-\gm)^t}
 \]
-
-
+\[
+(15)\times(C\g^0)^{-1}:-C\g^0\g^{\m *}(C\g^0)^{-1}=\gm
+\]
+\[
+(C\g^0)^{-1}=\g^{0-1}C^1 \quad comme \quad C\g^0(\g^{0-1}C^{-1})=1 \quad car\ \g^0\g^0=1
+\]
+\[
+donc \quad -C\g^0\g^{\m *}\g^0C^{-1}=\gm \quad car\ (6)^*\ :\ 
+\g^{\m t}=\g^{0*}\g^{\m *}\g^{0*} \quad et\ \g^{0*}=\g^0
+\]
+\[
+\boxed{C=-C^t} \quad et \quad \boxed{-C=C^{-1}}
+\]
+\[
+\begin{array}{ r c l }
+C^{-1}\g^0C&=&-\g^0\ \ssi\ \g^0C=-C\g^0=-(C\g^0)^t=-\g^{0(t)}C^t\\
+\g^0C(C\g^0)&=&-C\g^0(C\g^0)\\\g^0C^2\g^0&=&-1\\C^2=-\g^0\g^0&=&-1\\(-C)(C)&=&1\\
+\end{array}
+\]
+\[
+\boxed{C\dag=C^{-1}}
+\]
+\[
+(15) : (C\g^0)\dag=C\g^0 \quad ie \quad \g^{0\dagger}C\dag=C\g^0
+\]
+\[
+CC\dag=C\ub{\g^0(\g^0}{=\Id}C\dag)=C\g^0(C\g^0)\ub{=}{(15)}\Id
+\]
+D’où l’on peut facilement déduire que :
+\[
+C^{-1}=C^t \quad \left|\begin{array}{ l c l }C&=&-C^t\\
+C^{-1}&=&-C\\\end{array} \right .
+\]
+\[
+C\dag=-C \quad \left|\begin{array}{ l c l }C^{-1}&=&-C\\
+C\dag&=&C^{-1}\\\end{array} \right .
+\]
+Exercice: Montrez que $\ol{\p}_c =-\p^tC^{-1}$, ce qui sera également utile lors de l’écriture
+de termes covariants.
+\[
+\begin{array}{ l c l }\ol{\p}_C&=&\\&=&\p^t-C\g^0\\&=&(C\g^0\p_*)\dag\g^0\\
+&=&\p^t\g^0C^{-1}\g^0\\&=&\p^t\g^0\g^0(-C^{-1})\\\end{array}
+\]
+tandis que la quantité suivante n'a pas de sens,
+\[
+\ol{\p}\big|_c=[\p\dag\g^0]_C=C\g^0\left[\p^t\g^{0*}\right]
+\]
