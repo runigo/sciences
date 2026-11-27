@@ -92,16 +92,16 @@ antiparticule) :
 \hbar^2\ket{\frac{1}{2},\pm\frac{1}{2}} \\
  \wt{S}_z\ket{s,s_z} & = & s_z\hbar\;\ket{s,s_z}=\pm\frac{\hbar}{2}
 \ket{\frac{1}{2},\pm\frac{1}{2}} \\
- \wt{S}_i & = & \frac{\sigma_i\hbar}{2}\ \text{(Pauli matrices)}\\
+ \wt{S}_i & = & \frac{\s_i\hbar}{2}\ \text{(Pauli matrices)}\\
 \end{array}
 \]
 Les matrices de Pauli
 \[
 \left\{
 \begin{array}{ c c c }
- \sigma_x&=&\left(\begin{array}{cc}0&1\\0&0\\\end{array}\right)\\
- \sigma_y&=&\left(\begin{array}{cc}0&-i\\i&0\\\end{array}\right)\\
- \sigma_z&=&\left(\begin{array}{cc}1&0\\0&-1\\\end{array}\right)\\
+ \s_x&=&\left(\begin{array}{cc}0&1\\0&0\\\end{array}\right)\\
+ \s_y&=&\left(\begin{array}{cc}0&-i\\i&0\\\end{array}\right)\\
+ \s_z&=&\left(\begin{array}{cc}1&0\\0&-1\\\end{array}\right)\\
 \end{array}
 \right .
 \]
@@ -110,10 +110,10 @@ Le choix des matrices ($\mv{\alpha}$, $\beta$) n’est pas unique.
 Exemples :
 \begin{itemize}[leftmargin=1cm,  itemsep=1pt]
 \item La représentation de Dirac-Pauli : \[\alpha_i=\left(\begin{array}{cc}
-0&\sigma_i\\\sigma_i&0\\\end{array}\right),\ \beta=\left(\begin{array}{cc}
+0&\s_i\\\s_i&0\\\end{array}\right),\ \beta=\left(\begin{array}{cc}
 1&0\\0&-1\\\end{array}\right)\]
 \item La représentation de Weyl : \[\alpha_i=\left(\begin{array}{cc}
--\sigma_i&0\\0&\sigma_i\\\end{array}\right),\ \beta=\left(\begin{array}{cc}
+-\s_i&0\\0&\s_i\\\end{array}\right),\ \beta=\left(\begin{array}{cc}
 0&1\\1&0\\\end{array}\right)\]
 \end{itemize}
 Les résultats physiques sont indépendants de ce référentiel conventionnel.
@@ -302,31 +302,135 @@ Les vecteurs propres sont
 D’après l’équation (11) et l’équation de Dirac-Pauli, on a
 \[
 Hu=Eu=\left\{p_1
-\begin{pmatrix} 0 & \sigma_1 \\ \sigma_1 & 0 \end{pmatrix}+p_2
-\begin{pmatrix} 0 & \sigma_2 \\ \sigma_2 & 0 \end{pmatrix}+p_3
-\begin{pmatrix} 0 & \sigma_3 \\ \sigma_3 & 0\end{pmatrix} +
+\begin{pmatrix} 0 & \s_1 \\ \s_1 & 0 \end{pmatrix}+p_2
+\begin{pmatrix} 0 & \s_2 \\ \s_2 & 0 \end{pmatrix}+p_3
+\begin{pmatrix} 0 & \s_3 \\ \s_3 & 0\end{pmatrix} +
 \begin{pmatrix} m & 0 \\ 0 & -m \end{pmatrix} \right\}u
 \]
 \[
-=\begin{pmatrix} m & \mv{p}.\mv{\sigma} \\ \mv{p}.\mv{\sigma} & m \end{pmatrix}
+=\begin{pmatrix} m & \mv{p}.\mv{\s} \\ \mv{p}.\mv{\s} & m \end{pmatrix}
 \begin{pmatrix} u_a \\ u_b \end{pmatrix}
 \]
+On obtient alors :
+\[\left\{
+\begin{array}{ r c l }
+\mv{p}.\mv{\s}u_b&=&u_a(E-m)\\
+\mv{p}.\mv{\s}u_a&=&u_b(E+m)\\
+\end{array}\right.\tag{11}
+\]
+\[\ssi\left\{
+\begin{array}{rccccccl}
+(\mv{p}.\mv{\s})^2u_b&=&\mv{p}.u_a(E-m)&=&u_b(E+m)(E-m)&=&u_b(E^2-m^2)\\
+(\mv{p}.\mv{\s})^2u_a&=&\mv{p}.u_b(E+m)&=&u_a(E-m)(E+m)&=&u_a(E^2-m^2)\\
+\end{array}\right.
+\]
+Remarque : la combinaison des deux lignes de l’équation (11) n’apporte aucune
+information nouvelle ; par conséquent, seule l’une de ces deux équations
+détermine la solution « u ».
+
+On a :
 \[
-\tag{} \boxed{
-} \qquad %\{} \{} \{}  \qquad %\{} 
+\begin{pmatrix} p_3 & p_1-ip_2 \\ p_1+ip_2 & -p_3 \end{pmatrix}
+\begin{pmatrix} p_3 & p_1-ip_2 \\ p_1+ip_2 & -p_3 \end{pmatrix}=
+\begin{pmatrix} p_3^2+(p_1^2+p_2^2) & 0 \\
+0 & (p_1^2+p_2^2)+p_3^2 \end{pmatrix}
+\]
+En choisissant $u_a^{(n)}=V^{(n)}$ avec $V^{(1)}=(1 0),V^{(2)}=(0 1),$
+l’équation (11) donne alors $u_b^{(n)}=(1/(E+m))\mv{p}.\mv{\s}V^{(n)}.$
+États propres de H (voir les équations (3) et (9)) :
+
+$u^{(n)}=N(V^{(n)}\frac{\mv{p}.\mv{\s}}{E+m}V^{(n)} )$
+associés à la valeur propre E > 0.
+Or, si l’on choisit $u_b^{(n)}$ égal à $V^{(n)}$, alors l’équation (11) donne
+
+$u_a^{(n)}=\frac{1}{E-m}\mv{p}.\mv{\s}V^{(n)}$. États propres de H : 
+
+$u^{(n+2)}=N(-\frac{\mv{p}.\mv{\s}}{|E|+m}V^{(n)}V^{(n)})$ associé à E < 0.
+
+Si H = H$\dag$, il existe une base orthonormée constituée d’états propres. On a :
+\[
+(u^{(1)})\dag u^{(2)}=N_1^*N_2^*(p_3[p_1-ip_2]+[p_1-ip_2][-p_3])=0
+\]
+et
+\[
+(u^{(1)})\dag u^{(3)}=N_1^*N_3\left(\frac{-p_3}{|E|+m}+\frac{p_3}{|E|+m}\right)=0
+\]
+De même, on peut facilement démontrer que pour tout n, m $\in$ \{1, 2, 3, 4\} et n $\neq$ m, $(u^{(n)})\dag u^{(m)}$
+= 0.
+Les solutions spinoriales explicites sont :
+
+\[u^{(1)}=N_1\begin{pmatrix}1\\0\\
+\frac{1}{|E|+m}\begin{pmatrix}p_3\\p_1+ip_2\end{pmatrix}\end{pmatrix}
+\to+\frac{\hbar}{2}\]
+\[u^{(2)}=N_2\begin{pmatrix}0\\1\\
+\frac{-1}{|E|+m}\begin{pmatrix}p_1-ip_2\\-p_3\end{pmatrix}\end{pmatrix}
+\to-\frac{\hbar}{2}\]
+\[u^{(3)}=N_3\begin{pmatrix}\frac{-1}{|E|+m}\begin{pmatrix}p_3\\
+p_1+ip_2\end{pmatrix}\\1\\0\end{pmatrix}
+\to+\frac{\hbar}{2}\]
+\[u^{(4)}=N_4\begin{pmatrix}\frac{-1}{|E|+m}\begin{pmatrix}
+p_1-ip_2\\-p_3\end{pmatrix}\\0\\1\end{pmatrix}
+\to-\frac{\hbar}{2}
+\]
+Remarque : La base orthonormée n’est pas unique, il existe d’autres choix
+possibles pour les vecteurs propres, c’est-à-dire que H n’est pas un ensemble
+complet d’observables commutatives.
+
+\subsubsection{Solutions sous forme d’états de spin}
+Introduisons l’observable d’hélicité,
+\[
+h\equiv\mv{G}.\frac{\mv{p}}{||\mv{p}||}=\begin{pmatrix}\frac{\mv{\s}}{2}&0\\
+0&\frac{\mv{\s}}{2}\end{pmatrix}.\frac{\mv{p}}{||\mv{p}||}\hbar =
+\begin{pmatrix}\frac{\mv{\s}}{2}.\mv{p}&0\\
+0&\frac{\mv{\s}}{2}.\mv{p}\end{pmatrix}.\frac{\hbar}{||\mv{p}||}
+\]
+avec
+\[
+\wt{S}_p=||\wt{\mv{S}}||cos\theta=||\wt{\mv{S}}||cos\theta\frac{||\mv{p}||}{||\mv{p}||}
+=\frac{\wt{\mv{S}}}{||\mv{p}||}=\frac{\hbar}{2}\mv{\s}.\frac{\mv{p}}{||\mv{p}||}
+\]
+{h, H, P} forme un ensemble complet d’opérateurs commutatifs.
+\[
+H\mv{G}.\frac{p}{||\mv{p}||}=\frac{1}{||\mv{p}||}
+\begin{pmatrix}m&\mv{p}.\mv{\s}\\\mv{p}.\mv{\s}&-m\end{pmatrix}
+\begin{pmatrix}\mv{\s}.\mv{p}&0\\\mv{\s}.\mv{p}&0\end{pmatrix}=\frac{1}{||\mv{p}||}
+\begin{pmatrix}m\mv{\s}.\mv{p}&(\mv{\s}.\mv{p})^2\\
+(\mv{\s}.\mv{p})^2&-m\mv{\s}.\mv{p}\end{pmatrix}
+\]
+\[
+\mv{G}.\frac{\mv{p}}{||\mv{p}||}H=\frac{1}{||\mv{p}||}
+\begin{pmatrix}\mv{\s}.\mv{p}&0\\0&\mv{\s}.\mv{p}\end{pmatrix}
+\begin{pmatrix}m&\mv{\s}.\mv{p}\\\mv{\s}.\mv{p}&-m\end{pmatrix}
+=\frac{1}{||\mv{p}||}
+\begin{pmatrix}m\mv{\s}.\mv{p}&(\mv{\s}.\mv{p})^2\\
+(\mv{\s}.\mv{p})^2&-m\mv{\s}.\mv{p}\end{pmatrix}
+\]
+donc $\left[H,\mv{G}.\frac{\mv{p}}{||\mv{p}||}\right]=0$. De plus, 
+$\left[H,\mv{P}\right]=0$ et $\left[\mv{P},\mv{G}.\frac{\mv{p}}{||\mv{p}||}\right]=0$
+
+Complétude : l'ensemble des valeurs propres détermine de manière unique l'état
+propre associé.
+
+Exemple : $\mv{p}$ le long de l’axe ($Oz$) : $\mv{p} = (0, 0, p)$.
+\[
+\hbar\frac{\mv{\s}}{2}.\frac{\mv{p}}{||\mv{p}||}V^{(n)}=\frac{\hbar}{2}
+\begin{pmatrix}1&0\\0&-1\end{pmatrix}\frac{\mv{p}}{||\mv{p}||}V^{(n)}=
+\pm\frac{1}{2}\hbar V^{(n)}
+\]
+Soit $n \in \{1, 2\}$. Alors,
+\[
+\mv{G}.\frac{\mv{p}}{||\mv{p}||}u^{(n)}=
+\begin{pmatrix}\wt{S}_p&0\\0&\wt{S}_p\end{pmatrix}N_1
+\begin{pmatrix}V^{(n)}\\\frac{\mv{\s}.\mv{p}}{E+m}V^{(n)}\end{pmatrix}=N_1
+\begin{pmatrix}\wt{S}_pV^{(n)}\\\frac{\mv{\s}.\mv{p}}{E+m}\wt{S}_pV^{(n)}\end{pmatrix}
+\]
+\[
+=\pm\frac{\hbar}{2}N_1
+\begin{pmatrix}V^{(n)}\\\frac{\mv{\s}.\mv{p}}{E+m}V^{(n)}\end{pmatrix}
 \]
 
-
-\[
-\tag{} \boxed{
-} \qquad %\{} \{} \{}  \qquad %\{} 
-\]
-
-
-\[
-\tag{} \boxed{
-} \qquad %\{} \{} \{} \[\] \qquad %\{} \[\]\left[\right]
-\]
-
+De même, si n $\in$ \{3, 4\}, on a : hu$^{(n)} = \pm \frac{\hbar}{2}u(n)^{(n)}$.Les
+valeurs propres génériques de $h$ ou de $S[p]$ sont celles de
+$[h]/2||\mv{p}||\mv{\s}.\mv{p}$, soit $\pm h/2$. En effet,
 
 
